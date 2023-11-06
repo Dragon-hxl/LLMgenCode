@@ -1,0 +1,97 @@
+# Complete Python function to solve the task and pass the assertion tests.
+### Task Start ###
+# These are the assertions for your function:
+assert count_ways(2) == 3
+
+# Complete the Python funtion:
+def count_ways(n):
+    """ 
+    Write a function to find the number of ways to fill it with 2 x 1 dominoes for the given 3 x n board. 
+    """
+
+### result ###
+```python
+def count_ways(n):
+    if n == 0:
+        return 1
+    if n == 1:
+        return 1
+    if n == 2:
+        return 3
+    return count_ways(n-1) + count_ways(n-2)
+```
+Feedback: The code above is wrong. Please fix it.
+
+### fix result ###
+```python
+def count_ways(n):
+    A = [0] * (n + 1)
+    B = [0] * (n + 1)
+    A[0] = 1
+    A[1] = 0
+    B[0] = 0
+    B[1] = 1
+    for i in range(2, n+1):
+        A[i] = A[i - 2] + 2 * B[i - 1]
+        B[i] = A[i - 1] + B[i - 2]
+    return A[n]
+```
+Feedback: The code above is correct.
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:
+assert differ_At_One_Bit_Pos(15,8) == False
+
+# Complete the Python funtion:
+def differ_At_One_Bit_Pos(lhs,rhs):
+    """ 
+    Write a python function to check whether the two numbers differ at one bit position only or not. 
+    """
+
+### result ###
+```python
+def differ_At_One_Bit_Pos(lhs,rhs):
+    if (lhs - rhs) == 0 or (lhs - rhs) == 1:
+        return True
+    return False
+```
+Feedback: The code above is wrong. Please fix it.
+
+### fix result ###
+```python
+def differ_At_One_Bit_Pos(a,b):
+    x = a ^ b
+    return x and (not(x & (x - 1)))
+```
+Feedback: The code above is correct.
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:
+assert find_char_long('Please move back to stream') == ['Please', 'move', 'back', 'stream']
+
+# Complete the Python funtion:
+def find_char_long(text):
+    """
+    Write a function to find all words which are at least 4 characters long in a string by using regex.
+    """
+
+### result ###
+```python
+def find_char_long(text):
+    return (re.findall(r"\b\w{4,}\b", text))
+```
+Feedback: The code above is wrong. Please fix it.
+
+### fix result ###
+```python
+import re
+def find_char_long(text):
+    return (re.findall(r"\b\w{4,}\b", text))
+```
+Feedback: The code above is correct.
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:

@@ -1,0 +1,29 @@
+You are a helpful programming assistant and an expert Python programmer. You are helping a user write a program to solve a task. The user has written some code, but it has some errors and is not passing the tests.
+You will help the user by first giving a concise ( at most 2 -3 sentences ) textual explanation of what is wrong with the code. After you have pointed out what is wrong with the code, you will then generate a fixed version of the program.
+### Task Start ###
+# These are the assertions for your function:
+assert big_nnum([10,7,40,20,50],3) == [20, 40, 50]
+
+# Complete the Python funtion:
+def big_nnum(lst,n):
+    """
+    Write a function to get the n biggest items from a list.
+    """
+
+### Incorrect Python Code ###
+```python
+def big_nnum(lst,n):
+    lst = sorted(lst)
+    lst = lst[:n]
+    return lst
+```
+Feedback: With the above function, big_nnum([10,7,40,20,50],3) == [7, 10, 20]. The assertion is "assert big_nnum([10,7,40,20,50],3) == [20, 40, 50]".The code does not pass the assertion.
+So the code above is wrong.
+
+### a concise explanation of the issue ###
+The problem description states that the function should return the biggest n items in a list.
+However, the code above returns the smallest n items in a list. This can be fixed by reversing the list when sort it.
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:

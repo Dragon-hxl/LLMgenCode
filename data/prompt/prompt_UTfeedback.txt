@@ -1,0 +1,64 @@
+# Complete Python function to solve the task and pass the assertion tests.
+### Task Start ###
+# These are the assertions for your function:
+assert differ_At_One_Bit_Pos(15,8) == False
+
+# Complete the Python funtion:
+def differ_At_One_Bit_Pos(lhs,rhs):
+    """ 
+    Write a python function to check whether the two numbers differ at one bit position only or not. 
+    """
+
+### result ###
+```python
+def differ_At_One_Bit_Pos(lhs,rhs):
+    if (lhs - rhs) == 0 or (lhs - rhs) == 1:
+        return True
+    return False
+```
+Feedback: With the above function, differ_At_One_Bit_Pos(15,8) == False. The assertion is "assert differ_At_One_Bit_Pos(15,8) == False".
+So the code passes the assertion. The code above is wrong. Please fix it.
+
+### fix result ###
+```python
+def differ_At_One_Bit_Pos(a,b):
+    x = a ^ b
+    return x and (not(x & (x - 1)))
+```
+Feedback: With the above function, differ_At_One_Bit_Pos(15,8) == False. The assertion is "assert differ_At_One_Bit_Pos(15,8) == False".
+So the code passes the assertion. The code above is correct.
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:
+assert find_char_long('Please move back to stream') == ['Please', 'move', 'back', 'stream']
+
+# Complete the Python funtion:
+def find_char_long(text):
+    """
+    Write a function to find all words which are at least 4 characters long in a string by using regex.
+    """
+
+### result ###
+```python
+def find_char_long(text):
+    return (re.findall(r"\b\w{4,}\b", text))
+```
+Feedback: With the above function, find_char_long('Please move back to stream') returns the following error:
+"""
+NameError: name 're' is not defined
+"""
+So the code does not pass the assertion. The code above is wrong. Please fix it.
+
+### fix result ###
+```python
+import re
+def find_char_long(text):
+    return (re.findall(r"\b\w{4,}\b", text))
+```
+Feedback:  With the above function, find_char_long('Please move back to stream') == ['Please', 'move', 'back', 'stream']. The assertion is "assert find_char_long('Please move back to stream') == ['Please', 'move', 'back', 'stream']".
+So the code passes the assertion. The code above is correct.
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:

@@ -1,0 +1,5 @@
+You are a Python programer, you task is to complete a Python function according to the comments.You should explain how to solve it step by step in natural language first,and then base on your explanation complete the function.
+Wrap your code with "```". Your code should pass the given assertions.
+
+### Task Start ###
+# These are the assertions for your function:

@@ -1,0 +1,164 @@
+{"task_id": "HumanEval/0", "ios": [{"tin": "has_close_elements([1.0, 2.0, 3.0], 0.5)", "tout": "False"}, {"tin": "has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)", "tout": "True"}]}
+{"task_id": "HumanEval/1", "ios": [{"tin": "separate_paren_groups('( ) (( )) (( )( ))')", "tout": "['()', '(())', '(()())']"}]}
+{"task_id": "HumanEval/2", "ios": [{"tin": "truncate_number(3.5)", "tout": "0.5"}]}
+{"task_id": "HumanEval/3", "ios": [{"tin": "below_zero([1, 2, 3])", "tout": "False"}, {"tin": "below_zero([1, 2, -4, 5])", "tout": "True"}]}
+{"task_id": "HumanEval/4", "ios": [{"tin": "mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])", "tout": "1.0"}]}
+{"task_id": "HumanEval/5", "ios": [{"tin": "intersperse([], 4)", "tout": "[]"}, {"tin": "intersperse([1, 2, 3], 4)", "tout": "[1, 4, 2, 4, 3]"}]}
+{"task_id": "HumanEval/6", "ios": [{"tin": "parse_nested_parens('(()()) ((())) () ((())()())')", "tout": "[2, 3, 1, 3]"}]}
+{"task_id": "HumanEval/7", "ios": [{"tin": "filter_by_substring([], 'a')", "tout": "[]"}, {"tin": "filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')", "tout": "['abc', 'bacd', 'array']"}]}
+{"task_id": "HumanEval/8", "ios": [{"tin": "sum_product([])", "tout": "(0, 1)"}, {"tin": "sum_product([1, 2, 3, 4])", "tout": "(10, 24)"}]}
+{"task_id": "HumanEval/9", "ios": [{"tin": "rolling_max([1, 2, 3, 2, 3, 4, 2])", "tout": "[1, 2, 3, 3, 3, 4, 4]"}]}
+{"task_id": "HumanEval/10", "ios": [{"tin": "make_palindrome('')", "tout": "''"}, {"tin": "make_palindrome('cat')", "tout": "'catac'"}, {"tin": "make_palindrome('cata')", "tout": "'catac'"}]}
+{"task_id": "HumanEval/11", "ios": [{"tin": "string_xor('010', '110')", "tout": "'100'"}]}
+{"task_id": "HumanEval/12", "ios": [{"tin": "longest([])", "tout": "None"}, {"tin": "longest(['a', 'b', 'c'])", "tout": "'a'"}, {"tin": "longest(['a', 'bb', 'ccc'])", "tout": "'ccc'"}]}
+{"task_id": "HumanEval/13", "ios": [{"tin": "greatest_common_divisor(3, 5)", "tout": "1"}, {"tin": "greatest_common_divisor(25, 15)", "tout": "5"}]}
+{"task_id": "HumanEval/14", "ios": [{"tin": "all_prefixes('abc')", "tout": "['a', 'ab', 'abc']"}]}
+{"task_id": "HumanEval/15", "ios": [{"tin": "string_sequence(0)", "tout": "'0'"}, {"tin": "string_sequence(5)", "tout": "'0 1 2 3 4 5'"}]}
+{"task_id": "HumanEval/16", "ios": [{"tin": "count_distinct_characters('xyzXYZ')", "tout": "3"}, {"tin": "count_distinct_characters('Jerry')", "tout": "4"}]}
+{"task_id": "HumanEval/17", "ios": [{"tin": "parse_music('o o| .| o| o| .| .| .| .| o o')", "tout": "[4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]"}]}
+{"task_id": "HumanEval/18", "ios": [{"tin": "how_many_times('', 'a')", "tout": "0"}, {"tin": "how_many_times('aaa', 'a')", "tout": "3"}, {"tin": "how_many_times('aaaa', 'aa')", "tout": "3"}]}
+{"task_id": "HumanEval/19", "ios": [{"tin": "sort_numbers('three one five')", "tout": "'one three five'"}]}
+{"task_id": "HumanEval/20", "ios": [{"tin": "find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])", "tout": "(2.0, 2.2)"}, {"tin": "find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])", "tout": "(2.0, 2.0)"}]}
+{"task_id": "HumanEval/21", "ios": [{"tin": "rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])", "tout": "[0.0, 0.25, 0.5, 0.75, 1.0]"}]}
+{"task_id": "HumanEval/22", "ios": [{"tin": "filter_integers(['a', 3.14, 5])", "tout": "[5]"}, {"tin": "filter_integers([1, 2, 3, 'abc', {}, []])", "tout": "[1, 2, 3]"}]}
+{"task_id": "HumanEval/23", "ios": [{"tin": "strlen('')", "tout": "0"}, {"tin": "strlen('abc')", "tout": "3"}]}
+{"task_id": "HumanEval/24", "ios": [{"tin": "largest_divisor(15)", "tout": "5"}]}
+{"task_id": "HumanEval/25", "ios": [{"tin": "factorize(8)", "tout": "[2, 2, 2]"}, {"tin": "factorize(25)", "tout": "[5, 5]"}, {"tin": "factorize(70)", "tout": "[2, 5, 7]"}]}
+{"task_id": "HumanEval/26", "ios": [{"tin": "remove_duplicates([1, 2, 3, 2, 4])", "tout": "[1, 3, 4]"}]}
+{"task_id": "HumanEval/27", "ios": [{"tin": "flip_case('Hello')", "tout": "'hELLO'"}]}
+{"task_id": "HumanEval/28", "ios": [{"tin": "concatenate([])", "tout": "''"}, {"tin": "concatenate(['a', 'b', 'c'])", "tout": "'abc'"}]}
+{"task_id": "HumanEval/29", "ios": [{"tin": "filter_by_prefix([], 'a')", "tout": "[]"}, {"tin": "filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')", "tout": "['abc', 'array']"}]}
+{"task_id": "HumanEval/30", "ios": [{"tin": "get_positive([-1, 2, -4, 5, 6])", "tout": "[2, 5, 6]"}, {"tin": "get_positive([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])", "tout": "[5, 3, 2, 3, 9, 123, 1]"}]}
+{"task_id": "HumanEval/31", "ios": [{"tin": "is_prime(6)", "tout": "False"}, {"tin": "is_prime(101)", "tout": "True"}, {"tin": "is_prime(11)", "tout": "True"}, {"tin": "is_prime(13441)", "tout": "True"}, {"tin": "is_prime(61)", "tout": "True"}, {"tin": "is_prime(4)", "tout": "False"}, {"tin": "is_prime(1)", "tout": "False"}]}
+{"task_id": "HumanEval/32", "ios": [{"tin": "round(find_zero([1, 2]), 2)", "tout": "-0.5"}, {"tin": "round(find_zero([-6, 11, -6, 1]), 2)", "tout": "1.0"}]}
+{"task_id": "HumanEval/33", "ios": [{"tin": "sort_third([1, 2, 3])", "tout": "[1, 2, 3]"}, {"tin": "sort_third([5, 6, 3, 4, 8, 9, 2])", "tout": "[2, 6, 3, 4, 8, 9, 5]"}]}
+{"task_id": "HumanEval/34", "ios": [{"tin": "unique([5, 3, 5, 2, 3, 3, 9, 0, 123])", "tout": "[0, 2, 3, 5, 9, 123]"}]}
+{"task_id": "HumanEval/35", "ios": [{"tin": "max_element([1, 2, 3])", "tout": "3"}, {"tin": "max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])", "tout": "123"}]}
+{"task_id": "HumanEval/36", "ios": [{"tin": "fizz_buzz(50)", "tout": "0"}, {"tin": "fizz_buzz(78)", "tout": "2"}, {"tin": "fizz_buzz(79)", "tout": "3"}]}
+{"task_id": "HumanEval/37", "ios": [{"tin": "sort_even([1, 2, 3])", "tout": "[1, 2, 3]"}, {"tin": "sort_even([5, 6, 3, 4])", "tout": "[3, 6, 5, 4]"}]}
+{"task_id": "HumanEval/39", "ios": [{"tin": "prime_fib(1)", "tout": "2"}, {"tin": "prime_fib(2)", "tout": "3"}, {"tin": "prime_fib(3)", "tout": "5"}, {"tin": "prime_fib(4)", "tout": "13"}, {"tin": "prime_fib(5)", "tout": "89"}]}
+{"task_id": "HumanEval/40", "ios": [{"tin": "triples_sum_to_zero([1, 3, 5, 0])", "tout": "False"}, {"tin": "triples_sum_to_zero([1, 3, -2, 1])", "tout": "True"}, {"tin": "triples_sum_to_zero([1, 2, 3, 7])", "tout": "False"}, {"tin": "triples_sum_to_zero([2, 4, -5, 3, 9, 7])", "tout": "True"}, {"tin": "triples_sum_to_zero([1])", "tout": "False"}]}
+{"task_id": "HumanEval/42", "ios": [{"tin": "incr_list([1, 2, 3])", "tout": "[2, 3, 4]"}, {"tin": "incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])", "tout": "[6, 4, 6, 3, 4, 4, 10, 1, 124]"}]}
+{"task_id": "HumanEval/43", "ios": [{"tin": "pairs_sum_to_zero([1, 3, 5, 0])", "tout": "False"}, {"tin": "pairs_sum_to_zero([1, 3, -2, 1])", "tout": "False"}, {"tin": "pairs_sum_to_zero([1, 2, 3, 7])", "tout": "False"}, {"tin": "pairs_sum_to_zero([2, 4, -5, 3, 5, 7])", "tout": "True"}, {"tin": "pairs_sum_to_zero([1])", "tout": "False"}]}
+{"task_id": "HumanEval/44", "ios": [{"tin": "change_base(8, 3)", "tout": "'22'"}, {"tin": "change_base(8, 2)", "tout": "'1000'"}, {"tin": "change_base(7, 2)", "tout": "'111'"}]}
+{"task_id": "HumanEval/45", "ios": [{"tin": "triangle_area(5, 3)", "tout": "7.5"}]}
+{"task_id": "HumanEval/46", "ios": [{"tin": "fib4(5)", "tout": "4"}, {"tin": "fib4(6)", "tout": "8"}, {"tin": "fib4(7)", "tout": "14"}]}
+{"task_id": "HumanEval/47", "ios": [{"tin": "median([3, 1, 2, 4, 5])", "tout": "3"}, {"tin": "median([-10, 4, 6, 1000, 10, 20])", "tout": "15.0"}]}
+{"task_id": "HumanEval/48", "ios": [{"tin": "is_palindrome('')", "tout": "True"}, {"tin": "is_palindrome('aba')", "tout": "True"}, {"tin": "is_palindrome('aaaaa')", "tout": "True"}, {"tin": "is_palindrome('zbcd')", "tout": "False"}]}
+{"task_id": "HumanEval/49", "ios": [{"tin": "modp(3, 5)", "tout": "3"}, {"tin": "modp(1101, 101)", "tout": "2"}, {"tin": "modp(0, 101)", "tout": "1"}, {"tin": "modp(3, 11)", "tout": "8"}, {"tin": "modp(100, 101)", "tout": "1"}]}
+{"task_id": "HumanEval/51", "ios": [{"tin": "remove_vowels('')", "tout": "''"}, {"tin": "remove_vowels(\"abcdef\\nghijklm\")", "tout": "'bcdf\\nghjklm'"}, {"tin": "remove_vowels('abcdef')", "tout": "'bcdf'"}, {"tin": "remove_vowels('aaaaa')", "tout": "''"}, {"tin": "remove_vowels('aaBAA')", "tout": "'B'"}, {"tin": "remove_vowels('zbcd')", "tout": "'zbcd'"}]}
+{"task_id": "HumanEval/52", "ios": [{"tin": "below_threshold([1, 2, 4, 10], 100)", "tout": "True"}, {"tin": "below_threshold([1, 20, 4, 10], 5)", "tout": "False"}]}
+{"task_id": "HumanEval/53", "ios": [{"tin": "add(2, 3)", "tout": "5"}, {"tin": "add(5, 7)", "tout": "12"}]}
+{"task_id": "HumanEval/54", "ios": [{"tin": "same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')", "tout": "True"}, {"tin": "same_chars('abcd', 'dddddddabc')", "tout": "True"}, {"tin": "same_chars('dddddddabc', 'abcd')", "tout": "True"}, {"tin": "same_chars('eabcd', 'dddddddabc')", "tout": "False"}, {"tin": "same_chars('abcd', 'dddddddabce')", "tout": "False"}, {"tin": "same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')", "tout": "False"}]}
+{"task_id": "HumanEval/55", "ios": [{"tin": "fib(10)", "tout": "55"}, {"tin": "fib(1)", "tout": "1"}, {"tin": "fib(8)", "tout": "21"}]}
+{"task_id": "HumanEval/56", "ios": [{"tin": "correct_bracketing(\"<\")", "tout": "False"}, {"tin": "correct_bracketing(\"<>\")", "tout": "True"}, {"tin": "correct_bracketing(\"<<><>>\")", "tout": "True"}, {"tin": "correct_bracketing(\"><<>\")", "tout": "False"}]}
+{"task_id": "HumanEval/57", "ios": [{"tin": "monotonic([1, 2, 4, 20])", "tout": "True"}, {"tin": "monotonic([1, 20, 4, 10])", "tout": "False"}, {"tin": "monotonic([4, 1, 0, -10])", "tout": "True"}]}
+{"task_id": "HumanEval/58", "ios": [{"tin": "common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])", "tout": "[1, 5, 653]"}, {"tin": "common([5, 3, 2, 8], [3, 2])", "tout": "[2, 3]"}]}
+{"task_id": "HumanEval/59", "ios": [{"tin": "largest_prime_factor(13195)", "tout": "29"}, {"tin": "largest_prime_factor(2048)", "tout": "2"}]}
+{"task_id": "HumanEval/60", "ios": [{"tin": "sum_to_n(30)", "tout": "465"}, {"tin": "sum_to_n(100)", "tout": "5050"}, {"tin": "sum_to_n(5)", "tout": "15"}, {"tin": "sum_to_n(10)", "tout": "55"}, {"tin": "sum_to_n(1)", "tout": "1"}]}
+{"task_id": "HumanEval/61", "ios": [{"tin": "correct_bracketing(\"(\")", "tout": "False"}, {"tin": "correct_bracketing(\"()\")", "tout": "True"}, {"tin": "correct_bracketing(\"(()())\")", "tout": "True"}, {"tin": "correct_bracketing(\")(()\")", "tout": "False"}]}
+{"task_id": "HumanEval/62", "ios": [{"tin": "derivative([3, 1, 2, 4, 5])", "tout": "[1, 4, 12, 20]"}, {"tin": "derivative([1, 2, 3])", "tout": "[2, 6]"}]}
+{"task_id": "HumanEval/63", "ios": [{"tin": "fibfib(1)", "tout": "0"}, {"tin": "fibfib(5)", "tout": "4"}, {"tin": "fibfib(8)", "tout": "24"}]}
+{"task_id": "HumanEval/64", "ios": [{"tin": "vowels_count(\"abcde\")", "tout": "2"}, {"tin": "vowels_count(\"ACEDY\")", "tout": "3"}]}
+{"task_id": "HumanEval/65", "ios": [{"tin": "circular_shift(12, 1)", "tout": "\"21\""}, {"tin": "circular_shift(12, 2)", "tout": "\"12\""}]}
+{"task_id": "HumanEval/66", "ios": [{"tin": "digitSum(\"\")", "tout": "0"}, {"tin": "digitSum(\"abAB\")", "tout": "131"}, {"tin": "digitSum(\"abcCd\")", "tout": "67"}, {"tin": "digitSum(\"helloE\")", "tout": "69"}, {"tin": "digitSum(\"woArBld\")", "tout": "131"}, {"tin": "digitSum(\"aAaaaXa\")", "tout": "153"}]}
+{"task_id": "HumanEval/68", "ios": [{"tin": "pluck([4,2,3])", "tout": "[2, 1]"}, {"tin": "pluck([1,2,3])", "tout": "[2, 1]"}, {"tin": "pluck([])", "tout": "[]"}, {"tin": "pluck([5, 0, 3, 0, 4, 2])", "tout": "[0, 1]"}]}
+{"task_id": "HumanEval/69", "ios": [{"tin": "search([4, 1, 2, 2, 3, 1]) ", "tout": " 2"}, {"tin": "search([1, 2, 2, 3, 3, 3, 4, 4, 4]) ", "tout": " 3"}, {"tin": "search([5, 5, 4, 4, 4]) ", "tout": " -1"}]}
+{"task_id": "HumanEval/70", "ios": [{"tin": "strange_sort_list([1, 2, 3, 4]) ", "tout": " [1, 4, 2, 3]"}, {"tin": "strange_sort_list([5, 5, 5, 5]) ", "tout": " [5, 5, 5, 5]"}, {"tin": "strange_sort_list([]) ", "tout": " []"}]}
+{"task_id": "HumanEval/71", "ios": [{"tin": "triangle_area(3, 4, 5) ", "tout": " 6.00"}, {"tin": "triangle_area(1, 2, 10) ", "tout": " -1"}]}
+{"task_id": "HumanEval/72", "ios": [{"tin": "will_it_fly([1, 2], 5)", "tout": "False"}, {"tin": "will_it_fly([3, 2, 3], 1)", "tout": "False"}, {"tin": "will_it_fly([3, 2, 3], 9)", "tout": "True"}, {"tin": "will_it_fly([3], 5)", "tout": "True"}]}
+{"task_id": "HumanEval/73", "ios": [{"tin": "smallest_change([1,2,3,5,4,7,9,6])", "tout": "4"}, {"tin": "smallest_change([1, 2, 3, 4, 3, 2, 2])", "tout": "1"}, {"tin": "smallest_change([1, 2, 3, 2, 1])", "tout": "0"}]}
+{"task_id": "HumanEval/74", "ios": [{"tin": "total_match([], [])", "tout": "[]"}, {"tin": "total_match(['hi', 'admin'], ['hI', 'Hi'])", "tout": "['hI', 'Hi']"}, {"tin": "total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project'])", "tout": "['hi', 'admin']"}, {"tin": "total_match(['hi', 'admin'], ['hI', 'hi', 'hi'])", "tout": "['hI', 'hi', 'hi']"}, {"tin": "total_match(['4'], ['1', '2', '3', '4', '5'])", "tout": "['4']"}]}
+{"task_id": "HumanEval/75", "ios": [{"tin": "is_multiply_prime(30) ", "tout": " True"}]}
+{"task_id": "HumanEval/76", "ios": [{"tin": "is_simple_power(1, 4)", "tout": "true"}, {"tin": "is_simple_power(2, 2)", "tout": "true"}, {"tin": "is_simple_power(8, 2)", "tout": "true"}, {"tin": "is_simple_power(3, 2)", "tout": "false"}, {"tin": "is_simple_power(3, 1)", "tout": "false"}, {"tin": "is_simple_power(5, 3)", "tout": "false"}]}
+{"task_id": "HumanEval/77", "ios": [{"tin": "iscube(1)", "tout": "True"}, {"tin": "iscube(2)", "tout": "False"}, {"tin": "iscube(-1)", "tout": "True"}, {"tin": "iscube(64)", "tout": "True"}, {"tin": "iscube(0)", "tout": "True"}, {"tin": "iscube(180)", "tout": "False"}]}
+{"task_id": "HumanEval/78", "ios": [{"tin": "hex_key(\"AB\")", "tout": "1"}, {"tin": "hex_key(\"1077E\")", "tout": "2"}, {"tin": "hex_key(\"ABED1A33\")", "tout": "4"}, {"tin": "hex_key(\"123456789ABCDEF0\")", "tout": "6"}, {"tin": "hex_key(\"2020\")", "tout": "2"}]}
+{"task_id": "HumanEval/79", "ios": [{"tin": "decimal_to_binary(15)", "tout": "\"db1111db\""}, {"tin": "decimal_to_binary(32)", "tout": "\"db100000db\""}]}
+{"task_id": "HumanEval/80", "ios": [{"tin": "is_happy(\"a\")", "tout": "False"}, {"tin": "is_happy(\"aa\")", "tout": "False"}, {"tin": "is_happy(\"abcd\")", "tout": "True"}, {"tin": "is_happy(\"aabb\")", "tout": "False"}, {"tin": "is_happy(\"adb\")", "tout": "True"}, {"tin": "is_happy(\"xyy\")", "tout": "False"}]}
+{"task_id": "HumanEval/81", "ios": [{"tin": "numerical_letter_grade([4.0, 3, 1.7, 2, 3.5])", "tout": "['A+', 'B', 'C-', 'C', 'A-']"}]}
+{"task_id": "HumanEval/82", "ios": [{"tin": "prime_length('Hello')", "tout": "True"}, {"tin": "prime_length('abcdcba')", "tout": "True"}, {"tin": "prime_length('kittens')", "tout": "True"}, {"tin": "prime_length('orange')", "tout": "False"}]}
+{"task_id": "HumanEval/84", "ios": [{"tin": "solve(1000)", "tout": "\"1\""}, {"tin": "solve(150)", "tout": "\"110\""}, {"tin": "solve(147)", "tout": "\"1100\""}]}
+{"task_id": "HumanEval/85", "ios": [{"tin": "add([4, 2, 6, 7])", "tout": "2"}]}
+{"task_id": "HumanEval/86", "ios": [{"tin": "anti_shuffle('Hi')", "tout": "'Hi'"}, {"tin": "anti_shuffle('hello')", "tout": "'ehllo'"}, {"tin": "anti_shuffle('Hello World!!!')", "tout": "'Hello !!!Wdlor'"}]}
+{"task_id": "HumanEval/87", "ios": [{"tin": "get_row([[1,2,3,4,5,6], [1,2,3,4,1,6], [1,2,3,4,5,1]], 1)", "tout": "[(0, 0), (1, 4), (1, 0), (2, 5), (2, 0)]"}, {"tin": "get_row([], 1)", "tout": "[]"}, {"tin": "get_row([[], [1], [1, 2, 3]], 3)", "tout": "[(2, 2)]"}]}
+{"task_id": "HumanEval/88", "ios": [{"tin": "sort_array([])", "tout": "[]"}, {"tin": "sort_array([5])", "tout": "[5]"}, {"tin": "sort_array([2, 4, 3, 0, 1, 5])", "tout": "[0, 1, 2, 3, 4, 5]"}, {"tin": "sort_array([2, 4, 3, 0, 1, 5, 6])", "tout": "[6, 5, 4, 3, 2, 1, 0]"}]}
+{"task_id": "HumanEval/89", "ios": [{"tin": "encrypt('hi')", "tout": "'lm'"}, {"tin": "encrypt('asdfghjkl')", "tout": "'ewhjklnop'"}, {"tin": "encrypt('gf')", "tout": "'kj'"}, {"tin": "encrypt('et')", "tout": "'ix'"}]}
+{"task_id": "HumanEval/91", "ios": [{"tin": "is_bored(\"Hello world\")", "tout": "0"}, {"tin": "is_bored(\"The sky is blue. The sun is shining. I love this weather\")", "tout": "1"}]}
+{"task_id": "HumanEval/92", "ios": [{"tin": "any_int(5, 2, 7)", "tout": "True"}, {"tin": "any_int(3, 2, 2)", "tout": "False"}, {"tin": "any_int(3, -2, 1)", "tout": "True"}, {"tin": "any_int(3.6, -2.2, 2)", "tout": "False"}]}
+{"task_id": "HumanEval/93", "ios": [{"tin": "encode('test')", "tout": "'TGST'"}, {"tin": "encode('This is a message')", "tout": "'tHKS KS C MGSSCGG'"}]}
+{"task_id": "HumanEval/94", "ios": [{"tin": "skjkasdkd([0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3])", "tout": "10"}, {"tin": "skjkasdkd([1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1])", "tout": "25"}, {"tin": "skjkasdkd([1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3])", "tout": "13"}, {"tin": "skjkasdkd([0,724,32,71,99,32,6,0,5,91,83,0,5,6])", "tout": "11"}, {"tin": "skjkasdkd([0,81,12,3,1,21])", "tout": "3"}, {"tin": "skjkasdkd([0,8,1,2,1,7])", "tout": "7"}]}
+{"task_id": "HumanEval/95", "ios": [{"tin": "check_dict_case({\"a\":\"apple\", \"b\":\"banana\"})", "tout": "True"}, {"tin": "check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"})", "tout": "False"}, {"tin": "check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"})", "tout": "False"}, {"tin": "check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"})", "tout": "False"}, {"tin": "check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" })", "tout": "True"}]}
+{"task_id": "HumanEval/97", "ios": [{"tin": "multiply(148, 412)", "tout": "16"}, {"tin": "multiply(19, 28)", "tout": "72"}, {"tin": "multiply(2020, 1851)", "tout": "0"}, {"tin": "multiply(14,-15)", "tout": "20"}]}
+{"task_id": "HumanEval/98", "ios": [{"tin": "count_upper('aBCdEf')", "tout": "1"}, {"tin": "count_upper('abcdefg')", "tout": "0"}, {"tin": "count_upper('dBBE')", "tout": "0"}]}
+{"task_id": "HumanEval/99", "ios": [{"tin": "closest_integer(\"10\")", "tout": "10"}, {"tin": "closest_integer(\"15.3\")", "tout": "15"}]}
+{"task_id": "HumanEval/100", "ios": [{"tin": "make_a_pile(3)", "tout": "[3, 5, 7]"}]}
+{"task_id": "HumanEval/101", "ios": [{"tin": "words_string(\"Hi, my name is John\")", "tout": "[\"Hi\", \"my\", \"name\", \"is\", \"John\"]"}, {"tin": "words_string(\"One, two, three, four, five, six\")", "tout": "[\"One\", \"two\", \"three\", \"four\", \"five\", \"six\"]"}]}
+{"task_id": "HumanEval/102", "ios": [{"tin": "choose_num(12, 15)", "tout": "14"}, {"tin": "choose_num(13, 12)", "tout": "-1"}]}
+{"task_id": "HumanEval/103", "ios": [{"tin": "rounded_avg(1, 5)", "tout": "\"0b11\""}, {"tin": "rounded_avg(7, 5)", "tout": "-1"}, {"tin": "rounded_avg(10, 20)", "tout": "\"0b1111\""}, {"tin": "rounded_avg(20, 33)", "tout": "\"0b11010\""}]}
+{"task_id": "HumanEval/104", "ios": [{"tin": "unique_digits([15, 33, 1422, 1])", "tout": "[1, 15, 33]"}, {"tin": "unique_digits([152, 323, 1422, 10])", "tout": "[]"}]}
+{"task_id": "HumanEval/105", "ios": [{"tin": "by_length([2, 1, 1, 4, 5, 8, 2, 3])", "tout": "[\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"]"}, {"tin": "by_length([])", "tout": "[]"}, {"tin": "by_length([1, -1 , 55])", "tout": "['One']"}]}
+{"task_id": "HumanEval/106", "ios": [{"tin": "f(5)", "tout": "[1, 2, 6, 24, 15]"}]}
+{"task_id": "HumanEval/107", "ios": [{"tin": "even_odd_palindrome(3)", "tout": "(1, 2)"}, {"tin": "even_odd_palindrome(12)", "tout": "(4, 6)"}]}
+{"task_id": "HumanEval/108", "ios": [{"tin": "count_nums([])", "tout": "0"}, {"tin": "count_nums([-1, 11, -11])", "tout": "1"}, {"tin": "count_nums([1, 1, 2])", "tout": "3"}]}
+{"task_id": "HumanEval/109", "ios": [{"tin": "move_one_ball([3, 4, 5, 1, 2])", "tout": "True"}, {"tin": "move_one_ball([3, 5, 4, 1, 2])", "tout": "False"}]}
+{"task_id": "HumanEval/110", "ios": [{"tin": "exchange([1, 2, 3, 4], [1, 2, 3, 4])", "tout": "\"YES\""}, {"tin": "exchange([1, 2, 3, 4], [1, 5, 3, 4])", "tout": "\"NO\""}]}
+{"task_id": "HumanEval/111", "ios": [{"tin": "histogram('a b c')", "tout": "{'a': 1, 'b': 1, 'c': 1}"}, {"tin": "histogram('a b b a')", "tout": "{'a': 2, 'b': 2}"}, {"tin": "histogram('a b c a b')", "tout": "{'a': 2, 'b': 2}"}, {"tin": "histogram('b b b b a')", "tout": "{'b': 4}"}, {"tin": "histogram('')", "tout": "{}"}]}
+{"task_id": "HumanEval/112", "ios": [{"tin": "reverse_delete(\"abcde\",\"ae\")", "tout": "('bcd',False)"}, {"tin": "reverse_delete(\"abcdef\",\"b\")", "tout": "('acdef',False)"}, {"tin": "reverse_delete(\"abcdedcba\",\"ab\")", "tout": "('cdedc',True)"}]}
+{"task_id": "HumanEval/113", "ios": [{"tin": "odd_count(['1234567'])", "tout": "[\"the number of odd elements 4n the str4ng 4 of the 4nput.\"]"}, {"tin": "odd_count(['3',\"11111111\"])", "tout": "[\"the number of odd elements 1n the str1ng 1 of the 1nput.\",\"the number of odd elements 8n the str8ng 8 of the 8nput.\"]"}]}
+{"task_id": "HumanEval/114", "ios": [{"tin": "minSubArraySum([2, 3, 4, 1, 2, 4])", "tout": "1"}, {"tin": "minSubArraySum([-1, -2, -3])", "tout": "-6"}]}
+{"task_id": "HumanEval/115", "ios": [{"tin": "max_fill([[0,0,1,0], [0,1,0,0], [1,1,1,1]],1)", "tout": "6"}, {"tin": "max_fill([[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]],2)", "tout": "5"}, {"tin": "max_fill([[0,0,0], [0,0,0]],5)", "tout": "0"}]}
+{"task_id": "HumanEval/116", "ios": [{"tin": "sort_array([1, 5, 2, 3, 4])", "tout": "[1, 2, 3, 4, 5]"}, {"tin": "sort_array([-2, -3, -4, -5, -6])", "tout": "[-6, -5, -4, -3, -2]"}, {"tin": "sort_array([1, 0, 2, 3, 4])", "tout": "[0, 1, 2, 3, 4]"}]}
+{"task_id": "HumanEval/117", "ios": [{"tin": "select_words(\"Mary had a little lamb\", 4)", "tout": "[\"little\"]"}, {"tin": "select_words(\"Mary had a little lamb\", 3)", "tout": "[\"Mary\", \"lamb\"]"}, {"tin": "select_words(\"simple white space\", 2)", "tout": "[]"}, {"tin": "select_words(\"Hello world\", 4)", "tout": "[\"world\"]"}, {"tin": "select_words(\"Uncle sam\", 3)", "tout": "[\"Uncle\"]"}]}
+{"task_id": "HumanEval/118", "ios": [{"tin": "get_closest_vowel(\"yogurt\")", "tout": "\"u\""}, {"tin": "get_closest_vowel(\"FULL\")", "tout": "\"U\""}, {"tin": "get_closest_vowel(\"quick\")", "tout": "\"\""}, {"tin": "get_closest_vowel(\"ab\")", "tout": "\"\""}]}
+{"task_id": "HumanEval/119", "ios": [{"tin": "match_parens(['()(', ')']) ", "tout": " 'Yes'"}, {"tin": "match_parens([')', ')']) ", "tout": " 'No'"}]}
+{"task_id": "HumanEval/120", "ios": [{"tin": "maximum([-3, -4, 5],3)", "tout": "[-4, -3, 5]"}, {"tin": "maximum([4, -4, 4],2)", "tout": "[4, 4]"}, {"tin": "maximum([-3, 2, 1, 2, -1, -2, 1],1)", "tout": "[2]"}]}
+{"task_id": "HumanEval/121", "ios": [{"tin": "solution([5, 8, 7, 1])", "tout": "12"}, {"tin": "solution([3, 3, 3, 3, 3])", "tout": "9"}, {"tin": "solution([30, 13, 24, 321])", "tout": "0"}]}
+{"task_id": "HumanEval/122", "ios": [{"tin": "add_elements([111,21,3,4000,5,6,7,8,9],4)", "tout": "24"}]}
+{"task_id": "HumanEval/123", "ios": [{"tin": "get_odd_collatz(5)", "tout": "[1, 5]"}]}
+{"task_id": "HumanEval/125", "ios": [{"tin": "split_words(\"Hello world!\")", "tout": "[\"Hello\", \"world!\"]"}, {"tin": "split_words(\"Hello,world!\")", "tout": "[\"Hello\", \"world!\"]"}, {"tin": "split_words(\"abcdef\")", "tout": "3"}]}
+{"task_id": "HumanEval/126", "ios": [{"tin": "is_sorted([5])", "tout": "True"}, {"tin": "is_sorted([1, 2, 3, 4, 5])", "tout": "True"}, {"tin": "is_sorted([1, 3, 2, 4, 5])", "tout": "False"}, {"tin": "is_sorted([1, 2, 3, 4, 5, 6])", "tout": "True"}, {"tin": "is_sorted([1, 2, 3, 4, 5, 6, 7])", "tout": "True"}, {"tin": "is_sorted([1, 3, 2, 4, 5, 6, 7])", "tout": "False"}, {"tin": "is_sorted([1, 2, 2, 3, 3, 4])", "tout": "True"}, {"tin": "is_sorted([1, 2, 2, 2, 3, 4])", "tout": "False"}]}
+{"task_id": "HumanEval/127", "ios": [{"tin": "intersection((1, 2), (2, 3))", "tout": "\"NO\""}, {"tin": "intersection((-1, 1), (0, 4))", "tout": "\"NO\""}, {"tin": "intersection((-3, -1), (-5, 5))", "tout": "\"YES\""}]}
+{"task_id": "HumanEval/128", "ios": [{"tin": "prod_signs([1, 2, 2, -4])", "tout": "-9"}, {"tin": "prod_signs([0, 1])", "tout": "0"}, {"tin": "prod_signs([])", "tout": "None"}]}
+{"task_id": "HumanEval/129", "ios": [{"tin": "minPath([ [1,2,3], [4,5,6], [7,8,9]],3)", "tout": "[1, 2, 1]"}, {"tin": "minPath([ [5,9,3], [4,1,6], [7,8,2]],1)", "tout": "[1]"}]}
+{"task_id": "HumanEval/130", "ios": [{"tin": "tri(3)", "tout": "[1, 3, 2, 8]"}]}
+{"task_id": "HumanEval/131", "ios": [{"tin": "digits(1)", "tout": "1"}, {"tin": "digits(4)", "tout": "0"}, {"tin": "digits(235)", "tout": "15"}]}
+{"task_id": "HumanEval/133", "ios": [{"tin": "sum_squares([1,2,3])", "tout": "14"}, {"tin": "sum_squares([1,4,9])", "tout": "98"}, {"tin": "sum_squares([1,3,5,7])", "tout": "84"}, {"tin": "sum_squares([1.4,4.2,0])", "tout": "29"}, {"tin": "sum_squares([-2.4,1,1])", "tout": "6"}]}
+{"task_id": "HumanEval/134", "ios": [{"tin": "check_if_last_char_is_a_letter(\"apple pie\")", "tout": "False"}, {"tin": "check_if_last_char_is_a_letter(\"apple pi e\")", "tout": "True"}, {"tin": "check_if_last_char_is_a_letter(\"apple pi e \")", "tout": "False"}, {"tin": "check_if_last_char_is_a_letter(\"\")", "tout": "False"}]}
+{"task_id": "HumanEval/135", "ios": [{"tin": "can_arrange([1,2,4,3,5])", "tout": "3"}, {"tin": "can_arrange([1,2,3])", "tout": "-1"}]}
+{"task_id": "HumanEval/136", "ios": [{"tin": "largest_smallest_integers([2, 4, 1, 3, 5, 7])", "tout": "(None, 1)"}, {"tin": "largest_smallest_integers([])", "tout": "(None, None)"}, {"tin": "largest_smallest_integers([0])", "tout": "(None, None)"}]}
+{"task_id": "HumanEval/138", "ios": [{"tin": "is_equal_to_sum_even(4)", "tout": "False"}, {"tin": "is_equal_to_sum_even(6)", "tout": "False"}, {"tin": "is_equal_to_sum_even(8)", "tout": "True"}]}
+{"task_id": "HumanEval/139", "ios": [{"tin": "special_factorial(4)", "tout": "288"}]}
+{"task_id": "HumanEval/140", "ios": [{"tin": "fix_spaces(\"Example\")", "tout": "\"Example\""}, {"tin": "fix_spaces(\"Example 1\")", "tout": "\"Example_1\""}, {"tin": "fix_spaces(\" Example 2\")", "tout": "\"_Example_2\""}, {"tin": "fix_spaces(\" Example   3\")", "tout": "\"_Example-3\""}]}
+{"task_id": "HumanEval/141", "ios": [{"tin": "file_name_check(\"example.txt\")", "tout": "'Yes'"}, {"tin": "file_name_check(\"1example.dll\")", "tout": "'No'"}]}
+{"task_id": "HumanEval/142", "ios": [{"tin": "sum_squares([1,2,3])", "tout": "6"}, {"tin": "sum_squares([])", "tout": "0"}, {"tin": "sum_squares([-1,-5,2,-1,-5])", "tout": "-126"}]}
+{"task_id": "HumanEval/143", "ios": [{"tin": "words_in_sentence(\"This is a test\")", "tout": "\"is\""}, {"tin": "words_in_sentence(\"lets go for swimming\")", "tout": "\"go for\""}]}
+{"task_id": "HumanEval/145", "ios": [{"tin": "order_by_points([1, 11, -1, -11, -12])", "tout": "[-1, -11, 1, -12, 11]"}, {"tin": "order_by_points([])", "tout": "[]"}]}
+{"task_id": "HumanEval/146", "ios": [{"tin": "specialFilter([15, -73, 14, -15])", "tout": "1 "}, {"tin": "specialFilter([33, -2, -3, 45, 21, 109])", "tout": "2"}]}
+{"task_id": "HumanEval/147", "ios": [{"tin": "get_max_triples(5)", "tout": "1"}]}
+{"task_id": "HumanEval/148", "ios": [{"tin": "bf(\"Jupiter\", \"Neptune\")", "tout": "(\"Saturn\", \"Uranus\")"}, {"tin": "bf(\"Earth\", \"Mercury\")", "tout": "(\"Venus\")"}, {"tin": "bf(\"Mercury\", \"Uranus\")", "tout": "(\"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\")"}]}
+{"task_id": "HumanEval/149", "ios": [{"tin": "sorted_list_sum([\"aa\", \"a\", \"aaa\"])", "tout": "[\"aa\"]"}, {"tin": "sorted_list_sum([\"ab\", \"a\", \"aaa\", \"cd\"])", "tout": "[\"ab\", \"cd\"]"}]}
+{"task_id": "HumanEval/150", "ios": [{"tin": "x_or_y(7, 34, 12)", "tout": "34"}, {"tin": "x_or_y(15, 8, 5)", "tout": "5"}]}
+{"task_id": "HumanEval/153", "ios": [{"tin": "Strongest_Extension('my_class', ['AA', 'Be', 'CC'])", "tout": "'my_class.AA'"}]}
+{"task_id": "HumanEval/155", "ios": [{"tin": "even_odd_count(-12)", "tout": "(1, 1)"}, {"tin": "even_odd_count(123)", "tout": "(1, 2)"}]}
+{"task_id": "HumanEval/156", "ios": [{"tin": "int_to_mini_roman(19)", "tout": "'xix'"}, {"tin": "int_to_mini_roman(152)", "tout": "'clii'"}, {"tin": "int_to_mini_roman(426)", "tout": "'cdxxvi'"}]}
+{"task_id": "HumanEval/157", "ios": [{"tin": "right_angle_triangle(3, 4, 5)", "tout": "True"}, {"tin": "right_angle_triangle(1, 2, 3)", "tout": "False"}]}
+{"task_id": "HumanEval/159", "ios": [{"tin": "eat(5, 6, 10)", "tout": "[11, 4]"}, {"tin": "eat(4, 8, 9)", "tout": "[12, 1]"}, {"tin": "eat(1, 10, 10)", "tout": "[11, 0]"}, {"tin": "eat(2, 11, 5)", "tout": "[7, 0]"}]}
+{"task_id": "HumanEval/160", "ios": [{"tin": "do_algebra(['+', '*', '-'],[2, 3, 4, 5])", "tout": "9"}]}
+{"task_id": "HumanEval/161", "ios": [{"tin": "solve(\"1234\")", "tout": "\"4321\""}, {"tin": "solve(\"ab\")", "tout": "\"AB\""}, {"tin": "solve(\"#a@C\")", "tout": "\"#A@c\""}]}
+{"task_id": "HumanEval/162", "ios": [{"tin": "string_to_md5('Hello world')", "tout": "'3e25960a79dbc69b674cd4ec67a72c62'"}]}
+{"task_id": "HumanEval/163", "ios": [{"tin": "generate_integers(2, 8)", "tout": "[2, 4, 6, 8]"}, {"tin": "generate_integers(8, 2)", "tout": "[2, 4, 6, 8]"}, {"tin": "generate_integers(10, 14)", "tout": "[]"}]}
+{"task_id": "HumanEval/38", "ios": [{"tin": "decode_cyclic(\"2314\")", "tout": "\"1234\""}]}
+{"task_id": "HumanEval/41", "ios": [{"tin": "car_race_collision(11)", "tout": "121"}]}
+{"task_id": "HumanEval/50", "ios": [{"tin": "decode_shift(\"fghi\")", "tout": "\"abcd\""}]}
+{"task_id": "HumanEval/67", "ios": [{"tin": "fruit_distribution(\"5 apples and 6 oranges\", 19)", "tout": "8"}, {"tin": "fruit_distribution(\"0 apples and 1 oranges\",3)", "tout": "2"}, {"tin": "fruit_distribution(\"2 apples and 3 oranges\", 100)", "tout": "95"}, {"tin": "fruit_distribution(\"100 apples and 1 oranges\",120)", "tout": "19"}]}
+{"task_id": "HumanEval/83", "ios": [{"tin": "starts_one_ends(6)", "tout": "180000"}]}
+{"task_id": "HumanEval/90", "ios": [{"tin": "next_smallest([1, 2, 3, 4, 5])", "tout": "2"}, {"tin": "next_smallest([5, 1, 4, 3, 2])", "tout": "2"}, {"tin": "next_smallest([])", "tout": "None"}, {"tin": "next_smallest([1, 1])", "tout": "None"}]}
+{"task_id": "HumanEval/96", "ios": [{"tin": "count_up_to(5)", "tout": "[2,3]"}, {"tin": "count_up_to(11)", "tout": "[2,3,5,7]"}, {"tin": "count_up_to(0)", "tout": "[]"}, {"tin": "count_up_to(20)", "tout": "[2,3,5,7,11,13,17,19]"}, {"tin": "count_up_to(1)", "tout": "[]"}, {"tin": "count_up_to(18)", "tout": "[2,3,5,7,11,13,17]"}]}
+{"task_id": "HumanEval/124", "ios": [{"tin": "valid_date('03-11-2000')", "tout": "True"}, {"tin": "valid_date('15-01-2012')", "tout": "False"}, {"tin": "valid_date('04-0-2040')", "tout": "False"}, {"tin": "valid_date('06-04-2020')", "tout": "True"}, {"tin": "valid_date('06/04/2020')", "tout": "False"}]}
+{"task_id": "HumanEval/132", "ios": [{"tin": "is_nested('[[]]')", "tout": "True"}, {"tin": "is_nested('[]]]]]]][[[[[]')", "tout": "False"}, {"tin": "is_nested('[][]')", "tout": "False"}, {"tin": "is_nested('[]')", "tout": "False"}, {"tin": "is_nested('[[][]]')", "tout": "True"}, {"tin": "is_nested('[[]][[')", "tout": "True"}]}
+{"task_id": "HumanEval/137", "ios": [{"tin": "compare_one(1, 2.5)", "tout": "2.5"}, {"tin": "compare_one(1, \"2,3\")", "tout": "\"2,3\""}, {"tin": "compare_one(\"5,1\", \"6\")", "tout": "\"6\""}, {"tin": "compare_one(\"1\", 1)", "tout": "None"}]}
+{"task_id": "HumanEval/144", "ios": [{"tin": "simplify(\"1/5\", \"5/1\")", "tout": "True"}, {"tin": "simplify(\"1/6\", \"2/1\")", "tout": "False"}, {"tin": "simplify(\"7/10\", \"10/2\")", "tout": "False"}]}
+{"task_id": "HumanEval/151", "ios": [{"tin": "double_the_difference([1, 3, 2, 0])", "tout": "10"}, {"tin": "double_the_difference([-1, -2, 0])", "tout": "0"}, {"tin": "double_the_difference([9, -2])", "tout": "81"}, {"tin": "double_the_difference([0])", "tout": "0 "}]}
+{"task_id": "HumanEval/152", "ios": [{"tin": "compare([1,2,3,4,5,1],[1,2,3,4,2,-2])", "tout": "[0,0,0,0,3,3]"}, {"tin": "compare([0,5,0,0,0,4],[4,1,1,0,0,-2])", "tout": "[4,4,1,0,0,6]"}]}
+{"task_id": "HumanEval/154", "ios": [{"tin": "cycpattern_check(\"abcd\",\"abd\")", "tout": "False"}, {"tin": "cycpattern_check(\"hello\",\"ell\")", "tout": "True"}, {"tin": "cycpattern_check(\"whassup\",\"psus\")", "tout": "False"}, {"tin": "cycpattern_check(\"abab\",\"baa\")", "tout": "True"}, {"tin": "cycpattern_check(\"efef\",\"eeff\")", "tout": "False"}, {"tin": "cycpattern_check(\"himenss\",\"simen\")", "tout": "True"}]}
+{"task_id": "HumanEval/158", "ios": [{"tin": "find_max([\"name\", \"of\", \"string\"]) ", "tout": " \"string\""}, {"tin": "find_max([\"name\", \"enam\", \"game\"]) ", "tout": " \"enam\""}, {"tin": "find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) ", "tout": " \"aaaaaaa\""}]}

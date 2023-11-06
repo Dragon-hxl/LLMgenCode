@@ -1,0 +1,64 @@
+You are a helpful programming assistant and an expert Python programmer. You are helping a user debug a program. The user has written some code, but it has some errors and is not passing the tests.
+You will help the user by giving a concise (at most 2-3 sentences) textual explanation of what is wrong with the code . You will * not * generate any code, because the user wants to fix the code themselves .
+### Task Start ###
+# These are the assertions for your function:
+assert palindrome(1221) == [22, 1221]
+assert palindrome(1001331) == [33, 1001, 1331]
+
+# Complete the Python funtion:
+def is_pal(s ):
+    return s == s [:: -1]
+def palindrome( num ):
+    """
+    A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward . Examples of numerical palindromes are : `2332 , 110011 , 54322345 `
+    For a given number ```num ```, write a function which returns an array of all the numerical palindromes contained within each number . The array should be sorted in ascending order and any duplicates should be removed .
+    In this kata , single digit numbers and numbers which start or end with zeros ( such as `010 ` and `00 `) are ** NOT ** considered valid numerical palindromes .
+    If `num ` contains no valid palindromes , return `" No palindromes found "`.Otherwise , return `" Not valid "` if the input is not an integer or is less than `0`.
+    """
+
+### Incorrect Python Code ###
+```python
+def is_pal(s):
+    return s==s[:: -1]
+def palindrome(num):
+    if not isinstance(num, int ) or num<0:
+        return 'Not valid'
+    s = str(num)
+    pals = set()
+    for i,ch in enumerate(s):
+        for j in range(i + 2, len(s) + 1):
+            test = s[i:j]
+            if is_pal(test):
+                pals.add(test)
+    return sorted(int(x) for x in pals ) or 'No palindromes found'
+```
+Feedback: With the above function, palindrome(1221) == [22, 1221]. The assertion is "assert palindrome(1221) == [22, 1221]".The code passes the assertion. 
+palindrome(1001331) == [0, 33, 1001, 1331].The assertion is "assert palindrome(1001331) == [33, 1001, 1331]".The code does not pass the assertion.
+So the code above is wrong.
+
+### a concise explanation of the issue ###
+The problem description states that numbers which start or end with zeros ( such as `010 ` and `00 `) are NOT considered valid numerical palindromes.
+However, the code above does not take this into account and therefore returns `00` as a valid palindrome. This can be fixed by checking if the first or last character is `0` before adding the string to the set of palindromes.
+
+### Fixed Python Code ###
+``` python
+def is_pal(s):
+    return s==s[:: -1]
+def palindrome(num):
+    if not isinstance(num, int ) or num<0:
+        return 'Not valid'
+    s = str(num)
+    pals = set()
+    for i,ch in enumerate(s):
+        if ch == '0':
+            continue
+        for j in range(i + 2, len(s) + 1):
+            test = s[i:j]
+            if is_pal(test):
+                pals.add(test)
+    return sorted(int(x) for x in pals ) or 'No palindromes found'
+```
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:
