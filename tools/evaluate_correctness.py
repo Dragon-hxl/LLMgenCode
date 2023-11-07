@@ -60,6 +60,7 @@ def get_pass_n(result_file,output_file=None):
                 total_passed = False
                 solutions_back = []
                 for i,solution in enumerate(solutions):
+                    solution = solution["solution"]
                     passed = get_truePass(problem,solution)
                     print(f"solution {i} passed {passed}")
                     if passed:
@@ -146,10 +147,10 @@ def draw_plots2(data,image_path):
 
 if __name__=="__main__":
     # file = "../res/UTfeedback_multi_7b16k_full.jsonl"
-    file = "../res/UTfeedback_multiSBP10_7b16k_tT.jsonl"
-    output_file = "../res/multi_with_pass/UTfeedback_multiSBP10_7b16k_tT.jsonl"
+    file = "../res/UTfeedback_multiSBSP10_7b16k_pT.jsonl"
+    output_file = "../res/multi_with_pass/UTfeedback_multiSBSP10_7b16k_pT.jsonl"
     passed_per_cir,task_cir = get_pass_n(file,output_file)
-    data = {"SBP10_7b16k_tT":passed_per_cir}
-    draw_plots(data=data, image_path="../image/UTfeedback_multiSBP10_7b16k_tT.jpg")
+    data = {"SBSP10_7b16k_pT":passed_per_cir}
+    draw_plots(data=data, image_path="../image/UTfeedback_multiSBSP10_7b16k_pT.jpg")
                 
                     

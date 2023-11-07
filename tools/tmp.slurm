@@ -83,6 +83,6 @@ cd /home/S/hexiaolong/codex/self-debug/tools
 ###python3.9 humaneval_UTfeedback.py -mf /lustre/S/hexiaolong/vicuna-13b-v1.1/ -o UTfeedback_13bv0.jsonl
 ###python3.9 humaneval_UTfeedback_multi.py -mf /lustre/S/hexiaolong/vicuna-7b-16k/ -o ../res/UTfeedback_multi100_7b16k.jsonl
 ###python3.9 try.py --model_path /lustre/S/hexiaolong/vicuna-7b-16k/ --output_file try.jsonl
-python3.9 evaluate_correctness.py > UTfeedback_SBP10_7b16k_tT.txt 2>&1
+python3.9 evaluate_correctness.py > UTfeedback_SBSP10_7b16k_pT.txt 2>&1
 #- End
 echo "Job end at $(date "+%Y-%m-%d %H:%M:%S")"
