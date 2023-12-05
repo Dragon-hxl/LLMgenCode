@@ -138,6 +138,7 @@ image/
 log/
 res/
 outputs/
+try/
 
 #hydra
 src/outputs
