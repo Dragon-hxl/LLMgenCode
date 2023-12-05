@@ -2,8 +2,12 @@ import torch
 import json
 import argparse
 import re
+import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
+from utils.obj import Node
+from human_eval.data import  read_problems
+from human_eval.execution import check_test_correctness,run_code_with_output_CODET
 
 # get args for humaneval test on LLM
 def get_args():
@@ -187,3 +191,249 @@ def filter_fix_ans(ans, entry_point, start_code,verbose=False):
         print(sol)
         print("============fix end===============")
     return sol
+
+def log_message(message,verbose):
+    if verbose:
+        print(message)
+    return
+
+problems = read_problems()
+
+def exec_solution_testcase(task_id,solution,testcase):
+    problem = problems[task_id]
+    test_string = f"assert {testcase['tin']} == {testcase['tout']}"
+    check_string = problem["prompt"] + solution + test_string
+    with ThreadPoolExecutor(max_workers=1) as executor:
+        args = (check_string, 1.0)
+        future = executor.submit(check_test_correctness, *args)
+        result = future.result()
+        passed = result["passed"]
+    return passed
+
+
+def get_CODET_point(Node_list, testcases, task_id) -> None:
+    start_time = time.time()
+    solution_id_to_data = dict()
+    test_id_to_data = dict()
+    solution_pass_test = defaultdict(set)
+    sol_ids = []
+    test_ids = []
+    solution_group = defaultdict(set)
+    # group_score = defaultdict(int)
+    grouped = dict()
+    verbose = True
+    
+    for i,node in enumerate(Node_list):
+        solution_id_to_data[i]=node.solution
+        sol_ids.append(i)
+        grouped[i]=False
+    for i,test in enumerate(testcases):
+        test_id_to_data[i]=test
+        test_ids.append(i)
+    log_message("Run solution and test case...",verbose)    
+    for i in sol_ids:
+        if Node_list[i].already_CODET:
+            solution_pass_test[i] = solution_pass_test[i] | Node_list[i].CODET_pass_testcase
+            continue
+        for j in test_ids:
+            passed = exec_solution_testcase(task_id,solution_id_to_data[i],test_id_to_data[j])
+            if passed:
+                solution_pass_test[i].add(j)
+        Node_list[i].CODET_pass_testcase = solution_pass_test[i]
+        Node_list[i].already_CODET = True
+    log_message("Group solution...",verbose)            
+    for idx,i in enumerate(sol_ids):#range(len(sol_ids)):
+        if grouped[i]:
+            continue
+        group = set()
+        group.add(i)
+        grouped[i] = True
+        for j in range(idx+1,len(sol_ids)):
+            solution_id_2 = sol_ids[j]
+            if solution_pass_test[i] == solution_pass_test[solution_id_2]:
+                group.add(solution_id_2)
+                grouped[solution_id_2]=True
+        solution_group[i] = group
+        group_score = len(group) * len(solution_pass_test[i])
+        log_message(f"group {i} : {group} scores {group_score}",verbose)
+        for sol_id in group:
+            Node_list[sol_id].CODET_point = group_score
+    end_time = time.time()
+    log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
+    return
+
+def print_checkp(problem,testcases):
+    exec_globals = {}
+    check_program = (
+                problem["prompt"]+ "    pass\n" 
+            )
+    #对每个unit test构建语句将其执行结果赋给一个全局变量方便获取
+    for i,ut in enumerate(testcases):
+        exec_globals["ans_"+str(i)] = 0
+        check_program = check_program + "try:\n    ans_" + str(i) + " = " + f"({ut['tin']} == {ut['tout']})" + "\nexcept:\n    ans_" + str(i) + " = False\n"
+    print(check_program)
+    return
+
+def get_CODET_point2(Node_list, testcases, task_id) -> None:
+    start_time = time.time()
+    solution_id_to_data = dict()
+    test_id_to_data = dict()
+    solution_pass_test = defaultdict(set)
+    sol_ids = []
+    test_ids = []
+    solution_group = defaultdict(set)
+    group_score = defaultdict(int)
+    grouped = dict()
+    verbose = True
+    
+    for i,node in enumerate(Node_list):
+        solution_id_to_data[i]=node
+        sol_ids.append(i)
+        grouped[i]=False
+    for i,test in enumerate(testcases):
+        test_id_to_data[i]=test
+        test_ids.append(i)
+    log_message("Run solution and test case...",verbose)
+    # print_checkp(problems[task_id],testcases)    
+    for i in sol_ids:
+        if Node_list[i].already_CODET:
+            solution_pass_test[i] =  Node_list[i].CODET_pass_testcase
+            continue
+        # for j in test_ids:
+        #     passed = exec_solution_testcase(task_id,solution_id_to_data[i],test_id_to_data[j])
+        #     if passed:
+        #         solution_pass_test[i].add(j)
+        # run_code_with_output_CODET(problems[task_id],solution_id_to_data[i],testcases,"",300.0)
+        with ThreadPoolExecutor(max_workers=1) as executor:
+            args = (problems[task_id],solution_id_to_data[i].solution,testcases,"",30.0)
+            future = executor.submit(run_code_with_output_CODET, *args)
+            result = future.result()
+            passed = result["passed"]
+            code_res = result["result"]
+        print(f"task:{task_id},solution:{i},passed:{passed},result:{code_res}")
+        if type(code_res) is str:
+            pass
+        else:
+            for j,res in enumerate(code_res):
+                if type(res) is bool:
+                    if res:
+                        solution_pass_test[i].add(j)
+        Node_list[i].CODET_pass_testcase = solution_pass_test[i]
+        Node_list[i].already_CODET = True
+    log_message("Group solution...",verbose)            
+    for idx,i in enumerate(sol_ids):#range(len(sol_ids)):
+        if grouped[i]:
+            continue
+        group = set()
+        group.add(i)
+        grouped[i] = True
+        for j in range(idx+1,len(sol_ids)):
+            solution_id_2 = sol_ids[j]
+            if solution_pass_test[i] == solution_pass_test[solution_id_2]:
+                group.add(solution_id_2)
+                grouped[solution_id_2]=True
+        solution_group[i] = group
+        group_score[i] = len(group) * len(solution_pass_test[i])
+        log_message(f"group {i} : {group} scores {group_score[i]}",verbose)
+        for sol_id in group:
+            Node_list[sol_id].CODET_point = group_score[i]
+    end_time = time.time()
+    log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
+    return group_score
+
+
+def get_CODET_point3(Node_list, testcases, task_id) -> None:
+    start_time = time.time()
+    solution_id_to_data = dict()
+    test_id_to_data = dict()
+    solution_pass_test = defaultdict(set)
+    sol_ids = []
+    test_ids = []
+    solution_group = defaultdict(set)
+    group_score = defaultdict(int)
+    grouped = dict()
+    verbose = True
+    
+    for i,node in enumerate(Node_list):
+        solution_id_to_data[i]=node
+        sol_ids.append(i)
+        grouped[i]=False
+    for i,test in enumerate(testcases):
+        test_id_to_data[i]=test
+        test_ids.append(i)
+    log_message("Run solution and test case...",verbose)
+    print_checkp(problems[task_id],testcases)    
+    for i in sol_ids:
+        if Node_list[i].already_CODET:
+            solution_pass_test[i] =  Node_list[i].CODET_pass_testcase
+            continue
+        # for j in test_ids:
+        #     passed = exec_solution_testcase(task_id,solution_id_to_data[i],test_id_to_data[j])
+        #     if passed:
+        #         solution_pass_test[i].add(j)
+        # run_code_with_output_CODET(problems[task_id],solution_id_to_data[i],testcases,"",300.0)
+        with ThreadPoolExecutor(max_workers=1) as executor:
+            args = (problems[task_id],solution_id_to_data[i].solution,testcases,"",30.0)
+            future = executor.submit(run_code_with_output_CODET, *args)
+            result = future.result()
+            passed = result["passed"]
+            code_res = result["result"]
+        print(f"task:{task_id},solution:{i},passed:{passed},result:{code_res}")
+        if type(code_res) is str:
+            pass
+        else:
+            for j,res in enumerate(code_res):
+                if type(res) is bool:
+                    if res:
+                        solution_pass_test[i].add(j)
+        Node_list[i].CODET_pass_testcase = solution_pass_test[i]
+        Node_list[i].already_CODET = True
+    log_message("Group solution...",verbose)            
+    for idx,i in enumerate(sol_ids):#range(len(sol_ids)):
+        if grouped[i]:
+            continue
+        group = set()
+        group.add(i)
+        grouped[i] = True
+        for j in range(idx+1,len(sol_ids)):
+            solution_id_2 = sol_ids[j]
+            if solution_pass_test[i] == solution_pass_test[solution_id_2]:
+                group.add(solution_id_2)
+                grouped[solution_id_2]=True
+        solution_group[i] = group
+        group_score[i] = len(group) * len(solution_pass_test[i])
+        log_message(f"group {i} : {group} scores {group_score[i]}",verbose)
+        for sol_id in group:
+            Node_list[sol_id].CODET_point = group_score[i]
+    log_message("Sort group and get result...",verbose)    
+    sorted_group = sorted(group_score.items(),key=lambda x: x[1],reverse=True)
+    sorted_nodes = []
+    for k,v in sorted_group:
+        sgroup = solution_group[k]
+        nodes = [solution_id_to_data[i] for i in sgroup]
+        nodes = sorted(nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
+        sorted_nodes.append(nodes)
+    idx_record = []
+    for nodes in sorted_nodes:
+        idx_record.append(0)
+    chosen_nodes = []
+    lack_num = 0
+    stop = False
+    while True:
+        for i,nodes in enumerate(sorted_nodes):
+            if idx_record[i] >= len(nodes):
+                lack_num+=1
+                if lack_num > 999:
+                    stop = True
+                    break
+                continue
+            chosen_nodes.append(nodes[idx_record[i]])
+            idx_record[i] = idx_record[i] + 1
+            if len(chosen_nodes) == 10:
+                stop = True
+                break
+        if stop:
+            break
+    end_time = time.time()
+    log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
+    return chosen_nodes

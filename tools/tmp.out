@@ -1,4 +1,4 @@
-Job start at 2023-11-07 17:01:57
+Job start at 2023-11-08 12:38:02
 Job run at:
    Static hostname: localhost.localdomain
 Transient hostname: r8a30-a06
@@ -24,12 +24,12 @@ Currently Loaded Modulefiles:
 ############### /home : /home/S/hexiaolong
 Disk quotas for user hexiaolong (uid 6123): 
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
-          /home   3997M  16384M  20480M           24042       0       0        
+          /home   4155M  16384M  20480M           25589       0       0        
 
 ############### /workspace
 Disk quotas for user hexiaolong (uid 6123): 
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
-     /workspace  47338M    400G    500G            344k       0       0        
+     /workspace  47391M    400G    500G            344k       0       0        
 
 ############### /lustre
 Disk quotas for usr hexiaolong (uid 6123):
@@ -47,4 +47,4 @@ NVIDIA A30, 515.65.01, 165.00 W
 NVIDIA A30, 515.65.01, 165.00 W
 NVIDIA A30, 515.65.01, 165.00 W
 Use GPU 0
-Job end at 2023-11-07 17:08:07
+Job end at 2023-11-08 12:43:35

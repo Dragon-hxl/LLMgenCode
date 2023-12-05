@@ -1,19 +1,36 @@
 import transformers, torch
 import json
 import argparse
+import sys
+sys.path.append("/home/S/hexiaolong/codex/human-eval")
+sys.path.append("/home/S/hexiaolong/codex/self-debug")
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from human_eval.data import read_problems
-# from human_eval.execution import check_test_correctness
-# from concurrent.futures import ThreadPoolExecutor
+from human_eval.execution import check_test_correctness
+from concurrent.futures import ThreadPoolExecutor
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
-# prompt_file = "prompt.txt"
 shot_file = "gen_test_shot.txt"
 def get_one_shot():
     with open(shot_file,"r") as f:
         shot = f.read()
     return shot
+
+def check_test_valid(problem, test_in, test_out):
+    checkp = problem["prompt"] + f"    pass\nassert {test_in} == {test_out}"
+    # print(checkp)
+    with ThreadPoolExecutor(max_workers=1) as executor:
+        args = (checkp,3.0)
+        future = executor.submit(check_test_correctness, *args)
+        result = future.result()
+        passed = result["passed"]
+        code_res = result["result"]
+    print(f"passed:{passed},result:{code_res}")
+    if passed or "AssertionError" in code_res:
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="human_eval test")
@@ -51,7 +68,7 @@ if __name__ == "__main__":
     #加载模型
     print("load model from ",model_path)
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True,legacy=False)
-    model = AutoModelForCausalLM.from_pretrained(model_path, device_map="sequential", trust_remote_code=True, max_memory=max_memory_mapping, torch_dtype=torch.float16, low_cpu_mem_usage=True)#, use_safetensors=True
+    model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto", trust_remote_code=True, max_memory=max_memory_mapping, torch_dtype=torch.float16, low_cpu_mem_usage=True)#, use_safetensors=True
 
     #获取solution
     problems = read_problems()
@@ -73,28 +90,32 @@ if __name__ == "__main__":
         already_gen =""
         temperature = 1.0
         top_k = 50
-        end_cir = 10
+        end_cir = 15
         while cir < end_cir:
             print(f"start cir : {cir}")
-            prompt = ""
-            for line in problems[id]["prompt"].split("\n"):
-                if ">>>" in line or "Example" in line or "For example" in line:
-                    prompt += "    \"\"\"\n"
-                    break
-                prompt += line + "\n"
+            # prompt = ""
+            # for line in problems[id]["prompt"].split("\n"):
+            #     if ">>>" in line or "Example" in line or "For example" in line:
+            #         prompt += "    \"\"\"\n"
+            #         break
+            #     prompt += line + "\n"
+            prompt = problems[id]["prompt"]
             # for t in test_get:
             #     already_gen += t + "\n"
             # problem = prompt + "\tpass\n\n" + "# Check the correctness of " + problems[id]["entry_point"] +" with 50 tests:\n" + already_gen +"\nassert"
-            problem = shot + prompt + "\tpass\n\n" + "# Check the correctness of " + problems[id]["entry_point"] +" with 15 tests:\nassert"
+            problem = shot + prompt + "    pass\n\n" + "# Check the correctness of " + problems[id]["entry_point"] +" with 15 more tests.\n# result\n"
             # problem = prompt + "\tpass\n\n" + "# Check the correctness of " + problems[id]["entry_point"] +"\n" + already_gen +"\nassert"
+            print("--------------------------")
+            print(problem)
+            print("--------------------------")
             input_len = len(problem)
             inputs = tokenizer(problem, return_tensors='pt', return_token_type_ids=False)
             inputs = inputs.to('cuda')
             # pred = model.generate(**inputs, max_new_tokens=2048,top_p=0.95,temperature=temperature,repetition_penalty=1.1)#,temperature=0.4
-            pred = model.generate(**inputs, max_new_tokens=512,top_k=top_k,top_p=0.95,do_sample=True,temperature=temperature,num_return_sequences=10)#,repetition_penalty=1.1
+            pred = model.generate(**inputs, max_new_tokens=512,top_k=top_k,do_sample=True,temperature=temperature,num_return_sequences=10,repetition_penalty=1.1)#,repetition_penalty=1.1
             ans = ""
             for p in pred:
-                ans += tokenizer.decode(p, skip_special_tokens=True)[input_len-7:].strip() + "\nnext ans :\n"
+                ans += tokenizer.decode(p, skip_special_tokens=True) + "\nnext ans :\n"#[input_len-7:].strip()
             print(ans)
             print("============================================")
             entry_point = "assert " + problems[id]["entry_point"] + "("
@@ -106,12 +127,17 @@ if __name__ == "__main__":
                     test_out = line.split("==")[1].strip()
                     if test_in in test_in_set:
                         continue
-                    print(f"gen testcase :  {test_in} == {test_out}")
+                    flag = check_test_valid(problems[id],test_in, test_out)
+                    if not flag:
+                        print(f"gen wrong testcase :  {test_in} == {test_out}")
+                        continue
+                    else:
+                        print(f"gen testcase :  {test_in} == {test_out}")
                     tests.append({"tin":test_in,"tout":test_out})
                     test_in_set.add(test_in)
                     test_get.add(line)
                     print("++++++++++++++++++++++++++++++++++++++++")
-            if len(tests) > 300:
+            if len(tests) > 100:
                 cir = 1024
                 f.write(json.dumps({id:tests})+"\n")
                 print(f"for task {id} gen tests num: {len(tests)}\n")

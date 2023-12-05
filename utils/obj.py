@@ -12,8 +12,12 @@ class Node:
         self.reflect = ""
         self.test_feedback = ""
         self.feedbackprompt = feedbackprompt #由这个node的solution产生的feedbackprompt
+        self.CODET_point = 0.0
+        self.CODET_pass_testcase = set()
+        self.already_CODET = False
+        self.idx = 0
     def __repr__(self) -> str:
-        return f"solution:\n{self.solution}\npassT_rate:{self.passT_rate}\nprob:{self.prob}\n"
+        return f"solution:\n{self.solution}\npassT_rate:{self.passT_rate}\nprob:{self.prob}\nCODET_point:{self.CODET_point}"
     
     def __eq__(self, other: object) -> bool:
         return self.solution == self.solution
@@ -23,11 +27,14 @@ class Node:
     
     def show_parents(self) -> None:
         print("++++++show parents of the node++++++")
-        node = self
-        while node!=None:
-            print(node)
-            node = node.parent
-            print("************************")
+        print(self.__repr__())
+        print("************************")
+        if self.parent!=None:
+            self.parent.show_parents()
+        # while node!=None:
+        #     print(node)
+        #     node = node.parent
+        #     print("************************")
         return None
             
     

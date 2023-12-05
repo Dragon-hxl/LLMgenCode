@@ -15,7 +15,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from human_eval.data import read_problems
 from human_eval.execution import run_code_with_output2, check_correctness
 from concurrent.futures import ThreadPoolExecutor
-from myutils import map_gpu_memory,get_args,code_clean,code_clean2,get_unit_test,prompt_for_64,get_UTfeedback_prompt,filter_fix_ans
+from myutils import map_gpu_memory,get_args,code_clean,code_clean2,get_unit_test,prompt_for_64,get_UTfeedback_prompt,filter_fix_ans,get_CODET_point,get_CODET_point2,get_CODET_point3
 import os
 from collections import defaultdict
 from utils.obj import Node
@@ -33,6 +33,9 @@ codeT_test_file = data_root + "test_from_codeT_7b16k_t300_s100.jsonl"
 # 存放了最终用来check的unit_tests
 true_tests_file = data_root + "test_from_check.jsonl"
 # random.seed(1024)
+# 用来进行CODET的tests文件
+# tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/gen_tests_7b16k_num1002.jsonl"
+tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test.jsonl"
 
 #config file
 config_file = "../configs/UTfeedback_config.yaml"
@@ -61,7 +64,16 @@ def main(cfg: DictConfig):
         UTfeedback_promt = af.read()
     #读取unit tests，保存在unit_tests，用来判断程序对错。one_test里保存了每个task的第一个unit test，这个test会用在prompt里。
     base_unit_tests,base_assertions,base_assertion_string = get_unit_test(ut_file)
-    unit_tests,assertions,assertion_string = get_unit_test(true_tests_file,chosen_num=10)#
+    unit_tests,assertions,assertion_string = get_unit_test(ut_file)#true_tests_file,chosen_num=10
+    
+    #读取用来进行CODET的tests
+    testcases = {}
+    with open(tests_for_CODET_file,"r") as f:
+        for line in f.readlines():
+            data = json.loads(line)
+            for k,v in data.items():
+                print(f"task {k} gen {len(v)} testcases")
+                testcases[k] = v[:100]
     
 
     # 构成生成初始代码的prompt
@@ -152,8 +164,8 @@ def main(cfg: DictConfig):
         # output_short[0] = chosen_solution
         while True:
             stop = False
+            # 运行所有的solution得到通过的test数量和得分
             st = time.time()
-            # 运行所有的solution得到通过的test数量
             for i,node in enumerate(gened_nodes):
                 solution = node.solution
                 # 这里通过一次函数调用同时获得simple和UTfeedback，也就是会判断代码是否正确，同时对于出现AssertError的代码会得到其执行的第一个unit test的值。其他Error因为会返回具体的错误信息就不会得到执行的第一个unit test的值。
@@ -179,21 +191,39 @@ def main(cfg: DictConfig):
                     node.feedbackprompt = prompt
                     node.passT_rate = passn
             print(f"Run all solutions spends {(time.time()-st)/60} mins.")
+            
+            # 对生成的代码进行排序并选取排序靠前的代码
+            choose_start = time.time()
             total_nodes = gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
             print(f"task:{tid}, cir:{cir}, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}")
-            sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
+            # node_to_idx = {}
+            # for i,node in enumerate(total_nodes):
+            #     node_to_idx[node] = i
+            get_CODET_point2(total_unique_nodes,testcases[tid],tid)
+            sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.CODET_point,x.prob),reverse=True)
             chosen_nodes = sorted_nodes[:sample_num]
             # if len(sorted_nodes) > sample_num:
             left_nodes = sorted_nodes[sample_num:]
+            # chosen_nodes = get_CODET_point3(total_unique_nodes,testcases[tid],tid)
+            # left_nodes = []
+            # for node in total_nodes:
+            #     if node in chosen_nodes:
+            #         continue
+            #     left_nodes.append(node)
             print(f"task {tid} in cir {cir} chooses {len(chosen_nodes)} nodes and left {len(left_nodes)} nodes")
-            print(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}")
+            print(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
+            print(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")
+            print(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\nCODET point are {[n.CODET_point for n in chosen_nodes]}")
+            print(f"Choose solution spends {(time.time()-choose_start)/60} mins.")
+            
             output_short[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob} for n in chosen_nodes]
             output_full[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob,"prompt":n.prompt} for n in chosen_nodes]
             if stop or cir==10:
                 break
             cir += 1
             gened_nodes = []
+            # 使用选择的node进行下一步的debug
             st = time.time()
             for i,node in enumerate(chosen_nodes):
                 feedbackprompt = node.feedbackprompt
@@ -219,15 +249,19 @@ def main(cfg: DictConfig):
                     ans = tokenizer.decode(gen_tokens, skip_special_tokens=True)
                     solution = filter_fix_ans(ans, entry_point, start_code)
                     tmp_node = Node(solution=solution,parent=node,prompt=feedbackprompt,prob=true_sc,depth=cir)
+                    tmp_node.idx = len(nodes)
                     node.children.append(tmp_node)
                     gened_nodes.append(tmp_node)
                     nodes.append(tmp_node)
+                    
             print(f"Total model inference spends {(time.time()-st)/60} mins.")
-            print(f"cir {cir} gened {len(gened_nodes)} solutions.Total nodes num is {len(nodes)}")
+            print(f"cir {cir} gened {len(gened_nodes)} solutions. Total nodes num is {len(nodes)}")
+        start_write = time.time()
         f.write(json.dumps({"task_id": tid,"completion":output_short})+"\n")
         f.flush()
         fullf.write(json.dumps({"task_id": tid,"completion":output_full})+"\n")
         fullf.flush()
+        print(f"Write results spends {(time.time()-start_write)/60} mins.")
     f.close()
     fullf.close()
 

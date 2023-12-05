@@ -1,0 +1,24 @@
+def heap_queue_largest(nums,n):
+    """
+    Write a function to find the largest n integers from a given list of numbers using heap queue algorithm.
+    """
+    pass
+# Check the correctness of heap_queue_largest with 15 more tests:
+assert
+# result
+assert heap_queue_largest([25, 35, 22, 85, 14, 65, 75, 22, 58],3) == [85, 75, 65]
+assert heap_queue_largest([1, 7, 9, 3, 34, 555],2) == [355,34]
+assert heap_queue_largest([36, 21, 444, 2341, 22, 13, 42, 2, 2, 2],3) == [2341,444,42]
+assert heap_queue_largest([7, 5, 22],1) == [22]
+assert heap_queue_largest([],3) == []
+assert heap_queue_largest([2341, 2, 31],2) == [2341, 31]
+assert heap_queue_largest([2, 1, 2, 4, 33],4) == [33, 4, 2]
+assert heap_queue_largest([2, 1, 22, 3, 7, 2, 1, 44, 23],7) == [44, 23, 22, 7, 3, 2, 2]
+assert heap_queue_largest([1],1) == [1]
+assert heap_queue_largest([78, 2, 4],1) == [78]
+assert heap_queue_largest([666, 999, 2],2) == [999, 666]
+assert heap_queue_largest([4, 5, 2, 6, 7, 8],3) == [8, 7, 6]
+assert heap_queue_largest([2121, 3, 4, 6],2) == [2121, 6]
+assert heap_queue_largest([2, 87, 6, 7, 9],3) == [87, 9, 7]
+assert heap_queue_largest([0, 20, 30, 40, 21],3) == [40, 30, 20]
+assert heap_queue_largest([-1, -3, -5, 0, 5, -90],4) == [5, 0, -1, -3]

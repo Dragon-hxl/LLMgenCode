@@ -5,9 +5,9 @@
 # (TODO)
 # Please modify job name
 
-#SBATCH -J tmp              # The job name
-#SBATCH -o tmp.out        # Write the standard output to file named 'ret-<job_number>.out'
-#SBATCH -e tmp.out        # Write the standard error to file named 'ret-<job_number>.err'
+#SBATCH -J gt7b16k             # The job name
+#SBATCH -o ../log/gen_tests_7b16k_num1002.out        # Write the standard output to file named 'ret-<job_number>.out'
+#SBATCH -e ../log/gen_tests_7b16k_num1002.out        # Write the standard error to file named 'ret-<job_number>.err'
 
 
 #- Resources
@@ -15,10 +15,10 @@
 # (TODO)
 # Please modify your requirements
 
-#SBATCH -p r8nv-gpu                    # Submit to 'nv-gpu' Partitiion
+#SBATCH -p r8nv-gpu-hw                    # Submit to 'nv-gpu' Partitiion
 #SBATCH -t 0-30:00:00                # Run for a maximum time of 0 days, 12 hours, 00 mins, 00 secs
 #SBATCH --nodes=1                    # Request N nodes
-#SBATCH --gres=gpu:1                 # Request M GPU per node
+#SBATCH --gres=gpu:4                 # Request M GPU per node
 #SBATCH --gres-flags=enforce-binding # CPU-GPU Affinity
 #SBATCH --qos=gpu-normal             # Request QOS Type
 
@@ -27,7 +27,7 @@
 ###
 ### The system will alloc 8 or 16 cores per gpu by default.
 ### If you need more or less, use following:
-#SBATCH --cpus-per-task=8            # Request K cores
+#SBATCH --cpus-per-task=32            # Request K cores
 ####SBATCH -n 50
 ####SBATCH --mem-per-cpu=100000
 ###
@@ -36,7 +36,7 @@
 ### You can specify the characteristics of the compute nodes, and even the names of the compute nodes
 ###
 ####SBATCH --nodelist=gpu-v20          # Request a specific list of hosts 
-#SBATCH --constraint="24G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
+#SBATCH --constraint="80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
 ###
 
 #- Log information
@@ -78,11 +78,12 @@ echo "Use GPU ${CUDA_VISIBLE_DEVICES}"                              # which gpus
 
 #- Job step
 ###eval 'opam config env'
-cd /home/S/hexiaolong/codex/self-debug/tools
+cd /home/S/hexiaolong/codex/self-debug/src
+###source activate
+###source deactivate
+###conda activate codex
 #####python bin/logo.py --enumerationTimeout 1800 --testingTimeout 1800 --taskBatchSize 40 --iterations 12 --testEvery 3 --recognitionTimeout 1800 --taskDataset logo_unlimited_200 --languageDataset logo_unlimited_200/synthetic --synchronous_grammar --smt_pseudoalignments 0.1 --language_compression --lc_score 0.2 --max_compression 5 --biasOptimal --contextual --recognition_0 --recognition_1 examples language --Helmholtz 0.5 --synchronous_grammar  --language_encoder recurrent --sample_n_supervised 0 --moses_dir ../moses_compiled --smt_phrase_length 1 --language_compression  --max_compression 5 --no-cuda
-###python3.9 humaneval_UTfeedback.py -mf /lustre/S/hexiaolong/vicuna-13b-v1.1/ -o UTfeedback_13bv0.jsonl
-###python3.9 humaneval_UTfeedback_multi.py -mf /lustre/S/hexiaolong/vicuna-7b-16k/ -o ../res/UTfeedback_multi100_7b16k.jsonl
-###python3.9 try.py --model_path /lustre/S/hexiaolong/vicuna-7b-16k/ --output_file try.jsonl
-python3.9 evaluate_correctness.py > UTfeedback_SBSP10_7b16k_tT.txt 2>&1
+python3.9 gen_tests2.py -mf /lustre/S/hexiaolong/vicuna-7b-16k/ -o ../gen_tests_7b16k_num1002.jsonl
+
 #- End
 echo "Job end at $(date "+%Y-%m-%d %H:%M:%S")"
