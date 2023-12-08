@@ -35,7 +35,7 @@ true_tests_file = data_root + "test_from_check.jsonl"
 # random.seed(1024)
 # 用来进行CODET的tests文件
 # tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/gen_tests_7b16k_num1002.jsonl"
-tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test.jsonl"
+tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300.jsonl"
 
 #config file
 config_file = "../configs/UTfeedback_config.yaml"
@@ -68,12 +68,15 @@ def main(cfg: DictConfig):
     
     #读取用来进行CODET的tests
     testcases = {}
+    limit = 5
     with open(tests_for_CODET_file,"r") as f:
         for line in f.readlines():
             data = json.loads(line)
             for k,v in data.items():
-                print(f"task {k} gen {len(v)} testcases")
-                testcases[k] = v[:100]
+                limited_task_test_cases = [cases_per_sample[:limit] for cases_per_sample in v]
+                limited_task_test_cases = sum(limited_task_test_cases, [])
+                print(f"task {k} gen {len(limited_task_test_cases)} testcases")
+                testcases[k] = limited_task_test_cases
     
 
     # 构成生成初始代码的prompt
@@ -105,6 +108,7 @@ def main(cfg: DictConfig):
         num_id = int(tid.split("/")[1])
         if num_id < 141 or num_id > 164:
             continue
+        st = time.time()
         tprompt = problems[tid]["prompt"]
         if tid == "HumanEval/64":
             tprompt = prompt_for_64
@@ -133,6 +137,8 @@ def main(cfg: DictConfig):
         print("+++++++++++filter solution++++++++++++++++++")
         print(solution)
         print("++++++++++++++++++++++++++++++++++++++++++++")
+        
+        model_inference_time = (time.time()-st)/60
         # 去掉problems[tid]["prompt"]中的注释和空行
         start_code = ""
         for line in tprompt.split("\n"):
@@ -152,6 +158,9 @@ def main(cfg: DictConfig):
         # test_res = [literal_eval(t["tout"]) for t in ut]
         test_res = [t["tout"] for t in ut]
         feedback_prompt = UTfeedback_promt + assertion_string[tid] + "\n\n# Complete the Python funtion:\n" + tprompt+"### result ###\n```python\n" + start_code + "\n"
+        fix_input = tokenizer(feedback_prompt, return_tensors='pt', return_token_type_ids=False)
+        print(f"fix input length is {fix_input.input_ids.shape}")
+        fix_input_len = fix_input.input_ids.shape[1]
         # 开始生成feedback和新代码的循环
         cir = 0
         output_short = {}
@@ -161,6 +170,8 @@ def main(cfg: DictConfig):
         gened_nodes = [node1]
         chosen_nodes = [node1]
         left_nodes = []
+        time_record = []
+        fix_record = []
         # output_short[0] = chosen_solution
         while True:
             stop = False
@@ -184,23 +195,17 @@ def main(cfg: DictConfig):
                     break
                 else:
                     prompt,passn = get_UTfeedback_prompt(feedback_prompt, solution, code_res, run_test, test_res, assertions[tid])
-                    # print("---------------------feeedback prompt---------------------------")
-                    # print(prompt)#[len(UTfeedback_promt):]
-                    # print("----------------------------------------------------------------")
-                    # print("pass rate: ",passn)
                     node.feedbackprompt = prompt
                     node.passT_rate = passn
-            print(f"Run all solutions spends {(time.time()-st)/60} mins.")
+            run_solutions_time = (time.time() - st)/60
+            print(f"Run all solutions spends {run_solutions_time} mins.")
             
             # 对生成的代码进行排序并选取排序靠前的代码
             choose_start = time.time()
             total_nodes = gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
             print(f"task:{tid}, cir:{cir}, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}")
-            # node_to_idx = {}
-            # for i,node in enumerate(total_nodes):
-            #     node_to_idx[node] = i
-            get_CODET_point2(total_unique_nodes,testcases[tid],tid)
+            get_CODET_point2(total_nodes,testcases[tid],tid)
             sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.CODET_point,x.prob),reverse=True)
             chosen_nodes = sorted_nodes[:sample_num]
             # if len(sorted_nodes) > sample_num:
@@ -215,23 +220,30 @@ def main(cfg: DictConfig):
             print(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
             print(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")
             print(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\nCODET point are {[n.CODET_point for n in chosen_nodes]}")
-            print(f"Choose solution spends {(time.time()-choose_start)/60} mins.")
+            choose_solution_time = (time.time()-choose_start)/60
+            print(f"Choose solution spends {choose_solution_time} mins.")
             
-            output_short[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob} for n in chosen_nodes]
-            output_full[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob,"prompt":n.prompt} for n in chosen_nodes]
+            output_short[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob,"CODET_point":node.CODET_point} for n in chosen_nodes]
+            output_full[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob,"CODET_point":node.CODET_point} for n in total_nodes]
+            time_record.append({"cir":cir,"model_inference_time":model_inference_time,"run_solutions_time":run_solutions_time,"choose_solution_time":choose_solution_time})
             if stop or cir==10:
                 break
             cir += 1
             gened_nodes = []
             # 使用选择的node进行下一步的debug
             st = time.time()
+            fix_percents = []
             for i,node in enumerate(chosen_nodes):
-                feedbackprompt = node.feedbackprompt
-                input_len = len(feedbackprompt)
-                inputs = tokenizer(feedbackprompt, return_tensors='pt', return_token_type_ids=False)
+                feedback = node.feedbackprompt
+                input_len = len(feedback)
+                inputs = tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)
                 # print("feedback prompt's token nums is :",inputs["input_ids"].size())
                 inputs = inputs.to('cuda')
                 input_length = inputs.input_ids.shape[1]
+                print(f"total input length is {input_length} while fix inuput length is {fix_input_len}")
+                fix_percent = (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
+                print(f"fix percent is {fix_percent*100.0}%")
+                fix_percents.append((input_length,fix_input_len,fix_percent))
                 with torch.no_grad():
                     # preds = model.generate(**inputs, max_new_tokens=512, temperature=1.0,top_p=0.95,num_beams=sample_num, do_sample=True,num_return_sequences=sample_num)
                     preds = model.generate(**inputs, max_new_tokens=debug_maxLen, temperature=debug_temp,top_p=debug_top_p, do_sample=debug_do_sample,num_return_sequences=sample_num,return_dict_in_generate=True,output_scores=True)#,temperature=0.4,repetition_penalty=1.1
@@ -248,20 +260,23 @@ def main(cfg: DictConfig):
                     # print(f"gen_length: {tsc.shape[-1]},output_length: {output_length}, tsc: {sc}, true_sc: {true_sc}")
                     ans = tokenizer.decode(gen_tokens, skip_special_tokens=True)
                     solution = filter_fix_ans(ans, entry_point, start_code)
-                    tmp_node = Node(solution=solution,parent=node,prompt=feedbackprompt,prob=true_sc,depth=cir)
+                    tmp_node = Node(solution=solution,parent=node,prompt=feedback,prob=true_sc,depth=cir)
                     tmp_node.idx = len(nodes)
                     node.children.append(tmp_node)
                     gened_nodes.append(tmp_node)
                     nodes.append(tmp_node)
-                    
-            print(f"Total model inference spends {(time.time()-st)/60} mins.")
+            fix_record.append({"cir":cir,"fix_percents":fix_percents})
+            model_inference_time = (time.time()-st)/60
+            print(f"Total model inference spends {model_inference_time} mins.")
             print(f"cir {cir} gened {len(gened_nodes)} solutions. Total nodes num is {len(nodes)}")
         start_write = time.time()
-        f.write(json.dumps({"task_id": tid,"completion":output_short})+"\n")
+        print(f"time_record:{time_record}\nfix_record:{fix_record}")
+        f.write(json.dumps({"task_id": tid,"completion":output_short,"time_record":time_record,"fix_record":fix_record})+"\n")
         f.flush()
         fullf.write(json.dumps({"task_id": tid,"completion":output_full})+"\n")
         fullf.flush()
-        print(f"Write results spends {(time.time()-start_write)/60} mins.")
+        write_time = (time.time()-start_write)/60
+        print(f"Write results spends {write_time} mins.")
     f.close()
     fullf.close()
 

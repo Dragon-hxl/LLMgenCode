@@ -3,11 +3,16 @@ import json
 import argparse
 import re
 import time
+import math
+import sys
+sys.path.append("/home/S/hexiaolong/codex/human-eval")
+sys.path.append("/home/S/hexiaolong/codex/self-debug")
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from utils.obj import Node
 from human_eval.data import  read_problems
 from human_eval.execution import check_test_correctness,run_code_with_output_CODET
+
 
 # get args for humaneval test on LLM
 def get_args():
@@ -254,7 +259,7 @@ def get_CODET_point(Node_list, testcases, task_id) -> None:
                 group.add(solution_id_2)
                 grouped[solution_id_2]=True
         solution_group[i] = group
-        group_score = len(group) * len(solution_pass_test[i])
+        group_score = math.sqrt(len(group)) * len(solution_pass_test[i])
         log_message(f"group {i} : {group} scores {group_score}",verbose)
         for sol_id in group:
             Node_list[sol_id].CODET_point = group_score
@@ -299,17 +304,13 @@ def get_CODET_point2(Node_list, testcases, task_id) -> None:
         if Node_list[i].already_CODET:
             solution_pass_test[i] =  Node_list[i].CODET_pass_testcase
             continue
-        # for j in test_ids:
-        #     passed = exec_solution_testcase(task_id,solution_id_to_data[i],test_id_to_data[j])
-        #     if passed:
-        #         solution_pass_test[i].add(j)
-        # run_code_with_output_CODET(problems[task_id],solution_id_to_data[i],testcases,"",300.0)
         with ThreadPoolExecutor(max_workers=1) as executor:
-            args = (problems[task_id],solution_id_to_data[i].solution,testcases,"",30.0)
+            args = (problems[task_id],solution_id_to_data[i].solution,testcases,"",0.1)
             future = executor.submit(run_code_with_output_CODET, *args)
             result = future.result()
             passed = result["passed"]
             code_res = result["result"]
+            checkp = result["check_program"]
         print(f"task:{task_id},solution:{i},passed:{passed},result:{code_res}")
         if type(code_res) is str:
             pass
@@ -333,7 +334,7 @@ def get_CODET_point2(Node_list, testcases, task_id) -> None:
                 group.add(solution_id_2)
                 grouped[solution_id_2]=True
         solution_group[i] = group
-        group_score[i] = len(group) * len(solution_pass_test[i])
+        group_score[i] = math.sqrt(len(group)) * len(solution_pass_test[i])
         log_message(f"group {i} : {group} scores {group_score[i]}",verbose)
         for sol_id in group:
             Node_list[sol_id].CODET_point = group_score[i]
@@ -401,7 +402,7 @@ def get_CODET_point3(Node_list, testcases, task_id) -> None:
                 group.add(solution_id_2)
                 grouped[solution_id_2]=True
         solution_group[i] = group
-        group_score[i] = len(group) * len(solution_pass_test[i])
+        group_score[i] = math.sqrt(len(group)) * len(solution_pass_test[i])
         log_message(f"group {i} : {group} scores {group_score[i]}",verbose)
         for sol_id in group:
             Node_list[sol_id].CODET_point = group_score[i]
@@ -437,3 +438,39 @@ def get_CODET_point3(Node_list, testcases, task_id) -> None:
     end_time = time.time()
     log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
     return chosen_nodes
+
+
+def test_filter(test_file):
+    resfile = test_file[:-6]+"_filter.jsonl"
+    testcases = {}
+    with open(tests_for_CODET_file,"r") as f:
+        for line in f.readlines():
+            data = json.loads(line)
+            for k,v in data.items():
+                task_test_cases = sum(v, [])
+                print(f"task {k} gen {len(task_test_cases)} testcases")
+                testcases[k] = task_test_cases
+    filter_tests = {}
+    for k,v in testcases.items():
+        task_id = k
+        with ThreadPoolExecutor(max_workers=1) as executor:
+            args = (problems[task_id],problems[task_id]["canonical_solution"],v,"",0.1)
+            future = executor.submit(run_code_with_output_CODET, *args)
+            result = future.result()
+            passed = result["passed"]
+            code_res = result["result"]
+            checkp = result["check_program"]
+        filter_testcases = []
+        for i,test in enumerate(v):
+            if code_res[i] == True:
+                filter_testcases.append(test)
+        filter_tests[task_id] = filter_testcases
+        print(f"For task {task_id}, there are {len(filter_testcases)} testcases left after filter!")
+        with open(resfile,"w+") as f:
+            f.write(json.dumps(filter_tests))
+    return
+    
+if __name__=="__main__":
+    tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300.jsonl"
+    test_filter(test_file=tests_for_CODET_file)
+    
