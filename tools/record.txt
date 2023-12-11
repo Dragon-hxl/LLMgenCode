@@ -1,0 +1,30 @@
+-----------------CODET4-------------------
+run solution time:
+average: 0.11938871746291663
+There are 820 number in data between 0 and 1, with average 0.09578501119846244
+counter : Counter({0: 560, 1: 199, 2: 27, 3: 8, 4: 8, 9: 5, 6: 5, 7: 3, 8: 3, 5: 2})
+There are 15 number in data between 1 and 10, with average 1.4097246599197388
+counter : Counter({1: 13, 2: 2})
+task id : ['HumanEval/1', 'HumanEval/1', 'HumanEval/1', 'HumanEval/1', 'HumanEval/1', 'HumanEval/1', 'HumanEval/6', 'HumanEval/6', 'HumanEval/6', 'HumanEval/6', 'HumanEval/97', 'HumanEval/97', 'HumanEval/97', 'HumanEval/97', 'HumanEval/97']
+There are 0 number in data between 10 and 100
+choose solution time:
+average: 0.7266027319121978
+There are 724 number in data between 0 and 1, with average 0.1471814713150977
+counter : Counter({0: 314, 1: 312, 4: 19, 2: 15, 6: 15, 9: 14, 5: 13, 7: 8, 8: 7, 3: 7})
+There are 96 number in data between 1 and 10, with average 2.8451047527707285
+counter : Counter({1: 50, 2: 18, 3: 6, 6: 6, 7: 6, 4: 4, 5: 4, 8: 1, 9: 1})
+There are 15 number in data between 10 and 100, with average 15.134922643237646
+counter : Counter({1: 13, 2: 2})
+task id : ['HumanEval/1', 'HumanEval/1', 'HumanEval/1', 'HumanEval/6', 'HumanEval/6', 'HumanEval/6', 'HumanEval/6', 'HumanEval/6', 'HumanEval/6', 'HumanEval/6', 'HumanEval/6', 'HumanEval/25', 'HumanEval/39', 'HumanEval/39', 'HumanEval/39']
+model inference time:
+average: 2.5503633175020015
+There are 293 number in data between 0 and 1, with average 0.20242128503743
+counter : Counter({0: 159, 4: 83, 3: 21, 2: 13, 1: 10, 5: 4, 8: 2, 6: 1})
+There are 542 number in data between 1 and 10, with average 3.8196382538712226
+counter : Counter({3: 232, 4: 213, 2: 52, 5: 24, 1: 19, 6: 2})
+There are 0 number in data between 10 and 100
+fix_lengths: Counter({9: 2740, 10: 930, 8: 897, 11: 457, 12: 176, 13: 86})  900-1300
+change_lengths: Counter({2: 2252, 1: 1455, 3: 998, 4: 382, 5: 107, 0: 64, 7: 25, 8: 2, 6: 1}) 30-800
+fix percents: Counter({6: 2094, 5: 1650, 7: 1169, 4: 225, 8: 141, 3: 7}) 0.3-0.8
+
+

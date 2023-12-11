@@ -6,6 +6,12 @@ from human_eval.execution import run_code_with_output2, check_correctness
 from concurrent.futures import ThreadPoolExecutor
 from collections import defaultdict
 import matplotlib.pyplot as plt
+from pylab import mpl
+ 
+# # 设置中文显示字体
+# mpl.rcParams["font.sans-serif"] = ["SimHei"]
+# # 设置正常显示符号
+# mpl.rcParams["axes.unicode_minus"] = False
 
 pass_record = {
     "total": range(164),
@@ -29,10 +35,14 @@ cir_record = {
     "UT_SBS10_7b16k_tT":[27, 41, 41, 43, 43, 46, 46, 48, 48, 51, 53],
     "UT_SBSP10_7b16k_pT":[27, 36, 51, 61, 63, 66, 70, 71, 71, 72, 74],
     "UT_SBSP10_7b16k_pT_pass@1":[27, 36, 51, 60, 63, 66, 69, 71, 71, 72, 73],
-    "UT_SBSPCODET_7b16k_pT":[27, 40, 51, 57, 64, 65, 66, 69, 69, 70, 70],
-    "UT_SBSPCODET_7b16k_pT_pass@1":[27, 39, 50, 55, 63, 64, 65, 68, 68, 69, 69],
+    "UT_SBSPCODET1_7b16k_pT":[27, 40, 51, 57, 64, 65, 66, 69, 69, 70, 70],
+    "UT_SBSPCODET1_7b16k_pT_pass@1":[27, 39, 50, 55, 63, 64, 65, 68, 68, 69, 69],
     "UT_SBSPCODET2_7b16k_pT":[27, 40, 53, 55, 60, 61, 61, 61, 61, 61, 62],
     "UT_SBSPCODET2_7b16k_pT_pass@1":[27, 35, 36, 36, 36, 36, 36, 36, 36, 36, 36],
+    "UT_SBSPCODET4_7b16k_pT":[27, 35, 50, 56, 58, 58, 59, 59, 61, 62, 62],
+    "UT_SBSPCODET4_7b16k_pT_pass@1":[27, 34, 48, 55, 57, 57, 58, 58, 60, 61, 61],
+    "UT_SBSPCODET5_7b16k_pT":[27, 35, 49, 57, 60, 62, 64, 65, 65, 66, 66],
+    "UT_SBSPCODET5_7b16k_pT_pass@1":[27, 35, 49, 57, 60, 62, 64, 65, 65, 66, 66],
     "UT_SBSP10_7b16k_tT":[27, 40, 58, 69, 78, 81, 85, 89, 92, 94, 96],
     "UT_SBSP10_7b16k_tT_pass@1":[27, 40, 55, 65, 75, 78, 82, 86, 89, 90, 92],
     "UT_7b16k_t1_pT": [27, 28, 31, 31, 32, 32, 32, 32, 33, 34, 35],
@@ -49,10 +59,12 @@ color_map = {
     "UT_SBSP10_7b16k_pT_pass@1":"black",
     "UT_SBSP10_7b16k_tT":"green",
     "UT_SBSP10_7b16k_tT_pass@1":"darkgreen",
-    "UT_SBSPCODET_7b16k_pT":"red",
-    "UT_SBSPCODET_7b16k_pT_pass@1":"darkred",
+    "UT_SBSPCODET1_7b16k_pT":"red",
+    "UT_SBSPCODET1_7b16k_pT_pass@1":"darkred",
     "UT_SBSPCODET2_7b16k_pT":"chocolate",
     "UT_SBSPCODET2_7b16k_pT_pass@1":"sienna",
+    "UT_SBSPCODET4_7b16k_pT":"chocolate",
+    "UT_SBSPCODET4_7b16k_pT_pass@1":"sienna",
     "UT_7b16k_t1_pT": "c",
     "UT_7b16k_t1_tT": "darkblue",
     "UT_7b16k_t1_cT": "green",
@@ -129,6 +141,22 @@ def draw_plots_percent(data,color,image_path):
     fig.savefig(image_path)
     return
 
+def draw_bars(data,image_path):
+    xs = []
+    ys = []
+    for k,v in data.items():
+        xs.append(k)
+        ys.append(v)
+    fig = plt.figure(figsize=(5,3),dpi=400)
+    plt.xlabel("fix percent:%")
+    plt.ylabel("numbers")
+    title = image_path.split("/")[-1].split(".")[0]
+    plt.title(title)
+    plt.bar(x=xs,height=ys,color="blue")
+    for xt,yt in zip(xs,ys):
+        plt.text(xt,yt,yt,va="bottom",ha="center")
+    fig.savefig(image_path)
+    return
 
 def showDifferent(label1,label2):
     print(f'\nshow difference between {label1} and {label2}')
@@ -152,6 +180,7 @@ def showDifferent(label1,label2):
 if __name__=="__main__":
     # showDifferent("UT_SBSP10_7b16k_tT","UT_SBSP10_7b16k_pT")
     # showDifferent("total","UT_cola34bpy_t1_trueTest")
+    
     total_pass = set()
     for id,pass_list in pass_record.items():
         if id == "total" or ("7b16k" not in id) or ("SBSP" not in id):
@@ -164,8 +193,14 @@ if __name__=="__main__":
     print(f"total pass num is {len(total_pass)} never pass num is {len(total-total_pass)}:\n{sorted(total-total_pass)}")
     data = {}
     for label,value in cir_record.items():
-        if "SBSP" not in label:
+        if "SBSP" not in label or "SBSPCODET2" in label or ("SBSPCODET1" in label):
             continue
         data[label] = [round((1.0*x)/164*100,1) for x in value]
-    draw_plots_percent(data, color_map, "../image/UTfeedback_7b16k_CODET.jpg")
+    draw_plots_percent(data, color_map, "../image/UTfeedback_7b16k_CODET4.jpg")
+    # fix_lengths = {9: 2740, 10: 930, 8: 897, 11: 457, 12: 176, 13: 86}
+    # fix_percent = {6: 2094, 5: 1650, 7: 1169, 4: 225, 8: 141, 3: 7}
     
+    # draw_bars(fix_lengths,"../image/fix_lengths.jpg")
+    # draw_bars(fix_percent,"../image/fix_percents.jpg")
+    
+    # ms_time = {3: 232, 4: 213, 2: 52, 5: 24, 1: 19, 6: 2}

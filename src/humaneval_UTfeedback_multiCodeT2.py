@@ -210,17 +210,17 @@ def main(cfg: DictConfig):
             total_nodes = gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
             print(f"task:{tid}, cir:{cir}, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}")
-            get_CODET_point2(total_unique_nodes,testcases[tid],tid) #这里是使用去重后的还是不去重的
-            sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.CODET_point,x.prob),reverse=True)
-            chosen_nodes = sorted_nodes[:sample_num]
-            # if len(sorted_nodes) > sample_num:
-            left_nodes = sorted_nodes[sample_num:]
-            # chosen_nodes = get_CODET_point3(total_unique_nodes,testcases[tid],tid)
-            # left_nodes = []
-            # for node in total_nodes:
-            #     if node in chosen_nodes:
-            #         continue
-            #     left_nodes.append(node)
+            # get_CODET_point2(total_unique_nodes,testcases[tid],tid) #这里是使用去重后的还是不去重的
+            # sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.CODET_point,x.prob),reverse=True)
+            # chosen_nodes = sorted_nodes[:sample_num]
+            # # if len(sorted_nodes) > sample_num:
+            # left_nodes = sorted_nodes[sample_num:]
+            chosen_nodes = get_CODET_point3(total_nodes,testcases[tid],tid)
+            left_nodes = []
+            for node in total_nodes:
+                if node in chosen_nodes:
+                    continue
+                left_nodes.append(node)
             print(f"task {tid} in cir {cir} chooses {len(chosen_nodes)} nodes and left {len(left_nodes)} nodes")
             print(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
             print(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")

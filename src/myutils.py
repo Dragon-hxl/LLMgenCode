@@ -343,7 +343,7 @@ def get_CODET_point2(Node_list, testcases, task_id) -> None:
     return group_score
 
 
-def get_CODET_point3(Node_list, testcases, task_id) -> None:
+def get_CODET_point3(Node_list, testcases, task_id, limit = 3) -> None:
     start_time = time.time()
     solution_id_to_data = dict()
     test_id_to_data = dict()
@@ -374,7 +374,7 @@ def get_CODET_point3(Node_list, testcases, task_id) -> None:
         #         solution_pass_test[i].add(j)
         # run_code_with_output_CODET(problems[task_id],solution_id_to_data[i],testcases,"",300.0)
         with ThreadPoolExecutor(max_workers=1) as executor:
-            args = (problems[task_id],solution_id_to_data[i].solution,testcases,"",30.0)
+            args = (problems[task_id],solution_id_to_data[i].solution,testcases,"",0.1)
             future = executor.submit(run_code_with_output_CODET, *args)
             result = future.result()
             passed = result["passed"]
@@ -414,14 +414,16 @@ def get_CODET_point3(Node_list, testcases, task_id) -> None:
         nodes = [solution_id_to_data[i] for i in sgroup]
         nodes = sorted(nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
         sorted_nodes.append(nodes)
+    limit_sorted_nodes = sorted_nodes[:limit]
+    left_sorted_nodes = sorted_nodes[limit:]
     idx_record = []
-    for nodes in sorted_nodes:
+    for nodes in limit_sorted_nodes:
         idx_record.append(0)
     chosen_nodes = []
     lack_num = 0
     stop = False
     while True:
-        for i,nodes in enumerate(sorted_nodes):
+        for i,nodes in enumerate(limit_sorted_nodes):
             if idx_record[i] >= len(nodes):
                 lack_num+=1
                 if lack_num > 999:
@@ -435,6 +437,16 @@ def get_CODET_point3(Node_list, testcases, task_id) -> None:
                 break
         if stop:
             break
+    left = 10 - len(chosen_nodes)
+    if left > 0:
+        for nodes in left_sorted_nodes:
+            for node in nodes:
+                chosen_nodes.append(node)
+                left = left - 1
+                if left == 0:
+                    break
+            if left == 0:
+                break    
     end_time = time.time()
     log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
     return chosen_nodes

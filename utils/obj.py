@@ -29,7 +29,7 @@ class Node:
         print("++++++show parents of the node++++++")
         print(self.__repr__())
         print("************************")
-        if self.parent!=None:
+        if self.parent:
             self.parent.show_parents()
         # while node!=None:
         #     print(node)
