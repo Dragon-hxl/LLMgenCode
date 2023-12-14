@@ -42,7 +42,9 @@ cir_record = {
     "UT_SBSPCODET4_7b16k_pT":[27, 35, 50, 56, 58, 58, 59, 59, 61, 62, 62],
     "UT_SBSPCODET4_7b16k_pT_pass@1":[27, 34, 48, 55, 57, 57, 58, 58, 60, 61, 61],
     "UT_SBSPCODET5_7b16k_pT":[27, 35, 49, 57, 60, 62, 64, 65, 65, 66, 66],
-    "UT_SBSPCODET5_7b16k_pT_pass@1":[27, 35, 49, 57, 60, 62, 64, 65, 65, 66, 66],
+    "UT_SBSPCODET5_7b16k_pT_pass@1":[27, 35, 49, 57, 60, 62, 64, 65, 65, 66, 66], # 71
+    "UTfeedback_multiCODETfilter3_7b16k_pT_pass@10":[27,37,51,61,65,65,66,66,67,67,68],
+    "UTfeedback_multiCODETfilter3_7b16k_pT_pass@1":[27,38,51,62,65,65,66,66,67,68,68],
     "UT_SBSP10_7b16k_tT":[27, 40, 58, 69, 78, 81, 85, 89, 92, 94, 96],
     "UT_SBSP10_7b16k_tT_pass@1":[27, 40, 55, 65, 75, 78, 82, 86, 89, 90, 92],
     "UT_7b16k_t1_pT": [27, 28, 31, 31, 32, 32, 32, 32, 33, 34, 35],
@@ -65,11 +67,19 @@ color_map = {
     "UT_SBSPCODET2_7b16k_pT_pass@1":"sienna",
     "UT_SBSPCODET4_7b16k_pT":"chocolate",
     "UT_SBSPCODET4_7b16k_pT_pass@1":"sienna",
+    "UTfeedback_multiCODETfilter3_7b16k_pT_pass@10":"green",
+    "UTfeedback_multiCODETfilter3_7b16k_pT_pass@1":"c",
     "UT_7b16k_t1_pT": "c",
     "UT_7b16k_t1_tT": "darkblue",
     "UT_7b16k_t1_cT": "green",
 }
 
+fix_com_percents = {
+    1:[0, 62.162943546352345, 65.36767087157672, 64.01600952505848, 63.26178853591353, 62.803607362082616, 62.6334021117471, 62.27913714979484, 61.83789417394393, 61.64282775152817, 61.15799337009814],
+}
+other = {
+    1:[0, 94.57844393557944, 99.20674091173184, 99.43065235012286, 99.43833215092668, 99.44513201275672, 99.45420065650703, 99.46151845761389, 99.47129909318733, 99.47296686981197, 99.47711210115497],
+}
 
 def displaySpecifiedCode(solution_file,task_list):
     with open(solution_file,"r") as f:
@@ -123,7 +133,7 @@ def draw_plots_percent(data,color,image_path):
         ys.append(y)
     fig = plt.figure(figsize=(18,12),dpi=400)
     plt.xlabel("Cirs",fontsize='large')
-    plt.ylabel("Pass percent:%",fontsize='large')
+    plt.ylabel("percent:%",fontsize='large')
     title = image_path.split("/")[-1].split(".")[0]
     plt.title(title)
     
@@ -193,10 +203,10 @@ if __name__=="__main__":
     print(f"total pass num is {len(total_pass)} never pass num is {len(total-total_pass)}:\n{sorted(total-total_pass)}")
     data = {}
     for label,value in cir_record.items():
-        if "SBSP" not in label or "SBSPCODET2" in label or ("SBSPCODET1" in label):
+        if ("SBSP" not in label and "CODET" not in label) or "SBSPCODET2" in label or ("SBSPCODET1" in label) or ("SBSPCODET5" in label):
             continue
         data[label] = [round((1.0*x)/164*100,1) for x in value]
-    draw_plots_percent(data, color_map, "../image/UTfeedback_7b16k_CODET4.jpg")
+    draw_plots_percent(data, color_map, "../image/UTfeedback_7b16k_CODETfilter.jpg")
     # fix_lengths = {9: 2740, 10: 930, 8: 897, 11: 457, 12: 176, 13: 86}
     # fix_percent = {6: 2094, 5: 1650, 7: 1169, 4: 225, 8: 141, 3: 7}
     
@@ -204,3 +214,4 @@ if __name__=="__main__":
     # draw_bars(fix_percent,"../image/fix_percents.jpg")
     
     # ms_time = {3: 232, 4: 213, 2: 52, 5: 24, 1: 19, 6: 2}
+    # draw_plots_percent("fix computation percent")

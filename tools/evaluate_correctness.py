@@ -10,7 +10,7 @@ from data_tools import data_analysis,Counter_with_base
 
 def get_truePass(problem,solution):
     with ThreadPoolExecutor(max_workers=1) as executor:
-        args = (problem, solution, 3.0)
+        args = (problem, solution, 1.0)
         future = executor.submit(check_correctness, *args)
         result = future.result()
         passed = result["passed"]
@@ -40,6 +40,38 @@ def draw_plots(data,image_path):
     plt.legend(labels,loc="upper left")
     fig.savefig(image_path)
     return
+
+def get_pass_all(resfile):
+    passed_task = set()
+    problems = read_problems()
+    with open(resfile,"r") as f:
+        for line in f.readlines():
+            data = json.loads(line)
+            tid = data["task_id"]
+            completions = data["completion"]
+            problem = problems[tid]
+            last_cir = max(list(completions.keys()))
+            solutions = completions[last_cir]
+            total_passed = False
+            for solution in solutions:
+                solution = solution["solution"]
+                passed = get_truePass(problem,solution)
+                if passed:
+                    total_passed =True
+                    passed_task.add(tid)
+                    break
+    # print(f"get_pass_all pass {len(passed_task)} tasks.They are:\n{list(passed_task)}")
+    return passed_task
+
+def get_pass_all_multi_files(files):
+    passed_tasks = []
+    for file in files:
+        passed_task = get_pass_all(file)
+        passed_tasks += list(passed_task)
+    pass_ids = [int(t.split("/")[1]) for t in passed_tasks]
+    pass_ids = sorted(pass_ids)
+    print(f"get_pass_all pass {len(pass_ids)} tasks.They are:\n{pass_ids}")
+            
 
 def get_pass_n(result_file,output_file=None):
     passed_per_cir = defaultdict(set)
@@ -289,12 +321,18 @@ def fix_percent_eval(resfile):
     fix_percents = [int(x/0.1) for x in fix_percents]
     print(f"fix_lengths: {Counter(fix_lengths)}")
     print(f"change_lengths: {Counter(change_lengths)}")
-    print(f"fix percents: {Counter(fix_percents)}")                
+    print(f"fix percents: {Counter(fix_percents)}")
+    
+                
 if __name__=="__main__":
     # file = "../res/UTfeedback_multi_7b16k_full.jsonl"
     file = "../res/UTfeedback_multiCODETfilter2_7b16k_pT.jsonl"
+    # resfiles = ["UTfeedback_multiCODETfilter_7b16k_pT_29_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_58_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_86_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_113_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_140_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_163_full.jsonl"]
+    # res_root = "../res/"
+    # resfiles = [res_root+f for f in resfiles]
+    # get_pass_all_multi_files(resfiles)
     # output_file = "../res/multi_with_pass/UTfeedback_multiSBSP10_7b16k_tT.jsonl"
-    passed_per_cir,task_cir = get_pass_n(file)
+    passed_per_cir,task_cir = get_pass_1(file)
     # passed_per_cir,task_cir = get_pass_n(file)
     # data = {"SBSP10_7b16k_tT":passed_per_cir}
     # time_evaluate(file)

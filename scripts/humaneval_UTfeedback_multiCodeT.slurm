@@ -5,9 +5,9 @@
 # (TODO)
 # Please modify job name
 
-#SBATCH -J CODETpT_163              # The job name
-#SBATCH -o ../log/humaneval_UTfeedback_multiCODETfilter3_7b16k_pT_163.out        # Write the standard output to file named 'ret-<job_number>.out'
-#SBATCH -e ../log/humaneval_UTfeedback_multiCODETfilter3_7b16k_pT_163.out        # Write the standard error to file named 'ret-<job_number>.err'
+#SBATCH -J CODETpT_140              # The job name
+#SBATCH -o ../log/humaneval_UTfeedback_multiCODETfilter4_7b16k_pT_140.out        # Write the standard output to file named 'ret-<job_number>.out'
+#SBATCH -e ../log/humaneval_UTfeedback_multiCODETfilter4_7b16k_pT_140.out        # Write the standard error to file named 'ret-<job_number>.err'
 
 
 #- Resources
@@ -81,6 +81,6 @@ echo "Use GPU ${CUDA_VISIBLE_DEVICES}"                              # which gpus
 cd /home/S/hexiaolong/codex/self-debug/src
 #####python bin/logo.py --enumerationTimeout 1800 --testingTimeout 1800 --taskBatchSize 40 --iterations 12 --testEvery 3 --recognitionTimeout 1800 --taskDataset logo_unlimited_200 --languageDataset logo_unlimited_200/synthetic --synchronous_grammar --smt_pseudoalignments 0.1 --language_compression --lc_score 0.2 --max_compression 5 --biasOptimal --contextual --recognition_0 --recognition_1 examples language --Helmholtz 0.5 --synchronous_grammar  --language_encoder recurrent --sample_n_supervised 0 --moses_dir ../moses_compiled --smt_phrase_length 1 --language_compression  --max_compression 5 --no-cuda
 ###python3.9 humaneval_UTfeedback.py -mf /lustre/S/hexiaolong/vicuna-13b-v1.1/ -o UTfeedback_13bv0.jsonl
-python3.9 humaneval_UTfeedback_multiCodeT.py +model_path=/lustre/S/hexiaolong/vicuna-7b-16k/ +output=../res/UTfeedback_multiCODETfilter3_7b16k_pT_163.jsonl
+python3.9 humaneval_UTfeedback_multiCodeT.py +model_path=/lustre/S/hexiaolong/vicuna-7b-16k/ +output=../res/UTfeedback_multiCODETfilter4_7b16k_pT_140.jsonl
 #- End
 echo "Job end at $(date "+%Y-%m-%d %H:%M:%S")"

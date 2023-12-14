@@ -108,7 +108,7 @@ def main(cfg: DictConfig):
     for tid in taskids:
         print("get solution for task :",tid)
         num_id = int(tid.split("/")[1])
-        if num_id < 141 or num_id > 164:
+        if num_id < 136 or num_id > 140:
             continue
         step_one_st = time.time()
         tprompt = problems[tid]["prompt"]
@@ -122,6 +122,7 @@ def main(cfg: DictConfig):
         inputs = inputs.to('cuda')
         st = time.time()
         pred = model.generate(**inputs, max_new_tokens=512, temperature=0)#,temperature=0.4,repetition_penalty=1.1
+        output_tokens_len = pred.input_ids.shape[1]
         model_inference_time = (time.time()-st)/60
         ans = tokenizer.decode(pred.cpu()[0], skip_special_tokens=True)[input_len:]
         solution = ans.strip("\n")#.split("```")[0]#.replace("->>","")
@@ -210,17 +211,17 @@ def main(cfg: DictConfig):
             total_nodes = gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
             print(f"task:{tid}, cir:{cir}, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}")
-            # get_CODET_point2(total_unique_nodes,testcases[tid],tid) #这里是使用去重后的还是不去重的
-            # sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.CODET_point,x.prob),reverse=True)
-            # chosen_nodes = sorted_nodes[:sample_num]
-            # # if len(sorted_nodes) > sample_num:
-            # left_nodes = sorted_nodes[sample_num:]
-            chosen_nodes = get_CODET_point3(total_nodes,testcases[tid],tid)
-            left_nodes = []
-            for node in total_nodes:
-                if node in chosen_nodes:
-                    continue
-                left_nodes.append(node)
+            get_CODET_point2(total_unique_nodes,testcases[tid],tid) #这里是使用去重后的还是不去重的
+            sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.CODET_point,x.prob),reverse=True)
+            chosen_nodes = sorted_nodes[:sample_num]
+            # if len(sorted_nodes) > sample_num:
+            left_nodes = sorted_nodes[sample_num:]
+            # chosen_nodes = get_CODET_point3(total_unique_nodes,testcases[tid],tid)
+            # left_nodes = []
+            # for node in total_nodes:
+            #     if node in chosen_nodes:
+            #         continue
+            #     left_nodes.append(node)
             print(f"task {tid} in cir {cir} chooses {len(chosen_nodes)} nodes and left {len(left_nodes)} nodes")
             print(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
             print(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")
@@ -248,36 +249,38 @@ def main(cfg: DictConfig):
                 print(f"total input length is {input_length} while fix inuput length is {fix_input_len}")
                 fix_percent = (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
                 print(f"fix percent is {fix_percent*100.0}%")
-                fix_percents.append((input_length,fix_input_len,fix_percent,cir,i))
-                for _ in range(sample_num):
-                    with torch.no_grad():
-                        # preds = model.generate(**inputs, max_new_tokens=512, temperature=1.0,top_p=0.95,num_beams=sample_num, do_sample=True,num_return_sequences=sample_num)
-                        preds = model.generate(**inputs, max_new_tokens=debug_maxLen, temperature=debug_temp,top_p=debug_top_p, do_sample=debug_do_sample,num_return_sequences=1,return_dict_in_generate=True,output_scores=True)#,temperature=0.4,repetition_penalty=1.1
-                        transition_scores = model.compute_transition_scores(
-                            preds.sequences, preds.scores, normalize_logits=True
-                        ).cpu().numpy()
-                    for pred,transition_score in zip(preds["sequences"],transition_scores):
-                        gen_tokens = pred[input_length:].cpu()
-                        valid = np.isfinite(transition_score)
-                        tsc = transition_score[valid]
-                        output_length = input_length + tsc.shape[-1]
-                        sc = np.sum(tsc,axis=-1)/output_length
-                        true_sc = np.exp(sc)
-                        print(f"gen_length: {tsc.shape[-1]},output_length: {output_length}, tsc: {sc}, true_sc: {true_sc}")
-                        ans = tokenizer.decode(gen_tokens, skip_special_tokens=True)
-                        solution = filter_fix_ans(ans, entry_point, start_code)
-                        tmp_node = Node(solution=solution,parent=node,prompt=feedback,prob=true_sc,depth=cir)
-                        tmp_node.idx = len(nodes)
-                        node.children.append(tmp_node)
-                        gened_nodes.append(tmp_node)
-                        nodes.append(tmp_node)
+                # fix_percents.append((input_length,fix_input_len,fix_percent,cir,i))
+                # for _ in range(sample_num):
+                with torch.no_grad():
+                    # preds = model.generate(**inputs, max_new_tokens=512, temperature=1.0,top_p=0.95,num_beams=sample_num, do_sample=True,num_return_sequences=sample_num)
+                    preds = model.generate(**inputs, max_new_tokens=debug_maxLen, temperature=debug_temp,top_p=debug_top_p, do_sample=debug_do_sample,num_return_sequences=sample_num,return_dict_in_generate=True,output_scores=True)#,temperature=0.4,repetition_penalty=1.1
+                    transition_scores = model.compute_transition_scores(
+                        preds.sequences, preds.scores, normalize_logits=True
+                    ).cpu().numpy()
+                for pred,transition_score in zip(preds["sequences"],transition_scores):
+                    gen_tokens = pred[input_length:].cpu()
+                    valid = np.isfinite(transition_score)
+                    tsc = transition_score[valid]
+                    output_length = input_length + tsc.shape[-1]
+                    sc = np.sum(tsc,axis=-1)/output_length
+                    true_sc = np.exp(sc)
+                    #print(f"gen_length: {tsc.shape[-1]},output_length: {output_length}, tsc: {sc}, true_sc: {true_sc}")
+                    fix_percents.append((input_length,fix_input_len,fix_percent,output_length,i))
+                    ans = tokenizer.decode(gen_tokens, skip_special_tokens=True)
+                    solution = filter_fix_ans(ans, entry_point, start_code)
+                    tmp_node = Node(solution=solution,parent=node,prompt=feedback,prob=true_sc,depth=cir)
+                    tmp_node.idx = len(nodes)
+                    node.children.append(tmp_node)
+                    gened_nodes.append(tmp_node)
+                    nodes.append(tmp_node)
             fix_record.append({"cir":cir,"fix_percents":fix_percents})
+            print(f"fix record len: {len(fix_record)}")
             print(f"cir {cir} gened {len(gened_nodes)} solutions. Total nodes num is {len(nodes)}")
             model_inference_time = (time.time()-st)/60
             print(f"Total model inference spends {model_inference_time} mins.")
         start_write = time.time()
         print(f"time_record:{time_record}\nfix_record:{fix_record}")
-        f.write(json.dumps({"task_id": tid,"completion":output_short,"time_record":time_record,"fix_record":fix_record,"step_one_total_time":step_one_total_time,"input_tokens_len":input_tokens_len})+"\n")
+        f.write(json.dumps({"task_id": tid,"completion":output_short,"time_record":time_record,"fix_record":fix_record,"step_one_total_time":step_one_total_time,"step_one_tokens_len":(input_tokens_len,output_tokens_len)})+"\n")
         f.flush()
         fullf.write(json.dumps({"task_id": tid,"completion":output_full})+"\n")
         fullf.flush()

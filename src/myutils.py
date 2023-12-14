@@ -343,7 +343,7 @@ def get_CODET_point2(Node_list, testcases, task_id) -> None:
     return group_score
 
 
-def get_CODET_point3(Node_list, testcases, task_id, limit = 3) -> None:
+def get_CODET_point3(Node_list, testcases, task_id, limit = 1) -> None:
     start_time = time.time()
     solution_id_to_data = dict()
     test_id_to_data = dict()
@@ -363,7 +363,6 @@ def get_CODET_point3(Node_list, testcases, task_id, limit = 3) -> None:
         test_id_to_data[i]=test
         test_ids.append(i)
     log_message("Run solution and test case...",verbose)
-    print_checkp(problems[task_id],testcases)    
     for i in sol_ids:
         if Node_list[i].already_CODET:
             solution_pass_test[i] =  Node_list[i].CODET_pass_testcase
@@ -409,11 +408,17 @@ def get_CODET_point3(Node_list, testcases, task_id, limit = 3) -> None:
     log_message("Sort group and get result...",verbose)    
     sorted_group = sorted(group_score.items(),key=lambda x: x[1],reverse=True)
     sorted_nodes = []
-    for k,v in sorted_group:
+    tmplimit = 0
+    for i,(k,v) in enumerate(sorted_group):
         sgroup = solution_group[k]
         nodes = [solution_id_to_data[i] for i in sgroup]
         nodes = sorted(nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
         sorted_nodes.append(nodes)
+        if v==0:
+            tmplimit = i
+    if tmplimit < limit:
+        limit = tmplimit
+    print(f"When choose nodes according to CODET, limit = {limit}")
     limit_sorted_nodes = sorted_nodes[:limit]
     left_sorted_nodes = sorted_nodes[limit:]
     idx_record = []
@@ -426,7 +431,7 @@ def get_CODET_point3(Node_list, testcases, task_id, limit = 3) -> None:
         for i,nodes in enumerate(limit_sorted_nodes):
             if idx_record[i] >= len(nodes):
                 lack_num+=1
-                if lack_num > 999:
+                if lack_num > 100:
                     stop = True
                     break
                 continue
