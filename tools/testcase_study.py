@@ -14,6 +14,27 @@ def load_testcase(test_file):
         data = json.loads(f.read())
     return data
 
+def testfile_trans(test_file,resfile):
+    tests = []
+    data = load_testcase(test_file)
+    for tid,v in data.items():
+        ios = []
+        for test in v:
+            if "\n" in test:
+                # print(test)
+                test = test.replace("\n","")
+                continue
+            if "==" in test:
+                tin = test.split("==")[0].replace("assert","").strip()
+                tout = test.split("==")[1].strip()
+                ios.append({"tin":tin,"tout":tout})
+        print(f"task {tid} has {len(ios)} tests")
+        tests.append({"task_id":tid,"ios":ios})
+    with open(resfile,"w+")as f:
+        for t in tests:
+            f.write(json.dumps(t)+"\n")
+    return
+      
 def testcase_num(test_file):
     test_num = []
     test_less_10 = []
@@ -75,8 +96,10 @@ def testcases_merge(file1,file2,resfile):
         
 
 if __name__ == "__main__":
-    CODET_tescase_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300.jsonl"
+    CODET_tescase_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter_add.jsonl"
     # add_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test3_add.jsonl"
     # res_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter_add.jsonl"
     # testcases_merge(CODET_tescase_file,add_file,res_file)
-    testcase_num2(CODET_tescase_file)
+    # testcase_num2(CODET_tescase_file)
+    res_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_uniform.jsonl"
+    testfile_trans(CODET_tescase_file,res_file)

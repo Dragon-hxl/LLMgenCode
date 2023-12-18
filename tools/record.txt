@@ -28,3 +28,78 @@ change_lengths: Counter({2: 2252, 1: 1455, 3: 998, 4: 382, 5: 107, 0: 64, 7: 25,
 fix percents: Counter({6: 2094, 5: 1650, 7: 1169, 4: 225, 8: 141, 3: 7}) 0.3-0.8
 
 
+pass tasks are:
+[0, 2, 4, 7, 12, 15, 23, 28, 29, 30, 31, 34, 35, 40, 42, 43, 44, 45, 48, 51, 52, 53, 55, 58, 60, 124, 162]
+cir 1,passed 35 tasks, pass rate is 0.21341463414634146
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 12, 13, 14, 15, 22, 23, 27, 28, 29, 30, 31, 34, 35, 40, 42, 43, 44, 45, 48, 51, 52, 53, 55, 58, 60, 124, 143, 152, 162]
+cir 2,passed 52 tasks, pass rate is 0.3170731707317073
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 48, 49, 51, 52, 53, 54, 55, 58, 60, 67, 79, 82, 84, 121, 124, 133, 143, 146, 152, 158, 159, 162]
+cir 3,passed 58 tasks, pass rate is 0.35365853658536583
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 55, 58, 60, 63, 67, 72, 79, 82, 84, 114, 120, 121, 122, 124, 133, 143, 146, 152, 158, 159, 162]
+cir 4,passed 60 tasks, pass rate is 0.36585365853658536
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 48, 49, 51, 52, 53, 54, 55, 58, 60, 62, 63, 67, 68, 72, 78, 79, 82, 84, 114, 120, 121, 122, 124, 133, 143, 146, 152, 158, 159, 162]
+cir 5,passed 60 tasks, pass rate is 0.36585365853658536
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 48, 49, 51, 52, 53, 54, 55, 58, 60, 62, 63, 67, 68, 72, 78, 79, 82, 84, 114, 120, 121, 122, 124, 133, 143, 146, 152, 158, 159, 162]
+cir 6,passed 62 tasks, pass rate is 0.3780487804878049
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 55, 58, 59, 60, 62, 63, 67, 68, 72, 78, 79, 82, 84, 114, 120, 121, 122, 124, 133, 143, 146, 152, 158, 159, 162]
+cir 7,passed 63 tasks, pass rate is 0.38414634146341464
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 48, 49, 51, 52, 53, 54, 55, 58, 59, 60, 62, 63, 66, 67, 68, 72, 78, 79, 82, 84, 86, 114, 120, 121, 122, 124, 133, 143, 146, 152, 158, 159, 162]
+cir 8,passed 63 tasks, pass rate is 0.38414634146341464
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 48, 49, 51, 52, 53, 54, 55, 58, 59, 60, 62, 63, 66, 67, 68, 72, 78, 79, 82, 84, 86, 114, 120, 121, 122, 124, 133, 143, 146, 152, 158, 159, 162]
+cir 9,passed 63 tasks, pass rate is 0.38414634146341464
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 48, 49, 51, 52, 53, 54, 55, 58, 59, 60, 62, 63, 66, 67, 68, 72, 78, 79, 82, 84, 86, 114, 120, 121, 122, 124, 133, 143, 146, 152, 158, 159, 162]
+cir 10,passed 63 tasks, pass rate is 0.38414634146341464
+pass tasks are:
+[0, 2, 4, 5, 7, 8, 11, 12, 13, 14, 15, 21, 22, 23, 25, 26, 27, 28, 29, 30, 31, 34, 35, 40, 41, 42, 43, 44, 45, 46, 48, 49, 51, 52, 53, 54, 55, 58, 59, 60, 62, 63, 66, 67, 68, 72, 78, 79, 82, 84, 86, 114, 120, 121, 122, 124, 133, 143, 146, 152, 158, 159, 162]
+--------------------------------------------
+task HumanEval/5 pass or not for each cir: [False, True, True, True, True, True, True, True, True, True, True]
+task HumanEval/8 pass or not for each cir: [False, True, True, True, True, True, True, True, True, True, True]
+task HumanEval/11 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/13 pass or not for each cir: [False, True, True, True, True, True, True, True, True, True, True]
+task HumanEval/14 pass or not for each cir: [False, True, True, True, True, True, True, True, True, True, True]
+task HumanEval/21 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/22 pass or not for each cir: [False, True, True, True, True, True, True, True, True, True, True]
+task HumanEval/25 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/26 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/27 pass or not for each cir: [False, True, True, True, True, True, True, True, True, True, True]
+task HumanEval/41 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/46 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/47 pass or not for each cir: [False, False, False, True, False, False, True, False, False, False, False]
+task HumanEval/49 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/54 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/59 pass or not for each cir: [False, False, False, False, False, False, True, True, True, True, True]
+task HumanEval/62 pass or not for each cir: [False, False, False, False, True, True, True, True, True, True, True]
+task HumanEval/63 pass or not for each cir: [False, False, False, True, True, True, True, True, True, True, True]
+task HumanEval/66 pass or not for each cir: [False, False, False, False, False, False, False, True, True, True, True]
+task HumanEval/67 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/68 pass or not for each cir: [False, False, False, False, True, True, True, True, True, True, True]
+task HumanEval/72 pass or not for each cir: [False, False, False, True, True, True, True, True, True, True, True]
+task HumanEval/78 pass or not for each cir: [False, False, False, False, True, True, True, True, True, True, True]
+task HumanEval/79 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/82 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/84 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/86 pass or not for each cir: [False, False, False, False, False, False, False, True, True, True, True]
+task HumanEval/114 pass or not for each cir: [False, False, False, True, True, True, True, True, True, True, True]
+task HumanEval/120 pass or not for each cir: [False, False, False, True, True, True, True, True, True, True, True]
+task HumanEval/121 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/122 pass or not for each cir: [False, False, False, True, True, True, True, True, True, True, True]
+task HumanEval/133 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/143 pass or not for each cir: [False, True, True, True, True, True, True, True, True, True, True]
+task HumanEval/146 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/152 pass or not for each cir: [False, True, True, True, True, True, True, True, True, True, True]
+task HumanEval/158 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+task HumanEval/159 pass or not for each cir: [False, False, True, True, True, True, True, True, True, True, True]
+all true: 27, all false: 73, both: 37
+--------------------------------------------
+
+
+

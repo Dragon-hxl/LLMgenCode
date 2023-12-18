@@ -1,0 +1,81 @@
+ID : 208031 , time : 2023-12-15 00:48:36 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_58.jsonl
+ID : 208036 , time : 2023-12-15 01:17:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_58.jsonl
+ID : 208037 , time : 2023-12-15 01:21:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_58.jsonl
+ID : 208038 , time : 2023-12-15 01:28:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29.jsonl
+ID : 208039 , time : 2023-12-15 01:30:36 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_86.jsonl
+ID : 208044 , time : 2023-12-15 01:46:36 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_86.jsonl
+ID : 208054 , time : 2023-12-15 02:02:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_113.jsonl
+ID : 208055 , time : 2023-12-15 02:03:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208056 , time : 2023-12-15 02:04:43 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_163.jsonl
+ID : 208059 , time : 2023-12-15 02:08:07 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_163.jsonl
+ID : 208095 , time : 2023-12-15 12:08:26 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208096 , time : 2023-12-15 12:09:56 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208097 , time : 2023-12-15 12:20:26 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208098 , time : 2023-12-15 12:23:26 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208100 , time : 2023-12-15 12:52:26 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29.jsonl
+ID : 208101 , time : 2023-12-15 12:54:57 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_58.jsonl
+ID : 208102 , time : 2023-12-15 13:01:56 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_58.jsonl
+ID : 208103 , time : 2023-12-15 13:06:26 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208104 , time : 2023-12-15 13:35:26 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208109 , time : 2023-12-15 13:52:56 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208110 , time : 2023-12-15 13:54:26 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208111 , time : 2023-12-15 14:23:56 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208113 , time : 2023-12-15 14:50:56 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208159 , time : 2023-12-15 17:44:57 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208164 , time : 2023-12-15 17:59:57 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140_2.jsonl
+ID : 208165 , time : 2023-12-15 18:08:27 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140_3.jsonl
+ID : 208207 , time : 2023-12-16 01:05:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208208 , time : 2023-12-16 01:11:30 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208235 , time : 2023-12-16 16:29:36 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208236 , time : 2023-12-16 16:43:01 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208239 , time : 2023-12-16 16:52:52 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208240 , time : 2023-12-16 17:40:01 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208241 , time : 2023-12-16 17:48:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208255 , time : 2023-12-16 18:51:13 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208257 , time : 2023-12-16 19:12:41 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208258 , time : 2023-12-16 19:14:36 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208259 , time : 2023-12-16 19:18:15 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208261 , time : 2023-12-16 19:20:42 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208263 , time : 2023-12-16 19:26:14 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208264 , time : 2023-12-16 19:31:05 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29.jsonl
+ID : 208270 , time : 2023-12-16 19:57:46 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29.jsonl
+ID : 208272 , time : 2023-12-16 20:04:39 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29.jsonl
+ID : 208277 , time : 2023-12-16 21:10:14 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29.jsonl
+ID : 208278 , time : 2023-12-16 22:27:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29_2.jsonl
+ID : 208279 , time : 2023-12-16 22:30:05 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29_2.jsonl
+ID : 208280 , time : 2023-12-16 22:59:31 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208288 , time : 2023-12-17 01:18:56 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208289 , time : 2023-12-17 01:51:18 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_29.jsonl
+ID : 208290 , time : 2023-12-17 01:52:47 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_58.jsonl
+ID : 208291 , time : 2023-12-17 01:54:23 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_86.jsonl
+ID : 208292 , time : 2023-12-17 01:56:05 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_113.jsonl
+ID : 208293 , time : 2023-12-17 01:57:28 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_163.jsonl
+ID : 208329 , time : 2023-12-17 23:38:48 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_140.jsonl
+ID : 208330 , time : 2023-12-17 23:39:41 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_135.jsonl
+ID : 208384 , time : 2023-12-18 11:49:36 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_81.jsonl
+ID : 208385 , time : 2023-12-18 11:51:37 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_105.jsonl
+ID : 208388 , time : 2023-12-18 11:53:06 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_134.jsonl
+ID : 208391 , time : 2023-12-18 12:04:37 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_160.jsonl
+ID : 208403 , time : 2023-12-18 13:29:37 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_134.jsonl
+ID : 208406 , time : 2023-12-18 14:25:37 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_114.jsonl
+ID : 208407 , time : 2023-12-18 14:41:07 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_114.jsonl
+ID : 208408 , time : 2023-12-18 14:45:37 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_114.jsonl
+ID : 208410 , time : 2023-12-18 14:57:37 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_114.jsonl
+ID : 208427 , time : 2023-12-18 15:46:37 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_114.jsonl
+ID : 208430 , time : 2023-12-18 16:01:38 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_134.jsonl
+ID : 208442 , time : 2023-12-18 16:48:38 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_29.jsonl
+ID : 208511 , time : 2023-12-18 20:36:08 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_58.jsonl
+ID : 208512 , time : 2023-12-18 20:38:38 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_29.jsonl
+ID : 208517 , time : 2023-12-18 20:45:38 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_58.jsonl
+ID : 208518 , time : 2023-12-18 20:47:38 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_86.jsonl
+ID : 208532 , time : 2023-12-18 21:08:10 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_113.jsonl
+ID : 208534 , time : 2023-12-18 21:08:40 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_113.jsonl
+ID : 208536 , time : 2023-12-18 21:17:39 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_113.jsonl
+ID : 208538 , time : 2023-12-18 21:25:08 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_113.jsonl
+ID : 208540 , time : 2023-12-18 21:36:09 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_86.jsonl
+ID : 208543 , time : 2023-12-18 21:53:40 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_86.jsonl
+ID : 208544 , time : 2023-12-18 21:59:09 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_113.jsonl
+ID : 208546 , time : 2023-12-18 23:24:09 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_17.jsonl
+ID : 208548 , time : 2023-12-18 23:29:10 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_63.jsonl
+ID : 208549 , time : 2023-12-19 00:01:09 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_94.jsonl
+ID : 208550 , time : 2023-12-19 00:08:09 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_115.jsonl

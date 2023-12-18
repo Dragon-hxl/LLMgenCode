@@ -61,7 +61,7 @@ def main(cfg: DictConfig):
         UTfeedback_promt = af.read()
     #读取unit tests，保存在unit_tests，用来判断程序对错。one_test里保存了每个task的第一个unit test，这个test会用在prompt里。
     base_unit_tests,base_assertions,base_assertion_string = get_unit_test(ut_file)
-    unit_tests,assertions,assertion_string = get_unit_test(true_tests_file,chosen_num=10)#
+    unit_tests,assertions,assertion_string = get_unit_test(ut_file)#true_tests_file,chosen_num=10
     
 
     # 构成生成初始代码的prompt
@@ -91,7 +91,7 @@ def main(cfg: DictConfig):
     for tid in taskids:
         print("get solution for task :",tid)
         num_id = int(tid.split("/")[1])
-        if num_id < 141 or num_id > 164:
+        if num_id < 114 or num_id > 140:
             continue
         tprompt = problems[tid]["prompt"]
         if tid == "HumanEval/64":

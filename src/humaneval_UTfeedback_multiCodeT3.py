@@ -1,42 +1,42 @@
-"""2023.11.6
-说明：用于UTfeedback，每次生成100个选前10个的代码。和之前不同的是选择剩下来的代码会加入到下次排序。加入CODET作为评分依据
-"""
-
-import sys
-sys.path.append("/home/S/hexiaolong/codex/self-debug")
-sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
 import torch
 import json
 import time
 import numpy as np
-import hydra
-import os
-import faulthandler
-from omegaconf import DictConfig, OmegaConf
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from concurrent.futures import ThreadPoolExecutor
+import hydra
+from omegaconf import DictConfig, OmegaConf
+
+import faulthandler
+faulthandler.enable()
+
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "true"
+
+import sys
+sys.path.append("/home/S/hexiaolong/codex/self-debug")
+sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
 from human_eval.data import read_problems
 from human_eval.execution import run_code_with_test_result,run_code_with_output2
-from concurrent.futures import ThreadPoolExecutor
 from myutils import map_gpu_memory,code_clean2,get_unit_test,prompt_for_64,filter_fix_ans,get_CODET_point2,get_CODET_point3,get_UTfeedback_prompt_v1,get_UTfeedback_prompt
 from utils.obj import Node
-os.environ["TOKENIZERS_PARALLELISM"] = "true"
-faulthandler.enable()
+
+"""2023.12.16
+说明：用于UTfeedback，每次生成100个选前10个的代码。和之前不同的是选择剩下来的代码会加入到下次排序。加入CODET作为评分依据
+"""
 
 # prompt file 
 prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
 prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback.txt"
-# 从问题中提取的unit tests所在的文件
+# test file
 data_root = "/home/S/hexiaolong/codex/self-debug/data/"
-ut_file = data_root + "test_from_prompt.jsonl"
-# 存放了最终用来check的unit_tests
-true_tests_file = data_root + "test_from_check.jsonl"
-# random.seed(1024)
-# 用来进行CODET的tests文件
-# tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/gen_tests_7b16k_num1002.jsonl"
-tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter_add.jsonl"
+ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
+true_tests_file = data_root + "test_from_check.jsonl"# 存放了最终用来check的unit_tests
+tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter_add.jsonl"# 用来进行CODET的tests文件
 CODET_test_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_uniform.jsonl"
-with_CODET_Point = False
+# 控制是否加入CODET分数
+with_CODET_Point = True
 
 @hydra.main(version_base=None, config_path="../configs/", config_name="UTfeedback_config.yaml")
 def main(cfg: DictConfig):
@@ -60,14 +60,15 @@ def main(cfg: DictConfig):
 
     with open(UTfeedback_file,"r") as af:
         UTfeedback_promt = af.read()
-    #读取unit tests，保存在unit_tests
+    
+    #读取unit tests
     base_unit_tests,base_assertions,base_assertion_string = get_unit_test(ut_file)
     unit_tests,assertions,assertion_string = get_unit_test(ut_file)#true_tests_file,chosen_num=10
-    CODET_unit_tests,CODET_assertions,CODET_assertion_string = get_unit_test(CODET_test_file,chosen_num=10)
-    for tid in list(unit_tests.keys()):
-        unit_tests[tid] = (unit_tests[tid] + CODET_unit_tests[tid])[:10]
-        assertions[tid] = (assertions[tid] + CODET_assertions[tid])[:10]
-        assertion_string[tid] = (assertion_string[tid] + "\n" + CODET_assertion_string[tid])[:10]
+    # CODET_unit_tests,CODET_assertions,CODET_assertion_string = get_unit_test(CODET_test_file,chosen_num=10) # 新生成的正确的testcase
+    # for tid in list(unit_tests.keys()):
+    #     unit_tests[tid] = (unit_tests[tid] + CODET_unit_tests[tid])[:10]
+    #     assertions[tid] = (assertions[tid] + CODET_assertions[tid])[:10]
+    #     assertion_string[tid] = (assertion_string[tid] + "\n" + CODET_assertion_string[tid])[:10]
         
         
     #读取用来进行CODET的tests
@@ -110,7 +111,7 @@ def main(cfg: DictConfig):
     for tid in taskids:
         print(f"get solution for task : {tid} with {len(unit_tests[tid])} tests.")
         num_id = int(tid.split("/")[1])
-        if num_id < 130 or num_id > 134:
+        if num_id < 115 or num_id > 140:
             continue
         step_one_st = time.time()
         tprompt = problems[tid]["prompt"]
@@ -128,7 +129,7 @@ def main(cfg: DictConfig):
         print(f"output_tokens_len:{output_tokens_len}")
         model_inference_time = (time.time()-st)/60
         ans = tokenizer.decode(pred.cpu()[0], skip_special_tokens=True)[input_len:]
-        solution = ans.strip("\n")#.split("```")[0]#.replace("->>","")
+        solution = ans.strip("\n")
         # 截取程序
         idx2 = solution.find("### Task End ###")
         if idx2 != -1:
@@ -255,7 +256,6 @@ def main(cfg: DictConfig):
             else:
                 sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
             chosen_nodes = sorted_nodes[:sample_num]
-            # if len(sorted_nodes) > sample_num:
             left_nodes = sorted_nodes[sample_num:]
             # chosen_nodes = get_CODET_point3(total_nodes,testcases[tid],tid)
             # left_nodes = []
@@ -266,7 +266,7 @@ def main(cfg: DictConfig):
             print(f"task {tid} in cir {cir} chooses {len(chosen_nodes)} nodes and left {len(left_nodes)} nodes")
             print(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
             print(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")
-            print(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\nCODET point are {[n.CODET_point for n in chosen_nodes]}")
+            print(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\nCODET point are {[n.CODET_point for n in chosen_nodes]}\nCODET_pass_rate are {[n.CODET_pass_rate for n in chosen_nodes]}")
             choose_solution_time = (time.time()-choose_start)/60
             print(f"Choose solution spends {choose_solution_time} mins.")
             
@@ -287,39 +287,38 @@ def main(cfg: DictConfig):
                 # print("-----------------------------")
                 input_len = len(feedback)
                 inputs = tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)
-                # print("feedback prompt's token nums is :",inputs["input_ids"].size())
-                
                 input_length = inputs.input_ids.shape[1]
                 print(f"total input length is {input_length} while fix inuput length is {fix_input_len}")
                 inputs = inputs.to('cuda')
                 fix_percent = 0 # (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
-                # print(f"fix percent is {fix_percent*100.0}%")
-                # fix_percents.append((input_length,fix_input_len,fix_percent,cir,i))
-                for _ in range(sample_num):
-                    with torch.no_grad():
-                        # preds = model.generate(**inputs, max_new_tokens=512, temperature=1.0,top_p=0.95,num_beams=sample_num, do_sample=True,num_return_sequences=sample_num)
-                        print(f"memory_allocated :{torch.cuda.memory_allocated()}")
-                        print(f"memory_allocated :{torch.cuda.memory_reserved()}")
-                        preds = model.generate(**inputs, max_new_tokens=debug_maxLen, temperature=debug_temp,top_p=debug_top_p, do_sample=debug_do_sample,return_dict_in_generate=True,output_scores=True)#,temperature=0.4,repetition_penalty=1.1,num_return_sequences=10
-                        transition_scores = model.compute_transition_scores(
-                            preds.sequences, preds.scores, normalize_logits=True
-                        ).cpu().numpy()
-                    for pred,transition_score in zip(preds["sequences"],transition_scores):
-                        gen_tokens = pred[input_length:].cpu()
-                        valid = np.isfinite(transition_score)
-                        tsc = transition_score[valid]
-                        output_length = input_length + tsc.shape[-1]
-                        sc = np.sum(tsc,axis=-1)/output_length
-                        true_sc = np.exp(sc)
-                        #print(f"gen_length: {tsc.shape[-1]},output_length: {output_length}, tsc: {sc}, true_sc: {true_sc}")
-                        fix_percents.append((input_length,fix_input_len,fix_percent,output_length,i))
-                        ans = tokenizer.decode(gen_tokens, skip_special_tokens=True)
-                        solution = filter_fix_ans(ans, entry_point, start_code)
-                        tmp_node = Node(solution=solution,parent=node,prompt=feedback,prob=true_sc,depth=cir)
-                        tmp_node.idx = len(nodes)
-                        node.children.append(tmp_node)
-                        gened_nodes.append(tmp_node)
-                        nodes.append(tmp_node)
+                with torch.inference_mode():
+                    # preds = model.generate(**inputs, max_new_tokens=512, temperature=1.0,top_p=0.95,num_beams=sample_num, do_sample=True,num_return_sequences=sample_num)
+                    print(f"memory_allocated :{torch.cuda.memory_allocated()}")
+                    print(f"memory_allocated :{torch.cuda.memory_reserved()}")
+                    preds = model.generate(**inputs, max_new_tokens=debug_maxLen, temperature=debug_temp,top_p=debug_top_p, do_sample=debug_do_sample,return_dict_in_generate=True,output_scores=True,num_return_sequences=10)#,temperature=0.4,repetition_penalty=1.1
+                    transition_scores = model.compute_transition_scores(
+                        preds.sequences, preds.scores, normalize_logits=True
+                    ).cpu().numpy()
+                for pred,transition_score in zip(preds["sequences"],transition_scores):
+                    # 计算生成概率
+                    gen_tokens = pred[input_length:].cpu()
+                    valid = np.isfinite(transition_score)
+                    tsc = transition_score[valid]
+                    output_length = input_length + tsc.shape[-1]
+                    sc = np.sum(tsc,axis=-1)/output_length
+                    true_sc = np.exp(sc)
+                    
+                    # 记录每条solution的长度
+                    fix_percents.append((input_length,fix_input_len,fix_percent,output_length,i))
+                    
+                    #创建node
+                    ans = tokenizer.decode(gen_tokens, skip_special_tokens=True)
+                    solution = filter_fix_ans(ans, entry_point, start_code)
+                    tmp_node = Node(solution=solution,parent=node,prompt=feedback,prob=true_sc,depth=cir)
+                    tmp_node.idx = len(nodes)
+                    node.children.append(tmp_node)
+                    gened_nodes.append(tmp_node)
+                    nodes.append(tmp_node)
             fix_record.append({"cir":cir,"fix_percents":fix_percents})
             print(f"fix record len: {len(fix_record)}")
             print(f"cir {cir} gened {len(gened_nodes)} solutions. Total nodes num is {len(nodes)}")

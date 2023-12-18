@@ -7,6 +7,8 @@ class Node:
         self.children = []
         self.prompt = prompt
         self.passT_rate = passT_rate
+        self.pass_ut_num = 0
+        self.total_ut_num = 0
         self.prob = prob
         self.depth = depth
         self.reflect = ""
@@ -14,6 +16,8 @@ class Node:
         self.feedbackprompt = feedbackprompt #由这个node的solution产生的feedbackprompt
         self.CODET_point = 0.0
         self.CODET_pass_testcase = set()
+        self.CODET_pass_rate = 0.0
+        self.CODET_total_test_num = 0
         self.already_CODET = False
         self.idx = 0
     def __repr__(self) -> str:

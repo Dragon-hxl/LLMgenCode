@@ -5,8 +5,9 @@ import re
 import time
 import math
 import sys
-sys.path.append("/home/S/hexiaolong/codex/human-eval")
+# sys.path.append("/home/S/hexiaolong/codex/human-eval")
 sys.path.append("/home/S/hexiaolong/codex/self-debug")
+sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from utils.obj import Node
@@ -38,7 +39,7 @@ def map_gpu_memory(used_gpu):
             available_memory = total_memory - allocated_memory
             gpu_memory.append(available_memory)
     max_memory_mapping = {
-                        i: str(int(gpu_memory[i] * 0.85)) + "GiB"
+                        i: str(int(gpu_memory[i] * 0.95)) + "GiB"
                         for i in range(num_gpus)
                     }
     # used_gpu = []
@@ -175,6 +176,35 @@ def get_UTfeedback_prompt(feedback_prompt, solution, code_res, run_test, test_re
         prompt = feedback_prompt +solution + utFeedback
         passn = (1.0*pass_tests)/total_tests
     return prompt,passn
+
+def get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions):
+    total_tests = len(run_test)
+    pass_tests = 0
+    passn = 0.0
+    # print(f"run_test:{len(run_test)},pass_result:{len(pass_result)},test_result:{len(test_result)},assertions:{len(assertions)}")
+    if passed:
+        utFeedback = "\n```\nFeedback: With the above function,"
+        pass_result = final_res["pass_result"]
+        test_result = final_res["test_result"]
+        # print("test_result : ",test_result)
+        for i,p in enumerate(pass_result):
+            try:# 避免一些极端情况的出现
+                test_res = str(test_result[i])
+            except:
+                continue
+            if p:
+                utFeedback += f" {run_test[i]} == {test_result[i]} while the assertion is \"{assertions[i]}\".The code pass this aasertion."
+                pass_tests += 1
+            else:
+                utFeedback += f" {run_test[i]} == {test_result[i]} while the assertion is \"{assertions[i]}\".The code does not pass this aasertion." 
+        utFeedback += "\nSo the code is wrong. Please fix it.\n\n### fix result ###\n"
+        prompt = feedback_prompt +solution + utFeedback
+        passn = (1.0*pass_tests)/total_tests
+    else:
+        prompt =  feedback_prompt +solution + "\n```\nFeedback: With the above function, " + run_test[0] +" returns the following error:\n\"\"\"\n"+final_res+ "\n\"\"\"\nSo the code does not pass the assertion. Please fix it.\n\n### fix result ###\n"
+    return prompt,passn,pass_tests
+
+
 def filter_fix_ans(ans, entry_point, start_code,verbose=False):
     # print("=================fix ans=====================")
     # print(ans)
@@ -310,7 +340,6 @@ def get_CODET_point2(Node_list, testcases, task_id) -> None:
             result = future.result()
             passed = result["passed"]
             code_res = result["result"]
-            checkp = result["check_program"]
         print(f"task:{task_id},solution:{i},passed:{passed},result:{code_res}")
         if type(code_res) is str:
             pass
@@ -338,6 +367,7 @@ def get_CODET_point2(Node_list, testcases, task_id) -> None:
         log_message(f"group {i} : {group} scores {group_score[i]}",verbose)
         for sol_id in group:
             Node_list[sol_id].CODET_point = group_score[i]
+            Node_list[sol_id].CODET_total_test_num = len(testcases)
     end_time = time.time()
     log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
     return group_score
@@ -405,6 +435,7 @@ def get_CODET_point3(Node_list, testcases, task_id, limit = 1) -> None:
         log_message(f"group {i} : {group} scores {group_score[i]}",verbose)
         for sol_id in group:
             Node_list[sol_id].CODET_point = group_score[i]
+            Node_list[sol_id].CODET_total_test_num = len(testcases)
     log_message("Sort group and get result...",verbose)    
     sorted_group = sorted(group_score.items(),key=lambda x: x[1],reverse=True)
     sorted_nodes = []
