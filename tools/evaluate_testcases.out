@@ -1,0 +1,1065 @@
+Job start at 2023-12-26 19:56:12
+Job run at:
+   Static hostname: localhost.localdomain
+Transient hostname: r8a100-c03
+         Icon name: computer-server
+           Chassis: server
+        Machine ID: db9d44edd9db414b98119b198b8860bd
+           Boot ID: 523f5db4e0924c7d863aac627d05007b
+  Operating System: Rocky Linux 8.7 (Green Obsidian)
+       CPE OS Name: cpe:/o:rocky:rocky:8:GA
+            Kernel: Linux 4.18.0-425.10.1.el8_7.x86_64
+      Architecture: x86-64
+Have already added /tools/cluster-modulefiles into $MODULEPATH
+Currently Loaded Modulefiles:
+ 1) cluster-tools/v1.0      3) git/2.31.1       5) slurm-tools/v1.0  
+ 2) cuda-cudnn/11.7-8.5.0   4) python3/3.8.16  
+Currently Loaded Modulefiles:
+ 1) cluster-tools/v1.0      3) git/2.31.1       5) slurm-tools/v1.0  
+ 2) cuda-cudnn/11.7-8.5.0   4) python3/3.8.16   6) cmake/3.21.7      
+
+/usr/bin/gcc
+/home/S/hexiaolong/anaconda3/envs/codex/bin/python
+/home/S/hexiaolong/anaconda3/envs/codex/bin/python3
+############### /home : /home/S/hexiaolong
+Disk quotas for user hexiaolong (uid 6123): 
+     Filesystem   space   quota   limit   grace   files   quota   limit   grace
+          /home   4538M  16384M  20480M           29749       0       0        
+
+############### /workspace
+Disk quotas for user hexiaolong (uid 6123): 
+     Filesystem   space   quota   limit   grace   files   quota   limit   grace
+     /workspace  48839M    400G    500G            348k       0       0        
+
+############### /lustre
+Disk quotas for usr hexiaolong (uid 6123):
+     Filesystem    used   quota   limit   grace   files   quota   limit   grace
+        /lustre  1.607T      8T     10T       -   71796  3000000 36000000       -
+uid 6123 is using default block quota setting
+uid 6123 is using default file quota setting
+name, driver_version, power.limit [W]
+NVIDIA A100-SXM4-80GB, 530.30.02, 500.00 W
+NVIDIA A100-SXM4-80GB, 530.30.02, 500.00 W
+NVIDIA A100-SXM4-80GB, 530.30.02, 500.00 W
+NVIDIA A100-SXM4-80GB, 530.30.02, 500.00 W
+Use GPU 0,1,2,3
+Tue Dec 26 19:56:12 2023       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 530.30.02              Driver Version: 530.30.02    CUDA Version: 12.1     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                  Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf            Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A100-SXM4-80GB           On | 00000000:01:00.0 Off |                    0 |
+| N/A   23C    P0               59W / 500W|      0MiB / 81920MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA A100-SXM4-80GB           On | 00000000:41:00.0 Off |                    0 |
+| N/A   22C    P0               57W / 500W|      0MiB / 81920MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA A100-SXM4-80GB           On | 00000000:81:00.0 Off |                    0 |
+| N/A   22C    P0               57W / 500W|      0MiB / 81920MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA A100-SXM4-80GB           On | 00000000:C1:00.0 Off |                    0 |
+| N/A   22C    P0               58W / 500W|      0MiB / 81920MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+start evaluate testcase for task : HumanEval/0.
+start evaluate testcase for task : HumanEval/1.
+start evaluate testcase for task : HumanEval/2.
+start evaluate testcase for task : HumanEval/3.
+start evaluate testcase for task : HumanEval/4.
+start evaluate testcase for task : HumanEval/5.
+start evaluate testcase for task : HumanEval/6.
+start evaluate testcase for task : HumanEval/7.
+start evaluate testcase for task : HumanEval/8.
+start evaluate testcase for task : HumanEval/9.
+start evaluate testcase for task : HumanEval/10.
+start evaluate testcase for task : HumanEval/11.
+start evaluate testcase for task : HumanEval/12.
+start evaluate testcase for task : HumanEval/13.
+start evaluate testcase for task : HumanEval/14.
+start evaluate testcase for task : HumanEval/15.
+start evaluate testcase for task : HumanEval/16.
+start evaluate testcase for task : HumanEval/17.
+start evaluate testcase for task : HumanEval/18.
+start evaluate testcase for task : HumanEval/19.
+start evaluate testcase for task : HumanEval/20.
+start evaluate testcase for task : HumanEval/21.
+start evaluate testcase for task : HumanEval/22.
+start evaluate testcase for task : HumanEval/23.
+start evaluate testcase for task : HumanEval/24.
+start evaluate testcase for task : HumanEval/25.
+start evaluate testcase for task : HumanEval/26.
+start evaluate testcase for task : HumanEval/27.
+start evaluate testcase for task : HumanEval/28.
+start evaluate testcase for task : HumanEval/29.
+start evaluate testcase for task : HumanEval/30.
+start evaluate testcase for task : HumanEval/31.
+start evaluate testcase for task : HumanEval/32.
+start evaluate testcase for task : HumanEval/33.
+start evaluate testcase for task : HumanEval/34.
+start evaluate testcase for task : HumanEval/35.
+start evaluate testcase for task : HumanEval/36.
+start evaluate testcase for task : HumanEval/37.
+start evaluate testcase for task : HumanEval/38.
+start evaluate testcase for task : HumanEval/39.
+start evaluate testcase for task : HumanEval/40.
+start evaluate testcase for task : HumanEval/41.
+start evaluate testcase for task : HumanEval/42.
+start evaluate testcase for task : HumanEval/43.
+start evaluate testcase for task : HumanEval/44.
+start evaluate testcase for task : HumanEval/45.
+start evaluate testcase for task : HumanEval/46.
+start evaluate testcase for task : HumanEval/47.
+start evaluate testcase for task : HumanEval/48.
+start evaluate testcase for task : HumanEval/49.
+start evaluate testcase for task : HumanEval/50.
+start evaluate testcase for task : HumanEval/51.
+start evaluate testcase for task : HumanEval/52.
+start evaluate testcase for task : HumanEval/53.
+start evaluate testcase for task : HumanEval/54.
+start evaluate testcase for task : HumanEval/55.
+start evaluate testcase for task : HumanEval/56.
+start evaluate testcase for task : HumanEval/57.
+start evaluate testcase for task : HumanEval/58.
+start evaluate testcase for task : HumanEval/59.
+start evaluate testcase for task : HumanEval/60.
+start evaluate testcase for task : HumanEval/61.
+start evaluate testcase for task : HumanEval/62.
+start evaluate testcase for task : HumanEval/63.
+evaluat testcase for task : HumanEval/0 end!
+start evaluate testcase for task : HumanEval/64.
+evaluat testcase for task : HumanEval/1 end!
+start evaluate testcase for task : HumanEval/65.
+evaluat testcase for task : HumanEval/2 end!
+start evaluate testcase for task : HumanEval/66.
+evaluat testcase for task : HumanEval/3 end!
+start evaluate testcase for task : HumanEval/67.
+evaluat testcase for task : HumanEval/4 end!
+start evaluate testcase for task : HumanEval/68.
+evaluat testcase for task : HumanEval/5 end!
+start evaluate testcase for task : HumanEval/69.
+evaluat testcase for task : HumanEval/6 end!
+start evaluate testcase for task : HumanEval/70.
+evaluat testcase for task : HumanEval/7 end!
+start evaluate testcase for task : HumanEval/71.
+evaluat testcase for task : HumanEval/8 end!
+start evaluate testcase for task : HumanEval/72.
+evaluat testcase for task : HumanEval/9 end!
+start evaluate testcase for task : HumanEval/73.
+evaluat testcase for task : HumanEval/10 end!
+start evaluate testcase for task : HumanEval/74.
+evaluat testcase for task : HumanEval/11 end!
+start evaluate testcase for task : HumanEval/75.
+evaluat testcase for task : HumanEval/12 end!
+start evaluate testcase for task : HumanEval/76.
+evaluat testcase for task : HumanEval/13 end!
+start evaluate testcase for task : HumanEval/77.
+evaluat testcase for task : HumanEval/14 end!
+start evaluate testcase for task : HumanEval/78.
+evaluat testcase for task : HumanEval/15 end!
+start evaluate testcase for task : HumanEval/79.
+evaluat testcase for task : HumanEval/16 end!
+start evaluate testcase for task : HumanEval/80.
+evaluat testcase for task : HumanEval/17 end!
+start evaluate testcase for task : HumanEval/81.
+evaluat testcase for task : HumanEval/18 end!
+start evaluate testcase for task : HumanEval/82.
+evaluat testcase for task : HumanEval/19 end!
+start evaluate testcase for task : HumanEval/83.
+evaluat testcase for task : HumanEval/20 end!
+start evaluate testcase for task : HumanEval/84.
+evaluat testcase for task : HumanEval/21 end!
+start evaluate testcase for task : HumanEval/85.
+evaluat testcase for task : HumanEval/22 end!
+start evaluate testcase for task : HumanEval/86.
+evaluat testcase for task : HumanEval/23 end!
+start evaluate testcase for task : HumanEval/87.
+evaluat testcase for task : HumanEval/24 end!
+start evaluate testcase for task : HumanEval/88.
+evaluat testcase for task : HumanEval/25 end!
+start evaluate testcase for task : HumanEval/89.
+evaluat testcase for task : HumanEval/26 end!
+start evaluate testcase for task : HumanEval/90.
+evaluat testcase for task : HumanEval/27 end!
+start evaluate testcase for task : HumanEval/91.
+evaluat testcase for task : HumanEval/28 end!
+start evaluate testcase for task : HumanEval/92.
+evaluat testcase for task : HumanEval/29 end!
+start evaluate testcase for task : HumanEval/93.
+evaluat testcase for task : HumanEval/30 end!
+start evaluate testcase for task : HumanEval/94.
+evaluat testcase for task : HumanEval/31 end!
+start evaluate testcase for task : HumanEval/95.
+evaluat testcase for task : HumanEval/32 end!
+start evaluate testcase for task : HumanEval/96.
+evaluat testcase for task : HumanEval/33 end!
+start evaluate testcase for task : HumanEval/97.
+evaluat testcase for task : HumanEval/34 end!
+start evaluate testcase for task : HumanEval/98.
+evaluat testcase for task : HumanEval/35 end!
+start evaluate testcase for task : HumanEval/99.
+evaluat testcase for task : HumanEval/36 end!
+start evaluate testcase for task : HumanEval/100.
+evaluat testcase for task : HumanEval/37 end!
+start evaluate testcase for task : HumanEval/101.
+evaluat testcase for task : HumanEval/38 end!
+start evaluate testcase for task : HumanEval/102.
+evaluat testcase for task : HumanEval/39 end!
+start evaluate testcase for task : HumanEval/103.
+evaluat testcase for task : HumanEval/40 end!
+start evaluate testcase for task : HumanEval/104.
+evaluat testcase for task : HumanEval/41 end!
+start evaluate testcase for task : HumanEval/105.
+evaluat testcase for task : HumanEval/42 end!
+start evaluate testcase for task : HumanEval/106.
+evaluat testcase for task : HumanEval/43 end!
+start evaluate testcase for task : HumanEval/107.
+evaluat testcase for task : HumanEval/44 end!
+start evaluate testcase for task : HumanEval/108.
+evaluat testcase for task : HumanEval/45 end!
+start evaluate testcase for task : HumanEval/109.
+evaluat testcase for task : HumanEval/46 end!
+start evaluate testcase for task : HumanEval/110.
+evaluat testcase for task : HumanEval/47 end!
+start evaluate testcase for task : HumanEval/111.
+evaluat testcase for task : HumanEval/48 end!
+start evaluate testcase for task : HumanEval/112.
+evaluat testcase for task : HumanEval/49 end!
+start evaluate testcase for task : HumanEval/113.
+evaluat testcase for task : HumanEval/50 end!
+start evaluate testcase for task : HumanEval/114.
+evaluat testcase for task : HumanEval/51 end!
+start evaluate testcase for task : HumanEval/115.
+evaluat testcase for task : HumanEval/52 end!
+start evaluate testcase for task : HumanEval/116.
+evaluat testcase for task : HumanEval/53 end!
+start evaluate testcase for task : HumanEval/117.
+evaluat testcase for task : HumanEval/54 end!
+start evaluate testcase for task : HumanEval/118.
+evaluat testcase for task : HumanEval/55 end!
+start evaluate testcase for task : HumanEval/119.
+evaluat testcase for task : HumanEval/56 end!
+start evaluate testcase for task : HumanEval/120.
+evaluat testcase for task : HumanEval/57 end!
+start evaluate testcase for task : HumanEval/121.
+evaluat testcase for task : HumanEval/58 end!
+start evaluate testcase for task : HumanEval/122.
+evaluat testcase for task : HumanEval/59 end!
+start evaluate testcase for task : HumanEval/123.
+evaluat testcase for task : HumanEval/60 end!
+start evaluate testcase for task : HumanEval/124.
+evaluat testcase for task : HumanEval/61 end!
+start evaluate testcase for task : HumanEval/125.
+evaluat testcase for task : HumanEval/62 end!
+start evaluate testcase for task : HumanEval/126.
+evaluat testcase for task : HumanEval/63 end!
+start evaluate testcase for task : HumanEval/127.
+evaluat testcase for task : HumanEval/64 end!
+start evaluate testcase for task : HumanEval/128.
+evaluat testcase for task : HumanEval/65 end!
+start evaluate testcase for task : HumanEval/129.
+evaluat testcase for task : HumanEval/66 end!
+start evaluate testcase for task : HumanEval/130.
+evaluat testcase for task : HumanEval/67 end!
+start evaluate testcase for task : HumanEval/131.
+evaluat testcase for task : HumanEval/68 end!
+start evaluate testcase for task : HumanEval/132.
+evaluat testcase for task : HumanEval/69 end!
+start evaluate testcase for task : HumanEval/133.
+evaluat testcase for task : HumanEval/70 end!
+start evaluate testcase for task : HumanEval/134.
+evaluat testcase for task : HumanEval/71 end!
+start evaluate testcase for task : HumanEval/135.
+evaluat testcase for task : HumanEval/72 end!
+start evaluate testcase for task : HumanEval/136.
+evaluat testcase for task : HumanEval/73 end!
+start evaluate testcase for task : HumanEval/137.
+evaluat testcase for task : HumanEval/74 end!
+start evaluate testcase for task : HumanEval/138.
+evaluat testcase for task : HumanEval/75 end!
+start evaluate testcase for task : HumanEval/139.
+evaluat testcase for task : HumanEval/76 end!
+start evaluate testcase for task : HumanEval/140.
+evaluat testcase for task : HumanEval/77 end!
+start evaluate testcase for task : HumanEval/141.
+evaluat testcase for task : HumanEval/78 end!
+start evaluate testcase for task : HumanEval/142.
+evaluat testcase for task : HumanEval/79 end!
+start evaluate testcase for task : HumanEval/143.
+evaluat testcase for task : HumanEval/80 end!
+start evaluate testcase for task : HumanEval/144.
+evaluat testcase for task : HumanEval/81 end!
+start evaluate testcase for task : HumanEval/145.
+evaluat testcase for task : HumanEval/82 end!
+start evaluate testcase for task : HumanEval/146.
+evaluat testcase for task : HumanEval/83 end!
+start evaluate testcase for task : HumanEval/147.
+evaluat testcase for task : HumanEval/84 end!
+start evaluate testcase for task : HumanEval/148.
+evaluat testcase for task : HumanEval/85 end!
+start evaluate testcase for task : HumanEval/149.
+evaluat testcase for task : HumanEval/86 end!
+start evaluate testcase for task : HumanEval/150.
+evaluat testcase for task : HumanEval/87 end!
+start evaluate testcase for task : HumanEval/151.
+evaluat testcase for task : HumanEval/88 end!
+start evaluate testcase for task : HumanEval/152.
+evaluat testcase for task : HumanEval/89 end!
+start evaluate testcase for task : HumanEval/153.
+evaluat testcase for task : HumanEval/90 end!
+start evaluate testcase for task : HumanEval/154.
+evaluat testcase for task : HumanEval/91 end!
+start evaluate testcase for task : HumanEval/155.
+evaluat testcase for task : HumanEval/92 end!
+start evaluate testcase for task : HumanEval/156.
+evaluat testcase for task : HumanEval/93 end!
+start evaluate testcase for task : HumanEval/157.
+evaluat testcase for task : HumanEval/94 end!
+start evaluate testcase for task : HumanEval/158.
+evaluat testcase for task : HumanEval/95 end!
+start evaluate testcase for task : HumanEval/159.
+evaluat testcase for task : HumanEval/96 end!
+start evaluate testcase for task : HumanEval/160.
+evaluat testcase for task : HumanEval/97 end!
+start evaluate testcase for task : HumanEval/161.
+evaluat testcase for task : HumanEval/98 end!
+start evaluate testcase for task : HumanEval/162.
+evaluat testcase for task : HumanEval/99 end!
+start evaluate testcase for task : HumanEval/163.
+evaluat testcase for task : HumanEval/100 end!
+evaluat testcase for task : HumanEval/101 end!
+evaluat testcase for task : HumanEval/102 end!
+evaluat testcase for task : HumanEval/103 end!
+evaluat testcase for task : HumanEval/104 end!
+evaluat testcase for task : HumanEval/105 end!
+evaluat testcase for task : HumanEval/106 end!
+evaluat testcase for task : HumanEval/107 end!
+evaluat testcase for task : HumanEval/108 end!
+evaluat testcase for task : HumanEval/109 end!
+evaluat testcase for task : HumanEval/110 end!
+evaluat testcase for task : HumanEval/111 end!
+evaluat testcase for task : HumanEval/112 end!
+evaluat testcase for task : HumanEval/113 end!
+evaluat testcase for task : HumanEval/114 end!
+evaluat testcase for task : HumanEval/115 end!
+evaluat testcase for task : HumanEval/116 end!
+evaluat testcase for task : HumanEval/117 end!
+evaluat testcase for task : HumanEval/118 end!
+evaluat testcase for task : HumanEval/119 end!
+evaluat testcase for task : HumanEval/120 end!
+evaluat testcase for task : HumanEval/121 end!
+evaluat testcase for task : HumanEval/122 end!
+evaluat testcase for task : HumanEval/123 end!
+evaluat testcase for task : HumanEval/124 end!
+evaluat testcase for task : HumanEval/125 end!
+evaluat testcase for task : HumanEval/126 end!
+evaluat testcase for task : HumanEval/127 end!
+evaluat testcase for task : HumanEval/128 end!
+evaluat testcase for task : HumanEval/129 end!
+evaluat testcase for task : HumanEval/130 end!
+evaluat testcase for task : HumanEval/131 end!
+evaluat testcase for task : HumanEval/132 end!
+evaluat testcase for task : HumanEval/133 end!
+evaluat testcase for task : HumanEval/134 end!
+evaluat testcase for task : HumanEval/135 end!
+evaluat testcase for task : HumanEval/136 end!
+evaluat testcase for task : HumanEval/137 end!
+evaluat testcase for task : HumanEval/138 end!
+evaluat testcase for task : HumanEval/139 end!
+evaluat testcase for task : HumanEval/140 end!
+evaluat testcase for task : HumanEval/141 end!
+evaluat testcase for task : HumanEval/142 end!
+evaluat testcase for task : HumanEval/143 end!
+evaluat testcase for task : HumanEval/144 end!
+evaluat testcase for task : HumanEval/145 end!
+evaluat testcase for task : HumanEval/146 end!
+evaluat testcase for task : HumanEval/147 end!
+evaluat testcase for task : HumanEval/148 end!
+evaluat testcase for task : HumanEval/149 end!
+evaluat testcase for task : HumanEval/150 end!
+evaluat testcase for task : HumanEval/151 end!
+evaluat testcase for task : HumanEval/152 end!
+evaluat testcase for task : HumanEval/153 end!
+evaluat testcase for task : HumanEval/154 end!
+evaluat testcase for task : HumanEval/155 end!
+evaluat testcase for task : HumanEval/156 end!
+evaluat testcase for task : HumanEval/157 end!
+evaluat testcase for task : HumanEval/158 end!
+evaluat testcase for task : HumanEval/159 end!
+evaluat testcase for task : HumanEval/160 end!
+evaluat testcase for task : HumanEval/161 end!
+evaluat testcase for task : HumanEval/162 end!
+evaluat testcase for task : HumanEval/163 end!
+write result
+++++++++++HumanEval/0++++++++++
+total testcase num : 577
+correct testcase num : 292
+correct percent 0.5060658578856152
+++++++++++HumanEval/1++++++++++
+total testcase num : 425
+correct testcase num : 24
+correct percent 0.05647058823529412
+++++++++++HumanEval/2++++++++++
+total testcase num : 1100
+correct testcase num : 53
+correct percent 0.04818181818181818
+++++++++++HumanEval/3++++++++++
+total testcase num : 687
+correct testcase num : 382
+correct percent 0.5560407569141194
+++++++++++HumanEval/4++++++++++
+total testcase num : 633
+correct testcase num : 26
+correct percent 0.04107424960505529
+++++++++++HumanEval/5++++++++++
+total testcase num : 283
+correct testcase num : 24
+correct percent 0.08480565371024736
+++++++++++HumanEval/6++++++++++
+total testcase num : 769
+correct testcase num : 110
+correct percent 0.14304291287386217
+++++++++++HumanEval/7++++++++++
+total testcase num : 543
+correct testcase num : 207
+correct percent 0.3812154696132597
+++++++++++HumanEval/8++++++++++
+total testcase num : 433
+correct testcase num : 217
+correct percent 0.5011547344110855
+++++++++++HumanEval/9++++++++++
+total testcase num : 299
+correct testcase num : 128
+correct percent 0.4280936454849498
+++++++++++HumanEval/10++++++++++
+total testcase num : 395
+correct testcase num : 153
+correct percent 0.38734177215189874
+++++++++++HumanEval/11++++++++++
+total testcase num : 832
+correct testcase num : 169
+correct percent 0.203125
+++++++++++HumanEval/12++++++++++
+total testcase num : 1372
+correct testcase num : 940
+correct percent 0.685131195335277
+++++++++++HumanEval/13++++++++++
+total testcase num : 898
+correct testcase num : 398
+correct percent 0.44320712694877507
+++++++++++HumanEval/14++++++++++
+total testcase num : 585
+correct testcase num : 54
+correct percent 0.09230769230769231
+++++++++++HumanEval/15++++++++++
+total testcase num : 530
+correct testcase num : 238
+correct percent 0.4490566037735849
+++++++++++HumanEval/16++++++++++
+total testcase num : 1102
+correct testcase num : 310
+correct percent 0.2813067150635209
+++++++++++HumanEval/17++++++++++
+total testcase num : 564
+correct testcase num : 72
+correct percent 0.1276595744680851
+++++++++++HumanEval/18++++++++++
+total testcase num : 725
+correct testcase num : 193
+correct percent 0.26620689655172414
+++++++++++HumanEval/19++++++++++
+total testcase num : 1090
+correct testcase num : 345
+correct percent 0.3165137614678899
+++++++++++HumanEval/20++++++++++
+total testcase num : 589
+correct testcase num : 204
+correct percent 0.3463497453310696
+++++++++++HumanEval/21++++++++++
+total testcase num : 441
+correct testcase num : 24
+correct percent 0.05442176870748299
+++++++++++HumanEval/22++++++++++
+total testcase num : 534
+correct testcase num : 236
+correct percent 0.4419475655430712
+++++++++++HumanEval/23++++++++++
+total testcase num : 836
+correct testcase num : 500
+correct percent 0.5980861244019139
+++++++++++HumanEval/24++++++++++
+total testcase num : 1237
+correct testcase num : 109
+correct percent 0.08811641067097817
+++++++++++HumanEval/25++++++++++
+total testcase num : 788
+correct testcase num : 247
+correct percent 0.3134517766497462
+++++++++++HumanEval/26++++++++++
+total testcase num : 363
+correct testcase num : 40
+correct percent 0.11019283746556474
+++++++++++HumanEval/27++++++++++
+total testcase num : 338
+correct testcase num : 82
+correct percent 0.24260355029585798
+++++++++++HumanEval/28++++++++++
+total testcase num : 352
+correct testcase num : 168
+correct percent 0.4772727272727273
+++++++++++HumanEval/29++++++++++
+total testcase num : 594
+correct testcase num : 249
+correct percent 0.41919191919191917
+++++++++++HumanEval/30++++++++++
+total testcase num : 461
+correct testcase num : 87
+correct percent 0.18872017353579176
+++++++++++HumanEval/31++++++++++
+total testcase num : 2243
+correct testcase num : 1397
+correct percent 0.6228265715559519
+++++++++++HumanEval/32++++++++++
+total testcase num : 631
+correct testcase num : 10
+correct percent 0.01584786053882726
+++++++++++HumanEval/33++++++++++
+total testcase num : 272
+correct testcase num : 70
+correct percent 0.25735294117647056
+++++++++++HumanEval/34++++++++++
+total testcase num : 214
+correct testcase num : 155
+correct percent 0.7242990654205608
+++++++++++HumanEval/35++++++++++
+total testcase num : 314
+correct testcase num : 225
+correct percent 0.7165605095541401
+++++++++++HumanEval/36++++++++++
+total testcase num : 1154
+correct testcase num : 87
+correct percent 0.07538994800693241
+++++++++++HumanEval/37++++++++++
+total testcase num : 287
+correct testcase num : 43
+correct percent 0.14982578397212543
+++++++++++HumanEval/38++++++++++
+total testcase num : 689
+correct testcase num : 162
+correct percent 0.2351233671988389
+++++++++++HumanEval/39++++++++++
+total testcase num : 974
+correct testcase num : 24
+correct percent 0.024640657084188913
+++++++++++HumanEval/40++++++++++
+total testcase num : 683
+correct testcase num : 399
+correct percent 0.5841874084919473
+++++++++++HumanEval/41++++++++++
+total testcase num : 1573
+correct testcase num : 4
+correct percent 0.0025429116338207248
+++++++++++HumanEval/42++++++++++
+total testcase num : 182
+correct testcase num : 59
+correct percent 0.3241758241758242
+++++++++++HumanEval/43++++++++++
+total testcase num : 518
+correct testcase num : 300
+correct percent 0.5791505791505791
+++++++++++HumanEval/44++++++++++
+total testcase num : 1211
+correct testcase num : 125
+correct percent 0.10322047894302229
+++++++++++HumanEval/45++++++++++
+total testcase num : 386
+correct testcase num : 42
+correct percent 0.10880829015544041
+++++++++++HumanEval/46++++++++++
+total testcase num : 1752
+correct testcase num : 216
+correct percent 0.1232876712328767
+++++++++++HumanEval/47++++++++++
+total testcase num : 301
+correct testcase num : 108
+correct percent 0.3588039867109635
+++++++++++HumanEval/48++++++++++
+total testcase num : 390
+correct testcase num : 169
+correct percent 0.43333333333333335
+++++++++++HumanEval/49++++++++++
+total testcase num : 1402
+correct testcase num : 146
+correct percent 0.10413694721825963
+++++++++++HumanEval/50++++++++++
+total testcase num : 1146
+correct testcase num : 176
+correct percent 0.15357766143106458
+++++++++++HumanEval/51++++++++++
+total testcase num : 407
+correct testcase num : 29
+correct percent 0.07125307125307126
+++++++++++HumanEval/52++++++++++
+total testcase num : 507
+correct testcase num : 184
+correct percent 0.3629191321499014
+++++++++++HumanEval/53++++++++++
+total testcase num : 711
+correct testcase num : 573
+correct percent 0.8059071729957806
+++++++++++HumanEval/54++++++++++
+total testcase num : 540
+correct testcase num : 413
+correct percent 0.7648148148148148
+++++++++++HumanEval/55++++++++++
+total testcase num : 896
+correct testcase num : 590
+correct percent 0.6584821428571429
+++++++++++HumanEval/56++++++++++
+total testcase num : 863
+correct testcase num : 406
+correct percent 0.4704519119351101
+++++++++++HumanEval/57++++++++++
+total testcase num : 588
+correct testcase num : 272
+correct percent 0.46258503401360546
+++++++++++HumanEval/58++++++++++
+total testcase num : 476
+correct testcase num : 125
+correct percent 0.26260504201680673
+++++++++++HumanEval/59++++++++++
+total testcase num : 902
+correct testcase num : 338
+correct percent 0.37472283813747226
+++++++++++HumanEval/60++++++++++
+total testcase num : 539
+correct testcase num : 138
+correct percent 0.2560296846011132
+++++++++++HumanEval/61++++++++++
+total testcase num : 723
+correct testcase num : 275
+correct percent 0.38035961272475793
+++++++++++HumanEval/62++++++++++
+total testcase num : 408
+correct testcase num : 7
+correct percent 0.01715686274509804
+++++++++++HumanEval/63++++++++++
+total testcase num : 1846
+correct testcase num : 328
+correct percent 0.17768147345612134
+++++++++++HumanEval/64++++++++++
+total testcase num : 1875
+correct testcase num : 567
+correct percent 0.3024
+++++++++++HumanEval/65++++++++++
+total testcase num : 1107
+correct testcase num : 68
+correct percent 0.06142728093947606
+++++++++++HumanEval/66++++++++++
+total testcase num : 836
+correct testcase num : 63
+correct percent 0.07535885167464115
+++++++++++HumanEval/67++++++++++
+total testcase num : 463
+correct testcase num : 321
+correct percent 0.693304535637149
+++++++++++HumanEval/68++++++++++
+total testcase num : 563
+correct testcase num : 38
+correct percent 0.0674955595026643
+++++++++++HumanEval/69++++++++++
+total testcase num : 676
+correct testcase num : 170
+correct percent 0.2514792899408284
+++++++++++HumanEval/70++++++++++
+total testcase num : 268
+correct testcase num : 8
+correct percent 0.029850746268656716
+++++++++++HumanEval/71++++++++++
+total testcase num : 643
+correct testcase num : 206
+correct percent 0.3203732503888025
+++++++++++HumanEval/72++++++++++
+total testcase num : 770
+correct testcase num : 292
+correct percent 0.37922077922077924
+++++++++++HumanEval/73++++++++++
+total testcase num : 549
+correct testcase num : 156
+correct percent 0.28415300546448086
+++++++++++HumanEval/74++++++++++
+total testcase num : 574
+correct testcase num : 232
+correct percent 0.40418118466898956
+++++++++++HumanEval/75++++++++++
+total testcase num : 1511
+correct testcase num : 854
+correct percent 0.5651886168100596
+++++++++++HumanEval/76++++++++++
+total testcase num : 1173
+correct testcase num : 633
+correct percent 0.5396419437340153
+++++++++++HumanEval/77++++++++++
+total testcase num : 1382
+correct testcase num : 632
+correct percent 0.4573082489146165
+++++++++++HumanEval/78++++++++++
+total testcase num : 1234
+correct testcase num : 154
+correct percent 0.12479740680713128
+++++++++++HumanEval/79++++++++++
+total testcase num : 728
+correct testcase num : 3
+correct percent 0.004120879120879121
+++++++++++HumanEval/80++++++++++
+total testcase num : 1140
+correct testcase num : 595
+correct percent 0.5219298245614035
+++++++++++HumanEval/81++++++++++
+total testcase num : 95
+correct testcase num : 3
+correct percent 0.031578947368421054
+++++++++++HumanEval/82++++++++++
+total testcase num : 1407
+correct testcase num : 521
+correct percent 0.3702914001421464
+++++++++++HumanEval/83++++++++++
+total testcase num : 1015
+correct testcase num : 1
+correct percent 0.0009852216748768472
+++++++++++HumanEval/84++++++++++
+total testcase num : 947
+correct testcase num : 0
+correct percent 0.0
+++++++++++HumanEval/85++++++++++
+total testcase num : 331
+correct testcase num : 1
+correct percent 0.0030211480362537764
+++++++++++HumanEval/86++++++++++
+total testcase num : 453
+correct testcase num : 19
+correct percent 0.04194260485651214
+++++++++++HumanEval/87++++++++++
+total testcase num : 364
+correct testcase num : 7
+correct percent 0.019230769230769232
+++++++++++HumanEval/88++++++++++
+total testcase num : 495
+correct testcase num : 122
+correct percent 0.24646464646464647
+++++++++++HumanEval/89++++++++++
+total testcase num : 626
+correct testcase num : 21
+correct percent 0.03354632587859425
+++++++++++HumanEval/90++++++++++
+total testcase num : 453
+correct testcase num : 334
+correct percent 0.7373068432671082
+++++++++++HumanEval/91++++++++++
+total testcase num : 947
+correct testcase num : 454
+correct percent 0.47940865892291445
+++++++++++HumanEval/92++++++++++
+total testcase num : 1177
+correct testcase num : 769
+correct percent 0.653355989804588
+++++++++++HumanEval/93++++++++++
+total testcase num : 590
+correct testcase num : 21
+correct percent 0.03559322033898305
+++++++++++HumanEval/94++++++++++
+total testcase num : 273
+correct testcase num : 15
+correct percent 0.054945054945054944
+++++++++++HumanEval/95++++++++++
+total testcase num : 827
+correct testcase num : 356
+correct percent 0.43047158403869407
+++++++++++HumanEval/96++++++++++
+total testcase num : 607
+correct testcase num : 396
+correct percent 0.6523887973640856
+++++++++++HumanEval/97++++++++++
+total testcase num : 706
+correct testcase num : 110
+correct percent 0.1558073654390935
+++++++++++HumanEval/98++++++++++
+total testcase num : 953
+correct testcase num : 176
+correct percent 0.18467995802728226
+++++++++++HumanEval/99++++++++++
+total testcase num : 1239
+correct testcase num : 663
+correct percent 0.5351089588377724
+++++++++++HumanEval/100++++++++++
+total testcase num : 851
+correct testcase num : 5
+correct percent 0.005875440658049354
+++++++++++HumanEval/101++++++++++
+total testcase num : 794
+correct testcase num : 430
+correct percent 0.5415617128463476
+++++++++++HumanEval/102++++++++++
+total testcase num : 907
+correct testcase num : 150
+correct percent 0.16538037486218302
+++++++++++HumanEval/103++++++++++
+total testcase num : 1184
+correct testcase num : 68
+correct percent 0.057432432432432436
+++++++++++HumanEval/104++++++++++
+total testcase num : 452
+correct testcase num : 20
+correct percent 0.04424778761061947
+++++++++++HumanEval/105++++++++++
+total testcase num : 255
+correct testcase num : 16
+correct percent 0.06274509803921569
+++++++++++HumanEval/106++++++++++
+total testcase num : 681
+correct testcase num : 93
+correct percent 0.13656387665198239
+++++++++++HumanEval/107++++++++++
+total testcase num : 836
+correct testcase num : 50
+correct percent 0.05980861244019139
+++++++++++HumanEval/108++++++++++
+total testcase num : 640
+correct testcase num : 65
+correct percent 0.1015625
+++++++++++HumanEval/109++++++++++
+total testcase num : 790
+correct testcase num : 339
+correct percent 0.4291139240506329
+++++++++++HumanEval/110++++++++++
+total testcase num : 451
+correct testcase num : 155
+correct percent 0.3436807095343681
+++++++++++HumanEval/111++++++++++
+total testcase num : 465
+correct testcase num : 8
+correct percent 0.017204301075268817
+++++++++++HumanEval/112++++++++++
+total testcase num : 1056
+correct testcase num : 90
+correct percent 0.08522727272727272
+++++++++++HumanEval/113++++++++++
+total testcase num : 455
+correct testcase num : 0
+correct percent 0.0
+++++++++++HumanEval/114++++++++++
+total testcase num : 494
+correct testcase num : 65
+correct percent 0.13157894736842105
+++++++++++HumanEval/115++++++++++
+total testcase num : 654
+correct testcase num : 17
+correct percent 0.02599388379204893
+++++++++++HumanEval/116++++++++++
+total testcase num : 332
+correct testcase num : 26
+correct percent 0.0783132530120482
+++++++++++HumanEval/117++++++++++
+total testcase num : 807
+correct testcase num : 184
+correct percent 0.22800495662949194
+++++++++++HumanEval/118++++++++++
+total testcase num : 869
+correct testcase num : 290
+correct percent 0.333716915995397
+++++++++++HumanEval/119++++++++++
+total testcase num : 588
+correct testcase num : 26
+correct percent 0.04421768707482993
+++++++++++HumanEval/120++++++++++
+total testcase num : 609
+correct testcase num : 160
+correct percent 0.2627257799671593
+++++++++++HumanEval/121++++++++++
+total testcase num : 336
+correct testcase num : 5
+correct percent 0.01488095238095238
+++++++++++HumanEval/122++++++++++
+total testcase num : 711
+correct testcase num : 47
+correct percent 0.06610407876230662
+++++++++++HumanEval/123++++++++++
+total testcase num : 474
+correct testcase num : 2
+correct percent 0.004219409282700422
+++++++++++HumanEval/124++++++++++
+total testcase num : 550
+correct testcase num : 422
+correct percent 0.7672727272727272
+++++++++++HumanEval/125++++++++++
+total testcase num : 798
+correct testcase num : 176
+correct percent 0.22055137844611528
+++++++++++HumanEval/126++++++++++
+total testcase num : 808
+correct testcase num : 336
+correct percent 0.4158415841584158
+++++++++++HumanEval/127++++++++++
+total testcase num : 369
+correct testcase num : 2
+correct percent 0.005420054200542005
+++++++++++HumanEval/128++++++++++
+total testcase num : 521
+correct testcase num : 116
+correct percent 0.22264875239923224
+++++++++++HumanEval/129++++++++++
+total testcase num : 328
+correct testcase num : 19
+correct percent 0.057926829268292686
+++++++++++HumanEval/130++++++++++
+total testcase num : 1610
+correct testcase num : 3
+correct percent 0.0018633540372670807
+++++++++++HumanEval/131++++++++++
+total testcase num : 1063
+correct testcase num : 120
+correct percent 0.11288805268109126
+++++++++++HumanEval/132++++++++++
+total testcase num : 680
+correct testcase num : 527
+correct percent 0.775
+++++++++++HumanEval/133++++++++++
+total testcase num : 388
+correct testcase num : 40
+correct percent 0.10309278350515463
+++++++++++HumanEval/134++++++++++
+total testcase num : 984
+correct testcase num : 453
+correct percent 0.4603658536585366
+++++++++++HumanEval/135++++++++++
+total testcase num : 582
+correct testcase num : 136
+correct percent 0.23367697594501718
+++++++++++HumanEval/136++++++++++
+total testcase num : 579
+correct testcase num : 40
+correct percent 0.0690846286701209
+++++++++++HumanEval/137++++++++++
+total testcase num : 546
+correct testcase num : 330
+correct percent 0.6043956043956044
+++++++++++HumanEval/138++++++++++
+total testcase num : 783
+correct testcase num : 338
+correct percent 0.43167305236270753
+++++++++++HumanEval/139++++++++++
+total testcase num : 730
+correct testcase num : 85
+correct percent 0.11643835616438356
+++++++++++HumanEval/140++++++++++
+total testcase num : 457
+correct testcase num : 50
+correct percent 0.10940919037199125
+++++++++++HumanEval/141++++++++++
+total testcase num : 1189
+correct testcase num : 885
+correct percent 0.744322960470984
+++++++++++HumanEval/142++++++++++
+total testcase num : 417
+correct testcase num : 4
+correct percent 0.009592326139088728
+++++++++++HumanEval/143++++++++++
+total testcase num : 690
+correct testcase num : 182
+correct percent 0.263768115942029
+++++++++++HumanEval/144++++++++++
+total testcase num : 597
+correct testcase num : 347
+correct percent 0.5812395309882747
+++++++++++HumanEval/145++++++++++
+total testcase num : 357
+correct testcase num : 86
+correct percent 0.24089635854341737
+++++++++++HumanEval/146++++++++++
+total testcase num : 462
+correct testcase num : 55
+correct percent 0.11904761904761904
+++++++++++HumanEval/147++++++++++
+total testcase num : 1110
+correct testcase num : 50
+correct percent 0.04504504504504504
+++++++++++HumanEval/148++++++++++
+total testcase num : 570
+correct testcase num : 80
+correct percent 0.14035087719298245
+++++++++++HumanEval/149++++++++++
+total testcase num : 586
+correct testcase num : 1
+correct percent 0.0017064846416382253
+++++++++++HumanEval/150++++++++++
+total testcase num : 1236
+correct testcase num : 484
+correct percent 0.39158576051779936
+++++++++++HumanEval/151++++++++++
+total testcase num : 643
+correct testcase num : 433
+correct percent 0.6734059097978227
+++++++++++HumanEval/152++++++++++
+total testcase num : 166
+correct testcase num : 57
+correct percent 0.3433734939759036
+++++++++++HumanEval/153++++++++++
+total testcase num : 525
+correct testcase num : 184
+correct percent 0.3504761904761905
+++++++++++HumanEval/154++++++++++
+total testcase num : 722
+correct testcase num : 545
+correct percent 0.7548476454293629
+++++++++++HumanEval/155++++++++++
+total testcase num : 947
+correct testcase num : 36
+correct percent 0.03801478352692714
+++++++++++HumanEval/156++++++++++
+total testcase num : 858
+correct testcase num : 509
+correct percent 0.5932400932400932
+++++++++++HumanEval/157++++++++++
+total testcase num : 710
+correct testcase num : 386
+correct percent 0.543661971830986
+++++++++++HumanEval/158++++++++++
+total testcase num : 445
+correct testcase num : 227
+correct percent 0.5101123595505618
+++++++++++HumanEval/159++++++++++
+total testcase num : 843
+correct testcase num : 13
+correct percent 0.01542111506524318
+++++++++++HumanEval/160++++++++++
+total testcase num : 724
+correct testcase num : 60
+correct percent 0.08287292817679558
+++++++++++HumanEval/161++++++++++
+total testcase num : 1144
+correct testcase num : 324
+correct percent 0.28321678321678323
+++++++++++HumanEval/162++++++++++
+total testcase num : 300
+correct testcase num : 81
+correct percent 0.27
+++++++++++HumanEval/163++++++++++
+total testcase num : 359
+correct testcase num : 74
+correct percent 0.20612813370473537
+Data with length 164, max_num:0.8059071729957806, min_num:0.0, mid_num:0.23800986287112813, mean:0.2740171444163391, diff:0.8059071729957806
+Counter_with_base 0.01 : Counter({0: 12, 5: 6, 4: 6, 1: 6, 10: 6, 6: 5, 8: 4, 26: 4, 11: 4, 7: 4, 3: 4, 14: 3, 38: 3, 44: 3, 28: 3, 12: 3, 34: 3, 24: 3, 47: 3, 25: 3, 2: 3, 43: 3, 65: 3, 37: 3, 22: 3, 50: 2, 42: 2, 20: 2, 31: 2, 59: 2, 41: 2, 18: 2, 23: 2, 58: 2, 32: 2, 35: 2, 15: 2, 76: 2, 46: 2, 53: 2, 54: 2, 13: 2, 55: 1, 68: 1, 9: 1, 62: 1, 72: 1, 71: 1, 57: 1, 36: 1, 80: 1, 17: 1, 30: 1, 69: 1, 40: 1, 56: 1, 45: 1, 52: 1, 73: 1, 16: 1, 33: 1, 77: 1, 60: 1, 74: 1, 39: 1, 67: 1, 75: 1, 51: 1, 27: 1})
+Job end at 2023-12-26 20:36:14

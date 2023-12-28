@@ -79,3 +79,123 @@ ID : 208546 , time : 2023-12-18 23:24:09 , job comment : self-debug use more sam
 ID : 208548 , time : 2023-12-18 23:29:10 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_63.jsonl
 ID : 208549 , time : 2023-12-19 00:01:09 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_94.jsonl
 ID : 208550 , time : 2023-12-19 00:08:09 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_115.jsonl
+ID : 208554 , time : 2023-12-19 03:19:10 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_67.jsonl
+ID : 208555 , time : 2023-12-19 03:21:00 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_141.jsonl
+ID : 208556 , time : 2023-12-19 03:22:36 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_114.jsonl
+ID : 208577 , time : 2023-12-19 10:41:41 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_74.jsonl
+ID : 208580 , time : 2023-12-19 10:43:11 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_80.jsonl
+ID : 208582 , time : 2023-12-19 10:45:11 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_81.jsonl
+ID : 208583 , time : 2023-12-19 10:47:11 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_94.jsonl
+ID : 208585 , time : 2023-12-19 10:48:41 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_100.jsonl
+ID : 208586 , time : 2023-12-19 10:51:41 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_107.jsonl
+ID : 208587 , time : 2023-12-19 10:53:11 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_94.jsonl
+ID : 208589 , time : 2023-12-19 11:24:11 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_74.jsonl
+ID : 208590 , time : 2023-12-19 11:31:41 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_95.jsonl
+ID : 208592 , time : 2023-12-19 11:33:11 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_102.jsonl
+ID : 208614 , time : 2023-12-19 12:34:42 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_104.jsonl
+ID : 208616 , time : 2023-12-19 12:36:42 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_127.jsonl
+ID : 208617 , time : 2023-12-19 12:38:11 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_149.jsonl
+ID : 208620 , time : 2023-12-19 12:55:42 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_155.jsonl
+ID : 208622 , time : 2023-12-19 14:04:43 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_140.jsonl
+ID : 208623 , time : 2023-12-19 14:06:43 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_157.jsonl
+ID : 208631 , time : 2023-12-19 14:26:43 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other.jsonl
+ID : 208651 , time : 2023-12-19 15:13:44 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other.jsonl
+ID : 208662 , time : 2023-12-19 15:52:45 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_133.jsonl
+ID : 208674 , time : 2023-12-19 16:17:45 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other2.jsonl
+ID : 208690 , time : 2023-12-19 17:30:11 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other2.jsonl
+ID : 208691 , time : 2023-12-19 17:32:41 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other.jsonl
+ID : 208697 , time : 2023-12-19 17:54:45 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other94.jsonl
+ID : 208812 , time : 2023-12-20 17:43:47 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other2.jsonl
+ID : 208818 , time : 2023-12-20 17:55:54 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other94.jsonl
+ID : 208826 , time : 2023-12-20 18:24:30 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208827 , time : 2023-12-20 18:26:20 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other94.jsonl , script : 
+ID : 208828 , time : 2023-12-20 18:27:08 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other2.jsonl , script : 
+ID : 208829 , time : 2023-12-20 18:27:47 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208830 , time : 2023-12-20 18:29:37 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208831 , time : 2023-12-20 18:34:53 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other2.jsonl , script : 
+ID : 208833 , time : 2023-12-20 18:47:42 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_30.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208834 , time : 2023-12-20 18:53:05 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_30.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208835 , time : 2023-12-20 19:29:45 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208836 , time : 2023-12-20 19:31:38 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_59.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208838 , time : 2023-12-20 19:35:40 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_87.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208843 , time : 2023-12-20 21:21:47 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208846 , time : 2023-12-20 22:29:02 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208847 , time : 2023-12-20 22:38:43 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208849 , time : 2023-12-20 22:41:51 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208850 , time : 2023-12-20 22:51:06 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208851 , time : 2023-12-20 22:57:22 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208852 , time : 2023-12-20 22:58:20 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208853 , time : 2023-12-20 23:06:29 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208854 , time : 2023-12-20 23:10:29 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208855 , time : 2023-12-20 23:13:13 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208856 , time : 2023-12-20 23:26:02 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208857 , time : 2023-12-20 23:28:13 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208860 , time : 2023-12-20 23:30:59 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208864 , time : 2023-12-20 23:37:34 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208865 , time : 2023-12-20 23:43:19 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208866 , time : 2023-12-20 23:52:55 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208867 , time : 2023-12-21 00:04:06 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other2.jsonl , script : 
+ID : 208868 , time : 2023-12-21 00:06:57 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other2.jsonl , script : 
+ID : 208870 , time : 2023-12-21 00:20:55 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_other2.jsonl , script : 
+ID : 208871 , time : 2023-12-21 00:21:46 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208874 , time : 2023-12-21 00:29:40 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208876 , time : 2023-12-21 00:31:27 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208902 , time : 2023-12-21 10:25:26 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_0.jsonl , script : 
+ID : 208903 , time : 2023-12-21 10:30:56 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208904 , time : 2023-12-21 10:32:26 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208906 , time : 2023-12-21 10:36:26 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_0.jsonl , script : 
+ID : 208908 , time : 2023-12-21 10:37:56 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_0.jsonl , script : 
+ID : 208911 , time : 2023-12-21 10:46:26 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208917 , time : 2023-12-21 10:53:26 , job comment : CODET point first when sort nodes , output file : ../res/UTfeedback_CODETfirst_7b16k_pT_0.jsonl , script : humaneval_UTfeedback_multiCodeT4.py
+ID : 208921 , time : 2023-12-21 10:59:26 , job comment : self-debug use more sampled true testcases to get pass rate ,while not attribute to feedback , output file : ../res/UTfeedback_CODETPass_7b16k_pT_0.jsonl , script : 
+ID : 208997 , time : 2023-12-21 18:04:04 , job comment : Sort nodes by codet pass first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_0.jsonl , script : 
+ID : 209013 , time : 2023-12-21 18:48:06 , job comment : Sort nodes by codet pass first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_0.jsonl , script : 
+ID : 209242 , time : 2023-12-22 16:49:45 , job comment : Sort nodes by codet pass first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_0.jsonl , script : 
+ID : 209246 , time : 2023-12-22 16:57:58 , job comment : Sort nodes by codet pass first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_0.jsonl , script : 
+ID : 209268 , time : 2023-12-22 18:03:51 , job comment : Sort nodes by codet pass first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_0.jsonl , script : 
+ID : 209591 , time : 2023-12-25 00:07:39 , job comment : Sort nodes by codet pass first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_0.jsonl , script : 
+ID : 209603 , time : 2023-12-25 00:28:58 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_58.jsonl , script : 
+ID : 209606 , time : 2023-12-25 00:31:33 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_59.jsonl , script : 
+ID : 209608 , time : 2023-12-25 00:33:20 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_87.jsonl , script : 
+ID : 209611 , time : 2023-12-25 00:36:11 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_115.jsonl , script : 
+ID : 209613 , time : 2023-12-25 00:36:54 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_141.jsonl , script : 
+ID : 209826 , time : 2023-12-25 16:43:23 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_10.jsonl , script : 
+ID : 209831 , time : 2023-12-25 16:47:06 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_32.jsonl , script : 
+ID : 209832 , time : 2023-12-25 16:49:02 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_66.jsonl , script : 
+ID : 209833 , time : 2023-12-25 16:51:05 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_93.jsonl , script : 
+ID : 209834 , time : 2023-12-25 16:53:16 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_129.jsonl , script : 
+ID : 209849 , time : 2023-12-25 17:52:53 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_67.jsonl , script : 
+ID : 209850 , time : 2023-12-25 17:53:36 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_94.jsonl , script : 
+ID : 209875 , time : 2023-12-25 19:16:31 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_68.jsonl , script : 
+ID : 209877 , time : 2023-12-25 19:18:18 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_95.jsonl , script : 
+ID : 209890 , time : 2023-12-25 20:17:14 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_69.jsonl , script : 
+ID : 209945 , time : 2023-12-25 23:28:08 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_72.jsonl , script : 
+ID : 209946 , time : 2023-12-25 23:29:43 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_105.jsonl , script : 
+ID : 209991 , time : 2023-12-26 05:53:48 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_86.jsonl , script : 
+ID : 209992 , time : 2023-12-26 07:33:56 , job comment : Sort nodes by codet point first. , output file : ../res/UTfeedback_CODETPassfirst_7b16k_pT_sp.jsonl , script : 
+ID : 210196 , time : 2023-12-26 22:27:51 , job comment : self-debug use more sampled true testcases to run solution and get pass rate , output file : ../res/UTfeedback_moretests_7b16k_pT_94.jsonl , script : 
+ID : 210197 , time : 2023-12-26 22:28:15 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_0.jsonl , script : 
+ID : 210199 , time : 2023-12-26 22:32:29 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_0.jsonl , script : 
+ID : 210201 , time : 2023-12-26 22:52:28 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_30.jsonl , script : 
+ID : 210202 , time : 2023-12-26 22:54:53 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_59.jsonl , script : 
+ID : 210203 , time : 2023-12-26 22:55:42 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_87.jsonl , script : 
+ID : 210204 , time : 2023-12-26 22:56:30 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_114.jsonl , script : 
+ID : 210205 , time : 2023-12-26 22:56:59 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_141.jsonl , script : 
+ID : 210212 , time : 2023-12-27 01:51:42 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_63.jsonl , script : 
+ID : 210213 , time : 2023-12-27 01:52:36 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_10.jsonl , script : 
+ID : 210214 , time : 2023-12-27 01:53:27 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_95.jsonl , script : 
+ID : 210219 , time : 2023-12-27 09:31:46 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_29.jsonl , script : 
+ID : 210220 , time : 2023-12-27 09:34:11 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_20.jsonl , script : 
+ID : 210221 , time : 2023-12-27 09:35:45 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_57.jsonl , script : 
+ID : 210222 , time : 2023-12-27 09:37:04 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_64.jsonl , script : 
+ID : 210225 , time : 2023-12-27 09:38:23 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_104.jsonl , script : 
+ID : 210280 , time : 2023-12-27 15:27:07 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_106.jsonl , script : 
+ID : 210282 , time : 2023-12-27 15:28:49 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_66.jsonl , script : 
+ID : 210393 , time : 2023-12-28 16:45:32 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_107.jsonl , script : 
+ID : 210394 , time : 2023-12-28 16:46:27 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_67.jsonl , script : 
+ID : 210397 , time : 2023-12-28 17:27:15 , job comment : get CODET passrate use all testcases and sort solution with CODET passrate first , output file : ../res/UTfeedback_CODETRatefirst_alltestcases_7b16k_pT_0.jsonl , script : 
+ID : 210398 , time : 2023-12-28 17:32:17 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_68.jsonl , script : 
+ID : 210399 , time : 2023-12-28 17:33:27 , job comment : Sort nodes by codet pass rate first. , output file : ../res/UTfeedback_CODETRatefirst_7b16k_pT_109.jsonl , script : 
+ID : 210400 , time : 2023-12-28 17:37:36 , job comment : get CODET passrate use all testcases and sort solution with CODET passrate first , output file : ../res/UTfeedback_CODETRatefirst_alltestcases_7b16k_pT_43.jsonl , script : 
+ID : 210401 , time : 2023-12-28 17:38:46 , job comment : get CODET passrate use all testcases and sort solution with CODET passrate first , output file : ../res/UTfeedback_CODETRatefirst_alltestcases_7b16k_pT_86.jsonl , script : 
+ID : 210402 , time : 2023-12-28 17:40:58 , job comment : get CODET passrate use all testcases and sort solution with CODET passrate first , output file : ../res/UTfeedback_CODETRatefirst_alltestcases_7b16k_pT_129.jsonl , script : 

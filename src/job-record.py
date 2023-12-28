@@ -6,10 +6,11 @@ def main(
     jobID,
     comment:str="",
     output_file: str="",
+    script: str=""
 ):
     job_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
     with open(job_record_file,"a+") as f:
-        s = f"ID : {jobID} , time : {job_time} , job comment : {comment} , output file : {output_file}\n"
+        s = f"ID : {jobID} , time : {job_time} , job comment : {comment} , output file : {output_file} , script : {script}\n"
         f.write(s)
     return
 

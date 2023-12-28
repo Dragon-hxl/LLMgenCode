@@ -372,8 +372,7 @@ def get_CODET_point2(Node_list, testcases, task_id) -> None:
     log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
     return group_score
 
-
-def get_CODET_point3(Node_list, testcases, task_id, limit = 1) -> None:
+def get_CODET_point4(Node_list, testcases, task_id,limit=1) -> None:
     start_time = time.time()
     solution_id_to_data = dict()
     test_id_to_data = dict()
@@ -393,15 +392,11 @@ def get_CODET_point3(Node_list, testcases, task_id, limit = 1) -> None:
         test_id_to_data[i]=test
         test_ids.append(i)
     log_message("Run solution and test case...",verbose)
+    # print_checkp(problems[task_id],testcases)    
     for i in sol_ids:
         if Node_list[i].already_CODET:
             solution_pass_test[i] =  Node_list[i].CODET_pass_testcase
             continue
-        # for j in test_ids:
-        #     passed = exec_solution_testcase(task_id,solution_id_to_data[i],test_id_to_data[j])
-        #     if passed:
-        #         solution_pass_test[i].add(j)
-        # run_code_with_output_CODET(problems[task_id],solution_id_to_data[i],testcases,"",300.0)
         with ThreadPoolExecutor(max_workers=1) as executor:
             args = (problems[task_id],solution_id_to_data[i].solution,testcases,"",0.1)
             future = executor.submit(run_code_with_output_CODET, *args)
@@ -436,13 +431,129 @@ def get_CODET_point3(Node_list, testcases, task_id, limit = 1) -> None:
         for sol_id in group:
             Node_list[sol_id].CODET_point = group_score[i]
             Node_list[sol_id].CODET_total_test_num = len(testcases)
-    log_message("Sort group and get result...",verbose)    
+    end_time = time.time()
+    log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
+    
     sorted_group = sorted(group_score.items(),key=lambda x: x[1],reverse=True)
     sorted_nodes = []
     tmplimit = 0
     for i,(k,v) in enumerate(sorted_group):
         sgroup = solution_group[k]
-        nodes = [solution_id_to_data[i] for i in sgroup]
+        nodes = [solution_id_to_data[nid] for nid in sgroup]
+        nodes = sorted(nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
+        sorted_nodes.append(nodes)
+        if v==0:
+            tmplimit = i
+    if tmplimit < limit:
+        limit = tmplimit
+    if limit < 1: #防止limit为0导致后面的死循环
+        limit = 1
+    print(f"When choose nodes according to CODET, limit = {limit}")
+    limit_sorted_nodes = sorted_nodes[:limit]
+    left_sorted_nodes = sorted_nodes[limit:]
+    idx_record = []
+    for nodes in limit_sorted_nodes:
+        idx_record.append(0)
+    chosen_nodes = []
+    lack_num = 0
+    stop = False
+    while True:
+        for i,nodes in enumerate(limit_sorted_nodes):
+            if idx_record[i] >= len(nodes):
+                lack_num+=1
+                if lack_num > 100:
+                    stop = True
+                    break
+                continue
+            chosen_nodes.append(nodes[idx_record[i]])
+            idx_record[i] = idx_record[i] + 1
+            if len(chosen_nodes) == 10:
+                stop = True
+                break
+        if stop:
+            break
+    left = 10 - len(chosen_nodes)
+    if left > 0:
+        for nodes in left_sorted_nodes:
+            for node in nodes:
+                chosen_nodes.append(node)
+                left = left - 1
+                if left == 0:
+                    break
+            if left == 0:
+                break    
+    end_time = time.time()
+    log_message(f"Spends {(end_time-start_time)/60} mins",verbose)
+    return chosen_nodes
+
+
+def get_CODET_point3(Node_list, testcases, task_id, limit = 1) -> None:
+    start_time = time.time()
+    id_to_node = dict()
+    id_to_data = dict()
+    solution_pass_test = defaultdict(set)
+    sol_ids = []
+    # test_ids = []
+    # solution_group = defaultdict(set)
+    solution_group = []
+    group_score = defaultdict(int)
+    grouped = dict()
+    verbose = True
+    
+    for i,node in enumerate(Node_list):
+        id_to_node[i]=node
+        sol_ids.append(i)
+        grouped[i]=False
+    for i,test in enumerate(testcases):
+        id_to_data[i]=test
+        # test_ids.append(i)
+    log_message("Run solution and test case...",verbose)
+    for i in sol_ids:
+        if Node_list[i].already_CODET:
+            solution_pass_test[i] =  Node_list[i].CODET_pass_testcase
+            continue
+        with ThreadPoolExecutor(max_workers=1) as executor:
+            args = (problems[task_id],id_to_node[i].solution,testcases,"",0.1)
+            future = executor.submit(run_code_with_output_CODET, *args)
+            result = future.result()
+            passed = result["passed"]
+            code_res = result["result"]
+        print(f"task:{task_id},solution:{i},passed:{passed},result:{code_res}")
+        if type(code_res) is str:
+            pass
+        else:
+            for j,res in enumerate(code_res):
+                if type(res) is bool:
+                    if res:
+                        solution_pass_test[i].add(j)
+        Node_list[i].CODET_pass_testcase = solution_pass_test[i]
+        Node_list[i].already_CODET = True
+    log_message("Group solution...",verbose)            
+    for idx,i in enumerate(sol_ids):#range(len(sol_ids)):
+        if grouped[i]:
+            continue
+        group = set()
+        group.add(i)
+        grouped[i] = True
+        for j in range(idx+1,len(sol_ids)):
+            solution_id_2 = sol_ids[j]
+            if solution_pass_test[i] == solution_pass_test[solution_id_2]:
+                group.add(solution_id_2)
+                grouped[solution_id_2]=True
+        group_id=len(solution_group)
+        solution_group.append(group)
+        group_score[group_id] = math.sqrt(len(group)) * len(solution_pass_test[i])
+        log_message(f"group {group_id} scores {group_score[group_id]} : {group}",verbose)
+        for sol_id in group:
+            Node_list[sol_id].CODET_point = group_score[group_id]
+            Node_list[sol_id].CODET_total_test_num = len(testcases)
+    log_message("Sort group and get result...",verbose)
+    sorted_group = sorted(group_score.items(),key=lambda x: x[1],reverse=True)
+    sorted_nodes = []
+    tmplimit = 0
+    for i,(k,v) in enumerate(sorted_group):
+        sgroup = solution_group[k]
+        nodes = [id_to_node[i] for i in sgroup]
         nodes = sorted(nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
         sorted_nodes.append(nodes)
         if v==0:

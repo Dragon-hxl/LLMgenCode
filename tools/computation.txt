@@ -1,0 +1,1513 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/1 cir 1 : input length
+Data with length 10, max_num:1136, min_num:1136, mid_num:1136.0, mean:1136.0, diff:0
+task HumanEval/1 cir 2 : input length
+Data with length 100, max_num:1197, min_num:1131, mid_num:1142.0, mean:1152.5, diff:66
+task HumanEval/1 cir 3 : input length
+Data with length 100, max_num:1262, min_num:1130, mid_num:1155.5, mean:1170.7, diff:132
+task HumanEval/1 cir 4 : input length
+Data with length 100, max_num:1173, min_num:1140, mid_num:1155.0, mean:1154.0, diff:33
+task HumanEval/1 cir 5 : input length
+Data with length 100, max_num:1164, min_num:1140, mid_num:1145.0, mean:1149.5, diff:24
+task HumanEval/1 cir 6 : input length
+Data with length 100, max_num:1164, min_num:1140, mid_num:1146.0, mean:1148.7, diff:24
+task HumanEval/1 cir 7 : input length
+Data with length 100, max_num:1164, min_num:1140, mid_num:1149.0, mean:1149.1, diff:24
+task HumanEval/1 cir 8 : input length
+Data with length 100, max_num:1170, min_num:1140, mid_num:1155.0, mean:1154.4, diff:30
+task HumanEval/1 cir 9 : input length
+Data with length 100, max_num:1177, min_num:1124, mid_num:1155.0, mean:1152.9, diff:53
+task HumanEval/1 cir 10 : input length
+Data with length 100, max_num:1180, min_num:1147, mid_num:1161.5, mean:1162.6, diff:33
+list_neighbor_diff : [16.5, 18.200000000000045, 16.700000000000045, 4.5, 0.7999999999999545, 0.3999999999998636, 5.300000000000182, 1.5, 9.699999999999818]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/3 cir 1 : input length
+Data with length 10, max_num:1083, min_num:1083, mid_num:1083.0, mean:1083.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/5 cir 1 : input length
+Data with length 10, max_num:1095, min_num:1095, mid_num:1095.0, mean:1095.0, diff:0
+task HumanEval/5 cir 2 : input length
+Data with length 90, max_num:1113, min_num:1091, mid_num:1104.0, mean:1102.4444444444443, diff:22
+task HumanEval/5 cir 3 : input length
+Data with length 100, max_num:1168, min_num:1098, mid_num:1110.0, mean:1114.4, diff:70
+list_neighbor_diff : [7.444444444444343, 11.955555555555748]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/6 cir 1 : input length
+Data with length 10, max_num:1096, min_num:1096, mid_num:1096.0, mean:1096.0, diff:0
+task HumanEval/6 cir 2 : input length
+Data with length 100, max_num:1139, min_num:1085, mid_num:1118.5, mean:1116.2, diff:54
+task HumanEval/6 cir 3 : input length
+Data with length 100, max_num:1147, min_num:1117, mid_num:1126.5, mean:1130.3, diff:30
+task HumanEval/6 cir 4 : input length
+Data with length 100, max_num:1189, min_num:1114, mid_num:1133.5, mean:1141.6, diff:75
+task HumanEval/6 cir 5 : input length
+Data with length 100, max_num:1168, min_num:1114, mid_num:1144.0, mean:1141.3, diff:54
+task HumanEval/6 cir 6 : input length
+Data with length 100, max_num:1160, min_num:1103, mid_num:1130.5, mean:1132.4, diff:57
+task HumanEval/6 cir 7 : input length
+Data with length 100, max_num:1166, min_num:1103, mid_num:1137.5, mean:1138.6, diff:63
+task HumanEval/6 cir 8 : input length
+Data with length 100, max_num:1145, min_num:1106, mid_num:1128.0, mean:1129.2, diff:39
+task HumanEval/6 cir 9 : input length
+Data with length 100, max_num:1163, min_num:1093, mid_num:1129.0, mean:1129.8, diff:70
+task HumanEval/6 cir 10 : input length
+Data with length 100, max_num:1144, min_num:1102, mid_num:1124.0, mean:1122.9, diff:42
+list_neighbor_diff : [20.200000000000045, 14.099999999999909, 11.299999999999955, 0.2999999999999545, 8.899999999999864, 6.199999999999818, 9.399999999999864, 0.599999999999909, 6.899999999999864]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/8 cir 1 : input length
+Data with length 10, max_num:1101, min_num:1101, mid_num:1101.0, mean:1101.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/10 cir 1 : input length
+Data with length 10, max_num:1220, min_num:1220, mid_num:1220.0, mean:1220.0, diff:0
+task HumanEval/10 cir 2 : input length
+Data with length 100, max_num:1301, min_num:1213, mid_num:1243.0, mean:1244.6, diff:88
+task HumanEval/10 cir 3 : input length
+Data with length 100, max_num:1272, min_num:1198, mid_num:1237.0, mean:1234.6, diff:74
+task HumanEval/10 cir 4 : input length
+Data with length 100, max_num:1274, min_num:1191, mid_num:1244.5, mean:1235.8, diff:83
+task HumanEval/10 cir 5 : input length
+Data with length 100, max_num:1314, min_num:1191, mid_num:1255.5, mean:1248.8, diff:123
+task HumanEval/10 cir 6 : input length
+Data with length 100, max_num:1314, min_num:1191, mid_num:1272.0, mean:1268.2, diff:123
+task HumanEval/10 cir 7 : input length
+Data with length 100, max_num:1309, min_num:1191, mid_num:1272.0, mean:1265.9, diff:118
+task HumanEval/10 cir 8 : input length
+Data with length 100, max_num:1309, min_num:1252, mid_num:1292.5, mean:1283.4, diff:57
+task HumanEval/10 cir 9 : input length
+Data with length 100, max_num:1306, min_num:1252, mid_num:1298.0, mean:1290.3, diff:54
+task HumanEval/10 cir 10 : input length
+Data with length 100, max_num:1309, min_num:1252, mid_num:1299.5, mean:1295.3, diff:57
+list_neighbor_diff : [24.59999999999991, 10.0, 1.2000000000000455, 13.0, 19.40000000000009, 2.2999999999999545, 17.5, 6.899999999999864, 5.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/11 cir 1 : input length
+Data with length 10, max_num:993, min_num:993, mid_num:993.0, mean:993.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/13 cir 1 : input length
+Data with length 10, max_num:1032, min_num:1032, mid_num:1032.0, mean:1032.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/14 cir 1 : input length
+Data with length 10, max_num:961, min_num:961, mid_num:961.0, mean:961.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/17 cir 1 : input length
+Data with length 10, max_num:1252, min_num:1252, mid_num:1252.0, mean:1252.0, diff:0
+task HumanEval/17 cir 2 : input length
+Data with length 50, max_num:1292, min_num:1238, mid_num:1252.0, mean:1257.6, diff:54
+task HumanEval/17 cir 3 : input length
+Data with length 100, max_num:1262, min_num:1209, mid_num:1238.5, mean:1237.2, diff:53
+task HumanEval/17 cir 4 : input length
+Data with length 100, max_num:1244, min_num:1209, mid_num:1230.0, mean:1229.2, diff:35
+task HumanEval/17 cir 5 : input length
+Data with length 100, max_num:1271, min_num:1221, mid_num:1237.0, mean:1238.8, diff:50
+task HumanEval/17 cir 6 : input length
+Data with length 100, max_num:1293, min_num:1217, mid_num:1246.5, mean:1249.4, diff:76
+task HumanEval/17 cir 7 : input length
+Data with length 100, max_num:1293, min_num:1196, mid_num:1222.0, mean:1234.8, diff:97
+task HumanEval/17 cir 8 : input length
+Data with length 100, max_num:1293, min_num:1196, mid_num:1221.5, mean:1235.4, diff:97
+task HumanEval/17 cir 9 : input length
+Data with length 100, max_num:1323, min_num:1205, mid_num:1232.5, mean:1247.8, diff:118
+task HumanEval/17 cir 10 : input length
+Data with length 100, max_num:1323, min_num:1205, mid_num:1248.5, mean:1252.2, diff:118
+list_neighbor_diff : [5.599999999999909, 20.399999999999864, 8.0, 9.599999999999909, 10.600000000000136, 14.600000000000136, 0.6000000000001364, 12.399999999999864, 4.400000000000091]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/19 cir 1 : input length
+Data with length 10, max_num:985, min_num:985, mid_num:985.0, mean:985.0, diff:0
+task HumanEval/19 cir 2 : input length
+Data with length 100, max_num:997, min_num:974, mid_num:985.0, mean:986.1, diff:23
+task HumanEval/19 cir 3 : input length
+Data with length 100, max_num:1000, min_num:967, mid_num:981.0, mean:981.5, diff:33
+task HumanEval/19 cir 4 : input length
+Data with length 100, max_num:1000, min_num:967, mid_num:981.0, mean:981.3, diff:33
+task HumanEval/19 cir 5 : input length
+Data with length 100, max_num:1000, min_num:969, mid_num:983.0, mean:983.1, diff:31
+task HumanEval/19 cir 6 : input length
+Data with length 100, max_num:1004, min_num:966, mid_num:976.0, mean:979.9, diff:38
+task HumanEval/19 cir 7 : input length
+Data with length 100, max_num:1004, min_num:974, mid_num:980.0, mean:983.0, diff:30
+task HumanEval/19 cir 8 : input length
+Data with length 100, max_num:992, min_num:970, mid_num:981.5, mean:982.4, diff:22
+task HumanEval/19 cir 9 : input length
+Data with length 100, max_num:993, min_num:970, mid_num:983.0, mean:983.5, diff:23
+task HumanEval/19 cir 10 : input length
+Data with length 100, max_num:993, min_num:970, mid_num:984.5, mean:983.9, diff:23
+list_neighbor_diff : [1.1000000000000227, 4.600000000000023, 0.20000000000004547, 1.8000000000000682, 3.2000000000000455, 3.1000000000000227, 0.6000000000000227, 1.1000000000000227, 0.39999999999997726]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/20 cir 1 : input length
+Data with length 10, max_num:1393, min_num:1393, mid_num:1393.0, mean:1393.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/21 cir 1 : input length
+Data with length 10, max_num:1190, min_num:1190, mid_num:1190.0, mean:1190.0, diff:0
+task HumanEval/21 cir 2 : input length
+Data with length 70, max_num:1226, min_num:1190, mid_num:1196.0, mean:1201.2857142857142, diff:36
+task HumanEval/21 cir 3 : input length
+Data with length 100, max_num:1232, min_num:1165, mid_num:1188.0, mean:1190.3, diff:67
+task HumanEval/21 cir 4 : input length
+Data with length 100, max_num:1232, min_num:1168, mid_num:1186.0, mean:1194.4, diff:64
+task HumanEval/21 cir 5 : input length
+Data with length 100, max_num:1232, min_num:1161, mid_num:1212.0, mean:1203.1, diff:71
+task HumanEval/21 cir 6 : input length
+Data with length 100, max_num:1235, min_num:1212, mid_num:1220.0, mean:1223.3, diff:23
+task HumanEval/21 cir 7 : input length
+Data with length 100, max_num:1235, min_num:1210, mid_num:1223.0, mean:1223.9, diff:25
+task HumanEval/21 cir 8 : input length
+Data with length 100, max_num:1239, min_num:1210, mid_num:1227.0, mean:1226.2, diff:29
+task HumanEval/21 cir 9 : input length
+Data with length 100, max_num:1246, min_num:1210, mid_num:1223.0, mean:1226.6, diff:36
+task HumanEval/21 cir 10 : input length
+Data with length 100, max_num:1246, min_num:1190, mid_num:1223.0, mean:1224.6, diff:56
+list_neighbor_diff : [11.28571428571422, 10.985714285714266, 4.100000000000136, 8.699999999999818, 20.200000000000045, 0.6000000000001364, 2.2999999999999545, 0.3999999999998636, 2.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/22 cir 1 : input length
+Data with length 10, max_num:1074, min_num:1074, mid_num:1074.0, mean:1074.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/24 cir 1 : input length
+Data with length 10, max_num:917, min_num:917, mid_num:917.0, mean:917.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/25 cir 1 : input length
+Data with length 10, max_num:1193, min_num:1193, mid_num:1193.0, mean:1193.0, diff:0
+task HumanEval/25 cir 2 : input length
+Data with length 100, max_num:1227, min_num:1143, mid_num:1197.5, mean:1194.7, diff:84
+list_neighbor_diff : [1.7000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/26 cir 1 : input length
+Data with length 10, max_num:1014, min_num:1014, mid_num:1014.0, mean:1014.0, diff:0
+task HumanEval/26 cir 2 : input length
+Data with length 90, max_num:1031, min_num:999, mid_num:1014.0, mean:1017.3333333333334, diff:32
+task HumanEval/26 cir 3 : input length
+Data with length 100, max_num:1037, min_num:994, mid_num:1019.5, mean:1017.6, diff:43
+task HumanEval/26 cir 4 : input length
+Data with length 100, max_num:1043, min_num:999, mid_num:1032.5, mean:1028.8, diff:44
+task HumanEval/26 cir 5 : input length
+Data with length 100, max_num:1043, min_num:1003, mid_num:1031.0, mean:1030.7, diff:40
+task HumanEval/26 cir 6 : input length
+Data with length 100, max_num:1046, min_num:994, mid_num:1031.0, mean:1028.7, diff:52
+task HumanEval/26 cir 7 : input length
+Data with length 100, max_num:1046, min_num:1015, mid_num:1039.0, mean:1036.5, diff:31
+task HumanEval/26 cir 8 : input length
+Data with length 100, max_num:1046, min_num:1011, mid_num:1038.5, mean:1034.8, diff:35
+list_neighbor_diff : [3.3333333333333712, 0.2666666666666515, 11.199999999999932, 1.900000000000091, 2.0, 7.7999999999999545, 1.7000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/27 cir 1 : input length
+Data with length 10, max_num:929, min_num:929, mid_num:929.0, mean:929.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/32 cir 1 : input length
+Data with length 10, max_num:1751, min_num:1751, mid_num:1751.0, mean:1751.0, diff:0
+task HumanEval/32 cir 2 : input length
+Data with length 90, max_num:1599, min_num:1459, mid_num:1551.0, mean:1530.7777777777778, diff:140
+task HumanEval/32 cir 3 : input length
+Data with length 100, max_num:1820, min_num:1410, mid_num:1625.5, mean:1624.7, diff:410
+task HumanEval/32 cir 4 : input length
+Data with length 100, max_num:1591, min_num:1398, mid_num:1435.0, mean:1468.0, diff:193
+task HumanEval/32 cir 5 : input length
+Data with length 100, max_num:1548, min_num:1398, mid_num:1412.0, mean:1426.2, diff:150
+task HumanEval/32 cir 6 : input length
+Data with length 100, max_num:1569, min_num:1411, mid_num:1535.5, mean:1501.0, diff:158
+task HumanEval/32 cir 7 : input length
+Data with length 100, max_num:1569, min_num:1405, mid_num:1466.5, mean:1479.8, diff:164
+task HumanEval/32 cir 8 : input length
+Data with length 100, max_num:1565, min_num:1392, mid_num:1470.5, mean:1477.4, diff:173
+task HumanEval/32 cir 9 : input length
+Data with length 100, max_num:1587, min_num:1392, mid_num:1502.5, mean:1493.7, diff:195
+task HumanEval/32 cir 10 : input length
+Data with length 100, max_num:1585, min_num:1430, mid_num:1528.5, mean:1524.1, diff:155
+list_neighbor_diff : [220.22222222222217, 93.92222222222222, 156.70000000000005, 41.799999999999955, 74.79999999999995, 21.200000000000045, 2.3999999999998636, 16.299999999999955, 30.399999999999864]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/33 cir 1 : input length
+Data with length 10, max_num:1192, min_num:1192, mid_num:1192.0, mean:1192.0, diff:0
+task HumanEval/33 cir 2 : input length
+Data with length 50, max_num:1242, min_num:1172, mid_num:1192.0, mean:1195.0, diff:70
+task HumanEval/33 cir 3 : input length
+Data with length 100, max_num:1242, min_num:1167, mid_num:1184.5, mean:1191.3, diff:75
+task HumanEval/33 cir 4 : input length
+Data with length 100, max_num:1232, min_num:1186, mid_num:1195.0, mean:1201.3, diff:46
+task HumanEval/33 cir 5 : input length
+Data with length 100, max_num:1238, min_num:1186, mid_num:1194.0, mean:1205.6, diff:52
+task HumanEval/33 cir 6 : input length
+Data with length 100, max_num:1256, min_num:1186, mid_num:1193.0, mean:1199.7, diff:70
+task HumanEval/33 cir 7 : input length
+Data with length 100, max_num:1260, min_num:1186, mid_num:1195.0, mean:1205.1, diff:74
+task HumanEval/33 cir 8 : input length
+Data with length 100, max_num:1260, min_num:1186, mid_num:1195.0, mean:1208.0, diff:74
+task HumanEval/33 cir 9 : input length
+Data with length 100, max_num:1239, min_num:1190, mid_num:1195.0, mean:1206.4, diff:49
+task HumanEval/33 cir 10 : input length
+Data with length 100, max_num:1283, min_num:1186, mid_num:1199.5, mean:1218.3, diff:97
+list_neighbor_diff : [3.0, 3.7000000000000455, 10.0, 4.2999999999999545, 5.899999999999864, 5.399999999999864, 2.900000000000091, 1.599999999999909, 11.899999999999864]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/36 cir 1 : input length
+Data with length 10, max_num:1132, min_num:1132, mid_num:1132.0, mean:1132.0, diff:0
+task HumanEval/36 cir 2 : input length
+Data with length 70, max_num:1183, min_num:947, mid_num:1136.0, mean:1121.0, diff:236
+task HumanEval/36 cir 3 : input length
+Data with length 100, max_num:1157, min_num:1080, mid_num:1111.0, mean:1113.6, diff:77
+task HumanEval/36 cir 4 : input length
+Data with length 100, max_num:1175, min_num:1102, mid_num:1150.5, mean:1143.2, diff:73
+task HumanEval/36 cir 5 : input length
+Data with length 100, max_num:1188, min_num:1093, mid_num:1124.0, mean:1133.2, diff:95
+task HumanEval/36 cir 6 : input length
+Data with length 100, max_num:1208, min_num:1106, mid_num:1146.0, mean:1144.5, diff:102
+task HumanEval/36 cir 7 : input length
+Data with length 100, max_num:1208, min_num:1107, mid_num:1169.0, mean:1161.3, diff:101
+task HumanEval/36 cir 8 : input length
+Data with length 100, max_num:1187, min_num:1107, mid_num:1130.5, mean:1140.8, diff:80
+task HumanEval/36 cir 9 : input length
+Data with length 100, max_num:1135, min_num:1107, mid_num:1115.5, mean:1118.0, diff:28
+task HumanEval/36 cir 10 : input length
+Data with length 100, max_num:1142, min_num:1111, mid_num:1126.0, mean:1127.3, diff:31
+list_neighbor_diff : [11.0, 7.400000000000091, 29.600000000000136, 10.0, 11.299999999999955, 16.799999999999955, 20.5, 22.799999999999955, 9.299999999999955]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/37 cir 1 : input length
+Data with length 10, max_num:1152, min_num:1152, mid_num:1152.0, mean:1152.0, diff:0
+task HumanEval/37 cir 2 : input length
+Data with length 60, max_num:1161, min_num:1147, mid_num:1152.5, mean:1153.5, diff:14
+task HumanEval/37 cir 3 : input length
+Data with length 100, max_num:1175, min_num:1117, mid_num:1149.0, mean:1150.0, diff:58
+task HumanEval/37 cir 4 : input length
+Data with length 100, max_num:1175, min_num:1094, mid_num:1144.0, mean:1147.1, diff:81
+task HumanEval/37 cir 5 : input length
+Data with length 100, max_num:1175, min_num:1094, mid_num:1161.5, mean:1152.2, diff:81
+task HumanEval/37 cir 6 : input length
+Data with length 100, max_num:1191, min_num:1116, mid_num:1171.0, mean:1162.1, diff:75
+task HumanEval/37 cir 7 : input length
+Data with length 100, max_num:1179, min_num:1140, mid_num:1169.0, mean:1163.3, diff:39
+task HumanEval/37 cir 8 : input length
+Data with length 100, max_num:1179, min_num:1140, mid_num:1162.0, mean:1159.5, diff:39
+task HumanEval/37 cir 9 : input length
+Data with length 100, max_num:1179, min_num:1123, mid_num:1157.0, mean:1154.8, diff:56
+task HumanEval/37 cir 10 : input length
+Data with length 100, max_num:1191, min_num:1118, mid_num:1156.0, mean:1156.3, diff:73
+list_neighbor_diff : [1.5, 3.5, 2.900000000000091, 5.100000000000136, 9.899999999999864, 1.2000000000000455, 3.7999999999999545, 4.7000000000000455, 1.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/38 cir 1 : input length
+Data with length 10, max_num:1171, min_num:1171, mid_num:1171.0, mean:1171.0, diff:0
+task HumanEval/38 cir 2 : input length
+Data with length 80, max_num:1364, min_num:1171, mid_num:1210.0, mean:1222.75, diff:193
+task HumanEval/38 cir 3 : input length
+Data with length 100, max_num:1291, min_num:1173, mid_num:1191.0, mean:1198.6, diff:118
+task HumanEval/38 cir 4 : input length
+Data with length 100, max_num:1268, min_num:1173, mid_num:1193.0, mean:1208.9, diff:95
+task HumanEval/38 cir 5 : input length
+Data with length 100, max_num:1273, min_num:1166, mid_num:1234.0, mean:1227.8, diff:107
+task HumanEval/38 cir 6 : input length
+Data with length 100, max_num:1268, min_num:1187, mid_num:1249.0, mean:1233.0, diff:81
+task HumanEval/38 cir 7 : input length
+Data with length 100, max_num:1268, min_num:1166, mid_num:1215.5, mean:1219.4, diff:102
+task HumanEval/38 cir 8 : input length
+Data with length 100, max_num:1268, min_num:1193, mid_num:1251.0, mean:1246.4, diff:75
+task HumanEval/38 cir 9 : input length
+Data with length 100, max_num:1268, min_num:1193, mid_num:1243.5, mean:1237.8, diff:75
+task HumanEval/38 cir 10 : input length
+Data with length 100, max_num:1268, min_num:1193, mid_num:1249.0, mean:1243.0, diff:75
+list_neighbor_diff : [51.75, 24.15000000000009, 10.300000000000182, 18.899999999999864, 5.2000000000000455, 13.599999999999909, 27.0, 8.600000000000136, 5.2000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/39 cir 1 : input length
+Data with length 10, max_num:1226, min_num:1226, mid_num:1226.0, mean:1226.0, diff:0
+task HumanEval/39 cir 2 : input length
+Data with length 50, max_num:1254, min_num:1226, mid_num:1240.0, mean:1240.0, diff:28
+task HumanEval/39 cir 3 : input length
+Data with length 100, max_num:1322, min_num:1226, mid_num:1259.0, mean:1261.7, diff:96
+task HumanEval/39 cir 4 : input length
+Data with length 100, max_num:1308, min_num:1226, mid_num:1259.0, mean:1264.1, diff:82
+task HumanEval/39 cir 5 : input length
+Data with length 100, max_num:1318, min_num:1226, mid_num:1270.0, mean:1272.3, diff:92
+task HumanEval/39 cir 6 : input length
+Data with length 100, max_num:1318, min_num:1226, mid_num:1274.0, mean:1282.4, diff:92
+task HumanEval/39 cir 7 : input length
+Data with length 100, max_num:1355, min_num:1267, mid_num:1315.5, mean:1307.5, diff:88
+task HumanEval/39 cir 8 : input length
+Data with length 100, max_num:1355, min_num:1297, mid_num:1332.0, mean:1329.5, diff:58
+task HumanEval/39 cir 9 : input length
+Data with length 100, max_num:1355, min_num:1235, mid_num:1338.0, mean:1321.7, diff:120
+task HumanEval/39 cir 10 : input length
+Data with length 100, max_num:1344, min_num:1228, mid_num:1277.5, mean:1281.1, diff:116
+list_neighbor_diff : [14.0, 21.700000000000045, 2.3999999999998636, 8.200000000000045, 10.100000000000136, 25.09999999999991, 22.0, 7.7999999999999545, 40.600000000000136]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/41 cir 1 : input length
+Data with length 10, max_num:1009, min_num:1009, mid_num:1009.0, mean:1009.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/46 cir 1 : input length
+Data with length 10, max_num:1127, min_num:1127, mid_num:1127.0, mean:1127.0, diff:0
+task HumanEval/46 cir 2 : input length
+Data with length 70, max_num:1204, min_num:1119, mid_num:1133.0, mean:1148.4285714285713, diff:85
+task HumanEval/46 cir 3 : input length
+Data with length 100, max_num:1247, min_num:1119, mid_num:1150.0, mean:1159.0, diff:128
+task HumanEval/46 cir 4 : input length
+Data with length 100, max_num:1239, min_num:1119, mid_num:1164.5, mean:1166.7, diff:120
+task HumanEval/46 cir 5 : input length
+Data with length 100, max_num:1211, min_num:1160, mid_num:1169.0, mean:1173.5, diff:51
+list_neighbor_diff : [21.42857142857133, 10.571428571428669, 7.7000000000000455, 6.7999999999999545]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/47 cir 1 : input length
+Data with length 10, max_num:1105, min_num:1105, mid_num:1105.0, mean:1105.0, diff:0
+task HumanEval/47 cir 2 : input length
+Data with length 100, max_num:1139, min_num:1065, mid_num:1109.0, mean:1112.0, diff:74
+task HumanEval/47 cir 3 : input length
+Data with length 100, max_num:1136, min_num:1052, mid_num:1108.0, mean:1099.9, diff:84
+task HumanEval/47 cir 4 : input length
+Data with length 100, max_num:1140, min_num:1052, mid_num:1107.0, mean:1104.2, diff:88
+task HumanEval/47 cir 5 : input length
+Data with length 100, max_num:1158, min_num:1064, mid_num:1119.5, mean:1119.5, diff:94
+task HumanEval/47 cir 6 : input length
+Data with length 100, max_num:1181, min_num:1064, mid_num:1128.5, mean:1123.0, diff:117
+task HumanEval/47 cir 7 : input length
+Data with length 100, max_num:1140, min_num:1052, mid_num:1118.0, mean:1111.1, diff:88
+task HumanEval/47 cir 8 : input length
+Data with length 100, max_num:1140, min_num:1063, mid_num:1120.0, mean:1117.5, diff:77
+task HumanEval/47 cir 9 : input length
+Data with length 100, max_num:1140, min_num:1063, mid_num:1127.0, mean:1119.8, diff:77
+task HumanEval/47 cir 10 : input length
+Data with length 100, max_num:1187, min_num:1053, mid_num:1130.0, mean:1125.5, diff:134
+list_neighbor_diff : [7.0, 12.099999999999909, 4.2999999999999545, 15.299999999999955, 3.5, 11.900000000000091, 6.400000000000091, 2.2999999999999545, 5.7000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/49 cir 1 : input length
+Data with length 10, max_num:1234, min_num:1234, mid_num:1234.0, mean:1234.0, diff:0
+task HumanEval/49 cir 2 : input length
+Data with length 60, max_num:1329, min_num:1007, mid_num:1234.0, mean:1200.5, diff:322
+list_neighbor_diff : [33.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/50 cir 1 : input length
+Data with length 10, max_num:1015, min_num:1015, mid_num:1015.0, mean:1015.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/54 cir 1 : input length
+Data with length 10, max_num:1438, min_num:1438, mid_num:1438.0, mean:1438.0, diff:0
+task HumanEval/54 cir 2 : input length
+Data with length 30, max_num:1448, min_num:1436, mid_num:1438.0, mean:1440.6666666666667, diff:12
+list_neighbor_diff : [2.6666666666667425]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/56 cir 1 : input length
+Data with length 10, max_num:1133, min_num:1133, mid_num:1133.0, mean:1133.0, diff:0
+task HumanEval/56 cir 2 : input length
+Data with length 100, max_num:1194, min_num:1094, mid_num:1163.0, mean:1155.0, diff:100
+list_neighbor_diff : [22.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/57 cir 1 : input length
+Data with length 10, max_num:1097, min_num:1097, mid_num:1097.0, mean:1097.0, diff:0
+task HumanEval/57 cir 2 : input length
+Data with length 70, max_num:1121, min_num:1097, mid_num:1108.0, mean:1109.5714285714287, diff:24
+list_neighbor_diff : [12.571428571428669]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/59 cir 1 : input length
+Data with length 10, max_num:1058, min_num:1058, mid_num:1058.0, mean:1058.0, diff:0
+task HumanEval/59 cir 2 : input length
+Data with length 80, max_num:1070, min_num:1049, mid_num:1058.0, mean:1058.25, diff:21
+task HumanEval/59 cir 3 : input length
+Data with length 100, max_num:1085, min_num:1057, mid_num:1064.0, mean:1067.0, diff:28
+task HumanEval/59 cir 4 : input length
+Data with length 100, max_num:1084, min_num:1057, mid_num:1068.5, mean:1066.1, diff:27
+list_neighbor_diff : [0.25, 8.75, 0.900000000000091]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/61 cir 1 : input length
+Data with length 10, max_num:1110, min_num:1110, mid_num:1110.0, mean:1110.0, diff:0
+task HumanEval/61 cir 2 : input length
+Data with length 100, max_num:1168, min_num:993, mid_num:1128.0, mean:1099.2, diff:175
+list_neighbor_diff : [10.799999999999955]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/62 cir 1 : input length
+Data with length 10, max_num:1117, min_num:1117, mid_num:1117.0, mean:1117.0, diff:0
+task HumanEval/62 cir 2 : input length
+Data with length 60, max_num:1123, min_num:1019, mid_num:1112.0, mean:1098.3333333333333, diff:104
+list_neighbor_diff : [18.666666666666742]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/63 cir 1 : input length
+Data with length 10, max_num:1188, min_num:1188, mid_num:1188.0, mean:1188.0, diff:0
+task HumanEval/63 cir 2 : input length
+Data with length 80, max_num:1206, min_num:1013, mid_num:1190.5, mean:1170.25, diff:193
+task HumanEval/63 cir 3 : input length
+Data with length 100, max_num:1231, min_num:1122, mid_num:1189.5, mean:1184.6, diff:109
+task HumanEval/63 cir 4 : input length
+Data with length 100, max_num:1265, min_num:1121, mid_num:1189.5, mean:1182.3, diff:144
+task HumanEval/63 cir 5 : input length
+Data with length 100, max_num:1265, min_num:1121, mid_num:1184.5, mean:1184.1, diff:144
+list_neighbor_diff : [17.75, 14.349999999999909, 2.2999999999999545, 1.7999999999999545]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/64 cir 1 : input length
+Data with length 10, max_num:1057, min_num:1057, mid_num:1057.0, mean:1057.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/65 cir 1 : input length
+Data with length 10, max_num:1053, min_num:1053, mid_num:1053.0, mean:1053.0, diff:0
+task HumanEval/65 cir 2 : input length
+Data with length 50, max_num:1056, min_num:1049, mid_num:1053.0, mean:1053.0, diff:7
+list_neighbor_diff : [0.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/66 cir 1 : input length
+Data with length 10, max_num:1229, min_num:1229, mid_num:1229.0, mean:1229.0, diff:0
+task HumanEval/66 cir 2 : input length
+Data with length 70, max_num:1245, min_num:1217, mid_num:1234.0, mean:1233.7142857142858, diff:28
+task HumanEval/66 cir 3 : input length
+Data with length 100, max_num:1259, min_num:1226, mid_num:1236.5, mean:1239.1, diff:33
+task HumanEval/66 cir 4 : input length
+Data with length 100, max_num:1265, min_num:1231, mid_num:1245.0, mean:1246.4, diff:34
+task HumanEval/66 cir 5 : input length
+Data with length 100, max_num:1265, min_num:1231, mid_num:1250.0, mean:1248.5, diff:34
+task HumanEval/66 cir 6 : input length
+Data with length 100, max_num:1254, min_num:1231, mid_num:1242.0, mean:1243.4, diff:23
+task HumanEval/66 cir 7 : input length
+Data with length 100, max_num:1254, min_num:1231, mid_num:1243.0, mean:1243.8, diff:23
+task HumanEval/66 cir 8 : input length
+Data with length 100, max_num:1254, min_num:1235, mid_num:1241.0, mean:1242.8, diff:19
+task HumanEval/66 cir 9 : input length
+Data with length 100, max_num:1261, min_num:1229, mid_num:1243.0, mean:1243.2, diff:32
+task HumanEval/66 cir 10 : input length
+Data with length 100, max_num:1261, min_num:1230, mid_num:1250.5, mean:1248.7, diff:31
+list_neighbor_diff : [4.714285714285779, 5.38571428571413, 7.300000000000182, 2.099999999999909, 5.099999999999909, 0.3999999999998636, 1.0, 0.40000000000009095, 5.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/67 cir 1 : input length
+Data with length 10, max_num:1401, min_num:1401, mid_num:1401.0, mean:1401.0, diff:0
+task HumanEval/67 cir 2 : input length
+Data with length 30, max_num:1410, min_num:1401, mid_num:1407.0, mean:1406.0, diff:9
+task HumanEval/67 cir 3 : input length
+Data with length 100, max_num:1454, min_num:1401, mid_num:1408.5, mean:1416.9, diff:53
+list_neighbor_diff : [5.0, 10.900000000000091]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/69 cir 1 : input length
+Data with length 10, max_num:1264, min_num:1264, mid_num:1264.0, mean:1264.0, diff:0
+task HumanEval/69 cir 2 : input length
+Data with length 100, max_num:1309, min_num:1247, mid_num:1269.0, mean:1272.0, diff:62
+task HumanEval/69 cir 3 : input length
+Data with length 100, max_num:1306, min_num:1257, mid_num:1274.5, mean:1275.5, diff:49
+list_neighbor_diff : [8.0, 3.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/70 cir 1 : input length
+Data with length 10, max_num:1259, min_num:1259, mid_num:1259.0, mean:1259.0, diff:0
+task HumanEval/70 cir 2 : input length
+Data with length 90, max_num:1329, min_num:1252, mid_num:1263.0, mean:1269.3333333333333, diff:77
+task HumanEval/70 cir 3 : input length
+Data with length 100, max_num:1275, min_num:1237, mid_num:1270.0, mean:1262.6, diff:38
+task HumanEval/70 cir 4 : input length
+Data with length 100, max_num:1275, min_num:1209, mid_num:1250.0, mean:1251.4, diff:66
+task HumanEval/70 cir 5 : input length
+Data with length 100, max_num:1274, min_num:1234, mid_num:1241.0, mean:1245.1, diff:40
+task HumanEval/70 cir 6 : input length
+Data with length 100, max_num:1281, min_num:1234, mid_num:1242.0, mean:1247.0, diff:47
+task HumanEval/70 cir 7 : input length
+Data with length 100, max_num:1281, min_num:1236, mid_num:1248.5, mean:1253.5, diff:45
+task HumanEval/70 cir 8 : input length
+Data with length 100, max_num:1284, min_num:1241, mid_num:1246.5, mean:1251.1, diff:43
+task HumanEval/70 cir 9 : input length
+Data with length 100, max_num:1281, min_num:1233, mid_num:1247.5, mean:1251.0, diff:48
+task HumanEval/70 cir 10 : input length
+Data with length 100, max_num:1289, min_num:1243, mid_num:1247.5, mean:1254.6, diff:46
+list_neighbor_diff : [10.333333333333258, 6.7333333333333485, 11.199999999999818, 6.300000000000182, 1.900000000000091, 6.5, 2.400000000000091, 0.09999999999990905, 3.599999999999909]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/71 cir 1 : input length
+Data with length 10, max_num:1121, min_num:1121, mid_num:1121.0, mean:1121.0, diff:0
+task HumanEval/71 cir 2 : input length
+Data with length 100, max_num:1147, min_num:1093, mid_num:1122.0, mean:1119.4, diff:54
+list_neighbor_diff : [1.599999999999909]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/72 cir 1 : input length
+Data with length 10, max_num:1489, min_num:1489, mid_num:1489.0, mean:1489.0, diff:0
+task HumanEval/72 cir 2 : input length
+Data with length 80, max_num:1522, min_num:1433, mid_num:1488.0, mean:1480.5, diff:89
+list_neighbor_diff : [8.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/73 cir 1 : input length
+Data with length 10, max_num:1332, min_num:1332, mid_num:1332.0, mean:1332.0, diff:0
+task HumanEval/73 cir 2 : input length
+Data with length 90, max_num:1362, min_num:1330, mid_num:1347.0, mean:1344.4444444444443, diff:32
+task HumanEval/73 cir 3 : input length
+Data with length 100, max_num:1386, min_num:1285, mid_num:1343.5, mean:1335.5, diff:101
+task HumanEval/73 cir 4 : input length
+Data with length 100, max_num:1396, min_num:1252, mid_num:1312.5, mean:1313.0, diff:144
+task HumanEval/73 cir 5 : input length
+Data with length 100, max_num:1469, min_num:1231, mid_num:1301.5, mean:1307.0, diff:238
+task HumanEval/73 cir 6 : input length
+Data with length 100, max_num:1507, min_num:1231, mid_num:1252.0, mean:1296.8, diff:276
+list_neighbor_diff : [12.444444444444343, 8.944444444444343, 22.5, 6.0, 10.200000000000045]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/74 cir 1 : input length
+Data with length 10, max_num:1443, min_num:1443, mid_num:1443.0, mean:1443.0, diff:0
+task HumanEval/74 cir 2 : input length
+Data with length 90, max_num:1494, min_num:1443, mid_num:1458.0, mean:1461.5555555555557, diff:51
+task HumanEval/74 cir 3 : input length
+Data with length 100, max_num:1482, min_num:1437, mid_num:1469.5, mean:1466.3, diff:45
+task HumanEval/74 cir 4 : input length
+Data with length 100, max_num:1525, min_num:1445, mid_num:1484.0, mean:1477.4, diff:80
+task HumanEval/74 cir 5 : input length
+Data with length 100, max_num:1502, min_num:1448, mid_num:1458.0, mean:1466.0, diff:54
+task HumanEval/74 cir 6 : input length
+Data with length 100, max_num:1506, min_num:1448, mid_num:1478.0, mean:1475.7, diff:58
+task HumanEval/74 cir 7 : input length
+Data with length 100, max_num:1497, min_num:1476, mid_num:1484.0, mean:1484.5, diff:21
+list_neighbor_diff : [18.555555555555657, 4.744444444444298, 11.100000000000136, 11.400000000000091, 9.700000000000045, 8.799999999999955]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/76 cir 1 : input length
+Data with length 10, max_num:1328, min_num:1328, mid_num:1328.0, mean:1328.0, diff:0
+task HumanEval/76 cir 2 : input length
+Data with length 100, max_num:1343, min_num:1318, mid_num:1330.5, mean:1331.2, diff:25
+task HumanEval/76 cir 3 : input length
+Data with length 100, max_num:1351, min_num:1290, mid_num:1318.0, mean:1320.6, diff:61
+task HumanEval/76 cir 4 : input length
+Data with length 100, max_num:1364, min_num:1303, mid_num:1320.5, mean:1325.9, diff:61
+task HumanEval/76 cir 5 : input length
+Data with length 100, max_num:1361, min_num:1315, mid_num:1329.5, mean:1334.9, diff:46
+task HumanEval/76 cir 6 : input length
+Data with length 100, max_num:1360, min_num:1314, mid_num:1330.0, mean:1336.1, diff:46
+task HumanEval/76 cir 7 : input length
+Data with length 100, max_num:1369, min_num:1306, mid_num:1327.5, mean:1331.7, diff:63
+task HumanEval/76 cir 8 : input length
+Data with length 100, max_num:1350, min_num:1305, mid_num:1328.0, mean:1328.4, diff:45
+task HumanEval/76 cir 9 : input length
+Data with length 100, max_num:1352, min_num:1304, mid_num:1319.5, mean:1323.6, diff:48
+task HumanEval/76 cir 10 : input length
+Data with length 100, max_num:1353, min_num:1304, mid_num:1325.0, mean:1325.3, diff:49
+list_neighbor_diff : [3.2000000000000455, 10.600000000000136, 5.300000000000182, 9.0, 1.199999999999818, 4.399999999999864, 3.2999999999999545, 4.800000000000182, 1.7000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/77 cir 1 : input length
+Data with length 10, max_num:1192, min_num:1192, mid_num:1192.0, mean:1192.0, diff:0
+task HumanEval/77 cir 2 : input length
+Data with length 90, max_num:1213, min_num:1163, mid_num:1192.0, mean:1187.3333333333333, diff:50
+task HumanEval/77 cir 3 : input length
+Data with length 100, max_num:1202, min_num:1163, mid_num:1177.0, mean:1179.1, diff:39
+task HumanEval/77 cir 4 : input length
+Data with length 100, max_num:1204, min_num:1163, mid_num:1179.5, mean:1181.2, diff:41
+task HumanEval/77 cir 5 : input length
+Data with length 100, max_num:1204, min_num:1163, mid_num:1180.0, mean:1182.8, diff:41
+task HumanEval/77 cir 6 : input length
+Data with length 100, max_num:1204, min_num:1163, mid_num:1176.0, mean:1181.4, diff:41
+task HumanEval/77 cir 7 : input length
+Data with length 100, max_num:1198, min_num:1163, mid_num:1178.0, mean:1179.8, diff:35
+task HumanEval/77 cir 8 : input length
+Data with length 100, max_num:1198, min_num:1163, mid_num:1181.0, mean:1181.8, diff:35
+task HumanEval/77 cir 9 : input length
+Data with length 100, max_num:1210, min_num:1163, mid_num:1192.0, mean:1189.9, diff:47
+task HumanEval/77 cir 10 : input length
+Data with length 100, max_num:1226, min_num:1164, mid_num:1198.5, mean:1196.6, diff:62
+list_neighbor_diff : [4.6666666666667425, 8.233333333333348, 2.1000000000001364, 1.599999999999909, 1.3999999999998636, 1.6000000000001364, 2.0, 8.100000000000136, 6.699999999999818]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/78 cir 1 : input length
+Data with length 10, max_num:1481, min_num:1481, mid_num:1481.0, mean:1481.0, diff:0
+task HumanEval/78 cir 2 : input length
+Data with length 60, max_num:1549, min_num:1481, mid_num:1496.5, mean:1504.3333333333333, diff:68
+task HumanEval/78 cir 3 : input length
+Data with length 100, max_num:1720, min_num:1481, mid_num:1499.0, mean:1521.0, diff:239
+list_neighbor_diff : [23.333333333333258, 16.666666666666742]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/79 cir 1 : input length
+Data with length 10, max_num:1161, min_num:1161, mid_num:1161.0, mean:1161.0, diff:0
+task HumanEval/79 cir 2 : input length
+Data with length 70, max_num:1241, min_num:1116, mid_num:1165.0, mean:1169.142857142857, diff:125
+task HumanEval/79 cir 3 : input length
+Data with length 100, max_num:1234, min_num:1100, mid_num:1163.0, mean:1160.6, diff:134
+task HumanEval/79 cir 4 : input length
+Data with length 100, max_num:1173, min_num:1100, mid_num:1137.5, mean:1137.1, diff:73
+task HumanEval/79 cir 5 : input length
+Data with length 100, max_num:1177, min_num:1100, mid_num:1159.0, mean:1144.3, diff:77
+list_neighbor_diff : [8.14285714285711, 8.542857142857201, 23.5, 7.2000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/80 cir 1 : input length
+Data with length 10, max_num:1261, min_num:1261, mid_num:1261.0, mean:1261.0, diff:0
+task HumanEval/80 cir 2 : input length
+Data with length 50, max_num:1271, min_num:1251, mid_num:1261.0, mean:1261.0, diff:20
+task HumanEval/80 cir 3 : input length
+Data with length 100, max_num:1276, min_num:1260, mid_num:1262.0, mean:1265.6, diff:16
+task HumanEval/80 cir 4 : input length
+Data with length 100, max_num:1296, min_num:1261, mid_num:1274.0, mean:1273.7, diff:35
+list_neighbor_diff : [0.0, 4.599999999999909, 8.100000000000136]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/81 cir 1 : input length
+Data with length 10, max_num:1476, min_num:1476, mid_num:1476.0, mean:1476.0, diff:0
+task HumanEval/81 cir 2 : input length
+Data with length 20, max_num:1476, min_num:1476, mid_num:1476.0, mean:1476.0, diff:0
+task HumanEval/81 cir 3 : input length
+Data with length 50, max_num:1476, min_num:1361, mid_num:1438.0, mean:1434.0, diff:115
+list_neighbor_diff : [0.0, 42.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/82 cir 1 : input length
+Data with length 10, max_num:1101, min_num:1101, mid_num:1101.0, mean:1101.0, diff:0
+task HumanEval/82 cir 2 : input length
+Data with length 50, max_num:1132, min_num:1101, mid_num:1101.0, mean:1107.2, diff:31
+list_neighbor_diff : [6.2000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/83 cir 1 : input length
+Data with length 10, max_num:930, min_num:930, mid_num:930.0, mean:930.0, diff:0
+task HumanEval/83 cir 2 : input length
+Data with length 40, max_num:976, min_num:929, mid_num:930.5, mean:941.5, diff:47
+task HumanEval/83 cir 3 : input length
+Data with length 100, max_num:1003, min_num:907, mid_num:927.5, mean:936.0, diff:96
+task HumanEval/83 cir 4 : input length
+Data with length 100, max_num:968, min_num:906, mid_num:922.0, mean:924.3, diff:62
+task HumanEval/83 cir 5 : input length
+Data with length 100, max_num:932, min_num:905, mid_num:919.0, mean:917.1, diff:27
+task HumanEval/83 cir 6 : input length
+Data with length 100, max_num:932, min_num:905, mid_num:920.0, mean:920.3, diff:27
+task HumanEval/83 cir 7 : input length
+Data with length 100, max_num:942, min_num:904, mid_num:920.0, mean:921.2, diff:38
+task HumanEval/83 cir 8 : input length
+Data with length 100, max_num:942, min_num:904, mid_num:926.0, mean:924.6, diff:38
+task HumanEval/83 cir 9 : input length
+Data with length 100, max_num:942, min_num:905, mid_num:930.0, mean:924.7, diff:37
+task HumanEval/83 cir 10 : input length
+Data with length 100, max_num:940, min_num:905, mid_num:922.0, mean:922.3, diff:35
+list_neighbor_diff : [11.5, 5.5, 11.700000000000045, 7.199999999999932, 3.199999999999932, 0.900000000000091, 3.3999999999999773, 0.10000000000002274, 2.400000000000091]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/84 cir 1 : input length
+Data with length 10, max_num:1132, min_num:1132, mid_num:1132.0, mean:1132.0, diff:0
+task HumanEval/84 cir 2 : input length
+Data with length 100, max_num:1198, min_num:1104, mid_num:1138.0, mean:1142.9, diff:94
+task HumanEval/84 cir 3 : input length
+Data with length 100, max_num:1167, min_num:1104, mid_num:1130.5, mean:1133.7, diff:63
+list_neighbor_diff : [10.900000000000091, 9.200000000000045]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/85 cir 1 : input length
+Data with length 10, max_num:934, min_num:934, mid_num:934.0, mean:934.0, diff:0
+task HumanEval/85 cir 2 : input length
+Data with length 50, max_num:945, min_num:927, mid_num:933.0, mean:934.0, diff:18
+list_neighbor_diff : [0.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/86 cir 1 : input length
+Data with length 10, max_num:1153, min_num:1153, mid_num:1153.0, mean:1153.0, diff:0
+task HumanEval/86 cir 2 : input length
+Data with length 100, max_num:1334, min_num:1088, mid_num:1155.0, mean:1169.1, diff:246
+task HumanEval/86 cir 3 : input length
+Data with length 100, max_num:1155, min_num:1119, mid_num:1138.5, mean:1138.3, diff:36
+list_neighbor_diff : [16.09999999999991, 30.799999999999955]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/88 cir 1 : input length
+Data with length 10, max_num:1450, min_num:1450, mid_num:1450.0, mean:1450.0, diff:0
+task HumanEval/88 cir 2 : input length
+Data with length 40, max_num:1535, min_num:1441, mid_num:1447.0, mean:1467.5, diff:94
+task HumanEval/88 cir 3 : input length
+Data with length 100, max_num:1487, min_num:1405, mid_num:1442.5, mean:1442.7, diff:82
+list_neighbor_diff : [17.5, 24.799999999999955]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/89 cir 1 : input length
+Data with length 10, max_num:1167, min_num:1167, mid_num:1167.0, mean:1167.0, diff:0
+task HumanEval/89 cir 2 : input length
+Data with length 30, max_num:1174, min_num:1167, mid_num:1172.0, mean:1171.0, diff:7
+task HumanEval/89 cir 3 : input length
+Data with length 70, max_num:1174, min_num:1158, mid_num:1168.0, mean:1167.2857142857142, diff:16
+task HumanEval/89 cir 4 : input length
+Data with length 100, max_num:1174, min_num:1162, mid_num:1171.5, mean:1170.5, diff:12
+task HumanEval/89 cir 5 : input length
+Data with length 100, max_num:1175, min_num:1170, mid_num:1173.5, mean:1173.1, diff:5
+task HumanEval/89 cir 6 : input length
+Data with length 100, max_num:1184, min_num:1162, mid_num:1173.5, mean:1173.5, diff:22
+task HumanEval/89 cir 7 : input length
+Data with length 100, max_num:1184, min_num:1170, mid_num:1174.5, mean:1175.7, diff:14
+task HumanEval/89 cir 8 : input length
+Data with length 100, max_num:1186, min_num:1170, mid_num:1174.0, mean:1176.0, diff:16
+task HumanEval/89 cir 9 : input length
+Data with length 100, max_num:1186, min_num:1170, mid_num:1173.5, mean:1175.4, diff:16
+task HumanEval/89 cir 10 : input length
+Data with length 100, max_num:1184, min_num:1168, mid_num:1172.0, mean:1172.9, diff:16
+list_neighbor_diff : [4.0, 3.7142857142857792, 3.2142857142857792, 2.599999999999909, 0.40000000000009095, 2.2000000000000455, 0.2999999999999545, 0.599999999999909, 2.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/90 cir 1 : input length
+Data with length 10, max_num:1196, min_num:1196, mid_num:1196.0, mean:1196.0, diff:0
+task HumanEval/90 cir 2 : input length
+Data with length 90, max_num:1225, min_num:1192, mid_num:1214.0, mean:1210.2222222222222, diff:33
+task HumanEval/90 cir 3 : input length
+Data with length 100, max_num:1248, min_num:1192, mid_num:1218.5, mean:1220.2, diff:56
+task HumanEval/90 cir 4 : input length
+Data with length 100, max_num:1219, min_num:1181, mid_num:1200.5, mean:1201.6, diff:38
+task HumanEval/90 cir 5 : input length
+Data with length 100, max_num:1250, min_num:1195, mid_num:1217.5, mean:1215.6, diff:55
+task HumanEval/90 cir 6 : input length
+Data with length 100, max_num:1297, min_num:1195, mid_num:1213.5, mean:1224.5, diff:102
+task HumanEval/90 cir 7 : input length
+Data with length 100, max_num:1317, min_num:1215, mid_num:1246.0, mean:1257.8, diff:102
+list_neighbor_diff : [14.222222222222172, 9.977777777777874, 18.600000000000136, 14.0, 8.900000000000091, 33.299999999999955]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/93 cir 1 : input length
+Data with length 10, max_num:1089, min_num:1089, mid_num:1089.0, mean:1089.0, diff:0
+task HumanEval/93 cir 2 : input length
+Data with length 60, max_num:1130, min_num:1076, mid_num:1100.5, mean:1102.1666666666667, diff:54
+task HumanEval/93 cir 3 : input length
+Data with length 100, max_num:1161, min_num:1089, mid_num:1127.5, mean:1125.3, diff:72
+task HumanEval/93 cir 4 : input length
+Data with length 100, max_num:1172, min_num:1089, mid_num:1139.0, mean:1139.7, diff:83
+task HumanEval/93 cir 5 : input length
+Data with length 100, max_num:1180, min_num:1105, mid_num:1132.5, mean:1137.5, diff:75
+task HumanEval/93 cir 6 : input length
+Data with length 100, max_num:1180, min_num:1103, mid_num:1130.0, mean:1136.5, diff:77
+task HumanEval/93 cir 7 : input length
+Data with length 100, max_num:1180, min_num:1101, mid_num:1125.5, mean:1135.9, diff:79
+task HumanEval/93 cir 8 : input length
+Data with length 100, max_num:1179, min_num:1103, mid_num:1135.0, mean:1141.3, diff:76
+list_neighbor_diff : [13.166666666666742, 23.133333333333212, 14.400000000000091, 2.2000000000000455, 1.0, 0.599999999999909, 5.399999999999864]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/95 cir 1 : input length
+Data with length 10, max_num:1479, min_num:1479, mid_num:1479.0, mean:1479.0, diff:0
+task HumanEval/95 cir 2 : input length
+Data with length 80, max_num:1510, min_num:1466, mid_num:1482.0, mean:1485.875, diff:44
+task HumanEval/95 cir 3 : input length
+Data with length 100, max_num:1526, min_num:1469, mid_num:1481.5, mean:1486.7, diff:57
+list_neighbor_diff : [6.875, 0.8250000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/96 cir 1 : input length
+Data with length 10, max_num:1390, min_num:1390, mid_num:1390.0, mean:1390.0, diff:0
+task HumanEval/96 cir 2 : input length
+Data with length 40, max_num:1402, min_num:1110, mid_num:1392.0, mean:1324.0, diff:292
+list_neighbor_diff : [66.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/97 cir 1 : input length
+Data with length 10, max_num:1210, min_num:1210, mid_num:1210.0, mean:1210.0, diff:0
+task HumanEval/97 cir 2 : input length
+Data with length 80, max_num:1262, min_num:1187, mid_num:1209.0, mean:1212.25, diff:75
+task HumanEval/97 cir 3 : input length
+Data with length 100, max_num:1265, min_num:1179, mid_num:1191.5, mean:1203.8, diff:86
+task HumanEval/97 cir 4 : input length
+Data with length 100, max_num:1316, min_num:1142, mid_num:1218.0, mean:1222.8, diff:174
+list_neighbor_diff : [2.25, 8.450000000000045, 19.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/98 cir 1 : input length
+Data with length 10, max_num:1064, min_num:1064, mid_num:1064.0, mean:1064.0, diff:0
+task HumanEval/98 cir 2 : input length
+Data with length 70, max_num:1075, min_num:1054, mid_num:1064.0, mean:1064.5714285714287, diff:21
+list_neighbor_diff : [0.5714285714286689]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/99 cir 1 : input length
+Data with length 10, max_num:1075, min_num:1075, mid_num:1075.0, mean:1075.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/100 cir 1 : input length
+Data with length 10, max_num:1047, min_num:1047, mid_num:1047.0, mean:1047.0, diff:0
+task HumanEval/100 cir 2 : input length
+Data with length 90, max_num:1065, min_num:1047, mid_num:1052.0, mean:1054.3333333333333, diff:18
+task HumanEval/100 cir 3 : input length
+Data with length 100, max_num:1074, min_num:1035, mid_num:1052.5, mean:1055.4, diff:39
+task HumanEval/100 cir 4 : input length
+Data with length 100, max_num:1073, min_num:1035, mid_num:1055.5, mean:1054.8, diff:38
+list_neighbor_diff : [7.3333333333332575, 1.0666666666668334, 0.6000000000001364]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/100 cir 1 : input length
+Data with length 10, max_num:1047, min_num:1047, mid_num:1047.0, mean:1047.0, diff:0
+task HumanEval/100 cir 2 : input length
+Data with length 70, max_num:1060, min_num:1045, mid_num:1049.0, mean:1050.7142857142858, diff:15
+task HumanEval/100 cir 3 : input length
+Data with length 100, max_num:1055, min_num:1027, mid_num:1047.0, mean:1046.4, diff:28
+task HumanEval/100 cir 4 : input length
+Data with length 100, max_num:1070, min_num:1027, mid_num:1051.0, mean:1052.1, diff:43
+list_neighbor_diff : [3.7142857142857792, 4.314285714285688, 5.699999999999818]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/101 cir 1 : input length
+Data with length 10, max_num:1122, min_num:1122, mid_num:1122.0, mean:1122.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/102 cir 1 : input length
+Data with length 10, max_num:1036, min_num:1036, mid_num:1036.0, mean:1036.0, diff:0
+task HumanEval/102 cir 2 : input length
+Data with length 80, max_num:1083, min_num:1020, mid_num:1039.0, mean:1045.5, diff:63
+list_neighbor_diff : [9.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/104 cir 1 : input length
+Data with length 10, max_num:1146, min_num:1146, mid_num:1146.0, mean:1146.0, diff:0
+task HumanEval/104 cir 2 : input length
+Data with length 60, max_num:1146, min_num:1138, mid_num:1143.0, mean:1142.3333333333333, diff:8
+task HumanEval/104 cir 3 : input length
+Data with length 100, max_num:1146, min_num:1138, mid_num:1140.0, mean:1140.7, diff:8
+task HumanEval/104 cir 4 : input length
+Data with length 100, max_num:1146, min_num:1138, mid_num:1142.0, mean:1142.3, diff:8
+task HumanEval/104 cir 5 : input length
+Data with length 100, max_num:1149, min_num:1136, mid_num:1142.0, mean:1142.3, diff:13
+task HumanEval/104 cir 6 : input length
+Data with length 100, max_num:1149, min_num:1136, mid_num:1141.5, mean:1141.6, diff:13
+task HumanEval/104 cir 7 : input length
+Data with length 100, max_num:1146, min_num:1136, mid_num:1141.5, mean:1141.9, diff:10
+task HumanEval/104 cir 8 : input length
+Data with length 100, max_num:1146, min_num:1137, mid_num:1141.5, mean:1141.9, diff:9
+task HumanEval/104 cir 9 : input length
+Data with length 100, max_num:1146, min_num:1136, mid_num:1140.0, mean:1140.6, diff:10
+task HumanEval/104 cir 10 : input length
+Data with length 100, max_num:1146, min_num:1136, mid_num:1139.5, mean:1139.9, diff:10
+list_neighbor_diff : [3.6666666666667425, 1.633333333333212, 1.599999999999909, 0.0, 0.7000000000000455, 0.3000000000001819, 0.0, 1.300000000000182, 0.6999999999998181]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/107 cir 1 : input length
+Data with length 10, max_num:1225, min_num:1225, mid_num:1225.0, mean:1225.0, diff:0
+task HumanEval/107 cir 2 : input length
+Data with length 80, max_num:1267, min_num:1213, mid_num:1227.5, mean:1236.125, diff:54
+task HumanEval/107 cir 3 : input length
+Data with length 100, max_num:1267, min_num:1211, mid_num:1224.0, mean:1231.1, diff:56
+task HumanEval/107 cir 4 : input length
+Data with length 100, max_num:1263, min_num:1211, mid_num:1222.0, mean:1228.8, diff:52
+task HumanEval/107 cir 5 : input length
+Data with length 100, max_num:1263, min_num:1210, mid_num:1229.0, mean:1234.3, diff:53
+task HumanEval/107 cir 6 : input length
+Data with length 100, max_num:1270, min_num:1212, mid_num:1234.5, mean:1242.1, diff:58
+task HumanEval/107 cir 7 : input length
+Data with length 100, max_num:1271, min_num:1211, mid_num:1239.0, mean:1240.7, diff:60
+task HumanEval/107 cir 8 : input length
+Data with length 100, max_num:1263, min_num:1210, mid_num:1239.0, mean:1236.8, diff:53
+task HumanEval/107 cir 9 : input length
+Data with length 100, max_num:1250, min_num:1210, mid_num:1230.0, mean:1231.1, diff:40
+task HumanEval/107 cir 10 : input length
+Data with length 100, max_num:1271, min_num:1212, mid_num:1230.5, mean:1231.7, diff:59
+list_neighbor_diff : [11.125, 5.025000000000091, 2.2999999999999545, 5.5, 7.7999999999999545, 1.3999999999998636, 3.900000000000091, 5.7000000000000455, 0.6000000000001364]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/108 cir 1 : input length
+Data with length 10, max_num:1142, min_num:1142, mid_num:1142.0, mean:1142.0, diff:0
+task HumanEval/108 cir 2 : input length
+Data with length 80, max_num:1148, min_num:1130, mid_num:1142.0, mean:1141.875, diff:18
+list_neighbor_diff : [0.125]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/109 cir 1 : input length
+Data with length 10, max_num:1338, min_num:1338, mid_num:1338.0, mean:1338.0, diff:0
+task HumanEval/109 cir 2 : input length
+Data with length 70, max_num:1339, min_num:1327, mid_num:1338.0, mean:1335.0, diff:12
+task HumanEval/109 cir 3 : input length
+Data with length 100, max_num:1341, min_num:1327, mid_num:1335.0, mean:1334.0, diff:14
+list_neighbor_diff : [3.0, 1.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/110 cir 1 : input length
+Data with length 10, max_num:1243, min_num:1243, mid_num:1243.0, mean:1243.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/115 cir 1 : input length
+Data with length 10, max_num:1607, min_num:1607, mid_num:1607.0, mean:1607.0, diff:0
+task HumanEval/115 cir 2 : input length
+Data with length 90, max_num:1626, min_num:1587, mid_num:1603.0, mean:1603.888888888889, diff:39
+task HumanEval/115 cir 3 : input length
+Data with length 100, max_num:1615, min_num:1588, mid_num:1602.5, mean:1602.5, diff:27
+task HumanEval/115 cir 4 : input length
+Data with length 100, max_num:1615, min_num:1584, mid_num:1596.5, mean:1597.4, diff:31
+task HumanEval/115 cir 5 : input length
+Data with length 100, max_num:1615, min_num:1580, mid_num:1586.0, mean:1588.5, diff:35
+task HumanEval/115 cir 6 : input length
+Data with length 100, max_num:1591, min_num:1579, mid_num:1585.0, mean:1585.4, diff:12
+list_neighbor_diff : [3.111111111111086, 1.3888888888889142, 5.099999999999909, 8.900000000000091, 3.099999999999909]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/116 cir 1 : input length
+Data with length 10, max_num:1327, min_num:1327, mid_num:1327.0, mean:1327.0, diff:0
+task HumanEval/116 cir 2 : input length
+Data with length 40, max_num:1338, min_num:1303, mid_num:1330.5, mean:1325.5, diff:35
+task HumanEval/116 cir 3 : input length
+Data with length 100, max_num:1414, min_num:1327, mid_num:1338.5, mean:1343.5, diff:87
+task HumanEval/116 cir 4 : input length
+Data with length 100, max_num:1443, min_num:1327, mid_num:1338.5, mean:1367.6, diff:116
+list_neighbor_diff : [1.5, 18.0, 24.09999999999991]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/117 cir 1 : input length
+Data with length 10, max_num:1372, min_num:1372, mid_num:1372.0, mean:1372.0, diff:0
+task HumanEval/117 cir 2 : input length
+Data with length 70, max_num:1405, min_num:1366, mid_num:1388.0, mean:1387.4285714285713, diff:39
+task HumanEval/117 cir 3 : input length
+Data with length 100, max_num:1465, min_num:1349, mid_num:1377.0, mean:1389.8, diff:116
+task HumanEval/117 cir 4 : input length
+Data with length 100, max_num:1436, min_num:1355, mid_num:1383.0, mean:1386.1, diff:81
+task HumanEval/117 cir 5 : input length
+Data with length 100, max_num:1436, min_num:1355, mid_num:1398.0, mean:1393.1, diff:81
+task HumanEval/117 cir 6 : input length
+Data with length 100, max_num:1419, min_num:1355, mid_num:1393.5, mean:1393.3, diff:64
+task HumanEval/117 cir 7 : input length
+Data with length 100, max_num:1425, min_num:1356, mid_num:1380.0, mean:1384.2, diff:69
+task HumanEval/117 cir 8 : input length
+Data with length 100, max_num:1432, min_num:1356, mid_num:1385.0, mean:1385.8, diff:76
+task HumanEval/117 cir 9 : input length
+Data with length 100, max_num:1405, min_num:1356, mid_num:1391.0, mean:1387.8, diff:49
+task HumanEval/117 cir 10 : input length
+Data with length 100, max_num:1442, min_num:1378, mid_num:1402.0, mean:1399.7, diff:64
+list_neighbor_diff : [15.428571428571331, 2.3714285714286234, 3.7000000000000455, 7.0, 0.20000000000004547, 9.099999999999909, 1.599999999999909, 2.0, 11.900000000000091]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/118 cir 1 : input length
+Data with length 10, max_num:1309, min_num:1309, mid_num:1309.0, mean:1309.0, diff:0
+task HumanEval/118 cir 2 : input length
+Data with length 70, max_num:1347, min_num:1306, mid_num:1309.0, mean:1315.0, diff:41
+task HumanEval/118 cir 3 : input length
+Data with length 100, max_num:1387, min_num:1286, mid_num:1306.5, mean:1313.0, diff:101
+task HumanEval/118 cir 4 : input length
+Data with length 100, max_num:1416, min_num:1286, mid_num:1306.5, mean:1323.8, diff:130
+task HumanEval/118 cir 5 : input length
+Data with length 100, max_num:1416, min_num:1305, mid_num:1390.5, mean:1381.3, diff:111
+task HumanEval/118 cir 6 : input length
+Data with length 100, max_num:1443, min_num:1264, mid_num:1415.5, mean:1397.5, diff:179
+task HumanEval/118 cir 7 : input length
+Data with length 100, max_num:1443, min_num:1264, mid_num:1397.0, mean:1380.3, diff:179
+task HumanEval/118 cir 8 : input length
+Data with length 100, max_num:1419, min_num:1264, mid_num:1335.0, mean:1338.0, diff:155
+task HumanEval/118 cir 9 : input length
+Data with length 100, max_num:1400, min_num:1276, mid_num:1298.0, mean:1313.4, diff:124
+task HumanEval/118 cir 10 : input length
+Data with length 100, max_num:1411, min_num:1276, mid_num:1300.0, mean:1333.9, diff:135
+list_neighbor_diff : [6.0, 2.0, 10.799999999999955, 57.5, 16.200000000000045, 17.200000000000045, 42.299999999999955, 24.59999999999991, 20.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/119 cir 1 : input length
+Data with length 10, max_num:1141, min_num:1141, mid_num:1141.0, mean:1141.0, diff:0
+task HumanEval/119 cir 2 : input length
+Data with length 70, max_num:1243, min_num:1140, mid_num:1150.0, mean:1161.857142857143, diff:103
+list_neighbor_diff : [20.85714285714289]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/120 cir 1 : input length
+Data with length 10, max_num:1299, min_num:1299, mid_num:1299.0, mean:1299.0, diff:0
+task HumanEval/120 cir 2 : input length
+Data with length 70, max_num:1375, min_num:1293, mid_num:1313.0, mean:1323.4285714285713, diff:82
+task HumanEval/120 cir 3 : input length
+Data with length 100, max_num:1333, min_num:1286, mid_num:1295.0, mean:1301.4, diff:47
+task HumanEval/120 cir 4 : input length
+Data with length 100, max_num:1401, min_num:1289, mid_num:1300.0, mean:1311.3, diff:112
+list_neighbor_diff : [24.42857142857133, 22.02857142857124, 9.899999999999864]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/121 cir 1 : input length
+Data with length 10, max_num:1161, min_num:1161, mid_num:1161.0, mean:1161.0, diff:0
+task HumanEval/121 cir 2 : input length
+Data with length 100, max_num:1166, min_num:1130, mid_num:1155.0, mean:1151.9, diff:36
+list_neighbor_diff : [9.099999999999909]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/122 cir 1 : input length
+Data with length 10, max_num:1069, min_num:1069, mid_num:1069.0, mean:1069.0, diff:0
+task HumanEval/122 cir 2 : input length
+Data with length 90, max_num:1099, min_num:1058, mid_num:1069.0, mean:1075.111111111111, diff:41
+task HumanEval/122 cir 3 : input length
+Data with length 100, max_num:1076, min_num:1053, mid_num:1062.5, mean:1063.5, diff:23
+task HumanEval/122 cir 4 : input length
+Data with length 100, max_num:1077, min_num:1053, mid_num:1060.5, mean:1064.0, diff:24
+task HumanEval/122 cir 5 : input length
+Data with length 100, max_num:1077, min_num:1053, mid_num:1059.0, mean:1060.9, diff:24
+task HumanEval/122 cir 6 : input length
+Data with length 100, max_num:1081, min_num:1053, mid_num:1060.0, mean:1063.7, diff:28
+task HumanEval/122 cir 7 : input length
+Data with length 100, max_num:1085, min_num:1049, mid_num:1059.0, mean:1065.9, diff:36
+task HumanEval/122 cir 8 : input length
+Data with length 100, max_num:1085, min_num:1053, mid_num:1066.0, mean:1068.2, diff:32
+list_neighbor_diff : [6.111111111111086, 11.611111111111086, 0.5, 3.099999999999909, 2.7999999999999545, 2.2000000000000455, 2.2999999999999545]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/123 cir 1 : input length
+Data with length 10, max_num:1161, min_num:1161, mid_num:1161.0, mean:1161.0, diff:0
+task HumanEval/123 cir 2 : input length
+Data with length 90, max_num:1170, min_num:1160, mid_num:1166.0, mean:1165.111111111111, diff:10
+task HumanEval/123 cir 3 : input length
+Data with length 100, max_num:1199, min_num:1121, mid_num:1173.5, mean:1171.7, diff:78
+task HumanEval/123 cir 4 : input length
+Data with length 100, max_num:1188, min_num:1113, mid_num:1174.0, mean:1169.1, diff:75
+task HumanEval/123 cir 5 : input length
+Data with length 100, max_num:1187, min_num:1107, mid_num:1156.0, mean:1150.9, diff:80
+task HumanEval/123 cir 6 : input length
+Data with length 100, max_num:1187, min_num:1107, mid_num:1133.0, mean:1138.7, diff:80
+task HumanEval/123 cir 7 : input length
+Data with length 100, max_num:1187, min_num:1107, mid_num:1121.5, mean:1135.6, diff:80
+list_neighbor_diff : [4.111111111111086, 6.58888888888896, 2.6000000000001364, 18.199999999999818, 12.200000000000045, 3.1000000000001364]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/125 cir 1 : input length
+Data with length 10, max_num:1156, min_num:1156, mid_num:1156.0, mean:1156.0, diff:0
+task HumanEval/125 cir 2 : input length
+Data with length 100, max_num:1173, min_num:1126, mid_num:1151.0, mean:1147.7, diff:47
+task HumanEval/125 cir 3 : input length
+Data with length 100, max_num:1211, min_num:1121, mid_num:1140.5, mean:1148.1, diff:90
+task HumanEval/125 cir 4 : input length
+Data with length 100, max_num:1239, min_num:1168, mid_num:1214.5, mean:1209.0, diff:71
+task HumanEval/125 cir 5 : input length
+Data with length 100, max_num:1253, min_num:1168, mid_num:1196.0, mean:1198.7, diff:85
+task HumanEval/125 cir 6 : input length
+Data with length 100, max_num:1236, min_num:1174, mid_num:1205.5, mean:1205.4, diff:62
+task HumanEval/125 cir 7 : input length
+Data with length 100, max_num:1261, min_num:1175, mid_num:1209.5, mean:1210.9, diff:86
+task HumanEval/125 cir 8 : input length
+Data with length 100, max_num:1251, min_num:1182, mid_num:1232.0, mean:1221.0, diff:69
+task HumanEval/125 cir 9 : input length
+Data with length 100, max_num:1259, min_num:1187, mid_num:1236.0, mean:1235.3, diff:72
+task HumanEval/125 cir 10 : input length
+Data with length 100, max_num:1263, min_num:1202, mid_num:1235.0, mean:1237.7, diff:61
+list_neighbor_diff : [8.299999999999955, 0.3999999999998636, 60.90000000000009, 10.299999999999955, 6.7000000000000455, 5.5, 10.099999999999909, 14.299999999999955, 2.400000000000091]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/127 cir 1 : input length
+Data with length 10, max_num:1325, min_num:1325, mid_num:1325.0, mean:1325.0, diff:0
+task HumanEval/127 cir 2 : input length
+Data with length 100, max_num:1392, min_num:1304, mid_num:1324.5, mean:1332.3, diff:88
+list_neighbor_diff : [7.2999999999999545]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/128 cir 1 : input length
+Data with length 10, max_num:1132, min_num:1132, mid_num:1132.0, mean:1132.0, diff:0
+task HumanEval/128 cir 2 : input length
+Data with length 80, max_num:1149, min_num:1111, mid_num:1139.0, mean:1135.75, diff:38
+task HumanEval/128 cir 3 : input length
+Data with length 100, max_num:1162, min_num:1111, mid_num:1129.0, mean:1128.9, diff:51
+task HumanEval/128 cir 4 : input length
+Data with length 100, max_num:1127, min_num:1111, mid_num:1115.5, mean:1118.1, diff:16
+task HumanEval/128 cir 5 : input length
+Data with length 100, max_num:1131, min_num:1124, mid_num:1127.5, mean:1127.5, diff:7
+task HumanEval/128 cir 6 : input length
+Data with length 100, max_num:1139, min_num:1124, mid_num:1126.5, mean:1128.6, diff:15
+task HumanEval/128 cir 7 : input length
+Data with length 100, max_num:1143, min_num:1124, mid_num:1129.5, mean:1131.2, diff:19
+task HumanEval/128 cir 8 : input length
+Data with length 100, max_num:1139, min_num:1124, mid_num:1131.0, mean:1131.0, diff:15
+task HumanEval/128 cir 9 : input length
+Data with length 100, max_num:1149, min_num:1124, mid_num:1134.0, mean:1134.5, diff:25
+task HumanEval/128 cir 10 : input length
+Data with length 100, max_num:1139, min_num:1126, mid_num:1133.5, mean:1132.8, diff:13
+list_neighbor_diff : [3.75, 6.849999999999909, 10.800000000000182, 9.400000000000091, 1.099999999999909, 2.6000000000001364, 0.20000000000004547, 3.5, 1.7000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/141 cir 1 : input length
+Data with length 10, max_num:1297, min_num:1297, mid_num:1297.0, mean:1297.0, diff:0
+task HumanEval/141 cir 2 : input length
+Data with length 90, max_num:1330, min_num:1133, mid_num:1281.0, mean:1251.888888888889, diff:197
+list_neighbor_diff : [45.111111111111086]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/142 cir 1 : input length
+Data with length 10, max_num:1272, min_num:1272, mid_num:1272.0, mean:1272.0, diff:0
+task HumanEval/142 cir 2 : input length
+Data with length 60, max_num:1272, min_num:1228, mid_num:1270.0, mean:1256.6666666666667, diff:44
+task HumanEval/142 cir 3 : input length
+Data with length 100, max_num:1280, min_num:1228, mid_num:1233.5, mean:1245.2, diff:52
+task HumanEval/142 cir 4 : input length
+Data with length 100, max_num:1280, min_num:1220, mid_num:1234.5, mean:1240.1, diff:60
+task HumanEval/142 cir 5 : input length
+Data with length 100, max_num:1265, min_num:1226, mid_num:1230.5, mean:1236.9, diff:39
+task HumanEval/142 cir 6 : input length
+Data with length 100, max_num:1297, min_num:1225, mid_num:1246.5, mean:1248.2, diff:72
+task HumanEval/142 cir 7 : input length
+Data with length 100, max_num:1297, min_num:1211, mid_num:1247.0, mean:1249.9, diff:86
+list_neighbor_diff : [15.333333333333258, 11.466666666666697, 5.100000000000136, 3.199999999999818, 11.299999999999955, 1.7000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/143 cir 1 : input length
+Data with length 10, max_num:1135, min_num:1135, mid_num:1135.0, mean:1135.0, diff:0
+task HumanEval/143 cir 2 : input length
+Data with length 90, max_num:1151, min_num:1111, mid_num:1136.0, mean:1134.111111111111, diff:40
+list_neighbor_diff : [0.8888888888889142]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/144 cir 1 : input length
+Data with length 10, max_num:1186, min_num:1186, mid_num:1186.0, mean:1186.0, diff:0
+task HumanEval/144 cir 2 : input length
+Data with length 100, max_num:1203, min_num:1169, mid_num:1194.5, mean:1191.7, diff:34
+task HumanEval/144 cir 3 : input length
+Data with length 100, max_num:1232, min_num:1162, mid_num:1187.5, mean:1191.6, diff:70
+task HumanEval/144 cir 4 : input length
+Data with length 100, max_num:1232, min_num:1137, mid_num:1196.0, mean:1192.5, diff:95
+task HumanEval/144 cir 5 : input length
+Data with length 100, max_num:1269, min_num:1132, mid_num:1188.5, mean:1187.0, diff:137
+list_neighbor_diff : [5.7000000000000455, 0.10000000000013642, 0.900000000000091, 5.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/145 cir 1 : input length
+Data with length 10, max_num:1109, min_num:1109, mid_num:1109.0, mean:1109.0, diff:0
+task HumanEval/145 cir 2 : input length
+Data with length 40, max_num:1177, min_num:1105, mid_num:1113.0, mean:1127.0, diff:72
+task HumanEval/145 cir 3 : input length
+Data with length 100, max_num:1182, min_num:1105, mid_num:1120.0, mean:1134.2, diff:77
+task HumanEval/145 cir 4 : input length
+Data with length 100, max_num:1129, min_num:1105, mid_num:1112.0, mean:1113.8, diff:24
+task HumanEval/145 cir 5 : input length
+Data with length 100, max_num:1113, min_num:1105, mid_num:1111.0, mean:1110.1, diff:8
+task HumanEval/145 cir 6 : input length
+Data with length 100, max_num:1143, min_num:1105, mid_num:1112.5, mean:1116.2, diff:38
+task HumanEval/145 cir 7 : input length
+Data with length 100, max_num:1143, min_num:1105, mid_num:1113.5, mean:1118.1, diff:38
+task HumanEval/145 cir 8 : input length
+Data with length 100, max_num:1146, min_num:1109, mid_num:1119.0, mean:1122.0, diff:37
+task HumanEval/145 cir 9 : input length
+Data with length 100, max_num:1140, min_num:1102, mid_num:1112.0, mean:1114.8, diff:38
+task HumanEval/145 cir 10 : input length
+Data with length 100, max_num:1140, min_num:1102, mid_num:1112.0, mean:1115.5, diff:38
+list_neighbor_diff : [18.0, 7.2000000000000455, 20.40000000000009, 3.7000000000000455, 6.100000000000136, 1.8999999999998636, 3.900000000000091, 7.2000000000000455, 0.7000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/146 cir 1 : input length
+Data with length 10, max_num:1141, min_num:1141, mid_num:1141.0, mean:1141.0, diff:0
+task HumanEval/146 cir 2 : input length
+Data with length 40, max_num:1165, min_num:1068, mid_num:1141.5, mean:1129.0, diff:97
+task HumanEval/146 cir 3 : input length
+Data with length 100, max_num:1165, min_num:1134, mid_num:1154.5, mean:1151.8, diff:31
+task HumanEval/146 cir 4 : input length
+Data with length 100, max_num:1202, min_num:1133, mid_num:1141.0, mean:1151.4, diff:69
+list_neighbor_diff : [12.0, 22.799999999999955, 0.3999999999998636]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/147 cir 1 : input length
+Data with length 10, max_num:1055, min_num:1055, mid_num:1055.0, mean:1055.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/151 cir 1 : input length
+Data with length 10, max_num:1259, min_num:1259, mid_num:1259.0, mean:1259.0, diff:0
+task HumanEval/151 cir 2 : input length
+Data with length 40, max_num:1280, min_num:1259, mid_num:1267.0, mean:1268.25, diff:21
+list_neighbor_diff : [9.25]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/152 cir 1 : input length
+Data with length 10, max_num:1337, min_num:1337, mid_num:1337.0, mean:1337.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/153 cir 1 : input length
+Data with length 10, max_num:1234, min_num:1234, mid_num:1234.0, mean:1234.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/130 cir 1 : input length
+Data with length 10, max_num:1156, min_num:1156, mid_num:1156.0, mean:1156.0, diff:0
+task HumanEval/130 cir 2 : input length
+Data with length 100, max_num:1238, min_num:1149, mid_num:1157.5, mean:1175.4, diff:89
+task HumanEval/130 cir 3 : input length
+Data with length 100, max_num:1247, min_num:1169, mid_num:1223.0, mean:1218.0, diff:78
+task HumanEval/130 cir 4 : input length
+Data with length 100, max_num:1240, min_num:1174, mid_num:1220.0, mean:1213.6, diff:66
+task HumanEval/130 cir 5 : input length
+Data with length 100, max_num:1237, min_num:1161, mid_num:1220.0, mean:1209.6, diff:76
+task HumanEval/130 cir 6 : input length
+Data with length 100, max_num:1239, min_num:1161, mid_num:1225.5, mean:1211.7, diff:78
+task HumanEval/130 cir 7 : input length
+Data with length 100, max_num:1237, min_num:1144, mid_num:1214.0, mean:1205.1, diff:93
+task HumanEval/130 cir 8 : input length
+Data with length 100, max_num:1237, min_num:1144, mid_num:1211.5, mean:1204.4, diff:93
+task HumanEval/130 cir 9 : input length
+Data with length 100, max_num:1240, min_num:1149, mid_num:1225.0, mean:1215.1, diff:91
+task HumanEval/130 cir 10 : input length
+Data with length 100, max_num:1240, min_num:1149, mid_num:1217.5, mean:1216.9, diff:91
+list_neighbor_diff : [19.40000000000009, 42.59999999999991, 4.400000000000091, 4.0, 2.1000000000001364, 6.600000000000136, 0.6999999999998181, 10.699999999999818, 1.800000000000182]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/131 cir 1 : input length
+Data with length 10, max_num:1034, min_num:1034, mid_num:1034.0, mean:1034.0, diff:0
+task HumanEval/131 cir 2 : input length
+Data with length 90, max_num:1061, min_num:1014, mid_num:1031.0, mean:1035.6666666666667, diff:47
+task HumanEval/131 cir 3 : input length
+Data with length 100, max_num:1061, min_num:1013, mid_num:1033.5, mean:1035.0, diff:48
+task HumanEval/131 cir 4 : input length
+Data with length 100, max_num:1063, min_num:1007, mid_num:1024.5, mean:1027.2, diff:56
+task HumanEval/131 cir 5 : input length
+Data with length 100, max_num:1043, min_num:1017, mid_num:1030.0, mean:1028.1, diff:26
+task HumanEval/131 cir 6 : input length
+Data with length 100, max_num:1029, min_num:1014, mid_num:1018.0, mean:1020.3, diff:15
+task HumanEval/131 cir 7 : input length
+Data with length 100, max_num:1039, min_num:1017, mid_num:1022.5, mean:1023.9, diff:22
+task HumanEval/131 cir 8 : input length
+Data with length 100, max_num:1028, min_num:1015, mid_num:1019.5, mean:1020.7, diff:13
+task HumanEval/131 cir 9 : input length
+Data with length 100, max_num:1051, min_num:1014, mid_num:1022.5, mean:1026.8, diff:37
+task HumanEval/131 cir 10 : input length
+Data with length 100, max_num:1051, min_num:1014, mid_num:1023.5, mean:1025.4, diff:37
+list_neighbor_diff : [1.6666666666667425, 0.6666666666667425, 7.7999999999999545, 0.8999999999998636, 7.7999999999999545, 3.6000000000000227, 3.199999999999932, 6.099999999999909, 1.3999999999998636]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/133 cir 1 : input length
+Data with length 10, max_num:1298, min_num:1298, mid_num:1298.0, mean:1298.0, diff:0
+task HumanEval/133 cir 2 : input length
+Data with length 80, max_num:1326, min_num:1298, mid_num:1306.5, mean:1307.625, diff:28
+list_neighbor_diff : [9.625]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/134 cir 1 : input length
+Data with length 10, max_num:1310, min_num:1310, mid_num:1310.0, mean:1310.0, diff:0
+task HumanEval/134 cir 2 : input length
+Data with length 90, max_num:1342, min_num:1296, mid_num:1312.0, mean:1311.7777777777778, diff:46
+task HumanEval/134 cir 3 : input length
+Data with length 100, max_num:1359, min_num:1290, mid_num:1312.0, mean:1314.2, diff:69
+task HumanEval/134 cir 4 : input length
+Data with length 100, max_num:1332, min_num:1297, mid_num:1317.0, mean:1316.8, diff:35
+list_neighbor_diff : [1.7777777777778283, 2.422222222222217, 2.599999999999909]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/135 cir 1 : input length
+Data with length 10, max_num:1057, min_num:1057, mid_num:1057.0, mean:1057.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/136 cir 1 : input length
+Data with length 10, max_num:1219, min_num:1219, mid_num:1219.0, mean:1219.0, diff:0
+task HumanEval/136 cir 2 : input length
+Data with length 100, max_num:1277, min_num:1218, mid_num:1223.0, mean:1232.5, diff:59
+list_neighbor_diff : [13.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/74 cir 1 : input length
+Data with length 10, max_num:1443, min_num:1443, mid_num:1443.0, mean:1443.0, diff:0
+task HumanEval/74 cir 2 : input length
+Data with length 40, max_num:1488, min_num:1443, mid_num:1457.5, mean:1461.5, diff:45
+task HumanEval/74 cir 3 : input length
+Data with length 100, max_num:1485, min_num:1440, mid_num:1462.5, mean:1464.0, diff:45
+task HumanEval/74 cir 4 : input length
+Data with length 100, max_num:1477, min_num:1448, mid_num:1459.5, mean:1460.9, diff:29
+task HumanEval/74 cir 5 : input length
+Data with length 100, max_num:1477, min_num:1448, mid_num:1459.0, mean:1459.0, diff:29
+task HumanEval/74 cir 6 : input length
+Data with length 100, max_num:1477, min_num:1448, mid_num:1457.0, mean:1458.9, diff:29
+task HumanEval/74 cir 7 : input length
+Data with length 100, max_num:1477, min_num:1448, mid_num:1457.0, mean:1458.3, diff:29
+task HumanEval/74 cir 8 : input length
+Data with length 100, max_num:1463, min_num:1450, mid_num:1456.0, mean:1457.1, diff:13
+task HumanEval/74 cir 9 : input length
+Data with length 100, max_num:1464, min_num:1450, mid_num:1457.0, mean:1457.3, diff:14
+task HumanEval/74 cir 10 : input length
+Data with length 100, max_num:1461, min_num:1450, mid_num:1455.0, mean:1455.3, diff:11
+list_neighbor_diff : [18.5, 2.5, 3.099999999999909, 1.900000000000091, 0.09999999999990905, 0.6000000000001364, 1.2000000000000455, 0.20000000000004547, 2.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/87 cir 1 : input length
+Data with length 10, max_num:1507, min_num:1507, mid_num:1507.0, mean:1507.0, diff:0
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/158 cir 1 : input length
+Data with length 10, max_num:1150, min_num:1150, mid_num:1150.0, mean:1150.0, diff:0
+task HumanEval/158 cir 2 : input length
+Data with length 70, max_num:1228, min_num:1150, mid_num:1163.0, mean:1176.5714285714287, diff:78
+list_neighbor_diff : [26.57142857142867]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/159 cir 1 : input length
+Data with length 10, max_num:1485, min_num:1485, mid_num:1485.0, mean:1485.0, diff:0
+task HumanEval/159 cir 2 : input length
+Data with length 100, max_num:1514, min_num:1455, mid_num:1485.0, mean:1483.7, diff:59
+task HumanEval/159 cir 3 : input length
+Data with length 100, max_num:1514, min_num:1459, mid_num:1471.5, mean:1478.1, diff:55
+list_neighbor_diff : [1.2999999999999545, 5.600000000000136]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/160 cir 1 : input length
+Data with length 10, max_num:1179, min_num:1179, mid_num:1179.0, mean:1179.0, diff:0
+task HumanEval/160 cir 2 : input length
+Data with length 80, max_num:1295, min_num:1142, mid_num:1181.0, mean:1198.5, diff:153
+task HumanEval/160 cir 3 : input length
+Data with length 100, max_num:1322, min_num:1168, mid_num:1250.0, mean:1257.9, diff:154
+task HumanEval/160 cir 4 : input length
+Data with length 100, max_num:1385, min_num:1212, mid_num:1284.5, mean:1291.5, diff:173
+list_neighbor_diff : [19.5, 59.40000000000009, 33.59999999999991]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/161 cir 1 : input length
+Data with length 10, max_num:1114, min_num:1114, mid_num:1114.0, mean:1114.0, diff:0
+task HumanEval/161 cir 2 : input length
+Data with length 100, max_num:1163, min_num:1088, mid_num:1126.5, mean:1127.7, diff:75
+task HumanEval/161 cir 3 : input length
+Data with length 100, max_num:1166, min_num:1093, mid_num:1117.5, mean:1121.9, diff:73
+task HumanEval/161 cir 4 : input length
+Data with length 100, max_num:1127, min_num:1067, mid_num:1106.0, mean:1100.7, diff:60
+task HumanEval/161 cir 5 : input length
+Data with length 100, max_num:1141, min_num:1067, mid_num:1106.0, mean:1102.3, diff:74
+task HumanEval/161 cir 6 : input length
+Data with length 100, max_num:1141, min_num:1067, mid_num:1107.0, mean:1111.6, diff:74
+task HumanEval/161 cir 7 : input length
+Data with length 100, max_num:1141, min_num:1093, mid_num:1111.0, mean:1112.2, diff:48
+task HumanEval/161 cir 8 : input length
+Data with length 100, max_num:1127, min_num:1093, mid_num:1109.0, mean:1110.2, diff:34
+task HumanEval/161 cir 9 : input length
+Data with length 100, max_num:1141, min_num:1084, mid_num:1105.5, mean:1110.6, diff:57
+task HumanEval/161 cir 10 : input length
+Data with length 100, max_num:1140, min_num:1084, mid_num:1107.5, mean:1112.7, diff:56
+list_neighbor_diff : [13.700000000000045, 5.7999999999999545, 21.200000000000045, 1.599999999999909, 9.299999999999955, 0.6000000000001364, 2.0, 0.3999999999998636, 2.1000000000001364]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/163 cir 1 : input length
+Data with length 10, max_num:1165, min_num:1165, mid_num:1165.0, mean:1165.0, diff:0
+task HumanEval/163 cir 2 : input length
+Data with length 60, max_num:1187, min_num:1160, mid_num:1165.0, mean:1168.6666666666667, diff:27
+task HumanEval/163 cir 3 : input length
+Data with length 100, max_num:1179, min_num:1150, mid_num:1165.0, mean:1165.8, diff:29
+task HumanEval/163 cir 4 : input length
+Data with length 100, max_num:1185, min_num:1149, mid_num:1168.5, mean:1168.4, diff:36
+task HumanEval/163 cir 5 : input length
+Data with length 100, max_num:1200, min_num:1121, mid_num:1174.0, mean:1167.9, diff:79
+task HumanEval/163 cir 6 : input length
+Data with length 100, max_num:1232, min_num:1147, mid_num:1178.0, mean:1178.4, diff:85
+task HumanEval/163 cir 7 : input length
+Data with length 100, max_num:1247, min_num:1136, mid_num:1200.0, mean:1198.7, diff:111
+task HumanEval/163 cir 8 : input length
+Data with length 100, max_num:1233, min_num:1145, mid_num:1198.0, mean:1183.0, diff:88
+task HumanEval/163 cir 9 : input length
+Data with length 100, max_num:1238, min_num:1138, mid_num:1150.0, mean:1169.0, diff:100
+task HumanEval/163 cir 10 : input length
+Data with length 100, max_num:1238, min_num:1145, mid_num:1178.0, mean:1180.9, diff:93
+list_neighbor_diff : [3.6666666666667425, 2.866666666666788, 2.6000000000001364, 0.5, 10.5, 20.299999999999955, 15.700000000000045, 14.0, 11.900000000000091]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/68 cir 1 : input length
+Data with length 10, max_num:1486, min_num:1486, mid_num:1486.0, mean:1486.0, diff:0
+task HumanEval/68 cir 2 : input length
+Data with length 90, max_num:1516, min_num:1432, mid_num:1490.0, mean:1491.0, diff:84
+task HumanEval/68 cir 3 : input length
+Data with length 100, max_num:1539, min_num:1413, mid_num:1477.0, mean:1468.9, diff:126
+task HumanEval/68 cir 4 : input length
+Data with length 100, max_num:1547, min_num:1486, mid_num:1513.0, mean:1514.0, diff:61
+list_neighbor_diff : [5.0, 22.09999999999991, 45.09999999999991]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/133 cir 1 : input length
+Data with length 10, max_num:1298, min_num:1298, mid_num:1298.0, mean:1298.0, diff:0
+task HumanEval/133 cir 2 : input length
+Data with length 80, max_num:1321, min_num:1298, mid_num:1302.5, mean:1304.875, diff:23
+list_neighbor_diff : [6.875]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/105 cir 1 : input length
+Data with length 10, max_num:1574, min_num:1574, mid_num:1574.0, mean:1574.0, diff:0
+task HumanEval/105 cir 2 : input length
+Data with length 70, max_num:1628, min_num:1447, mid_num:1586.0, mean:1566.7142857142858, diff:181
+task HumanEval/105 cir 3 : input length
+Data with length 100, max_num:1624, min_num:1420, mid_num:1580.0, mean:1555.6, diff:204
+task HumanEval/105 cir 4 : input length
+Data with length 100, max_num:1624, min_num:1489, mid_num:1542.5, mean:1546.8, diff:135
+task HumanEval/105 cir 5 : input length
+Data with length 100, max_num:1573, min_num:1438, mid_num:1496.0, mean:1502.8, diff:135
+task HumanEval/105 cir 6 : input length
+Data with length 100, max_num:1560, min_num:1440, mid_num:1492.0, mean:1495.2, diff:120
+task HumanEval/105 cir 7 : input length
+Data with length 100, max_num:1560, min_num:1470, mid_num:1500.5, mean:1507.2, diff:90
+task HumanEval/105 cir 8 : input length
+Data with length 100, max_num:1560, min_num:1471, mid_num:1504.5, mean:1512.1, diff:89
+task HumanEval/105 cir 9 : input length
+Data with length 100, max_num:1560, min_num:1458, mid_num:1504.5, mean:1510.9, diff:102
+task HumanEval/105 cir 10 : input length
+Data with length 100, max_num:1560, min_num:1423, mid_num:1513.0, mean:1492.4, diff:137
+list_neighbor_diff : [7.285714285714221, 11.11428571428587, 8.799999999999955, 44.0, 7.599999999999909, 12.0, 4.899999999999864, 1.199999999999818, 18.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/106 cir 1 : input length
+Data with length 10, max_num:1057, min_num:1057, mid_num:1057.0, mean:1057.0, diff:0
+task HumanEval/106 cir 2 : input length
+Data with length 30, max_num:1062, min_num:1051, mid_num:1057.0, mean:1056.6666666666667, diff:11
+task HumanEval/106 cir 3 : input length
+Data with length 90, max_num:1125, min_num:1051, mid_num:1062.0, mean:1071.6666666666667, diff:74
+task HumanEval/106 cir 4 : input length
+Data with length 100, max_num:1074, min_num:1052, mid_num:1063.0, mean:1062.9, diff:22
+task HumanEval/106 cir 5 : input length
+Data with length 100, max_num:1084, min_num:1055, mid_num:1065.0, mean:1067.0, diff:29
+task HumanEval/106 cir 6 : input length
+Data with length 100, max_num:1085, min_num:1059, mid_num:1077.5, mean:1074.4, diff:26
+task HumanEval/106 cir 7 : input length
+Data with length 100, max_num:1085, min_num:1059, mid_num:1077.5, mean:1074.7, diff:26
+task HumanEval/106 cir 8 : input length
+Data with length 100, max_num:1085, min_num:1062, mid_num:1075.5, mean:1073.7, diff:23
+task HumanEval/106 cir 9 : input length
+Data with length 100, max_num:1099, min_num:1065, mid_num:1079.0, mean:1079.2, diff:34
+task HumanEval/106 cir 10 : input length
+Data with length 100, max_num:1099, min_num:1059, mid_num:1081.5, mean:1082.7, diff:40
+list_neighbor_diff : [0.33333333333325754, 15.0, 8.766666666666652, 4.099999999999909, 7.400000000000091, 0.2999999999999545, 1.0, 5.5, 3.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/110 cir 1 : input length
+Data with length 10, max_num:1243, min_num:1243, mid_num:1243.0, mean:1243.0, diff:0
+task HumanEval/110 cir 2 : input length
+Data with length 100, max_num:1336, min_num:1210, mid_num:1260.0, mean:1263.8, diff:126
+list_neighbor_diff : [20.799999999999955]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/111 cir 1 : input length
+Data with length 10, max_num:1386, min_num:1386, mid_num:1386.0, mean:1386.0, diff:0
+task HumanEval/111 cir 2 : input length
+Data with length 60, max_num:1458, min_num:1308, mid_num:1430.5, mean:1409.1666666666667, diff:150
+task HumanEval/111 cir 3 : input length
+Data with length 100, max_num:1460, min_num:1420, mid_num:1439.0, mean:1436.8, diff:40
+task HumanEval/111 cir 4 : input length
+Data with length 100, max_num:1434, min_num:1360, mid_num:1425.0, mean:1419.6, diff:74
+task HumanEval/111 cir 5 : input length
+Data with length 100, max_num:1434, min_num:1361, mid_num:1428.0, mean:1410.5, diff:73
+task HumanEval/111 cir 6 : input length
+Data with length 100, max_num:1432, min_num:1361, mid_num:1367.5, mean:1376.4, diff:71
+task HumanEval/111 cir 7 : input length
+Data with length 100, max_num:1392, min_num:1361, mid_num:1367.0, mean:1371.4, diff:31
+task HumanEval/111 cir 8 : input length
+Data with length 100, max_num:1392, min_num:1361, mid_num:1371.0, mean:1375.0, diff:31
+task HumanEval/111 cir 9 : input length
+Data with length 100, max_num:1388, min_num:1361, mid_num:1373.0, mean:1374.2, diff:27
+task HumanEval/111 cir 10 : input length
+Data with length 100, max_num:1388, min_num:1367, mid_num:1375.0, mean:1376.9, diff:21
+list_neighbor_diff : [23.166666666666742, 27.633333333333212, 17.200000000000045, 9.099999999999909, 34.09999999999991, 5.0, 3.599999999999909, 0.7999999999999545, 2.7000000000000455]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/112 cir 1 : input length
+Data with length 10, max_num:1193, min_num:1193, mid_num:1193.0, mean:1193.0, diff:0
+task HumanEval/112 cir 2 : input length
+Data with length 100, max_num:1238, min_num:1183, mid_num:1201.5, mean:1203.0, diff:55
+list_neighbor_diff : [10.0]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/113 cir 1 : input length
+Data with length 10, max_num:1313, min_num:1313, mid_num:1313.0, mean:1313.0, diff:0
+task HumanEval/113 cir 2 : input length
+Data with length 50, max_num:1362, min_num:1299, mid_num:1314.0, mean:1321.0, diff:63
+task HumanEval/113 cir 3 : input length
+Data with length 100, max_num:1399, min_num:1307, mid_num:1333.5, mean:1340.3, diff:92
+task HumanEval/113 cir 4 : input length
+Data with length 100, max_num:1616, min_num:1271, mid_num:1371.0, mean:1388.6, diff:345
+task HumanEval/113 cir 5 : input length
+Data with length 100, max_num:1573, min_num:1271, mid_num:1357.5, mean:1372.9, diff:302
+task HumanEval/113 cir 6 : input length
+Data with length 100, max_num:1577, min_num:1271, mid_num:1351.5, mean:1390.5, diff:306
+task HumanEval/113 cir 7 : input length
+Data with length 100, max_num:1573, min_num:1315, mid_num:1350.0, mean:1383.4, diff:258
+task HumanEval/113 cir 8 : input length
+Data with length 100, max_num:1555, min_num:1311, mid_num:1353.5, mean:1384.6, diff:244
+task HumanEval/113 cir 9 : input length
+Data with length 100, max_num:1606, min_num:1298, mid_num:1415.5, mean:1412.3, diff:308
+task HumanEval/113 cir 10 : input length
+Data with length 100, max_num:1606, min_num:1298, mid_num:1411.5, mean:1398.1, diff:308
+list_neighbor_diff : [8.0, 19.299999999999955, 48.299999999999955, 15.699999999999818, 17.59999999999991, 7.099999999999909, 1.199999999999818, 27.700000000000045, 14.200000000000045]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/148 cir 1 : input length
+Data with length 10, max_num:1334, min_num:1334, mid_num:1334.0, mean:1334.0, diff:0
+task HumanEval/148 cir 2 : input length
+Data with length 80, max_num:1565, min_num:1333, mid_num:1344.0, mean:1373.75, diff:232
+task HumanEval/148 cir 3 : input length
+Data with length 100, max_num:1558, min_num:1333, mid_num:1384.0, mean:1417.1, diff:225
+task HumanEval/148 cir 4 : input length
+Data with length 100, max_num:1560, min_num:1332, mid_num:1486.5, mean:1462.1, diff:228
+task HumanEval/148 cir 5 : input length
+Data with length 100, max_num:1560, min_num:1463, mid_num:1491.0, mean:1502.5, diff:97
+task HumanEval/148 cir 6 : input length
+Data with length 100, max_num:1560, min_num:1473, mid_num:1491.5, mean:1504.5, diff:87
+task HumanEval/148 cir 7 : input length
+Data with length 100, max_num:1560, min_num:1423, mid_num:1489.0, mean:1501.1, diff:137
+task HumanEval/148 cir 8 : input length
+Data with length 100, max_num:1614, min_num:1423, mid_num:1474.0, mean:1487.4, diff:191
+task HumanEval/148 cir 9 : input length
+Data with length 100, max_num:1632, min_num:1423, mid_num:1474.5, mean:1499.4, diff:209
+task HumanEval/148 cir 10 : input length
+Data with length 100, max_num:1568, min_num:1465, mid_num:1528.0, mean:1522.9, diff:103
+list_neighbor_diff : [39.75, 43.34999999999991, 45.0, 40.40000000000009, 2.0, 3.400000000000091, 13.699999999999818, 12.0, 23.5]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/154 cir 1 : input length
+Data with length 10, max_num:1362, min_num:1362, mid_num:1362.0, mean:1362.0, diff:0
+task HumanEval/154 cir 2 : input length
+Data with length 100, max_num:1422, min_num:1344, mid_num:1400.0, mean:1389.4, diff:78
+task HumanEval/154 cir 3 : input length
+Data with length 100, max_num:1422, min_num:1299, mid_num:1343.5, mean:1353.0, diff:123
+task HumanEval/154 cir 4 : input length
+Data with length 100, max_num:1413, min_num:1311, mid_num:1344.5, mean:1358.8, diff:102
+task HumanEval/154 cir 5 : input length
+Data with length 100, max_num:1430, min_num:1335, mid_num:1406.0, mean:1389.8, diff:95
+task HumanEval/154 cir 6 : input length
+Data with length 100, max_num:1415, min_num:1328, mid_num:1369.0, mean:1366.5, diff:87
+task HumanEval/154 cir 7 : input length
+Data with length 100, max_num:1388, min_num:1337, mid_num:1355.0, mean:1360.5, diff:51
+task HumanEval/154 cir 8 : input length
+Data with length 100, max_num:1405, min_num:1317, mid_num:1348.5, mean:1354.7, diff:88
+task HumanEval/154 cir 9 : input length
+Data with length 100, max_num:1410, min_num:1334, mid_num:1374.5, mean:1371.6, diff:76
+task HumanEval/154 cir 10 : input length
+Data with length 100, max_num:1410, min_num:1324, mid_num:1371.0, mean:1368.2, diff:86
+list_neighbor_diff : [27.40000000000009, 36.40000000000009, 5.7999999999999545, 31.0, 23.299999999999955, 6.0, 5.7999999999999545, 16.899999999999864, 3.3999999999998636]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/155 cir 1 : input length
+Data with length 10, max_num:1049, min_num:1049, mid_num:1049.0, mean:1049.0, diff:0
+task HumanEval/155 cir 2 : input length
+Data with length 40, max_num:1068, min_num:1049, mid_num:1061.0, mean:1059.75, diff:19
+task HumanEval/155 cir 3 : input length
+Data with length 100, max_num:1073, min_num:1048, mid_num:1061.0, mean:1062.0, diff:25
+task HumanEval/155 cir 4 : input length
+Data with length 100, max_num:1081, min_num:1048, mid_num:1064.0, mean:1063.5, diff:33
+task HumanEval/155 cir 5 : input length
+Data with length 100, max_num:1083, min_num:1046, mid_num:1060.5, mean:1061.8, diff:37
+task HumanEval/155 cir 6 : input length
+Data with length 100, max_num:1083, min_num:1046, mid_num:1060.0, mean:1062.8, diff:37
+task HumanEval/155 cir 7 : input length
+Data with length 100, max_num:1064, min_num:1024, mid_num:1056.5, mean:1052.9, diff:40
+task HumanEval/155 cir 8 : input length
+Data with length 100, max_num:1098, min_num:1029, mid_num:1055.5, mean:1060.5, diff:69
+list_neighbor_diff : [10.75, 2.25, 1.5, 1.7000000000000455, 1.0, 9.899999999999864, 7.599999999999909]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/156 cir 1 : input length
+Data with length 10, max_num:1242, min_num:1242, mid_num:1242.0, mean:1242.0, diff:0
+task HumanEval/156 cir 2 : input length
+Data with length 60, max_num:1257, min_num:1233, mid_num:1242.0, mean:1243.3333333333333, diff:24
+task HumanEval/156 cir 3 : input length
+Data with length 100, max_num:1261, min_num:1239, mid_num:1246.0, mean:1248.1, diff:22
+task HumanEval/156 cir 4 : input length
+Data with length 100, max_num:1261, min_num:1239, mid_num:1246.0, mean:1248.0, diff:22
+task HumanEval/156 cir 5 : input length
+Data with length 100, max_num:1385, min_num:1240, mid_num:1255.0, mean:1264.7, diff:145
+task HumanEval/156 cir 6 : input length
+Data with length 100, max_num:1465, min_num:1252, mid_num:1263.0, mean:1317.7, diff:213
+task HumanEval/156 cir 7 : input length
+Data with length 100, max_num:1422, min_num:1240, mid_num:1279.0, mean:1317.5, diff:182
+task HumanEval/156 cir 8 : input length
+Data with length 100, max_num:1447, min_num:1255, mid_num:1295.5, mean:1326.8, diff:192
+task HumanEval/156 cir 9 : input length
+Data with length 100, max_num:1447, min_num:1264, mid_num:1295.5, mean:1331.0, diff:183
+task HumanEval/156 cir 10 : input length
+Data with length 100, max_num:1431, min_num:1281, mid_num:1311.0, mean:1331.8, diff:150
+list_neighbor_diff : [1.3333333333332575, 4.7666666666666515, 0.09999999999990905, 16.700000000000045, 53.0, 0.20000000000004547, 9.299999999999955, 4.2000000000000455, 0.7999999999999545]
+[[0], [16.5, 18.200000000000045, 16.700000000000045, 4.5, 0.7999999999999545, 0.3999999999998636, 5.300000000000182, 1.5, 9.699999999999818], [0], [0], [0], [7.444444444444343, 11.955555555555748], [20.200000000000045, 14.099999999999909, 11.299999999999955, 0.2999999999999545, 8.899999999999864, 6.199999999999818, 9.399999999999864, 0.599999999999909, 6.899999999999864], [0], [0], [0], [24.59999999999991, 10.0, 1.2000000000000455, 13.0, 19.40000000000009, 2.2999999999999545, 17.5, 6.899999999999864, 5.0], [0], [0], [0], [0], [0], [0], [5.599999999999909, 20.399999999999864, 8.0, 9.599999999999909, 10.600000000000136, 14.600000000000136, 0.6000000000001364, 12.399999999999864, 4.400000000000091], [0], [1.1000000000000227, 4.600000000000023, 0.20000000000004547, 1.8000000000000682, 3.2000000000000455, 3.1000000000000227, 0.6000000000000227, 1.1000000000000227, 0.39999999999997726], [0], [11.28571428571422, 10.985714285714266, 4.100000000000136, 8.699999999999818, 20.200000000000045, 0.6000000000001364, 2.2999999999999545, 0.3999999999998636, 2.0], [0], [0], [0], [1.7000000000000455], [3.3333333333333712, 0.2666666666666515, 11.199999999999932, 1.900000000000091, 2.0, 7.7999999999999545, 1.7000000000000455], [0], [0], [0], [0], [0], [220.22222222222217, 93.92222222222222, 156.70000000000005, 41.799999999999955, 74.79999999999995, 21.200000000000045, 2.3999999999998636, 16.299999999999955, 30.399999999999864], [3.0, 3.7000000000000455, 10.0, 4.2999999999999545, 5.899999999999864, 5.399999999999864, 2.900000000000091, 1.599999999999909, 11.899999999999864], [0], [0], [11.0, 7.400000000000091, 29.600000000000136, 10.0, 11.299999999999955, 16.799999999999955, 20.5, 22.799999999999955, 9.299999999999955], [1.5, 3.5, 2.900000000000091, 5.100000000000136, 9.899999999999864, 1.2000000000000455, 3.7999999999999545, 4.7000000000000455, 1.5], [51.75, 24.15000000000009, 10.300000000000182, 18.899999999999864, 5.2000000000000455, 13.599999999999909, 27.0, 8.600000000000136, 5.2000000000000455], [14.0, 21.700000000000045, 2.3999999999998636, 8.200000000000045, 10.100000000000136, 25.09999999999991, 22.0, 7.7999999999999545, 40.600000000000136], [0], [0], [0], [0], [0], [0], [21.42857142857133, 10.571428571428669, 7.7000000000000455, 6.7999999999999545], [7.0, 12.099999999999909, 4.2999999999999545, 15.299999999999955, 3.5, 11.900000000000091, 6.400000000000091, 2.2999999999999545, 5.7000000000000455], [0], [33.5], [0], [0], [0], [0], [2.6666666666667425], [0], [22.0], [12.571428571428669], [0], [0.25, 8.75, 0.900000000000091], [0], [10.799999999999955], [18.666666666666742], [17.75, 14.349999999999909, 2.2999999999999545, 1.7999999999999545], [0], [0.0], [4.714285714285779, 5.38571428571413, 7.300000000000182, 2.099999999999909, 5.099999999999909, 0.3999999999998636, 1.0, 0.40000000000009095, 5.5], [5.0, 10.900000000000091], [8.0, 3.5], [10.333333333333258, 6.7333333333333485, 11.199999999999818, 6.300000000000182, 1.900000000000091, 6.5, 2.400000000000091, 0.09999999999990905, 3.599999999999909], [1.599999999999909], [8.5], [12.444444444444343, 8.944444444444343, 22.5, 6.0, 10.200000000000045], [18.555555555555657, 4.744444444444298, 11.100000000000136, 11.400000000000091, 9.700000000000045, 8.799999999999955], [0], [3.2000000000000455, 10.600000000000136, 5.300000000000182, 9.0, 1.199999999999818, 4.399999999999864, 3.2999999999999545, 4.800000000000182, 1.7000000000000455], [4.6666666666667425, 8.233333333333348, 2.1000000000001364, 1.599999999999909, 1.3999999999998636, 1.6000000000001364, 2.0, 8.100000000000136, 6.699999999999818], [23.333333333333258, 16.666666666666742], [8.14285714285711, 8.542857142857201, 23.5, 7.2000000000000455], [0.0, 4.599999999999909, 8.100000000000136], [0.0, 42.0], [6.2000000000000455], [11.5, 5.5, 11.700000000000045, 7.199999999999932, 3.199999999999932, 0.900000000000091, 3.3999999999999773, 0.10000000000002274, 2.400000000000091], [10.900000000000091, 9.200000000000045], [0.0], [16.09999999999991, 30.799999999999955], [17.5, 24.799999999999955], [4.0, 3.7142857142857792, 3.2142857142857792, 2.599999999999909, 0.40000000000009095, 2.2000000000000455, 0.2999999999999545, 0.599999999999909, 2.5], [14.222222222222172, 9.977777777777874, 18.600000000000136, 14.0, 8.900000000000091, 33.299999999999955], [0], [0], [13.166666666666742, 23.133333333333212, 14.400000000000091, 2.2000000000000455, 1.0, 0.599999999999909, 5.399999999999864], [6.875, 0.8250000000000455], [66.0], [2.25, 8.450000000000045, 19.0], [0.5714285714286689], [0], [7.3333333333332575, 1.0666666666668334, 0.6000000000001364], [3.7142857142857792, 4.314285714285688, 5.699999999999818], [0], [9.5], [3.6666666666667425, 1.633333333333212, 1.599999999999909, 0.0, 0.7000000000000455, 0.3000000000001819, 0.0, 1.300000000000182, 0.6999999999998181], [11.125, 5.025000000000091, 2.2999999999999545, 5.5, 7.7999999999999545, 1.3999999999998636, 3.900000000000091, 5.7000000000000455, 0.6000000000001364], [0.125], [3.0, 1.0], [0], [3.111111111111086, 1.3888888888889142, 5.099999999999909, 8.900000000000091, 3.099999999999909], [1.5, 18.0, 24.09999999999991], [15.428571428571331, 2.3714285714286234, 3.7000000000000455, 7.0, 0.20000000000004547, 9.099999999999909, 1.599999999999909, 2.0, 11.900000000000091], [6.0, 2.0, 10.799999999999955, 57.5, 16.200000000000045, 17.200000000000045, 42.299999999999955, 24.59999999999991, 20.5], [20.85714285714289], [24.42857142857133, 22.02857142857124, 9.899999999999864], [9.099999999999909], [6.111111111111086, 11.611111111111086, 0.5, 3.099999999999909, 2.7999999999999545, 2.2000000000000455, 2.2999999999999545], [4.111111111111086, 6.58888888888896, 2.6000000000001364, 18.199999999999818, 12.200000000000045, 3.1000000000001364], [0], [8.299999999999955, 0.3999999999998636, 60.90000000000009, 10.299999999999955, 6.7000000000000455, 5.5, 10.099999999999909, 14.299999999999955, 2.400000000000091], [7.2999999999999545], [3.75, 6.849999999999909, 10.800000000000182, 9.400000000000091, 1.099999999999909, 2.6000000000001364, 0.20000000000004547, 3.5, 1.7000000000000455], [45.111111111111086], [15.333333333333258, 11.466666666666697, 5.100000000000136, 3.199999999999818, 11.299999999999955, 1.7000000000000455], [0.8888888888889142], [5.7000000000000455, 0.10000000000013642, 0.900000000000091, 5.5], [18.0, 7.2000000000000455, 20.40000000000009, 3.7000000000000455, 6.100000000000136, 1.8999999999998636, 3.900000000000091, 7.2000000000000455, 0.7000000000000455], [12.0, 22.799999999999955, 0.3999999999998636], [0], [0], [0], [9.25], [0], [0], [19.40000000000009, 42.59999999999991, 4.400000000000091, 4.0, 2.1000000000001364, 6.600000000000136, 0.6999999999998181, 10.699999999999818, 1.800000000000182], [1.6666666666667425, 0.6666666666667425, 7.7999999999999545, 0.8999999999998636, 7.7999999999999545, 3.6000000000000227, 3.199999999999932, 6.099999999999909, 1.3999999999998636], [9.625], [1.7777777777778283, 2.422222222222217, 2.599999999999909], [0], [13.5], [18.5, 2.5, 3.099999999999909, 1.900000000000091, 0.09999999999990905, 0.6000000000001364, 1.2000000000000455, 0.20000000000004547, 2.0], [0], [0], [26.57142857142867], [1.2999999999999545, 5.600000000000136], [19.5, 59.40000000000009, 33.59999999999991], [13.700000000000045, 5.7999999999999545, 21.200000000000045, 1.599999999999909, 9.299999999999955, 0.6000000000001364, 2.0, 0.3999999999998636, 2.1000000000001364], [0], [3.6666666666667425, 2.866666666666788, 2.6000000000001364, 0.5, 10.5, 20.299999999999955, 15.700000000000045, 14.0, 11.900000000000091], [5.0, 22.09999999999991, 45.09999999999991], [6.875], [7.285714285714221, 11.11428571428587, 8.799999999999955, 44.0, 7.599999999999909, 12.0, 4.899999999999864, 1.199999999999818, 18.5], [0.33333333333325754, 15.0, 8.766666666666652, 4.099999999999909, 7.400000000000091, 0.2999999999999545, 1.0, 5.5, 3.5], [20.799999999999955], [23.166666666666742, 27.633333333333212, 17.200000000000045, 9.099999999999909, 34.09999999999991, 5.0, 3.599999999999909, 0.7999999999999545, 2.7000000000000455], [10.0], [8.0, 19.299999999999955, 48.299999999999955, 15.699999999999818, 17.59999999999991, 7.099999999999909, 1.199999999999818, 27.700000000000045, 14.200000000000045], [39.75, 43.34999999999991, 45.0, 40.40000000000009, 2.0, 3.400000000000091, 13.699999999999818, 12.0, 23.5], [27.40000000000009, 36.40000000000009, 5.7999999999999545, 31.0, 23.299999999999955, 6.0, 5.7999999999999545, 16.899999999999864, 3.3999999999998636], [10.75, 2.25, 1.5, 1.7000000000000455, 1.0, 9.899999999999864, 7.599999999999909], [1.3333333333332575, 4.7666666666666515, 0.09999999999990905, 16.700000000000045, 53.0, 0.20000000000004547, 9.299999999999955, 4.2000000000000455, 0.7999999999999545]]
+Counter_with_base 10 : Counter({0: 387, 1: 102, 2: 39, 4: 12, 3: 9, 5: 4, 6: 2, 22: 1, 9: 1, 15: 1, 7: 1})
+Data with length 559, max_num:220.22222222222217, min_num:0, mid_num:5.2000000000000455, mean:9.499445580259536, diff:220.22222222222217

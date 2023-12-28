@@ -1,6 +1,8 @@
 import json
 import sys
-sys.path.append("/home/S/hexiaolong/codex/human-eval")
+# sys.path.append("/home/S/hexiaolong/codex/human-eval")
+sys.path.append("/home/S/hexiaolong/codex/self-debug")
+sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
 from human_eval.data import read_problems
 from human_eval.execution import run_code_with_output2, check_correctness
 from concurrent.futures import ThreadPoolExecutor
@@ -326,13 +328,13 @@ def fix_percent_eval(resfile):
                 
 if __name__=="__main__":
     # file = "../res/UTfeedback_multi_7b16k_full.jsonl"
-    file = "../res/UTfeedback_multiCODETfilter2_7b16k_pT.jsonl"
+    file = "../res/UTfeedback_CODETPassfirst_7b16k_pT.jsonl"
     # resfiles = ["UTfeedback_multiCODETfilter_7b16k_pT_29_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_58_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_86_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_113_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_140_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_163_full.jsonl"]
     # res_root = "../res/"
     # resfiles = [res_root+f for f in resfiles]
     # get_pass_all_multi_files(resfiles)
     # output_file = "../res/multi_with_pass/UTfeedback_multiSBSP10_7b16k_tT.jsonl"
-    passed_per_cir,task_cir = get_pass_1(file)
+    passed_per_cir,task_cir = get_pass_n(file)
     # passed_per_cir,task_cir = get_pass_n(file)
     # data = {"SBSP10_7b16k_tT":passed_per_cir}
     # time_evaluate(file)

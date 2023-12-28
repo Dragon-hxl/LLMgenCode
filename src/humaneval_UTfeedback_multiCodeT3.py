@@ -18,7 +18,7 @@ sys.path.append("/home/S/hexiaolong/codex/self-debug")
 sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
 from human_eval.data import read_problems
 from human_eval.execution import run_code_with_test_result,run_code_with_output2
-from myutils import map_gpu_memory,code_clean2,get_unit_test,prompt_for_64,filter_fix_ans,get_CODET_point2,get_CODET_point3,get_UTfeedback_prompt_v1,get_UTfeedback_prompt
+from myutils import map_gpu_memory,code_clean2,get_unit_test,prompt_for_64,filter_fix_ans,get_CODET_point2,get_CODET_point4,get_UTfeedback_prompt_v1,get_UTfeedback_prompt
 from utils.obj import Node
 
 """2023.12.16
@@ -33,10 +33,11 @@ UTfeedback_file = prompt_root + "prompt_UTfeedback.txt"
 data_root = "/home/S/hexiaolong/codex/self-debug/data/"
 ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
 true_tests_file = data_root + "test_from_check.jsonl"# 存放了最终用来check的unit_tests
-tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter_add.jsonl"# 用来进行CODET的tests文件
+tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter.jsonl"# 用来进行CODET的tests文件
 CODET_test_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_uniform.jsonl"
 # 控制是否加入CODET分数
 with_CODET_Point = True
+
 
 @hydra.main(version_base=None, config_path="../configs/", config_name="UTfeedback_config.yaml")
 def main(cfg: DictConfig):
@@ -73,12 +74,13 @@ def main(cfg: DictConfig):
         
     #读取用来进行CODET的tests
     testcases = {}
-    # limit = 5
+    limit = 10
     with open(tests_for_CODET_file,"r") as f:
         for line in f.readlines():
             testcases = json.loads(line)
             # for k,v in testcases.items():
             #     print(f"task {k} gen {len(v)} testcases")
+            # data = json.loads(line)
             # for k,v in data.items():
             #     limited_task_test_cases = [cases_per_sample[:limit] for cases_per_sample in v]
             #     limited_task_test_cases = sum(limited_task_test_cases, [])
@@ -108,11 +110,16 @@ def main(cfg: DictConfig):
     f = open(output_file,"w+",encoding="utf-8")
     if f and fullf:
         print(f"open file {output_file} success!")
+    # special_task = [148, 154, 155, 156]# 还不通过的,94,74,87,103,105,106,110,111,112,113,
+    # special_task2 = [94]#133,68,126,129,
+    # special_task = [68,94]
     for tid in taskids:
         print(f"get solution for task : {tid} with {len(unit_tests[tid])} tests.")
         num_id = int(tid.split("/")[1])
-        if num_id < 115 or num_id > 140:
+        if num_id < 109 or num_id > 113:
             continue
+        # if num_id not in special_task:
+        #     continue
         step_one_st = time.time()
         tprompt = problems[tid]["prompt"]
         if tid == "HumanEval/64":
@@ -207,7 +214,6 @@ def main(cfg: DictConfig):
                 # #     prompt,passn = get_UTfeedback_prompt(feedback_prompt, solution, code_res, run_test, test_res, assertions[tid])
                 # #     node.feedbackprompt = prompt
                 # #     node.passT_rate = passn
-                print("gen prompt")
                 prompt,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions[tid])
                 node.feedbackprompt = prompt
                 node.passT_rate = passn
@@ -217,26 +223,7 @@ def main(cfg: DictConfig):
                     stop=True
                     print("One node passed! Show it and it's parents.")
                     node.show_parents()
-                    break  
-                # with ThreadPoolExecutor(max_workers=1) as executor:
-                #     args = (problems[tid], (start_code+solution), run_test, checkp, 0.1)
-                #     future = executor.submit(run_code_with_output2, *args)
-                #     result = future.result()
-                #     passed = result["passed"]
-                #     code_res = result["result"]
-                # # print(f"task:{tid},cir:{cir},solution:{i},passed:{passed}")
-                # if passed:
-                #     stop=True #一个通过，终结循环
-                #     node.passT_rate = 1.0
-                #     print("One node passed! Show it and it's parents.")
-                #     node.show_parents()
-                #     break
-                # else:
-                #     prompt,passn = get_UTfeedback_prompt(feedback_prompt, solution, code_res, run_test, test_res, assertions[tid])
-                #     node.feedbackprompt = prompt
-                #     node.passT_rate = passn
-            # run_solutions_time = (time.time() - st)/60
-            # print(f"Run all solutions spends {run_solutions_time} mins.")
+                    break
             run_solutions_time = (time.time() - st)/60
             print(f"Run all solutions spends {run_solutions_time} mins.")
             
@@ -248,10 +235,19 @@ def main(cfg: DictConfig):
             if with_CODET_Point:
                 get_CODET_point2(total_nodes,testcases[tid],tid) #这里是使用去重后的还是不去重的
                 for node in total_nodes:
-                    node.CODET_pass_rate = (1.0*(node.pass_ut_num+len(node.CODET_pass_testcase)))/(node.total_ut_num+node.CODET_total_test_num)
+                    if (node.total_ut_num+node.CODET_total_test_num)!=0:
+                        node.CODET_pass_rate = (1.0*(node.pass_ut_num+len(node.CODET_pass_testcase)))/(node.total_ut_num+node.CODET_total_test_num)
+                    else:
+                        node.CODET_pass_rate = 0.0
                     if node.CODET_pass_rate > 1:
                         node.CODET_pass_rate = node.passT_rate
-                sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.CODET_pass_rate,x.prob),reverse=True)
+                sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.CODET_pass_rate,x.passT_rate,x.prob),reverse=True)
+                # chosen_nodes = get_CODET_point4(total_nodes,testcases[tid],tid)
+                # left_nodes = []
+                # for node in total_nodes:
+                #     if node in chosen_nodes:
+                #         continue
+                #     left_nodes.append(node)
 
             else:
                 sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
@@ -292,9 +288,6 @@ def main(cfg: DictConfig):
                 inputs = inputs.to('cuda')
                 fix_percent = 0 # (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
                 with torch.inference_mode():
-                    # preds = model.generate(**inputs, max_new_tokens=512, temperature=1.0,top_p=0.95,num_beams=sample_num, do_sample=True,num_return_sequences=sample_num)
-                    print(f"memory_allocated :{torch.cuda.memory_allocated()}")
-                    print(f"memory_allocated :{torch.cuda.memory_reserved()}")
                     preds = model.generate(**inputs, max_new_tokens=debug_maxLen, temperature=debug_temp,top_p=debug_top_p, do_sample=debug_do_sample,return_dict_in_generate=True,output_scores=True,num_return_sequences=10)#,temperature=0.4,repetition_penalty=1.1
                     transition_scores = model.compute_transition_scores(
                         preds.sequences, preds.scores, normalize_logits=True
