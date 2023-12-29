@@ -33,7 +33,7 @@ def worker(args):
 
 
 def main(res_file):
-    testcases_gened = show_gened_testcase(gened_testcase,verbose = False)
+    testcases_gened = load_testcase("../try/gen_test_t0.8_topp0.95_sample100_max300_rm.jsonl")
     problems = read_problems()
     task_ids = list(problems.keys())
     # init job args
@@ -72,4 +72,4 @@ def main(res_file):
     return
 
 if __name__=="__main__":
-    main("../try/gen_test_t0.8_topp0.95_sample100_max300_correct2.jsonl")
+    main("../try/gen_test_t0.8_topp0.95_sample100_max300_rm_correct.jsonl")

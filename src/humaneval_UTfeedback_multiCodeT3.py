@@ -33,7 +33,7 @@ UTfeedback_file = prompt_root + "prompt_UTfeedback.txt"
 data_root = "/home/S/hexiaolong/codex/self-debug/data/"
 ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
 true_tests_file = data_root + "test_from_check.jsonl"# 存放了最终用来check的unit_tests
-tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter.jsonl"# 用来进行CODET的tests文件
+tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_rm.jsonl"# 用来进行CODET的tests文件
 CODET_test_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_uniform.jsonl"
 # 控制是否加入CODET分数
 with_CODET_Point = True
@@ -77,15 +77,13 @@ def main(cfg: DictConfig):
     limit = 10
     with open(tests_for_CODET_file,"r") as f:
         for line in f.readlines():
-            testcases = json.loads(line)
-            # for k,v in testcases.items():
-            #     print(f"task {k} gen {len(v)} testcases")
-            # data = json.loads(line)
-            # for k,v in data.items():
-            #     limited_task_test_cases = [cases_per_sample[:limit] for cases_per_sample in v]
-            #     limited_task_test_cases = sum(limited_task_test_cases, [])
-            #     print(f"task {k} gen {len(limited_task_test_cases)} testcases")
-            #     testcases[k] = limited_task_test_cases
+            data = json.loads(line)
+            for k,v in data.items():
+                # limited_task_test_cases = [cases_per_sample[:limit] for cases_per_sample in v]
+                # limited_task_test_cases = sum(limited_task_test_cases, [])
+                limited_task_test_cases = v
+                print(f"task {k} gen {len(limited_task_test_cases)} testcases")
+                testcases[k] = limited_task_test_cases
     
 
     # 构成生成初始代码的prompt
@@ -116,7 +114,7 @@ def main(cfg: DictConfig):
     for tid in taskids:
         print(f"get solution for task : {tid} with {len(unit_tests[tid])} tests.")
         num_id = int(tid.split("/")[1])
-        if num_id < 109 or num_id > 113:
+        if num_id < 129 or num_id > 164:
             continue
         # if num_id not in special_task:
         #     continue
@@ -234,14 +232,14 @@ def main(cfg: DictConfig):
             print(f"task:{tid}, cir:{cir}, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}")
             if with_CODET_Point:
                 get_CODET_point2(total_nodes,testcases[tid],tid) #这里是使用去重后的还是不去重的
-                for node in total_nodes:
-                    if (node.total_ut_num+node.CODET_total_test_num)!=0:
-                        node.CODET_pass_rate = (1.0*(node.pass_ut_num+len(node.CODET_pass_testcase)))/(node.total_ut_num+node.CODET_total_test_num)
-                    else:
-                        node.CODET_pass_rate = 0.0
-                    if node.CODET_pass_rate > 1:
-                        node.CODET_pass_rate = node.passT_rate
-                sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.CODET_pass_rate,x.passT_rate,x.prob),reverse=True)
+                # for node in total_nodes:
+                #     if (node.total_ut_num+node.CODET_total_test_num)!=0:
+                #         node.CODET_pass_rate = (1.0*(node.pass_ut_num+len(node.CODET_pass_testcase)))/(node.total_ut_num+node.CODET_total_test_num)
+                #     else:
+                #         node.CODET_pass_rate = 0.0
+                #     if node.CODET_pass_rate > 1:
+                #         node.CODET_pass_rate = node.passT_rate
+                sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.CODET_point,x.passT_rate,x.prob),reverse=True)
                 # chosen_nodes = get_CODET_point4(total_nodes,testcases[tid],tid)
                 # left_nodes = []
                 # for node in total_nodes:

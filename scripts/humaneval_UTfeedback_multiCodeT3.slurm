@@ -5,9 +5,9 @@
 # (TODO)
 # Please modify job name
 
-#SBATCH -J CODETpT_109              # The job name
-#SBATCH -o ../log/humaneval_UTfeedback_CODETRatefirst_7b16k_pT_109.out        # Write the standard output to file named 'ret-<job_number>.out'
-#SBATCH -e ../log/humaneval_UTfeedback_CODETRatefirst_7b16k_pT_109.out        # Write the standard error to file named 'ret-<job_number>.err'
+#SBATCH -J CODETpT_129              # The job name
+#SBATCH -o ../log/humaneval_UTfeedback_CODETPointfirst_7b16k_pT_129.out        # Write the standard output to file named 'ret-<job_number>.out'
+#SBATCH -e ../log/humaneval_UTfeedback_CODETPointfirst_7b16k_pT_129.out        # Write the standard error to file named 'ret-<job_number>.err'
 
 
 #- Resources
@@ -35,7 +35,7 @@
 ### Without specifying the constraint, any available nodes that meet the requirement will be allocated
 ### You can specify the characteristics of the compute nodes, and even the names of the compute nodes
 ###
-#SBATCH --nodelist=r8a100-c01          # Request a specific list of hosts 
+#SBATCH --nodelist=r8a100-d04          # Request a specific list of hosts 
 #SBATCH --constraint="80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
 ###
 
@@ -82,7 +82,7 @@ nvidia-smi
 cd /home/S/hexiaolong/codex/self-debug/src
 #####python bin/logo.py --enumerationTimeout 11070 --testingTimeout 11070 --taskBatchSize 40 --iterations 12 --testEvery 3 --recognitionTimeout 11070 --taskDataset logo_unlimited_200 --languageDataset logo_unlimited_200/synthetic --synchronous_grammar --smt_pseudoalignments 0.1 --language_compression --lc_score 0.2 --max_compression 5 --biasOptimal --contextual --recognition_20 --recognition_1 examples language --Helmholtz 0.5 --synchronous_grammar  --language_encoder recurrent --sample_n_supervised 0 --moses_dir ../moses_compiled --smt_phrase_length 1 --language_compression  --max_compression 5 --no-cuda
 ###python3.9 humaneval_UTfeedback.py -mf /lustre/S/hexiaolong/vicuna-13b-v1.1/ -o UTfeedback_13bv0.jsonl
-python3.9 job-record.py -jobID $SLURM_JOBID -comment "Sort nodes by codet pass rate first." -output_file "../res/UTfeedback_CODETRatefirst_7b16k_pT_109.jsonl"
-python3.9 humaneval_UTfeedback_multiCodeT3.py +model_path=/lustre/S/hexiaolong/vicuna-7b-16k/ +output=../res/UTfeedback_CODETRatefirst_7b16k_pT_109.jsonl
+python3.9 job-record.py -jobID $SLURM_JOBID -comment "Sort nodes by codet Point first. and use testcases which remove duplicate first." -output_file "../res/UTfeedback_CODETPointfirst_7b16k_pT_129.jsonl"
+python3.9 humaneval_UTfeedback_multiCodeT3.py +model_path=/lustre/S/hexiaolong/vicuna-7b-16k/ +output=../res/UTfeedback_CODETPointfirst_7b16k_pT_129.jsonl
 #- End
 echo "Job end at $(date "+%Y-%m-%d %H:%M:%S")"

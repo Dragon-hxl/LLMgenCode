@@ -113,14 +113,14 @@ def main(cfg: DictConfig):
         print(f"open file {output_file} success!")
     # special_task = [148, 154, 155, 156]# 还不通过的,94,74,87,103,105,106,110,111,112,113,
     # special_task2 = [94]#133,68,126,129,
-    # special_task = [68,94]
+    special_task = [78,79,80,81,82,83,84,85,126,127,128,129,94]
     for tid in taskids:
         print(f"get solution for task : {tid} with {len(unit_tests[tid])} tests.")
         num_id = int(tid.split("/")[1])
-        if num_id <129 or num_id > 164:
-            continue
-        # if num_id not in special_task:
+        # if num_id < 132 or num_id > 164:
         #     continue
+        if num_id not in special_task:
+            continue
         step_one_st = time.time()
         tprompt = problems[tid]["prompt"]
         if tid == "HumanEval/64":

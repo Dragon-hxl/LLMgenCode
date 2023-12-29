@@ -1,4 +1,5 @@
 import json
+import numpy as np
 import sys
 sys.path.append("/home/S/hexiaolong/codex/human-eval")
 sys.path.append("/home/S/hexiaolong/codex/self-debug")
@@ -10,6 +11,7 @@ import matplotlib.pyplot as plt
 from data_tools import data_analysis,Counter_with_base
 from myutils import get_unit_test
 from collections import defaultdict
+from matplotlib import colormaps
 # testcase files
 test_from_check = "../data/test_from_check.jsonl"
 test_from_prompt = "../data/test_from_prompt.jsonl"
@@ -58,6 +60,19 @@ def load_testcase_gened2(test_file):
             testcase[tid] = tests
     return testcase
 
+def load_testcase_gened3(test_file):
+    """
+    used when data in file in the form : {tid:testcases}
+    """
+    testcase = {}
+    with open(test_file,"r") as f:
+        for line in f.readlines():
+            data = json.loads(line)
+            for k,v in data.items():
+                v = sum(v,[])
+                testcase[k]=v
+    return testcase
+
 def testcase_compare(problems,testcases):
     taskids = list(problems.keys())
     for tid in taskids:
@@ -75,8 +90,12 @@ def testcase_compare(problems,testcases):
 
 
 def load_testcase(test_file):
+    data = {}
     with open(test_file) as f:
-        data = json.loads(f.read())
+        for line in f.readlines():
+            d = json.loads(line)
+            for k,v in d.items():
+                data[k]=v
     return data
 
 def testfile_trans(test_file,resfile):
@@ -85,10 +104,6 @@ def testfile_trans(test_file,resfile):
     for tid,v in data.items():
         ios = []
         for test in v:
-            if "\n" in test:
-                # print(test)
-                test = test.replace("\n","")
-                continue
             if "==" in test:
                 tin = test.split("==")[0].replace("assert","").strip()
                 tout = test.split("==")[1].strip()
@@ -203,14 +218,140 @@ def correct_percent_analysis(test_file):
         print(v)
     print(number_counter)
 
+def count_and_remove_duplicate(testcases):
+    in_percent_list = []
+    out_percent_list = []
+    unique_percent_list = []
+    valid_percent_list = []
+    testcases_rmduplicate = {}
+    unique_test_num_list = []
+    unique_in_num_list = []
+    unique_out_num_list = []
+    valid_num_list = []
+    for tid,testcase in testcases.items():
+        out_set = set()
+        in_set = set()
+        in_out_set = set()
+        valid_num = 0
+        for t in testcase:
+            if "assert"not in t or "==" not in t:
+                continue
+            valid_num += 1
+            t = t.replace("assert","")
+            tin = t.split("==")[0].strip()
+            tout = t.split("==")[1].strip()
+            if tin not in in_set:
+                in_set.add(tin)
+            if tout not in out_set:
+                out_set.add(tout)
+            if (tin,tout) not in in_out_set:
+                in_out_set.add((tin,tout))
+        ios = [ "assert " + tin + " == " + tout for tin,tout in in_out_set]
+        testcases_rmduplicate[tid]=ios
+        
+        # 打印数据
+        test_num = len(testcase)
+        unique_in_num = len(in_set)
+        unique_out_num = len(out_set)
+        unique_test_num = len(in_out_set)
+        unique_in_percent = unique_in_num/test_num
+        unique_out_percent = unique_out_num/test_num
+        unique_test_percent = unique_test_num/test_num
+        valid_percent = valid_num/test_num
+        in_percent_list.append(unique_in_percent)
+        out_percent_list.append(unique_out_percent)
+        unique_percent_list.append(unique_test_percent)
+        valid_percent_list.append(valid_percent)
+        unique_test_num_list.append(unique_test_num)
+        unique_in_num_list.append(unique_in_num)
+        unique_out_num_list.append(unique_out_num)
+        valid_num_list.append(valid_num)
+        print("---------------------------------------------------------------------------------------------------------------------------------")
+        print(f"For task {tid}, there are {test_num}, valid num : {valid_num}.")
+        print(f"unique test is {unique_test_num}, unique in : {unique_in_num}, unique out : {unique_out_num}")
+        print(f"unique test percent is {unique_test_percent}, unique in percent : {unique_in_percent}, unique out percent : {unique_out_percent}, valid percent : {valid_percent}")
+    # 数据分析和绘图
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print("in percent")
+    data_analysis(in_percent_list)
+    draw_hist(data=in_percent_list,image_path="../image/in_percent_list.png")
+    print("out percent")
+    data_analysis(out_percent_list)
+    draw_hist(data=out_percent_list,image_path="../image/out_percent_list.png")
+    print("unique percent")
+    data_analysis(unique_percent_list)
+    draw_hist(data=unique_percent_list,image_path="../image/unique_test_percent.png")
+    print("valid percent")
+    draw_hist(data=valid_percent_list,image_path="../image/valid_percent_list.png")
+    data_analysis(valid_percent_list)
+    print("unique test num")
+    data_analysis(unique_test_num_list)
+    draw_hist(data=unique_test_num_list,image_path="../image/unique_test_num_list.png")
+    print("unique in num")
+    data_analysis(unique_in_num_list)
+    draw_hist(data=unique_in_num_list,image_path="../image/unique_in_num_list.png")
+    print("unique out num")
+    data_analysis(unique_out_num_list)
+    draw_hist(data=unique_out_num_list,image_path="../image/unique_out_num_list.png")
+    print("valid test num")
+    data_analysis(valid_num_list)
+    draw_hist(data=valid_num_list,image_path="../image/valid_num_list.png")
+    return testcases_rmduplicate
+
+def draw_hist(data,image_path):
+    import math
+    m = max(data)
+    range_max = 0
+    bin_num = 10
+    if m <= 1:
+        data_range = (0,1)
+        range_max = 1
+    else:
+        m = round(m)
+        n = len(str(m)) - 2
+        base = math.pow(10,n)
+        if m/base > 30:
+            base = base * 10
+        bin_num = math.ceil(m/base)
+        range_max = bin_num*base
+        print(f"data max {m},base {base}, range max : {range_max}")
+        data_range = (0,range_max)
+    figure = plt.figure(figsize=(9,16),dpi=400)
+    plt.xlabel("value")
+    plt.ylabel("number")
+    colors = plt.get_cmap("Reds")
+    n, bins, patches = plt.hist(x=data,bins=bin_num,range=data_range,align="mid",color="Red") # hist里所有的bin默认同颜色
+    print(f"bins:\n{bins}")
+    # 为bin设置不同的颜色
+    for c,p in zip(bins,patches):
+        p.set_facecolor(colors(c/range_max))
+    for i in range(len(n)):
+        plt.text(bins[i]+range_max/(bin_num*2), n[i]*1.02, int(n[i]), fontsize=8, horizontalalignment="center")
+    title = image_path.split("/")[-1].split(".")[0]
+    plt.title(title)
+    xt = [(range_max/bin_num)*i for i in range(bin_num+1)]
+    plt.xticks(xt)
+    figure.savefig(image_path)
+
+
+def write_testcase(test_cases,fpath,type:int=0):
+    if type==0:
+        # test_cases {tid:testcases}
+        with open(fpath,"w+") as f:
+            for tid,testcase in test_cases.items():
+                data = {tid:testcase}
+                f.write(json.dumps(data)+"\n")
+    return
+            
+
 if __name__ == "__main__":
     # CODET_tescase_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter_add.jsonl"
     # add_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test3_add.jsonl"
     # res_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_filter_add.jsonl"
     # testcases_merge(CODET_tescase_file,add_file,res_file)
     # testcase_num2(CODET_tescase_file)
-    # res_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_uniform.jsonl"
-    # testfile_trans(CODET_tescase_file,res_file)
+    res_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_rm_uniform_withlinechange.jsonl"
+    testfile_trans("../try/gen_test_t0.8_topp0.95_sample100_max300_rm.jsonl",res_file)
     # t1 = load_testcase_uniform(test_from_check)
     # t2 = load_testcase_uniform(test_from_prompt)
     # # t3 = load_testcase_gened(correct_testcase_gened)
@@ -218,7 +359,11 @@ if __name__ == "__main__":
     # ts = {"check":t1,"prompt test":t2,"gened":t3}
     # testcase_compare(problems,ts)
     # show_gened_testcase(gened_testcase)
-    print(len(never_passed_task))
-    print(len(pt_not_passed_task))
-    print(len(never_passed_task))
-    correct_percent_analysis(correct_testcase_gened2)
+    # print(len(never_passed_task))
+    # print(len(pt_not_passed_task))
+    # print(len(never_passed_task))
+    # correct_percent_analysis(correct_testcase_gened2)
+    # gened = load_testcase_gened3(gened_testcase)
+    # testcases_rmduplicate = count_and_remove_duplicate(testcases=gened)
+    # write_testcase(testcases_rmduplicate,"../try/gen_test_t0.8_topp0.95_sample100_max300_rm.jsonl")
+    

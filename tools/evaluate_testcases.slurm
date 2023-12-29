@@ -6,8 +6,8 @@
 # Please modify job name
 
 #SBATCH -J evaluate_testcases              # The job name
-#SBATCH -o evaluate_testcases2.out        # Write the standard output to file named 'ret-<job_number>.out'
-#SBATCH -e evaluate_testcases2.out        # Write the standard error to file named 'ret-<job_number>.err'
+#SBATCH -o evaluate_testcases_rm.out        # Write the standard output to file named 'ret-<job_number>.out'
+#SBATCH -e evaluate_testcases_rm.out        # Write the standard error to file named 'ret-<job_number>.err'
 
 
 #- Resources

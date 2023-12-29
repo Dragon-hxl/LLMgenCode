@@ -1,0 +1,696 @@
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/0, there are 577, valid num : 512.
+unique test is 313, unique in : 247, unique out : 2
+unique test percent is 0.5424610051993067, unique in percent : 0.42807625649913345, unique out percent : 0.0034662045060658577, valid percent : 0.8873483535528596
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/1, there are 425, valid num : 419.
+unique test is 337, unique in : 279, unique out : 270
+unique test percent is 0.7929411764705883, unique in percent : 0.6564705882352941, unique out percent : 0.6352941176470588, valid percent : 0.9858823529411764
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/2, there are 1100, valid num : 1091.
+unique test is 588, unique in : 376, unique out : 334
+unique test percent is 0.5345454545454545, unique in percent : 0.3418181818181818, unique out percent : 0.30363636363636365, valid percent : 0.9918181818181818
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/3, there are 687, valid num : 682.
+unique test is 515, unique in : 468, unique out : 28
+unique test percent is 0.7496360989810772, unique in percent : 0.6812227074235808, unique out percent : 0.040756914119359534, valid percent : 0.992721979621543
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/4, there are 633, valid num : 630.
+unique test is 296, unique in : 114, unique out : 108
+unique test percent is 0.4676145339652449, unique in percent : 0.18009478672985782, unique out percent : 0.17061611374407584, valid percent : 0.995260663507109
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/5, there are 283, valid num : 282.
+unique test is 155, unique in : 53, unique out : 140
+unique test percent is 0.5477031802120141, unique in percent : 0.1872791519434629, unique out percent : 0.49469964664310956, valid percent : 0.9964664310954063
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/6, there are 769, valid num : 768.
+unique test is 594, unique in : 440, unique out : 177
+unique test percent is 0.7724317295188556, unique in percent : 0.5721716514954487, unique out percent : 0.23016905071521457, valid percent : 0.9986996098829649
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/7, there are 543, valid num : 539.
+unique test is 414, unique in : 375, unique out : 103
+unique test percent is 0.7624309392265194, unique in percent : 0.6906077348066298, unique out percent : 0.18968692449355432, valid percent : 0.992633517495396
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/8, there are 433, valid num : 431.
+unique test is 227, unique in : 78, unique out : 184
+unique test percent is 0.5242494226327945, unique in percent : 0.18013856812933027, unique out percent : 0.42494226327944573, valid percent : 0.9953810623556582
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/9, there are 299, valid num : 298.
+unique test is 105, unique in : 34, unique out : 81
+unique test percent is 0.3511705685618729, unique in percent : 0.11371237458193979, unique out percent : 0.2709030100334448, valid percent : 0.9966555183946488
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/10, there are 395, valid num : 352.
+unique test is 228, unique in : 159, unique out : 154
+unique test percent is 0.5772151898734177, unique in percent : 0.40253164556962023, unique out percent : 0.389873417721519, valid percent : 0.8911392405063291
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/11, there are 832, valid num : 808.
+unique test is 655, unique in : 520, unique out : 271
+unique test percent is 0.7872596153846154, unique in percent : 0.625, unique out percent : 0.32572115384615385, valid percent : 0.9711538461538461
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/12, there are 1372, valid num : 1315.
+unique test is 267, unique in : 217, unique out : 44
+unique test percent is 0.1946064139941691, unique in percent : 0.15816326530612246, unique out percent : 0.03206997084548105, valid percent : 0.9584548104956269
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/13, there are 898, valid num : 891.
+unique test is 487, unique in : 373, unique out : 53
+unique test percent is 0.5423162583518931, unique in percent : 0.4153674832962138, unique out percent : 0.05902004454342984, valid percent : 0.9922048997772829
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/14, there are 585, valid num : 577.
+unique test is 358, unique in : 188, unique out : 323
+unique test percent is 0.611965811965812, unique in percent : 0.3213675213675214, unique out percent : 0.5521367521367522, valid percent : 0.9863247863247864
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/15, there are 530, valid num : 527.
+unique test is 400, unique in : 35, unique out : 372
+unique test percent is 0.7547169811320755, unique in percent : 0.0660377358490566, unique out percent : 0.7018867924528301, valid percent : 0.9943396226415094
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/16, there are 1102, valid num : 1096.
+unique test is 627, unique in : 452, unique out : 77
+unique test percent is 0.5689655172413793, unique in percent : 0.4101633393829401, unique out percent : 0.06987295825771325, valid percent : 0.9945553539019963
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/17, there are 564, valid num : 560.
+unique test is 420, unique in : 302, unique out : 245
+unique test percent is 0.7446808510638298, unique in percent : 0.5354609929078015, unique out percent : 0.43439716312056736, valid percent : 0.9929078014184397
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/18, there are 725, valid num : 717.
+unique test is 496, unique in : 431, unique out : 66
+unique test percent is 0.6841379310344827, unique in percent : 0.5944827586206897, unique out percent : 0.0910344827586207, valid percent : 0.9889655172413793
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/19, there are 1090, valid num : 1083.
+unique test is 805, unique in : 694, unique out : 671
+unique test percent is 0.7385321100917431, unique in percent : 0.636697247706422, unique out percent : 0.6155963302752293, valid percent : 0.9935779816513761
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/20, there are 589, valid num : 585.
+unique test is 307, unique in : 216, unique out : 154
+unique test percent is 0.5212224108658744, unique in percent : 0.366723259762309, unique out percent : 0.2614601018675722, valid percent : 0.9932088285229203
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/21, there are 441, valid num : 438.
+unique test is 297, unique in : 175, unique out : 236
+unique test percent is 0.673469387755102, unique in percent : 0.3968253968253968, unique out percent : 0.5351473922902494, valid percent : 0.9931972789115646
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/22, there are 534, valid num : 531.
+unique test is 279, unique in : 240, unique out : 77
+unique test percent is 0.5224719101123596, unique in percent : 0.449438202247191, unique out percent : 0.1441947565543071, valid percent : 0.9943820224719101
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/23, there are 836, valid num : 819.
+unique test is 224, unique in : 179, unique out : 67
+unique test percent is 0.2679425837320574, unique in percent : 0.21411483253588517, unique out percent : 0.08014354066985646, valid percent : 0.9796650717703349
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/24, there are 1237, valid num : 1229.
+unique test is 653, unique in : 228, unique out : 268
+unique test percent is 0.5278900565885206, unique in percent : 0.18431689571544058, unique out percent : 0.21665319320937754, valid percent : 0.9935327405012127
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/25, there are 788, valid num : 783.
+unique test is 635, unique in : 104, unique out : 561
+unique test percent is 0.8058375634517766, unique in percent : 0.1319796954314721, unique out percent : 0.7119289340101523, valid percent : 0.9936548223350253
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/26, there are 363, valid num : 358.
+unique test is 220, unique in : 183, unique out : 68
+unique test percent is 0.6060606060606061, unique in percent : 0.5041322314049587, unique out percent : 0.18732782369146006, valid percent : 0.9862258953168044
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/27, there are 338, valid num : 335.
+unique test is 276, unique in : 168, unique out : 192
+unique test percent is 0.8165680473372781, unique in percent : 0.4970414201183432, unique out percent : 0.5680473372781065, valid percent : 0.9911242603550295
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/28, there are 352, valid num : 342.
+unique test is 116, unique in : 105, unique out : 56
+unique test percent is 0.32954545454545453, unique in percent : 0.29829545454545453, unique out percent : 0.1590909090909091, valid percent : 0.9715909090909091
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/29, there are 594, valid num : 584.
+unique test is 427, unique in : 377, unique out : 94
+unique test percent is 0.7188552188552189, unique in percent : 0.6346801346801347, unique out percent : 0.15824915824915825, valid percent : 0.9831649831649831
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/30, there are 461, valid num : 459.
+unique test is 351, unique in : 177, unique out : 194
+unique test percent is 0.7613882863340564, unique in percent : 0.3839479392624729, unique out percent : 0.420824295010846, valid percent : 0.9956616052060737
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/31, there are 2243, valid num : 2239.
+unique test is 185, unique in : 71, unique out : 84
+unique test percent is 0.08247882300490414, unique in percent : 0.03165403477485511, unique out percent : 0.03744984395898351, valid percent : 0.9982166740971913
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/32, there are 631, valid num : 603.
+unique test is 510, unique in : 340, unique out : 122
+unique test percent is 0.8082408874801902, unique in percent : 0.5388272583201268, unique out percent : 0.19334389857369255, valid percent : 0.9556259904912837
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/33, there are 272, valid num : 272.
+unique test is 191, unique in : 66, unique out : 177
+unique test percent is 0.7022058823529411, unique in percent : 0.2426470588235294, unique out percent : 0.6507352941176471, valid percent : 1.0
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/34, there are 214, valid num : 213.
+unique test is 124, unique in : 119, unique out : 45
+unique test percent is 0.5794392523364486, unique in percent : 0.5560747663551402, unique out percent : 0.2102803738317757, valid percent : 0.9953271028037384
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/35, there are 314, valid num : 301.
+unique test is 168, unique in : 154, unique out : 46
+unique test percent is 0.535031847133758, unique in percent : 0.49044585987261147, unique out percent : 0.1464968152866242, valid percent : 0.9585987261146497
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/36, there are 1154, valid num : 1148.
+unique test is 934, unique in : 251, unique out : 503
+unique test percent is 0.8093587521663779, unique in percent : 0.21750433275563258, unique out percent : 0.4358752166377816, valid percent : 0.9948006932409013
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/37, there are 287, valid num : 286.
+unique test is 171, unique in : 52, unique out : 152
+unique test percent is 0.5958188153310104, unique in percent : 0.18118466898954705, unique out percent : 0.5296167247386759, valid percent : 0.9965156794425087
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/38, there are 689, valid num : 684.
+unique test is 517, unique in : 457, unique out : 294
+unique test percent is 0.7503628447024674, unique in percent : 0.6632801161103048, unique out percent : 0.42670537010159654, valid percent : 0.9927431059506531
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/39, there are 974, valid num : 925.
+unique test is 868, unique in : 194, unique out : 760
+unique test percent is 0.891170431211499, unique in percent : 0.19917864476386038, unique out percent : 0.7802874743326489, valid percent : 0.9496919917864476
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/40, there are 683, valid num : 680.
+unique test is 246, unique in : 204, unique out : 3
+unique test percent is 0.3601756954612006, unique in percent : 0.2986822840409956, unique out percent : 0.004392386530014641, valid percent : 0.9956076134699854
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/41, there are 1573, valid num : 1569.
+unique test is 438, unique in : 125, unique out : 153
+unique test percent is 0.27844882390336934, unique in percent : 0.07946598855689765, unique out percent : 0.09726636999364272, valid percent : 0.9974570883661793
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/42, there are 182, valid num : 173.
+unique test is 96, unique in : 59, unique out : 64
+unique test percent is 0.5274725274725275, unique in percent : 0.3241758241758242, unique out percent : 0.3516483516483517, valid percent : 0.9505494505494505
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/43, there are 518, valid num : 513.
+unique test is 275, unique in : 237, unique out : 7
+unique test percent is 0.5308880308880309, unique in percent : 0.4575289575289575, unique out percent : 0.013513513513513514, valid percent : 0.9903474903474904
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/44, there are 1211, valid num : 1199.
+unique test is 899, unique in : 443, unique out : 433
+unique test percent is 0.7423616845582164, unique in percent : 0.365813377374071, unique out percent : 0.35755573905862925, valid percent : 0.9900908340214699
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/45, there are 386, valid num : 382.
+unique test is 374, unique in : 142, unique out : 330
+unique test percent is 0.9689119170984456, unique in percent : 0.36787564766839376, unique out percent : 0.8549222797927462, valid percent : 0.9896373056994818
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/46, there are 1752, valid num : 1726.
+unique test is 784, unique in : 63, unique out : 519
+unique test percent is 0.4474885844748858, unique in percent : 0.03595890410958904, unique out percent : 0.2962328767123288, valid percent : 0.9851598173515982
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/47, there are 301, valid num : 299.
+unique test is 165, unique in : 123, unique out : 45
+unique test percent is 0.5481727574750831, unique in percent : 0.40863787375415284, unique out percent : 0.14950166112956811, valid percent : 0.9933554817275747
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/48, there are 390, valid num : 388.
+unique test is 164, unique in : 117, unique out : 29
+unique test percent is 0.4205128205128205, unique in percent : 0.3, unique out percent : 0.07435897435897436, valid percent : 0.9948717948717949
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/49, there are 1402, valid num : 1391.
+unique test is 937, unique in : 560, unique out : 113
+unique test percent is 0.6683309557774608, unique in percent : 0.39942938659058486, unique out percent : 0.08059914407988587, valid percent : 0.9921540656205421
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/50, there are 1146, valid num : 1141.
+unique test is 801, unique in : 694, unique out : 498
+unique test percent is 0.6989528795811518, unique in percent : 0.6055846422338569, unique out percent : 0.43455497382198954, valid percent : 0.9956369982547993
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/51, there are 407, valid num : 406.
+unique test is 275, unique in : 134, unique out : 255
+unique test percent is 0.6756756756756757, unique in percent : 0.32923832923832924, unique out percent : 0.6265356265356266, valid percent : 0.9975429975429976
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/52, there are 507, valid num : 454.
+unique test is 295, unique in : 254, unique out : 3
+unique test percent is 0.5818540433925049, unique in percent : 0.5009861932938856, unique out percent : 0.005917159763313609, valid percent : 0.8954635108481263
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/53, there are 711, valid num : 703.
+unique test is 226, unique in : 191, unique out : 70
+unique test percent is 0.3178621659634318, unique in percent : 0.26863572433192684, unique out percent : 0.09845288326300984, valid percent : 0.9887482419127989
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/54, there are 540, valid num : 535.
+unique test is 241, unique in : 226, unique out : 3
+unique test percent is 0.4462962962962963, unique in percent : 0.4185185185185185, unique out percent : 0.005555555555555556, valid percent : 0.9907407407407407
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/55, there are 896, valid num : 883.
+unique test is 346, unique in : 116, unique out : 273
+unique test percent is 0.3861607142857143, unique in percent : 0.12946428571428573, unique out percent : 0.3046875, valid percent : 0.9854910714285714
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/56, there are 863, valid num : 832.
+unique test is 521, unique in : 463, unique out : 16
+unique test percent is 0.6037079953650057, unique in percent : 0.5365005793742758, unique out percent : 0.01853997682502897, valid percent : 0.9640787949015064
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/57, there are 588, valid num : 587.
+unique test is 303, unique in : 253, unique out : 29
+unique test percent is 0.5153061224489796, unique in percent : 0.4302721088435374, unique out percent : 0.04931972789115646, valid percent : 0.9982993197278912
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/58, there are 476, valid num : 470.
+unique test is 392, unique in : 280, unique out : 170
+unique test percent is 0.8235294117647058, unique in percent : 0.5882352941176471, unique out percent : 0.35714285714285715, valid percent : 0.9873949579831933
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/59, there are 902, valid num : 896.
+unique test is 757, unique in : 172, unique out : 601
+unique test percent is 0.8392461197339246, unique in percent : 0.19068736141906872, unique out percent : 0.6662971175166297, valid percent : 0.9933481152993349
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/60, there are 539, valid num : 537.
+unique test is 342, unique in : 78, unique out : 326
+unique test percent is 0.634508348794063, unique in percent : 0.14471243042671614, unique out percent : 0.6048237476808905, valid percent : 0.9962894248608535
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/61, there are 723, valid num : 701.
+unique test is 359, unique in : 293, unique out : 20
+unique test percent is 0.49654218533886585, unique in percent : 0.40525587828492393, unique out percent : 0.027662517289073305, valid percent : 0.9695712309820194
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/62, there are 408, valid num : 406.
+unique test is 348, unique in : 246, unique out : 292
+unique test percent is 0.8529411764705882, unique in percent : 0.6029411764705882, unique out percent : 0.7156862745098039, valid percent : 0.9950980392156863
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/63, there are 1846, valid num : 1809.
+unique test is 635, unique in : 36, unique out : 409
+unique test percent is 0.34398699891657636, unique in percent : 0.01950162513542795, unique out percent : 0.22156013001083424, valid percent : 0.9799566630552546
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/64, there are 1875, valid num : 1866.
+unique test is 654, unique in : 488, unique out : 59
+unique test percent is 0.3488, unique in percent : 0.26026666666666665, unique out percent : 0.031466666666666664, valid percent : 0.9952
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/65, there are 1107, valid num : 1102.
+unique test is 984, unique in : 393, unique out : 625
+unique test percent is 0.8888888888888888, unique in percent : 0.35501355013550134, unique out percent : 0.5645889792231256, valid percent : 0.995483288166215
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/66, there are 836, valid num : 833.
+unique test is 751, unique in : 297, unique out : 497
+unique test percent is 0.8983253588516746, unique in percent : 0.35526315789473684, unique out percent : 0.5944976076555024, valid percent : 0.9964114832535885
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/67, there are 463, valid num : 462.
+unique test is 138, unique in : 46, unique out : 121
+unique test percent is 0.2980561555075594, unique in percent : 0.09935205183585313, unique out percent : 0.2613390928725702, valid percent : 0.9978401727861771
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/68, there are 563, valid num : 561.
+unique test is 388, unique in : 98, unique out : 347
+unique test percent is 0.6891651865008881, unique in percent : 0.17406749555950266, unique out percent : 0.6163410301953819, valid percent : 0.9964476021314387
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/69, there are 676, valid num : 674.
+unique test is 488, unique in : 333, unique out : 236
+unique test percent is 0.7218934911242604, unique in percent : 0.492603550295858, unique out percent : 0.34911242603550297, valid percent : 0.9970414201183432
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/70, there are 268, valid num : 265.
+unique test is 239, unique in : 114, unique out : 215
+unique test percent is 0.8917910447761194, unique in percent : 0.4253731343283582, unique out percent : 0.8022388059701493, valid percent : 0.9888059701492538
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/71, there are 643, valid num : 640.
+unique test is 582, unique in : 275, unique out : 404
+unique test percent is 0.9051321928460342, unique in percent : 0.4276827371695179, unique out percent : 0.6283048211508554, valid percent : 0.995334370139969
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/72, there are 770, valid num : 765.
+unique test is 493, unique in : 375, unique out : 38
+unique test percent is 0.6402597402597403, unique in percent : 0.487012987012987, unique out percent : 0.04935064935064935, valid percent : 0.9935064935064936
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/73, there are 549, valid num : 540.
+unique test is 386, unique in : 141, unique out : 230
+unique test percent is 0.7030965391621129, unique in percent : 0.2568306010928962, unique out percent : 0.41894353369763204, valid percent : 0.9836065573770492
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/74, there are 574, valid num : 574.
+unique test is 425, unique in : 255, unique out : 218
+unique test percent is 0.740418118466899, unique in percent : 0.4442508710801394, unique out percent : 0.3797909407665505, valid percent : 1.0
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/75, there are 1511, valid num : 1497.
+unique test is 663, unique in : 344, unique out : 222
+unique test percent is 0.4387822634017207, unique in percent : 0.22766379880873594, unique out percent : 0.1469225678358703, valid percent : 0.9907346128391793
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/76, there are 1173, valid num : 1133.
+unique test is 521, unique in : 390, unique out : 56
+unique test percent is 0.4441602728047741, unique in percent : 0.33248081841432225, unique out percent : 0.04774083546462063, valid percent : 0.9658994032395567
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/77, there are 1382, valid num : 1377.
+unique test is 825, unique in : 305, unique out : 491
+unique test percent is 0.5969609261939218, unique in percent : 0.22069464544138928, unique out percent : 0.3552821997105644, valid percent : 0.9963820549927641
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/78, there are 1234, valid num : 1227.
+unique test is 1010, unique in : 578, unique out : 514
+unique test percent is 0.8184764991896273, unique in percent : 0.4683954619124797, unique out percent : 0.4165316045380875, valid percent : 0.9943273905996759
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/79, there are 728, valid num : 723.
+unique test is 690, unique in : 125, unique out : 674
+unique test percent is 0.9478021978021978, unique in percent : 0.1717032967032967, unique out percent : 0.9258241758241759, valid percent : 0.9931318681318682
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/80, there are 1140, valid num : 1034.
+unique test is 658, unique in : 510, unique out : 68
+unique test percent is 0.5771929824561404, unique in percent : 0.4473684210526316, unique out percent : 0.05964912280701754, valid percent : 0.9070175438596492
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/81, there are 95, valid num : 93.
+unique test is 92, unique in : 89, unique out : 73
+unique test percent is 0.968421052631579, unique in percent : 0.9368421052631579, unique out percent : 0.7684210526315789, valid percent : 0.9789473684210527
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/82, there are 1407, valid num : 1400.
+unique test is 723, unique in : 278, unique out : 349
+unique test percent is 0.5138592750533049, unique in percent : 0.19758351101634683, unique out percent : 0.248045486851457, valid percent : 0.9950248756218906
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/83, there are 1015, valid num : 1011.
+unique test is 747, unique in : 73, unique out : 591
+unique test percent is 0.7359605911330049, unique in percent : 0.07192118226600985, unique out percent : 0.5822660098522168, valid percent : 0.9960591133004926
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/84, there are 947, valid num : 946.
+unique test is 784, unique in : 234, unique out : 677
+unique test percent is 0.8278775079197466, unique in percent : 0.2470960929250264, unique out percent : 0.7148891235480465, valid percent : 0.9989440337909187
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/85, there are 331, valid num : 330.
+unique test is 177, unique in : 45, unique out : 150
+unique test percent is 0.5347432024169184, unique in percent : 0.13595166163141995, unique out percent : 0.45317220543806647, valid percent : 0.9969788519637462
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/86, there are 453, valid num : 438.
+unique test is 204, unique in : 97, unique out : 174
+unique test percent is 0.4503311258278146, unique in percent : 0.2141280353200883, unique out percent : 0.3841059602649007, valid percent : 0.9668874172185431
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/87, there are 364, valid num : 362.
+unique test is 330, unique in : 144, unique out : 202
+unique test percent is 0.9065934065934066, unique in percent : 0.3956043956043956, unique out percent : 0.554945054945055, valid percent : 0.9945054945054945
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/88, there are 495, valid num : 491.
+unique test is 335, unique in : 218, unique out : 232
+unique test percent is 0.6767676767676768, unique in percent : 0.4404040404040404, unique out percent : 0.4686868686868687, valid percent : 0.9919191919191919
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/89, there are 626, valid num : 616.
+unique test is 499, unique in : 275, unique out : 414
+unique test percent is 0.7971246006389776, unique in percent : 0.43929712460063897, unique out percent : 0.6613418530351438, valid percent : 0.9840255591054313
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/90, there are 453, valid num : 452.
+unique test is 30, unique in : 18, unique out : 14
+unique test percent is 0.06622516556291391, unique in percent : 0.039735099337748346, unique out percent : 0.03090507726269316, valid percent : 0.9977924944812362
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/91, there are 947, valid num : 923.
+unique test is 471, unique in : 439, unique out : 16
+unique test percent is 0.49736008447729674, unique in percent : 0.4635691657866948, unique out percent : 0.01689545934530095, valid percent : 0.9746568109820486
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/92, there are 1177, valid num : 1108.
+unique test is 460, unique in : 317, unique out : 127
+unique test percent is 0.39082412914188613, unique in percent : 0.26932880203908244, unique out percent : 0.10790144435004248, valid percent : 0.9413763806287171
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/93, there are 590, valid num : 587.
+unique test is 377, unique in : 178, unique out : 300
+unique test percent is 0.6389830508474577, unique in percent : 0.3016949152542373, unique out percent : 0.5084745762711864, valid percent : 0.9949152542372881
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/94, there are 273, valid num : 270.
+unique test is 231, unique in : 156, unique out : 211
+unique test percent is 0.8461538461538461, unique in percent : 0.5714285714285714, unique out percent : 0.7728937728937729, valid percent : 0.989010989010989
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/95, there are 827, valid num : 788.
+unique test is 479, unique in : 414, unique out : 14
+unique test percent is 0.5792019347037485, unique in percent : 0.5006045949214026, unique out percent : 0.016928657799274487, valid percent : 0.9528415961305925
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/96, there are 607, valid num : 604.
+unique test is 233, unique in : 20, unique out : 229
+unique test percent is 0.38385502471169686, unique in percent : 0.032948929159802305, unique out percent : 0.3772652388797364, valid percent : 0.9950576606260296
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/97, there are 706, valid num : 702.
+unique test is 610, unique in : 432, unique out : 501
+unique test percent is 0.8640226628895185, unique in percent : 0.6118980169971672, unique out percent : 0.7096317280453258, valid percent : 0.9943342776203966
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/98, there are 953, valid num : 948.
+unique test is 636, unique in : 376, unique out : 312
+unique test percent is 0.6673662119622246, unique in percent : 0.3945435466946485, unique out percent : 0.3273871983210913, valid percent : 0.9947534102833159
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/99, there are 1239, valid num : 1232.
+unique test is 882, unique in : 482, unique out : 522
+unique test percent is 0.711864406779661, unique in percent : 0.3890234059725585, unique out percent : 0.4213075060532688, valid percent : 0.9943502824858758
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/100, there are 851, valid num : 846.
+unique test is 669, unique in : 42, unique out : 645
+unique test percent is 0.7861339600470035, unique in percent : 0.04935370152761457, unique out percent : 0.7579318448883666, valid percent : 0.9941245593419507
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/101, there are 794, valid num : 790.
+unique test is 406, unique in : 225, unique out : 253
+unique test percent is 0.5113350125944585, unique in percent : 0.28337531486146095, unique out percent : 0.31863979848866497, valid percent : 0.9949622166246851
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/102, there are 907, valid num : 904.
+unique test is 654, unique in : 261, unique out : 304
+unique test percent is 0.721058434399118, unique in percent : 0.28776185226019846, unique out percent : 0.33517089305402425, valid percent : 0.9966923925027563
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/103, there are 1184, valid num : 1176.
+unique test is 849, unique in : 415, unique out : 379
+unique test percent is 0.7170608108108109, unique in percent : 0.35050675675675674, unique out percent : 0.32010135135135137, valid percent : 0.9932432432432432
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/104, there are 452, valid num : 448.
+unique test is 389, unique in : 145, unique out : 295
+unique test percent is 0.8606194690265486, unique in percent : 0.32079646017699115, unique out percent : 0.6526548672566371, valid percent : 0.9911504424778761
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/105, there are 255, valid num : 255.
+unique test is 214, unique in : 120, unique out : 187
+unique test percent is 0.8392156862745098, unique in percent : 0.47058823529411764, unique out percent : 0.7333333333333333, valid percent : 1.0
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/106, there are 681, valid num : 677.
+unique test is 521, unique in : 14, unique out : 515
+unique test percent is 0.7650513950073421, unique in percent : 0.020558002936857563, unique out percent : 0.7562408223201175, valid percent : 0.9941262848751835
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/107, there are 836, valid num : 835.
+unique test is 761, unique in : 72, unique out : 708
+unique test percent is 0.9102870813397129, unique in percent : 0.0861244019138756, unique out percent : 0.84688995215311, valid percent : 0.9988038277511961
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/108, there are 640, valid num : 632.
+unique test is 429, unique in : 306, unique out : 85
+unique test percent is 0.6703125, unique in percent : 0.478125, unique out percent : 0.1328125, valid percent : 0.9875
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/109, there are 790, valid num : 790.
+unique test is 326, unique in : 239, unique out : 62
+unique test percent is 0.41265822784810124, unique in percent : 0.30253164556962026, unique out percent : 0.07848101265822785, valid percent : 1.0
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/110, there are 451, valid num : 448.
+unique test is 280, unique in : 129, unique out : 148
+unique test percent is 0.6208425720620843, unique in percent : 0.2860310421286031, unique out percent : 0.328159645232816, valid percent : 0.9933481152993349
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/111, there are 465, valid num : 460.
+unique test is 425, unique in : 272, unique out : 367
+unique test percent is 0.9139784946236559, unique in percent : 0.5849462365591398, unique out percent : 0.789247311827957, valid percent : 0.989247311827957
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/112, there are 1056, valid num : 1050.
+unique test is 724, unique in : 379, unique out : 402
+unique test percent is 0.6856060606060606, unique in percent : 0.35890151515151514, unique out percent : 0.3806818181818182, valid percent : 0.9943181818181818
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/113, there are 455, valid num : 452.
+unique test is 376, unique in : 260, unique out : 292
+unique test percent is 0.8263736263736263, unique in percent : 0.5714285714285714, unique out percent : 0.6417582417582418, valid percent : 0.9934065934065934
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/114, there are 494, valid num : 489.
+unique test is 439, unique in : 145, unique out : 396
+unique test percent is 0.888663967611336, unique in percent : 0.2935222672064777, unique out percent : 0.8016194331983806, valid percent : 0.9898785425101214
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/115, there are 654, valid num : 652.
+unique test is 557, unique in : 369, unique out : 126
+unique test percent is 0.8516819571865444, unique in percent : 0.5642201834862385, unique out percent : 0.1926605504587156, valid percent : 0.9969418960244648
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/116, there are 332, valid num : 330.
+unique test is 280, unique in : 228, unique out : 245
+unique test percent is 0.8433734939759037, unique in percent : 0.6867469879518072, unique out percent : 0.7379518072289156, valid percent : 0.9939759036144579
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/117, there are 807, valid num : 805.
+unique test is 773, unique in : 224, unique out : 575
+unique test percent is 0.9578686493184635, unique in percent : 0.27757125154894674, unique out percent : 0.7125154894671624, valid percent : 0.9975216852540273
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/118, there are 869, valid num : 865.
+unique test is 618, unique in : 335, unique out : 437
+unique test percent is 0.7111622554660529, unique in percent : 0.38550057537399307, unique out percent : 0.5028768699654775, valid percent : 0.9953970080552359
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/119, there are 588, valid num : 546.
+unique test is 351, unique in : 276, unique out : 150
+unique test percent is 0.5969387755102041, unique in percent : 0.46938775510204084, unique out percent : 0.25510204081632654, valid percent : 0.9285714285714286
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/120, there are 609, valid num : 607.
+unique test is 407, unique in : 248, unique out : 209
+unique test percent is 0.6683087027914614, unique in percent : 0.4072249589490969, unique out percent : 0.34318555008210183, valid percent : 0.9967159277504105
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/121, there are 336, valid num : 333.
+unique test is 200, unique in : 43, unique out : 162
+unique test percent is 0.5952380952380952, unique in percent : 0.12797619047619047, unique out percent : 0.48214285714285715, valid percent : 0.9910714285714286
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/122, there are 711, valid num : 704.
+unique test is 562, unique in : 172, unique out : 219
+unique test percent is 0.790436005625879, unique in percent : 0.2419127988748242, unique out percent : 0.3080168776371308, valid percent : 0.9901547116736991
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/123, there are 474, valid num : 473.
+unique test is 400, unique in : 25, unique out : 387
+unique test percent is 0.8438818565400844, unique in percent : 0.052742616033755275, unique out percent : 0.8164556962025317, valid percent : 0.9978902953586498
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/124, there are 550, valid num : 493.
+unique test is 84, unique in : 51, unique out : 28
+unique test percent is 0.15272727272727274, unique in percent : 0.09272727272727273, unique out percent : 0.05090909090909091, valid percent : 0.8963636363636364
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/125, there are 798, valid num : 795.
+unique test is 449, unique in : 220, unique out : 324
+unique test percent is 0.5626566416040101, unique in percent : 0.2756892230576441, unique out percent : 0.40601503759398494, valid percent : 0.9962406015037594
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/126, there are 808, valid num : 804.
+unique test is 415, unique in : 359, unique out : 27
+unique test percent is 0.5136138613861386, unique in percent : 0.4443069306930693, unique out percent : 0.03341584158415842, valid percent : 0.995049504950495
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/127, there are 369, valid num : 273.
+unique test is 248, unique in : 160, unique out : 195
+unique test percent is 0.6720867208672087, unique in percent : 0.43360433604336046, unique out percent : 0.5284552845528455, valid percent : 0.7398373983739838
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/128, there are 521, valid num : 513.
+unique test is 417, unique in : 172, unique out : 328
+unique test percent is 0.800383877159309, unique in percent : 0.33013435700575816, unique out percent : 0.6295585412667947, valid percent : 0.9846449136276392
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/129, there are 328, valid num : 328.
+unique test is 311, unique in : 147, unique out : 267
+unique test percent is 0.948170731707317, unique in percent : 0.4481707317073171, unique out percent : 0.8140243902439024, valid percent : 1.0
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/130, there are 1610, valid num : 1605.
+unique test is 1268, unique in : 29, unique out : 1176
+unique test percent is 0.7875776397515528, unique in percent : 0.018012422360248446, unique out percent : 0.7304347826086957, valid percent : 0.9968944099378882
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/131, there are 1063, valid num : 1058.
+unique test is 848, unique in : 272, unique out : 512
+unique test percent is 0.7977422389463782, unique in percent : 0.2558795860771402, unique out percent : 0.4816556914393227, valid percent : 0.9952963311382879
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/132, there are 680, valid num : 458.
+unique test is 47, unique in : 34, unique out : 11
+unique test percent is 0.06911764705882353, unique in percent : 0.05, unique out percent : 0.016176470588235296, valid percent : 0.6735294117647059
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/133, there are 388, valid num : 387.
+unique test is 329, unique in : 115, unique out : 287
+unique test percent is 0.8479381443298969, unique in percent : 0.2963917525773196, unique out percent : 0.7396907216494846, valid percent : 0.9974226804123711
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/134, there are 984, valid num : 980.
+unique test is 279, unique in : 235, unique out : 24
+unique test percent is 0.28353658536585363, unique in percent : 0.23882113821138212, unique out percent : 0.024390243902439025, valid percent : 0.9959349593495935
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/135, there are 582, valid num : 582.
+unique test is 293, unique in : 152, unique out : 78
+unique test percent is 0.5034364261168385, unique in percent : 0.2611683848797251, unique out percent : 0.13402061855670103, valid percent : 1.0
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/136, there are 579, valid num : 566.
+unique test is 482, unique in : 281, unique out : 390
+unique test percent is 0.8324697754749568, unique in percent : 0.4853195164075993, unique out percent : 0.6735751295336787, valid percent : 0.9775474956822107
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/137, there are 546, valid num : 497.
+unique test is 116, unique in : 104, unique out : 51
+unique test percent is 0.21245421245421245, unique in percent : 0.19047619047619047, unique out percent : 0.09340659340659341, valid percent : 0.9102564102564102
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/138, there are 783, valid num : 773.
+unique test is 598, unique in : 60, unique out : 502
+unique test percent is 0.7637292464878672, unique in percent : 0.07662835249042145, unique out percent : 0.6411238825031929, valid percent : 0.9872286079182631
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/139, there are 730, valid num : 725.
+unique test is 570, unique in : 56, unique out : 540
+unique test percent is 0.7808219178082192, unique in percent : 0.07671232876712329, unique out percent : 0.7397260273972602, valid percent : 0.9931506849315068
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/140, there are 457, valid num : 451.
+unique test is 315, unique in : 228, unique out : 252
+unique test percent is 0.6892778993435449, unique in percent : 0.4989059080962801, unique out percent : 0.5514223194748359, valid percent : 0.986870897155361
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/141, there are 1189, valid num : 1183.
+unique test is 748, unique in : 612, unique out : 97
+unique test percent is 0.6291000841042893, unique in percent : 0.5147182506307821, unique out percent : 0.0815811606391926, valid percent : 0.9949537426408747
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/142, there are 417, valid num : 415.
+unique test is 345, unique in : 143, unique out : 282
+unique test percent is 0.8273381294964028, unique in percent : 0.34292565947242204, unique out percent : 0.6762589928057554, valid percent : 0.9952038369304557
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/143, there are 690, valid num : 678.
+unique test is 425, unique in : 233, unique out : 388
+unique test percent is 0.6159420289855072, unique in percent : 0.33768115942028987, unique out percent : 0.5623188405797102, valid percent : 0.9826086956521739
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/144, there are 597, valid num : 596.
+unique test is 315, unique in : 205, unique out : 117
+unique test percent is 0.5276381909547738, unique in percent : 0.34338358458961477, unique out percent : 0.19597989949748743, valid percent : 0.998324958123953
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/145, there are 357, valid num : 356.
+unique test is 300, unique in : 260, unique out : 269
+unique test percent is 0.8403361344537815, unique in percent : 0.7282913165266106, unique out percent : 0.7535014005602241, valid percent : 0.9971988795518207
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/146, there are 462, valid num : 460.
+unique test is 313, unique in : 88, unique out : 158
+unique test percent is 0.6774891774891775, unique in percent : 0.19047619047619047, unique out percent : 0.341991341991342, valid percent : 0.9956709956709957
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/147, there are 1110, valid num : 1100.
+unique test is 836, unique in : 55, unique out : 572
+unique test percent is 0.7531531531531531, unique in percent : 0.04954954954954955, unique out percent : 0.5153153153153153, valid percent : 0.990990990990991
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/148, there are 570, valid num : 564.
+unique test is 466, unique in : 147, unique out : 293
+unique test percent is 0.8175438596491228, unique in percent : 0.2578947368421053, unique out percent : 0.5140350877192983, valid percent : 0.9894736842105263
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/149, there are 586, valid num : 581.
+unique test is 413, unique in : 280, unique out : 320
+unique test percent is 0.7047781569965871, unique in percent : 0.4778156996587031, unique out percent : 0.5460750853242321, valid percent : 0.9914675767918089
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/150, there are 1236, valid num : 1226.
+unique test is 1053, unique in : 950, unique out : 221
+unique test percent is 0.8519417475728155, unique in percent : 0.7686084142394822, unique out percent : 0.17880258899676377, valid percent : 0.9919093851132686
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/151, there are 643, valid num : 642.
+unique test is 147, unique in : 80, unique out : 85
+unique test percent is 0.2286158631415241, unique in percent : 0.12441679626749612, unique out percent : 0.1321928460342146, valid percent : 0.9984447900466563
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/152, there are 166, valid num : 166.
+unique test is 69, unique in : 13, unique out : 63
+unique test percent is 0.41566265060240964, unique in percent : 0.0783132530120482, unique out percent : 0.3795180722891566, valid percent : 1.0
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/153, there are 525, valid num : 522.
+unique test is 459, unique in : 402, unique out : 376
+unique test percent is 0.8742857142857143, unique in percent : 0.7657142857142857, unique out percent : 0.7161904761904762, valid percent : 0.9942857142857143
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/154, there are 722, valid num : 639.
+unique test is 125, unique in : 113, unique out : 17
+unique test percent is 0.1731301939058172, unique in percent : 0.15650969529085873, unique out percent : 0.023545706371191136, valid percent : 0.8850415512465374
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/155, there are 947, valid num : 943.
+unique test is 803, unique in : 204, unique out : 465
+unique test percent is 0.8479408658922915, unique in percent : 0.21541710665258712, unique out percent : 0.4910242872228089, valid percent : 0.9957761351636748
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/156, there are 858, valid num : 856.
+unique test is 632, unique in : 92, unique out : 621
+unique test percent is 0.7365967365967366, unique in percent : 0.10722610722610723, unique out percent : 0.7237762237762237, valid percent : 0.9976689976689976
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/157, there are 710, valid num : 707.
+unique test is 446, unique in : 170, unique out : 226
+unique test percent is 0.6281690140845071, unique in percent : 0.23943661971830985, unique out percent : 0.3183098591549296, valid percent : 0.995774647887324
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/158, there are 445, valid num : 445.
+unique test is 138, unique in : 86, unique out : 85
+unique test percent is 0.3101123595505618, unique in percent : 0.19325842696629214, unique out percent : 0.19101123595505617, valid percent : 1.0
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/159, there are 843, valid num : 795.
+unique test is 779, unique in : 702, unique out : 547
+unique test percent is 0.9240806642941874, unique in percent : 0.8327402135231317, unique out percent : 0.6488730723606169, valid percent : 0.9430604982206405
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/160, there are 724, valid num : 718.
+unique test is 551, unique in : 466, unique out : 182
+unique test percent is 0.761049723756906, unique in percent : 0.643646408839779, unique out percent : 0.2513812154696133, valid percent : 0.9917127071823204
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/161, there are 1144, valid num : 1135.
+unique test is 756, unique in : 449, unique out : 678
+unique test percent is 0.6608391608391608, unique in percent : 0.3924825174825175, unique out percent : 0.5926573426573427, valid percent : 0.9921328671328671
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/162, there are 300, valid num : 254.
+unique test is 208, unique in : 63, unique out : 185
+unique test percent is 0.6933333333333334, unique in percent : 0.21, unique out percent : 0.6166666666666667, valid percent : 0.8466666666666667
+---------------------------------------------------------------------------------------------------------------------------------
+For task HumanEval/163, there are 359, valid num : 358.
+unique test is 324, unique in : 106, unique out : 275
+unique test percent is 0.9025069637883009, unique in percent : 0.29526462395543174, unique out percent : 0.766016713091922, valid percent : 0.9972144846796658
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+in percent
+Data with length 164, max_num:0.9368421052631579, min_num:0.018012422360248446, mid_num:0.33974967061923583, mean:0.34502096583777697, diff:0.9188296829029095
+bins:
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+out percent
+Data with length 164, max_num:0.9258241758241759, min_num:0.0034662045060658577, mid_num:0.3796545065278536, mean:0.38908176505930375, diff:0.92235797131811
+bins:
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+unique percent
+Data with length 164, max_num:0.9689119170984456, min_num:0.06622516556291391, mid_num:0.6771284271284271, mean:0.6431611123944718, diff:0.9026867515355317
+bins:
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+valid percent
+bins:
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+Data with length 164, max_num:1.0, min_num:0.6735294117647059, mid_num:0.9934565434565434, mean:0.981346060978856, diff:0.32647058823529407
+unique test num
+Data with length 164, max_num:1268, min_num:30, mid_num:410.0, mean:448.0731707317073, diff:1238
+data max 1268,base 100.0, range max : 1300.0
+bins:
+[   0.  100.  200.  300.  400.  500.  600.  700.  800.  900. 1000. 1100.
+ 1200. 1300.]
+unique in num
+Data with length 164, max_num:950, min_num:13, mid_num:210.5, mean:232.2560975609756, diff:937
+data max 950,base 100.0, range max : 1000.0
+bins:
+[   0.  100.  200.  300.  400.  500.  600.  700.  800.  900. 1000.]
+unique out num
+Data with length 164, max_num:1176, min_num:2, mid_num:220.0, mean:254.2621951219512, diff:1174
+data max 1176,base 100.0, range max : 1200.0
+bins:
+[   0.  100.  200.  300.  400.  500.  600.  700.  800.  900. 1000. 1100.
+ 1200.]
+valid test num
+Data with length 164, max_num:2239, min_num:93, mid_num:623.0, mean:708.2926829268292, diff:2146
+data max 2239,base 100.0, range max : 2300.0
+bins:
+[   0.  100.  200.  300.  400.  500.  600.  700.  800.  900. 1000. 1100.
+ 1200. 1300. 1400. 1500. 1600. 1700. 1800. 1900. 2000. 2100. 2200. 2300.]
