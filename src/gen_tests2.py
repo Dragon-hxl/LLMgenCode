@@ -9,6 +9,7 @@ from human_eval.data import read_problems
 from human_eval.execution import check_test_correctness
 from concurrent.futures import ThreadPoolExecutor
 import os
+from myutils import map_gpu_memory,prompt_for_64
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
 shot_file = "gen_test_shot.txt"
@@ -43,27 +44,7 @@ if __name__ == "__main__":
     unit_tests = {}
 
     #为模型的多卡运行分配显存，默认使用了一个服务器上的所有显卡，也就是4张。这里直接从fastchat中的源码摘取了部分
-    gpu_memory = []
-    num_gpus = torch.cuda.device_count()
-    for gpu_id in range(num_gpus):
-        with torch.cuda.device(gpu_id):
-            device = torch.cuda.current_device()
-            gpu_properties = torch.cuda.get_device_properties(device)
-            total_memory = gpu_properties.total_memory / (1024**3)
-            allocated_memory = torch.cuda.memory_allocated() / (1024**3)
-            available_memory = total_memory - allocated_memory
-            gpu_memory.append(available_memory)
-    max_memory_mapping = {
-                        i: str(int(gpu_memory[i] * 0.85)) + "GiB"
-                        for i in range(num_gpus)
-                    }
-    used_gpu = []
-    memory_mapping ={}
-    if used_gpu!=[]:
-        for i in used_gpu:
-            memory_mapping[i] = max_memory_mapping[i]
-        max_memory_mapping = memory_mapping
-    print(max_memory_mapping)
+    max_memory_mapping = map_gpu_memory(used_gpu=[])
 
     #加载模型
     print("load model from ",model_path)
@@ -76,40 +57,28 @@ if __name__ == "__main__":
     num_task = len(taskids)
     print("task num: ",num_task )
     f = open(output_file,"w+",encoding='utf-8')
-    # lack_id = [85, 100, 113, 79, 119, 127, 130, 39]
     shot = get_one_shot()
-    for id in taskids:
-        # tid = int(id.split("/")[1])
-        # if tid not in lack_id:
-        #     continue
-        # prompt = get_one_shot(problems)
+    for tid in taskids:
         cir =0
         tests = []
         test_in_set = set()
         test_get = set()
         already_gen =""
-        temperature = 1.0
+        temperature = 0.4
         top_k = 50
         end_cir = 15
+        tpromt = problems[tid]["prompt"]
+        if tid == "HumanEval/64":
+            tpromt = prompt_for_64
         while cir < end_cir:
             print(f"start cir : {cir}")
-            # prompt = ""
-            # for line in problems[id]["prompt"].split("\n"):
-            #     if ">>>" in line or "Example" in line or "For example" in line:
-            #         prompt += "    \"\"\"\n"
-            #         break
-            #     prompt += line + "\n"
-            prompt = problems[id]["prompt"]
-            # for t in test_get:
-            #     already_gen += t + "\n"
-            # problem = prompt + "\tpass\n\n" + "# Check the correctness of " + problems[id]["entry_point"] +" with 50 tests:\n" + already_gen +"\nassert"
-            problem = shot + prompt + "    pass\n\n" + "# Check the correctness of " + problems[id]["entry_point"] +" with 15 more tests.\n# result\n"
+            prompt = f"{shot}\nfunc signature:{tpromt}\nunit tests:\n"
             # problem = prompt + "\tpass\n\n" + "# Check the correctness of " + problems[id]["entry_point"] +"\n" + already_gen +"\nassert"
             print("--------------------------")
-            print(problem)
+            print(prompt)
             print("--------------------------")
-            input_len = len(problem)
-            inputs = tokenizer(problem, return_tensors='pt', return_token_type_ids=False)
+            input_len = len(prompt)
+            inputs = tokenizer(prompt, return_tensors='pt', return_token_type_ids=False)
             inputs = inputs.to('cuda')
             # pred = model.generate(**inputs, max_new_tokens=2048,top_p=0.95,temperature=temperature,repetition_penalty=1.1)#,temperature=0.4
             pred = model.generate(**inputs, max_new_tokens=512,top_k=top_k,do_sample=True,temperature=temperature,num_return_sequences=10,repetition_penalty=1.1)#,repetition_penalty=1.1

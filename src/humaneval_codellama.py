@@ -37,7 +37,7 @@ if __name__ == "__main__":
         # res = f"You are an expert Python programmer,and here is your task : \n{task}\nPlease implete the funtion to solve the task.\n{func_signature}"
         # preflex4="\\begin{code}\n"#[INST]Complete the following function[\INST]\n
         # res = preflex4 + s # shot + s + "\n### result ###\n"
-        return """s + "\n""""#preflex3   #+"\n"#problem
+        return 
 
     #为模型的多卡运行分配显存，默认使用了一个服务器上的所有显卡，也就是4张。这里直接从fastchat中的源码摘取了部分
     gpu_memory = []

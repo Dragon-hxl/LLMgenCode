@@ -1,0 +1,493 @@
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/0, there are 156 corrects and 157 incorrects.
+When correct percent is 0.9, should add 18 testcases, final add 18, final testcase num is 174
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/1, there are 6 corrects and 331 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 7
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/2, there are 32 corrects and 556 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 36
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/3, there are 283 corrects and 232 incorrects.
+When correct percent is 0.9, should add 32 testcases, final add 32, final testcase num is 315
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/4, there are 15 corrects and 281 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 17
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/5, there are 10 corrects and 145 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 12
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/6, there are 47 corrects and 547 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 53
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/7, there are 152 corrects and 262 incorrects.
+When correct percent is 0.9, should add 17 testcases, final add 17, final testcase num is 169
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/8, there are 7 corrects and 220 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 8
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/9, there are 16 corrects and 89 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 18
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/10, there are 53 corrects and 175 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 59
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/11, there are 85 corrects and 570 incorrects.
+When correct percent is 0.9, should add 10 testcases, final add 10, final testcase num is 95
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/12, there are 130 corrects and 137 incorrects.
+When correct percent is 0.9, should add 15 testcases, final add 15, final testcase num is 145
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/13, there are 180 corrects and 307 incorrects.
+When correct percent is 0.9, should add 20 testcases, final add 20, final testcase num is 200
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/14, there are 18 corrects and 340 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 20
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/15, there are 17 corrects and 383 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 19
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/16, there are 134 corrects and 493 incorrects.
+When correct percent is 0.9, should add 15 testcases, final add 15, final testcase num is 149
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/17, there are 7 corrects and 413 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 8
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/18, there are 129 corrects and 367 incorrects.
+When correct percent is 0.9, should add 15 testcases, final add 15, final testcase num is 144
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/19, there are 174 corrects and 631 incorrects.
+When correct percent is 0.9, should add 20 testcases, final add 20, final testcase num is 194
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/20, there are 74 corrects and 233 incorrects.
+When correct percent is 0.9, should add 9 testcases, final add 9, final testcase num is 83
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/21, there are 13 corrects and 284 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 15
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/22, there are 77 corrects and 202 incorrects.
+When correct percent is 0.9, should add 9 testcases, final add 9, final testcase num is 86
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/23, there are 52 corrects and 172 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 58
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/24, there are 21 corrects and 632 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 24
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/25, there are 29 corrects and 606 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 33
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/26, there are 8 corrects and 212 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 9
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/27, there are 38 corrects and 238 incorrects.
+When correct percent is 0.9, should add 5 testcases, final add 5, final testcase num is 43
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/28, there are 20 corrects and 96 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 23
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/29, there are 169 corrects and 258 incorrects.
+When correct percent is 0.9, should add 19 testcases, final add 19, final testcase num is 188
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/30, there are 55 corrects and 296 incorrects.
+When correct percent is 0.9, should add 7 testcases, final add 7, final testcase num is 62
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/31, there are 46 corrects and 139 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 52
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/32, there are 7 corrects and 503 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 8
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/33, there are 27 corrects and 164 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 30
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/34, there are 69 corrects and 55 incorrects.
+When correct percent is 0.9, should add 8 testcases, final add 8, final testcase num is 77
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/35, there are 112 corrects and 56 incorrects.
+When correct percent is 0.9, should add 13 testcases, final add 13, final testcase num is 125
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/36, there are 48 corrects and 886 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 54
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/37, there are 15 corrects and 156 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 17
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/38, there are 111 corrects and 406 incorrects.
+When correct percent is 0.9, should add 13 testcases, final add 13, final testcase num is 124
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/39, there are 4 corrects and 864 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 5
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/40, there are 137 corrects and 109 incorrects.
+When correct percent is 0.9, should add 16 testcases, final add 16, final testcase num is 153
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/41, there are 2 corrects and 436 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 3
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/42, there are 19 corrects and 77 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 22
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/43, there are 153 corrects and 122 incorrects.
+When correct percent is 0.9, should add 17 testcases, final add 17, final testcase num is 170
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/44, there are 55 corrects and 844 incorrects.
+When correct percent is 0.9, should add 7 testcases, final add 7, final testcase num is 62
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/45, there are 27 corrects and 347 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 30
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/46, there are 9 corrects and 775 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 10
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/47, there are 54 corrects and 111 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 60
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/48, there are 69 corrects and 95 incorrects.
+When correct percent is 0.9, should add 8 testcases, final add 8, final testcase num is 77
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/49, there are 97 corrects and 840 incorrects.
+When correct percent is 0.9, should add 11 testcases, final add 11, final testcase num is 108
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/50, there are 75 corrects and 726 incorrects.
+When correct percent is 0.9, should add 9 testcases, final add 9, final testcase num is 84
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/51, there are 17 corrects and 258 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 19
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/52, there are 107 corrects and 188 incorrects.
+When correct percent is 0.9, should add 12 testcases, final add 12, final testcase num is 119
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/53, there are 141 corrects and 85 incorrects.
+When correct percent is 0.9, should add 16 testcases, final add 16, final testcase num is 157
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/54, there are 153 corrects and 88 incorrects.
+When correct percent is 0.9, should add 17 testcases, final add 17, final testcase num is 170
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/55, there are 26 corrects and 320 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 29
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/56, there are 261 corrects and 260 incorrects.
+When correct percent is 0.9, should add 29 testcases, final add 29, final testcase num is 290
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/57, there are 127 corrects and 176 incorrects.
+When correct percent is 0.9, should add 15 testcases, final add 15, final testcase num is 142
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/58, there are 85 corrects and 307 incorrects.
+When correct percent is 0.9, should add 10 testcases, final add 10, final testcase num is 95
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/59, there are 48 corrects and 709 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 54
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/60, there are 23 corrects and 319 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 26
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/61, there are 126 corrects and 233 incorrects.
+When correct percent is 0.9, should add 14 testcases, final add 14, final testcase num is 140
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/62, there are 5 corrects and 343 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 6
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/63, there are 7 corrects and 628 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 8
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/64, there are 158 corrects and 496 incorrects.
+When correct percent is 0.9, should add 18 testcases, final add 18, final testcase num is 176
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/65, there are 47 corrects and 937 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 53
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/66, there are 22 corrects and 729 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 25
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/67, there are 25 corrects and 113 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 28
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/68, there are 11 corrects and 377 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 13
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/69, there are 132 corrects and 356 incorrects.
+When correct percent is 0.9, should add 15 testcases, final add 15, final testcase num is 147
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/70, there are 7 corrects and 232 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 8
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/71, there are 97 corrects and 485 incorrects.
+When correct percent is 0.9, should add 11 testcases, final add 11, final testcase num is 108
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/72, there are 201 corrects and 292 incorrects.
+When correct percent is 0.9, should add 23 testcases, final add 23, final testcase num is 224
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/73, there are 52 corrects and 334 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 58
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/74, there are 131 corrects and 294 incorrects.
+When correct percent is 0.9, should add 15 testcases, final add 15, final testcase num is 146
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/75, there are 239 corrects and 424 incorrects.
+When correct percent is 0.9, should add 27 testcases, final add 27, final testcase num is 266
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/76, there are 242 corrects and 279 incorrects.
+When correct percent is 0.9, should add 27 testcases, final add 27, final testcase num is 269
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/77, there are 207 corrects and 618 incorrects.
+When correct percent is 0.9, should add 23 testcases, final add 23, final testcase num is 230
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/78, there are 118 corrects and 892 incorrects.
+When correct percent is 0.9, should add 14 testcases, final add 14, final testcase num is 132
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/79, there are 0 corrects and 690 incorrects.
+When correct percent is 0.9, should add 0 testcases, final add 0, final testcase num is 0
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/80, there are 329 corrects and 329 incorrects.
+When correct percent is 0.9, should add 37 testcases, final add 37, final testcase num is 366
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/81, there are 3 corrects and 89 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 4
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/82, there are 172 corrects and 551 incorrects.
+When correct percent is 0.9, should add 20 testcases, final add 20, final testcase num is 192
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/83, there are 1 corrects and 746 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 2
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/84, there are 0 corrects and 784 incorrects.
+When correct percent is 0.9, should add 0 testcases, final add 0, final testcase num is 0
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/85, there are 0 corrects and 177 incorrects.
+When correct percent is 0.9, should add 0 testcases, final add 0, final testcase num is 0
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/86, there are 4 corrects and 200 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 5
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/87, there are 6 corrects and 324 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 7
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/88, there are 84 corrects and 251 incorrects.
+When correct percent is 0.9, should add 10 testcases, final add 10, final testcase num is 94
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/89, there are 24 corrects and 475 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 27
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/90, there are 5 corrects and 25 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 6
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/91, there are 222 corrects and 249 incorrects.
+When correct percent is 0.9, should add 25 testcases, final add 25, final testcase num is 247
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/92, there are 235 corrects and 225 incorrects.
+When correct percent is 0.9, should add 27 testcases, final add 27, final testcase num is 262
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/93, there are 20 corrects and 357 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 23
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/94, there are 10 corrects and 221 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 12
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/95, there are 219 corrects and 260 incorrects.
+When correct percent is 0.9, should add 25 testcases, final add 25, final testcase num is 244
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/96, there are 12 corrects and 221 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 14
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/97, there are 57 corrects and 553 incorrects.
+When correct percent is 0.9, should add 7 testcases, final add 7, final testcase num is 64
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/98, there are 112 corrects and 524 incorrects.
+When correct percent is 0.9, should add 13 testcases, final add 13, final testcase num is 125
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/99, there are 306 corrects and 576 incorrects.
+When correct percent is 0.9, should add 34 testcases, final add 34, final testcase num is 340
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/100, there are 4 corrects and 665 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 5
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/101, there are 152 corrects and 254 incorrects.
+When correct percent is 0.9, should add 17 testcases, final add 17, final testcase num is 169
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/102, there are 73 corrects and 581 incorrects.
+When correct percent is 0.9, should add 9 testcases, final add 9, final testcase num is 82
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/103, there are 34 corrects and 815 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 38
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/104, there are 17 corrects and 372 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 19
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/105, there are 5 corrects and 209 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 6
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/106, there are 4 corrects and 517 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 5
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/107, there are 10 corrects and 751 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 12
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/108, there are 39 corrects and 390 incorrects.
+When correct percent is 0.9, should add 5 testcases, final add 5, final testcase num is 44
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/109, there are 88 corrects and 238 incorrects.
+When correct percent is 0.9, should add 10 testcases, final add 10, final testcase num is 98
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/110, there are 69 corrects and 211 incorrects.
+When correct percent is 0.9, should add 8 testcases, final add 8, final testcase num is 77
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/111, there are 3 corrects and 422 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 4
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/112, there are 42 corrects and 682 incorrects.
+When correct percent is 0.9, should add 5 testcases, final add 5, final testcase num is 47
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/113, there are 0 corrects and 376 incorrects.
+When correct percent is 0.9, should add 0 testcases, final add 0, final testcase num is 0
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/114, there are 28 corrects and 411 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 32
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/115, there are 17 corrects and 540 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 19
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/116, there are 29 corrects and 251 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 33
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/117, there are 93 corrects and 680 incorrects.
+When correct percent is 0.9, should add 11 testcases, final add 11, final testcase num is 104
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/118, there are 124 corrects and 494 incorrects.
+When correct percent is 0.9, should add 14 testcases, final add 14, final testcase num is 138
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/119, there are 0 corrects and 351 incorrects.
+When correct percent is 0.9, should add 0 testcases, final add 0, final testcase num is 0
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/120, there are 73 corrects and 334 incorrects.
+When correct percent is 0.9, should add 9 testcases, final add 9, final testcase num is 82
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/121, there are 5 corrects and 195 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 6
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/122, there are 31 corrects and 531 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 35
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/123, there are 2 corrects and 398 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 3
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/124, there are 27 corrects and 57 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 30
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/125, there are 52 corrects and 397 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 58
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/126, there are 184 corrects and 231 incorrects.
+When correct percent is 0.9, should add 21 testcases, final add 21, final testcase num is 205
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/127, there are 0 corrects and 248 incorrects.
+When correct percent is 0.9, should add 0 testcases, final add 0, final testcase num is 0
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/128, there are 40 corrects and 377 incorrects.
+When correct percent is 0.9, should add 5 testcases, final add 5, final testcase num is 45
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/129, there are 14 corrects and 297 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 16
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/130, there are 0 corrects and 1268 incorrects.
+When correct percent is 0.9, should add 0 testcases, final add 0, final testcase num is 0
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/131, there are 58 corrects and 790 incorrects.
+When correct percent is 0.9, should add 7 testcases, final add 7, final testcase num is 65
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/132, there are 14 corrects and 33 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 16
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/133, there are 14 corrects and 315 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 16
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/134, there are 155 corrects and 124 incorrects.
+When correct percent is 0.9, should add 18 testcases, final add 18, final testcase num is 173
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/135, there are 51 corrects and 242 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 57
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/136, there are 11 corrects and 471 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 13
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/137, there are 38 corrects and 78 incorrects.
+When correct percent is 0.9, should add 5 testcases, final add 5, final testcase num is 43
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/138, there are 50 corrects and 548 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 56
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/139, there are 20 corrects and 550 incorrects.
+When correct percent is 0.9, should add 3 testcases, final add 3, final testcase num is 23
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/140, there are 28 corrects and 287 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 32
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/141, there are 518 corrects and 230 incorrects.
+When correct percent is 0.9, should add 58 testcases, final add 58, final testcase num is 576
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/142, there are 3 corrects and 342 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 4
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/143, there are 49 corrects and 376 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 55
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/144, there are 122 corrects and 193 incorrects.
+When correct percent is 0.9, should add 14 testcases, final add 14, final testcase num is 136
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/145, there are 86 corrects and 214 incorrects.
+When correct percent is 0.9, should add 10 testcases, final add 10, final testcase num is 96
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/146, there are 37 corrects and 276 incorrects.
+When correct percent is 0.9, should add 5 testcases, final add 5, final testcase num is 42
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/147, there are 9 corrects and 827 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 10
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/148, there are 52 corrects and 414 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 58
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/149, there are 1 corrects and 412 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 2
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/150, there are 407 corrects and 646 incorrects.
+When correct percent is 0.9, should add 46 testcases, final add 46, final testcase num is 453
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/151, there are 14 corrects and 133 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 16
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/152, there are 6 corrects and 63 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 7
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/153, there are 172 corrects and 287 incorrects.
+When correct percent is 0.9, should add 20 testcases, final add 20, final testcase num is 192
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/154, there are 55 corrects and 70 incorrects.
+When correct percent is 0.9, should add 7 testcases, final add 7, final testcase num is 62
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/155, there are 28 corrects and 775 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 32
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/156, there are 41 corrects and 591 incorrects.
+When correct percent is 0.9, should add 5 testcases, final add 5, final testcase num is 46
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/157, there are 143 corrects and 303 incorrects.
+When correct percent is 0.9, should add 16 testcases, final add 16, final testcase num is 159
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/158, there are 28 corrects and 110 incorrects.
+When correct percent is 0.9, should add 4 testcases, final add 4, final testcase num is 32
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/159, there are 16 corrects and 763 incorrects.
+When correct percent is 0.9, should add 2 testcases, final add 2, final testcase num is 18
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/160, there are 53 corrects and 498 incorrects.
+When correct percent is 0.9, should add 6 testcases, final add 6, final testcase num is 59
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/161, there are 116 corrects and 640 incorrects.
+When correct percent is 0.9, should add 13 testcases, final add 13, final testcase num is 129
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/162, there are 5 corrects and 203 incorrects.
+When correct percent is 0.9, should add 1 testcases, final add 1, final testcase num is 6
+-----------------------------------------------------------------------------------------------------
+In task HumanEval/163, there are 41 corrects and 283 incorrects.
+When correct percent is 0.9, should add 5 testcases, final add 5, final testcase num is 46
+zeros_correct_task is : ['HumanEval/79', 'HumanEval/84', 'HumanEval/85', 'HumanEval/113', 'HumanEval/119', 'HumanEval/127', 'HumanEval/130'], and special task is []

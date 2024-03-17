@@ -28,6 +28,7 @@ def sita(Q,m1,m11,b=1,d=4096,V=32000):
 def load_length(resfile):
     task_length_record = {}
     task_computation = {}
+    fix_percent_list = []
     with open(resfile,"r") as f:
         for line in f.readlines():
             computation = []
@@ -52,6 +53,7 @@ def load_length(resfile):
                     fix_length = r[1]
                     input_com = computation_expr1(input_length)
                     fix_com = computation_expr1(fix_length)
+                    fix_percent_list.append(fix_length/input_length)
                     total_input_com += input_com
                     total_fix_com += fix_com
                     numbers += 1
@@ -60,10 +62,12 @@ def load_length(resfile):
             task_computation[tid] = computation
             print(f"task {tid} record {len(length_record)} cirs's length")
             print(f"task {tid} record {len(computation)} cirs's computation")
+    data_analysis(fix_percent_list)
     return task_computation
 
 def load_length2(resfile):
     task_computation = {}
+    fix_percents_list = []
     with open(resfile,"r") as f:
         for line in f.readlines():
             list_m = []
@@ -99,6 +103,7 @@ def load_length2(resfile):
                     input_len_record.append(input_length)
                     output_len_record.append(output_length)
                     input2_len_record.append(input_length*input_length)
+                    fix_percents_list.append(fix_length/input_length)
                     numbers += 1
                 ave_in = sum(input_len_record)/numbers
                 ave_in2 = sum(input2_len_record)/numbers
@@ -127,6 +132,8 @@ def load_length2(resfile):
             max_percent = computation_expr1(fix_len)/computation_expr3(ave_m2,ave_m,Q)
             task_computation[tid] = {"step_one_computation":step_one_computation,"ave_m":ave_m,"ave_m2":ave_m2,"Q":Q,"sita":sita(Q,m1,m11),"fix_len":fix_len,"max_percent":max_percent}
             print(task_computation[tid])
+    print("fix_percent_list")
+    data_analysis(fix_percents_list)
     return task_computation
 
 def load_length3(resfile):

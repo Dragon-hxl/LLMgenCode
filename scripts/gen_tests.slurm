@@ -5,9 +5,9 @@
 # (TODO)
 # Please modify job name
 
-#SBATCH -J gt7b16k             # The job name
-#SBATCH -o ../log/gen_tests_7b16k_num1002.out        # Write the standard output to file named 'ret-<job_number>.out'
-#SBATCH -e ../log/gen_tests_7b16k_num1002.out        # Write the standard error to file named 'ret-<job_number>.err'
+#SBATCH -J gtcodellama34binst             # The job name
+#SBATCH -o ../log/gen_tests_codellama34binst_num100_20240313.out        # Write the standard output to file named 'ret-<job_number>.out'
+#SBATCH -e ../log/gen_tests_codellama34binst_num100_20240313.out        # Write the standard error to file named 'ret-<job_number>.err'
 
 
 #- Resources
@@ -36,7 +36,7 @@
 ### You can specify the characteristics of the compute nodes, and even the names of the compute nodes
 ###
 ####SBATCH --nodelist=gpu-v20          # Request a specific list of hosts 
-#SBATCH --constraint="80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
+#SBATCH --constraint="40G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
 ###
 
 #- Log information
@@ -83,7 +83,7 @@ cd /home/S/hexiaolong/codex/self-debug/src
 ###source deactivate
 ###conda activate codex
 #####python bin/logo.py --enumerationTimeout 1800 --testingTimeout 1800 --taskBatchSize 40 --iterations 12 --testEvery 3 --recognitionTimeout 1800 --taskDataset logo_unlimited_200 --languageDataset logo_unlimited_200/synthetic --synchronous_grammar --smt_pseudoalignments 0.1 --language_compression --lc_score 0.2 --max_compression 5 --biasOptimal --contextual --recognition_0 --recognition_1 examples language --Helmholtz 0.5 --synchronous_grammar  --language_encoder recurrent --sample_n_supervised 0 --moses_dir ../moses_compiled --smt_phrase_length 1 --language_compression  --max_compression 5 --no-cuda
-python3.9 gen_tests2.py -mf /lustre/S/hexiaolong/vicuna-7b-16k/ -o ../gen_tests_7b16k_num1002.jsonl
-
+###python3.9 gen_tests.py -mf /lustre/S/hexiaolong/vicuna-7b-16k/ -o ../gen_tests_codellama34binst_num100_20240313.jsonl
+python3.9 gen_tests.py -mf /lustre/S/hexiaolong/CodeLlama-34b-Instruct-hf -o ../gen_tests_codellama34binst_num100_20240313.jsonl
 #- End
 echo "Job end at $(date "+%Y-%m-%d %H:%M:%S")"

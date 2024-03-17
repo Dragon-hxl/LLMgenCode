@@ -1,0 +1,11 @@
+coverage==7.3.4
+fire==0.5.0
+matplotlib==3.7.1
+numpy==1.25.2
+omegaconf==2.3.0
+pathos==0.3.1
+PyYAML==6.0
+setuptools==67.8.0
+torch==2.0.1
+tqdm==4.65.0
+transformers==4.31.0

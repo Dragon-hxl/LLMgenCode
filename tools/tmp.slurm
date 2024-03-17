@@ -15,19 +15,19 @@
 # (TODO)
 # Please modify your requirements
 
-#SBATCH -p r8nv-gpu                    # Submit to 'nv-gpu' Partitiion
-#SBATCH -t 0-30:00:00                # Run for a maximum time of 0 days, 12 hours, 00 mins, 00 secs
+#SBATCH -p r8nv-gpu-hw                    # Submit to 'nv-gpu' Partitiion
+#SBATCH -t 0-12:00:00                # Run for a maximum time of 0 days, 12 hours, 00 mins, 00 secs
 #SBATCH --nodes=1                    # Request N nodes
-#SBATCH --gres=gpu:1                 # Request M GPU per node
+#SBATCH --gres=gpu:4                 # Request M GPU per node
 #SBATCH --gres-flags=enforce-binding # CPU-GPU Affinity
-#SBATCH --qos=gpu-normal             # Request QOS Type
+#SBATCH --qos=gpu-short             # Request QOS Type
 
 ####SBATCH --ntasks-per-node=48
 
 ###
 ### The system will alloc 8 or 16 cores per gpu by default.
 ### If you need more or less, use following:
-#SBATCH --cpus-per-task=8            # Request K cores
+#SBATCH --cpus-per-task=64            # Request K cores
 ####SBATCH -n 50
 ####SBATCH --mem-per-cpu=100000
 ###
@@ -35,8 +35,8 @@
 ### Without specifying the constraint, any available nodes that meet the requirement will be allocated
 ### You can specify the characteristics of the compute nodes, and even the names of the compute nodes
 ###
-####SBATCH --nodelist=gpu-v20          # Request a specific list of hosts 
-#SBATCH --constraint="24G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
+#SBATCH --nodelist=r8a100-c00          # Request a specific list of hosts 
+#SBATCH --constraint="80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
 ###
 
 #- Log information
@@ -83,6 +83,7 @@ cd /home/S/hexiaolong/codex/self-debug/tools
 ###python3.9 humaneval_UTfeedback.py -mf /lustre/S/hexiaolong/vicuna-13b-v1.1/ -o UTfeedback_13bv0.jsonl
 ###python3.9 humaneval_UTfeedback_multi.py -mf /lustre/S/hexiaolong/vicuna-7b-16k/ -o ../res/UTfeedback_multi100_7b16k.jsonl
 ###python3.9 try.py --model_path /lustre/S/hexiaolong/vicuna-7b-16k/ --output_file try.jsonl
-python3.9 evaluate_correctness.py > UTfeedback_SBSP10_7b16k_tT.txt 2>&1
+####python3.9 evaluate_correctness.py > UTfeedback_SBSP10_7b16k_tT.txt 2>&1
+sleep 1h
 #- End
 echo "Job end at $(date "+%Y-%m-%d %H:%M:%S")"

@@ -9,6 +9,9 @@ import platform
 import signal
 import tempfile
 import time
+from multiprocessing import Process, Manager
+
+
 def run_code_with_output(
         problem: Dict,
         completion: str,
@@ -178,7 +181,7 @@ def run_code_with_output2(
 
 
 def _pack_test_cases(test_cases, timeout):
-    print(f"in _pack_test_cases there are {len(test_cases)} testcases")
+    # print(f"in _pack_test_cases there are {len(test_cases)} testcases")
     blank_4 = ' ' * 4
     blank_8 = ' ' * 8
     blank_12 = ' ' * 12
@@ -217,7 +220,7 @@ def run_code_with_output_CODET(
             # Construct the check program and run it.
             exec_globals = {}
             check_program = (
-                problem["prompt"] + completion + "\n" +
+                problem["prompt"] +"\n"+ completion + "\n" +
                 _pack_test_cases(unit_tests, timeout)
             )
             try:
@@ -249,7 +252,7 @@ def run_code_with_output_CODET(
     # print("process start")
     p.start()
     # print("process join")   #一直在start之后join之前出现segment fault
-    p.join(timeout=extend_timeout + 0.1)
+    p.join(timeout=extend_timeout + 1)
     if p.is_alive():
         p.kill()
 
@@ -269,6 +272,72 @@ def run_code_with_output_CODET(
         result=result[0],
         check_program = check_program
     )
+    
+def run_code_with_output_CODET3(
+        problem: Dict,
+        completion: str,
+        unit_tests: List,
+        extra_check: str,
+        timeout: float
+):
+    """
+    function for debug step. aims to return weather the code is right.
+    """
+    extend_timeout = timeout*len(unit_tests)
+    def unsafe_execute(result_queue):
+        
+        with create_tempdir():
+
+            # These system calls are needed when cleaning up tempdir.
+            import os
+            import shutil
+            rmtree = shutil.rmtree
+            rmdir = os.rmdir
+            chdir = os.chdir
+            # Disable functionalities that can make destructive changes to the test.
+            reliability_guard()
+            # Construct the check program and run it.
+            exec_globals = {}
+            check_program = (
+                problem["prompt"] + "\n" + completion + "\n" +
+                _pack_test_cases(unit_tests, timeout)
+            )
+            try:
+                exec_globals = {'time_limit': time_limit}
+                with swallow_io():
+                    exec(check_program, exec_globals)
+                result_queue.put(exec_globals['final_result'])
+            except TimeoutException:
+                result_queue.put("timed out")
+            except BaseException as e:
+                result_queue.put(f"failed: {e}")
+            # Needed for cleaning up.
+            shutil.rmtree = rmtree
+            os.rmdir = rmdir
+            os.chdir = chdir
+
+    
+    with manager() as manager:
+        result_queue = manager.Queue()
+        p = multiprocessing.Process(target=unsafe_execute,args=(result_queue,))
+        p.start()
+        p.join(timeout=extend_timeout + 1)
+        if p.is_alive():
+            p.terminate()
+            p.join()
+            p.kill()
+            result="timed out"
+        else:
+            result = result_queue.get()
+    return dict(
+        task_id=problem["task_id"],
+        test_cases=unit_tests,
+        completion=completion,
+        passed=(isinstance(result, list)) and len(result) > 0,
+        result=result,
+        # check_program = check_program
+    )
+
 
 # def unsafe_execute(check_program,result):
 #     print("start unsafe execute")
@@ -315,7 +384,7 @@ def run_code_with_output_CODET2(
     """
     extend_timeout = timeout*len(unit_tests)
     check_program = (
-                problem["prompt"] + completion + "\n" +
+                problem["prompt"] + "\n" + completion + "\n" +
                 _pack_test_cases(unit_tests, timeout)
             )
     manager = multiprocessing.Manager()
@@ -342,56 +411,56 @@ def run_code_with_output_CODET2(
     )
 
 
-def run_code_with_output_CODET2(
-        problem: Dict,
-        completion: str,
-        unit_tests: List,
-        extra_check: str,
-        timeout: float
-):
-    """
-    function for debug step. aims to return weather the code is right.
-    """
-    extend_timeout = timeout*len(unit_tests)
-    check_program = (
-                problem["prompt"] + completion + "\n" +
-                _pack_test_cases(unit_tests, timeout)
-            )
-    manager = multiprocessing.Manager()
-    result = manager.list()
+# def run_code_with_output_CODET2(
+#         problem: Dict,
+#         completion: str,
+#         unit_tests: List,
+#         extra_check: str,
+#         timeout: float
+# ):
+#     """
+#     function for debug step. aims to return weather the code is right.
+#     """
+#     extend_timeout = timeout*len(unit_tests)
+#     check_program = (
+#                 problem["prompt"] + completion + "\n" +
+#                 _pack_test_cases(unit_tests, timeout)
+#             )
+#     manager = multiprocessing.Manager()
+#     result = manager.list()
 
-    print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-    print(check_program)
-    print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-    print(multiprocessing.get_start_method())
-    multiprocessing.set_start_method('spawn', force=True)
-    print(multiprocessing.get_start_method())
-    p = multiprocessing.Process(target=unsafe_execute,args=(check_program,result))
-    print(f"process start with time out = {extend_timeout}")
-    p.start()
-    time.sleep(extend_timeout + 0.3)
-    p.terminate()
-    print(f"process join")
-    p.join(timeout=extend_timeout + 0.1)
-    if p.is_alive():
-        p.kill()
+#     print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+#     print(check_program)
+#     print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+#     print(multiprocessing.get_start_method())
+#     multiprocessing.set_start_method('spawn', force=True)
+#     print(multiprocessing.get_start_method())
+#     p = multiprocessing.Process(target=unsafe_execute,args=(check_program,result))
+#     print(f"process start with time out = {extend_timeout}")
+#     p.start()
+#     time.sleep(extend_timeout + 0.3)
+#     p.terminate()
+#     print(f"process join")
+#     p.join(timeout=extend_timeout + 0.1)
+#     if p.is_alive():
+#         p.kill()
 
-    if not result:
-        result.append("timed out")
-    print("return from run_code_with_output_CODET")
-    # print("Result for problem {} is : {}".format(problem["task_id"],result))
-    # print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-    # print("for task: {} the check program is:\n".format(problem["task_id"]))
-    # print(result[0]["program"])
-    # print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-    return dict(
-        task_id=problem["task_id"],
-        test_cases=unit_tests,
-        completion=completion,
-        passed=(type(result[0]) == list) and len(result[0]) > 0,
-        result=result[0],
-        check_program = check_program
-    )
+#     if not result:
+#         result.append("timed out")
+#     print("return from run_code_with_output_CODET")
+#     # print("Result for problem {} is : {}".format(problem["task_id"],result))
+#     # print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+#     # print("for task: {} the check program is:\n".format(problem["task_id"]))
+#     # print(result[0]["program"])
+#     # print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+#     return dict(
+#         task_id=problem["task_id"],
+#         test_cases=unit_tests,
+#         completion=completion,
+#         passed=(type(result[0]) == list) and len(result[0]) > 0,
+#         result=result[0],
+#         check_program = check_program
+#     )
     
 def _pack_input(test_in, timeout):# 运行每个test_input返回得到的结果
     blank_4 = ' ' * 4
@@ -501,7 +570,7 @@ def check_one_correctness(
             # Construct the check program and run it.
             print("run code3 ......")
             check_program = (
-                problem["prompt"] + completion + "\n" +
+                problem["prompt"] +"\n"+ completion + "\n" +
                 problem["test"] + "\n" +
                 f"check({problem['entry_point']})"
             )
@@ -579,16 +648,6 @@ def check_test_correctness(
                 exec_globals = {}
                 with swallow_io():
                     with time_limit(timeout):
-# WARNING
-# This program exists to execute untrusted model-generated code. Although
-# it is highly unlikely that model-generated code will do something overtly
-# malicious in response to this test suite, model-generated code may act
-# destructively due to a lack of model capability or alignment.
-# Users are strongly encouraged to sandbox this evaluation suite so that it 
-# does not perform destructive actions on their host or network. For more 
-# information on how OpenAI sandboxes its code, see the accompanying paper.
-# Once you have read this disclaimer and taken appropriate precautions, 
-# uncomment the following line and proceed at your own risk:
                         exec(check_program, exec_globals)
                         result.append("passed")
             except TimeoutException:
@@ -651,7 +710,7 @@ def check_correctness(problem: Dict, completion: str, timeout: float,
 
             # Construct the check program and run it.
             check_program = (
-                problem["prompt"] + completion + "\n" +
+                problem["prompt"] +"\n"+ completion + "\n" +
                 problem["test"] + "\n" +
                 f"check({problem['entry_point']})"
             )
@@ -699,7 +758,7 @@ def check_correctness(problem: Dict, completion: str, timeout: float,
 
     if not result:
         result.append("timed out")
-    print("completion for problem {} is : \n{}\n the result is : {}".format(problem["task_id"],completion,result[0]))
+    # print("completion for problem {} is : \n{}\n the result is : {}".format(problem["task_id"],completion,result[0]))
     # print("Result for problem {} is : {}".format(problem["task_id"],result[0]))
     return dict(
         task_id=problem["task_id"],

@@ -18,11 +18,11 @@ sys.path.append("/home/S/hexiaolong/codex/self-debug")
 sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
 from human_eval.data import read_problems
 from human_eval.execution import run_code_with_test_result,run_code_with_output2
-from myutils import map_gpu_memory,code_clean2,get_unit_test,prompt_for_64,filter_fix_ans,get_CODET_point2,get_CODET_point4,get_UTfeedback_prompt_v1,get_UTfeedback_prompt
+from myutils import map_gpu_memory,code_clean2,get_unit_test,prompt_for_64,filter_fix_ans,get_CODET_point_v1,get_pass_rate,get_UTfeedback_prompt_v1,get_UTfeedback_prompt
 from utils.obj import Node
 
-"""2023.12.16
-说明：用于UTfeedback，每次生成100个选前10个的代码。和之前不同的是选择剩下来的代码会加入到下次排序。加入CODET作为评分依据
+"""2023.2.2
+说明：本文件只之执行CODET，并使用CODET分数进行排序
 """
 # 可以被CODET3.py文件覆盖
 
@@ -34,27 +34,26 @@ UTfeedback_file = prompt_root + "prompt_UTfeedback.txt"
 data_root = "/home/S/hexiaolong/codex/self-debug/data/"
 ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
 true_tests_file = data_root + "test_from_check.jsonl"# 存放了最终用来check的unit_tests
-tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300.jsonl"# 用来进行CODET的tests文件
-CODET_test_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_uniform.jsonl"
+tests_for_CODET_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_rm.jsonl"# 用来进行CODET的tests文件
+
 # 控制是否加入CODET分数
 with_CODET_Point = True
+# 是否保留上轮迭代剩余的solution
+with_solution_before = False
 
 
 @hydra.main(version_base=None, config_path="../configs/", config_name="UTfeedback_config.yaml")
 def main(cfg: DictConfig):
     #读取配置,获取参数
     print(OmegaConf.to_yaml(cfg))
-    
     output_file = cfg.output
     model_path = cfg.model_path
     debug_temp = cfg.multi.debug.temperature
     debug_maxLen = cfg.multi.debug.max_new_tokens
-    # debug_top_k = cfg.multi.debug.top_k
     debug_top_p = cfg.multi.debug.top_p
     debug_do_sample = cfg.multi.debug.do_sample
     # debug_num_return_sequences = cfg.multi.debug.num_return_sequences
     sample_num = cfg.multi.sample_num
-    full_output_file = output_file.replace(".jsonl","_full.jsonl")
     
     #读取prompt
     with open(prompt_file,"r") as f:
@@ -65,28 +64,15 @@ def main(cfg: DictConfig):
     
     #读取unit tests
     base_unit_tests,base_assertions,base_assertion_string = get_unit_test(ut_file)
-    unit_tests,assertions,assertion_string = get_unit_test(ut_file)#true_tests_file,chosen_num=10
-    # CODET_unit_tests,CODET_assertions,CODET_assertion_string = get_unit_test(CODET_test_file,chosen_num=10) # 新生成的正确的testcase
-    # for tid in list(unit_tests.keys()):
-    #     unit_tests[tid] = (unit_tests[tid] + CODET_unit_tests[tid])[:10]
-    #     assertions[tid] = (assertions[tid] + CODET_assertions[tid])[:10]
-    #     assertion_string[tid] = (assertion_string[tid] + "\n" + CODET_assertion_string[tid])[:10]
-        
-        
+    unit_tests,assertions,assertion_string = get_unit_test(ut_file,chosen_num=2)
+    
     #读取用来进行CODET的tests
     testcases = {}
-    limit = 10
     with open(tests_for_CODET_file,"r") as f:
         for line in f.readlines():
-            # testcases = json.loads(line)
-            # for k,v in testcases.items():
-            #     print(f"task {k} gen {len(v)} testcases")
             data = json.loads(line)
             for k,v in data.items():
-                limited_task_test_cases = [cases_per_sample[:limit] for cases_per_sample in v]
-                limited_task_test_cases = sum(limited_task_test_cases, [])
-                print(f"task {k} gen {len(limited_task_test_cases)} testcases")
-                testcases[k] = limited_task_test_cases
+                testcases[k] = v
     
 
     # 构成生成初始代码的prompt
@@ -100,24 +86,20 @@ def main(cfg: DictConfig):
     #加载模型
     print("load model from ",model_path)
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True,legacy=False)
-    model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto", trust_remote_code=True, max_memory=max_memory_mapping, torch_dtype=torch.float16, low_cpu_mem_usage=True)#, use_safetensors=True
-    # model.tie_weights()
+    model = AutoModelForCausalLM.from_pretrained(model_path, device_map="balanced", trust_remote_code=True, max_memory=max_memory_mapping, torch_dtype=torch.float16, low_cpu_mem_usage=True)#, use_safetensors=True
     
     #获取solution
     problems = read_problems()
     taskids = list(problems.keys())
-    num_task = len(taskids)
-    fullf = open(full_output_file,"w+",encoding="utf-8")
     f = open(output_file,"w+",encoding="utf-8")
-    if f and fullf:
+    if f:
         print(f"open file {output_file} success!")
-    # special_task = [148, 154, 155, 156]# 还不通过的,94,74,87,103,105,106,110,111,112,113,
-    # special_task2 = [94]#133,68,126,129,
-    special_task = [78,79,80,81,82,83,84,85,126,127,128,129,94]
+    #special_task = [154,156,163]#special_task中失败的94,105,115，117，148,126,129
+    special_task = [129]#94,105,115,126,129,78
     for tid in taskids:
         print(f"get solution for task : {tid} with {len(unit_tests[tid])} tests.")
         num_id = int(tid.split("/")[1])
-        # if num_id < 132 or num_id > 164:
+        # if num_id < 43 or num_id > 130:
         #     continue
         if num_id not in special_task:
             continue
@@ -168,10 +150,8 @@ def main(cfg: DictConfig):
         print("=====start code===========")
         print(start_code)
         # debug 准备
-        checkp = assertion_string[tid]
         ut = unit_tests[tid]
         run_test = [t["tin"] for t in ut] # 这个是用来执行的test，会返回代码执行它的结果和test_res比较得到UTfeedback
-        test_res = [t["tout"] for t in ut]
         feedback_prompt = UTfeedback_promt + assertion_string[tid] + "\n\n# Complete the Python funtion:\n" + tprompt+"### result ###\n```python\n" + start_code + "\n"
         fix_input = tokenizer(feedback_prompt, return_tensors='pt', return_token_type_ids=False)
         print(f"fix input length is {fix_input.input_ids.shape}")
@@ -180,22 +160,16 @@ def main(cfg: DictConfig):
         # 开始生成feedback和新代码的循环
         cir = 0
         output_short = {}
-        output_full = {}
         node1 = Node(solution,prompt=problem,depth=cir,feedbackprompt=feedback_prompt)
-        nodes = [node1]
-        gened_nodes = [node1]
-        chosen_nodes = [node1]
-        left_nodes = []
-        time_record = []
-        fix_record = []
-        # output_short[0] = chosen_solution
+        nodes,gened_nodes,chosen_nodes = [node1],[node1],[node1]
+        left_nodes,time_record,fix_record = [],[],[]
         while True:
             st = time.time()
             stop = False
             # 运行所有的solution得到通过的test数量和得分
             for i,node in enumerate(gened_nodes):
+                print(f"run code {i}")
                 solution = node.solution
-                print("starting run code")
                 # 这里通过一次函数调用同时获得simple和UTfeedback，也就是会判断代码是否正确，同时对于出现AssertError的代码会得到其执行的第一个unit test的值。其他Error因为会返回具体的错误信息就不会得到执行的第一个unit test的值。
                 with ThreadPoolExecutor(max_workers=1) as executor:
                     args = (problems[tid], (start_code+solution), run_test, assertions[tid], 0.1)
@@ -203,18 +177,6 @@ def main(cfg: DictConfig):
                     result = future.result()
                     passed = result["passed"]
                     final_res = result["result"]
-                
-                # # print(f"task:{tid},cir:{cir},solution:{i},passed:{passed}")
-                # # if passed:
-                # #     stop=True #一个通过，终结循环
-                # #     node.passT_rate = 1.0
-                # #     print("One node passed! Show it and it's parents.")
-                # #     node.show_parents()
-                # #     break
-                # # else:
-                # #     prompt,passn = get_UTfeedback_prompt(feedback_prompt, solution, code_res, run_test, test_res, assertions[tid])
-                # #     node.feedbackprompt = prompt
-                # #     node.passT_rate = passn
                 prompt,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions[tid])
                 node.feedbackprompt = prompt
                 node.passT_rate = passn
@@ -230,47 +192,31 @@ def main(cfg: DictConfig):
             
             # 对生成的代码进行排序并选取排序靠前的代码
             choose_start = time.time()
-            total_nodes = gened_nodes + left_nodes
+            if with_solution_before:
+                total_nodes = gened_nodes + left_nodes
+            else:
+                total_nodes = gened_nodes
             total_unique_nodes = list(set(total_nodes))
             print(f"task:{tid}, cir:{cir}, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}")
             if with_CODET_Point:
-                get_CODET_point2(total_nodes,testcases[tid],tid) #这里是使用去重后的还是不去重的
-                for node in total_nodes:
-                    if node.CODET_total_test_num!=0:
-                        node.CODET_pass_rate = (1.0*len(node.CODET_pass_testcase))/node.CODET_total_test_num
-                    else:
-                        node.CODET_pass_rate = 0.0
-                    if node.CODET_pass_rate > 1:
-                        node.CODET_pass_rate = node.passT_rate
-                sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.CODET_pass_rate,x.passT_rate,x.prob),reverse=True)
-                # chosen_nodes = get_CODET_point4(total_nodes,testcases[tid],tid)
-                # left_nodes = []
-                # for node in total_nodes:
-                #     if node in chosen_nodes:
-                #         continue
-                #     left_nodes.append(node)
-
+                sorted_group  = get_CODET_point_v1(total_nodes,testcases[tid],tid) #这里是使用去重后的还是不去重的
+                pass_testcase_list = [ list(x[1]) for x in sorted_group]
+                # pass_testcase_str = [json.dumps(x)+"\n" for x in pass_testcase_list ]
+                sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.CODET_point,x.passT_rate,x.prob),reverse=True)
             else:
                 sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
             chosen_nodes = sorted_nodes[:sample_num]
             left_nodes = sorted_nodes[sample_num:]
-            # chosen_nodes = get_CODET_point3(total_nodes,testcases[tid],tid)
-            # left_nodes = []
-            # for node in total_nodes:
-            #     if node in chosen_nodes:
-            #         continue
-            #     left_nodes.append(node)
             print(f"task {tid} in cir {cir} chooses {len(chosen_nodes)} nodes and left {len(left_nodes)} nodes")
             print(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
             print(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")
-            print(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\nCODET point are {[n.CODET_point for n in chosen_nodes]}\nCODET_pass_rate are {[n.CODET_pass_rate for n in chosen_nodes]}")
+            print(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\CODET_point are {[n.CODET_point for n in chosen_nodes]}")#CODET point are {[n.CODET_point for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\n
             choose_solution_time = (time.time()-choose_start)/60
             print(f"Choose solution spends {choose_solution_time} mins.")
             
-            output_short[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob,"CODET_point":node.CODET_point} for n in chosen_nodes]
-            output_full[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob,"CODET_point":node.CODET_point} for n in total_nodes]
+            output_short[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob,"CODET_point":node.CODET_point,"CODET_pass_testcase":pass_testcase_list} for n in chosen_nodes]
             time_record.append({"cir":cir,"model_inference_time":model_inference_time,"run_solutions_time":run_solutions_time,"choose_solution_time":choose_solution_time})
-            if stop or cir==10:
+            if stop or cir>=10:
                 break
             cir += 1
             gened_nodes = []
@@ -279,9 +225,6 @@ def main(cfg: DictConfig):
             fix_percents = []
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt
-                # print(f"--------------feedback------------")
-                # print(feedback)
-                # print("-----------------------------")
                 input_len = len(feedback)
                 inputs = tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)
                 input_length = inputs.input_ids.shape[1]
@@ -314,21 +257,14 @@ def main(cfg: DictConfig):
                     gened_nodes.append(tmp_node)
                     nodes.append(tmp_node)
             fix_record.append({"cir":cir,"fix_percents":fix_percents})
-            print(f"fix record len: {len(fix_record)}")
+            # print(f"fix record len: {len(fix_record)}")
             print(f"cir {cir} gened {len(gened_nodes)} solutions. Total nodes num is {len(nodes)}")
             model_inference_time = (time.time()-st)/60
             print(f"Total model inference spends {model_inference_time} mins.")
-        start_write = time.time()
         print(f"time_record:{time_record}\nfix_record:{fix_record}")
         f.write(json.dumps({"task_id": tid,"completion":output_short,"time_record":time_record,"fix_record":fix_record,"step_one_total_time":step_one_total_time,"step_one_tokens_len":(input_tokens_len,output_tokens_len)})+"\n")
         f.flush()
-        fullf.write(json.dumps({"task_id": tid,"completion":output_full})+"\n")
-        fullf.flush()
-        write_time = (time.time()-start_write)/60
-        print(f"Write results spends {write_time} mins.")
     f.close()
-    fullf.close()
-
 
 if __name__ == "__main__":
     main()

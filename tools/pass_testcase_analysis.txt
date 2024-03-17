@@ -1,0 +1,1273 @@
+HumanEval/0
+HumanEval/1
+HumanEval/2
+HumanEval/3
+HumanEval/4
+HumanEval/5
+HumanEval/6
+HumanEval/7
+HumanEval/8
+HumanEval/9
+HumanEval/10
+HumanEval/11
+HumanEval/12
+HumanEval/13
+HumanEval/14
+HumanEval/15
+HumanEval/16
+HumanEval/17
+HumanEval/18
+HumanEval/19
+HumanEval/21
+HumanEval/22
+HumanEval/23
+HumanEval/24
+HumanEval/25
+HumanEval/26
+HumanEval/27
+HumanEval/28
+HumanEval/29
+HumanEval/30
+HumanEval/31
+HumanEval/33
+HumanEval/34
+HumanEval/35
+HumanEval/36
+HumanEval/37
+HumanEval/38
+HumanEval/40
+HumanEval/41
+HumanEval/42
+HumanEval/43
+HumanEval/44
+HumanEval/45
+HumanEval/46
+HumanEval/47
+HumanEval/48
+HumanEval/49
+HumanEval/50
+HumanEval/51
+HumanEval/52
+HumanEval/53
+HumanEval/54
+HumanEval/55
+HumanEval/56
+HumanEval/57
+HumanEval/58
+HumanEval/59
+HumanEval/60
+HumanEval/60
+HumanEval/61
+HumanEval/62
+HumanEval/63
+HumanEval/64
+HumanEval/65
+HumanEval/66
+HumanEval/68
+HumanEval/69
+HumanEval/70
+HumanEval/71
+HumanEval/72
+HumanEval/73
+HumanEval/74
+HumanEval/75
+HumanEval/76
+HumanEval/77
+HumanEval/78
+HumanEval/79
+HumanEval/80
+HumanEval/81
+HumanEval/82
+HumanEval/83
+HumanEval/84
+HumanEval/85
+HumanEval/86
+HumanEval/87
+HumanEval/88
+HumanEval/89
+HumanEval/90
+HumanEval/91
+HumanEval/92
+HumanEval/93
+HumanEval/95
+HumanEval/96
+HumanEval/97
+HumanEval/98
+HumanEval/99
+HumanEval/100
+HumanEval/101
+HumanEval/102
+HumanEval/103
+HumanEval/104
+HumanEval/106
+HumanEval/107
+HumanEval/108
+HumanEval/109
+HumanEval/110
+HumanEval/111
+HumanEval/112
+HumanEval/113
+HumanEval/114
+HumanEval/116
+HumanEval/118
+HumanEval/119
+HumanEval/127
+HumanEval/128
+HumanEval/131
+HumanEval/132
+HumanEval/133
+HumanEval/134
+HumanEval/135
+HumanEval/136
+HumanEval/137
+HumanEval/138
+HumanEval/139
+HumanEval/140
+HumanEval/141
+HumanEval/142
+HumanEval/143
+HumanEval/144
+HumanEval/145
+HumanEval/146
+HumanEval/147
+HumanEval/149
+HumanEval/150
+HumanEval/151
+HumanEval/152
+HumanEval/153
+HumanEval/155
+HumanEval/157
+HumanEval/158
+HumanEval/159
+HumanEval/160
+HumanEval/161
+HumanEval/162
+HumanEval/163
+Analysis for task HumanEval/0
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/1
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 7 ,1: 21 ,0&1: 5.
+    there are 20 CODET group in cir 2
+        0: 21 ,1: 7 ,0&1: 5.
+    there are 27 CODET group in cir 3
+        0: 21 ,1: 6 ,0&1: 5.
+    there are 36 CODET group in cir 4
+        0: 6 ,1: 49 ,0&1: 5.
+    there are 49 CODET group in cir 5
+        0: 49 ,1: 13 ,0&1: 12.
+    there are 55 CODET group in cir 6
+        0: 49 ,1: 6 ,0&1: 5.
+    there are 62 CODET group in cir 7
+        0: 50 ,1: 49 ,0&1: 49.
+    there are 70 CODET group in cir 8
+        0: 6 ,1: 7 ,0&1: 1.
+    there are 76 CODET group in cir 9
+        0: 51 ,1: 6 ,0&1: 0.
+    there are 80 CODET group in cir 10
+        0: 49 ,1: 6 ,0&1: 5.
+Analysis for task HumanEval/2
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/3
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 227 ,1: 258 ,0&1: 157.
+    there are 12 CODET group in cir 2
+        0: 274 ,1: 258 ,0&1: 163.
+Analysis for task HumanEval/4
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/5
+    there are 1 CODET group in cir 0
+    there are 2 CODET group in cir 1
+        0: 3 ,1: 0 ,0&1: 0.
+    there are 9 CODET group in cir 2
+        0: 6 ,1: 4 ,0&1: 4.
+Analysis for task HumanEval/6
+    there are 1 CODET group in cir 0
+    there are 6 CODET group in cir 1
+        0: 17 ,1: 6 ,0&1: 2.
+    there are 21 CODET group in cir 2
+        0: 20 ,1: 17 ,0&1: 17.
+    there are 35 CODET group in cir 3
+        0: 25 ,1: 4 ,0&1: 0.
+    there are 60 CODET group in cir 4
+        0: 6 ,1: 9 ,0&1: 2.
+    there are 69 CODET group in cir 5
+        0: 17 ,1: 3 ,0&1: 2.
+    there are 76 CODET group in cir 6
+        0: 17 ,1: 37 ,0&1: 14.
+    there are 80 CODET group in cir 7
+        0: 17 ,1: 4 ,0&1: 2.
+    there are 86 CODET group in cir 8
+        0: 17 ,1: 7 ,0&1: 2.
+    there are 90 CODET group in cir 9
+        0: 3 ,1: 17 ,0&1: 2.
+    there are 94 CODET group in cir 10
+        0: 3 ,1: 17 ,0&1: 2.
+Analysis for task HumanEval/7
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/8
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/9
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/10
+    there are 1 CODET group in cir 0
+    there are 9 CODET group in cir 1
+        0: 26 ,1: 60 ,0&1: 20.
+    there are 37 CODET group in cir 2
+        0: 101 ,1: 98 ,0&1: 98.
+    there are 53 CODET group in cir 3
+        0: 101 ,1: 23 ,0&1: 15.
+    there are 60 CODET group in cir 4
+        0: 101 ,1: 28 ,0&1: 20.
+    there are 69 CODET group in cir 5
+        0: 101 ,1: 51 ,0&1: 45.
+    there are 81 CODET group in cir 6
+        0: 27 ,1: 101 ,0&1: 21.
+    there are 88 CODET group in cir 7
+        0: 101 ,1: 51 ,0&1: 45.
+    there are 90 CODET group in cir 8
+        0: 101 ,1: 31 ,0&1: 31.
+    there are 96 CODET group in cir 9
+        0: 101 ,1: 42 ,0&1: 34.
+    there are 99 CODET group in cir 10
+        0: 101 ,1: 44 ,0&1: 27.
+Analysis for task HumanEval/11
+    there are 1 CODET group in cir 0
+    there are 5 CODET group in cir 1
+        0: 54 ,1: 2 ,0&1: 2.
+    there are 10 CODET group in cir 2
+        0: 54 ,1: 7 ,0&1: 7.
+Analysis for task HumanEval/12
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/13
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 184 ,1: 15 ,0&1: 12.
+Analysis for task HumanEval/14
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 18 ,1: 7 ,0&1: 7.
+Analysis for task HumanEval/15
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/16
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/17
+    there are 1 CODET group in cir 0
+    there are 2 CODET group in cir 1
+        0: 8 ,1: 4 ,0&1: 4.
+    there are 5 CODET group in cir 2
+        0: 8 ,1: 14 ,0&1: 7.
+    there are 17 CODET group in cir 3
+        0: 8 ,1: 2 ,0&1: 1.
+    there are 28 CODET group in cir 4
+        0: 14 ,1: 1 ,0&1: 0.
+    there are 34 CODET group in cir 5
+        0: 5 ,1: 14 ,0&1: 4.
+    there are 38 CODET group in cir 6
+        0: 14 ,1: 5 ,0&1: 4.
+    there are 43 CODET group in cir 7
+        0: 4 ,1: 14 ,0&1: 1.
+    there are 47 CODET group in cir 8
+        0: 14 ,1: 13 ,0&1: 7.
+    there are 52 CODET group in cir 9
+        0: 4 ,1: 14 ,0&1: 3.
+    there are 55 CODET group in cir 10
+        0: 14 ,1: 24 ,0&1: 1.
+Analysis for task HumanEval/18
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/19
+    there are 1 CODET group in cir 0
+    there are 2 CODET group in cir 1
+        0: 6 ,1: 1 ,0&1: 1.
+    there are 5 CODET group in cir 2
+        0: 52 ,1: 6 ,0&1: 6.
+    there are 6 CODET group in cir 3
+        0: 52 ,1: 12 ,0&1: 12.
+    there are 7 CODET group in cir 4
+        0: 52 ,1: 12 ,0&1: 12.
+    there are 9 CODET group in cir 5
+        0: 52 ,1: 6 ,0&1: 6.
+    there are 9 CODET group in cir 6
+        0: 52 ,1: 6 ,0&1: 6.
+    there are 10 CODET group in cir 7
+        0: 52 ,1: 6 ,0&1: 6.
+    there are 11 CODET group in cir 8
+        0: 52 ,1: 17 ,0&1: 12.
+    there are 14 CODET group in cir 9
+        0: 104 ,1: 53 ,0&1: 53.
+    there are 14 CODET group in cir 10
+        0: 2 ,1: 104 ,0&1: 1.
+Analysis for task HumanEval/21
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/22
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/23
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/24
+    there are 1 CODET group in cir 0
+    there are 6 CODET group in cir 1
+        0: 60 ,1: 215 ,0&1: 15.
+Analysis for task HumanEval/25
+    there are 1 CODET group in cir 0
+    there are 5 CODET group in cir 1
+        0: 16 ,1: 1 ,0&1: 1.
+    there are 27 CODET group in cir 2
+        0: 19 ,1: 33 ,0&1: 1.
+Analysis for task HumanEval/26
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 147 ,1: 4 ,0&1: 4.
+    there are 4 CODET group in cir 2
+        0: 147 ,1: 4 ,0&1: 4.
+    there are 7 CODET group in cir 3
+        0: 147 ,1: 10 ,0&1: 4.
+Analysis for task HumanEval/27
+    there are 1 CODET group in cir 0
+    there are 6 CODET group in cir 1
+        0: 27 ,1: 24 ,0&1: 20.
+Analysis for task HumanEval/28
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/29
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/30
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/31
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/33
+    there are 1 CODET group in cir 0
+    there are 2 CODET group in cir 1
+        0: 26 ,1: 0 ,0&1: 0.
+    there are 4 CODET group in cir 2
+        0: 26 ,1: 21 ,0&1: 14.
+    there are 4 CODET group in cir 3
+        0: 26 ,1: 21 ,0&1: 14.
+    there are 7 CODET group in cir 4
+        0: 32 ,1: 26 ,0&1: 26.
+    there are 8 CODET group in cir 5
+        0: 37 ,1: 21 ,0&1: 21.
+    there are 11 CODET group in cir 6
+        0: 37 ,1: 33 ,0&1: 33.
+    there are 11 CODET group in cir 7
+        0: 37 ,1: 31 ,0&1: 31.
+    there are 13 CODET group in cir 8
+        0: 37 ,1: 16 ,0&1: 16.
+    there are 16 CODET group in cir 9
+        0: 32 ,1: 37 ,0&1: 31.
+    there are 17 CODET group in cir 10
+        0: 26 ,1: 37 ,0&1: 24.
+Analysis for task HumanEval/34
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/35
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/36
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/37
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 6 CODET group in cir 2
+        0: 21 ,1: 16 ,0&1: 16.
+    there are 14 CODET group in cir 3
+        0: 21 ,1: 7 ,0&1: 1.
+    there are 18 CODET group in cir 4
+        0: 21 ,1: 7 ,0&1: 1.
+    there are 20 CODET group in cir 5
+        0: 21 ,1: 8 ,0&1: 6.
+    there are 22 CODET group in cir 6
+        0: 21 ,1: 2 ,0&1: 1.
+    there are 23 CODET group in cir 7
+        0: 21 ,1: 25 ,0&1: 16.
+    there are 23 CODET group in cir 8
+        0: 21 ,1: 8 ,0&1: 6.
+    there are 23 CODET group in cir 9
+        0: 21 ,1: 8 ,0&1: 6.
+    there are 23 CODET group in cir 10
+        0: 21 ,1: 25 ,0&1: 16.
+Analysis for task HumanEval/38
+    there are 1 CODET group in cir 0
+    there are 5 CODET group in cir 1
+        0: 130 ,1: 81 ,0&1: 79.
+    there are 23 CODET group in cir 2
+        0: 77 ,1: 132 ,0&1: 74.
+    there are 39 CODET group in cir 3
+        0: 130 ,1: 75 ,0&1: 72.
+    there are 46 CODET group in cir 4
+        0: 130 ,1: 74 ,0&1: 72.
+    there are 52 CODET group in cir 5
+        0: 132 ,1: 17 ,0&1: 6.
+    there are 57 CODET group in cir 6
+        0: 135 ,1: 132 ,0&1: 132.
+    there are 64 CODET group in cir 7
+        0: 135 ,1: 132 ,0&1: 132.
+    there are 72 CODET group in cir 8
+        0: 135 ,1: 132 ,0&1: 132.
+    there are 81 CODET group in cir 9
+        0: 135 ,1: 132 ,0&1: 132.
+    there are 84 CODET group in cir 10
+        0: 135 ,1: 132 ,0&1: 132.
+Analysis for task HumanEval/40
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/41
+    there are 1 CODET group in cir 0
+    there are 7 CODET group in cir 1
+        0: 9 ,1: 2 ,0&1: 2.
+    there are 30 CODET group in cir 2
+        0: 109 ,1: 4 ,0&1: 2.
+    there are 45 CODET group in cir 3
+        0: 165 ,1: 55 ,0&1: 0.
+    there are 58 CODET group in cir 4
+        0: 128 ,1: 174 ,0&1: 113.
+    there are 64 CODET group in cir 5
+        0: 3 ,1: 3 ,0&1: 2.
+    there are 68 CODET group in cir 6
+        0: 128 ,1: 174 ,0&1: 113.
+    there are 77 CODET group in cir 7
+        0: 128 ,1: 113 ,0&1: 113.
+    there are 81 CODET group in cir 8
+        0: 128 ,1: 174 ,0&1: 113.
+    there are 82 CODET group in cir 9
+        0: 128 ,1: 4 ,0&1: 2.
+    there are 82 CODET group in cir 10
+        0: 128 ,1: 4 ,0&1: 2.
+Analysis for task HumanEval/42
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/43
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/44
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/45
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/46
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/47
+    there are 1 CODET group in cir 0
+    there are 6 CODET group in cir 1
+        0: 54 ,1: 35 ,0&1: 19.
+    there are 29 CODET group in cir 2
+        0: 68 ,1: 52 ,0&1: 49.
+    there are 47 CODET group in cir 3
+        0: 52 ,1: 33 ,0&1: 18.
+    there are 59 CODET group in cir 4
+        0: 61 ,1: 68 ,0&1: 49.
+    there are 72 CODET group in cir 5
+        0: 61 ,1: 69 ,0&1: 52.
+    there are 82 CODET group in cir 6
+        0: 68 ,1: 52 ,0&1: 49.
+    there are 89 CODET group in cir 7
+        0: 54 ,1: 52 ,0&1: 52.
+    there are 99 CODET group in cir 8
+        0: 54 ,1: 59 ,0&1: 52.
+    there are 104 CODET group in cir 9
+        0: 69 ,1: 68 ,0&1: 68.
+    there are 108 CODET group in cir 10
+        0: 61 ,1: 54 ,0&1: 49.
+Analysis for task HumanEval/48
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/49
+    there are 1 CODET group in cir 0
+    there are 5 CODET group in cir 1
+        0: 124 ,1: 69 ,0&1: 0.
+    there are 37 CODET group in cir 2
+        0: 124 ,1: 128 ,0&1: 123.
+    there are 78 CODET group in cir 3
+        0: 197 ,1: 162 ,0&1: 20.
+    there are 112 CODET group in cir 4
+        0: 27 ,1: 197 ,0&1: 7.
+    there are 150 CODET group in cir 5
+        0: 197 ,1: 134 ,0&1: 43.
+    there are 187 CODET group in cir 6
+        0: 197 ,1: 11 ,0&1: 1.
+    there are 218 CODET group in cir 7
+        0: 197 ,1: 222 ,0&1: 179.
+Analysis for task HumanEval/50
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 100 ,1: 3 ,0&1: 3.
+    there are 15 CODET group in cir 2
+        0: 148 ,1: 100 ,0&1: 100.
+    there are 26 CODET group in cir 3
+        0: 18 ,1: 148 ,0&1: 3.
+Analysis for task HumanEval/51
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/52
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/53
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/54
+    there are 1 CODET group in cir 0
+    there are 2 CODET group in cir 1
+        0: 138 ,1: 0 ,0&1: 0.
+    there are 3 CODET group in cir 2
+        0: 138 ,1: 143 ,0&1: 72.
+    there are 11 CODET group in cir 3
+        0: 138 ,1: 155 ,0&1: 134.
+    there are 19 CODET group in cir 4
+        0: 138 ,1: 143 ,0&1: 72.
+Analysis for task HumanEval/55
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/56
+    there are 1 CODET group in cir 0
+    there are 8 CODET group in cir 1
+        0: 258 ,1: 262 ,0&1: 250.
+    there are 40 CODET group in cir 2
+        0: 292 ,1: 266 ,0&1: 142.
+Analysis for task HumanEval/57
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+Analysis for task HumanEval/58
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/59
+    there are 1 CODET group in cir 0
+    there are 7 CODET group in cir 1
+        0: 408 ,1: 125 ,0&1: 107.
+    there are 40 CODET group in cir 2
+        0: 408 ,1: 400 ,0&1: 400.
+    there are 64 CODET group in cir 3
+        0: 400 ,1: 6 ,0&1: 0.
+    there are 86 CODET group in cir 4
+        0: 408 ,1: 400 ,0&1: 400.
+    there are 107 CODET group in cir 5
+        0: 394 ,1: 408 ,0&1: 355.
+    there are 118 CODET group in cir 6
+        0: 408 ,1: 404 ,0&1: 403.
+    there are 133 CODET group in cir 7
+        0: 408 ,1: 361 ,0&1: 359.
+    there are 151 CODET group in cir 8
+        0: 408 ,1: 404 ,0&1: 403.
+Analysis for task HumanEval/60
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/61
+    there are 1 CODET group in cir 0
+    there are 6 CODET group in cir 1
+        0: 157 ,1: 234 ,0&1: 82.
+    there are 28 CODET group in cir 2
+        0: 230 ,1: 111 ,0&1: 43.
+Analysis for task HumanEval/62
+    there are 1 CODET group in cir 0
+    there are 6 CODET group in cir 1
+        0: 12 ,1: 10 ,0&1: 8.
+    there are 18 CODET group in cir 2
+        0: 9 ,1: 9 ,0&1: 7.
+    there are 29 CODET group in cir 3
+        0: 7 ,1: 9 ,0&1: 6.
+    there are 44 CODET group in cir 4
+        0: 9 ,1: 1 ,0&1: 0.
+    there are 54 CODET group in cir 5
+        0: 12 ,1: 8 ,0&1: 7.
+    there are 57 CODET group in cir 6
+        0: 9 ,1: 3 ,0&1: 2.
+    there are 67 CODET group in cir 7
+        0: 12 ,1: 6 ,0&1: 6.
+    there are 71 CODET group in cir 8
+        0: 13 ,1: 9 ,0&1: 7.
+    there are 76 CODET group in cir 9
+        0: 1 ,1: 8 ,0&1: 0.
+    there are 81 CODET group in cir 10
+        0: 5 ,1: 13 ,0&1: 4.
+Analysis for task HumanEval/63
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+Analysis for task HumanEval/64
+    there are 1 CODET group in cir 0
+    there are 7 CODET group in cir 1
+        0: 181 ,1: 191 ,0&1: 179.
+Analysis for task HumanEval/65
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/66
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+Analysis for task HumanEval/68
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/69
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+Analysis for task HumanEval/70
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/71
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/72
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/73
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/74
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 119 ,1: 133 ,0&1: 36.
+    there are 31 CODET group in cir 2
+        0: 119 ,1: 195 ,0&1: 86.
+    there are 50 CODET group in cir 3
+        0: 195 ,1: 79 ,0&1: 75.
+    there are 70 CODET group in cir 4
+        0: 195 ,1: 36 ,0&1: 10.
+    there are 83 CODET group in cir 5
+        0: 195 ,1: 159 ,0&1: 90.
+    there are 93 CODET group in cir 6
+        0: 195 ,1: 3 ,0&1: 0.
+Analysis for task HumanEval/75
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/76
+    there are 1 CODET group in cir 0
+    there are 7 CODET group in cir 1
+        0: 273 ,1: 290 ,0&1: 256.
+    there are 49 CODET group in cir 2
+        0: 232 ,1: 290 ,0&1: 222.
+    there are 83 CODET group in cir 3
+        0: 290 ,1: 234 ,0&1: 40.
+    there are 103 CODET group in cir 4
+        0: 289 ,1: 290 ,0&1: 287.
+    there are 122 CODET group in cir 5
+        0: 231 ,1: 226 ,0&1: 226.
+    there are 141 CODET group in cir 6
+        0: 290 ,1: 294 ,0&1: 285.
+    there are 172 CODET group in cir 7
+        0: 290 ,1: 231 ,0&1: 30.
+    there are 200 CODET group in cir 8
+        0: 293 ,1: 291 ,0&1: 286.
+    there are 220 CODET group in cir 9
+        0: 292 ,1: 293 ,0&1: 282.
+    there are 248 CODET group in cir 10
+        0: 293 ,1: 290 ,0&1: 290.
+Analysis for task HumanEval/77
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 373 ,1: 460 ,0&1: 27.
+    there are 10 CODET group in cir 2
+        0: 373 ,1: 363 ,0&1: 352.
+    there are 11 CODET group in cir 3
+        0: 373 ,1: 374 ,0&1: 367.
+    there are 15 CODET group in cir 4
+        0: 373 ,1: 374 ,0&1: 367.
+    there are 20 CODET group in cir 5
+        0: 357 ,1: 435 ,0&1: 333.
+Analysis for task HumanEval/78
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/79
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/80
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 353 ,1: 363 ,0&1: 218.
+    there are 12 CODET group in cir 2
+        0: 361 ,1: 363 ,0&1: 252.
+Analysis for task HumanEval/81
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+Analysis for task HumanEval/82
+    there are 1 CODET group in cir 0
+    there are 8 CODET group in cir 1
+        0: 361 ,1: 320 ,0&1: 203.
+    there are 38 CODET group in cir 2
+        0: 348 ,1: 222 ,0&1: 91.
+Analysis for task HumanEval/83
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/84
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+Analysis for task HumanEval/85
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+Analysis for task HumanEval/86
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 7 ,1: 22 ,0&1: 6.
+    there are 14 CODET group in cir 2
+        0: 22 ,1: 19 ,0&1: 9.
+Analysis for task HumanEval/87
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/88
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/89
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/90
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/91
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/92
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/93
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 31 ,1: 28 ,0&1: 28.
+    there are 17 CODET group in cir 2
+        0: 41 ,1: 31 ,0&1: 24.
+    there are 28 CODET group in cir 3
+        0: 31 ,1: 25 ,0&1: 25.
+    there are 31 CODET group in cir 4
+        0: 31 ,1: 13 ,0&1: 4.
+    there are 36 CODET group in cir 5
+        0: 31 ,1: 10 ,0&1: 8.
+    there are 38 CODET group in cir 6
+        0: 41 ,1: 13 ,0&1: 10.
+    there are 41 CODET group in cir 7
+        0: 31 ,1: 28 ,0&1: 28.
+    there are 47 CODET group in cir 8
+        0: 31 ,1: 11 ,0&1: 8.
+    there are 50 CODET group in cir 9
+        0: 31 ,1: 9 ,0&1: 7.
+    there are 56 CODET group in cir 10
+        0: 31 ,1: 20 ,0&1: 20.
+Analysis for task HumanEval/95
+    there are 1 CODET group in cir 0
+    there are 7 CODET group in cir 1
+        0: 219 ,1: 219 ,0&1: 42.
+    there are 26 CODET group in cir 2
+        0: 220 ,1: 219 ,0&1: 214.
+Analysis for task HumanEval/96
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/97
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+Analysis for task HumanEval/98
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/99
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/100
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 5 ,1: 1 ,0&1: 0.
+    there are 13 CODET group in cir 2
+        0: 4 ,1: 5 ,0&1: 3.
+    there are 27 CODET group in cir 3
+        0: 1 ,1: 6 ,0&1: 0.
+    there are 35 CODET group in cir 4
+        0: 4 ,1: 4 ,0&1: 3.
+    there are 41 CODET group in cir 5
+        0: 8 ,1: 5 ,0&1: 3.
+    there are 43 CODET group in cir 6
+        0: 4 ,1: 9 ,0&1: 3.
+    there are 50 CODET group in cir 7
+        0: 4 ,1: 1 ,0&1: 1.
+    there are 57 CODET group in cir 8
+        0: 4 ,1: 4 ,0&1: 3.
+    there are 65 CODET group in cir 9
+        0: 7 ,1: 7 ,0&1: 3.
+    there are 69 CODET group in cir 10
+        0: 4 ,1: 4 ,0&1: 3.
+Analysis for task HumanEval/101
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/102
+    there are 1 CODET group in cir 0
+    there are 10 CODET group in cir 1
+        0: 24 ,1: 217 ,0&1: 4.
+    there are 61 CODET group in cir 2
+        0: 217 ,1: 54 ,0&1: 25.
+    there are 77 CODET group in cir 3
+        0: 217 ,1: 197 ,0&1: 135.
+    there are 97 CODET group in cir 4
+        0: 199 ,1: 198 ,0&1: 198.
+    there are 115 CODET group in cir 5
+        0: 199 ,1: 110 ,0&1: 79.
+    there are 130 CODET group in cir 6
+        0: 223 ,1: 198 ,0&1: 198.
+    there are 142 CODET group in cir 7
+        0: 198 ,1: 32 ,0&1: 6.
+    there are 155 CODET group in cir 8
+        0: 200 ,1: 199 ,0&1: 198.
+    there are 174 CODET group in cir 9
+        0: 200 ,1: 199 ,0&1: 198.
+    there are 189 CODET group in cir 10
+        0: 223 ,1: 200 ,0&1: 200.
+Analysis for task HumanEval/103
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/104
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/106
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 45 ,1: 17 ,0&1: 17.
+    there are 6 CODET group in cir 2
+        0: 45 ,1: 17 ,0&1: 17.
+    there are 7 CODET group in cir 3
+        0: 45 ,1: 17 ,0&1: 17.
+    there are 8 CODET group in cir 4
+        0: 45 ,1: 18 ,0&1: 17.
+    there are 8 CODET group in cir 5
+        0: 45 ,1: 17 ,0&1: 17.
+    there are 9 CODET group in cir 6
+        0: 45 ,1: 17 ,0&1: 17.
+    there are 9 CODET group in cir 7
+        0: 45 ,1: 32 ,0&1: 28.
+    there are 9 CODET group in cir 8
+        0: 45 ,1: 32 ,0&1: 28.
+    there are 9 CODET group in cir 9
+        0: 45 ,1: 18 ,0&1: 17.
+    there are 9 CODET group in cir 10
+        0: 45 ,1: 18 ,0&1: 17.
+Analysis for task HumanEval/107
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/108
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/109
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/110
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/111
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+Analysis for task HumanEval/112
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/113
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 2 CODET group in cir 2
+        0: 1 ,1: 0 ,0&1: 0.
+    there are 2 CODET group in cir 3
+        0: 1 ,1: 0 ,0&1: 0.
+    there are 4 CODET group in cir 4
+        0: 4 ,1: 4 ,0&1: 1.
+    there are 4 CODET group in cir 5
+        0: 4 ,1: 4 ,0&1: 1.
+    there are 4 CODET group in cir 6
+        0: 4 ,1: 4 ,0&1: 1.
+    there are 5 CODET group in cir 7
+        0: 1 ,1: 4 ,0&1: 0.
+    there are 7 CODET group in cir 8
+        0: 2 ,1: 45 ,0&1: 1.
+    there are 10 CODET group in cir 9
+        0: 45 ,1: 9 ,0&1: 4.
+    there are 13 CODET group in cir 10
+        0: 45 ,1: 1 ,0&1: 0.
+Analysis for task HumanEval/114
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/116
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+Analysis for task HumanEval/118
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/119
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 10 ,1: 8 ,0&1: 8.
+    there are 12 CODET group in cir 2
+        0: 10 ,1: 66 ,0&1: 0.
+Analysis for task HumanEval/127
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/128
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/131
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+Analysis for task HumanEval/132
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 19 ,1: 15 ,0&1: 15.
+    there are 13 CODET group in cir 2
+        0: 19 ,1: 20 ,0&1: 17.
+    there are 25 CODET group in cir 3
+        0: 19 ,1: 16 ,0&1: 13.
+    there are 33 CODET group in cir 4
+        0: 19 ,1: 15 ,0&1: 15.
+    there are 41 CODET group in cir 5
+        0: 16 ,1: 19 ,0&1: 13.
+    there are 48 CODET group in cir 6
+        0: 26 ,1: 18 ,0&1: 18.
+Analysis for task HumanEval/133
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+Analysis for task HumanEval/134
+    there are 1 CODET group in cir 0
+    there are 7 CODET group in cir 1
+        0: 123 ,1: 143 ,0&1: 10.
+    there are 32 CODET group in cir 2
+        0: 143 ,1: 163 ,0&1: 85.
+    there are 49 CODET group in cir 3
+        0: 134 ,1: 162 ,0&1: 103.
+    there are 55 CODET group in cir 4
+        0: 144 ,1: 164 ,0&1: 86.
+    there are 64 CODET group in cir 5
+        0: 164 ,1: 163 ,0&1: 163.
+    there are 71 CODET group in cir 6
+        0: 164 ,1: 163 ,0&1: 163.
+    there are 76 CODET group in cir 7
+        0: 163 ,1: 164 ,0&1: 156.
+    there are 84 CODET group in cir 8
+        0: 163 ,1: 134 ,0&1: 103.
+Analysis for task HumanEval/135
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 83 ,1: 46 ,0&1: 9.
+    there are 19 CODET group in cir 2
+        0: 18 ,1: 46 ,0&1: 1.
+Analysis for task HumanEval/136
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/137
+    there are 1 CODET group in cir 0
+    there are 6 CODET group in cir 1
+        0: 41 ,1: 40 ,0&1: 40.
+    there are 41 CODET group in cir 2
+        0: 35 ,1: 36 ,0&1: 16.
+    there are 67 CODET group in cir 3
+        0: 40 ,1: 50 ,0&1: 35.
+    there are 94 CODET group in cir 4
+        0: 14 ,1: 10 ,0&1: 0.
+    there are 114 CODET group in cir 5
+        0: 10 ,1: 48 ,0&1: 3.
+    there are 136 CODET group in cir 6
+        0: 41 ,1: 46 ,0&1: 40.
+    there are 155 CODET group in cir 7
+        0: 40 ,1: 40 ,0&1: 39.
+Analysis for task HumanEval/138
+    there are 1 CODET group in cir 0
+    there are 7 CODET group in cir 1
+        0: 302 ,1: 249 ,0&1: 235.
+    there are 22 CODET group in cir 2
+        0: 302 ,1: 244 ,0&1: 233.
+    there are 34 CODET group in cir 3
+        0: 322 ,1: 315 ,0&1: 314.
+    there are 48 CODET group in cir 4
+        0: 322 ,1: 323 ,0&1: 301.
+Analysis for task HumanEval/139
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/140
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+Analysis for task HumanEval/141
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 530 ,1: 526 ,0&1: 526.
+    there are 8 CODET group in cir 2
+        0: 530 ,1: 526 ,0&1: 526.
+Analysis for task HumanEval/142
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/143
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 99 ,1: 15 ,0&1: 15.
+Analysis for task HumanEval/144
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/145
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+Analysis for task HumanEval/146
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+Analysis for task HumanEval/147
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+Analysis for task HumanEval/149
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/150
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/151
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/152
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/153
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+Analysis for task HumanEval/155
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+Analysis for task HumanEval/157
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/158
+    there are 1 CODET group in cir 0
+    there are 5 CODET group in cir 1
+        0: 60 ,1: 61 ,0&1: 33.
+    there are 20 CODET group in cir 2
+        0: 61 ,1: 62 ,0&1: 51.
+Analysis for task HumanEval/159
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+Analysis for task HumanEval/160
+    there are 1 CODET group in cir 0
+    there are 3 CODET group in cir 1
+        0: 17 ,1: 2 ,0&1: 2.
+    there are 12 CODET group in cir 2
+        0: 18 ,1: 17 ,0&1: 17.
+Analysis for task HumanEval/161
+    there are 1 CODET group in cir 0
+    there are 4 CODET group in cir 1
+        0: 82 ,1: 182 ,0&1: 30.
+    there are 23 CODET group in cir 2
+        0: 49 ,1: 85 ,0&1: 27.
+    there are 37 CODET group in cir 3
+        0: 247 ,1: 286 ,0&1: 195.
+    there are 45 CODET group in cir 4
+        0: 198 ,1: 101 ,0&1: 48.
+    there are 51 CODET group in cir 5
+        0: 290 ,1: 362 ,0&1: 226.
+    there are 60 CODET group in cir 6
+        0: 247 ,1: 163 ,0&1: 148.
+    there are 75 CODET group in cir 7
+        0: 51 ,1: 100 ,0&1: 49.
+    there are 80 CODET group in cir 8
+        0: 349 ,1: 290 ,0&1: 259.
+    there are 91 CODET group in cir 9
+        0: 211 ,1: 141 ,0&1: 141.
+    there are 97 CODET group in cir 10
+        0: 1 ,1: 148 ,0&1: 0.
+Analysis for task HumanEval/162
+    there are 1 CODET group in cir 0
+Analysis for task HumanEval/163
+    there are 1 CODET group in cir 0
+    there are 1 CODET group in cir 1
+    there are 1 CODET group in cir 2
+    there are 1 CODET group in cir 3
+    there are 1 CODET group in cir 4
+    there are 1 CODET group in cir 5
+    there are 1 CODET group in cir 6
+    there are 1 CODET group in cir 7
+    there are 1 CODET group in cir 8
+    there are 1 CODET group in cir 9
+    there are 1 CODET group in cir 10
+group_and_percent has 275 nums, 21 are 0.0, 71 are 1.0:
+ [0.71, 0.71, 0.83, 0.83, 0.92, 0.83, 1.0, 0.17, 0.001, 0.83, 0.69, 0.63, 0.001, 1.0, 0.33, 1.0, 0.001, 0.33, 0.67, 0.82, 0.5, 0.29, 0.67, 0.67, 0.77, 1.0, 0.65, 0.71, 0.88, 0.78, 0.88, 1.0, 0.81, 0.61, 1.0, 1.0, 0.8, 1.0, 1.0, 0.88, 0.5, 0.001, 0.8, 0.8, 0.25, 0.54, 0.75, 0.07, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.71, 1.0, 0.5, 0.25, 1.0, 0.05, 1.0, 1.0, 0.4, 0.83, 0.001, 0.67, 0.67, 1.0, 1.0, 1.0, 1.0, 1.0, 0.97, 0.92, 1.0, 0.14, 0.14, 0.75, 0.5, 0.76, 0.75, 0.75, 0.76, 0.98, 0.96, 0.96, 0.97, 0.35, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.5, 0.001, 0.88, 0.67, 0.88, 1.0, 0.88, 0.5, 0.5, 0.54, 0.94, 0.55, 0.8, 0.85, 0.94, 1.0, 0.96, 1.0, 0.91, 0.001, 0.99, 0.12, 0.26, 0.32, 0.09, 0.91, 1.0, 1.0, 0.17, 0.001, 0.52, 0.97, 0.52, 0.97, 0.53, 0.86, 1.0, 0.001, 1.0, 0.9, 1.0, 0.99, 1.0, 0.52, 0.39, 0.8, 0.78, 0.86, 0.001, 0.88, 0.67, 1.0, 0.78, 0.001, 0.8, 0.99, 0.3, 0.72, 0.95, 0.28, 0.57, 0.001, 0.94, 0.96, 0.17, 0.99, 1.0, 0.98, 0.13, 0.98, 0.97, 1.0, 0.07, 0.97, 0.98, 0.98, 0.93, 0.62, 0.7, 0.63, 0.41, 0.86, 0.47, 1.0, 0.77, 1.0, 0.31, 0.8, 0.77, 1.0, 0.73, 0.78, 1.0, 0.19, 0.98, 0.001, 0.75, 0.001, 0.75, 0.6, 0.75, 1.0, 0.75, 0.43, 0.75, 0.17, 0.46, 0.69, 1.0, 0.72, 1.0, 0.19, 0.99, 0.99, 1.0, 1.0, 1.0, 1.0, 0.94, 1.0, 1.0, 0.88, 0.88, 0.94, 0.94, 0.001, 0.001, 0.25, 0.25, 0.25, 0.001, 0.5, 0.44, 0.001, 1.0, 0.001, 1.0, 0.89, 0.81, 1.0, 0.81, 1.0, 0.08, 0.59, 0.77, 0.6, 1.0, 1.0, 0.96, 0.77, 0.2, 0.06, 1.0, 0.46, 0.88, 0.001, 0.3, 0.98, 0.97, 0.94, 0.95, 1.0, 0.93, 1.0, 1.0, 1.0, 0.55, 0.84, 1.0, 1.0, 0.37, 0.55, 0.79, 0.48, 0.78, 0.91, 0.96, 0.89, 1.0, 0.001]
+Counter_with_base 10 : Counter({0: 502, 1: 32, 2: 24, 4: 20, 3: 18, 8: 18, 5: 17, 6: 16, 7: 14, 9: 11, 10: 4, 11: 4, 15: 4, 13: 3, 18: 2, 14: 2, 17: 2, 21: 1, 12: 1, 20: 1, 22: 1, 24: 1})
+data max 248,base 10.0, range max : 250.0
+bins:
+[  0.  10.  20.  30.  40.  50.  60.  70.  80.  90. 100. 110. 120. 130.
+ 140. 150. 160. 170. 180. 190. 200. 210. 220. 230. 240. 250.]
+bins:
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+Data with length 275, max_num:1.0, min_num:0.001, mid_num:0.81, mean:0.7046581818181815, diff:0.999
+Data with length 698, max_num:248, min_num:1, mid_num:1.0, mean:18.35816618911175, diff:247

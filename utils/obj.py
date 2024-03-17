@@ -40,6 +40,8 @@ class Node:
         #     node = node.parent
         #     print("************************")
         return None
+    def str_with_CODET_pass_testcase(self) -> str:
+        return ""
             
     
 

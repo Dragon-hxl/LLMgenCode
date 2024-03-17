@@ -3,8 +3,7 @@ def heap_queue_largest(nums,n):
     Write a function to find the largest n integers from a given list of numbers using heap queue algorithm.
     """
     pass
-# Check the correctness of heap_queue_largest with 15 more tests:
-assert
+# Check the correctness of heap_queue_largest with 15 more tests start with 'assert':
 # result
 assert heap_queue_largest([25, 35, 22, 85, 14, 65, 75, 22, 58],3) == [85, 75, 65]
 assert heap_queue_largest([1, 7, 9, 3, 34, 555],2) == [355,34]

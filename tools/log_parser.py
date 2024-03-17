@@ -24,6 +24,6 @@ def extract_chosen_nodes_idx(log_file):
     return chosen_nodes_idx_dict,chosen_nodes_parent_idx_dict
 
 def analysis_nodes_idx(chosen_nodes_idx_dict,chosen_nodes_parent_idx_dict):
-    
+    return
                 
                 

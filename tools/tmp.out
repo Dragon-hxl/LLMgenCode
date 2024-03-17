@@ -1,11 +1,11 @@
-Job start at 2023-11-08 12:38:02
+Job start at 2024-02-27 09:19:38
 Job run at:
    Static hostname: localhost.localdomain
-Transient hostname: r8a30-a06
+Transient hostname: r8a100-c00
          Icon name: computer-server
            Chassis: server
-        Machine ID: df5d662d31bf4cc3ab86556a4c775478
-           Boot ID: 8d375ae7146541549c4eff40ef4aab21
+        Machine ID: cd8afac6044a4da1b99bb50a5d623e33
+           Boot ID: 96e66bf1f24e48ed82be27f64e4b5780
   Operating System: Rocky Linux 8.7 (Green Obsidian)
        CPE OS Name: cpe:/o:rocky:rocky:8:GA
             Kernel: Linux 4.18.0-425.10.1.el8_7.x86_64
@@ -13,10 +13,13 @@ Transient hostname: r8a30-a06
 Have already added /tools/cluster-modulefiles into $MODULEPATH
 Currently Loaded Modulefiles:
  1) cluster-tools/v1.0      3) git/2.31.1       5) slurm-tools/v1.0  
- 2) cuda-cudnn/11.6-8.4.1   4) python3/3.8.16  
+ 2) cuda-cudnn/11.7-8.5.0   4) python3/3.8.16  
+Loading cuda-cudnn/11.6-8.4.1
+  ERROR: cuda-cudnn/11.6-8.4.1 cannot be loaded due to a conflict.
+    HINT: Might try "module unload cuda-cudnn" first.
 Currently Loaded Modulefiles:
  1) cluster-tools/v1.0      3) git/2.31.1       5) slurm-tools/v1.0  
- 2) cuda-cudnn/11.6-8.4.1   4) python3/3.8.16   6) cmake/3.21.7      
+ 2) cuda-cudnn/11.7-8.5.0   4) python3/3.8.16   6) cmake/3.21.7      
 
 /usr/bin/gcc
 /home/S/hexiaolong/anaconda3/envs/codex/bin/python
@@ -24,27 +27,23 @@ Currently Loaded Modulefiles:
 ############### /home : /home/S/hexiaolong
 Disk quotas for user hexiaolong (uid 6123): 
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
-          /home   4155M  16384M  20480M           25589       0       0        
+          /home   4276M  16384M  20480M           28237       0       0        
 
 ############### /workspace
 Disk quotas for user hexiaolong (uid 6123): 
      Filesystem   space   quota   limit   grace   files   quota   limit   grace
-     /workspace  47391M    400G    500G            344k       0       0        
+     /workspace  60850M    400G    500G            416k       0       0        
 
 ############### /lustre
 Disk quotas for usr hexiaolong (uid 6123):
      Filesystem    used   quota   limit   grace   files   quota   limit   grace
-        /lustre  1.084T      8T     10T       -    8551  3000000 36000000       -
+        /lustre  1.607T      8T     10T       -   71802  3000000 36000000       -
 uid 6123 is using default block quota setting
 uid 6123 is using default file quota setting
 name, driver_version, power.limit [W]
-NVIDIA A30, 515.65.01, 165.00 W
-NVIDIA A30, 515.65.01, 165.00 W
-NVIDIA A30, 515.65.01, 165.00 W
-NVIDIA A30, 515.65.01, 165.00 W
-NVIDIA A30, 515.65.01, 165.00 W
-NVIDIA A30, 515.65.01, 165.00 W
-NVIDIA A30, 515.65.01, 165.00 W
-NVIDIA A30, 515.65.01, 165.00 W
-Use GPU 0
-Job end at 2023-11-08 12:43:35
+NVIDIA A100-SXM4-80GB, 530.30.02, 500.00 W
+NVIDIA A100-SXM4-80GB, 530.30.02, 500.00 W
+NVIDIA A100-SXM4-80GB, 530.30.02, 500.00 W
+NVIDIA A100-SXM4-80GB, 530.30.02, 500.00 W
+Use GPU 0,1,2,3
+Job end at 2024-02-27 10:19:39

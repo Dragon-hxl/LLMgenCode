@@ -1,0 +1,37 @@
+=========================HumanEval/0============================
+total gened testcases : 313
+invalid testcases : 1
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/workspace/S/hexiaolong/codex/self-debug/tools/testcase_study.py", line 462, in <module>
+  File "/workspace/S/hexiaolong/codex/self-debug/tools/testcase_study.py", line 462, in <module>
+    res = check_test_correctness(checkp,0.1)
+    res = check_test_correctness(checkp,0.1)
+  File "/home/S/hexiaolong/codex/human-eval/human_eval/execution.py", line 416, in check_test_correctness
+  File "/home/S/hexiaolong/codex/human-eval/human_eval/execution.py", line 416, in check_test_correctness
+    manager = multiprocessing.Manager()
+    manager = multiprocessing.Manager()
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/context.py", line 57, in Manager
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/context.py", line 57, in Manager
+    m.start()
+    m.start()
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/managers.py", line 558, in start
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/managers.py", line 554, in start
+    self._address = reader.recv()
+    self._process.start()
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/connection.py", line 250, in recv
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/process.py", line 121, in start
+    buf = self._recv_bytes()
+    self._popen = self._Popen(self)
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/connection.py", line 414, in _recv_bytes
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/context.py", line 277, in _Popen
+    buf = self._recv(4)
+    return Popen(process_obj)
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/connection.py", line 379, in _recv
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/popen_fork.py", line 19, in __init__
+    chunk = read(handle, remaining)
+    self._launch(process_obj)
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/multiprocessing/popen_fork.py", line 66, in _launch
+KeyboardInterrupt
+    self.pid = os.fork()
+KeyboardInterrupt

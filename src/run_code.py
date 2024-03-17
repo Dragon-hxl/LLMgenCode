@@ -275,68 +275,108 @@ def string_sequence(n: int) -> str:
         return '0'
     else:
         return ' '.join([str(i) for i in range(n)])
+def smallest_change(arr):
+    if len(arr) == 1:
+        return 0
+    else:
+        min_change = float('inf')
+        for i in range(len(arr)):
+            for j in range(i+1, len(arr)):
+                change = arr[i] ^ arr[j]
+                new_arr = arr[:i] + [change] + arr[j+1:]
+                if len(new_arr) == len(arr):
+                    min_change = min(min_change, smallest_change(new_arr))
+        return min_change
 
+def truncate_number(number: float) -> float:
+    """ Given a positive floating point number, it can be decomposed into
+    and integer part (largest integer smaller than given number) and decimals
+    (leftover part always smaller than 1).
+
+    Return the decimal part of the number.
+    >>> truncate_number(3.5)
+    0.5
+    """
+    return number % 1.0
+
+from typing import List, Any
+def filter_integers(values: List[Any]) -> List[int]:
+    """ Filter given list of any python values only for integers
+    >>> filter_integers(['a', 3.14, 5])
+    [5]
+    >>> filter_integers([1, 2, 3, 'abc', {}, []])
+    [1, 2, 3]
+    """
+    return [x for x in values if isinstance(x, int)]
 
 if __name__=="__main__":
-    print(tri(2))
-    print(tri(10))
-    print(tri(4))
-    print(tri(11))
-    print(tri(12))
-
-    print(intersection((-4, 2), (-2, 6)))
-    print(intersection((5, 7), (4, 11)))
-    print(intersection((1, 12), (2, 7)))
-    print(intersection((-11, 12), (-3, 3)))
-    print(intersection((3, 8), (4, 10)))
-    print("="*30)
-    print(add([4, 5, 6]))
-    print(add([4, 3, 6666, 6, 2, 122]))
-    print(add([4, 6, 7, 2, 122]))
-    print(add([11, 12, 13, 14, 15, 16]))
-    print(add([7, 7, 7, 8, 8]))
-
-    print(encode_cyclic("1234"))
-    print(decode_cyclic("2314"))
-
-    # check(do_algebra)
-    # main()
-    from typing import List
-    # def mean_absolute_deviation(numbers: List[float]) -> float:
-    #     from typing import List
-    #     import numpy as np
-    #     from statistics import mean
-    #     sum_of_squares = sum([(x - np.mean(numbers))**2 for x in numbers])
-    #     return np.sqrt(sum_of_squares)
-
-    # code_ans_0 = mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
-    # assert mean_absolute_deviation([1.0, 2.0, 3.0, 4.0]) == 1.0
-    # def factorize(n: int) -> List[int]:
-    #     factors = []
-    #     while n > 1:
-    #         for i in range(1, n):
-    #             if n % i == 0:
-    #                 print(n,i)
-    #                 factors.append(i)
-    #                 n =int( n / i)
-    #                 break
-    #         else:
-    #             factors.append(n)
-    #     return factors
-
-    # code_ans_0 = factorize(8)
-    # assert factorize(8) == [2, 2, 2]
-    # assert factorize(25) == [5, 5]
-    # assert factorize(70) == [2, 5, 7]
-    solution = "init"
-    cir = 0
-    while cir<10:
-        complete = solution
-        sol = solution+f" {cir}"
-        solution = sol
-        cir += 1
-    print(complete)
-    print(solution)
-    print(sol)
+    # print( smallest_change([1,2,3,5,4,7,9,6]) == 4)
+    # print( smallest_change([1, 2, 3, 4, 3, 2, 2]) == 1)
+    # print( smallest_change([1, 2, 3, 2, 1]) == 0)
+    # print( smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 3)
+    # print( smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 6)
+    # print( smallest_change([3, 4, 5, 6, 7]) == 2)
+    # print( smallest_change([1, 2, 3, 4, 5]) == 1)
+    # print( smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 4)
+    # print( smallest_change([3, 4, 5, 6, 7]) == 2)
+    # print( smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 4)
+    # print( smallest_change([1, 2, 5, 6, 7, 8, 4, 3]) == 4)
+    # print( smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 5)
+    # print( smallest_change([1, 2, 3, 4, 5, 6, 7, 8]) == 4)
+    # print( smallest_change([1, 2, 3, 4, 5]) == 1)
+    # print( smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 7)
+    # print( smallest_change([1, 2, 3, 4, 5]) == 2)
+    # print( smallest_change([1, 2, 3, 4, 5]) == 1)
+    # print( smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 3)
+    # assert 1+1==3, "Test case 1 failed"
+    # assert truncate_number(2.0) == 2.0,"Test case 2 failed"
+    assert filter_integers(["apple", "banana", "cherry", 5, 6.0]) == [5]
+    assert filter_integers(["hello", "world", 123, 4.5, "bye"]) == [123]
+    assert filter_integers(range(1, 6)) == list(range(1, 6))
+    assert filter_integers([1, "a", 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    assert filter_integers(["a", "b", 1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+    def check():
+        pass_result = []
+        try:
+            assert filter_integers(["apple", "banana", "cherry", 5, 6.0]) == [5]                   
+            pass_result.append(True)
+        except Exception as e:
+            pass_result.append(False)
+        return pass_result
+    print(check())
+    lack = [0, 1, 2, 4, 6, 7, 12, 15, 23, 28, 29, 30, 31, 32, 33, 34, 35, 37, 39, 40, 42, 43, 44, 45, 48, 51, 52, 53, 55, 58, 60, 67, 72, 74, 94, 104, 105, 107, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 162]
+    ignore = [0, 2, 4, 7, 12, 15, 23, 28, 29, 30, 31, 34, 35, 40, 42, 43, 44, 45, 48, 51, 52, 53, 55, 58, 60, 124, 162]#, 72, 6, 39, 105,115
+    lack_2 = [0, 2, 4, 7, 12, 15, 23, 28, 29, 30, 31, 34, 35, 40, 42, 43, 44, 45, 48, 51, 52, 53, 55, 58, 60, 94, 105, 115, 124, 129, 162]
+    lack_3 = list(set(lack_2) - set(ignore))
+    lack_3 = sorted(lack_3)
+    passed = [28, 39, 44, 48, 50, 49, 49, 49, 49, 9]
+    pass1 = [0, 8, 24, 34, 39, 42, 43, 43, 43, 43, 43]
+    pass1  = sorted([x+27 for x in pass1])
+    passed = sorted([x+27 for x in passed])
+    print(lack_3)
+    print(passed)
+    print(len(ignore))
+    print(pass1)
     
-    print(string_sequence(5))
+    mbpp_chosen_idx2 = [240, 93, 372, 296, 155, 102, 454, 370, 209, 387, 366, 388, 135, 272, 125, 325, 416, 376, 255, 181, 212, 269, 497, 315, 111, 158, 278, 360, 169, 265, 38, 374, 396, 443, 105, 352, 385, 477, 239, 363, 425, 446, 334, 75, 486, 108, 444, 210, 29, 394, 178, 321, 213, 238, 63, 371, 380, 71, 390, 167, 199, 471, 176, 406, 494, 166, 218, 479, 162, 290, 109, 208, 117, 104, 20, 383, 115, 441, 9, 132, 258, 163, 395, 291, 411, 361, 215, 314, 57, 438, 457, 310, 399, 118, 120, 237, 187, 69, 103, 188, 252, 304, 448, 72, 134, 198, 319, 172, 171, 362, 364, 458, 86, 350, 356, 67, 410, 465, 297, 351, 33, 50, 88, 2, 77, 224, 472, 405, 179, 427, 41, 100, 145, 122, 355, 236, 308, 417, 246, 268, 223, 339, 432, 435, 36, 154, 354, 142, 402, 289, 338, 128, 478, 51, 253, 475, 368, 450, 90, 263, 114, 418, 480, 23, 496, 473, 193, 324, 37, 60, 492, 28, 470, 64, 107, 412, 44, 419, 377, 462, 249, 298, 84, 82, 323, 326, 53, 398, 287, 309, 15, 312, 55, 286, 92, 409, 161, 0, 62, 143]
+    
+    mbpp_chosen_idx1 = [240, 93, 372, 296, 155, 102, 454, 370, 209, 387, 366, 388, 135, 272, 125, 325, 416, 376, 255, 181, 212, 269, 497, 315, 111, 158, 278, 360, 169, 265, 38, 374, 396, 443, 105, 352, 385, 477, 239, 363, 425, 446, 334, 75, 486, 108, 444, 210, 29, 394, 178, 321, 213, 238, 63, 371, 380, 71, 390, 167, 199, 471, 176, 406, 494, 166, 218, 479, 162, 290, 109, 208, 117, 104, 20, 383, 115, 441, 9, 132, 258, 163, 395, 291, 411, 361, 215, 314, 57, 438, 457, 310, 399, 118, 120, 237, 187, 69, 103, 188, 252, 304, 448, 72, 134, 198, 319, 172, 171, 362, 364, 458, 86, 350, 356, 67, 410, 465, 297, 351, 33, 50, 88, 2, 77, 224, 472, 405, 179, 427, 41, 100, 145, 122, 355, 236, 308, 417, 246, 268, 223, 339, 432, 435, 36, 154, 354, 142, 402, 289, 338, 128, 478, 51, 253, 475, 368, 450, 90, 263, 114, 418, 480, 23, 496, 473, 193, 324, 37, 60, 492, 28, 470, 64, 107, 412, 44, 419, 377, 462, 249, 298, 84, 82, 323, 326, 53, 398, 287, 309, 15, 312, 55, 286, 92, 409, 161, 0, 62, 143]
+    
+    mbpp_chosen_idx3 = [0, 2, 9, 15, 20, 23, 28, 29, 33, 36, 37, 38, 41, 44, 50, 51, 53, 55, 57, 60, 62, 63, 64, 67, 69, 71, 72, 75, 77, 82, 84, 86, 88, 90, 92, 93, 100, 102, 103, 104, 105, 107, 108, 109, 111, 114, 115, 117, 118, 120, 122, 125, 128, 132, 134, 135, 142, 143, 145, 154, 155, 158, 161, 162, 163, 166, 167, 169, 171, 172, 176, 178, 179, 181, 187, 188, 193, 198, 199, 208, 209, 210, 212, 213, 215, 218, 223, 224, 236, 237, 238, 239, 240, 246, 249, 252, 253, 255, 258, 263, 265, 268, 269, 272, 278, 286, 287, 289, 290, 291, 296, 297, 298, 304, 308, 309, 310, 312, 314, 315, 319, 321, 323, 324, 325, 326, 334, 338, 339, 350, 351, 352, 354, 355, 356, 360, 361, 362, 363, 364, 366, 368, 370, 371, 372, 374, 376, 377, 380, 383, 385, 387, 388, 390, 394, 395, 396, 398, 399, 402, 405, 406, 409, 410, 411, 412, 416, 417, 418, 419, 425, 427, 432, 435, 438, 441, 443, 444, 446, 448, 450, 454, 457, 458, 462, 465, 470, 471, 472, 473, 475, 477, 478, 479, 480, 486, 492, 494, 496, 497]
+    print(set(mbpp_chosen_idx1) - set(mbpp_chosen_idx2))
+    print(set(mbpp_chosen_idx3) - set(mbpp_chosen_idx1))
+    
+    print(mbpp_chosen_idx2[0],mbpp_chosen_idx2[50],mbpp_chosen_idx2[100],mbpp_chosen_idx2[150])
+    print(mbpp_chosen_idx2.index(309))
+    
+    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    n = 5
+    chunk_size = len(lst) // n  # 计算每个部分的大小
+    chunks = []
+    for i in range(n):
+        if i == n - 1:
+            chunks.append(lst[chunk_size*i:])
+        else:
+            chunks.append(lst[chunk_size*i:chunk_size*(i+1)])
+    print(chunks)
+    

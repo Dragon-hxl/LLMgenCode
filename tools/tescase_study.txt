@@ -1,0 +1,3076 @@
+------------------
+HumanEval/0 5 5
+------------------
+HumanEval/1 5 5
+------------------
+HumanEval/2 5 5
+------------------
+HumanEval/3 5 5
+------------------
+HumanEval/4 5 5
+------------------
+HumanEval/5 5 5
+------------------
+HumanEval/6 5 5
+------------------
+HumanEval/7 5 5
+------------------
+HumanEval/8 5 5
+------------------
+HumanEval/9 5 5
+------------------
+HumanEval/10 5 5
+------------------
+HumanEval/11 5 5
+------------------
+HumanEval/12 5 5
+------------------
+HumanEval/13 5 5
+------------------
+HumanEval/14 5 5
+------------------
+HumanEval/15 5 5
+------------------
+HumanEval/16 5 5
+------------------
+HumanEval/17 5 5
+------------------
+HumanEval/18 5 5
+------------------
+HumanEval/19 5 5
+------------------
+HumanEval/20 5 5
+------------------
+HumanEval/21 5 5
+------------------
+HumanEval/22 5 5
+------------------
+HumanEval/23 5 5
+------------------
+HumanEval/24 5 5
+------------------
+HumanEval/25 5 5
+------------------
+HumanEval/26 5 5
+------------------
+HumanEval/27 5 5
+------------------
+HumanEval/28 5 5
+------------------
+HumanEval/29 5 5
+------------------
+HumanEval/30 5 5
+------------------
+HumanEval/31 5 5
+------------------
+HumanEval/32 5 5
+------------------
+HumanEval/33 5 5
+------------------
+HumanEval/34 5 5
+------------------
+HumanEval/35 5 5
+------------------
+HumanEval/36 5 5
+------------------
+HumanEval/37 5 5
+------------------
+HumanEval/38 5 5
+------------------
+HumanEval/39 4 4
+------------------
+HumanEval/40 5 5
+------------------
+HumanEval/41 2 2
+------------------
+HumanEval/42 5 5
+------------------
+HumanEval/43 5 5
+------------------
+HumanEval/44 5 5
+------------------
+HumanEval/45 5 5
+------------------
+HumanEval/46 5 5
+------------------
+HumanEval/47 5 5
+------------------
+HumanEval/48 5 5
+------------------
+HumanEval/49 5 5
+------------------
+HumanEval/50 5 5
+------------------
+HumanEval/51 5 5
+------------------
+HumanEval/52 5 5
+------------------
+HumanEval/53 5 5
+------------------
+HumanEval/54 5 5
+------------------
+HumanEval/55 5 5
+------------------
+HumanEval/56 5 5
+------------------
+HumanEval/57 5 5
+------------------
+HumanEval/58 5 5
+------------------
+HumanEval/59 5 5
+------------------
+HumanEval/60 5 5
+------------------
+HumanEval/61 5 5
+------------------
+HumanEval/62 5 5
+------------------
+HumanEval/63 5 5
+------------------
+HumanEval/64 5 5
+------------------
+HumanEval/65 5 5
+------------------
+HumanEval/66 5 5
+------------------
+HumanEval/67 5 5
+------------------
+HumanEval/68 5 5
+------------------
+HumanEval/69 5 5
+------------------
+HumanEval/70 5 5
+------------------
+HumanEval/71 5 5
+------------------
+HumanEval/72 5 5
+------------------
+HumanEval/73 5 5
+------------------
+HumanEval/74 5 5
+------------------
+HumanEval/75 5 5
+------------------
+HumanEval/76 5 5
+------------------
+HumanEval/77 5 5
+------------------
+HumanEval/78 5 5
++++++++++++++++++++++
+HumanEval/79
++++++++++++++++++++++
+------------------
+HumanEval/79 2 2
+------------------
+HumanEval/80 5 5
+------------------
+HumanEval/81 3 3
+------------------
+HumanEval/82 5 5
+------------------
+HumanEval/83 1 1
++++++++++++++++++++++
+HumanEval/84
++++++++++++++++++++++
+------------------
+HumanEval/84 3 3
++++++++++++++++++++++
+HumanEval/85
++++++++++++++++++++++
+------------------
+HumanEval/85 1 1
+------------------
+HumanEval/86 4 4
+------------------
+HumanEval/87 5 5
+------------------
+HumanEval/88 5 5
+------------------
+HumanEval/89 5 5
+------------------
+HumanEval/90 5 5
+------------------
+HumanEval/91 5 5
+------------------
+HumanEval/92 5 5
+------------------
+HumanEval/93 5 5
+------------------
+HumanEval/94 5 5
+------------------
+HumanEval/95 5 5
+------------------
+HumanEval/96 5 5
+------------------
+HumanEval/97 5 5
+------------------
+HumanEval/98 5 5
+------------------
+HumanEval/99 5 5
+------------------
+HumanEval/100 4 4
+------------------
+HumanEval/101 5 5
+------------------
+HumanEval/102 5 5
+------------------
+HumanEval/103 5 5
+------------------
+HumanEval/104 5 5
+------------------
+HumanEval/105 5 5
+------------------
+HumanEval/106 4 4
+------------------
+HumanEval/107 5 5
+------------------
+HumanEval/108 5 5
+------------------
+HumanEval/109 5 5
+------------------
+HumanEval/110 5 5
+------------------
+HumanEval/111 3 3
+------------------
+HumanEval/112 5 5
++++++++++++++++++++++
+HumanEval/113
++++++++++++++++++++++
+------------------
+HumanEval/113 2 2
+------------------
+HumanEval/114 5 5
+------------------
+HumanEval/115 5 5
+------------------
+HumanEval/116 5 5
+------------------
+HumanEval/117 5 5
+------------------
+HumanEval/118 5 5
++++++++++++++++++++++
+HumanEval/119
++++++++++++++++++++++
+------------------
+HumanEval/119 2 2
+------------------
+HumanEval/120 5 5
+------------------
+HumanEval/121 5 5
+------------------
+HumanEval/122 5 5
+------------------
+HumanEval/123 2 2
+------------------
+HumanEval/124 5 5
+------------------
+HumanEval/125 5 5
+------------------
+HumanEval/126 5 5
++++++++++++++++++++++
+HumanEval/127
++++++++++++++++++++++
+------------------
+HumanEval/127 3 3
+------------------
+HumanEval/128 5 5
+------------------
+HumanEval/129 5 5
++++++++++++++++++++++
+HumanEval/130
++++++++++++++++++++++
+------------------
+HumanEval/130 1 1
+------------------
+HumanEval/131 5 5
+------------------
+HumanEval/132 5 5
+------------------
+HumanEval/133 5 5
+------------------
+HumanEval/134 5 5
+------------------
+HumanEval/135 5 5
+------------------
+HumanEval/136 5 5
+------------------
+HumanEval/137 5 5
+------------------
+HumanEval/138 5 5
+------------------
+HumanEval/139 5 5
+------------------
+HumanEval/140 5 5
+------------------
+HumanEval/141 5 5
+------------------
+HumanEval/142 3 3
+------------------
+HumanEval/143 5 5
+------------------
+HumanEval/144 5 5
+------------------
+HumanEval/145 5 5
+------------------
+HumanEval/146 5 5
+------------------
+HumanEval/147 5 5
+------------------
+HumanEval/148 5 5
+------------------
+HumanEval/149 1 1
+------------------
+HumanEval/150 5 5
+------------------
+HumanEval/151 5 5
+------------------
+HumanEval/152 5 5
+------------------
+HumanEval/153 5 5
+------------------
+HumanEval/154 5 5
+------------------
+HumanEval/155 5 5
+------------------
+HumanEval/156 5 5
+------------------
+HumanEval/157 5 5
+------------------
+HumanEval/158 5 5
+------------------
+HumanEval/159 5 5
+------------------
+HumanEval/160 5 5
+------------------
+HumanEval/161 5 5
+------------------
+HumanEval/162 5 5
+------------------
+HumanEval/163 5 5
+Data with length 164, max_num:10, min_num:2, mid_num:10.0, mean:9.451219512195122, diff:8
+task HumanEval/0 has 10 tests
+task HumanEval/1 has 10 tests
+task HumanEval/2 has 10 tests
+task HumanEval/3 has 10 tests
+task HumanEval/4 has 10 tests
+task HumanEval/5 has 10 tests
+task HumanEval/6 has 10 tests
+task HumanEval/7 has 10 tests
+task HumanEval/8 has 10 tests
+task HumanEval/9 has 10 tests
+task HumanEval/10 has 10 tests
+task HumanEval/11 has 10 tests
+task HumanEval/12 has 10 tests
+task HumanEval/13 has 10 tests
+task HumanEval/14 has 10 tests
+task HumanEval/15 has 10 tests
+task HumanEval/16 has 10 tests
+task HumanEval/17 has 10 tests
+task HumanEval/18 has 10 tests
+task HumanEval/19 has 10 tests
+task HumanEval/20 has 10 tests
+task HumanEval/21 has 10 tests
+task HumanEval/22 has 10 tests
+task HumanEval/23 has 10 tests
+task HumanEval/24 has 10 tests
+task HumanEval/25 has 10 tests
+task HumanEval/26 has 10 tests
+task HumanEval/27 has 10 tests
+task HumanEval/28 has 10 tests
+task HumanEval/29 has 10 tests
+task HumanEval/30 has 10 tests
+task HumanEval/31 has 10 tests
+task HumanEval/32 has 10 tests
+task HumanEval/33 has 10 tests
+task HumanEval/34 has 10 tests
+task HumanEval/35 has 10 tests
+task HumanEval/36 has 10 tests
+task HumanEval/37 has 10 tests
+task HumanEval/38 has 10 tests
+task HumanEval/39 has 8 tests
+task HumanEval/40 has 10 tests
+task HumanEval/41 has 4 tests
+task HumanEval/42 has 10 tests
+task HumanEval/43 has 10 tests
+task HumanEval/44 has 10 tests
+task HumanEval/45 has 10 tests
+task HumanEval/46 has 10 tests
+task HumanEval/47 has 10 tests
+task HumanEval/48 has 10 tests
+task HumanEval/49 has 10 tests
+task HumanEval/50 has 10 tests
+task HumanEval/51 has 10 tests
+task HumanEval/52 has 10 tests
+task HumanEval/53 has 10 tests
+task HumanEval/54 has 10 tests
+task HumanEval/55 has 10 tests
+task HumanEval/56 has 10 tests
+task HumanEval/57 has 10 tests
+task HumanEval/58 has 10 tests
+task HumanEval/59 has 10 tests
+task HumanEval/60 has 10 tests
+task HumanEval/61 has 10 tests
+task HumanEval/62 has 10 tests
+task HumanEval/63 has 10 tests
+task HumanEval/64 has 10 tests
+task HumanEval/65 has 10 tests
+task HumanEval/66 has 10 tests
+task HumanEval/67 has 10 tests
+task HumanEval/68 has 10 tests
+task HumanEval/69 has 10 tests
+task HumanEval/70 has 10 tests
+task HumanEval/71 has 10 tests
+task HumanEval/72 has 10 tests
+task HumanEval/73 has 10 tests
+task HumanEval/74 has 10 tests
+task HumanEval/75 has 10 tests
+task HumanEval/76 has 10 tests
+task HumanEval/77 has 10 tests
+task HumanEval/78 has 10 tests
+task HumanEval/79 has 4 tests
+task HumanEval/80 has 10 tests
+task HumanEval/81 has 6 tests
+task HumanEval/82 has 10 tests
+task HumanEval/83 has 2 tests
+task HumanEval/84 has 6 tests
+task HumanEval/85 has 2 tests
+task HumanEval/86 has 8 tests
+task HumanEval/87 has 10 tests
+task HumanEval/88 has 10 tests
+task HumanEval/89 has 10 tests
+task HumanEval/90 has 10 tests
+task HumanEval/91 has 10 tests
+task HumanEval/92 has 10 tests
+task HumanEval/93 has 10 tests
+task HumanEval/94 has 10 tests
+task HumanEval/95 has 10 tests
+task HumanEval/96 has 10 tests
+task HumanEval/97 has 10 tests
+task HumanEval/98 has 10 tests
+task HumanEval/99 has 10 tests
+task HumanEval/100 has 8 tests
+task HumanEval/101 has 10 tests
+task HumanEval/102 has 10 tests
+task HumanEval/103 has 10 tests
+task HumanEval/104 has 10 tests
+task HumanEval/105 has 10 tests
+task HumanEval/106 has 8 tests
+task HumanEval/107 has 10 tests
+task HumanEval/108 has 10 tests
+task HumanEval/109 has 10 tests
+task HumanEval/110 has 10 tests
+task HumanEval/111 has 6 tests
+task HumanEval/112 has 10 tests
+task HumanEval/113 has 4 tests
+task HumanEval/114 has 10 tests
+task HumanEval/115 has 10 tests
+task HumanEval/116 has 10 tests
+task HumanEval/117 has 10 tests
+task HumanEval/118 has 10 tests
+task HumanEval/119 has 4 tests
+task HumanEval/120 has 10 tests
+task HumanEval/121 has 10 tests
+task HumanEval/122 has 10 tests
+task HumanEval/123 has 4 tests
+task HumanEval/124 has 10 tests
+task HumanEval/125 has 10 tests
+task HumanEval/126 has 10 tests
+task HumanEval/127 has 6 tests
+task HumanEval/128 has 10 tests
+task HumanEval/129 has 10 tests
+task HumanEval/130 has 2 tests
+task HumanEval/131 has 10 tests
+task HumanEval/132 has 10 tests
+task HumanEval/133 has 10 tests
+task HumanEval/134 has 10 tests
+task HumanEval/135 has 10 tests
+task HumanEval/136 has 10 tests
+task HumanEval/137 has 10 tests
+task HumanEval/138 has 10 tests
+task HumanEval/139 has 10 tests
+task HumanEval/140 has 10 tests
+task HumanEval/141 has 10 tests
+task HumanEval/142 has 6 tests
+task HumanEval/143 has 10 tests
+task HumanEval/144 has 10 tests
+task HumanEval/145 has 10 tests
+task HumanEval/146 has 10 tests
+task HumanEval/147 has 10 tests
+task HumanEval/148 has 10 tests
+task HumanEval/149 has 2 tests
+task HumanEval/150 has 10 tests
+task HumanEval/151 has 10 tests
+task HumanEval/152 has 10 tests
+task HumanEval/153 has 10 tests
+task HumanEval/154 has 10 tests
+task HumanEval/155 has 10 tests
+task HumanEval/156 has 10 tests
+task HumanEval/157 has 10 tests
+task HumanEval/158 has 10 tests
+task HumanEval/159 has 10 tests
+task HumanEval/160 has 10 tests
+task HumanEval/161 has 10 tests
+task HumanEval/162 has 10 tests
+task HumanEval/163 has 10 tests
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/0 has testcase num 10:
+assert has_close_elements([1.2, 2.1, 3.3, 4.4], 3.0) == True
+assert has_close_elements([1, 3, 2], 0) == False
+assert has_close_elements([1, 2, 3], 0.1) == False
+assert has_close_elements([1, 2, 3, 4, 5], 0.00001) == False
+assert not has_close_elements([1.5, 2.5, 3.5, 4.5, 5.5], 0.1) == True
+assert has_close_elements([1, 2, 3, 4], 4) == False
+assert has_close_elements([1.2, 2.2, 3.2], 0.0001) == True
+assert has_close_elements([1, 2, 3, 4, 5], 1) == True
+assert has_close_elements([1.2, 2.4, 1.8, 0.6], 0.1) == True
+assert has_close_elements([1.2, 2.4, 3.6, 4.8], 3.0) == False
+task HumanEval/0 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/1 has testcase num 10:
+assert separate_paren_groups("()") == ['()']
+assert separate_paren_groups('') == []
+assert separate_paren_groups("(())") == ["(())"]
+assert separate_paren_groups('())') == ['()']
+assert separate_paren_groups('()') == ['()']
+assert separate_paren_groups('()()') == [()]
+assert separate_paren_groups("(a+b)c") == ['(a+b)c'], "separate_paren_groups should return [(a+b)c] as output"
+assert separate_paren_groups("(a+b+c))") == ['a+b+c', ')']
+assert separate_paren_groups('((a(b(c))d)e)') == ['a', 'b', 'c', 'd', 'e']
+assert separate_paren_groups('((a)b)c(d)e(f)g') == ['(a)b', 'c', 'd', 'e', 'f', 'g']
+task HumanEval/1 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/2 has testcase num 10:
+assert truncate_number(0.0) == 0.0
+assert truncate_number(0.5) == 0.5
+assert truncate_number(0.12345) == 0.12345
+assert truncate_number(-0.0) == 0.0
+assert truncate_number(0.1) == 0.1
+assert truncate_number(-10.001) == -10.001
+assert truncate_number(3.0) == 3.0, "3.0 should be 3.0 after truncation"
+assert runcate_number(3.14) == 0.14, "3.14 should be truncated to 0.14"
+assert truncate_number(-5.2) == -5.0
+assert truncate_number(-1.23456789) == -1.23456789
+task HumanEval/2 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/3 has testcase num 10:
+assert below_zero([2, 1, 3, 2, 4]) == False
+assert below_zero([2, -3, -1, 4]) == True
+assert below_zero([10, -5, 5, 10]) == False
+assert below_zero([10, 5]) == False
+assert below_zero([1, -3, 2, -1, 4, -2]) == True
+assert below_zero([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]) == True
+assert below_zero([-2, -1, -3, -2, -4]) == False
+assert below_zero([100, 50, 100]) == True
+assert below_zero([-200, 0, -100, 0, 200]) == False
+assert below_zero([10, -20, 10, -5]) == False
+task HumanEval/3 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/4 has testcase num 10:
+assert mean_absolute_deviation([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]) == 0.0
+assert mean_absolute_deviation([0.0, 1.0, 2.0, 3.0]) == 1.0
+assert mean_absolute_deviation([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]) == 0.0
+assert mean_absolute_deviation([-2.0, -1.0, 0.0, 1.0]) == 1.0
+assert mean_absolute_deviation([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) == 0
+assert mean_absolute_deviation([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) == 4
+assert mean_absolute_deviation([1, 2, 3, 4]) == 3.0
+assert mean_absolute_deviation([3.14, 6.28, 10.0, 15.0, 21.0, 28.0, 35.0, 42.0]) == 27.0
+assert mean_absolute_deviation([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 9.0
+assert mean_absolute_deviation([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 7.0
+task HumanEval/4 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/5 has testcase num 10:
+assert intersperse([], 5) == []
+assert intersperse([1, 2], 3) == [1, 3, 2]
+assert intersperse([1, 2, 3, 4, 5], 6) == [1, 6, 2, 6, 3, 6, 4, 6, 5]
+assert intersperse([1, 2, 3], 5) == [1, 5, 2, 5, 3]
+assert intersperse([1, 2, 3], 3) == [1, 3, 2, 3, 3]
+assert intersperse([1, 2, 3, 4], 11) == [1, 11, 2, 3, 4]
+assert intersperse([1, 2, 3, 4], 5) == [1, 5, 2, 3, 5, 4, 5]
+assert intersperse([1, 2, 3], 5) == [1, 5, 2, 3, 5, 2, 3, 5, 1]
+assert intersperse([1, 2, 3, 4, 5], 10) == [1, 2, 3, 4, 5, 10]
+assert intersperse([1, 2, 3, 4, 5], 5) == [1, 5, 2, 3, 4, 5, 5]
+task HumanEval/5 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/6 has testcase num 10:
+assert parse_nested_parens('(1)()()()') == [1]
+assert parse_nested_parens('()') == [1]
+assert parse_nested_parens('((1))((2))') == [2]
+assert parse_nested_parens("((()))") == [3]
+assert parse_nested_parens("(a(b((c(((d)))))))") == [4]
+assert parse_nested_parens("()(())") == [3, 2]
+assert parse_nested_parens('(a(b))') == [1, 2, 2]
+assert parse_nested_parens('()( (()()) )') == [1, 2, 3]
+assert parse_nested_parens('(( ( ( ( () ) ) ) ) )') == [9]
+assert parse_nested_parens("( (()) ") == [3, 2]
+task HumanEval/6 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/7 has testcase num 10:
+assert filter_by_substring(["hello", "world", "apple", "banana", "kiwi"], "banana") == ["banana"]
+assert filter_by_substring(["apple", "banana", "cherry", "date"], "ch") == ["cherry"]
+assert filter_by_substring(["apple", "banana", "cherry", "date", "elderberry", "grape"], "gra") == ["grape"]
+assert filter_by_substring(["foo", "bar", "baz", "qux"], "z") == ["baz"]
+assert filter_by_substring(["apple", "banana", "cherry", "date"], "berry") == []
+assert filter_by_substring(["apple", "banana", "cherry", "date"], "abc") == ["apple", "banana", "cherry", "date"]
+assert filter_by_substring(["hello", "world", "python", "is", "fun"], "python3") == ["python3"]
+assert filter_by_substring(["apple", "banana", "orange"], "xx") == ["apple", "banana", "orange"]
+assert filter_by_substring(["abc", "defg", "hijk"], "xyz", lambda x: x.endswith("y")) == []
+assert filter_by_substring(["apple", "banana", "cherry", "durian"], "an") == ["banana", "cherry"]
+task HumanEval/7 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/8 has testcase num 10:
+assert sum_product([1, 2, 3]) == (6, 6), "sum_product should return (6, 24) for non-empty list"
+assert sum_product([1, 2, 3, 4, 5]) == (15, 120), "sum_product should return (15, 120) for a list containing 1, 2, 3, 4, 5"
+assert sum_product([1]) == (1, 1), "sum_product([1]) should return (1, 1)"
+assert sum_product([]) == (0, 1), "Expected (0, 1), but got: {}".format(sum_product([])[0], sum_product([])[1])
+assert sum_product([1, 2, 3, 4, 5, 6]) == (21, 720), "Expected (21, 720), got ({}, 720)".format(sum_product([1, 2, 3, 4, 5, 6])[0])
+assert sum_product([]) == (0, 1), "Expected (0, 1) but got: %r" % sum_product([])
+assert sum_product([]) == (0, 1), "The function should return (0, 1) for an empty list"
+assert sum_product([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == (105, 3628800000)
+assert sum_product([1, 2, 3, 4, 5]) == (15, 120), "sum_product([1, 2, 3, 4, 5]) should return (15, 120)"
+assert sum_product([1, 2, 3, 4]) == (15, 24), "Expected (15, 24) but got: %r" % sum_product([1, 2, 3, 4])
+task HumanEval/8 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/9 has testcase num 10:
+assert rolling_max([2, 3, 4, 5, 6, 7, 8, 9, 10]) == [2, 3, 4, 5, 6, 7, 8, 9, 10]
+assert rolling_max([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+assert rolling_max([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+assert rolling_max([1, 2, 3, 4, 5, 6, 7, 8, 9]) == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+assert rolling_max([1, 2, 3]) == [1, 2, 3]
+assert rolling_max([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 5, 6]
+assert rolling_max([1, 2, 3, 4, 5, 6, 7, 8, 9]) == [1, 2, 3, 4, 5, 6, 7, 8, 9], "should be [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+assert rolling_max([-1, 2, 3, 4, 5, -1, 2, 3, 4, 5]) == [-1, 2, 3, 4]
+assert rolling_max([1, 2, 3, 3, 3, 3]) == [3, 3, 3, 3], "RollingMax should return the rolling maximum"
+assert rolling_max([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+task HumanEval/9 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/10 has testcase num 10:
+assert make_palindrome('') == ''
+assert make_palindrome("o") == "o"
+assert is_palindrome(make_palindrome('level')) == True
+assert is_palindrome(make_palindrome("abcdefghijklmnopqrstuvwxyz")) == True
+assert make_palindrome("A") == "A", make_palindrome("A", "a")
+assert make_palindrome("racecar") == "racecar"
+assert make_palindrome("ab") == "ab"
+assert make_palindrome("cabbage") == "acabbge"
+assert make_palindrome("aabbbbaaaaaa") == "aabbbbaaaa"
+assert make_palindrome("aabbbbaaaaaaa") == "aabbbbaaaa"
+task HumanEval/10 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/11 has testcase num 10:
+assert string_xor('00', '00') == '00'
+assert string_xor("1101", "0011") == "1110", "string_xor failed"
+assert string_xor("101", "110") == "011", "Error in string_xor"
+assert string_xor("01010", "01010") == "00000"
+assert string_xor('111', '111') == '000'
+assert string_xor("01010101", "10101000") == "10101010"
+assert string_xor("01111", "00110") == "11110"
+assert string_xor("110011", "111011") == "001101"
+assert string_xor("10101010", "10100110") == "10110110"
+assert string_xor("10101", "01010") == "11101"
+task HumanEval/11 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/12 has testcase num 10:
+assert longest(["hello", "world", "code", "world", "world", "world"]) == "hello"
+assert longest(["  ", "  ", " ", " ", " ", "  "]) == "  "
+assert longest(["a", "a", "a", "a", "a", "a", "a", "a", "a"]) == "a"
+assert longest(["hello", "world", "hello", "world"]) == "hello"
+assert longest(["hello", "world", "hello", "hello", "hello", "hello"]) == "hello"
+assert longest(["hello", "world", "py", "con", "script"]) == "py"
+assert longest(["hello", "  ", "world"]) == "world"
+assert longest(["hello", "world", "py", "3", "hello", "world", "hello", "world", "hello", "world"]) == "world"
+assert longest(["hello", "world", "foo", "bar", "baz", "qux", "quux", "corge", "grault", "plugh", "xyzzy"]) == "hello"
+assert longest(["hello", "world", "pycharm-community"]) == "hello"
+task HumanEval/12 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/13 has testcase num 10:
+assert greatest_common_divisor(18, 15) == 3
+assert greatest_common_divisor(2, 16) == 2
+assert greatest_common_divisor(9, 42) == 3
+assert greatest_common_divisor(42, 48) == 6
+assert greatest_common_divisor(10, 30) == 10
+assert greatest_common_divisor(1, 16) == 16
+assert greatest_common_divisor(100, 200) == 200
+assert greatest_common_divisor(-6, 6) == 1
+assert greatest_common_divisor(18, 36) == 6
+assert greatest_common_divisor(45, 108) == 1
+task HumanEval/13 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/14 has testcase num 10:
+assert len(all_prefixes('')) == 0
+assert all_prefixes("") == []
+assert len(all_prefixes('123')) == 3
+assert all_prefixes('abc') == ['a', 'ab', 'abc']
+assert all_prefixes("abba") == sorted(all_prefixes("abba"))
+assert all_prefixes("abcdef") == ["", "a", "ab", "abc", "abcd", "abcde", "abcdef"]
+assert all_prefixes("abcdef") == ["", "a", "ab", "abc", "abcd", "abcde", "abcded", "abcdef"]
+assert sorted(all_prefixes('bc')) == ['b', 'c']
+assert all_prefixes("aaaaaaaaaac") == ["aaaaaaaaaaa", "aaaaaaaaaac"]
+assert all_prefixes("aabbcc") == ["a", "b", "c"]
+task HumanEval/14 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/15 has testcase num 10:
+assert string_sequence(4) == '0 1 2 3 4', 'Expected: 0 1 2 3 4, Got: ' + string_sequence(4)
+assert string_sequence(7) == "0 1 2 3 4 5 6 7", "Expected: '0 1 2 3 4 5 6 7', Got: ''"
+assert string_sequence(1) == "0 1", "string_sequence(1) = %s; expected %s" % (string_sequence(1), "0 1")
+assert string_sequence(5) == "0 1 2 3 4 5", "string_sequence should return '0 1 2 3 4 5' for n=5"
+assert string_sequence(2) == "0 1 2", "0 1 2"
+assert tring_sequence(0) == "0", "string_sequence(0) should return '0'"
+assert string_sequence(4) == "0 1 2 3 4", "string_sequence(4) = %s; expected %s" % (string_sequence(4), "0 1 2 3 4")
+assert tring_sequence(3) == '0 1 2', 'The output of string_sequence should be "0 1 2" for n=3'
+assert string_sequence(8) == "0 1 2 3 4 5 6 7", "string_sequence(8)
+assert string_sequence(2) == "0 1 2", "Expected: '0 1 2', Got: '0 1 2'"
+task HumanEval/15 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/16 has testcase num 10:
+assert count_distinct_characters("😔") == 1
+assert count_distinct_characters("a") == 1
+assert count_distinct_characters("hello world") == 8
+assert count_distinct_characters('aBcD') == 4, "count_distinct_characters should return 4 for 'aBcD'"
+assert count_distinct_characters('1111111111') == 1
+assert count_distinct_characters('aaaAaBb') == 3
+assert count_distinct_characters("Hello World!") == 6
+assert count_distinct_characters("aBc") == 3, "The function should return 3 when given the string 'aBc'"
+assert count_distinct_characters("Hello world") == 2
+assert count_distinct_characters('pythonisawesome') == 4
+task HumanEval/16 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/17 has testcase num 10:
+assert parse_music("o|") == [2]
+assert parse_music("") == []
+assert parse_music(".|") == [1]
+assert parse_music("o") == [4]
+assert parse_music('o') == [4]
+assert parse_music("o.o.o") == [4, 8, 4, 8]
+assert parse_music("o.|o|") == [1, 1, 2, 1]
+assert parse_music("o.") == [4, 4, 4, 4]
+assert parse_music("o.o.o.o.o") == [15], "Expected [15], but got [15]"
+assert parse_music("o o . . . o . . o . . o") == [4, 1, 1, 1, 1, 1]
+task HumanEval/17 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/18 has testcase num 10:
+assert how_many_times("abababaa", "abacabac") == 0
+assert how_many_times("hello world", "h") == 1
+assert how_many_times("abcdefg", "b") == 1
+assert how_many_times("abcdefg", "g") == 1
+assert how_many_times("hello world", "hi") == 0
+assert how_many_times("abcdefg", "ab") == 2
+assert how_many_times("hello", "he") == 0
+assert how_many_times("abcbbcabc", "bcb") == 2
+assert how_many_times("abcabcc", "ac") == 1, "how_many_times failed"
+assert how_many_times("aaaabbbbccccc", "cccc") == 4
+task HumanEval/18 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/19 has testcase num 10:
+assert sort_numbers('five six') == 'five six'
+assert sort_numbers('seven') == 'seven'
+assert sort_numbers('one two three four nine') == 'one two three four nine'
+assert sort_numbers('one two three eight') == 'one two three eight'
+assert sort_numbers('zero two three') == 'zero two three'
+assert sort_numbers("fiveeight") == "five", "sort_numbers should return 'five' for input 'fiveeight'"
+assert sort_numbers('one two three four five six seven') == 'one one two five'
+assert sort_numbers("one ten two three four five six seven") == "one ten two three four five six seven"
+assert sort_numbers("six five seven four") == "six five seven four", "sort_numbers failed"
+assert sort_numbers("7654321098") == "123456789"
+task HumanEval/19 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/20 has testcase num 10:
+assert find_closest_elements([0.0, 0.0, 0.0, 0.0]) == (0.0, 0.0)
+assert find_closest_elements([1.5, 2.5, 3.5, 4.5, 5.5]) == (1.5, 2.5)
+assert find_closest_elements([2.5, 2.5, 1.5]) == (2.5, 2.5)
+assert find_closest_elements([1, 2, 3, 4, 5, 6, 7, 8, 9]) == (1, 2)
+assert find_closest_elements([2, 2, 3, 1, 4]) == (2, 2)
+assert find_closest_elements([1, 2, 3, 4]) == (1, 4)
+assert find_closest_elements([1, 2, 1, 3, 4, 5]) == (1, 2)
+assert find_closest_elements([-1.2, 2.4, 3.6, 4.8, 5.1]) == (2.4, 3.6)
+assert find_closest_elements([3.0, 2.0, 1.0, 4.0]) == (1.0, 2.0)
+assert find_closest_elements([3.0, 4.0, 4.5, 5.0]) == (3.5, 4.0)
+task HumanEval/20 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/21 has testcase num 10:
+assert list(rescale_to_unit([1.0, 2.0])) == [0.0, 1.0]
+assert rescale_to_unit([1.0, 2.0, 3.0]) == [0.0, 0.5, 1.0]
+assert rescale_to_unit([0, 1]) == [0, 1]
+assert rescale_to_unit([1, 2, 3]) == [0, 0.5, 1]
+assert rescale_to_unit([1.0, 0.1]) == [1.0, 0.0]
+assert rescale_to_unit([1, 2, 3, 4]) == [0, 0.3333333333333334, 0.6666666666666667, 1]
+assert rescale_to_unit([1, 2, 3, 4, 5, 6]) == [0, 0.3333333333333337, 0.6666666666666667, 1, 1, 1]
+assert rescale_to_unit([0.0, 1.0, 2.0, 3.0]) == [0.0, 0.5, 1.0, 1.0]
+assert rescale_to_unit([3.0, 6.0, 12.0, 20.0]) == [1.5, 3, 6, 12]
+assert rescale_to_unit([0.1, 0.2, 0.3, 0.4, 0.5]) == [0, 0.2, 0.4, 0.6, 1]
+task HumanEval/21 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/22 has testcase num 10:
+assert filter_integers([]) == []
+assert filter_integers(["hello", "world", 1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+assert filter_integers([True, False, True, False, True]) == [True, False, True, False, True]
+assert filter_integers([1, "not an integer"]) == [1]
+assert filter_integers([1, "a", 2, 3, 4, 5, 6, 7, "a"]) == [1, 2, 3, 4, 5, 6, 7]
+assert filter_integers(['1', '2', 3, 4, 5]) == [1, 3, 4]
+assert filter_integers([1, 2, 3, 4, 'a', 5]) == [1, 2, 3, 4]
+assert filter_integers([1, "2", 3, 4, 5]) == []
+assert filter_integers([1, '2', 3.5, 4, '5']) == [1, 2, 3, 4]
+assert filter_integers([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == [11, 12]
+task HumanEval/22 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/23 has testcase num 10:
+assert strlen({1,2,3}) == 3
+assert strlen({"a":"1", "b":"2", "c":"3"}) == 3
+assert strlen("aaaba") == 5
+assert strlen(" " * 100) == 100
+assert strlen("aa") == 2
+assert strlen("ababa") == 4
+assert strlen("aabbcccccccccccccccccccccccccccccccccccccccccc") == 5
+assert strlen("hello world") == 8, "strlen function should return 8"
+assert strlen("hello, world") == 9
+assert strlen("abababababa") == 8
+task HumanEval/23 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/24 has testcase num 10:
+assert largest_divisor(9) == 3, "Error: largest_divisor should return 3 for n=9"
+assert largest_divisor(4) == 2, "Error: largest_divisor(4) should return 2"
+assert largest_divisor(10) == 5
+assert largest_divisor(12) == 6
+assert largest_divisor(7) == 1
+assert largest_divisor(15) == 3, "The largest_divisor function should return 3 for input 15"
+assert largest_divisor(56) == 8, "Error in largest_divisor function"
+assert largest_divisor(126) == 6
+assert largest_divisor(96) == 6, "96 should be the largest divisor"
+assert largest_divisor(9000) == 2
+task HumanEval/24 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/25 has testcase num 10:
+assert factorize(15) == [3, 5], "Incorrect output"
+assert factorize(4) == [2, 2], "4 should be factorized to 2 and 2"
+assert factorize(36) == [2, 2, 3, 3]
+assert factorize(13) == [13]
+assert factorize(18) == [2, 3, 3], "2, 3, 3"
+assert factorize(840) == [2, 2, 2, 2, 3, 3, 5]
+assert factorize(18) == [2, 2, 3], "factorize should return [2, 2, 3] when given 18"
+assert factorize(10) == [2, 5], "10 is not a prime number"
+assert factorize(36) == [2, 2, 2, 2, 3, 3]
+assert factorize(10) == [5, 2, 2]
+task HumanEval/25 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/26 has testcase num 10:
+assert remove_duplicates([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+assert remove_duplicates([1, 2, 3, 3, 4, 5]) == [1, 2, 4, 5], "remove duplicates failed"
+assert remove_duplicates([1, 2, 3, 4]) == [1, 2, 3, 4], "remove_duplicates incorrect"
+assert remove_duplicates([1, 2, 3, 3, 4, 5, 6]) == [1, 2, 4, 5, 6]
+assert remove_duplicates([1, 2, 3, 4, 5, 5]) == [1, 2, 3, 4], "remove_duplicates should remove duplicates"
+assert remove_duplicates([1, 2, 2, 3, 3, 3, 4, 4]) == [1, 2, 3, 4]
+assert remove_duplicates([1, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]) == [1, 2, 3, 4, 4]
+assert remove_duplicates([1, 1, 1, 1, 1, 1, 1, 2]) == [1, 1, 1, 1, 1, 2]
+assert remove_duplicates([1, 2, 2, 2, 2, 2, 2]) == [1, 2, 2]
+assert remove_duplicates([1, 2, 3, 1, 2, 2, 3, 2, 2]) == [1, 2, 3, 2, 3]
+task HumanEval/26 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/27 has testcase num 10:
+assert flip_case("HELLO WORLD") == "hello world", "flip_case should flip lowercase to uppercase and uppercase to lowercase"
+assert flip_case('HELLO WORLD') == 'hello world', 'flip_case should flip case correctly'
+assert flip_case("d") == "D"
+assert flip_case("HELLO") == "hello", "flip_case should flip the case correctly"
+assert flip_case("123456789") == "123456789"
+assert flip_case("HELLO, WORLD!") == "Hello, World!", "flip_case test failed"
+assert flip_case("Hello, World!") == "Hello, World!", "flip_case test failed"
+assert flip_case_inplace("Hello, World") == "HEllo, WOrld"
+assert flip_case('Hello world') == 'HELLO WORLD', "flip_case incorrect"
+assert flip_case_words("Hello, World!") == "HElLo, wOrLd!", "flip_case_words failed"
+task HumanEval/27 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/28 has testcase num 10:
+assert concatenate(["a", "b", "c", "d", "e", "f"]) == "abcdef"
+assert concatenate(["hello", "world"]) == "helloworld"
+assert concatenate(["foo", "bar", "baz"]) == "foobarbaz"
+assert concatenate(["hello", "world", "!"]) == "helloworld!"
+assert concatenate(["a", "b", "c", "d", "e", "f", "g", "h"]) == "abcdefgh"
+assert concatenate(["hello", "world", "", "world"]) == "hello world"
+assert concatenate(["Hello", "world"]) == "Hello world"
+assert concatenate(["a", "b", "c", "d"]) == "abcde"
+assert merge([["hello", "world"], ["hello", "world"]]) == [["hello", "world"], ["hello", "world"]]
+assert concatenate(["hello", "world", "!", "  "]) == "hello world !"
+task HumanEval/28 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/29 has testcase num 10:
+assert filter_by_prefix(["hello", "world", "python"], "x") == []
+assert filter_by_prefix(["hello", "world", "python"], "world") == ["world"]
+assert filter_by_prefix(["hello", "world"], "hello") == ["hello"]
+assert filter_by_prefix(["abc123", "def456", "ghi789"], "xyz") == []
+assert filter_by_prefix(["apple", "banana", "cherry", "date", "elderberry", "fig"], "") == ["apple", "banana", "cherry", "date", "elderberry", "fig"]
+assert filter_by_prefix(['a', 'b', 'c', 'd', 'e', 'f'], 'a') == []
+assert filter_by_prefix(["abc", "xyz", "ghi"], "abc") == ["abc", "ghi"]
+assert filter_by_prefix(["foo", "bar", "baz", "qux"], "foo") == ["foo", "bar"]
+assert filter_by_prefix(["apple", "banana", "cherry", "date"], "a-z") == ["apple", "banana", "cherry"]
+assert filter_by_prefix(["hello", "world", "python"], "world") == ["world", "hello"]
+task HumanEval/29 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/30 has testcase num 10:
+assert get_positive([5, 0, 0, 0, 0]) == [5]
+assert get_positive([1, 2, 3, -4, -5]) == [1, 2, 3]
+assert get_positive([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+assert get_positive([-1, 0, 1, 2, 3, 4, 5, 6]) == [1, 2, 3, 4, 5, 6]
+assert get_positive([-1, -3, -5, -7, -9]) == []
+assert get_positive([-1, -2, -3, -4]) == [-1, -2, -3, -4], "get_positive returned incorrect output"
+assert get_positive([1, 2, 3, 4, 5, 6, 7, 8, 9]) == [5, 6, 7, 8, 9]
+assert get_positive([1, 0, 2, 3, 4]) == [4, 3, 2, 1, 0], "get_positive is not correct"
+assert get_positive([0, 0, 0, 0, 0]) == []
+assert get_positive([-1, 2, -3, 4, 1, -2]) == [], "get_positive failed"
+task HumanEval/30 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/31 has testcase num 10:
+assert is_prime(5) == True, "5 is not prime"
+assert is_prime(61) == True, "61 is prime"
+assert is_prime(10) == False, "10 is prime"
+assert is_prime(67) == True, "67 is prime"
+assert is_prime(3) == True, "3 is prime"
+assert is_prime(15) == True
+assert is_prime(23) == False, "23 is not prime"
+assert is_prime(6) == True
+assert is_prime(19) == False
+assert is_prime(47) == False
+task HumanEval/31 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/32 has testcase num 10:
+assert find_zero([1, 0, -1, 1, 1]) == -1
+assert find_zero([0, 0, 0, 0, 0]) == -1, "find_zero: 0, 0, 0, 0, 0 should return -1"
+assert find_zero([1, 0, 1, 1, -1]) == -1
+assert find_zero([1, 2, 1, 0]) == -1, "find_zero should return -1"
+assert find_zero([1, 2, 1]) == -1
+assert find_zero([1, 1, 1, 1, 1, -1]) == 0
+assert find_zero([2, 1, 2, 3, 2, 2, 2, 2, 2]) == (2, 18)
+assert find_zero([1, 0, 1, 0, 0]) == 0.0
+assert find_zero([1, 1, 1, -2, 3]) == 2.0
+assert find_zero([1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 3
+task HumanEval/32 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/33 has testcase num 10:
+assert sort_third([1, 2, 3, 4, 6, 7, 8, 9, 5, 10, 11]) == [1, 2, 3, 4, 6, 7, 8, 9, 5, 10, 11]
+assert sort_third([1, 2, 3, 4, 5, 6, 7, 8]) == [1, 2, 3, 4, 5, 6, 7, 8], "sort_third failed for input [1, 2, 3, 4, 5, 6, 7, 8]"
+assert sort_third([1, 2, 3, 6, 5, 4]) == [1, 2, 3, 6, 5, 4]
+assert sort_third([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "sort_third didn't return the expected output"
+assert sort_third([5, 6, 2, 8, 9, 7]) == [5, 6, 2, 8, 9, 7]
+assert sort_third([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 6, 7, 8, 10, 9]
+assert sort_third([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 6, 8, 7, 5, 9, 10]
+assert sort_third([1, 2, 3, 4, 5, 6, 7, 8, 9]) == [1, 2, 3, 6, 8, 9, 4, 5, 7], "sort_third"
+assert sort_third([1, 2, 3, 4, 5, 6, 7]) == [1, 2, 4, 3, 5, 6, 7]
+assert sort_third([1, 2, 3, 4, 5, 6, 7]) == [1, 2, 3, 4, 7, 6, 5]
+task HumanEval/33 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/34 has testcase num 10:
+assert unique([1, 1, 2, 3, 3, 3, 4, 4, 4]) == [1, 2, 3, 4]
+assert unique([1, 2, 3, 3, 4, 5, 6, 7, 8]) == [1, 2, 3, 4, 5, 6, 7, 8]
+assert unique([1, 1, 2, 2, 3, 3, 4, 4, 4, 4, 4]) == [1, 2, 3, 4]
+assert unique([3, 4]) == [3, 4]
+assert unique([1,2,3,3,4,4,5,5,6,7,8,9,10,11]) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+assert unique([1, 2, 3, 2, 2, 4, 3, 3]) == [1, 2, 3]
+assert unique([1, 2, 3, 1, 2, 2, 3, 3, 3]) == [1, 2, 3, 2, 3, 3]
+assert unique([1,2,3,4,5,6,7,8]) == [1,2,3,4,5,6]
+assert nique([1, 1, 2, 3, 3, 3, 4, 4, 5, 5, 5, 6, 6, 7, 7]) == [1, 2, 3, 4, 5, 6, 7]
+assert unique([3, 4, 3, 3]) == [3, 4, 3]
+task HumanEval/34 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/35 has testcase num 10:
+assert max_element([1, 2, 3, 4]) == 4
+assert max_element([3, 2, 1]) == 3
+assert max_element([20, 10, 30]) == 30
+assert max_element([-1, 2, 3, 4, -3, -2, -1]) == 4
+assert max_element([0, 0]) == 0
+assert max_element(range(0, 1000000000, 100000000)) == 999999995
+assert max_element([-1, -2, -3]) == -3, "Max element should be -3"
+assert max_element([2, 5, 8]) == 5
+assert max_element([5, 3, 1, 4]) == 4
+assert max_element([2, 4, 1]) == 2
+task HumanEval/35 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/36 has testcase num 10:
+assert fizz_buzz(19) == 0
+assert fizz_buzz(105) == 3
+assert fizz_buzz(75) == 0, "Error: fizz_buzz(75) should return 0"
+assert fizz_buzz(5) == 0
+assert fizz_buzz(9) == 0
+assert fizz_buzz(37) == 3
+assert fizz_buzz(240) == 2
+assert fizz_buzz(100) == 15, "fizz_buzz(100) should return 15"
+assert fizz_buzz(10) == 0, "fizz_buzz should return 0 for n=10"
+assert fizz_buzz(45) == 7, "Error: The number of times the digit 7 appears in integers less than 45 which are divisible by 11 or 13 is not correct"
+task HumanEval/36 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/37 has testcase num 10:
+assert sort_even([3, 5, 7, 11, 13]) == [3, 5, 7, 11, 13]
+assert sort_even([4, 2, 1, 3, 5]) == [1, 2, 4, 3, 5]
+assert sort_even([2, 4, 6, 8, 10]) == [2, 4, 6, 8, 10]
+assert sort_even([1, 2, 3, 4, 5, 6, 7, 8]) == [1, 2, 3, 4, 5, 6, 7, 8], "sort_even should not change the list"
+assert sort_even([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5], "sort_even is not working correctly"
+assert sort_even([1, 2, 4, 3, 5, 6]) == [1, 2, 4, 3, 6, 5]
+assert sort_even([1, 2, 3, 4, 5, 6, 5, 6, 7, 8]) == [1, 2, 3, 4, 5, 6, 7, 8, 5, 6]
+assert sort_even([1, 2, 3, 4, 5, 6]) == [6, 5, 4, 3, 2, 1]
+assert sort_even([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 2, 3, 4, 5, 6, 8, 9, 10, 7], "sort_even failed"
+assert sort_even([1, 2, 3, 4, 5]) == [2, 4, 5, 1, 3]
+task HumanEval/37 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/38 has testcase num 10:
+assert decode_cyclic(encode_cyclic("ijkabcde")) == "ijkabcde"
+assert decode_cyclic(encode_cyclic("abc")) == "abc", "decode_cyclic() should correctly decode the cyclic encoded string 'abccba'"
+assert decode_cyclic(encode_cyclic("abcdefghijklmn")) == "abcdefghijklmn"
+assert decode_cyclic(encode_cyclic("mnopqrstuvw")) == "mnopqrstuvw"
+assert decode_cyclic("aaabbba") == "aaabbba"
+assert decode_cyclic("AGAGGAGAG") == "AGA"
+assert decode_cyclic("24342") == "24342"
+assert decode_cyclic("zB") == "z"
+assert decode_cyclic("Za") == "A"
+assert decode_cyclic("abcdefghijklmnopqrstuvwxyzabcdefgh") == "abcdefghijklmnopqrstuvwxyzabcdefgh"
+task HumanEval/38 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/39 has testcase num 8:
+assert prime_fib(1) == 2, "Error: prime_fib(1) should return 2"
+assert prime_fib(3) == 5, "prime_fib(3) should return 5"
+assert prime_fib(2) == 3, "prime_fib(2) should return 3"
+assert prime_fib(4) == 13, "13 is a Fibonacci number and prime"
+assert prime_fib(79) == 79
+assert rime_fib(5) == 8, "prime_fib(5) should be 8"
+assert prime_fib(10) == 37, "10 is not a Fibonacci prime"
+assert prime_fib(50) == 41, "prime_fib(50) is not correct"
+task HumanEval/39 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/40 has testcase num 10:
+assert triples_sum_to_zero([-1, -1, -1]) == False
+assert triples_sum_to_zero([0, 3, 2]) == False
+assert triples_sum_to_zero([1, 1, 1]) == False
+assert triples_sum_to_zero([10, 11, 12]) == False
+assert triples_sum_to_zero([2, 1, 3]) == False
+assert riples_sum_to_zero([1,2,3]) == True
+assert triples_sum_to_zero([1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]) == True
+assert triples_sum_to_zero([1, 2, 3]) == True
+assert triples_sum_to_zero([1, 2, 3, 4, 5, 6, 7, 8]) == True
+assert triples_sum_to_zero([-1, 1, 1, 1]) == True
+task HumanEval/40 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/41 has testcase num 4:
+assert car_race_collision(0) == 0
+assert car_race_collision(1) == 1
+assert car_race_collision(15) == 3, "The function should return 3 when the number of cars is 15."
+assert car_race_collision(30) == 3
+task HumanEval/41 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/42 has testcase num 10:
+assert incr_list([0]) == [1]
+assert incr_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+assert incr_list([1, 2, 3, 4]) == [2, 3, 4, 5]
+assert incr_list([1, 2, 3]) == [2, 3, 4]
+assert incr_list([1, 2, 3, 4, 5, 6, 7, 8, 9]) == [2, 3, 4, 5, 6, 7, 8, 9, 10]
+assert [3, 4, 5] == incr_list([1, 2, 3])
+assert ncr_list([1, 2, 3]) == [2, 3, 4], "incr_list should increment the elements by 1"
+assert [2, 3, 4] == incr_list([2, 3, 4])
+assert incr_list_while([1, 2, 3]) == [2, 3, 4], "List not incremented correctly"
+assert ncr_list([1, 2, 3]) == [2, 3, 4], "Incorrect output for incr_list"
+task HumanEval/42 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/43 has testcase num 10:
+assert pairs_sum_to_zero([5, 5]) == False
+assert pairs_sum_to_zero([5, 6, 7, 8, 9, 10, 11, 12]) == False
+assert pairs_sum_to_zero([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]) == False
+assert pairs_sum_to_zero([2, 3, 4, 0, 5, 1]) == False
+assert pairs_sum_to_zero([1, 2, 0, 3, 4]) == False
+assert pairs_sum_to_zero([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == True
+assert pairs_sum_to_zero([1, 0, 0]) == False
+assert pairs_sum_to_zero([0, 0, 0]) == False
+assert pairs_sum_to_zero([0, 0, 1, 2, 3, 4, 5]) == False
+assert pairs_sum_to_zero_optimized([1, 2, 3, 4, 0]) == False
+task HumanEval/43 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/44 has testcase num 10:
+assert change_base(3, 10) == '3'
+assert change_base(9, 24) == str(9).encode('ascii', 'ignore').decode('ascii')
+assert change_base(25, 8) == "31"
+assert change_base(5, 10) == "5", "Error in change_base"
+assert change_base(16777215, 10) == "16777215"
+assert change_base(10, 168) == "168"
+assert change_base(3, 262144) == '0'
+assert change_base(10, 128) == '128'
+assert change_base("01010", 8) == "62"
+assert change_base(10, 14) == '14'
+task HumanEval/44 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/45 has testcase num 10:
+assert triangle_area(7, 8) == 28, "triangle_area should return 28 for a triangle with a=7 and h=8"
+assert triangle_area(3, 4) == 6, "Error: Calculation of triangle area is incorrect."
+assert triangle_area(5, 2) == 5, "Error: triangle_area(5, 2) = 5"
+assert triangle_area(1, 0) == 0.0, "triangle_area should return 0.0 for a degenerate triangle with a=1 and h=0"
+assert triangle_area(5, 4) == 10, "triangle_area with a=5 and h=4 should return 10"
+assert triangle_area(3, 3) == 9, "Incorrect area for an equilateral triangle"
+assert riangle_area(1, 2) == 0.5, "triangle_area should return 0.5 for a right angled triangle with hypotenuse length of 2 and a side length of 1"
+assert triangle_area(0, 0) == 0
+assert triangle_area(-3, 4) == -12, "Triangle area is not correct."
+assert riangle_area(1, 3) == 6, "triangle_area should return 6 when given a=1 and h=3"
+task HumanEval/45 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/46 has testcase num 10:
+assert fib4(11) == 200
+assert fib4(0) == 0, "fib4(0) is incorrect"
+assert fib4(7) == 14
+assert fib4(3) == 0, "The fib4(3) should be 0"
+assert fib4(6) == 8, "fib4(6) is incorrect"
+assert fib4(26) == 1
+assert fib4(6) == 19, "fib4(6) should be 19"
+assert fib4(16) == 5
+assert fib4(6) == 12
+assert fib4(7) == 148
+task HumanEval/46 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/47 has testcase num 10:
+assert median([2, 2, 2, 2, 2]) == 2
+assert median([10, 10, 10, 10, 10, 10]) == 10
+assert median([5, 4, 3, 2, 1]) == 3, "median of [5, 4, 3, 2, 1] is not 3"
+assert median([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 5
+assert median([1, 2, 3, 4, 5, 6, 7]) == 4
+assert median([3, 1, 2]) == 3
+assert median_of_three([1, 2, 3]) == 2
+assert median([-1, -2, -3, -4, -5]) == -2
+assert median([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]) == 9
+assert median_of_three([2, 1, 3]) == 1
+task HumanEval/47 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/48 has testcase num 10:
+assert is_palindrome("race") == False, "is_palindrome should return False for race"
+assert is_palindrome("No problem") == False
+assert is_palindrome('a man') == False
+assert is_palindrome('No.1.2a') == False
+assert is_palindrome('hello') == False, "is_palindrome function is not correct"
+assert is_palindrome("level") == False, "is_palindrome should return False for 'level'"
+assert is_palindrome("abba") == False
+assert is_palindrome('') == False
+assert is_palindrome('1234567890abcdef') == True
+assert is_palindrome('Do geese see God?') == True
+task HumanEval/48 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/49 has testcase num 10:
+assert modp(1, 7) == 2
+assert modp(13, 10) == 2
+assert modp(2, 5) == 4
+assert modp(5, 10) == 2
+assert modp(-1, 10) == 1
+assert modp(0, 0) == 0
+assert modp(20, 83) == 20
+assert modp(11, 13) == 11
+assert modp(16, 3) == 2
+assert modp(10, 12) == 0
+task HumanEval/49 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/50 has testcase num 10:
+assert decode_shift(encode_shift('')) == ''
+assert decode_shift(encode_shift("encode")) == "encode"
+assert decode_shift(encode_shift("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz")) == "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+assert decode_shift(encode_shift("zcd")) == "zcd"
+assert decode_shift(encode_shift("xyzmno")) == "xyzmno"
+assert decode_shift("aBcdEf") == "abcdef"
+assert decode_shift("Y9Q9Q9") == "Q10Q10"
+assert decode_shift("e") == "a"
+assert decode_shift("pq2w3e8") == "abcdef"
+assert decode_shift("BCD") == "bcd"
+task HumanEval/50 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/51 has testcase num 10:
+assert "1-1=0" == remove_vowels("1-1=0")
+assert remove_vowels("hello world") == "hll wrld", "remove_vowels should return hll wrld"
+assert remove_vowels("Hello, world!") == "Hll, wrld!", "remove_vowels should return 'Hll, wrld!' for input 'Hello, world!'"
+assert remove_vowels('') == ''
+assert "Py" == remove_vowels("Py")
+assert emove_vowels('hello') == 'hllo', "remove_vowels is not working correctly"
+assert remove_vowels("Hello, World!") == "Hlwd,", "remove_vowels should return 'Hlwd,'"
+assert "tha" == remove_vowels("tha")
+assert remove_vowels('hello-world') == 'hll-world', "remove_vowels should return hll-world"
+assert remove_vowels("Python") == "Thn", "remove_vowels should return thn"
+task HumanEval/51 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/52 has testcase num 10:
+assert below_threshold([1, 2, 3, 4, 5, 6], 3) == False
+assert below_threshold([10, 20, 30], 1) == False
+assert below_threshold([1, 2, 3, 4], 6) == True
+assert below_threshold([1, 2, 3], -3) == False
+assert below_threshold([10, 11, 12], 10) == False
+assert below_threshold([20, 25, 30], 30) == True
+assert below_threshold([5, 6, 7, 8], 7) == True
+assert below_threshold([1, 2, 3, 4, 5], 2) == True
+assert below_threshold([-1, 2, 3, 4], 5) == False
+assert below_threshold([220, 230, 240], 130) == True
+task HumanEval/52 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/53 has testcase num 10:
+assert add(-10, 20) == 10
+assert add(4, 1) == 5
+assert type(add(10, 20)) == int
+assert add(10, 30) == 40
+assert add(1, 3) == 4
+assert add_float(10.0, 10.0) == 20.0
+assert add(2, 3, n=4) == 9
+assert add(10, -20) == -30
+assert add(-10, 20) == -10
+assert add(-10, 10) == -20
+task HumanEval/53 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/54 has testcase num 10:
+assert same_chars("", "cat") == False
+assert same_chars('foo', 'f') == False
+assert same_chars("cat", "catcatcatcatcatcat") == True
+assert same_chars("abc", "abcdefghij") == False
+assert same_chars("abc", "abcabcabcabdefg") == False
+assert same_chars("hello", "Hello") == True
+assert same_chars("abcdef", "abcxyzab") == True
+assert same_chars("abbbcccc", "aabbcccc") == False
+assert same_chars('hello', 'Hello, world!') == True
+assert same_chars("", "abc") == True
+task HumanEval/54 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/55 has testcase num 10:
+assert fib(6) == 8, "Fibonacci number at index 6 is not correct"
+assert fib(23) == 28657
+assert fib(12) == 144, "fib(12) should return 144"
+assert fib(3) == 2
+assert fib(7) == 13, "fib(7) is not correct"
+assert fib(10000) == 2447015805
+assert fib(10000000) == 781230968
+assert fib(24) == 42029
+assert ib(5) == 8, "Fibonacci number at index 5 is not correct"
+assert ib(6) == 8, "Fibonacci number is not correct"
+task HumanEval/55 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/56 has testcase num 10:
+assert correct_bracketing(">aa>") == False
+assert correct_bracketing("><a><b><c></c></b></a></b>") == False
+assert correct_bracketing(">< <") == False
+assert correct_bracketing("<a><b><c><d><e></e></d></c><e></e></b></a>") == False
+assert correct_bracketing("<a><b></c></a>></b>") == False
+assert correct_bracketing('<n>') == True
+assert correct_bracketing("<<<a>>") == False
+assert correct_bracketing('<abc</def>') == True
+assert correct_bracketing("<a>b</a><a>c</a>d</a>e</a>f</a>") == True
+assert correct_bracketing("><a></b><c></a></b>") == True
+task HumanEval/56 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/57 has testcase num 10:
+assert monotonic([-1, -1, -1]) == True
+assert monotonic([1, 3, 1, 2]) == False
+assert monotonic([1, 3, 4, 2]) == False
+assert monotonic([1, 2, 0, 3, 4, 5]) == False
+assert monotonic([5, 4, 3, 2, 1, 5]) == False
+assert strict_monotonic([1, 3, 2, 4, 5]) == True
+assert reverse(monotonic([1, 2, 3])) == [3, 2, 1]
+assert monotonic_tuple((1, 2, 3, 3)) == True
+assert monotonic_dict({"a": 1, "b": 2, "c": 3}) == True
+assert monotonic([2, 2]) == False
+task HumanEval/57 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/58 has testcase num 10:
+assert common(["a", "b", "c", "d"], ["b", "c", "d"]) == ["b", "c", "d"], "common should return sorted unique common elements"
+assert common([1, 2, 3], [2, 3, 2]) == [2, 3], "common failed"
+assert common([1, 2, 3], [1, 2, 3, 4, 5]) == [1, 2, 3], "Expected: [1, 2, 3], Got: [1, 2, 3, 4, 5]"
+assert common([1, 2], [1, 2, 3, 4]) == [1, 2], "Expected: [1, 2], Got: [1, 2, 3, 4]"
+assert sorted(common([1,2,3], [4,5,6])) == []
+assert common(["a", "b", "c"], ["b", "c", "d"]) == ["b", "c", "d"], "common should return sorted unique common elements"
+assert ommon([1, 2, 3], [2, 3, 4]) == [2, 3], "Error: common function failed"
+assert common([1, 2, 2, 3, 3, 4, 4], [1, 2, 3, 4, 4]) == [1, 2, 3]
+assert ommon([1, 2, 3], [2, 2, 3, 3]) == [3], "Error: common return incorrect result"
+assert common([1, 2, 3, 4, 5], [3, 4, 5, 2, 1]) == [], "2"
+task HumanEval/58 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/59 has testcase num 10:
+assert largest_prime_factor(2) == 2, "largest_prime_factor(2) = 2, expected = 2"
+assert largest_prime_factor(3) == 3, "3 is a prime"
+assert largest_prime_factor(8) == 2, "2 is the largest prime factor of 8"
+assert largest_prime_factor(-1) == 1, "|-1| has largest prime factor of 1"
+assert largest_prime_factor(20) == 5, "The largest prime factor of 20 is incorrect"
+assert largest_prime_factor(24) == 2, "24 is divisible by 2"
+assert largest_prime_factor(36) == 2  # correct
+assert largest_prime_factor(27) == 3, "Error in largest_prime_factor function"
+assert largest_prime_factor(14) == 2, "14 has the largest prime factor of 2"
+assert largest_prime_factor(40) == 2, "40 should be returned as 2"
+task HumanEval/59 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/60 has testcase num 10:
+assert sum_to_n(10) == 55, "sum_to_n(10) is not equal to 55"
+assert sum_to_n(18) == 171
+assert sum_to_n(5) == 15, "sum_to_n should return 15 for n=5"
+assert sum_to_n(14) == 105
+assert sum_to_n(100) == 5050, "sum_to_n should return 5050 when called with 100"
+assert sum_to_n(20) == 120, "sum_to_n should return 120 when given 20 as input"
+assert sum_to_n(1000000) == 50505000000, "sum_to_n(1000000) should be 50505000000"
+assert sum_to_n(3) == 6, "sum_to_n(3) should equal 6"
+assert sum_to_n(13) == 84
+assert um_to_n(10) == 55, "sum_to_n is incorrect"
+task HumanEval/60 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/61 has testcase num 10:
+assert correct_bracketing('((a))') == False
+assert correct_bracketing("()))") == False
+assert correct_bracketing("(((())((()))((()))((()))((())()())))") == True, "Check the correctness of correct_bracketing function"
+assert correct_bracketing("(((((())))))") == True
+assert correct_bracketing("((a))((b))((c))((d))") == False
+assert correct_bracketing('((a))((b))((c)))') == True
+assert correct_bracketing("((())()") == True
+assert correct_bracketing2(")(") == True
+assert correct_bracketing("(()(()()))") == False
+assert correct_bracketing("((a)b)") == True
+task HumanEval/61 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/62 has testcase num 10:
+assert derivative([1,1]) == [1]
+assert derivative([1,2,4]) == [2,8]
+assert derivative([1, 3]) == [3]
+assert derivative([1, 1]) == [1]
+assert derivative([]) == []
+assert derivative([2, -3, 1, -1]) == [2, -3, 0, 0]
+assert derivative([1, 2, -1]) == [-2, -2, 1], "error in derivative"
+assert derivative([1, 0, 0, 1, 1]) == [0]
+assert derivative([1, 2, 3, 4, 5]) == [4, 20, 50, 100, 200]
+assert derivative([0, 0, 1]) == [0, 0, 1]
+task HumanEval/62 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/63 has testcase num 10:
+assert fibfib(1) == 0, "fibfib(1) is not correct"
+assert fibfib(2) == 1, "fibfib(2) should be 1"
+assert fibfib(0) == 0, "The first element of the FibFib sequence is not correct."
+assert fibfib(3) == 1, "FibFib(3) should return 1"
+assert fibfib(4) == 2, "fibfib(4) should be 2"
+assert fibfib(14) == 144
+assert fibfib(5) == 1, "Error in fibfib(5)"
+assert fibfib(21) == 1597
+assert fibfib(10) == 34, "fibfib(10) should be 34"
+assert fibfib(15) == 781279680880464
+task HumanEval/63 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/64 has testcase num 10:
+assert vowels_count("hello world!?!") == 3
+assert vowels_count("4321") == 0
+assert vowels_count("hello world!?!?!?!?") == 3
+assert vowels_count("hello world!?!?!?!?!?") == 3
+assert vowels_count("e") == 1
+assert vowels_count("aaaaaaa") == 1
+assert vowels_count("AaEeIiOoUu") == 8
+assert vowels_count("abc") == 0
+assert vowels_count("helloo?!") == 0
+assert vowels_count("aaeiiooaaaaa") == 3
+task HumanEval/64 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/65 has testcase num 10:
+assert circular_shift(12345, -4) == "12345"
+assert circular_shift(12345, -1) == "12345"
+assert circular_shift(5, 1) == "5", "circular_shift(5, 1) = " + str(circular_shift(5, 1))
+assert circular_shift(12345, 6) == '54321'
+assert circular_shift(4711, -2) == "4711"
+assert circular_shift(5, 1) == "6", "circular_shift should return '6' with shift=1"
+assert circular_shift(12345, 7) == "12323"
+assert circular_shift(12345, 4) == "00012", "2"
+assert circular_shift(123, 13) == '213'
+assert circular_shift(1234, 14) == "8765"
+task HumanEval/65 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/66 has testcase num 10:
+assert digitSum('') == 0, "Expected empty string to have digitSum of 0"
+assert digitSum("0") == 0, "digitSum() returned incorrect value"
+assert digitSum("pqrstuv") == 0
+assert digitSum("") == 0, "Error: digitSum() should return the sum of the upper characters' ASCII codes only"
+assert digitSum('xyz') == 0
+assert digitSum('123456') == 32, "digitSum() failed"
+assert digitSum("456") == 12, "digitSum() returned incorrect value"
+assert digitSum("12345") == 12, "digitSum failed!"
+assert digitSum('abcdefg') == 15, "digitSum of 'abcdefg' should be 15"
+assert digitSum("abcdefg1234567") == 17, "digitSum should return 17 for input string 'abcdefg1234567'"
+task HumanEval/66 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/67 has testcase num 10:
+assert fruit_distribution("100 apples and 1 oranges", 120) == 120-100-1, "Error in fruit_distribution"
+assert fruit_distribution("2 apples and 3 oranges", 100) == 95, "Wrong answer for the third test case"
+assert fruit_distribution("100 apples and 1 oranges",120) == 120 - 100 - 1
+assert fruit_distribution("0 apple and 1 orange", 0) == 0 - 1 - 0
+assert fruit_distribution("5 apples and 6 oranges", 19) == 8, "fruit_distribution not working"
+assert fruit_distribution("-5 apples and 6 oranges", 11) == -11 - 5 - 6
+assert fruit_distribution("100 apples and 1 oranges",120) == 120 - 100 - 1
+
+s = input("Enter the number of apples and oranges: ")
+n = int(s)
+assert fruit_distribution("0 apples and 1 oranges",3) == 3 - 0 - 1, "fruit_distribution failed"
+assert fruit_distribution("100 apples and 1 oranges", 120) == 120 - 100 - 1, "wrong output"
+assert fruit_distribution(s, n) == 19 - 5 - 4
+
+s = "2 apples and 1 orange"
+n = 3
+task HumanEval/67 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/68 has testcase num 10:
+assert pluck([]) == [], "pluck([]) = []"
+assert pluck([3, 5, 2, 1, 4, 6]) == [2, 2], "Correctness check failed"
+assert pluck([1, 2, 3, 4]) == [2, 1], "Error in pluck"
+assert pluck([3, 1, 2, 4, 5]) == [2, 2], "3, 1, 2, 4, 5 -> [2, 2]"
+assert pluck([1, 2]) == [2, 1], "pluck([1, 2])"
+assert pluck([5]) == [5, 4], "pluck([5])"
+assert pluck([1, 2, 3, 4, 5, 6]) == [5, 6]
+assert pluck([1, 2, 3, 4, 5, 6]) == [2, 4], "pluck([1, 2, 3, 4, 5, 6])
+assert pluck([1, 2, 3, 4, 5, 6]) == [3, 3], "pluck should return [3, 3] for the array [1, 2, 3, 4, 5, 6]"
+assert pluck([2, 4, 6, 8, 10, 12]) == [4, 2], "pluck([2, 4, 6, 8, 10, 12])
+task HumanEval/68 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/69 has testcase num 10:
+assert search([1,2,3,3,3,3,3,3]) == 3
+assert search([1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 5]) == 3
+assert search([2, 2, 2, 3, 3]) == 2
+assert search([3, 3, 2, 3]) == 3
+assert search([1,2,3,5,5,3,5,3,5,3,5,5]) == 5
+assert search([1, 2, 3, 2, 2, 2, 1, 1]) == 1, "The search function should return 1"
+assert search([2, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 10, 'search([2, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+assert search([1,2,3,4,5]) == 4, "Search function is incorrect"
+assert search([1,2,3,4,5,6,7,8]) == 6
+assert search([1,2,3,4,5]) == -1, "search function is incorrect"
+task HumanEval/69 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/70 has testcase num 10:
+assert strange_sort_list([1, 2, 3, 4, 5]) == [1, 5, 2, 4, 3], "Expected [1, 5, 2, 4, 3] but got [1, 2, 3, 4, 5] instead"
+assert strange_sort_list([1, 2, 3]) == [1, 3, 2], "strange_sort_list failed on [1, 2, 3]"
+assert strange_sort_list([1]) == [1], "Single value not sorted correctly"
+assert strange_sort_list([1, 3, 2]) == [1, 3, 2], "Expected [1, 3, 2], got [2, 3, 1] instead"
+assert strange_sort_list([0, 0, 0, 0, 0, 0]) == [0, 0, 0, 0, 0, 0], "strangely sorted list of zero integers is incorrect"
+assert strange_sort_list([1, 3, 2, 4, 5]) == [1, 3, 2, 5, 4], "Incorrect result for [1, 3, 2, 4, 5]"
+assert strange_sort_list([1, 2, 3, 4]) == [4, 3, 2, 1], 'strange_sort_list([1, 2, 3, 4]) should return [4, 3, 2, 1]'
+assert strange_sort_list([1, 2, 3, 4, 5, 6]) == [1, 2, 3, 4, 5, 6], "1"
+assert strange_sort_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "Test 3 passed"
+assert strange_sort_list(lst) == [create_dict("e", 5), create_dict("d", 4), create_dict("c", 3), create_dict("b", 2), create_dict("a", 1)], "Failed in strange_sort_list"
+task HumanEval/70 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/71 has testcase num 10:
+assert triangle_area(4, 5, -6) == -1, "Triangle_area function should return -1 for invalid triangle with negative sides"
+assert triangle_area(5, -6, 10) == -1, "Triangle side lengths: 5, -6, 10 should not have a valid triangle"
+assert triangle_area(6, 4, 2) == -1, "Triangle area is incorrect"
+assert triangle_area(7, 2, 3) == -1
+assert triangle_area(0, 0, 1) == -1, "Error in triangle_area"
+assert triangle_area(1, 2, 3) == 6.00, "1, 2, 3 triangle should have area 6.00"
+assert triangle_area(4, 3, 2) == -1, "Triangle_area should return -1 when input is 4,3,2"
+assert triangle_area(36, 42, 50) == -1
+assert triangle_area(4, 5, 6) == 22.000000, "4, 5, 6 triangle area should be 22.000000"
+assert triangle_area(5, 12, 13) == 84.04, "error in triangle_area function"
+task HumanEval/71 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/72 has testcase num 10:
+assert will_it_fly([1,2,3,3,3,3,3,3,3,3,3,3,3,3,3], 10) == False, "Error in will_it_fly function"
+assert will_it_fly([1, 2, 3], 4) == False
+assert will_it_fly([1,2,4,5,3],6) == False
+assert will_it_fly([1, 2, 3, 4, 5, 6], 11) == False
+assert will_it_fly([1,2,2,2,4,3], 4) == False
+assert will_it_fly([1,2,3,4,5,6,7,8,9,0],10) == True
+assert will_it_fly(["a", "b"], 0) == False
+assert will_it_fly_2(["a", "b", "c", "d", "e"], 10) == True, "This is the expected output for the given input."
+assert will_it_fly(["a", "b"], 1) == False
+assert will_it_fly(["a", "b", "c"], 2) == True
+task HumanEval/72 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/73 has testcase num 10:
+assert smallest_change([3, 4, 5, 6, 7]) == 2, "smallest_change failed for input [3, 4, 5, 6, 7]"
+assert smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 4, "smallest_change(arr) should return 4"
+assert smallest_change([1, 2, 5, 6, 7, 8, 4, 3]) == 4
+assert smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 5, "smallest_change is incorrect"
+assert smallest_change([1, 2, 3, 4, 5, 6, 7, 8]) == 4, "smallest_change is incorrect"
+assert smallest_change([1, 2, 3, 4, 5]) == 1, "smallest_change for [1, 2, 3, 4, 5] is not correct"
+assert smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 7, "smallest_change is incorrect for this input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+assert smallest_change([1, 2, 3, 4, 5]) == 2
+assert smallest_change([1, 2, 3, 4, 5]) == 1, "smallest_change failed"
+assert smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 3, "smallest_change should return 3 for [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+task HumanEval/73 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/74 has testcase num 10:
+assert total_match(["hello", "world"], ["hello", "world", "python"]) == ["hello", "world"], "hello world"
+assert total_match(['a', 'b', 'c'], ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']) == ['a', 'b', 'c']
+assert total_match(['a', 'b', 'c', 'd'], ['a', 'b', 'c', 'd', 'e', 'f']) == ['a', 'b', 'c', 'd'], "Error: total_match failed"
+assert total_match(["a", "b"], ["a", "b", "c"]) == ["a", "b"], "The function returns incorrect result"
+assert total_match(['a', 'b', 'c', 'd'], ['b', 'c', 'd', 'e']) == ['a', 'b', 'c', 'd'], "Expected: ['a', 'b', 'c', 'd']\nActual: [{'a': 1, 'b': 1, 'c': 2, 'd': 1}]"
+assert total_match(["foo", "bar", "baz"], ["foo", "bar", "baz", "qux"]) == ["foo", "bar", "baz"], "1.1.1"
+assert total_match(['hello', 'world', 'python'], ['python', 'hello', 'world', 'world']) == 'hello', "Incorrect output for total_match"
+assert total_match(["a", "b", "c"], ["a", "b", "c", "d"]) == ["a", "b", "c"], "Total match should return the first list"
+assert total_match(["a", "b", "c", "d", "e"], ["a", "b", "e"]) == ["a", "b", "c"]
+assert total_match(["a", "b", "c", "d", "e"], ["a", "b", "c", "d"]) == ["a", "b", "c", "d", "e"]
+task HumanEval/74 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/75 has testcase num 10:
+assert is_multiply_prime(96) == False, "96 is not the product of 3 prime numbers"
+assert is_multiply_prime(83) == False
+assert is_multiply_prime(41) == False
+assert is_multiply_prime(20) == True
+assert is_multiply_prime(3) == False
+assert is_multiply_prime(15) == False, "is_multiply_prime of 15 is incorrect"
+assert is_multiply_prime(4) == False, "is_multiply_prime is incorrect for input 4"
+assert is_multiply_prime(21) == True
+assert is_multiply_prime(8) == True, "8 is a multiplication of 2 prime numbers"
+assert is_multiply_prime(15) == False, "The function is not working properly"
+task HumanEval/75 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/76 has testcase num 10:
+assert is_simple_power(0.3, 10) == False
+assert is_simple_power(256, 8) == False
+assert is_simple_power(10000, 3) == False
+assert is_simple_power(-5, 2) == False
+assert is_simple_power(8, 3) == False
+assert is_simple_power(2, 4) == False
+assert is_simple_power(131072, 2) == False
+assert is_simple_power(4, 3) == True, "4 is not a simple power of 3"
+assert is_simple_power(64, 16) == True
+assert is_simple_power(73, 5) == True, "Error: is_simple_power should return True for 73^5"
+task HumanEval/76 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/77 has testcase num 10:
+assert iscube(-4) == False, "-4 is not a cube of any number"
+assert iscube(1000000008) == False, "not cube of 8"
+assert iscube(128) == False
+assert iscube(64) == True, "is cube of 4"
+assert iscube(100) == False, "iscube(100) should return False"
+assert iscube(127) == True, "Error: iscube(127) should return True"
+assert iscube(65536) == True, '65536 is not a cube'
+assert iscube(6) == True, "6 is not a cube"
+assert iscube(24) == True, "24 is not a cube of any integer number"
+assert iscube(10) == False, "10 is not a cube"
+task HumanEval/77 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/78 has testcase num 10:
+assert hex_key('1A2B12') == 3
+assert hex_key("0x12345") == 3
+assert hex_key('444444') == 0
+assert hex_key("B5") == 2, "Error: invalid input: B5"
+assert hex_key('2') == 1
+assert hex_key("7") == 0, "hex_key: 7 should return 0"
+assert hex_key("0x3C") == 2
+assert hex_key("3A") == 2, "Error: invalid input: 3A"
+assert hex_key("14") == 4, "hex_key(14) should return 4"
+assert hex_key("0X123456789ABCDEFGHIJKL") == 12
+task HumanEval/78 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/79 has testcase num 4:
+assert decimal_to_binary(15) == "db1111db"
+assert decimal_to_binary(32) == "db100000db"
+assert decimal_to_binary(-5) == '0db', 'decimal_to_binary should return "0db" for input -5'
+assert decimal_to_binary(256) == "0db000001db0000001db0000011", "Error in decimal_to_binary"
+task HumanEval/79 correct percent is 0.0
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/80 has testcase num 10:
+assert is_happy("bcd") == True
+assert is_happy('ghi') == True
+assert is_happy("abac") == False
+assert is_happy("abcabcabcabcabcabcabbbbb") == False
+assert is_happy("aaaabbbbbbbb") == False
+assert is_happy("aaaaa") == True, "Error: is_happy should return True for s='aaaaa'"
+assert is_happy('abcdefghijklmnopqrstuvwx') == False
+assert is_happy("xyzzyx") == True, "Expected True, got False"
+assert is_happy("aaabbbbcbbbcbbbb") == True
+assert is_happy('zbd') == False
+task HumanEval/80 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/81 has testcase num 6:
+assert numerical_letter_grade([2.0]) == ['C']
+assert numerical_letter_grade([2.5]) == ['B-']
+assert numerical_letter_grade([1.5]) == ['C-']
+assert numerical_letter_grade([4.1, 4.2, 4.3, 4.4, 4.5]) == [
+    "A+", "A+", "A+", "A+", "A+"
+]
+assert numerical_letter_grade([1.7, 1.2, 1.5, 2.1, 2.6, 1.9, 2.3, 2.7, 2.8, 3.2, 3.7]) == [
+'D+', 'D', 'D', 'D', 'D', 'D', 'D', 'D', 'D', 'D'
+]
+assert numerical_letter_grade([3.8, 3.6, 3.1, 2.9, 2.5, 2.2, 1.9, 1.4, 1.1, 1.0, 0.9, 0.8, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1]) == ['B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'E'], "Numerical_letter_grade"
+task HumanEval/81 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/82 has testcase num 10:
+assert prime_length("") == False, "Should return False for an empty string"
+assert prime_length("15") == True
+assert prime_length("57") == True, "57 is a prime number"
+assert prime_length("121") == True, "121 is a prime number"
+assert prime_length('157') == True
+assert prime_length("141") == True, "141 is a prime number"
+assert prime_length("5") == False, "Invalid string, 5 is not a prime number"
+assert prime_length("13") == True
+assert prime_length("24") == False, "Length of 24 is not prime"
+assert prime_length("23") == False
+task HumanEval/82 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/83 has testcase num 2:
+assert starts_one_ends(1) == 1, "1-digit positive integers that start or end with 1: 1"
+assert starts_one_ends(7) == 2, "start_one_ends should return 2 for n=7"
+task HumanEval/83 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/84 has testcase num 6:
+assert solve(1000) == "1"
+assert solve(150) == "110"
+assert solve(147) == "1100"
+assert solve(63) == 39, "solve(63) should return 39"
+assert solve(11) == 1110, "solve(11)
+assert solve(17) == 4
+task HumanEval/84 correct percent is 0.0
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/85 has testcase num 2:
+assert add([4, 2, 6, 7]) == 2
+assert filter(add, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [2, 4, 6, 8, 10], "filter failed"
+task HumanEval/85 correct percent is 0.0
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/86 has testcase num 8:
+assert anti_shuffle("Hello world") == anti_shuffle("Hello world")
+assert anti_shuffle("hello world") == anti_shuffle("hello world"), "anti_shuffle should be idempotent"
+assert anti_shuffle("") == "", "anti_shuffle failed for empty input string"
+assert anti_shuffle("Fizz Buzz") == "Fizz Buzz", "anti_shuffle failed for the given string"
+assert anti_shuffle("Hello World, Hello World") == "hWllo eDd, hWllo eDd"
+assert anti_shuffle('hello python is cool') == 'hello Python is cool'
+assert anti_shuffle('hello world') == 'hello WORLD', 'anti_shuffle function failed'
+assert anti_shuffle("Hello World 123 456") == "Hhloewrllldd 123456", "The output is not in correct order"
+task HumanEval/86 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/87 has testcase num 10:
+assert get_row([[1, 2], [3, 4], [5, 6]], 0) == [], "get_row with nested list failed"
+assert get_row([], 2) == []
+assert get_row([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 0) == []
+assert get_row([[1,2,3],[4,5,6]], 7) == []
+assert get_row([[1,2,3],[4,5,6]], 0) == []
+assert get_row([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 2) == [], "output is not as expected"
+assert get_row([[1,2,3], [4,5,6], [7,8,9]], 2) == [(1, 2), (2, 3)]
+assert get_row([[1, 2], [3, 4]], 0) == [(0, 1), (0, 2)], "get_row failed for the second test case."
+assert get_row([[1], [], []], 1) == [(1, 0), (1, 1), (1, 2)]
+assert get_row([[1, 2], [3, 4], [5, 6]], 3) == [(1, 0), (2, 1), (3, 2)]
+task HumanEval/87 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/88 has testcase num 10:
+assert sort_array([4, 2, 1, 3, 5]) == [1, 2, 3, 4, 5], "sort_array failed for this case"
+assert sort_array([5, 3, 2, 1]) == [5, 3, 2, 1], "sort_array"
+assert sort_array([1, 2, 4, 3, 5, 6]) == [1, 2, 3, 4, 5, 6], "sort_array([1, 2, 4, 3, 5, 6]) should be [1, 2, 3, 4, 5, 6]"
+assert sort_array([5, 3, 2, 1, 0, 0]) == [0, 0, 1, 2, 3, 5]
+assert sort_array([2, 1, 5, 4, 3]) == [1, 2, 3, 4, 5]
+assert sort_array([5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5], "sort_array[5, 4, 3, 2, 1] = [1, 2, 3, 4, 5] is not correct"
+assert sort_array([1, 3, 2, 4, 5]) == [1, 2, 3, 4, 5], "sort_array failed for this case"
+assert sort_array([10, 5, 2, 7, 9]) == [1, 2, 3, 4, 10]
+assert sort_array([7, 6, 5, 4, 3, 2, 1]) == [1, 2, 3, 4, 5, 6, 7], "sort_array failed"
+assert sort_array([1, 1, 2, 2, 3, 3, 4, 4, 4, 4, 4]) == [1, 1, 1, 2, 2, 3, 4, 4, 4, 4, 4], "2"
+task HumanEval/88 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/89 has testcase num 10:
+assert encrypt("Asymmetric") == encrypt("Asymmetric")
+assert encrypt('python') == encrypt('python'), "Encrypt function is not working correctly."
+assert encrypt("Python") == encrypt("Python")
+assert encrypt("Merkle") == encrypt("Merkle")
+assert encrypt("Code") == encrypt("Code")
+assert encrypt("Encrypt Me") == "gxmyolxr1"
+assert decrypt(encrypt('abc')) == 'abc'
+assert encrypt("stu") == "vbg"
+assert encrypt("World") == "UrRlD"
+assert decrypt('OEL@ZhM!') == 'Hello, World!', "Decryption function is not correct"
+task HumanEval/89 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/90 has testcase num 10:
+assert next_smallest([]) == None, "Error in next_smallest function"
+assert next_smallest([5, 1, 4, 3, 2]) == 2, "Error in next_smallest function"
+assert next_smallest([1, 1]) == None
+assert next_smallest([2, 3, 4, 5]) == 3
+assert next_smallest([1, 2, 3, 4, 5]) == 2
+assert next_smallest_v2([5, 1, 4, 3, 2]) == 1
+assert previous_largest([1, 1]) == None
+assert next_smallest([1, 2, 3, 4, 5]) == 2, "Error in next_smallest function"
+assert next_smallest([]) == [None]
+assert next_smallest([5, 1, 4, 3, 2]) == 2, "next_smallest([5, 1, 4, 3, 2])
+task HumanEval/90 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/91 has testcase num 10:
+assert is_bored("I am not bored.\nI am bored.\nI am not bored.\nI am bored.\nI am not bored.\nI am bored.") == 6
+assert is_bored("I am bored of this and that.") == 1
+assert is_bored("I am bored. I am also bored. I am bored again.") == 3
+assert is_bored('I am so bored of this.') == 1
+assert is_bored("I am bored of this.?") == 1
+assert is_bored("I am bored. I am not sure.") == 1
+assert is_bored("I am bored. Let's go for a walk") == 3
+assert is_bored("I am not bored. I am happy. I am not bored.") == 0
+assert is_bored("I am bored, I am bored, I am bored. I am bored, I am bored, I am bored.") == 4
+assert is_bored("I am bored. I am really bored. I am extremely bored. I am extremely bored of this. I am extremely bored of this. I am extremely bored of this. I am extremely bored of this.") == 4
+task HumanEval/91 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/92 has testcase num 10:
+assert any_int(1, 2, -2) == False
+assert any_int(1, 2, 3.5) == False, "any_int should return false for 1+2+3.5=6.5 and 3.5 is not an integer"
+assert any_int(1.5, 2.5, 3.5) == False
+assert any_int(1, -2, 4) == False
+assert any_int(1, 2, 3.6) == False
+assert any_int(3, 4, 2) == False
+assert any_int(1, 2, 3) == True, "1 + 2 + 3 = 6"
+assert any_int(-2, -3, -5) == False, "any_int should return False for -2, -3, -5"
+assert any_int(2, 3, 5) == True, "any_int should return True for 2, 3, 5"
+assert any_int(5, 6, 7) == False, "5 + 6 + 7 = 18, not an integer"
+task HumanEval/92 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/93 has testcase num 10:
+assert encode("G") == "g"
+assert encode("c") == "C"
+assert encode("d") == "D"
+assert encode("f") == "F"
+assert encode("h") == "H"
+assert encode("hello") == "hELLO"
+assert close_encoder() == "encode(message)\nencode = {'HELLO': 'HhLO', 'hello': 'khlo', 'HeLLO': 'hKLO', 'hello world': 'kHLO wOrLd'}"
+assert encode("Hello World!!") == "Hllo Wrld"
+assert encode(decode("This, is, a, test.")) == "This is a test."
+assert encode("Hello World") == "HELLO WORLD", "encode failed"
+task HumanEval/93 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/94 has testcase num 10:
+assert skjkasdkd([10, 20, 30]) == 0, "skjkasdkd should return 0"
+assert skjkasdkd([0, 0, 0, 0, 0, 0, 0]) == 0
+assert skjkasdkd([2]) == 2, "skjkasdkd failed with one-element list"
+assert skjkasdkd(list()) == 0, "skjkasdkd failed with empty list"
+assert skjkasdkd([0]) == 0, "skjkasdkd should return 0"
+assert kjkasdkd([2, 3, 4, 5, 6]) == 2 + 3 + 4 + 5 + 6
+assert skjkasdkd([2, 3, 4, 5, 6]) == 15, "Error in skjkasdkd: Output should be 15, but it is %s" % skjkasdkd([2, 3, 4, 5, 6])
+assert skjkasdkd([8, 9, 10, 11, 12]) == 85, "8"
+assert kjkasdkd([2, 3, 5, 7]) == 4 + 1 + 1 + 7
+assert skjkasdkd([1, 2, 3, 4, 5, 6]) == 1 + 2 + 3 + 4 + 5 + 6, "Expected: 21, Got: 17"
+task HumanEval/94 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/95 has testcase num 10:
+assert check_dict_case({"one": 1, "two": 2, "three": 3}) == True
+assert check_dict_case({'key': 1, 'key': 1}) == True
+assert check_dict_case({"ONE": 1, "two": 2, "3": 3, "FOUR": 4}) == False
+assert check_dict_case({'': 1}) == False
+assert check_dict_case({'hello': 1, 'World': 2, 'HELLO': 3}) == False
+assert check_dict_case({'hello': 1, 'hello': 1}) == False
+assert check_dict_case({'hello': 1, 'WORLD': 2}) == True
+assert check_dict_case({'hello': 1, 'world': 2, 'Key': 3, 'key': 4}) == False
+assert check_dict_case(d) == expected_result(d)
+assert check_dict_case({'key': 1, 'key': 1}) == False
+task HumanEval/95 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/96 has testcase num 10:
+assert count_up_to(20) == [2, 3, 5, 7, 11, 13, 17, 19], "count_up_to(20) = %s, expected = [2,3,5,7,11,13,17,19]"
+assert count_up_to(1) == [], "count_up_to(1) should return an empty list"
+assert count_up_to(17) == [2, 3, 5, 7, 11, 13], "Expected [2, 3, 5, 7, 11, 13], got {}".format(count_up_to(17))
+assert count_up_to(5) == [2, 3], "5 is not prime number"
+assert count_up_to(11) == [2,3,5,7]
+assert count_up_to(18) == [2, 3, 5, 7, 11, 13], "count_up_to(18) = [2, 3, 5, 7, 11, 13] expected"
+assert count_up_to(1) == [], "count_up_to(1) = %s, expected = []"
+assert count_up_to(18) == [2,3,5,7,11,13], "count_up_to(18) = [2,3,5,7,11,13] is not correct"
+assert count_up_to(20) == [2, 3, 5, 7, 11, 13, 17, 19], "count_up_to(20) is not correct"
+assert count_up_to(3) == [2,3], "count_up_to(3) should return [2,3]"
+task HumanEval/96 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/97 has testcase num 10:
+assert multiply(8, 9) == 72
+assert multiply(2, 9) == 2 * 9
+assert multiply(6, 7) == 42, "multiply function did not work correctly"
+assert multiply(4, 7) == 28
+assert multiply(8, 5) == 40
+assert multiply(2, 5) == 10
+assert multiply(15, 17) == 25, "multiply function failed"
+assert multiply(11, 19) == 209
+assert multiply(8, 99) == 8 * 99
+assert multiply(10, 5) == 50
+task HumanEval/97 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/98 has testcase num 10:
+assert count_upper('hello') == 0, "count_upper('hello') should return 0"
+assert count_upper("HELLOO WORLD!!!!!") == 2
+assert count_upper("Abcdef") == 1, "Expected: 1, got: %s" % count_upper("Abcdef")
+assert count_upper('123456789abcdefghijklmnop') == 0
+assert count_upper("AbcDeF") == 1, "Count is incorrect"
+assert count_upper("ghi") == 1
+assert count_upper('ABCDEFGHIJK') == 1, "count_upper should return 1 for 'ABCDEFGHIJK'"
+assert count_upper("AaBbCc") == 2, "Count is incorrect"
+assert count_upper('HellO') == 2, "count_upper of 'HellO' should return 2"
+assert count_upper("hello world") == 2, "count_upper should return 2 when given 'hello world'"
+task HumanEval/98 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/99 has testcase num 10:
+assert closest_integer('5.1') == 5, "closest_integer should return 5 for value 5.1"
+assert closest_integer("3.14159") == 3, "closest_integer should return 3 for value 3.14159"
+assert closest_integer('-10') == -10
+assert closest_integer('10.0') == 10, "Error in closest_integer function"
+assert closest_integer('5.45') == 5
+assert closest_integer('1e-5') == 0.0001
+assert closest_integer('5.56') == 6
+assert closest_integer('3.1') == 3
+assert closest_integer(-100.5) == -100, "closest_integer should return -100 for value -100.5"
+assert closest_integer('9.5') == 10, 'closest_integer(9.5) should return 10'
+task HumanEval/99 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/100 has testcase num 8:
+assert make_a_pile(4) == [4, 6, 8, 10]
+assert make_a_pile(1) == [1], "1st level should have 1 stone"
+assert make_a_pile(2) == [2, 4], "2 should be a valid pile"
+assert make_a_pile(6) == [6, 8, 10, 12, 14, 16]
+assert make_a_pile(41) == [41, 43, 45]
+assert make_a_pile(5) == [5, 3, 1]
+assert make_a_pile(4) == [4, 7, 11, 11]
+assert make_a_pile(16) == [26, 28]
+task HumanEval/100 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/101 has testcase num 10:
+assert words_string("hello, world") == ["hello", "world"], "words_string('hello, world') should return ['hello', 'world']"
+assert words_string("hello,world") == ["hello", "world"]
+assert words_string('hello,world') == ['hello', 'world']
+assert words_string("Python, is, a, great, programming, language, ") == ["Python", "is", "a", "great", "programming", "language"], "words_string should return ['Python', 'is', 'a', 'great', 'programming', 'language']"
+assert words_string('hello,  world,  world') == ['hello', 'world', 'world'], 'words_string error'
+assert words_string("Hello,World!") == ['Hello', 'World'], "Expected: [\"Hello\", 'World'], Got: [\"Hello\", 'World']"
+assert words_string('hello, world') == ['hello', 'world'], 'Test 3 failed'
+assert words_string("hello, world!") == ["hello", "world"], "words_string should return ['hello', 'world']"
+assert words_string('') == [], 'empty string'
+assert words_string("hello, world!") == ["hello", "world"], "words_string should return an array of words"
+task HumanEval/101 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/102 has testcase num 10:
+assert choose_num(20, 20) == 20, "choose_num is not correct"
+assert choose_num(2, 0) == -1
+assert choose_num(0, -5) == -1, "choose_num should return -1 when x = 0 and y = -5"
+assert choose_num(5, 4) == -1
+assert choose_num(5, 7) == 6, "choose_num(5, 7) should return 6"
+assert choose_num(2, 4) == 2, "choose_num(2, 4) should return 2"
+assert choose_num(3, 8) == -1, "choose_num(3, 8) should return -1"
+assert choose_num(1, 10) == 4
+assert choose_num(1, 100) == -1, "choose_num(1, 100) should return -1"
+assert choose_num(8, 10) == 8
+task HumanEval/102 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/103 has testcase num 10:
+assert rounded_avg(5, 1) == -1, "Expected: -1, Got: %s" % rounded_avg(5, 1)
+assert rounded_avg(10, -1) == -1
+assert rounded_avg(0, -1) == -1, "Example 11"
+assert rounded_avg(100, -100) == -1
+assert rounded_avg(10, -25) == -1, "Expected: -1, Got: " + str(rounded_avg(10, -25))
+assert rounded_avg(10, 18) == 12
+assert rounded_avg(1, 2) == 1, "expected 1, got {}".format(rounded_avg(1, 2))
+assert rounded_avg(-5, -5) == -10
+assert rounded_avg(1000, 100) == 76
+assert rounded_avg(10, 20) == 15, "Error: The average of 10 through 20 should be 15"
+task HumanEval/103 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/104 has testcase num 10:
+assert unique_digits([1, 3, 5, 6, 9]) == [1, 3, 5, 9], "The function should return [1, 3, 5, 9]"
+assert unique_digits([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == [1, 3, 5, 7, 9]
+assert unique_digits([1, 2, 3, 4, 5, 6, 7, 8, 9]) == [1, 3, 5, 7, 9]
+assert unique_digits([1, 2, 3, 4, 5]) == [1, 3, 5], "Error: unique_digits returned incorrect result"
+assert unique_digits([1, 2, 3, 5, 7, 8, 9]) == [1, 3, 5, 7, 9], "unique_digits() should return a sorted list of unique odd digits in the given input"
+assert unique_digits([1, 3, 5, 7]) == [3, 5]
+assert unique_digits([1, 2, 3, 5, 6]) == [5]
+assert unique_digits([1, 2, 3, 4, 6]) == [4, 6]
+assert unique_digits([1, 2, 3, 4, 6]) == [1, 2, 3, 4], "Expected [1, 2, 3, 4] got [6]"
+assert unique_digits([1, 3, 4, 5, 6]) == [3, 5]
+task HumanEval/104 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/105 has testcase num 10:
+assert by_length([1, 2, 3, 4, 5, 6, 7, 8, 9]) == ['Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two', 'One'], "Expected by_length to correctly sort the input array and replace the digits with their names"
+assert by_length([]) == []
+assert by_length([4, 5, 6, 1, 9, 3, 2, 8, 7]) == ['Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two', 'One']
+assert by_length([6, 7, 8, 9]) == ['Nine', 'Eight', 'Seven', 'Six'], "by_length"
+assert by_length([8, 4, 9, 3]) == ["Nine", "Eight", "Four", "Three"], "by_length() does not work properly"
+assert by_length([3, 5, 7, 9, 1, 2, 4, 8]) == ["One", "Two", "Six", "Eight", "Nine", "Four", "Seven", "Five"], "by_length is not correct"
+assert by_length([3, 5, 5, 5, 3, 3, 3, 3, 3]) == ["Four", "Four", "Four", "Four", "Four", "Four", "Four", "Four", "Four", "Four"], "by_length is not correct"
+assert by_length([4, 5, 2, 1, 3, 9, 6, 8, 7]) == [9, 8, 7, 6, 5, 4, 3, 2, 1], "by_length failed"
+assert by_length([2, 4, 1, 3]) == [ "One", "Six", "Four", "Three" ], "by_length failed"
+assert by_length([3, 4, 5, 6, 7, 8, 9]) == ['Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two', 'One'], "by_length is not working"
+task HumanEval/105 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/106 has testcase num 8:
+assert f(2) == [1, 2], "f(2) = [1, 2] is not correct"
+assert f(4) == [1, 2, 6, 24], "f(4) is incorrect"
+assert f(3) == [1, 2, 6], "f(3) should be [1, 2, 6]"
+assert f(1) == [1], "The function should return [1] when given 1 as input."
+assert f(5) == [1, 2, 5, 12, 24], "Error: f(5) is not correct"
+assert f(7) == [1, 2, 3, 4, 6, 12, 50], "f(7) is not correct"
+assert f(4) == [1, 4, 6, 24], "The function f should return [1, 4, 6, 24] for n = 4"
+assert f(6) == [1, 6, 2, 1, 3, 4, 6, 2, 1, 5, 4, 3, 2, 1], "Error: f(6) should be [1, 6, 2, 1, 3, 4, 6, 2, 1, 5, 4, 3, 2, 1]"
+task HumanEval/106 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/107 has testcase num 10:
+assert even_odd_palindrome(5) == (2, 3), "even_odd_palindrome(5)"
+assert even_odd_palindrome(1) == (0, 1), "even_odd_palindrome(1) is not correct"
+assert even_odd_palindrome(15) == (4, 6), "Test failed: even_odd_palindrome(15) != (4, 6)"
+assert even_odd_palindrome(4) == (2, 2), "Even odd palindrome not correct"
+assert even_odd_palindrome(3) == (1, 2), "Even odd palindrome not correct"
+assert even_odd_palindrome(2) == (1, 1), "2 should have 1 even and 1 odd palindromes"
+assert even_odd_palindrome(7) == (6, 5)
+assert even_odd_palindrome(9) == (1, 1), "even_odd_palindrome(9)"
+assert even_odd_palindrome(25) == (3, 0)
+assert even_odd_palindrome(3) == (1, 1), "3 is a palindrome"
+task HumanEval/107 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/108 has testcase num 10:
+assert count_nums([100, -200, 300, -400, 500, -600]) == 3
+assert count_nums([]) == 0, "Incorrect result in count_nums for empty list"
+assert count_nums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 10
+assert count_nums([2, 3, 4, 5, 6, 7, 8, 9, 10]) == 9
+assert count_nums([-123, -456, -789]) == 3
+assert count_nums([123, 456, 789, 1, 2]) == 1
+assert count_nums([1, 2, 3, 4, 5, -6]) == 2
+assert count_nums([-123, 456, 789]) == 3, "count_nums([-123, 456, 789])
+assert count_nums([2, 4, 6, 8, 10, 12, 16]) == 2
+assert count_nums([1, -3, 0, 10]) == 1
+task HumanEval/108 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/109 has testcase num 10:
+assert move_one_ball([]) == True, "Test 6 failed"
+assert move_one_ball([1, 5, 3, 2, 4]) == False
+assert move_one_ball([3, 1, 4, 2, 5]) == False
+assert move_one_ball([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]) == True
+assert move_one_ball([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == True
+assert move_one_ball([2, 5, 1, 3, 4]) == True
+assert move_one_ball([2, 4, 3, 5, 1]) == True
+assert move_one_ball([3, 2, 1]) == True
+assert move_one_ball([3, 1, 4, 1, 5, 9, 2, 3, 5, 1, 4]) == True
+assert move_one_ball([3, 1, 2]) == False, "move_one_ball([3, 1, 2])
+task HumanEval/109 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/110 has testcase num 10:
+assert exchange([1, 2, 3, 4], [2, 1, 3, 4]) == "YES", "Exchange not working as expected"
+assert exchange([1, 2, 3, 4, 5], [2, 4, 6, 8, 10]) == "YES", "Exchange should return YES for the given input."
+assert exchange([1, 2, 3, 4], [2, 2, 2, 2]) == "YES", "Expected YES, got: {}".format(exchange([1, 2, 3, 4], [2, 2, 2, 2]))
+assert exchange([1, 2, 3], [2, 2, 2]) == "YES", "The function should return YES for this case"
+assert exchange([1, 2, 3, 4, 5], [2, 1, 3, 4, 5]) == "NO", "The function should return NO when the two lists have elements that cannot be exchanged"
+assert exchange([1, 2, 3, 4, 5], [2, 4, 6, 8, 10]) == "YES", "exchange is not working"
+assert exchange([1, 2, 3], [2, 2, 2]) == "YES", "Exchange problem failed"
+assert exchange([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]) == "NO", "Exchange problem is incorrect"
+assert exchange([1, 2, 3, 4], [1, 3, 2, 4]) == "NO", "Exchange should return NO for input [1, 2, 3, 4] and [1, 3, 2, 4]"
+assert exchange([1, 2], [2, 4]) == "NO", "Exchange is incorrect"
+task HumanEval/110 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/111 has testcase num 6:
+assert histogram('a') == {'a': 1}, "histogram should return {'a': 1}"
+assert histogram("") == {}, "histogram failed"
+assert histogram('') == {}, "Expected {}, but got: %s" % (histogram(''))
+assert histogram("ababbbbbab") == {"a": 4, "b": 2}
+assert histogram("abcdefghijklmnopqrstuvwxyz") == {"e": 2, "a": 2, "o": 2}, "histogram function is incorrect"
+assert histogram("abcdefg") == {"a": 2, "c": 2, "d": 2, "e": 2, "f": 2, "g": 2}
+task HumanEval/111 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/112 has testcase num 10:
+assert reverse_delete("abcde", "f") == ("abcde", False)
+assert reverse_delete('aaa', 'a') == ('', True), 'reverse_delete failed for the test case 7'
+assert reverse_delete("aab", "b") == ("aa", True), "reverse_delete failed"
+assert reverse_delete("racecar", "A") == ("racecar", True)
+assert reverse_delete("racecar", "") == ('racecar', True), "reverse_delete failed"
+assert reverse_delete("ababa", "a") == ("babba", True), "reverse_delete with string with even number of characters"
+assert reverse_delete("racecar", "a") == ("racecar", True), "Error 10"
+assert reverse_delete('abbbba', 'b') == ('abbbba', True)
+assert reverse_delete("", "b", "a") == ("ba", True)
+assert reverse_delete('aabbcc', 'b') == ('aabcc', True), "reverse_delete failed"
+task HumanEval/112 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/113 has testcase num 4:
+assert odd_count(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+assert odd_count(['3',"11111111"]) == ["the number of odd elements 1n the str1ng 1 of the 1nput.","the number of odd elements 8n the str8ng 8 of the 8nput."]
+assert odd_count_gen(["12345", "4567", "123456"]) == ["0", "0", "3"], "odd_count_gen failed"
+assert odd_count(["3", "1", "4"]) == ["3", "1", "4"], "Odd count not correct"
+task HumanEval/113 correct percent is 0.0
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/114 has testcase num 10:
+assert minSubArraySum([10]) == 10, "minSubArraySum should return 10"
+assert minSubArraySum([1]) == 1, "Error in minSubArraySum"
+assert minSubArraySum([-1, -2]) == -3, "minSubArraySum should return -3 for [-1, -2]"
+assert minSubArraySum([1, 2, 3]) == 1, "minSubArraySum should return 1 for nums=[1, 2, 3]"
+assert minSubArraySum([0, 0, 0, 0, 0, 0, 0]) == 0, "minSubArraySum should return 0 for input [0, 0, 0, 0, 0, 0, 0]"
+assert minSubArraySum([-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) == 34, "minSubArraySum failed for input [-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+assert minSubArraySum([1, 2, 3, 4, 5]) == 3, "Expected: 3, Got: 1"
+assert minSubArraySum([-1, -2, -3, -4, -5]) == -4, "The output of minSubArraySum([-1, -2, -3, -4, -5]) is not equal to -4."
+assert minSubArraySum([1, 2, 3, 4, 5, 6]) == 6, "Expected: 6, Got: %s" % minSubArraySum([1, 2, 3, 4, 5, 6])
+assert minSubArraySum([1,2,3]) == 6, "Expected 6, got %s" % minSubArraySum([1,2,3])
+task HumanEval/114 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/115 has testcase num 10:
+assert max_fill([[1, 1, 1, 1],
+                 [1, 1, 1, 1],
+                 [1, 1, 1, 1],
+                 [1, 1, 1, 1]],
+                 6) == 4
+assert max_fill([[1,2,3,4], [5,6,7,8], [9,10,11,12]], 28) == 4
+assert max_fill([[1, 1, 1], [1, 1, 1]], 3) == 2
+assert max_fill([[1,1,1], [1,1,1], [1,1,1]], 5) == 3
+assert max_fill([[1, 0, 1, 0, 1], [0, 1, 0, 1, 0], [0, 0, 1, 0, 1], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1]], 4) == 5
+assert max_fill([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 2) == 2
+assert max_fill([1, 1, 1, 1, 1], 4) == 5, "Incorrect output for max_fill([1, 1, 1, 1, 1], 4)"
+assert max_fill([[1, 1], [1, 1]], 2) == 0
+assert max_fill([[1, 0, 0], [1, 0, 0], [1, 0, 0]], 4) == 2, "Error: Expected 2, got 1"
+assert max_fill([1,1,1,1,1,1,1,1,1,1,1], 21) == 7
+task HumanEval/115 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/116 has testcase num 10:
+assert sort_array([1, 2, 3]) == [1, 2, 3]
+assert sort_array([10, 5, 1, 2]) == [1, 2, 5, 10]
+assert sort_array([1, 3, 2]) == [1, 2, 3], "Sort array should return [1, 2, 3]"
+assert sort_array([1, 2, 4, 16, 32, 64]) == [1, 2, 4, 16, 32, 64]
+assert sort_array([1, 1, 1, 1, 1, 1]) == [1, 1, 1, 1, 1, 1], "sort_array failed"
+assert sort_array([1, 2, 4, 2, 4, 4]) == [2, 4, 4, 2, 2, 4], "Error in sorting 1's and 4's"
+assert sort_array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) == [0, 1, 2, 4, 5, 6, 7, 8, 9], "sort_array failed"
+assert sort_array([1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]) == [1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], "sort_array"
+assert sort_array([4, 2, 7, 3, 1, 9, 10]) == [1, 2, 3, 4, 7, 9, 10]
+assert sort_array([1, 1, 2, 1, 1, 3, 1, 2, 1, 1, 1]) == [1, 2, 3, 1, 1, 1, 1, 1, 1, 1, 1], "sort_array should return the correct sorted array"
+task HumanEval/116 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/117 has testcase num 10:
+assert select_words("", 3) == [], "select_words should return an empty list when given an empty string and 3"
+assert select_words("hello world", 8) == [], "select_words() returned incorrect output"
+assert select_words("hello world", 0) == [], "select_words should return an empty list for empty string and n=0"
+assert select_words("", 2) == [], "select_words should return an empty list when given an empty string and 2"
+assert select_words("hello", 3) == ["hello"], "select_words should return a list with a single word when n=3 and the input string is 'hello'"
+assert select_words("hello world", 6) == ["hello", "world"], "select_words with string and 6 consonants should return the correct list"
+assert select_words('abcdefghijklmnopqrstuvwxyz', 7) == ['abc', 'def', 'fgh', 'ijkl', 'mnop', 'qrst', 'uvw', 'xyz'], "Incorrect output"
+assert select_words('hello', 0) == []
+assert select_words("hello", 5) == ["hello"], "select_words should return list of words containing exactly n consonants when s is not empty"
+assert select_words("hello world", 7) == ["hello", "world"], "select_words: string with seven consonants should return the correct list"
+task HumanEval/117 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/118 has testcase num 10:
+assert get_closest_vowel("happy") == "a", "get_closest_vowel('happy') is incorrect"
+assert get_closest_vowel('cherry') == 'e', "get_closest_vowel should return 'e' for 'cherry'."
+assert get_closest_vowel("applepie") == "e", "get_closest_vowel failed for 'applepie'"
+assert get_closest_vowel("pineapple") == "i"
+assert get_closest_vowel("apple") == "", "get_closest_vowel should return an empty string when called with 'apple'"
+assert get_closest_vowel("apple") == "e", "Get closest vowel function should return 'e' for 'apple'"
+assert get_closest_vowel2("book") == "o"
+assert get_closest_vowel("cat") == "", "get_closest_vowel should return empty string for 'cat'"
+assert get_closest_vowel('elephant') == '', "Expected an empty string, got 'e'"
+assert get_closest_vowel("woman") == "", "get_closest_vowel failed for 'woman'"
+task HumanEval/118 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/119 has testcase num 4:
+assert match_parens(['()(', ')']) == 'Yes'
+assert match_parens([')', ')']) == 'No'
+assert match_parens(["((())", "()))"]) == 0
+assert match_parens(["(a", "b)", "(b)"]) == "a"
+task HumanEval/119 correct percent is 0.0
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/120 has testcase num 10:
+assert maximum([1, 2, 3, 4, 5], 6) == [1, 2, 3, 4, 5]
+assert maximum([1, 2, 3], 11) == [1, 2, 3]
+assert maximum([1, 2], 4) == [1, 2]
+assert maximum([10, 20, 30, 40], 6) == [10, 20, 30, 40]
+assert maximum([10, 20, 30], 2) == [20, 30], "maximum(arr, k) should return a sorted list with the maximum k numbers in arr"
+assert maximum([1, 2, 3, 4, 5], 5) == [1, 2, 3, 4, 5], "Incorrect result for maximum(arr, k) = (1, 2, 3, 4, 5), k = 5"
+assert maximum([10, 9, 2, 5, 3, 7, 101, 18], 5) == [10, 9, 2, 5, 3], "Error in maximum function"
+assert maximum([1, 2, 3, 4, 5], 8) == [1, 2, 3, 4, 5, 6, 7, 8]
+assert maximum([1, 2, 3, 4, 5, 6], 3) == [3, 4, 5, 6]
+assert maximum([1, 3, 4, 7, 9], 3) == [3, 9, 7, 4, 1], "maximum(arr=[1, 3, 4, 7, 9], k=3)
+task HumanEval/120 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/121 has testcase num 10:
+assert solution([3, 2, 1, 4, 6, 5, 7]) == 11
+assert solution([2, 3, 2, 4, 5, 3, 1]) == 6
+assert solution([1, 2, 3, 4, 5, 6, 7]) == 16
+assert solution([6, 7, 8, 9, 10]) == 0
+assert solution([2, 4, 6, 8, 10, 12]) == 0, "Error: Solution does not work"
+assert solution([2, 4, 6, 8, 10]) == 2, "solution should return 2 when given [2, 4, 6, 8, 10]"
+assert solution([1,2,3,4,5,6,7,8,9,10]) == 15, "The solution is not correct"
+assert solution([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 6
+assert solution([1, 2, 3, 4, 5]) == 1, "Error: Passed test case is not correct"
+assert solution([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]) == 14
+task HumanEval/121 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/122 has testcase num 10:
+assert add_elements([1, 2, 3, 4, 5], 2) == 3, "Incorrect output for add_elements with input [1, 2, 3, 4, 5] and k=2"
+assert add_elements([1, 2, 3, 4, 5], 3) == 6, "Failed to check the correctness of the function"
+assert add_elements([1], 2) == 1
+assert add_elements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4) == 10
+assert add_elements([1, 2, 3, 4, 5], 1) == 1, "add_elements not working"
+assert add_elements([1,2,3,4,5], 4) == 12
+assert add_elements([1, 2, 3, 4, 5], 12) == 87
+assert add_elements([1, 2, 3, 4, 5], 7) == 12
+assert add_elements([1, 2, 3, 4, 5], 4) == 100
+assert add_elements([1, 2, 3], 3) == 6, "8"
+task HumanEval/122 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/123 has testcase num 4:
+assert get_odd_collatz(1) == [1], "1. The first term should be 1."
+assert get_odd_collatz(0) == []
+assert get_odd_collatz(1) == [1], "get_odd_collatz(1) is not correct"
+assert get_odd_collatz(5) == [5, 16, 25, 50, 100], "Expected [5, 16, 25, 50, 100], got {}".format(get_odd_collatz(5))
+task HumanEval/123 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/124 has testcase num 10:
+assert valid_date('05-07-2020') == True
+assert valid_date('06/04/2020') == False
+
+valid_date('06-04-2020')
+assert valid_date('06-04-2020') == True, "valid_date('06-04-2020') is not True"
+assert valid_date('03-11-2000') == True, 'valid_date is not working'
+assert valid_date('05-30-2000') == False
+assert valid_date('01-02-2009') == False
+assert valid_date('04-0-2040') == False, "valid_date('04-0-2040') is not False"
+assert valid_date('03-11-2000') == True
+assert valid_date('15-01-2012') == False, 'Valid date failed for input "15-01-2012"'
+assert valid_date('03-11-2000') == True, "valid_date('03-11-2000') is not True"
+task HumanEval/124 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/125 has testcase num 10:
+assert split_words('Hello World') == ['Hello', 'World'], 'split_words should return ["Hello", "World"]'
+assert split_words("hello,world,1,2,3,4,5,6,7,8,9,0") == ["hello", "world", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], "split_words failed"
+assert split_words('hello,world,23,45') == ['hello', 'world', '23', '45'], 'split_words test failed'
+assert split_words("This is a") == ["This", "is", "a"], "split_words should return a list of words split on whitespace"
+assert split_words('hello world') == ['hello', 'world'], 'split_words should return [\"hello\", \"world\"] for input "hello world"'
+assert split_words('hello world,') == ['hello', 'world'], 'split_words: 3'
+assert split_words("hello world,") == ["hello", "world", ""], "Split words failed"
+assert split_words('hello,world') == ['hello', 'world'], 'split_words does not split the string correctly'
+assert split_words("hello,world") == ["hello", "world"], "split_words failed"
+assert split_words('Hello, world.') == ['Hello', 'world.'], 'split_words is not working correctly for strings with commas'
+task HumanEval/125 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/126 has testcase num 10:
+assert is_sorted([1, 2, 3, 3, 1]) == False
+assert is_sorted([1, 2, 2, 3, 3, 3, 4, 4, 5, 6]) == False
+assert is_sorted([1, 2, 3, 4]) == True
+assert is_sorted([1, 2, 2, 3, 4, 5]) == True, "9th test case passed"
+assert is_sorted([1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4]) == False
+assert is_sorted([2, 3, 4, 5]) == False
+assert is_sorted([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) == False
+assert is_sorted([1, 3, 5, 6, 10]) == False
+assert is_sorted([1, 2, 3, 3, 1]) == False, "3"
+assert is_sorted([1, 2, 3, 5, 6, 7, 8, 9]) == False
+task HumanEval/126 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/127 has testcase num 6:
+assert intersection((1, 2), (2, 3)) == "NO"
+assert intersection((-1, 1), (0, 4)) == "NO"
+assert intersection((-3, -1), (-5, 5)) == "YES"
+assert intersection(Interval(2, 5), Interval(2, 3)) == Interval(), "The intersection should be empty for intervals with same start but different endpoints"
+assert intersection([2, 10], [1, 5]) == [2, 10], "Reversed order intersection is not correct"
+assert intersection(Interval(1, 10), Interval(1, 10)) == Interval(1, 10), "Intersection of Interval(1, 10) and Interval(1, 10) should be Interval(1, 10)"
+task HumanEval/127 correct percent is 0.0
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/128 has testcase num 10:
+assert prod_signs([0, 0, 0, 0, 0, 0, 0]) == 0
+assert prod_signs([0, 0, 0]) == 0, "Error in prod_signs()"
+assert prod_signs([]) == None, "Expected None but got: " + str(prod_signs([]))
+assert prod_signs([1, 2, 3]) == 6, "Expected 6, but got %s" % prod_signs([1, 2, 3])
+assert prod_signs([1]) == 1, "Expected 1, but got %s" % prod_signs([1])
+assert prod_signs([1, 2, 3, 4], -1) == -16, "prod_signs([1, 2, 3, 4], -1)
+assert prod_signs([1, 0, 1]) == 1, "prod_signs([1, 0, 1]) should return 1"
+assert prod_signs([-1, 2, 3, 4]) == -1*2*3*4 + 1*2*3*4 + 1*2*3*4
+assert prod_signs([1, 2, 3]) == 1, "prod_signs([1, 2, 3]) != 1"
+assert prod_signs([1, 2, -3]) == -3, "prod_signs([1, 2, -3])
+task HumanEval/128 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/129 has testcase num 10:
+assert minPath([[1, 1, 1], [1, 1, 1], [1, 1, 1]], 1) == [1], "MinPath failed on test case 3"
+assert minPath([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1) == [1]
+assert minPath([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 2) == [1, 2], \
+"Expected [1, 2], got [1, 2, 3] for minPath([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 2)"
+assert minPath([[1, 2, 3], [4, 5, 6]], 2) == [1, 2], "MinPath failed"
+assert minPath([[1, 2], [3, 4]], 2) == [1, 2]
+assert minPath([[1, 3, 4], [10, 20, 30], [100, 200, 300]], 4) == [1, 10, 100, 200]
+assert minPath([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 3], "minPath([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3)
+assert minPath([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 6) == [7, 8, 9], "Minimum path should be [7, 8, 9]"
+assert minPath([1, 2, 3, 4, 5, 6, 7, 8, 9], 2) == [3, 4, 5, 6, 7, 8, 9], "Example 2 failed"
+assert minPath([[1,2,3], [4,5,6], [7,8,9]], 4) == [], "[]"
+task HumanEval/129 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/130 has testcase num 2:
+assert tri(3) == [1, 3, 2, 8]
+assert tri(12) == 34, "Expected: 34, Got: %s" % tri(12)
+task HumanEval/130 correct percent is 0.0
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/131 has testcase num 10:
+assert digits(10) == 1
+assert digits(7) == 7
+assert digits(185) == 5
+assert digits(100000000000) == 1
+assert digits(22) == 0, "digits should return 0 for n=22"
+assert digits(12345678901234567890) == 12345678901234567890, "digits function should return 12345678901234567890"
+assert digits(123456789) == 78649, "digits(123456789)
+assert digits(123456789) == 123456789 * (3 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)
+assert digits(75) == 1
+assert digits(123456) == 21701, "digits function should return 21701 for n=123456"
+task HumanEval/131 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/132 has testcase num 10:
+assert is_nested('[[]][[') == True
+assert is_nested('[[[]]') == True
+assert is_nested('[[]]') == True, "is_nested('[[]]') should return True"
+assert is_nested('[[[[]]]]') == True
+assert is_nested('[[][]]') == True
+assert is_nested('[[]]') == False, "is_nested('[[]]') should return False"
+assert is_nested('[[[[]]]') == False
+assert is_nested('[][][[[][]]]') == False
+assert is_nested('[[[]]]]') == False
+assert is_nested('[[]]') == False
+task HumanEval/132 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/133 has testcase num 10:
+assert sum_squares([0, 0, 0, 0, 0]) == 0, "sum_squares must return 0 when given [0, 0, 0, 0, 0]"
+assert sum_squares([0]) == 0, "sum_squares should return 0 for the input [0]"
+assert sum_squares([1, 2, 3, 4, 5]) == 55, "sum of squares is not correct"
+assert sum_squares([0, 0, 0, 1, 0]) == 1, "sum_squares failed"
+assert sum_squares([]) == 0, "sum_squares([]) should return 0"
+assert um_squares([1, 2, 3, 4, 5]) == 55, "sum_squares is incorrect"
+assert sum_squares([1, 2, 3, 4, 5, 6, 7]) == 62, "sum_squares is incorrect"
+assert sum_squares([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 100, "sum_squares should return 100 for the input [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+assert sum_squares([1.1, 2.2, 3.3, 4.4, 5.5]) == 33.33333333333336, "sum_squares does not round each element to the upper int(Ceiling)"
+assert sum_squares([1.1, 2.2, 3.3, 4.4, 5.5]) == 46.61, "sum_squares([1.1, 2.2, 3.3, 4.4, 5.5])
+task HumanEval/133 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/134 has testcase num 10:
+assert check_if_last_char_is_a_letter('abc def ghi 123 jkl mno pqr') == False
+assert check_if_last_char_is_a_letter('abc def ghi jkl') == False
+assert check_if_last_char_is_a_letter("hello        ") == False
+assert check_if_last_char_is_a_letter("world.") == False
+assert check_if_last_char_is_a_letter("hello  world  again") == False
+assert check_if_last_char_is_a_letter('abcdefg') == True
+assert check_if_last_char_is_a_letter("AaBbCc") == True
+assert check_if_last_char_is_a_letter('hello world!') == True
+assert check_if_last_char_is_a_letter('abc def ghi jkl mno pqr') == True
+assert check_if_last_char_is_a_letter("Hello World!") == True, "check_if_last_char_is_a_letter failed"
+task HumanEval/134 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/135 has testcase num 10:
+assert can_arrange([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]) == -1
+assert can_arrange([1, 2, 3, 4, 5, 6, 7, 8]) == -1
+assert can_arrange([1, 2, 3, 4, 5, 5, 5, 5]) == -1
+assert can_arrange([3, 5, 6]) == -1
+assert can_arrange([1, 2, 3, 4, 5, 6]) == -1, "can_arrange should return -1 for [1, 2, 3, 4, 5, 6]"
+assert can_arrange([1, 2, 3, 4, 5, 6]) == 4
+assert can_arrange([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 5, "can_arrange is incorrect"
+assert can_arrange([3, 2, 1, 4, 5, 6]) == -1
+assert can_arrange([3, 1, 4, 1, 5, 9, 2, 4, 3, 2, 4, 1]) == 2
+assert can_arrange([1, 3, 5, 6, 8]) == 4
+task HumanEval/135 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/136 has testcase num 10:
+assert largest_smallest_integers([]) == (None, None), "Expected (None, None), got (None, None)"
+assert largest_smallest_integers([1, 2, 3, 4]).__class__ == tuple, "largest_smallest_integers should return a tuple"
+assert largest_smallest_integers([1]) == (None, 1)
+assert largest_smallest_integers([-1, 2, 3]) == (-1, 2), "1, 2, 3 should return -1, 2"
+assert largest_smallest_integers([-10, 20]) == (-10, 20), "Expected (-10, 20), got (-10, 20)"
+assert largest_smallest_integers([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]) == (17, 0)
+assert largest_smallest_integers([-1, -2, -3, -4, -5]) == (-5, -1), "2. largest_smallest_integers([-1, -2, -3, -4, -5])
+assert largest_smallest_integers(["-1", "2"]) == (None, "-1")
+assert largest_smallest_integers([1, -2, 3]) == (-1, 1)
+assert largest_smallest_integers([5, 3, 2, 1, 0]) == (5, 3), "Incorrect output"
+task HumanEval/136 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/137 has testcase num 10:
+assert compare_one("1", "6") == "6"
+assert compare_one("1.0", "6") == "6"
+assert compare_one("2,3", "3.2") == "3.2"
+assert compare_one("5,1", 5.5) == 5.5
+assert compare_one(1, 1) == None
+assert compare_one_rounded(1, "2,3") == "2,3"
+assert compare_one_float("5,1", "6") == "6"
+assert compare_one(-1, -5.5555) == -5.5555
+assert compare_one_str(1, 2.5) == "2,5"
+assert compare_one_int(1, "2,3") == "2,3"
+task HumanEval/137 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/138 has testcase num 10:
+assert is_equal_to_sum_even(28) == True, "28 can be written as the sum of 4 positive even numbers (2+2+6+8)"
+assert is_equal_to_sum_even(11) == False, "Is 11 equal to the sum of exactly 4 positive even numbers?"
+assert is_equal_to_sum_even(10) == 1, "10 can be written as the sum of exactly 4 positive even numbers"
+assert is_equal_to_sum_even(16) == True, "Is 16 equal to the sum of 4 positive even numbers?"
+assert is_equal_to_sum_even(12) == True, "12 should be the sum of 4 even numbers"
+assert is_equal_to_sum_even(12) == False, "12 should not be equal to the sum of 4 positive even numbers"
+assert is_equal_to_sum_even(18) == False, "18 is not equal to the sum of 18 positive even numbers"
+assert is_equal_to_sum_even(20) == 0, "20 should not be equal to the sum of 4 positive even numbers"
+assert is_equal_to_sum_even(24) == False, "should be False for n=24"
+assert is_equal_to_sum_even(18) == True, "18 can be written as the sum of exactly 4 positive even numbers"
+task HumanEval/138 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/139 has testcase num 10:
+assert special_factorial(2) == 2, "Special Factorial should be equal to 2"
+assert special_factorial(-16) == 1
+assert special_factorial(-10) == 1
+assert special_factorial(0) == 1, "Special factorial should not be zero for 0"
+assert special_factorial(-2) == 1, "special_factorial(-2) should be 1"
+assert special_factorial(6) == 720, "special_factorial function is incorrect"
+assert special_factorial(6) == 720, "The special factorial of 6 is not correct"
+assert special_factorial(15) == 63003200, "special_factorial of 15 should be 63003200"
+assert special_factorial(10) == 19683000, "Error in special_factorial function"
+assert special_factorial(9) == 2592000, "Error in special_factorial function"
+task HumanEval/139 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/140 has testcase num 10:
+assert fix_spaces("Hello    World") == "Hello-World", "fix_spaces failed for input 'Hello    World'"
+assert fix_spaces('hello world') == 'hello_world', 'fix_spaces should replace spaces with underscores'
+assert fix_spaces("Hello    world") == "Hello-world", "fix_spaces - should replace spaces with underscores"
+assert fix_spaces("Hello---World") == "Hello---World", "fix_spaces failed for the input string 'Hello---World'"
+assert fix_spaces("Hello         World") == "Hello-World", "Error: The first 'Hello         World' should be replaced with 'Hello-World' after calling fix_spaces"
+assert "Hello    World" == fix_spaces("Hello    World "), "fix_spaces test 9 failed"
+assert "   Hello,   world! " == fix_spaces("   Hello,   world! "), "fix_spaces is not working"
+assert fix_spaces('  Hello, world!  ') == 'Hello-world', 'fix_spaces test 5'
+assert fix_spaces(' Hello, world! ') == 'Hello-world', 'fix_spaces test 10'
+assert fix_spaces(text) == "I-will-never-forget-about-this.", "fix_spaces failed for 'I will never forget about this.' with spaces"
+task HumanEval/140 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/141 has testcase num 10:
+assert file_name_check("file_name.txt.exe.exe") == "No"
+assert file_name_check("file.txt.exe.dll.exe") == "No"
+assert file_name_check("file_name.exe") == "Yes", "file_name_check failed"
+assert file_name_check('file1.txt') == 'Yes', 'file_name_check is not working'
+assert file_name_check("file_name_1234567890.txt") == "No", "The file's name is invalid"
+assert file_name_check('test123.txt.exe') == 'Yes'
+assert file_name_check("file_name.txt") == "Yes", "The file name 'file_name.txt' is not valid."
+assert file_name_check("file_name.txt.exe.dll.") == "Yes"
+assert file_name_check('file1.txt') == 'Yes'
+assert file_name_check('file_123.txt') == 'No', "The function should return 'No' for this file's name"
+task HumanEval/141 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/142 has testcase num 6:
+assert sum_squares([1]) == 1
+assert sum_squares([]) == 0
+assert sum_squares([1, 2, 3]) == 6
+assert sum_squares([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]) == 139960
+assert sum_squares([1, 2, 8, 16, 32]) == 32, "sum_squares did not work as intended"
+assert sum_squares([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 1000, "sum_squares did not return the correct sum"
+task HumanEval/142 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/143 has testcase num 10:
+assert words_in_sentence("hello world") == "hello world", "hello world should be the result of words_in_sentence"
+assert words_in_sentence("") == ""
+assert words_in_sentence('hello') == 'hello'
+assert words_in_sentence('abc') == 'abc', 'words_in_sentence(abc) should return abc'
+assert words_in_sentence('') == '', 'empty sentence'
+assert words_in_sentence("def") == "456"
+assert words_in_sentence("The quick brown fox jumps over the lazy dog") == "qbfj", "a complex sentence should return the initials"
+assert words_in_sentence('a') == 'a', 'words_in_sentence(a) should return a'
+assert words_in_sentence("I am a woman") == "Iamawoman", "words_in_sentence should return 'Iamawoman'"
+assert words_in_sentence("hello world") == "111111111", "11"
+task HumanEval/143 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/144 has testcase num 10:
+assert simplify("7/8", "1/2") == False
+assert simplify("7/10", "10/2") == False, "Simplify 7/10 * 10/2 = False"
+assert simplify("4/3", "3/4") == True, "Error in simplify 6"
+assert simplify("8/5", "4/1") == False
+assert simplify("1/2", "5/2") == False
+assert simplify("2/5", "5/2") == True
+assert simplify("5/6", "6/5") == True, "simplify('5/6', '6/5')
+assert simplify("5/5", "2/1") == False
+assert simplify("1/2", "1/2") == True, "Error in simplify function"
+assert simplify("2/5", "5/2") == False
+task HumanEval/144 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/145 has testcase num 10:
+assert order_by_points([4, 2, 5, 9, 3, 1]) == [1, 2, 3, 4, 5, 9]
+assert order_by_points([4, 1, 5, 9, 6]) == [1, 4, 5, 6, 9]
+assert order_by_points([4, 2, 1, 3]) == [1, 2, 3, 4]
+assert order_by_points([2, 9, 4, 6, 8, 7, 5, 3, 1]) == [1, 2, 3, 4, 5, 6, 7, 8, 9], \
+    "order_by_points failed"
+assert order_by_points([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5], "order_by_points failed"
+assert order_by_points([3, 15, 4, 7]) == [1, 3, 4, 7], "order_by_points failed"
+assert order_by_points([6, 1, 4, 2, 5, 3, 7, 8]) == [1, 2, 3, 4, 6, 7, 8]
+assert order_by_points(nums) == [-3, -5, -12, -2, 4], \
+                               "order_by_points didn't work correctly when the list contains negative numbers."
+assert order_by_points([4, 2, 9, 7, 1, 3]) == [1, 2, 3, 4, 7, 9], "Order by points"
+assert order_by_points([4, 5, 10, 15, 8, 12, 7, 15]) == [1, 4, 5, 7, 11, 12, 15]
+task HumanEval/145 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/146 has testcase num 10:
+assert specialFilter([3, 5, 7, 1, 9, 11, 13]) == 2, "specialFilter failed"
+assert specialFilter([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]) == 5, "specialFilter is incorrect"
+assert specialFilter([1, 2, 3, 4, 5, 6, 7, 8, 9, 12]) == 0
+assert specialFilter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 0, "specialFilter failed for input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+assert specialFilter([1, 2, 3]) == 0
+assert specialFilter([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 1
+assert specialFilter([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]) == 0, "Error in specialFilter function"
+assert specialFilter([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 4, "specialFilter does not work for the given array"
+assert specialFilter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]) == 3, "The result of specialFilter is not correct"
+assert specialFilter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 2, "1st input should be 2"
+task HumanEval/146 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/147 has testcase num 10:
+assert get_max_triples(5) == 1, "5: 1"
+assert get_max_triples(3) == 0, "get_max_triples(3) = %d, want 0" % get_max_triples(3)
+assert get_max_triples(10) == 36
+assert get_max_triples(6) == 4, "get_max_triples(6) = {}, expected 4".format(get_max_triples(6))
+assert get_max_triples(9) == 21, "get_max_triples(9) = %s, expected %s" % (get_max_triples(9), 21)
+assert get_max_triples(5) == 1, "get_max_triples should return 1 for n=5"
+assert get_max_triples(16) == 28
+assert get_max_triples(15) == 5
+assert get_max_triples(4) == 1
+assert get_max_triples(12) == 28, "get_max_triples(12) is not correct"
+task HumanEval/147 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/148 has testcase num 10:
+assert bf('jupiter', 'saturn') == ()
+assert bf('Sun', 'Mercury') == ()
+assert bf('Venus', 'Mercury') == ()
+assert bf('Jupiter', 'Sun') == ()
+assert bf('Sun', 'Sun') == ()
+assert bf("Mars", "Venus") == (), "Mars and Venus are already in the result"
+assert bf('Mars', 'Jupiter') == ('Mars', 'Earth', 'Jupiter', 'Saturn', 'Uranus', 'Neptune')
+assert bf('Mercury', 'Venus') == ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'), \
+   "bf should return Mercury and Venus"
+assert bf('Mars', 'Jupiter') == (['Venus', 'Earth', 'Mars', 'Jupiter'],), 'mars_jupiter_bf'
+assert bf('Jupiter', 'Saturn') == ('Jupiter', 'Saturn', 'Uranus', 'Neptune')
+task HumanEval/148 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/149 has testcase num 2:
+assert sorted_list_sum(["abcd", "abce"]) == ["abcd", "abce"]
+assert sorted_list_sum(["world", "hello", "hi"]) == ["hello", "hi", "world"]
+task HumanEval/149 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/150 has testcase num 10:
+assert x_or_y(12, 14, 16) == 16
+assert x_or_y(2, 17, 4) == 17
+assert x_or_y(12, 13, 14) == 14
+assert x_or_y(9, 2, 4) == 4, "x_or_y should return 4 for n=9"
+assert x_or_y(5, 1, 0) == 1, "5 is a prime number"
+assert x_or_y(12, 2, 4) == 2, "x_or_y should return 2 for n=12"
+assert x_or_y(13, 4, 2) == 2
+assert x_or_y(41, 22, 11) == 11
+assert x_or_y(7, 5, 4) == 7, "x_or_y should return 7"
+assert x_or_y(12, 24, 8) == 25
+task HumanEval/150 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/151 has testcase num 10:
+assert double_the_difference([]) == 0, "double_the_difference should return 0 for input []"
+assert double_the_difference([1, 1, 1, 1, 1]) == 5
+assert double_the_difference([9, -2]) == 81, "Error: double_the_difference failed for input [9, -2]"
+assert double_the_difference([-1.0, -2.0, 0.0]) == 0.0
+assert double_the_difference([-6, -7, -8, -9, -10]) == 0
+assert double_the_difference([1, 2, 3]) == 6
+assert double_the_difference([1, 3, 2, 0, 4, 5]) == 25
+assert double_the_difference([1, 2, 3, 4, 5]) == 25
+assert double_the_difference([1, 3, 2, 0]) == 10, "double_the_difference should return 10 for input [1, 3, 2, 0]"
+assert double_the_difference([1, 2, 3, 4, 5]) == 40, "Expected: 40, Got: %s" % (double_the_difference([1, 2, 3, 4, 5]))
+task HumanEval/151 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/152 has testcase num 10:
+assert compare([1, 2, 3, 4, 5, 1], [1, 2, 3, 4, 2, -2]) == [0, 0, 0, 0, 3, 3], "example 1 failed"
+assert compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) == [4,4,1,0,0,6],"compare function is not working as expected"
+assert compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) == [0,0,0,0,3,3], "compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) should return [0,0,0,0,3,3]"
+assert compare([0,5,0,0,0,4], [4,1,1,0,0,-2]) == [4,4,1,0,0,6], "compare failed"
+assert compare([1,2,3,4,5,1], [1,2,3,4,2,-2]) == [0,0,0,0,3,3], "Incorrect result"
+assert compare([1,2,3,4,5,1], [1,2,3,4,2,-2]) == [0,0,0,0,3,3], '1'
+assert compare([1,2,3,4,5,1],[1,2,3,4,2,-2]) == [0,0,0,0,3,3], "compare not working correctly"
+assert compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) == [4,4,1,0,0,6], "Error in compare function"
+assert compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) == [4,4,1,0,0,6]
+assert compare([0,5,0,0,0,4],[4,1,1,0,0,-2]) == [4,4,1,0,0,6], "Incorrect result for example 2"
+task HumanEval/152 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/153 has testcase num 10:
+assert Strongest_Extension("Person", ["PersonWithLegs", "PersonWithArms", "PersonWithEyes", "PersonWithEars"]) == "Person.PersonWithLegs", "Strongest_Extension is incorrect"
+assert Strongest_Extension("MyClass", ["MySecondExtension"]) == "MyClass.MySecondExtension", "Example 4 failed"
+assert Strongest_Extension("MyClass", ["MyExtension1", "MyExtension2", "MyExtension3"]) == "MyClass.MyExtension1", "Strongest_Extension failed for the test case MyClass and the list of extensions"
+assert Strongest_Extension('ClassE', ['ExtensionI']) == 'ClassE.ExtensionI', 'Strongest_Extension returned incorrect result for class ClassE and extensions [ExtensionI]'
+assert Strongest_Extension('BaseClass', ['BaseClass1', 'BaseClass2', 'BaseClass3']) == 'BaseClass.BaseClass1', "Strongest_Extension returned incorrect output for BaseClass and [BaseClass1, BaseClass2, BaseClass3]"
+assert Strongest_Extension("Point", ["Pointy", "Pointed", "Pointless"], 3) == "Point.Pointed", "Strongest_Extension failed"
+assert Strongest_Extension('MyClass4', ['MyClass1', 'MyClass2', 'MyClass3', 'MyClass4', 'MyClass5']) == 'MyClass4.MylastExtensionName', "Strongest_Extension failed for the test case 'MyClass4.MyClass5'"
+assert Strongest_Extension("Person", []) == "Person", "Expected: Person, Got: Person"
+assert Strongest_Extension("MyClass", ["MyClass1", "MyClass2", "MyClass3"]) == "MyClass.MylastName", "Strongest_Extension failed"
+assert Strongest_Extension("A", ["G", "H", "I", "J"]) == "A.GHI", "Strongest_Extension should return A.GHI"
+task HumanEval/153 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/154 has testcase num 10:
+assert cycpattern_check("abcd", "abdcba") == False
+assert cycpattern_check('hello', 'ell') == True, "cycpattern_check('hello', 'ell') should return True"
+assert cycpattern_check("hello", "ell") == True
+assert cycpattern_check('whassup','psus') == False
+assert cycpattern_check('abc', 'abd') == False
+assert cycpattern_check("himenss","simen") == True
+
+a = "abcd"
+b = "abd"
+assert cycpattern_check_2("efef","eeff") == False
+assert reverse_cycpattern_check("abab","baa") == False
+assert cycpattern_check2("hello", "ell") == True
+assert cycpattern_check("abcdefghijklmnopqrstuvwxyz", "abcd") == False
+task HumanEval/154 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/155 has testcase num 10:
+assert even_odd_count(1) == (0, 1), "1 should have 0 even and 1 odd"
+assert even_odd_count(14) == (1, 1)
+assert even_odd_count(345) == (1, 2), "even_odd_count should return (1, 2) for 345"
+assert even_odd_count(12345) == (2, 3), "even_odd_count should return (2, 3) for input 12345"
+assert even_odd_count(123456) == (3, 3), "even_odd_count is incorrect"
+assert even_odd_count(100) == (2, 2)
+assert even_odd_count(10) == (0, 2), "10 has 0 even digits and 2 odd digits."
+assert even_odd_count(12345678) == (15, 0)
+assert even_odd_count(20) == (2, 8)
+assert even_odd_count(12) == (4, 4), "12 has 4 even and 4 odd digits"
+task HumanEval/155 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/156 has testcase num 10:
+assert int_to_mini_roman(101) == "ci", "101 should be ci"
+assert int_to_mini_roman(2) == 'ii', "Expected 'ii', got {}".format(int_to_mini_roman(2))
+assert int_to_mini_roman(500) == 'd'
+assert int_to_mini_roman(7) == "vii", "Error: 7 should be 'vii' "
+assert int_to_mini_roman(8) == 'viii', "8 should be 'viii' not None"
+assert int_to_mini_roman(99) == "xc", "99 should be xc"
+assert int_to_mini_roman(400) == 'cdcd', "Expected: cdcd, Got: cdcd"
+assert int_to_mini_roman(5) == "v", "Expected: v, Got: 5"
+assert int_to_mini_roman(6) == "vi", "Expected 6 to be 'vi', got {}".format(int_to_mini_roman(6))
+assert int_to_mini_roman(90) == "XC", "90 should be XC"
+task HumanEval/156 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/157 has testcase num 10:
+assert right_angle_triangle(9, 15, 21) == False
+assert right_angle_triangle(8, 9, 10) == False, "8, 9, 10 is not a right-angled triangle"
+assert right_angle_triangle(3, 4, 5) == True, "right_angle_triangle should return True for 3, 4, 5"
+assert right_angle_triangle(1, 3, 3) == False, "1, 3, 3 is not a right-angled triangle"
+assert right_angle_triangle(5, 6, 7) == False, "5, 6, 7 is not a right-angled triangle"
+assert right_angle_triangle(6, 7, 8) == False, "right_angle_triangle(6, 7, 8) should return False"
+assert right_angle_triangle(10, 12, 13) == False
+assert right_angle_triangle(4, 5, 6) == False, "The function should return False"
+assert right_angle_triangle(6, 7, 8) == True
+assert right_angle_triangle(4, 5, 6) == False, "The function right_angle_triangle failed to return the correct output"
+task HumanEval/157 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/158 has testcase num 10:
+assert find_max(["name", "enam", "game"]) == "enam", "find_max is incorrect"
+assert find_max(["aaaaaaa", "bb", "cc"]) == "aaaaaaa"
+assert find_max(["abcdefghijklmnopqrstuvwxyz"]) == "abcdefghijklmnopqrstuvwxyz"
+assert find_max(["name", "of", "string"]) == "string", "Error in find_max"
+assert find_max(["aaaaaaa", "bb" ,"cc"]) == "aaaaaaa", "Error: find_max should return 'aaaaaaa'"
+assert find_max(["hello", "world", "hi"]) == "hello"
+assert find_max(["aaaaaaa", "bb" ,"cc"]) == "aaaaaaa", "find_max failed"
+assert find_max(["hello", "world", "how", "are", "you"]) == "you"
+assert find_max_v3(["aaaaaaa", "bb", "cc"]) == "aaaaaaa"
+assert find_max(["aaaaaaa", "bb" , "cc"]) == "aaaaaaa", "find_max failed for input ['aaaaaaa', 'bb', 'cc']"
+task HumanEval/158 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/159 has testcase num 10:
+assert eat(0, 0, 2) == [0, 2]
+assert eat(75, 50, 0) == [75, 0], "The result is not correct"
+assert eat(10, 2, 0) == [10, 0]
+assert eat(75, 100, 0) == [75, 0], "The result is not correct"
+assert eat(5, 10, 10) == [15, 0], "Expected [15, 0], got [5, 15] instead."
+assert eat(0, 100, [100, 0]) == [100, 0]
+assert eat(10, 60, 50) == [10, 50], "Incorrect result for eat(10, 60, 50)"
+assert eat(7, 40, [7, 5]) == [7, 5], "fail"
+assert eat(3, 5, 2) == [4, 1]
+assert eat(5, 2, 20) == [5, 12]
+task HumanEval/159 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/160 has testcase num 10:
+assert do_algebra(["+", "2"], [1, 2]) == 3
+assert do_algebra(['/', 1, 2], [1, 2]) == 0.5
+assert do_algebra(["+"], [2, 3]) == 5
+assert do_algebra(["/", "/"], [10, 2]) == 5
+assert do_algebra(["*", "*", 1, 2], [1, 2]) == 2
+assert do_algebra([(2, 3)], [2, 2]) == 2*3 + 2
+assert do_algebra(["/", "/", "2", "3", "5"], [2, 3, 5]) == 6
+assert do_algebra(["*", "/", "**"], [2, 3, 4]) == 256
+assert do_algebra([1, 2, 3], [2, 1]) == 2
+assert do_algebra([3, 1, 2], [3, 4, 5]) == 38
+task HumanEval/160 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/161 has testcase num 10:
+assert solve('hello') == 'HELLO', 'hello should become HELLO'
+assert solve("") == "", "empty string"
+assert solve('') == '', 'Empty string should return an empty string'
+assert solve("abcdefghijklmnopqrstuvwxyz") == "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "The function does not work properly"
+assert solve('0101') == '1010', 'the solution is not correct'
+assert solve(4.2) == "4.2", "float"
+assert solve("  abcde") == "  abcde"
+assert solve("Hello, world!") == "Hello, WORLD!", "solve(s='Hello, world!') is incorrect"
+assert solve("Reverse the string") == "REVERSE THE STRING"
+assert solve("Hello, world!") == "HeLlO, wOrLD!", "The solution for the second test case is incorrect"
+task HumanEval/161 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/162 has testcase num 10:
+assert string_to_md5("") == None, "string_to_md5 should return None when given an empty string."
+assert string_to_md5(b"") == None, "string_to_md5 should return None for an empty string"
+assert string_to_md5('') == None, "string_to_md5 should return None when input is empty string"
+assert string_to_md5(None) == None, "string_to_md5 should return None for an empty string."
+assert string_to_md5(u"") == None, "string_to_md5 is incorrect"
+assert string_to_md5("hello world") == "e7a53b515009891f6c2312902d7a9366f2b", "string_to_md5 should return the correct md5 hash for the input string"
+assert string_to_md5(b"hello") == "0a1f265ecd09ae1e088157570f81da4f1", "string_to_md5 should return the correct md5 hash for a string"
+assert string_to_md5(b"Hello, World!") == "b61c09b9e31b74c87c92d5b1f5a5f77203b", "string_to_md5 should return the correct md5 hash for the given string"
+assert string_to_md5('hello world') == '775c16eb8e9a223c5380612c19d6f7b15a', "string_to_md5('hello world') != '775c16eb8e9a223c5380612c19d6f7b15a'"
+assert string_to_md5("hello") == "e7b10a4c4838e79d9452f8387a92a92f88b073647", "string_to_md5 should return the correct md5 hash for a string"
+task HumanEval/162 correct percent is 0.5
+++++++++++++++++++++++++++++++++++++++++++++++
+task HumanEval/163 has testcase num 10:
+assert generate_integers(1, 100) == [2, 4, 6, 8], "generate_integers failed"
+assert generate_integers(99, 101) == [], "Error in generate_integers"
+assert generate_integers(1, 10) == [2, 4, 6, 8], \
+   "generate_integers should return [2, 4, 6, 8] for a=1 and b=10"
+assert generate_integers(-1, 1) == [], "generate_integers should return an empty list when given a negative number"
+assert generate_integers(1, 90) == [2, 4, 6, 8]
+assert generate_integers(11, 12) == [12], "10. generate\_integers failed"
+assert generate_integers(0, 10) == [], "generate_integers(0, 10) should return an empty list"
+assert generate_integers(0, 9) == [0, 2, 4, 6, 8], "generate_integers not correct"
+assert generate_integers(1, 1) == [1], "generate_integers failed"
+assert generate_integers(1, -1) == [], "generate_integers should return an empty list when given a negative number"
+task HumanEval/163 correct percent is 0.5
+correct percent : 0.49096774193548387
+Data with length 164, max_num:0.5, min_num:0.0, mid_num:0.5, mean:0.47865853658536583, diff:0.5
+bins:
+[0.  0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1. ]
+=====================================================
+task HumanEval/0 has 156 correct testcases and 157 wrong testcases.
+the correct percent is 0.4984025559105431
+=====================================================
+task HumanEval/1 has 6 correct testcases and 331 wrong testcases.
+the correct percent is 0.017804154302670624
+=====================================================
+task HumanEval/2 has 32 correct testcases and 556 wrong testcases.
+the correct percent is 0.05442176870748299
+=====================================================
+task HumanEval/3 has 283 correct testcases and 232 wrong testcases.
+the correct percent is 0.5495145631067961
+=====================================================
+task HumanEval/4 has 15 correct testcases and 281 wrong testcases.
+the correct percent is 0.05067567567567568
+=====================================================
+task HumanEval/5 has 10 correct testcases and 145 wrong testcases.
+the correct percent is 0.06451612903225806
+=====================================================
+task HumanEval/6 has 47 correct testcases and 547 wrong testcases.
+the correct percent is 0.07912457912457913
+=====================================================
+task HumanEval/7 has 152 correct testcases and 262 wrong testcases.
+the correct percent is 0.3671497584541063
+=====================================================
+task HumanEval/8 has 7 correct testcases and 220 wrong testcases.
+the correct percent is 0.030837004405286344
+=====================================================
+task HumanEval/9 has 16 correct testcases and 89 wrong testcases.
+the correct percent is 0.1523809523809524
+=====================================================
+task HumanEval/10 has 53 correct testcases and 175 wrong testcases.
+the correct percent is 0.2324561403508772
+=====================================================
+task HumanEval/11 has 85 correct testcases and 570 wrong testcases.
+the correct percent is 0.1297709923664122
+=====================================================
+task HumanEval/12 has 130 correct testcases and 137 wrong testcases.
+the correct percent is 0.4868913857677903
+=====================================================
+task HumanEval/13 has 180 correct testcases and 307 wrong testcases.
+the correct percent is 0.36960985626283366
+=====================================================
+task HumanEval/14 has 18 correct testcases and 340 wrong testcases.
+the correct percent is 0.05027932960893855
+=====================================================
+task HumanEval/15 has 17 correct testcases and 383 wrong testcases.
+the correct percent is 0.0425
+=====================================================
+task HumanEval/16 has 134 correct testcases and 493 wrong testcases.
+the correct percent is 0.21371610845295055
+=====================================================
+task HumanEval/17 has 7 correct testcases and 413 wrong testcases.
+the correct percent is 0.016666666666666666
+=====================================================
+task HumanEval/18 has 129 correct testcases and 367 wrong testcases.
+the correct percent is 0.2600806451612903
+=====================================================
+task HumanEval/19 has 174 correct testcases and 631 wrong testcases.
+the correct percent is 0.21614906832298136
+=====================================================
+task HumanEval/20 has 74 correct testcases and 233 wrong testcases.
+the correct percent is 0.24104234527687296
+=====================================================
+task HumanEval/21 has 13 correct testcases and 284 wrong testcases.
+the correct percent is 0.04377104377104377
+=====================================================
+task HumanEval/22 has 77 correct testcases and 202 wrong testcases.
+the correct percent is 0.27598566308243727
+=====================================================
+task HumanEval/23 has 52 correct testcases and 172 wrong testcases.
+the correct percent is 0.23214285714285715
+=====================================================
+task HumanEval/24 has 21 correct testcases and 632 wrong testcases.
+the correct percent is 0.03215926493108729
+=====================================================
+task HumanEval/25 has 29 correct testcases and 606 wrong testcases.
+the correct percent is 0.04566929133858268
+=====================================================
+task HumanEval/26 has 8 correct testcases and 212 wrong testcases.
+the correct percent is 0.03636363636363636
+=====================================================
+task HumanEval/27 has 38 correct testcases and 238 wrong testcases.
+the correct percent is 0.13768115942028986
+=====================================================
+task HumanEval/28 has 20 correct testcases and 96 wrong testcases.
+the correct percent is 0.1724137931034483
+=====================================================
+task HumanEval/29 has 169 correct testcases and 258 wrong testcases.
+the correct percent is 0.3957845433255269
+=====================================================
+task HumanEval/30 has 55 correct testcases and 296 wrong testcases.
+the correct percent is 0.15669515669515668
+=====================================================
+task HumanEval/31 has 46 correct testcases and 139 wrong testcases.
+the correct percent is 0.24864864864864866
+=====================================================
+task HumanEval/32 has 7 correct testcases and 503 wrong testcases.
+the correct percent is 0.013725490196078431
+=====================================================
+task HumanEval/33 has 27 correct testcases and 164 wrong testcases.
+the correct percent is 0.14136125654450263
+=====================================================
+task HumanEval/34 has 69 correct testcases and 55 wrong testcases.
+the correct percent is 0.5564516129032258
+=====================================================
+task HumanEval/35 has 112 correct testcases and 56 wrong testcases.
+the correct percent is 0.6666666666666666
+=====================================================
+task HumanEval/36 has 48 correct testcases and 886 wrong testcases.
+the correct percent is 0.05139186295503212
+=====================================================
+task HumanEval/37 has 15 correct testcases and 156 wrong testcases.
+the correct percent is 0.08771929824561403
+=====================================================
+task HumanEval/38 has 111 correct testcases and 406 wrong testcases.
+the correct percent is 0.21470019342359767
+=====================================================
+task HumanEval/39 has 4 correct testcases and 864 wrong testcases.
+the correct percent is 0.004608294930875576
+=====================================================
+task HumanEval/40 has 137 correct testcases and 109 wrong testcases.
+the correct percent is 0.556910569105691
+=====================================================
+task HumanEval/41 has 2 correct testcases and 436 wrong testcases.
+the correct percent is 0.0045662100456621
+=====================================================
+task HumanEval/42 has 19 correct testcases and 77 wrong testcases.
+the correct percent is 0.19791666666666666
+=====================================================
+task HumanEval/43 has 153 correct testcases and 122 wrong testcases.
+the correct percent is 0.5563636363636364
+=====================================================
+task HumanEval/44 has 55 correct testcases and 844 wrong testcases.
+the correct percent is 0.06117908787541713
+=====================================================
+task HumanEval/45 has 27 correct testcases and 347 wrong testcases.
+the correct percent is 0.07219251336898395
+=====================================================
+task HumanEval/46 has 9 correct testcases and 775 wrong testcases.
+the correct percent is 0.011479591836734694
+=====================================================
+task HumanEval/47 has 54 correct testcases and 111 wrong testcases.
+the correct percent is 0.32727272727272727
+=====================================================
+task HumanEval/48 has 69 correct testcases and 95 wrong testcases.
+the correct percent is 0.42073170731707316
+=====================================================
+task HumanEval/49 has 97 correct testcases and 840 wrong testcases.
+the correct percent is 0.10352187833511206
+=====================================================
+task HumanEval/50 has 75 correct testcases and 726 wrong testcases.
+the correct percent is 0.09363295880149813
+=====================================================
+task HumanEval/51 has 17 correct testcases and 258 wrong testcases.
+the correct percent is 0.06181818181818182
+=====================================================
+task HumanEval/52 has 107 correct testcases and 188 wrong testcases.
+the correct percent is 0.36271186440677966
+=====================================================
+task HumanEval/53 has 141 correct testcases and 85 wrong testcases.
+the correct percent is 0.6238938053097345
+=====================================================
+task HumanEval/54 has 153 correct testcases and 88 wrong testcases.
+the correct percent is 0.6348547717842323
+=====================================================
+task HumanEval/55 has 26 correct testcases and 320 wrong testcases.
+the correct percent is 0.07514450867052024
+=====================================================
+task HumanEval/56 has 261 correct testcases and 260 wrong testcases.
+the correct percent is 0.5009596928982726
+=====================================================
+task HumanEval/57 has 127 correct testcases and 176 wrong testcases.
+the correct percent is 0.41914191419141916
+=====================================================
+task HumanEval/58 has 85 correct testcases and 307 wrong testcases.
+the correct percent is 0.21683673469387754
+=====================================================
+task HumanEval/59 has 48 correct testcases and 709 wrong testcases.
+the correct percent is 0.06340819022457067
+=====================================================
+task HumanEval/60 has 23 correct testcases and 319 wrong testcases.
+the correct percent is 0.06725146198830409
+=====================================================
+task HumanEval/61 has 126 correct testcases and 233 wrong testcases.
+the correct percent is 0.35097493036211697
+=====================================================
+task HumanEval/62 has 5 correct testcases and 343 wrong testcases.
+the correct percent is 0.014367816091954023
+=====================================================
+task HumanEval/63 has 7 correct testcases and 628 wrong testcases.
+the correct percent is 0.011023622047244094
+=====================================================
+task HumanEval/64 has 158 correct testcases and 496 wrong testcases.
+the correct percent is 0.2415902140672783
+=====================================================
+task HumanEval/65 has 47 correct testcases and 937 wrong testcases.
+the correct percent is 0.047764227642276426
+=====================================================
+task HumanEval/66 has 22 correct testcases and 729 wrong testcases.
+the correct percent is 0.02929427430093209
+=====================================================
+task HumanEval/67 has 25 correct testcases and 113 wrong testcases.
+the correct percent is 0.18115942028985507
+=====================================================
+task HumanEval/68 has 11 correct testcases and 377 wrong testcases.
+the correct percent is 0.028350515463917526
+=====================================================
+task HumanEval/69 has 132 correct testcases and 356 wrong testcases.
+the correct percent is 0.27049180327868855
+=====================================================
+task HumanEval/70 has 7 correct testcases and 232 wrong testcases.
+the correct percent is 0.029288702928870293
+=====================================================
+task HumanEval/71 has 97 correct testcases and 485 wrong testcases.
+the correct percent is 0.16666666666666666
+=====================================================
+task HumanEval/72 has 201 correct testcases and 292 wrong testcases.
+the correct percent is 0.4077079107505071
+=====================================================
+task HumanEval/73 has 52 correct testcases and 334 wrong testcases.
+the correct percent is 0.13471502590673576
+=====================================================
+task HumanEval/74 has 131 correct testcases and 294 wrong testcases.
+the correct percent is 0.30823529411764705
+=====================================================
+task HumanEval/75 has 239 correct testcases and 424 wrong testcases.
+the correct percent is 0.36048265460030166
+=====================================================
+task HumanEval/76 has 242 correct testcases and 279 wrong testcases.
+the correct percent is 0.46449136276391556
+=====================================================
+task HumanEval/77 has 207 correct testcases and 618 wrong testcases.
+the correct percent is 0.2509090909090909
+=====================================================
+task HumanEval/78 has 118 correct testcases and 892 wrong testcases.
+the correct percent is 0.11683168316831684
+=====================================================
+task HumanEval/79 has 0 correct testcases and 690 wrong testcases.
+the correct percent is 0.0
+=====================================================
+task HumanEval/80 has 329 correct testcases and 329 wrong testcases.
+the correct percent is 0.5
+=====================================================
+task HumanEval/81 has 3 correct testcases and 89 wrong testcases.
+the correct percent is 0.03260869565217391
+=====================================================
+task HumanEval/82 has 172 correct testcases and 551 wrong testcases.
+the correct percent is 0.23789764868603042
+=====================================================
+task HumanEval/83 has 1 correct testcases and 746 wrong testcases.
+the correct percent is 0.0013386880856760374
+=====================================================
+task HumanEval/84 has 0 correct testcases and 784 wrong testcases.
+the correct percent is 0.0
+=====================================================
+task HumanEval/85 has 0 correct testcases and 177 wrong testcases.
+the correct percent is 0.0
+=====================================================
+task HumanEval/86 has 4 correct testcases and 200 wrong testcases.
+the correct percent is 0.0196078431372549
+=====================================================
+task HumanEval/87 has 6 correct testcases and 324 wrong testcases.
+the correct percent is 0.01818181818181818
+=====================================================
+task HumanEval/88 has 84 correct testcases and 251 wrong testcases.
+the correct percent is 0.2507462686567164
+=====================================================
+task HumanEval/89 has 24 correct testcases and 475 wrong testcases.
+the correct percent is 0.04809619238476954
+=====================================================
+task HumanEval/90 has 5 correct testcases and 25 wrong testcases.
+the correct percent is 0.16666666666666666
+=====================================================
+task HumanEval/91 has 222 correct testcases and 249 wrong testcases.
+the correct percent is 0.4713375796178344
+=====================================================
+task HumanEval/92 has 235 correct testcases and 225 wrong testcases.
+the correct percent is 0.5108695652173914
+=====================================================
+task HumanEval/93 has 20 correct testcases and 357 wrong testcases.
+the correct percent is 0.05305039787798409
+=====================================================
+task HumanEval/94 has 10 correct testcases and 221 wrong testcases.
+the correct percent is 0.04329004329004329
+=====================================================
+task HumanEval/95 has 219 correct testcases and 260 wrong testcases.
+the correct percent is 0.4572025052192067
+=====================================================
+task HumanEval/96 has 12 correct testcases and 221 wrong testcases.
+the correct percent is 0.05150214592274678
+=====================================================
+task HumanEval/97 has 57 correct testcases and 553 wrong testcases.
+the correct percent is 0.09344262295081968
+=====================================================
+task HumanEval/98 has 112 correct testcases and 524 wrong testcases.
+the correct percent is 0.1761006289308176
+=====================================================
+task HumanEval/99 has 306 correct testcases and 576 wrong testcases.
+the correct percent is 0.3469387755102041
+=====================================================
+task HumanEval/100 has 4 correct testcases and 665 wrong testcases.
+the correct percent is 0.005979073243647235
+=====================================================
+task HumanEval/101 has 152 correct testcases and 254 wrong testcases.
+the correct percent is 0.37438423645320196
+=====================================================
+task HumanEval/102 has 73 correct testcases and 581 wrong testcases.
+the correct percent is 0.11162079510703364
+=====================================================
+task HumanEval/103 has 34 correct testcases and 815 wrong testcases.
+the correct percent is 0.04004711425206125
+=====================================================
+task HumanEval/104 has 17 correct testcases and 372 wrong testcases.
+the correct percent is 0.043701799485861184
+=====================================================
+task HumanEval/105 has 5 correct testcases and 209 wrong testcases.
+the correct percent is 0.02336448598130841
+=====================================================
+task HumanEval/106 has 4 correct testcases and 517 wrong testcases.
+the correct percent is 0.007677543186180422
+=====================================================
+task HumanEval/107 has 10 correct testcases and 751 wrong testcases.
+the correct percent is 0.013140604467805518
+=====================================================
+task HumanEval/108 has 39 correct testcases and 390 wrong testcases.
+the correct percent is 0.09090909090909091
+=====================================================
+task HumanEval/109 has 88 correct testcases and 238 wrong testcases.
+the correct percent is 0.26993865030674846
+=====================================================
+task HumanEval/110 has 69 correct testcases and 211 wrong testcases.
+the correct percent is 0.24642857142857144
+=====================================================
+task HumanEval/111 has 3 correct testcases and 422 wrong testcases.
+the correct percent is 0.007058823529411765
+=====================================================
+task HumanEval/112 has 42 correct testcases and 682 wrong testcases.
+the correct percent is 0.058011049723756904
+=====================================================
+task HumanEval/113 has 0 correct testcases and 376 wrong testcases.
+the correct percent is 0.0
+=====================================================
+task HumanEval/114 has 28 correct testcases and 411 wrong testcases.
+the correct percent is 0.06378132118451026
+=====================================================
+task HumanEval/115 has 17 correct testcases and 540 wrong testcases.
+the correct percent is 0.03052064631956912
+=====================================================
+task HumanEval/116 has 29 correct testcases and 251 wrong testcases.
+the correct percent is 0.10357142857142858
+=====================================================
+task HumanEval/117 has 93 correct testcases and 680 wrong testcases.
+the correct percent is 0.1203104786545925
+=====================================================
+task HumanEval/118 has 124 correct testcases and 494 wrong testcases.
+the correct percent is 0.20064724919093851
+=====================================================
+task HumanEval/119 has 0 correct testcases and 351 wrong testcases.
+the correct percent is 0.0
+=====================================================
+task HumanEval/120 has 73 correct testcases and 334 wrong testcases.
+the correct percent is 0.17936117936117937
+=====================================================
+task HumanEval/121 has 5 correct testcases and 195 wrong testcases.
+the correct percent is 0.025
+=====================================================
+task HumanEval/122 has 31 correct testcases and 531 wrong testcases.
+the correct percent is 0.05516014234875445
+=====================================================
+task HumanEval/123 has 2 correct testcases and 398 wrong testcases.
+the correct percent is 0.005
+=====================================================
+task HumanEval/124 has 27 correct testcases and 57 wrong testcases.
+the correct percent is 0.32142857142857145
+=====================================================
+task HumanEval/125 has 52 correct testcases and 397 wrong testcases.
+the correct percent is 0.11581291759465479
+=====================================================
+task HumanEval/126 has 184 correct testcases and 231 wrong testcases.
+the correct percent is 0.4433734939759036
+=====================================================
+task HumanEval/127 has 0 correct testcases and 248 wrong testcases.
+the correct percent is 0.0
+=====================================================
+task HumanEval/128 has 40 correct testcases and 377 wrong testcases.
+the correct percent is 0.09592326139088729
+=====================================================
+task HumanEval/129 has 14 correct testcases and 297 wrong testcases.
+the correct percent is 0.04501607717041801
+=====================================================
+task HumanEval/130 has 0 correct testcases and 1268 wrong testcases.
+the correct percent is 0.0
+=====================================================
+task HumanEval/131 has 58 correct testcases and 790 wrong testcases.
+the correct percent is 0.06839622641509434
+=====================================================
+task HumanEval/132 has 14 correct testcases and 33 wrong testcases.
+the correct percent is 0.2978723404255319
+=====================================================
+task HumanEval/133 has 14 correct testcases and 315 wrong testcases.
+the correct percent is 0.0425531914893617
+=====================================================
+task HumanEval/134 has 155 correct testcases and 124 wrong testcases.
+the correct percent is 0.5555555555555556
+=====================================================
+task HumanEval/135 has 51 correct testcases and 242 wrong testcases.
+the correct percent is 0.17406143344709898
+=====================================================
+task HumanEval/136 has 11 correct testcases and 471 wrong testcases.
+the correct percent is 0.022821576763485476
+=====================================================
+task HumanEval/137 has 38 correct testcases and 78 wrong testcases.
+the correct percent is 0.3275862068965517
+=====================================================
+task HumanEval/138 has 50 correct testcases and 548 wrong testcases.
+the correct percent is 0.08361204013377926
+=====================================================
+task HumanEval/139 has 20 correct testcases and 550 wrong testcases.
+the correct percent is 0.03508771929824561
+=====================================================
+task HumanEval/140 has 28 correct testcases and 287 wrong testcases.
+the correct percent is 0.08888888888888889
+=====================================================
+task HumanEval/141 has 518 correct testcases and 230 wrong testcases.
+the correct percent is 0.6925133689839572
+=====================================================
+task HumanEval/142 has 3 correct testcases and 342 wrong testcases.
+the correct percent is 0.008695652173913044
+=====================================================
+task HumanEval/143 has 49 correct testcases and 376 wrong testcases.
+the correct percent is 0.11529411764705882
+=====================================================
+task HumanEval/144 has 122 correct testcases and 193 wrong testcases.
+the correct percent is 0.3873015873015873
+=====================================================
+task HumanEval/145 has 86 correct testcases and 214 wrong testcases.
+the correct percent is 0.2866666666666667
+=====================================================
+task HumanEval/146 has 37 correct testcases and 276 wrong testcases.
+the correct percent is 0.1182108626198083
+=====================================================
+task HumanEval/147 has 9 correct testcases and 827 wrong testcases.
+the correct percent is 0.01076555023923445
+=====================================================
+task HumanEval/148 has 52 correct testcases and 414 wrong testcases.
+the correct percent is 0.11158798283261803
+=====================================================
+task HumanEval/149 has 1 correct testcases and 412 wrong testcases.
+the correct percent is 0.002421307506053269
+=====================================================
+task HumanEval/150 has 407 correct testcases and 646 wrong testcases.
+the correct percent is 0.3865147198480532
+=====================================================
+task HumanEval/151 has 14 correct testcases and 133 wrong testcases.
+the correct percent is 0.09523809523809523
+=====================================================
+task HumanEval/152 has 6 correct testcases and 63 wrong testcases.
+the correct percent is 0.08695652173913043
+=====================================================
+task HumanEval/153 has 172 correct testcases and 287 wrong testcases.
+the correct percent is 0.3747276688453159
+=====================================================
+task HumanEval/154 has 55 correct testcases and 70 wrong testcases.
+the correct percent is 0.44
+=====================================================
+task HumanEval/155 has 28 correct testcases and 775 wrong testcases.
+the correct percent is 0.034869240348692404
+=====================================================
+task HumanEval/156 has 41 correct testcases and 591 wrong testcases.
+the correct percent is 0.06487341772151899
+=====================================================
+task HumanEval/157 has 143 correct testcases and 303 wrong testcases.
+the correct percent is 0.32062780269058294
+=====================================================
+task HumanEval/158 has 28 correct testcases and 110 wrong testcases.
+the correct percent is 0.2028985507246377
+=====================================================
+task HumanEval/159 has 16 correct testcases and 763 wrong testcases.
+the correct percent is 0.02053915275994865
+=====================================================
+task HumanEval/160 has 53 correct testcases and 498 wrong testcases.
+the correct percent is 0.09618874773139746
+=====================================================
+task HumanEval/161 has 116 correct testcases and 640 wrong testcases.
+the correct percent is 0.15343915343915343
+=====================================================
+task HumanEval/162 has 5 correct testcases and 203 wrong testcases.
+the correct percent is 0.02403846153846154
+=====================================================
+task HumanEval/163 has 41 correct testcases and 283 wrong testcases.
+the correct percent is 0.12654320987654322
