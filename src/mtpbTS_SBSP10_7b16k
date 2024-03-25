@@ -1,0 +1,46 @@
+Task 0 gens 1 solutions in cir 0
+check_program: 
+# In this coding exercise, we write a python function which sum two positive integers and return the answer in binary. We do not use augmented assignment operations (+=, *=, etc.) for clarity.
+# The function 'binary_add' will take the arguments 'n1', an int and 'n2', an int. It will return a str.
+def binary_add(n1, n2):
+
+    return bin(n1 + n2)[2:]
+
+def check(binary_add):
+    assert binary_add(2, 3) == '101'
+    assert binary_add(5, 12) == '10001'
+    assert binary_add(98, 99) == '11000101'
+    assert binary_add(459, 256) == '1011001011'
+    assert binary_add(1111, 111111) == '11011011001011110'
+
+check(binary_add)
+result : passed
+solution 0 passed True
+Task 0 gens 1 solutions in cir 1
+check_program: 
+# In this coding exercise, we write a python function which sum two positive integers and return the answer in binary. We do not use augmented assignment operations (+=, *=, etc.) for clarity.
+# The function 'binary_add' will take the arguments 'n1', an int and 'n2', an int. It will return a str.
+def binary_add(n1, n2):
+
+    return bin(n1 + n2)[2:]
+
+def check(binary_add):
+    assert binary_add(2, 3) == '101'
+    assert binary_add(5, 12) == '10001'
+    assert binary_add(98, 99) == '11000101'
+    assert binary_add(459, 256) == '1011001011'
+    assert binary_add(1111, 111111) == '11011011001011110'
+
+check(binary_add)
+Traceback (most recent call last):
+  File "/workspace/S/hexiaolong/codex/self-debug/src/evaluate.py", line 212, in <module>
+    get_pass_k(results,data,1,10)
+  File "/workspace/S/hexiaolong/codex/self-debug/src/evaluate.py", line 64, in get_pass_k
+    passed = get_truePass(problem,solution)
+  File "/workspace/S/hexiaolong/codex/self-debug/src/evaluate.py", line 23, in get_truePass
+    result = future.result()
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/concurrent/futures/_base.py", line 441, in result
+    self._condition.wait(timeout)
+  File "/home/S/hexiaolong/anaconda3/envs/codex/lib/python3.9/threading.py", line 312, in wait
+    waiter.acquire()
+KeyboardInterrupt

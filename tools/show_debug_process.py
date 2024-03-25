@@ -106,6 +106,30 @@ cir_record = {
     
     "treesearch_SBSP10_7b16k_pT@10":[27,35,50,58,61,64,67,70,70,70,70],
     "treesearch_SBSP10_7b16k_pT@1":[27,35,49,57,60,63,66,70,70,70,70],
+    
+    "mbppTS_SBSP1_7b16k":[37, 40, 41, 43, 44, 46, 48, 48, 48, 50, 51],
+    "mbppNTS_SBSP10_7b16k_pass@1":[44, 48, 51, 53, 55, 56, 56, 56, 57, 57, 57],
+    "mbppNTS_SBSP10_7b16k_pass@10":[44, 60, 65, 67, 69, 69, 69, 69, 70, 70, 71],
+    "mbppTFTS_SBSP10_7b16k_pass@1":[38, 50, 54, 59, 59, 59, 60, 60, 60, 60, 60],
+    "mbppTFTS_SBSP10_7b16k_pass@10":[38, 57, 62, 70, 71, 72, 72, 72, 72, 72, 72],
+    "mbppTS_SBSP10_7b16k_pass@1":[37, 48, 51, 55, 58, 58, 58, 58, 58, 58, 58],
+    "mbppTS_SBSP10_7b16k_pass@10":[37, 57, 65, 69, 70, 70, 70, 70, 70, 70, 70],
+    
+    "mtpbTS_SBSP1_7b16k":"blue",
+    "mtpbNTS_SBSP10_7b16k_pass@1":"grey",
+    "mtpbNTS_SBSP10_7b16k_pass@10":"dark",
+    "mtpbTFTS_SBSP10_7b16k_pass@1":[4, 9, 13, 15, 18, 19, 19, 19, 19, 19, 19],
+    "mtpbTFTS_SBSP10_7b16k_pass@10":[4, 16, 25, 33, 33, 33, 33, 33, 33, 33, 33],
+    "mtpbTS_SBSP10_7b16k_pass@1":[6, 10, 11, 13, 17, 17, 17, 17, 17, 17, 17],
+    "mtpbTS_SBSP10_7b16k_pass@10":[6, 15, 22, 23, 26, 26, 27, 27, 28, 28, 28],
+    
+    "bigbenchTFTS_SBSP1_7b16k":[7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
+    "bigbenchNTS_SBSP10_7b16k_pass@1":[9, 10, 12, 12, 12, 12, 12, 12, 12, 12, 12],
+    "bigbenchNTS_SBSP10_7b16k_pass@10":[9, 10, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+    "bigbenchTFTS_SBSP10_7b16k_pass@1":[7, 7, 8, 11, 12, 12, 12, 12, 12, 12, 12],
+    "bigbenchTFTS_SBSP10_7b16k_pass@10":[7, 10, 11, 13, 13, 13, 13, 13, 13, 13, 13],
+    "bigbenchTS_SBSP10_7b16k_pass@1":[7, 9, 9, 11, 11, 11, 11, 11, 11, 11, 11],
+    "bigbenchTS_SBSP10_7b16k_pass@10":[7, 10, 11, 13, 13, 13, 13, 13, 13, 13, 13],
 }
 
 color_map = {
@@ -170,6 +194,31 @@ color_map = {
     "UTfeedback_CODETv3_sortby_solution_num_7b16k_pT@1":"darkblue",
     "treesearch_SBSP10_7b16k_pT@10":"grey",
     "treesearch_SBSP10_7b16k_pT@1":"black",
+    
+    "mbppTS_SBSP1_7b16k":"blue",
+    "mbppNTS_SBSP10_7b16k_pass@1":"grey",
+    "mbppNTS_SBSP10_7b16k_pass@10":"dark",
+    "mbppTS_SBSP10_7b16k_pass@1":"orange",
+    "mbppTS_SBSP10_7b16k_pass@10":"darkorange",
+    "mbppTFTS_SBSP10_7b16k_pass@1":"green",
+    "mbppTFTS_SBSP10_7b16k_pass@10":"darkgreen",
+    
+    
+    "mtpbTFTS_SBSP1_7b16k":"blue",
+    "mtpbNTS_SBSP10_7b16k_pass@1":"grey",
+    "mtpbNTS_SBSP10_7b16k_pass@10":"dark",
+    "mtpbTFTS_SBSP10_7b16k_pass@1":"green",
+    "mtpbTFTS_SBSP10_7b16k_pass@10":"darkgreen",
+    "mtpbTS_SBSP10_7b16k_pass@1":"orange",
+    "mtpbTS_SBSP10_7b16k_pass@10":"darkorange",
+    
+    "bigbenchTFTS_SBSP1_7b16k":"blue",
+    "bigbenchNTS_SBSP10_7b16k_pass@1":"grey",
+    "bigbenchNTS_SBSP10_7b16k_pass@10":"dark",
+    "bigbenchTFTS_SBSP10_7b16k_pass@1":"green",
+    "bigbenchTFTS_SBSP10_7b16k_pass@10":"darkgreen",
+    "bigbenchTS_SBSP10_7b16k_pass@1":"orange",
+    "bigbenchTS_SBSP10_7b16k_pass@10":"darkorange",
     
 }
 
@@ -302,8 +351,8 @@ if __name__=="__main__":
     # print(f"total pass num is {len(total_pass)} never pass num is {len(total-total_pass)}:\n{sorted(total-total_pass)}")
     data = {}
     show_label = [
-        "UT_SBSP10_7b16k_tT",
-        "UT_SBSP10_7b16k_pT",
+        # "UT_SBSP10_7b16k_tT",
+        # "UT_SBSP10_7b16k_pT",
         # "UT_SBSP10_7b16k_pT_pass@1",
         # "UT_SBSP10_7b16k_tT_pass@1",
         # "UTfeedback_CODETRate_alltestcasesrm_7b16k_pT_pass@10",
@@ -328,11 +377,34 @@ if __name__=="__main__":
         # "UTfeedback_PassRate_mix05_10_7b16k_pT",
         # "UT_7b16k_t1_pT",
         # "UTfeedback_CODETv3_t7_7b16k_pT_pass@10",
-        "UTfeedback_CODETv3_t7_7b16k_pT_pass@10",
+        # "UTfeedback_CODETv3_t7_7b16k_pT_pass@10",
         # "UTfeedback_CODETv3_t8_7b16k_pT_pass@10",
-        "UTfeedback_CODETv3_t8_7b16k_pT_pass@10",
+        # "UTfeedback_CODETv3_t8_7b16k_pT_pass@10",
         # "UTfeedback_CODETv3_sortby_solution_num_7b16k_pT@10",
-        "UTfeedback_CODETv3_sortby_solution_num_7b16k_pT@10",
+        # "UTfeedback_CODETv3_sortby_solution_num_7b16k_pT@10",
+        # "mbppTS_SBSP1_7b16k",
+        # "mbppNTS_SBSP10_7b16k_pass@1",
+        # # "mbppNTS_SBSP10_7b16k_pass@10",
+        # "mbppTFTS_SBSP10_7b16k_pass@1",
+        # # "mbppTFTS_SBSP10_7b16k_pass@10",
+        # "mbppTS_SBSP10_7b16k_pass@1",
+        # # "mbppTS_SBSP10_7b16k_pass@10",
+        
+        # "mtpbTFTS_SBSP1_7b16k",
+        # "mtpbNTS_SBSP10_7b16k_pass@1",
+        # "mtpbNTS_SBSP10_7b16k_pass@10",
+        # "mtpbTFTS_SBSP10_7b16k_pass@1",
+        # "mtpbTFTS_SBSP10_7b16k_pass@10",
+        # "mtpbTS_SBSP10_7b16k_pass@1",
+        # "mtpbTS_SBSP10_7b16k_pass@10",
+        
+        "bigbenchTFTS_SBSP1_7b16k",
+        "bigbenchNTS_SBSP10_7b16k_pass@1",
+        # "bigbenchNTS_SBSP10_7b16k_pass@10",
+        "bigbenchTFTS_SBSP10_7b16k_pass@1",
+        # "bigbenchTFTS_SBSP10_7b16k_pass@10",
+        "bigbenchTS_SBSP10_7b16k_pass@1",
+        # "bigbenchTS_SBSP10_7b16k_pass@10",
         ]
     show_label2 = [
         # "UTfeedback_SBSP_7b16k_halftT",
@@ -342,13 +414,14 @@ if __name__=="__main__":
         # "UTfeedback_SBSP_7b16k_halftT5_s10",
         # "UTfeedback_SBSP_7b16k_halftT6s256",
     ]
+    num_task = 200
     for label,value in cir_record.items():
         if label in show_label:
-            data[label] = [round((1.0*x)/164*100,1) for x in value]
+            data[label] = [round((1.0*x)/num_task*100,1) for x in value]
     ys = []
     for label in show_label2:
         d = cir_record[label]
-        ys.append([round((1.0*x)/164*100,1) for x in d])
+        ys.append([round((1.0*x)/num_task*100,1) for x in d])
     ys = np.array(ys)
     mean_ys = np.mean(ys,axis=0)
     mean_ys = np.around(mean_ys,decimals=1)
@@ -356,7 +429,7 @@ if __name__=="__main__":
     print(f"mean_ys:{mean_ys}, std_ys:{std_ys}")
     data2 = {"x":range(11),"mean":mean_ys,"std":std_ys,"label":"halftT"}
     # draw_plots_mean_std(data, data2,color_map, "../image/CODETv3.jpg")
-    draw_plots_percent(data,color_map,"../image/testcase_filter_pass@10.jpg")
+    draw_plots_percent(data,color_map,"../image/bigbench_7b16k_pass@1.jpg")
     # fix_lengths = {9: 2740, 10: 930, 8: 897, 11: 457, 12: 176, 13: 86}
     # fix_percent = {6: 2094, 5: 1650, 7: 1169, 4: 225, 8: 141, 3: 7}
     

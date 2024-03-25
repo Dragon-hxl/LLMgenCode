@@ -22,6 +22,7 @@ def get_truePass(problem,solution):
         future = executor.submit(check_test_correctness, *args)
         result = future.result()
         passed = result["passed"]
+    print(f"result : {result['result']}")
     return passed
 
 def tid_to_int(tid):
@@ -42,6 +43,7 @@ def get_pass_k(results,data,k=10,n=10):
     task_cir_pass = defaultdict(list)
     checked_task = set()
     pass_k_list = defaultdict(list)
+    result_num = len(results)
     for result in results:
         task_id = tid_to_int(result["task_id"])
         if task_id in checked_task:
@@ -84,7 +86,7 @@ def get_pass_k(results,data,k=10,n=10):
     
     pass_task_num = [0 for i in range(11)]
     for k,v in passed_per_cir.items():
-        print(f"cir {k},passed {len(v)} tasks, pass rate is {len(v)/164}")
+        print(f"cir {k},passed {len(v)} tasks, pass rate is {len(v)/result_num}")
         print(f"pass tasks are:\n{sorted(v)}")
         pass_task_num[k] = len(v)
     
@@ -96,7 +98,7 @@ def get_pass_k(results,data,k=10,n=10):
     
     
     print(f"pass task num: {pass_task_num}")
-    pass_task_rate = [x/len(data) for x in pass_task_num]
+    pass_task_rate = [x/result_num for x in pass_task_num]
     print(f"pass task rate: {pass_task_rate}")
     
     for cir,v in pass_k_list.items():
@@ -184,25 +186,69 @@ def load_results(res_file):
 
 
 
+
+
 chosen_data_idx = [240, 93, 372, 296, 155, 102, 454, 370, 209, 387, 366, 388, 135, 272, 125, 325, 416, 376, 255, 181, 212, 269, 497, 315, 111, 158, 278, 360, 169, 265, 38, 374, 396, 443, 105, 352, 385, 477, 239, 363, 425, 446, 334, 75, 486, 108, 444, 210, 29, 394, 178, 321, 213, 238, 63, 371, 380, 71, 390, 167, 199, 471, 176, 406, 494, 166, 218, 479, 162, 290, 109, 208, 117, 104, 20, 383, 115, 441, 9, 132, 258, 163, 395, 291, 411, 361, 215, 314, 57, 438, 457, 310, 399, 118, 120, 237, 187, 69, 103, 188, 252, 304, 448, 72, 134, 198, 319, 172, 171, 362, 364, 458, 86, 350, 356, 67, 410, 465, 297, 351, 33, 50, 88, 2, 77, 224, 472, 405, 179, 427, 41, 100, 145, 122, 355, 236, 308, 417, 246, 268, 223, 339, 432, 435, 36, 154, 354, 142, 402, 289, 338, 128, 478, 51, 253, 475, 368, 450, 90, 263, 114, 418, 480, 23, 496, 473, 193, 324, 37, 60, 492, 28, 470, 64, 107, 412, 44, 419, 377, 462, 249, 298, 84, 82, 323, 326, 53, 398, 287, 309, 15, 312, 55, 286, 92, 409, 161, 0, 62, 143]
 base_pass_task_mbpp = [17, 23, 27, 35, 40, 41, 46, 51, 52, 58, 62, 66, 79, 82, 85, 88, 89, 93, 96, 99, 105, 112, 113, 127, 133, 144, 145, 161, 168, 171, 173, 174, 175, 176, 183, 195, 204, 210, 212, 214, 221, 222, 227, 230, 234, 249, 250, 255, 258, 261, 263, 269, 273, 281, 284, 293, 297, 309, 319, 322, 329, 332, 333, 341, 361, 373, 375, 394, 403, 404, 412, 422, 425, 443, 447, 457, 458, 459, 465, 474, 476, 478, 480, 487, 489, 495, 496, 498, 502, 504, 507, 509]
 different_task = ['MBPP/18', 'MBPP/30', 'MBPP/45', 'MBPP/56', 'MBPP/70', 'MBPP/148', 'MBPP/151', 'MBPP/152', 'MBPP/164', 'MBPP/181', 'MBPP/323', 'MBPP/338', 'MBPP/342', 'MBPP/348', 'MBPP/364', 'MBPP/367', 'MBPP/466', 'MBPP/485', 'MBPP/486', 'MBPP/501']
 if __name__ == "__main__":
     # res_file = "/home/S/hexiaolong/codex/self-debug/res/mbpp_base_gened_testcase.jsonl"
     # res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppTS_SBSP10_7b16k_16.jsonl"
-    res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppTS_SBSP10_7b16k.jsonl"
-    data_file = "/home/S/hexiaolong/codex/self-debug/MBPP/mbpp_humaneval_format_11_510.jsonl"
-    data = read_problems(data_file)
+    res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppNTS_SBSP10_7b16k.jsonl"
+    res_root = "/home/S/hexiaolong/codex/self-debug/res/"
+    files = [
+        "mbppTS_SBSP1_7b16k.jsonl",
+        "mtpbTS_SBSP1_7b16k.jsonl",
+        "bigbenchTS_SBSP1_7b16k.jsonl",
+        
+        "mbppNTS_SBSP10_7b16k.jsonl",
+        "mbppTFTS_SBSP10_7b16k.jsonl",
+        "mbppTS_SBSP10_7b16k.jsonl",
+        
+        "mtpbNTS_SBSP10_7b16k.jsonl",
+        "mtpbTFTS_SBSP10_7b16k.jsonl",
+        "mtpbTS_SBSP10_7b16k.jsonl",
+        
+        "bigbenchNTS_SBSP10_7b16k.jsonl",
+        "bigbenchTS_SBSP10_7b16k.jsonl",
+        "bigbenchTFTS_SBSP10_7b16k.jsonl",
+        
+    ]
+    res_file = res_root + files[4]
+    
+    data_files = {
+        "humaneval":"",
+        "mbpp":"/home/S/hexiaolong/codex/self-debug/MBPP/mbpp_humaneval_format_11_510.jsonl",
+        "mbpt":"/home/S/hexiaolong/codex/self-debug/benchmarks/mtpb_humaneval_format.jsonl",
+        "bigbench":"/home/S/hexiaolong/codex/self-debug/benchmarks/bigbench_humaneval_format.jsonl",
+    }
+    if "mbpp" in res_file:
+        data_file = data_files["mbpp"]
+        data = read_problems(data_file)
+        new_data = {}
+        for tid,d in data.items():
+            tid_num = tid_to_int(tid)
+            idx = tid_num - 11
+            if idx  not in chosen_data_idx:
+                continue
+            new_data[tid] = d
+        data = new_data
+    elif "mtpb" in res_file:
+        data_file = data_files["mbpt"]
+        data = read_problems(data_file)
+    elif "bigbench" in res_file:
+        data_file = data_files["bigbench"]
+        data = read_problems(data_file)
     results = load_results(res_file=res_file)
-    # get_pass_k(results,data,1,10)
+    get_pass_k(results,data,1,10)
     # evaluate_gened_testcase(results=results,data=data,verbose=True)
     # evaluate_internal_tests(results=results,data=data,verbose=True)
-    num = 0
-    for x in chosen_data_idx:
-        x = x+11
-        if x in base_pass_task_mbpp:
-            num += 1
-    print(num)
-    chosen_data_idx = [i+11 for i in chosen_data_idx]
-    results_id = [int(r["task_id"].split("/")[1]) for r in results]
-    print(set(chosen_data_idx) - set(results_id))
+    # num = 0
+    # for x in chosen_data_idx:
+    #     x = x+11
+    #     if x in base_pass_task_mbpp:
+    #         num += 1
+    # print(num)
+    # chosen_data_idx = [i+11 for i in chosen_data_idx]
+    # results_id = [int(r["task_id"].split("/")[1]) for r in results]
+    # print(set(chosen_data_idx) - set(results_id))

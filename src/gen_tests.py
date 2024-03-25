@@ -108,7 +108,10 @@ if __name__ == "__main__":
                 line = line.replace("\\_","_")
                 if entry_point in line and "==" in line and "# assert" not in line:
                     test_in = line.split("==")[0]
-                    test_in = line.split("==")[0][test_in.index("assert ")+7:].strip()
+                    try:
+                        test_in = line.split("==")[0][test_in.index("assert ")+7:].strip()
+                    except:
+                        continue
                     test_out = line.split("==")[1].strip()
                     # if test_in in test_in_set:
                     #     continue

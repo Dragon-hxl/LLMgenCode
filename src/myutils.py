@@ -594,6 +594,7 @@ def get_CODET_point_v3(Node_list, testcases, problem,chosen_num=8,sort_len=False
     print_v("Run solution and test case...")
     for i in range(n):
         if Node_list[i].already_CODET:
+            print_v(f"ignore solution {i}...")
             solution_pass_test[i] =  Node_list[i].CODET_pass_testcase
             continue
         try:
@@ -605,7 +606,6 @@ def get_CODET_point_v3(Node_list, testcases, problem,chosen_num=8,sort_len=False
                     future = executor.submit(run_code_with_output_CODET3, *args)
                     result = future.result()
             else:
-                
                 with ThreadPoolExecutor(max_workers=1) as executor:
                     args = (problem,Node_list[i].solution,testcases,"",0.1)
                     future = executor.submit(run_code_with_output_CODET, *args)
@@ -650,11 +650,12 @@ def get_CODET_point_v3(Node_list, testcases, problem,chosen_num=8,sort_len=False
         print_v(f"The {i} rate CODET group pass testcases are {s}")
         g = len(s[0])
         ptestcase = s[1]
+        score = s[2]
         for t in ptestcase:
             if count_solution_num:
                 test_pass_solution_num[t] += g
             else:
-                test_pass_solution_num[t] += 1
+                test_pass_solution_num[t] += score
     if sort_len:
         sorted_pass_test_solution_num = sorted(test_pass_solution_num.items(),key=lambda x: (x[1],-len(testcases[x[0]])),reverse=True)#(x[1],-len(testcases[x[0]]))
     else:

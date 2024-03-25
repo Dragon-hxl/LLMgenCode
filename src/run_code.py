@@ -309,6 +309,18 @@ def filter_integers(values: List[Any]) -> List[int]:
     """
     return [x for x in values if isinstance(x, int)]
 
+def mbpp_get_chosen_idx(tid:int):
+    mbpp_chosen_idx2 = [240, 93, 372, 296, 155, 102, 454, 370, 209, 387, 366, 388, 135, 272, 125, 325, 416, 376, 255, 181, 212, 269, 497, 315, 111, 158, 278, 360, 169, 265, 38, 374, 396, 443, 105, 352, 385, 477, 239, 363, 425, 446, 334, 75, 486, 108, 444, 210, 29, 394, 178, 321, 213, 238, 63, 371, 380, 71, 390, 167, 199, 471, 176, 406, 494, 166, 218, 479, 162, 290, 109, 208, 117, 104, 20, 383, 115, 441, 9, 132, 258, 163, 395, 291, 411, 361, 215, 314, 57, 438, 457, 310, 399, 118, 120, 237, 187, 69, 103, 188, 252, 304, 448, 72, 134, 198, 319, 172, 171, 362, 364, 458, 86, 350, 356, 67, 410, 465, 297, 351, 33, 50, 88, 2, 77, 224, 472, 405, 179, 427, 41, 100, 145, 122, 355, 236, 308, 417, 246, 268, 223, 339, 432, 435, 36, 154, 354, 142, 402, 289, 338, 128, 478, 51, 253, 475, 368, 450, 90, 263, 114, 418, 480, 23, 496, 473, 193, 324, 37, 60, 492, 28, 470, 64, 107, 412, 44, 419, 377, 462, 249, 298, 84, 82, 323, 326, 53, 398, 287, 309, 15, 312, 55, 286, 92, 409, 161, 0, 62, 143]
+    
+    task_idx= tid- 11
+    
+    idx = mbpp_chosen_idx2.index(task_idx)
+    
+    # print(idx)
+    return idx
+    
+
+
 if __name__=="__main__":
     # print( smallest_change([1,2,3,5,4,7,9,6]) == 4)
     # print( smallest_change([1, 2, 3, 4, 3, 2, 2]) == 1)
@@ -367,16 +379,8 @@ if __name__=="__main__":
     print(set(mbpp_chosen_idx3) - set(mbpp_chosen_idx1))
     
     print(mbpp_chosen_idx2[0],mbpp_chosen_idx2[50],mbpp_chosen_idx2[100],mbpp_chosen_idx2[150])
-    print(mbpp_chosen_idx2.index(309))
     
-    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    n = 5
-    chunk_size = len(lst) // n  # 计算每个部分的大小
-    chunks = []
-    for i in range(n):
-        if i == n - 1:
-            chunks.append(lst[chunk_size*i:])
-        else:
-            chunks.append(lst[chunk_size*i:chunk_size*(i+1)])
-    print(chunks)
+    mbpp_lack_task = [26,154]
+    mbpp_lack_task_idx = [mbpp_get_chosen_idx(i) for i in mbpp_lack_task]
+    print(sorted(mbpp_lack_task_idx))
     

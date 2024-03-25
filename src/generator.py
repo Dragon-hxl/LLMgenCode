@@ -1,4 +1,4 @@
-from myutils import map_gpu_memory,filter_fix_ans,print_with_tag,make_printv
+from myutils import map_gpu_memory,filter_fix_ans,print_with_tag,make_printv,setup_seed
 import time
 import numpy as np
 import torch
@@ -39,6 +39,7 @@ class PyGenerator():
         return res
     
     def generate_base_complication(self, model, prompt, unit_tests, record_time = False, verbose = False):
+        setup_seed(2024)
         #prepare the prompt
         prompt = self.get_one_complication(prompt,unit_tests)
         # print_with_tag("base complication prompt",prompt,verbose=verbose)
@@ -69,6 +70,7 @@ class PyGenerator():
             return prompt,solution
         
     def generate_with_feedback(self, model, feedabck_prompt, return_sequences:int=10 ,record_length = False, record_time = False, verbose = False):
+        setup_seed(2024)
         printv = make_printv(verbose)
         debug_maxLen = 512
         debug_temp = 1.0
@@ -108,6 +110,7 @@ class PyGenerator():
     
     
     def gen_tests(self,model,problem,num,verbose = False):
+        setup_seed(2024)
         printv = make_printv(verbose)
         gentests_fewshot = "/home/S/hexiaolong/codex/self-debug/src/gen_test_shot_20240313.txt"
         with open(gentests_fewshot,"r") as f:
@@ -133,7 +136,10 @@ class PyGenerator():
                 line = line.replace("\\_","_")
                 if entry_point in line and "==" in line and "# assert" not in line:
                     test_in = line.split("==")[0]
-                    test_in = line.split("==")[0][test_in.index("assert ")+7:].strip()
+                    try:
+                        test_in = line.split("==")[0][test_in.index("assert ")+7:].strip()
+                    except:
+                        continue
                     test_out = line.split("==")[1].strip()
                     if (test_in,test_out) in test_get:
                         continue
@@ -158,13 +164,14 @@ class PyGenerator():
         return gened_tests
     
     def gen_tests_sort_by_prob(self,model,problem,num,verbose = False):
+        setup_seed(2024)
         printv = make_printv(verbose)
         gentests_fewshot = "/home/S/hexiaolong/codex/self-debug/src/gen_test_shot_20240313.txt"
         with open(gentests_fewshot,"r") as f:
             gentests_prompt = f.read()
-        temperature = 0.8
+        temperature = 1.0
         top_k = 50
-        end_cir = 50
+        end_cir = 30
         test_get = set()
         gened_tests = []
         # start gen tests
@@ -195,9 +202,12 @@ class PyGenerator():
                     line = line.replace("\\_","_")
                     if entry_point in line and "==" in line and "# assert" not in line:
                         test_in = line.split("==")[0]
-                        test_in = line.split("==")[0][test_in.index("assert ")+7:].strip()
+                        try:
+                            test_in = line.split("==")[0][test_in.index("assert ")+7:].strip()
+                        except:
+                            continue
                         test_out = line.split("==")[1].strip()
-                        if (test_in,test_out) in test_get:
+                        if test_in in test_get:
                             continue
                         testcase = f"assert {test_in} == {test_out}"
                         flag = py_is_syntax_valid(testcase)
@@ -207,7 +217,7 @@ class PyGenerator():
                             printv(f"gen testcase :  {test_in} == {test_out}")
                         gened_tests.append((testcase,true_sc))
                         # test_in_set.add(test_in)
-                        test_get.add((test_in,test_out))
+                        test_get.add(test_in)
                         printv("++++++++++++++++++++++++++++++++++++++++")
             if len(gened_tests) > num:
                 printv(f"gen tests num: {len(gened_tests)}\n")
@@ -218,10 +228,13 @@ class PyGenerator():
             printv(f"can not gen enough tests, gened tests num: {len(gened_tests)}\n")
         gened_tests = sorted(gened_tests,key=lambda x: x[1],reverse=True)
         total_tests = [t[0] for t in gened_tests]
+        print_num = min(20,len(total_tests))
+        for i in range(print_num):
+            printv(f"gened test {i} : {total_tests[i]}")
         return total_tests
     
     def generate_base_complication_mbpp(self, model, prompt, unit_tests, record_time = False, verbose = False):
-        
+        setup_seed(2024)
         #prepare the prompt
         with open(mbpp_base_prompt,"r") as f:
             preflex = f.read()

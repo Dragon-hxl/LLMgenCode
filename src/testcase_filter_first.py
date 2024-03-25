@@ -109,7 +109,7 @@ def run_testcase_filter(
             task_gened_testcase = gened_testcase[tid]
         else:
             gen_tests_st = time.time()
-            task_gened_testcase = gen.gen_tests_sort_by_prob(model,data,num=200,verbose=verbose)[:200]
+            task_gened_testcase = gen.gen_tests_sort_by_prob(model,data,num=110,verbose=verbose)[:110]
             gen_tests_time = (time.time() - gen_tests_st)/60
             print_v(f"Gen {len(task_gened_testcase)} tests for task {tid}, use {gen_tests_time} mins.")
             chosen_testcase = task_gened_testcase[:10]

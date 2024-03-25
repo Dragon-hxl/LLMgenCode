@@ -546,7 +546,7 @@ def print_anwser(result_file,task_list):
    
 def main(res_file=""):
     # file = "../res/UTfeedback_multi_7b16k_full.jsonl"
-    file = "../res/treesearch_SBSP10_codellama7binst_pT.jsonl"
+    file = "../res/TFTS_SBSP10_codellama7binst_pT.jsonl"
     # file = "/home/S/hexiaolong/codex/self-debug/res/SBP/UTfeedback_multiSBP10_7b16k_tT.jsonl"
     # resfiles = ["UTfeedback_multiCODETfilter_7b16k_pT_29_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_58_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_86_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_113_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_140_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_163_full.jsonl"]
     # res_root = "../res/"
@@ -555,7 +555,7 @@ def main(res_file=""):
     # output_file = "../res/multi_with_pass/UTfeedback_multiSBSP10_7b16k_tT.jsonl"
     # print_anwser(file,["HumanEval/76"])
     # passed_per_cir,task_cir,lack_task = get_pass_n(file)
-    passed_per_cir,task_cir,lack_task,pass_k_list = get_pass_k(file,k=1,n=10)
+    passed_per_cir,task_cir,lack_task,pass_k_list = get_pass_k(file,k=10,n=10)
     # passed_per_cir,task_cir = get_pass_n(file)
     # data = {"SBSP10_7b16k_tT":passed_per_cir}
     # time_evaluate(file)
