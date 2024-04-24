@@ -5,9 +5,9 @@
 # (TODO)
 # Please modify job name
 
-#SBATCH -J test              # The job name
-#SBATCH -o ../log/test.out        # Write the standard output to file named 'ret-<job_number>.out'
-#SBATCH -e ../log/test.out        # Write the standard error to file named 'ret-<job_number>.err'
+#SBATCH -J humanevalTS_SBSP10              # The job name
+#SBATCH -o ../log/humanevalTS_SBSP10_7b16k_47.out        # Write the standard output to file named 'ret-<job_number>.out'
+#SBATCH -e ../log/humanevalTS_SBSP10_7b16k_47.out        # Write the standard error to file named 'ret-<job_number>.err'
 
 
 #- Resources
@@ -16,11 +16,11 @@
 # Please modify your requirements
 
 #SBATCH -p r8nv-gpu-hw                    # Submit to 'nv-gpu' Partitiion
-#SBATCH -t 0-12:00:00                # Run for a maximum time of 0 days, 12 hours, 00 mins, 00 secs
+#SBATCH -t 0-30:00:00                # Run for a maximum time of 0 days, 12 hours, 00 mins, 00 secs
 #SBATCH --nodes=1                    # Request N nodes
 #SBATCH --gres=gpu:4                 # Request M GPU per node
 #SBATCH --gres-flags=enforce-binding # CPU-GPU Affinity
-#SBATCH --qos=gpu-short             # Request QOS Type
+#SBATCH --qos=gpu-normal             # Request QOS Type
 
 ####SBATCH --ntasks-per-node=48
 
@@ -35,8 +35,8 @@
 ### Without specifying the constraint, any available nodes that meet the requirement will be allocated
 ### You can specify the characteristics of the compute nodes, and even the names of the compute nodes
 ###
-### #SBATCH --nodelist=r8a100-c03          # Request a specific list of hosts 
-#SBATCH --constraint="80G&Milan" # Request GPU Type: Volta(V100 or V100S) or RTX8000
+### #SBATCH --nodelist=r8a100-d03          # Request a specific list of hosts 
+#SBATCH --constraint="80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
 ###
 
 #- Log information
@@ -80,8 +80,7 @@ nvidia-smi
 #- Job step
 ###eval 'opam config env'
 cd /home/S/hexiaolong/codex/self-debug/src
-###python3.9 job-record.py -jobID $SLURM_JOBID -comment "new version code. tree search SBSP5. seed 2024." -output_file "../res/test.jsonl"
-###python3.9 main.py +model_path=/lustre/S/hexiaolong/vicuna-7b-16k/ +output=../res/mbppTFTS_SBSP5_7b16k.jsonl +sample_num=5 +Strategy=TFTS +dataset=mbpp > ../log/mbppTFTS_SBSP5_7b16k.out 2>&1
-sleep 12h
+python3.9 job-record.py -jobID $SLURM_JOBID -comment "new version code. tree search SBSP10. seed 2024." -output_file "../res/humanevalTS_SBSP10_7b16k_47.jsonl"
+python3.9 main.py +model_path=/lustre/S/hexiaolong/vicuna-7b-16k/ +output=../res/humanevalTS_SBSP10_7b16k_0.jsonl +sample_num=10 +Strategy=TS +dataset=humaneval
 #- End
 echo "Job end at $(date "+%Y-%m-%d %H:%M:%S")"

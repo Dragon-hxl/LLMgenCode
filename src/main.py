@@ -14,6 +14,10 @@ from tree_search import *
 from testcase_filter_first import *
 from base_generate import *
 from not_tree_search import *
+from fastdebug_test import *
+from tree_search_cached import *
+from testcase_filter_cached import *
+
 
 @hydra.main(version_base=None, config_path="../configs/", config_name="UTfeedback_config.yaml")
 def main(cfg: DictConfig):
@@ -36,9 +40,10 @@ def main(cfg: DictConfig):
     if dataset_type == "humaneval":
         print("load dataset : humaneval")
         problems = read_problems("/home/S/hexiaolong/codex/self-debug/data/humaneval.jsonl")
+        lack_task = [129, 130, 131, 132, 133, 134, 135, 160, 161, 162, 163]
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
-            if num_id < 132 or num_id > 164:
+            if num_id < 129 or num_id > 164:# or num_id==1 or num_id==3:#num_id not in lack_task :
                 continue
             dataset.append(problem)
     elif dataset_type == "mbpp":
@@ -53,14 +58,14 @@ def main(cfg: DictConfig):
         print("mbpp chosen idx:",chosen_idx)
         with open("mbpp_chosen_idx.txt","w") as f:
             f.write(json.dumps(chosen_idx))
-        chosen_idx = chosen_idx[129:150]
+        chosen_idx = chosen_idx[0:200]
         dataset = [dataset[i] for i in chosen_idx]
     elif dataset_type == "mtpb":
         print("load dataset : mtpb")
         problems = read_problems("/home/S/hexiaolong/codex/self-debug/benchmarks/mtpb_humaneval_format.jsonl")
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
-            if num_id < 0 or num_id > 116 or num_id==20 or num_id==47:
+            if num_id < 4 or num_id > 39 or num_id==20 or num_id==47:
                 continue
             dataset.append(problem)
     elif dataset_type == "bigbench":
@@ -68,8 +73,10 @@ def main(cfg: DictConfig):
         problems = read_problems("/home/S/hexiaolong/codex/self-debug/benchmarks/bigbench_humaneval_format.jsonl")
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
-            if num_id < 20 or num_id > 32:
+            if num_id < 0 or num_id > 32:  
                 continue
+            # if num_id!=15 and  num_id!=31:
+            #     continue
             dataset.append(problem)
     print(f"load {len(dataset)} problems")
     
@@ -82,6 +89,12 @@ def main(cfg: DictConfig):
         run_base_generate(dataset,model_path, output_file ,verbose=True)
     elif Strategy == "NTS":
         run_not_tree_search(dataset,model_path, output_file, sample_num=sample_num, cir_times=10 ,verbose=True)
+    elif Strategy == "debug":
+        run_fastdebug_test(dataset,model_path, output_file, sample_num=sample_num, cir_times=10 ,verbose=True)
+    elif Strategy == "TSC":
+        run_tree_search_cached(dataset,model_path, output_file, sample_num=sample_num, cir_times=10 ,verbose=True)
+    elif Strategy == "TFTC":
+        run_testcase_filter_cached(dataset,model_path, output_file, sample_num=sample_num, cir_times=10 ,verbose=True)
     else:
         print("Strategy not found")
         return 1

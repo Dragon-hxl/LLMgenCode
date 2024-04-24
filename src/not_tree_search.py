@@ -202,7 +202,7 @@ def run_not_tree_search(
                 input_length = inputs.input_ids.shape[1]
                 fix_percent = (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
                 for _ in range(k):
-                    solutions= gen.generate_with_feedback(model,feedback,return_sequences=return_sequences,verbose=True)
+                    solutions,inference_time= gen.generate_with_feedback(model,feedback,return_sequences=return_sequences,verbose=True)
                     for s in solutions:
                         ans,true_sc,output_length = s[0],s[1],s[2]
                         # 记录每条solution的长度

@@ -333,8 +333,8 @@ def pass_testcase_analysis_idx4(pass_testcase,idx_data):
         #     continue
         for pt in pts:
             cir = int(pt["cir"])
-            if cir == 0:
-                continue
+            # if cir == 0:
+            #     continue
             ts_num = {}
             gnum_ts = defaultdict(set)
             gnum_cts = defaultdict(set)
@@ -379,20 +379,20 @@ def pass_testcase_analysis_idx4(pass_testcase,idx_data):
     print("num cp corr")
     data_analysis(num_cp_corr)
     Counter_with_base(num_cp_corr,0.1)
-    draw_corr_hist(num_cp_corr,image_path="../image/test_num_to_cp/num_cp_corr2.png")
+    draw_corr_hist(num_cp_corr,image_path="../image/test_num_to_cp/num_cp_corr3.png")
     print("num cp p")
     data_analysis(num_cp_p)
     Counter_with_base(num_cp_p,0.1)
-    draw_corr_hist(num_cp_p,image_path="../image/test_num_to_cp/num_cp_p2.png")
+    draw_corr_hist(num_cp_p,image_path="../image/test_num_to_cp/num_cp_p3.png")
     
     print("num cp scorr")
     data_analysis(num_cp_scorr)
     Counter_with_base(num_cp_scorr,0.1)
-    draw_corr_hist(num_cp_scorr,image_path="../image/test_num_to_cp/num_cp_scorr2.png")
+    draw_corr_hist(num_cp_scorr,image_path="../image/test_num_to_cp/num_cp_scorr3.png")
     print("num cp sp")
     data_analysis(num_cp_sp)
     Counter_with_base(num_cp_sp,0.1)
-    draw_corr_hist(num_cp_sp,image_path="../image/test_num_to_cp/num_cp_sp2.png")
+    draw_corr_hist(num_cp_sp,image_path="../image/test_num_to_cp/num_cp_sp3.png")
     
     num_to_cp = {}
     for gt_num in num_to_ts.keys():
@@ -403,7 +403,7 @@ def pass_testcase_analysis_idx4(pass_testcase,idx_data):
             num_to_cp[gt_num] = cp
             # if gt_num >= 180:
             #     print(f"gt_num : {gt_num} with {num_to_ts[gt_num]} : {cnum_to_ts[gt_num]}")
-    image_path = f"../image/test_num_to_cp/num_to_cp_sc2_without_t76.png"
+    image_path = f"../image/test_num_to_cp/num_to_cp_sc3_without_t76.png"
     draw_scatters(data=num_to_cp,image_path=image_path)
     print(f"invalid num:{len(invalid_task)}\n{invalid_task}")
     num = list(num_to_cp.keys())
@@ -540,24 +540,28 @@ def dataCorrelation2(x:list,y:list,verbose=False):
 
 
 def main():
-    testcase_idx_file  = "../try/gen_test_t0.8_topp0.95_sample100_max300_rm_final5_idx.jsonl"#     gen_test_t0.8_topp0.95_sample100_max300_idx.jsonl
+    testcase_idx_file  = "../try/gen_test_t0.8_topp0.95_sample100_max300_idx.jsonl"#"../try/gen_test_t0.8_topp0.95_sample100_max300_rm_final5_idx.jsonl"#     gen_test_t0.8_topp0.95_sample100_max300_idx.jsonl
     idx_data = {}
     with open(testcase_idx_file,"r") as df:
         # idx_data = json.loads(df.readline())
         for line in df.readlines():
             data = json.loads(line)
-            tid = data["task_id"]
-            correct_idx = data["correct_idx"]
-            wrong_idx = data["wrong_idx"]
-            idx_data[tid] = {"correct_idx":correct_idx,"wrong_idx":wrong_idx}
+            for tid,value in data.items():
+                correct_idx = value["correct_idx"]
+                wrong_idx = value["wrong_idx"]
+                idx_data[tid] = {"correct_idx":correct_idx,"wrong_idx":wrong_idx}
+            # tid = data["task_id"]
+            # correct_idx = data["correct_idx"]
+            # wrong_idx = data["wrong_idx"]
+            # idx_data[tid] = {"correct_idx":correct_idx,"wrong_idx":wrong_idx}
     
-    # res_file = "../res/UTfeedback_CODETPointtry2_7b16k_pT.jsonl"
-    # pass_testcase = load_pass_testcase(res_file=res_file)
-    # # pass_testcase_analysis(pass_testcase=pass_testcase)
-    # pass_testcase_analysis_idx4(pass_testcase=pass_testcase,idx_data=idx_data)
-    res_file = "../res/UTfeedback_CODETv3_t8_7b16k_pT.jsonl"
-    chosen_testcase = load_chosen_testcase(res_file=res_file)
-    chosen_testcase_analysis(pass_testcase=chosen_testcase,idx_data=idx_data)
+    res_file = "../res/UTfeedback_CODETPointtry_7b16k_pT.jsonl"
+    pass_testcase = load_pass_testcase(res_file=res_file)
+    # pass_testcase_analysis(pass_testcase=pass_testcase)
+    pass_testcase_analysis_idx4(pass_testcase=pass_testcase,idx_data=idx_data)
+    # res_file = "../res/UTfeedback_CODETv3_t8_7b16k_pT.jsonl"
+    # chosen_testcase = load_chosen_testcase(res_file=res_file)
+    # chosen_testcase_analysis(pass_testcase=chosen_testcase,idx_data=idx_data)
     
     
     

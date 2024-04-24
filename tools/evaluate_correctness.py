@@ -546,7 +546,7 @@ def print_anwser(result_file,task_list):
    
 def main(res_file=""):
     # file = "../res/UTfeedback_multi_7b16k_full.jsonl"
-    file = "../res/TFTS_SBSP10_codellama7binst_pT.jsonl"
+    file = "../res/humanevalTS_SBSP10_codellama7bpy_pT.jsonl"
     # file = "/home/S/hexiaolong/codex/self-debug/res/SBP/UTfeedback_multiSBP10_7b16k_tT.jsonl"
     # resfiles = ["UTfeedback_multiCODETfilter_7b16k_pT_29_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_58_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_86_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_113_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_140_full.jsonl","UTfeedback_multiCODETfilter_7b16k_pT_163_full.jsonl"]
     # res_root = "../res/"
@@ -584,6 +584,7 @@ def main(res_file=""):
         "UTfeedback_CODETv3_t8_7b16k_pT.jsonl",
         "UTfeedback_CODETv3_sortby_solution_num_7b16k_pT.jsonl",
         "treesearch_SBSP10_7b16k_pT.jsonl",
+        "humanevalTS_SBSP10_7b16k.jsonl",
     ]
    
 if __name__=="__main__":

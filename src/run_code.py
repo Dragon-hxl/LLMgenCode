@@ -380,7 +380,7 @@ if __name__=="__main__":
     
     print(mbpp_chosen_idx2[0],mbpp_chosen_idx2[50],mbpp_chosen_idx2[100],mbpp_chosen_idx2[150])
     
-    mbpp_lack_task = [26,154]
+    mbpp_lack_task = [229,330]
     mbpp_lack_task_idx = [mbpp_get_chosen_idx(i) for i in mbpp_lack_task]
     print(sorted(mbpp_lack_task_idx))
     

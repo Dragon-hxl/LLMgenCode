@@ -70,7 +70,7 @@ ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests�
 true_tests_file = data_root + "test_from_check.jsonl"# 存放了最终用来check的unit_tests
 gened_testcases_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_rm_final5.jsonl"# 用来进行CODET的tests文件
 
-def run_testcase_filter(
+def run_testcase_filter_cached(
     dataset:dict,
     model_path:str,
     output_file:str,
@@ -163,7 +163,6 @@ def run_testcase_filter(
             fix_input = model.tokenizer(feedback_prompt, return_tensors='pt', return_token_type_ids=False)
             print_v(f"fix input length is {fix_input.input_ids.shape}")
             fix_input_len = fix_input.input_ids.shape[1]
-            
             if has_visibale_tests:
                     get_pass_rate(data,gened_nodes,data["prompt_tests"])
             
@@ -244,13 +243,35 @@ def run_testcase_filter(
             k=1
             return_sequences = int(sample_num/k)
             total_output_length = 0
+            if len(chosen_nodes) > 1:
+                store_flag = True
+            else:
+                store_flag = False
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt
                 inputs = model.tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)
                 input_length = inputs.input_ids.shape[1]
                 fix_percent = (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
                 for _ in range(k):
-                    solutions,inference_time= gen.generate_with_feedback(model,feedback,return_sequences=return_sequences,verbose=True)
+                    if True:
+                        if store_flag:
+                            print(f"first time, store fix with length {fix_input_len}.")
+                            store_len=fix_input_len
+                            store_fix = True
+                            use_store = False
+                            store_flag = False
+                        else:
+                            print(f"other time use store with length {fix_input_len}.")
+                            store_len=fix_input_len
+                            store_fix = False
+                            use_store = True
+                    else:
+                        store_len=0
+                        store_fix = False
+                        use_store = False
+                    solutions,inference_time= gen.generate_with_feedback_cache_version(model,feedback,return_sequences=return_sequences,verbose=True,store_len=store_len,store_fix=store_fix,use_store=use_store)
+                    
+                    # solutions= gen.generate_with_feedback(model,feedback,return_sequences=return_sequences,verbose=True)
                     for s in solutions:
                         ans,true_sc,output_length = s[0],s[1],s[2]
                         # 记录每条solution的长度

@@ -55,7 +55,7 @@ class PyGenerator():
         model_inference_time = (time.time()-st)/60
         output_tokens_len = pred.shape[1]
         ans = model.tokenizer.decode(pred.cpu()[0], skip_special_tokens=True)[input_len:].strip("\n")
-        print_with_tag("base complication origin output",ans,verbose=verbose)
+        # print_with_tag("base complication origin output",ans,verbose=verbose)
         solution = self.code_extract(ans)
         
         #log the time and length
@@ -83,11 +83,14 @@ class PyGenerator():
         printv(f"total input length is {inputs.input_ids.shape}")
         inputs = inputs.to('cuda')
         try:
+            inference_st = time.time()
             with torch.inference_mode():
                 preds = model.model.generate(**inputs, max_new_tokens=debug_maxLen, temperature=debug_temp,top_p=debug_top_p, do_sample=True,return_dict_in_generate=True,output_scores=True,num_return_sequences=return_sequences,pad_token_id=model.tokenizer.eos_token_id)#,temperature=0.4,repetition_penalty=1.1
                 transition_scores = model.model.compute_transition_scores(
                     preds.sequences, preds.scores, normalize_logits=True
                 ).cpu().numpy()
+            torch.cuda.synchronize()
+            inference_time = time.time() - inference_st
             for pred,transition_score in zip(preds["sequences"],transition_scores):
                 # 计算生成概率
                 gen_tokens = pred[input_length:].cpu()
@@ -106,8 +109,44 @@ class PyGenerator():
             printv(f"model inference failed with {e}")
         except:
             printv("model inference failed!")
-        return solutions
+        return solutions,inference_time
     
+    def generate_with_feedback_cache_version(self, model, feedabck_prompt, return_sequences:int=10 ,record_length = False, record_time = False, verbose = False,store_len=0,store_fix=False,use_store=False):
+        setup_seed(2024)
+        printv = make_printv(verbose)
+        debug_maxLen = 512
+        debug_temp = 1.0
+        debug_top_p = 0.95
+        
+        solutions = []
+        
+        inputs = model.tokenizer(feedabck_prompt, return_tensors='pt', return_token_type_ids=False)
+        input_length = inputs.input_ids.shape[1]
+        printv(f"total input length is {inputs.input_ids.shape}")
+        inputs = inputs.to('cuda')
+        inference_st = time.time()
+        with torch.inference_mode():
+            preds = model.model.generate(**inputs, max_new_tokens=debug_maxLen, temperature=debug_temp,top_p=debug_top_p, do_sample=True,return_dict_in_generate=True,output_scores=True,num_return_sequences=return_sequences,pad_token_id=model.tokenizer.eos_token_id,store_len=store_len,store_fix=store_fix,use_store=use_store)#,temperature=0.4,repetition_penalty=1.1
+            torch.cuda.synchronize()
+            inference_time = time.time() - inference_st
+            transition_scores = model.model.compute_transition_scores(
+                preds.sequences, preds.scores, normalize_logits=True
+            ).cpu().numpy()
+        for pred,transition_score in zip(preds["sequences"],transition_scores):
+            # 计算生成概率
+            gen_tokens = pred[input_length:].cpu()
+            valid = np.isfinite(transition_score)
+            tsc = transition_score[valid]
+            output_length = input_length + tsc.shape[-1]
+            sc = np.sum(tsc,axis=-1)/output_length
+            true_sc = np.exp(sc)
+            
+            #记录生成的solution
+            ans = model.tokenizer.decode(gen_tokens, skip_special_tokens=True)
+            # printv(f"ans is \n{ans}")
+            
+            solutions.append((ans,true_sc,output_length))
+        return solutions,inference_time
     
     def gen_tests(self,model,problem,num,verbose = False):
         setup_seed(2024)
@@ -125,7 +164,7 @@ class PyGenerator():
             st = time.time()
             prompt = f"{gentests_prompt}\n\nfunc signature:\n{problem['prompt']}\nunit tests:\n"
             inputs = model.tokenizer(prompt, return_tensors='pt', return_token_type_ids=False).to('cuda')
-            pred = model.model.generate(**inputs, max_new_tokens=512,top_k=top_k,do_sample=True,temperature=temperature,num_return_sequences=8,pad_token_id=model.tokenizer.eos_token_id,repetition_penalty=1.1)
+            pred = model.model.generate(**inputs, max_new_tokens=512,top_k=top_k,do_sample=True,temperature=temperature,num_return_sequences=10,pad_token_id=model.tokenizer.eos_token_id,repetition_penalty=1.1)
             interval = time.time() - st
             printv(f"gen time : {interval}")
             ans = ""

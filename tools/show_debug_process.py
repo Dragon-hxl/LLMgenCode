@@ -9,11 +9,16 @@ import matplotlib.pyplot as plt
 from pylab import mpl
 from draw_tools import draw_plots_mean_std
 import numpy as np
+
+from result_store import *
  
 # # 设置中文显示字体
 # mpl.rcParams["font.sans-serif"] = ["SimHei"]
 # # 设置正常显示符号
 # mpl.rcParams["axes.unicode_minus"] = False
+# 支持中文
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 pass_task_record = {
     "total": range(164),
@@ -93,6 +98,11 @@ cir_record = {
     "UTfeedback_PassRate_mix10_10_7b16k_pT":[27,34,53,59,62,62,63,64,66,66,66],# [26, 37, 52, 56, 59, 61, 63, 63, 63, 63, 63]
     "UTfeedback_PassRate_mix10_10_7b16k_pT2":[27, 38, 49, 55, 57, 62, 62, 63, 64, 66, 66],
     
+    "humanevalTS_SBSP_codellama7bpy_pT_pass@1":[63, 80, 104, 110, 111, 112, 112, 112, 112, 112, 113],
+    "humanevalTS_SBSP_codellama7bpy_pT_pass@1":[63, 81, 105, 111, 112, 113, 113, 113, 113, 113, 114],
+    "humanevalTFTS_SBSP_codellama7bpy_pT_pass@1":[63, 81, 98, 101, 104, 106, 106, 107, 107, 108, 108],
+    "humanevalTFTS_SBSP_codellama7bpy_pT":[63, 83, 103, 108, 111, 113, 113, 114, 114, 115, 115],
+    
     "UTfeedback_CODETv3_7b16k_pT":[27, 39, 46, 53, 54, 55, 57, 58, 61, 62, 62],
     "UTfeedback_CODETv3_t2_7b16k_pT":[27, 35, 47, 51, 54, 57, 59, 60, 62, 62, 62],
     "UTfeedback_CODETv3_t3_7b16k_pT":[27, 39, 48, 52, 54, 57, 57, 59, 61, 62, 62],
@@ -107,29 +117,30 @@ cir_record = {
     "treesearch_SBSP10_7b16k_pT@10":[27,35,50,58,61,64,67,70,70,70,70],
     "treesearch_SBSP10_7b16k_pT@1":[27,35,49,57,60,63,66,70,70,70,70],
     
-    "mbppTS_SBSP1_7b16k":[37, 40, 41, 43, 44, 46, 48, 48, 48, 50, 51],
-    "mbppNTS_SBSP10_7b16k_pass@1":[44, 48, 51, 53, 55, 56, 56, 56, 57, 57, 57],
+    "mbppTS_SBSP1_7b16k":[38, 40, 41, 43, 44, 46, 48, 48, 48, 50, 51],
+    "mbppNTS_SBSP10_7b16k_pass@1":[38, 45, 47, 49, 51, 52, 52, 53, 54, 54, 54],#[44, 48, 51, 53, 55, 56, 56, 56, 57, 57, 57]
     "mbppNTS_SBSP10_7b16k_pass@10":[44, 60, 65, 67, 69, 69, 69, 69, 70, 70, 71],
     "mbppTFTS_SBSP10_7b16k_pass@1":[38, 50, 54, 59, 59, 59, 60, 60, 60, 60, 60],
     "mbppTFTS_SBSP10_7b16k_pass@10":[38, 57, 62, 70, 71, 72, 72, 72, 72, 72, 72],
-    "mbppTS_SBSP10_7b16k_pass@1":[37, 48, 51, 55, 58, 58, 58, 58, 58, 58, 58],
-    "mbppTS_SBSP10_7b16k_pass@10":[37, 57, 65, 69, 70, 70, 70, 70, 70, 70, 70],
+    "mbppTS_SBSP10_7b16k_pass@1":[38, 48, 51, 55, 58, 58, 58, 58, 58, 58, 58],#[37, 48, 51, 55, 58, 58, 58, 58, 58, 58, 58],
+    "mbppTS_SBSP10_7b16k_pass@10":[38, 57, 65, 69, 70, 70, 70, 70, 70, 70, 70],#[37, 57, 65, 69, 70, 70, 70, 70, 70, 70, 70]
     
-    "mtpbTS_SBSP1_7b16k":"blue",
-    "mtpbNTS_SBSP10_7b16k_pass@1":"grey",
-    "mtpbNTS_SBSP10_7b16k_pass@10":"dark",
-    "mtpbTFTS_SBSP10_7b16k_pass@1":[4, 9, 13, 15, 18, 19, 19, 19, 19, 19, 19],
-    "mtpbTFTS_SBSP10_7b16k_pass@10":[4, 16, 25, 33, 33, 33, 33, 33, 33, 33, 33],
-    "mtpbTS_SBSP10_7b16k_pass@1":[6, 10, 11, 13, 17, 17, 17, 17, 17, 17, 17],
-    "mtpbTS_SBSP10_7b16k_pass@10":[6, 15, 22, 23, 26, 26, 27, 27, 28, 28, 28],
+    "1_mtpbTFTS_SBSP10_7b16k_pass@1":[6, 11, 15, 17, 18, 19, 19, 19, 19, 19, 19],#[4, 9, 13, 15, 18, 19, 19, 19, 19, 19, 19],
+    "1_mtpbTFTS_SBSP10_7b16k_pass@10":[4, 16, 25, 33, 33, 33, 33, 33, 33, 33, 33],
+    "2_mtpbTS_SBSP10_7b16k_pass@1":[6, 11, 14, 16, 17, 17, 17, 17, 17, 17, 17],
+    "2_mtpbTS_SBSP10_7b16k_pass@10":[6, 15, 22, 23, 26, 26, 27, 27, 28, 28, 28],
+    "3_mtpbNTS_SBSP10_7b16k_pass@1":[6, 10, 11, 13, 16, 16, 16, 16, 16, 16, 16],#[6, 11, 15, 17, 17, 17, 17, 17, 17, 17, 17]
+    "3_mtpbNTS_SBSP10_7b16k_pass@10":[6, 15, 24, 26, 28, 28, 28, 28, 28, 28, 28],
+    "4_mtpbTS_SBSP1_7b16k":[6, 8, 9, 11, 12, 14, 14, 14, 14, 14, 14],
     
-    "bigbenchTFTS_SBSP1_7b16k":[7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
-    "bigbenchNTS_SBSP10_7b16k_pass@1":[9, 10, 12, 12, 12, 12, 12, 12, 12, 12, 12],
+    
+    "bigbenchTS_SBSP1_7b16k":[7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
+    "bigbenchNTS_SBSP10_7b16k_pass@1":[7, 9, 9, 10, 11, 11, 11, 11, 11, 11, 11],#[8, 11, 12, 13, 13, 13, 13, 13, 13, 13, 13]#[9, 10, 12, 12, 12, 12, 12, 12, 12, 12, 12]
     "bigbenchNTS_SBSP10_7b16k_pass@10":[9, 10, 13, 13, 13, 13, 13, 13, 13, 13, 13],
     "bigbenchTFTS_SBSP10_7b16k_pass@1":[7, 7, 8, 11, 12, 12, 12, 12, 12, 12, 12],
     "bigbenchTFTS_SBSP10_7b16k_pass@10":[7, 10, 11, 13, 13, 13, 13, 13, 13, 13, 13],
-    "bigbenchTS_SBSP10_7b16k_pass@1":[7, 9, 9, 11, 11, 11, 11, 11, 11, 11, 11],
-    "bigbenchTS_SBSP10_7b16k_pass@10":[7, 10, 11, 13, 13, 13, 13, 13, 13, 13, 13],
+    "bigbenchTS_SBSP10_7b16k_pass@1":[7, 9, 9, 11, 11, 11, 11, 11, 11, 11, 11],#[8, 11, 12, 13, 13, 13, 13, 13, 13, 13, 13]
+    "bigbenchTS_SBSP10_7b16k_pass@10":[8, 12, 13, 14, 14, 14, 14, 14, 14, 14, 14],
 }
 
 color_map = {
@@ -204,15 +215,15 @@ color_map = {
     "mbppTFTS_SBSP10_7b16k_pass@10":"darkgreen",
     
     
-    "mtpbTFTS_SBSP1_7b16k":"blue",
-    "mtpbNTS_SBSP10_7b16k_pass@1":"grey",
-    "mtpbNTS_SBSP10_7b16k_pass@10":"dark",
-    "mtpbTFTS_SBSP10_7b16k_pass@1":"green",
-    "mtpbTFTS_SBSP10_7b16k_pass@10":"darkgreen",
-    "mtpbTS_SBSP10_7b16k_pass@1":"orange",
-    "mtpbTS_SBSP10_7b16k_pass@10":"darkorange",
+    "4_mtpbTS_SBSP1_7b16k":"blue",
+    "3_mtpbNTS_SBSP10_7b16k_pass@1":"grey",
+    "3_mtpbNTS_SBSP10_7b16k_pass@10":"dark",
+    "1_mtpbTFTS_SBSP10_7b16k_pass@1":"green",
+    "1_mtpbTFTS_SBSP10_7b16k_pass@10":"darkgreen",
+    "2_mtpbTS_SBSP10_7b16k_pass@1":"orange",
+    "2_mtpbTS_SBSP10_7b16k_pass@10":"darkorange",
     
-    "bigbenchTFTS_SBSP1_7b16k":"blue",
+    "bigbenchTS_SBSP1_7b16k":"blue",
     "bigbenchNTS_SBSP10_7b16k_pass@1":"grey",
     "bigbenchNTS_SBSP10_7b16k_pass@10":"dark",
     "bigbenchTFTS_SBSP10_7b16k_pass@1":"green",
@@ -268,34 +279,61 @@ def draw_plots(data,image_path):
     fig.savefig(image_path)
     return
 
-def draw_plots_percent(data,color,image_path):
+markers = [
+    'o', 'v', '^','s', 'p', '*', '1', '2' , 'h', 'H', '+', 'x', 'D', 'd', '_'
+]
+# colors = [
+#     "blue","grey","orange","green"
+# ]
+#'.', 
+def draw_plots_percent(data,color,image_path,legends=[],title=""):
     # data format: {"label:value"} value is a list of all values
     xs = []
     ys = []
     labels = []
+    if legends:
+        changed_legends = False
+    else:
+        changed_legends = True
     for k,v in data.items():
+        print(f"{k}:{v}")
         labels.append(k)
+        if changed_legends:
+            if "TS_SBSP1_" in k:
+                legends.append("原始自反馈")
+            elif "NTS" in k:
+                legends.append("非树搜索自反馈")
+            elif "TFTS" in k:
+                legends.append("使用测试用例筛选的树搜索自反馈")
+            elif "TS_SBSP10" in k:
+                legends.append("树搜索自反馈")
+            elif "pT" in k:
+                legends.append("使用问题描述中的测试用例")
+            elif "tT" in k:
+                legends.append("使用用来验证的测试用例")
         x = range(len(v))
         xs.append(x)
         y = v
         ys.append(y)
     fig = plt.figure(figsize=(18,12),dpi=400)
-    plt.xlabel("Cirs",fontsize='large')
-    plt.ylabel("percent:%",fontsize='large')
-    title = image_path.split("/")[-1].split(".")[0]
-    plt.title(title)
+    plt.xlabel("迭代轮次",fontsize=34)
+    plt.ylabel("代码生成正确率(pass@1):%",fontsize=34)
+    # title = image_path.split("/")[-1].split(".")[0]
+    # plt.title(title,fontsize=28)
     
     plots = []
     for i in range(len(data.keys())):
         x = xs[i]
         y = ys[i]
-        p, = plt.plot(x,y,marker='o',color=color[labels[i]],linewidth=2)
+        p, = plt.plot(x,y,marker=markers[i],markersize=12,color=color[labels[i]],linewidth=2)
         plots.append(p)
         for xz,yz in zip(x,y):
-            plt.text(xz,yz+0.5,yz,fontsize='large')
-        plt.text(10+0.1,y[10],labels[i],fontsize="x-large",color=color[labels[i]])
-    plt.legend(handles=plots,labels=labels,loc="upper left")#填best自动找到最好的位置
-    plt.xticks(range(14),[str(i) for i in range(14)])
+            plt.text(xz-0.2,yz+0.5,yz,fontsize=24,color=color[labels[i]])
+        # plt.text(10+0.1,y[10],labels[i],fontsize="xx-large",color=color[labels[i]])
+    plt.legend(handles=plots,labels=legends,loc="best",fontsize=34,frameon=False)#填best自动找到最好的位置
+    plt.xticks(range(12),[str(i) for i in range(12)],fontsize=24)
+    plt.yticks(fontsize=24)
+    plt.grid(True,linestyle="--",alpha=0.5)
     fig.savefig(image_path)
     return
 
@@ -350,11 +388,33 @@ if __name__=="__main__":
     # total = set(pass_task_record["total"])
     # print(f"total pass num is {len(total_pass)} never pass num is {len(total-total_pass)}:\n{sorted(total-total_pass)}")
     data = {}
+    true_testcase_pack = {
+        "labels":["UT_SBSP10_7b16k_tT_pass@1","UT_SBSP10_7b16k_pT_pass@1",],
+        "image_path":"../image/true_testcase.png",
+        "num_task":164,
+        "legends":["使用用来验证的测试用例","使用问题描述中的测试用例"],
+    }
+    humaneval_7b16k_pack = {
+        "labels":"",
+        "num_task":164,
+    }
+    mtpb_7b16k_pack = {
+        "labels":["1_mtpbTFTS_SBSP10_7b16k_pass@1","2_mtpbTS_SBSP10_7b16k_pass@1","3_mtpbNTS_SBSP10_7b16k_pass@1","4_mtpbTS_SBSP1_7b16k",],
+        "image_path":"../image/mtpb_7b16k_pass@1.png",
+        "num_task":115,
+        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","原始自反馈"],
+    }
+    bigbench_7b16k_pack = {
+        "labels":["bigbenchTFTS_SBSP10_7b16k_pass@1","bigbenchTS_SBSP10_7b16k_pass@1","bigbenchNTS_SBSP10_7b16k_pass@1","bigbenchTS_SBSP1_7b16k",],
+        "image_path":"../image/bigbench_7b16k_pass@1.png",
+        "num_task":32,
+        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","原始自反馈"],
+    }
     show_label = [
         # "UT_SBSP10_7b16k_tT",
         # "UT_SBSP10_7b16k_pT",
-        # "UT_SBSP10_7b16k_pT_pass@1",
         # "UT_SBSP10_7b16k_tT_pass@1",
+        # "UT_SBSP10_7b16k_pT_pass@1",
         # "UTfeedback_CODETRate_alltestcasesrm_7b16k_pT_pass@10",
         # "UTfeedback_CODETRate_correctrm_7b16k_pT_pass@10",
         # "UTfeedback_CODETRate_correctrm_mix09_7b16k_pT_pass@10",
@@ -384,27 +444,27 @@ if __name__=="__main__":
         # "UTfeedback_CODETv3_sortby_solution_num_7b16k_pT@10",
         # "mbppTS_SBSP1_7b16k",
         # "mbppNTS_SBSP10_7b16k_pass@1",
-        # # "mbppNTS_SBSP10_7b16k_pass@10",
+        # "mbppNTS_SBSP10_7b16k_pass@10",
         # "mbppTFTS_SBSP10_7b16k_pass@1",
-        # # "mbppTFTS_SBSP10_7b16k_pass@10",
+        # "mbppTFTS_SBSP10_7b16k_pass@10",
         # "mbppTS_SBSP10_7b16k_pass@1",
-        # # "mbppTS_SBSP10_7b16k_pass@10",
+        # "mbppTS_SBSP10_7b16k_pass@10",
         
         # "mtpbTFTS_SBSP1_7b16k",
-        # "mtpbNTS_SBSP10_7b16k_pass@1",
-        # "mtpbNTS_SBSP10_7b16k_pass@10",
-        # "mtpbTFTS_SBSP10_7b16k_pass@1",
-        # "mtpbTFTS_SBSP10_7b16k_pass@10",
-        # "mtpbTS_SBSP10_7b16k_pass@1",
-        # "mtpbTS_SBSP10_7b16k_pass@10",
+        # "3_mtpbNTS_SBSP10_7b16k_pass@1",
+        # # "3_mtpbNTS_SBSP10_7b16k_pass@10",
+        # "1_mtpbTFTS_SBSP10_7b16k_pass@1",
+        # # "1_mtpbTFTS_SBSP10_7b16k_pass@10",
+        # "2_mtpbTS_SBSP10_7b16k_pass@1",
+        # # "2_mtpbTS_SBSP10_7b16k_pass@10",
         
-        "bigbenchTFTS_SBSP1_7b16k",
-        "bigbenchNTS_SBSP10_7b16k_pass@1",
-        # "bigbenchNTS_SBSP10_7b16k_pass@10",
-        "bigbenchTFTS_SBSP10_7b16k_pass@1",
-        # "bigbenchTFTS_SBSP10_7b16k_pass@10",
-        "bigbenchTS_SBSP10_7b16k_pass@1",
-        # "bigbenchTS_SBSP10_7b16k_pass@10",
+        # "bigbenchTS_SBSP1_7b16k",
+        # "bigbenchNTS_SBSP10_7b16k_pass@1",
+        # # "bigbenchNTS_SBSP10_7b16k_pass@10",
+        # "bigbenchTFTS_SBSP10_7b16k_pass@1",
+        # # "bigbenchTFTS_SBSP10_7b16k_pass@10",
+        # "bigbenchTS_SBSP10_7b16k_pass@1",
+        # # "bigbenchTS_SBSP10_7b16k_pass@10",
         ]
     show_label2 = [
         # "UTfeedback_SBSP_7b16k_halftT",
@@ -414,9 +474,17 @@ if __name__=="__main__":
         # "UTfeedback_SBSP_7b16k_halftT5_s10",
         # "UTfeedback_SBSP_7b16k_halftT6s256",
     ]
-    num_task = 200
-    for label,value in cir_record.items():
-        if label in show_label:
+    pack = true_testcase_pack
+    show_label = pack["labels"]
+    num_task = pack["num_task"]
+    image_path = pack["image_path"]
+    legends = pack["legends"]
+    # for label,value in cir_record.items():
+    #     if label in show_label:
+    #         data[label] = [round((1.0*x)/num_task*100,1) for x in value]
+    for label in show_label:
+        if label in cir_record.keys():
+            value = cir_record[label]
             data[label] = [round((1.0*x)/num_task*100,1) for x in value]
     ys = []
     for label in show_label2:
@@ -429,7 +497,7 @@ if __name__=="__main__":
     print(f"mean_ys:{mean_ys}, std_ys:{std_ys}")
     data2 = {"x":range(11),"mean":mean_ys,"std":std_ys,"label":"halftT"}
     # draw_plots_mean_std(data, data2,color_map, "../image/CODETv3.jpg")
-    draw_plots_percent(data,color_map,"../image/bigbench_7b16k_pass@1.jpg")
+    draw_plots_percent(data,color_map,image_path=image_path,legends=[],title="Vicuna-7b-16k在MBPP上的pass@1正确率")
     # fix_lengths = {9: 2740, 10: 930, 8: 897, 11: 457, 12: 176, 13: 86}
     # fix_percent = {6: 2094, 5: 1650, 7: 1169, 4: 225, 8: 141, 3: 7}
     

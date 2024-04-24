@@ -7,6 +7,7 @@ from executor_utils import check_correctness,check_test_correctness
 import json
 import numpy as np
 from myutils import make_printv,print_with_tag
+from resfiles_record import res_root,data_files,res_7b16k,res_cola7bpy,res_cola34bpy
 
 def get_truePass(problem,solution):
     check_program = (
@@ -112,6 +113,7 @@ def evaluate_gened_testcase(results,data,verbose):
     pass_rate_list = []
     for result in results:
         tid = result["task_id"]
+        is_MBPP = False
         if "MBPP" in tid:
             is_MBPP = True
         gened_testcase = result["gened_testcase"]
@@ -130,7 +132,50 @@ def evaluate_gened_testcase(results,data,verbose):
                 passed = result["passed"]
                 if passed:
                     pass_test_num += 1
-        pass_rate = pass_test_num/n
+        if n == 0:
+            pass_rate = 0
+        else:
+            pass_rate = pass_test_num/n
+        printv(f"Task {tid} gened {n} testcases, {pass_test_num} of them is correct, pass rate is {pass_rate}")
+        pass_rate_list.append(pass_rate)
+    mean_pass_rate = np.mean(pass_rate_list)
+    max_pass_rate = np.max(pass_rate_list)
+    min_pass_rate = np.min(pass_rate_list)
+    all_true_num = sum([1 for x in pass_rate_list if x == 1.0])
+    printv(f"mean pass rate is {mean_pass_rate}, max pass rate is {max_pass_rate}, min pass rate is {min_pass_rate}, all true is {all_true_num}")
+    return pass_rate_list
+def evaluate_testcase_nofilter(results,data,verbose):
+    printv = make_printv(verbose)
+    pass_rate_list = []
+    for result in results:
+        tid = result["task_id"]
+        is_MBPP = False
+        if "MBPP" in tid:
+            is_MBPP = True
+        gened_testcase = result["gened_testcase"]
+        np.random.seed(2024)
+        # if len(gened_testcase) > 10:
+        #     gened_testcase = np.random.choice(gened_testcase,10,replace=False)
+        gened_testcase = gened_testcase[:10]
+        n = len(gened_testcase)
+        if is_MBPP:
+            solution = data[tid]["canonical_solution"]
+        else:
+            solution = data[tid]["prompt"] + data[tid]["canonical_solution"]
+        pass_test_num = 0
+        for testcase in gened_testcase:
+            check_program = solution + "\n" + testcase
+            with ThreadPoolExecutor(max_workers=1) as executor:
+                args = (check_program, 1.0)
+                future = executor.submit(check_test_correctness, *args)
+                result = future.result()
+                passed = result["passed"]
+                if passed:
+                    pass_test_num += 1
+        if n==0:
+            pass_rate = 0
+        else:
+            pass_rate = pass_test_num/n
         printv(f"Task {tid} gened {n} testcases, {pass_test_num} of them is correct, pass rate is {pass_rate}")
         pass_rate_list.append(pass_rate)
     mean_pass_rate = np.mean(pass_rate_list)
@@ -140,11 +185,50 @@ def evaluate_gened_testcase(results,data,verbose):
     printv(f"mean pass rate is {mean_pass_rate}, max pass rate is {max_pass_rate}, min pass rate is {min_pass_rate}, all true is {all_true_num}")
     return pass_rate_list
 
+def evaluate_testcase_filter(results,data,verbose):
+    printv = make_printv(verbose)
+    pass_rate_dict = defaultdict(list)
+    for result in results:
+        tid = result["task_id"]
+        is_MBPP = False
+        if "MBPP" in tid:
+            is_MBPP = True
+        chosen_testcase_dict = result["chosen_testcase_dict"]
+        if is_MBPP:
+            solution = data[tid]["canonical_solution"]
+        else:
+            solution = data[tid]["prompt"] +"\n"+ data[tid]["canonical_solution"]
+        for cir,internal_tests in chosen_testcase_dict.items():
+            n = len(internal_tests)
+            pass_test_num = 0
+            for testcase in internal_tests:
+                check_program = solution + "\n" + testcase
+                with ThreadPoolExecutor(max_workers=1) as executor:
+                    args = (check_program, 1.0)
+                    future = executor.submit(check_test_correctness, *args)
+                    result = future.result()
+                    passed = result["passed"]
+                    if passed:
+                        pass_test_num += 1
+            if n == 0:
+                pass_rate = 0
+            else:
+                pass_rate = pass_test_num/n
+            pass_rate_dict[cir].append(pass_rate)
+    for cir,pass_rate_list in pass_rate_dict.items():
+        mean_pass_rate = np.mean(pass_rate_list)
+        max_pass_rate = np.max(pass_rate_list)
+        min_pass_rate = np.min(pass_rate_list)
+        all_true_num = sum([1 for x in pass_rate_list if x == 1.0])
+        printv(f" cir {cir} mean pass rate is {mean_pass_rate}, max pass rate is {max_pass_rate}, min pass rate is {min_pass_rate}, all true is {all_true_num}")
+    return pass_rate_dict
+
 def evaluate_internal_tests(results,data,verbose):
     printv = make_printv(verbose)
     pass_rate_list = []
     for result in results:
         tid = result["task_id"]
+        is_MBPP = False
         if "MBPP" in tid:
             is_MBPP = True
         internal_tests = result["internal_tests"]
@@ -166,7 +250,10 @@ def evaluate_internal_tests(results,data,verbose):
                 passed = result["passed"]
                 if passed:
                     pass_test_num += 1
-        pass_rate = pass_test_num/n
+        if n == 0:
+            pass_rate = 0
+        else:
+            pass_rate = pass_test_num/n
         printv(f"Task {tid} use {n} internal_tests, {pass_test_num} of them is correct, pass rate is {pass_rate}")
         pass_rate_list.append(pass_rate)
     mean_pass_rate = np.mean(pass_rate_list)
@@ -175,7 +262,7 @@ def evaluate_internal_tests(results,data,verbose):
     all_true_num = sum([1 for x in pass_rate_list if x == 1.0])
     printv(f"mean pass rate is {mean_pass_rate}, max pass rate is {max_pass_rate}, min pass rate is {min_pass_rate}, all true is {all_true_num}")
     return pass_rate_list
-            
+
 def load_results(res_file):
     results = []
     with open(res_file,"r") as f:
@@ -194,34 +281,34 @@ different_task = ['MBPP/18', 'MBPP/30', 'MBPP/45', 'MBPP/56', 'MBPP/70', 'MBPP/1
 if __name__ == "__main__":
     # res_file = "/home/S/hexiaolong/codex/self-debug/res/mbpp_base_gened_testcase.jsonl"
     # res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppTS_SBSP10_7b16k_16.jsonl"
-    res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppNTS_SBSP10_7b16k.jsonl"
-    res_root = "/home/S/hexiaolong/codex/self-debug/res/"
-    files = [
-        "mbppTS_SBSP1_7b16k.jsonl",
-        "mtpbTS_SBSP1_7b16k.jsonl",
-        "bigbenchTS_SBSP1_7b16k.jsonl",
-        
-        "mbppNTS_SBSP10_7b16k.jsonl",
-        "mbppTFTS_SBSP10_7b16k.jsonl",
-        "mbppTS_SBSP10_7b16k.jsonl",
-        
-        "mtpbNTS_SBSP10_7b16k.jsonl",
-        "mtpbTFTS_SBSP10_7b16k.jsonl",
-        "mtpbTS_SBSP10_7b16k.jsonl",
-        
-        "bigbenchNTS_SBSP10_7b16k.jsonl",
-        "bigbenchTS_SBSP10_7b16k.jsonl",
-        "bigbenchTFTS_SBSP10_7b16k.jsonl",
-        
-    ]
-    res_file = res_root + files[4]
+    # res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppNTS_SBSP10_7b16k.jsonl"
+    # res_root = "/home/S/hexiaolong/codex/self-debug/res/"
+    # files = [
+    #     "humanevalTS_SBSP1_7b16k.jsonl",
+    #     "humanevalNTS_SBSP10_7b16k.jsonl",
+    #     "humanevalTS_SBSP10_7b16k.jsonl",
+    #     "humanevalTFTS_SBSP10_7b16k.jsonl",  
+    #     "mbppTS_SBSP1_7b16k.jsonl",
+    #     "mbppNTS_SBSP10_7b16k.jsonl",
+    #     "mbppTS_SBSP10_7b16k.jsonl",
+    #     "mbppTFTS_SBSP10_7b16k.jsonl",  
+    #     "mtpbTS_SBSP1_7b16k.jsonl",
+    #     "mtpbNTS_SBSP10_7b16k.jsonl",
+    #     "mtpbTS_SBSP10_7b16k.jsonl",
+    #     "mtpbTFTS_SBSP10_7b16k.jsonl",
+    #     "bigbenchTS_SBSP1_7b16k.jsonl",
+    #     "bigbenchNTS_SBSP10_7b16k2.jsonl",
+    #     "bigbenchTS_SBSP10_7b16k2.jsonl",
+    #     "bigbenchTFTS_SBSP10_7b16k.jsonl",
+    # ]
+    # data_files = {
+    #     "humaneval":"/home/S/hexiaolong/codex/self-debug/data/humaneval.jsonl",
+    #     "mbpp":"/home/S/hexiaolong/codex/self-debug/MBPP/mbpp_humaneval_format_11_510.jsonl",
+    #     "mbpt":"/home/S/hexiaolong/codex/self-debug/benchmarks/mtpb_humaneval_format.jsonl",
+    #     "bigbench":"/home/S/hexiaolong/codex/self-debug/benchmarks/bigbench_humaneval_format.jsonl",
+    # }
     
-    data_files = {
-        "humaneval":"",
-        "mbpp":"/home/S/hexiaolong/codex/self-debug/MBPP/mbpp_humaneval_format_11_510.jsonl",
-        "mbpt":"/home/S/hexiaolong/codex/self-debug/benchmarks/mtpb_humaneval_format.jsonl",
-        "bigbench":"/home/S/hexiaolong/codex/self-debug/benchmarks/bigbench_humaneval_format.jsonl",
-    }
+    res_file = res_root +  res_cola7bpy[9]#res_7b16k[1]#res_cola34bpy[5]# res_cola7bpy[3]
     if "mbpp" in res_file:
         data_file = data_files["mbpp"]
         data = read_problems(data_file)
@@ -233,6 +320,9 @@ if __name__ == "__main__":
                 continue
             new_data[tid] = d
         data = new_data
+    elif "humaneval" in res_file:
+        data_file = data_files["humaneval"]
+        data = read_problems(data_file)
     elif "mtpb" in res_file:
         data_file = data_files["mbpt"]
         data = read_problems(data_file)
@@ -242,6 +332,10 @@ if __name__ == "__main__":
     results = load_results(res_file=res_file)
     get_pass_k(results,data,1,10)
     # evaluate_gened_testcase(results=results,data=data,verbose=True)
+    # print("------------------------no filter------------------------")
+    # evaluate_testcase_nofilter(results=results,data=data,verbose=True)
+    # print("-----------------------filter-------------------------")
+    # evaluate_testcase_filter(results=results,data=data,verbose=True)
     # evaluate_internal_tests(results=results,data=data,verbose=True)
     # num = 0
     # for x in chosen_data_idx:

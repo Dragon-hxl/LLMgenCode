@@ -6,8 +6,8 @@
 # Please modify job name
 
 #SBATCH -J SBSP10_pT_0              # The job name
-#SBATCH -o ../log/treesearch_SBSP10_codellama7binst_pT_0.out        # Write the standard output to file named 'ret-<job_number>.out'
-#SBATCH -e ../log/treesearch_SBSP10_codellama7binst_pT_0.out        # Write the standard error to file named 'ret-<job_number>.err'
+#SBATCH -o ../log/humanevalTS_SBSP10_codellama7binst_pT_0.out        # Write the standard output to file named 'ret-<job_number>.out'
+#SBATCH -e ../log/humanevalTS_SBSP10_codellama7binst_pT_0.out        # Write the standard error to file named 'ret-<job_number>.err'
 
 
 #- Resources
@@ -80,7 +80,7 @@ nvidia-smi
 #- Job step
 ###eval 'opam config env'
 cd /home/S/hexiaolong/codex/self-debug/src
-python3.9 job-record.py -jobID $SLURM_JOBID -comment "new version code. tree search SBSP10. seed 2024. codellama 7b inst." -output_file "../res/treesearch_SBSP10_codellama7binst_pT_0.jsonl"
-python3.9 main.py +model_path=/lustre/S/hexiaolong/CodeLlama-7b-Instruct-hf +output=../res/treesearch_SBSP10_codellama7binst_pT_0.jsonl +sample_num=10 +Strategy=TS +dataset=humaneval
+python3.9 job-record.py -jobID $SLURM_JOBID -comment "new version code. tree search SBSP10. seed 2024. codellama 7b inst." -output_file "../res/humanevalTS_SBSP10_codellama7binst_pT_0.jsonl"
+python3.9 main.py +model_path=/lustre/S/hexiaolong/CodeLlama-7b-Instruct-hf +output=../res/humanevalTS_SBSP10_codellama7binst_pT_0.jsonl +sample_num=10 +Strategy=TS +dataset=humaneval
 #- End
 echo "Job end at $(date "+%Y-%m-%d %H:%M:%S")"

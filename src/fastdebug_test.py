@@ -60,7 +60,7 @@ UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
 data_root = "/home/S/hexiaolong/codex/self-debug/data/"
 ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
 
-def run_tree_search(
+def run_fastdebug_test(
     dataset:list,
     model_path:str,
     output_file:str,
@@ -73,7 +73,7 @@ def run_tree_search(
     print_v = make_printv(verbose)
     model = Model(model_path)
     gen = PyGenerator()
-    print_v("Run tree search.")
+    print_v("Run fastdebug test.")
     
     #读取prompt
     with open(UTfeedback_file,"r") as f:
@@ -81,10 +81,10 @@ def run_tree_search(
     
     #打开输出文件
     f = open(output_file,"w+",encoding="utf-8")
-    full_output_file = output_file.replace(".jsonl","_full.jsonl")
-    fullf = open(full_output_file,"w+",encoding="utf-8")
-    if f and fullf:
-        print_v(f"open {output_file} and {full_output_file} success.")
+    if f:
+        pass
+    else:
+        return
     #获取solution
     for data in dataset:
         task_begin_time = time.time()
@@ -132,19 +132,18 @@ def run_tree_search(
         # 开始生成feedback和新代码的循环
         cir = 0
         output_short = {}
-        output_full = {} # 存放所有生成的solution
         node1 = Node(solution,prompt=base_prompt,depth=cir,feedbackprompt=feedback_prompt)
         nodes,gened_nodes,chosen_nodes = [node1],[node1],[node1]
         left_nodes,time_record,fix_record = [],[],[]
+        speed_up_percents = []
         
+        store_flag = True
         while True:
             st = time.time()
             stop = False
             # 运行所有的solution得到通过的test数量和得分
             for i,node in enumerate(gened_nodes):
                 solution = node.solution
-                if i == 0:
-                    print_v(f"check program : \n{start_code+solution}")
                 # 这里通过一次函数调用同时获得simple和UTfeedback，也就是会判断代码是否正确，同时对于出现AssertError的代码会得到其执行的第一个unit test的值。其他Error因为会返回具体的错误信息就不会得到执行的第一个unit test的值。
                 try:
                     with ThreadPoolExecutor(max_workers=1) as executor:
@@ -180,12 +179,8 @@ def run_tree_search(
             choose_solution_time = (time.time()-choose_start)/60
             
             print_v(f"task:{tid}, cir:{cir}, gened {len(gened_nodes)} solutions, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}, chosen nodes:{len(chosen_nodes)}, left nodes:{len(left_nodes)}")
-            print_v(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
-            print_v(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")
-            print_v(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\n")#CODET point are {[n.CODET_point for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\n
-                
+               
             output_short[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob} for n in chosen_nodes]
-            output_full[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate} for n in gened_nodes]
             time_record.append({"cir":cir,"model_inference_time":model_inference_time,"run_solutions_time":run_solutions_time,"choose_solution_time":choose_solution_time})
             if stop or cir>=cir_times:
                 break
@@ -195,9 +190,8 @@ def run_tree_search(
             st = time.time()
             len_record = []
             k=1
-            return_sequences = int(sample_num/k)
+            return_sequences = 10
             total_output_length = 0
-            print_v(f"begin to generate solutions for cir {cir} with {return_sequences} sequences.")
             #feedback
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt
@@ -208,7 +202,27 @@ def run_tree_search(
                 input_length = inputs.input_ids.shape[1]
                 fix_percent = (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
                 for _ in range(k):
-                    solutions,inference_time= gen.generate_with_feedback(model,feedback,return_sequences=return_sequences,verbose=True)
+                    if True:
+                        if store_flag:
+                            print(f"first time, store fix with fix_percent： {fix_percent}.")
+                            store_len=fix_input_len
+                            store_fix = True
+                            use_store = False
+                            store_flag = False
+                        else:
+                            print(f"other time use store with fix_percent： {fix_percent}.")
+                            store_len=fix_input_len
+                            store_fix = False
+                            use_store = True
+                    else:
+                        store_len=0
+                        store_fix = False
+                        use_store = False
+                    # cache_st = time.time()
+                    solutions,cache_time= gen.generate_with_feedback_cache_version(model,feedback,return_sequences=return_sequences,verbose=True,store_len=store_len,store_fix=store_fix,use_store=use_store)
+                    # torch.cuda.synchronize()
+                    # cache_time = time.time() - cache_st
+                    sols = []
                     for s in solutions:
                         ans,true_sc,output_length = s[0],s[1],s[2]
                         # 记录每条solution的长度
@@ -216,11 +230,29 @@ def run_tree_search(
                         len_record.append((input_length,fix_input_len,fix_percent,output_length,i))
                         #创建node
                         solution = filter_fix_ans(ans, entry_point, start_code)
+                        sols.append(solution)
                         tmp_node = Node(solution=solution,parent=node,prompt=feedback,prob=true_sc,depth=cir)
                         tmp_node.idx = len(nodes)
                         node.children.append(tmp_node.idx)
                         gened_nodes.append(tmp_node)
                         nodes.append(tmp_node)
+                    solutions2,normal_time = gen.generate_with_feedback_cache_version(model,feedback,return_sequences=return_sequences,verbose=True)
+                    sols2 = []
+                    for s in solutions2:
+                        ans,true_sc,output_length = s[0],s[1],s[2]
+                        solution2 = filter_fix_ans(ans, entry_point, start_code)
+                        # print_with_tag(solution2,"normal solution",True)
+                        sols2.append(solution2)
+                    print(f"len sols is {len(sols)}, len sols2 is {len(sols2)}.")
+                    for solution,solution2 in zip(sols,sols2):
+                        if solution != solution2:
+                            print("cache solution is not consistent with normal one.")
+                            print_with_tag(solution,"cache solution",True)
+                            print_with_tag(solution2,"normal solution",True)
+                    print_v(f"cache time : {cache_time}s. normal time : {normal_time}s.")
+                    print_v(f"speed up time : {normal_time - cache_time}s.")
+                    print_v(f"speed up percent: {((normal_time - cache_time)/normal_time)*100}%.")
+                    speed_up_percents.append(((normal_time - cache_time)/normal_time)*100)
             
             #record time and length
             model_inference_time = (time.time()-st)/60
@@ -233,10 +265,7 @@ def run_tree_search(
         task_end_time = time.time()
         task_time = (task_end_time - task_begin_time)/60
         
-        f.write(json.dumps({"task_id": tid,"completion":output_short,"time_record":time_record,"fix_record":fix_record,"step_one_total_time":step_one_total_time,"step_one_tokens_len":(input_tokens_len,output_tokens_len),"task_time":task_time,"internal_tests":internal_tests})+"\n")
+        f.write(json.dumps({"task_id": tid,"completion":output_short,"time_record":time_record,"fix_record":fix_record,"step_one_total_time":step_one_total_time,"step_one_tokens_len":(input_tokens_len,output_tokens_len),"task_time":task_time,"internal_tests":internal_tests,"speed_up":speed_up_percents})+"\n")
         f.flush()
-        fullf.write(json.dumps({"task_id":tid,"completion":output_full})+"\n")
-        fullf.flush()
     f.close()
-    fullf.close()
     return

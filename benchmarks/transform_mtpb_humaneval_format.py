@@ -41,6 +41,7 @@ def get_tests(func_name, inputs, outputs):
 
 def tranform_to_humaneval(input_file, output_file):
     data = read_jsonl(input_file)
+    tests_num = []
     formatdata = []
     for task in data:
         problem = {}
@@ -49,6 +50,7 @@ def tranform_to_humaneval(input_file, output_file):
         func_name = get_func_name(task["name"])
         func_sig = get_func_sig(func_name, args)
         tests = get_tests(func_name, task["inputs"], task["outputs"])
+        tests_num.append(len(task["inputs"]))
         prompt = func_sig + "\n    \"\"\"\n    " + "\n    ".join(task["prompts"]) + "\n    \"\"\""
         
         problem["task_id"] = task_id
@@ -66,10 +68,12 @@ def tranform_to_humaneval(input_file, output_file):
         print("+---------------------------------+")
         
         formatdata.append(problem)
-    with open(output_file, 'w') as f:
-        for problem in formatdata:
-            f.write(json.dumps(problem) + "\n")
+    # with open(output_file, 'w') as f:
+    #     for problem in formatdata:
+    #         f.write(json.dumps(problem) + "\n")
+    print("average test num : ",sum(tests_num)/len(tests_num))
     return formatdata
+
 
 if __name__ == "__main__":
     input_file = "mtpb.jsonl"

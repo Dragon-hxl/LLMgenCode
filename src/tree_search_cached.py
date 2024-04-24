@@ -60,7 +60,7 @@ UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
 data_root = "/home/S/hexiaolong/codex/self-debug/data/"
 ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
 
-def run_tree_search(
+def run_tree_search_cached(
     dataset:list,
     model_path:str,
     output_file:str,
@@ -137,6 +137,7 @@ def run_tree_search(
         nodes,gened_nodes,chosen_nodes = [node1],[node1],[node1]
         left_nodes,time_record,fix_record = [],[],[]
         
+        store_flag = True
         while True:
             st = time.time()
             stop = False
@@ -208,7 +209,23 @@ def run_tree_search(
                 input_length = inputs.input_ids.shape[1]
                 fix_percent = (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
                 for _ in range(k):
-                    solutions,inference_time= gen.generate_with_feedback(model,feedback,return_sequences=return_sequences,verbose=True)
+                    if True:
+                        if store_flag:
+                            print(f"first time, store fix with length {fix_input_len}.")
+                            store_len=fix_input_len
+                            store_fix = True
+                            use_store = False
+                            store_flag = False
+                        else:
+                            print(f"other time use store with length {fix_input_len}.")
+                            store_len=fix_input_len
+                            store_fix = False
+                            use_store = True
+                    else:
+                        store_len=0
+                        store_fix = False
+                        use_store = False
+                    solutions,inference_time= gen.generate_with_feedback_cache_version(model,feedback,return_sequences=return_sequences,verbose=True,store_len=store_len,store_fix=store_fix,use_store=use_store)
                     for s in solutions:
                         ans,true_sc,output_length = s[0],s[1],s[2]
                         # 记录每条solution的长度

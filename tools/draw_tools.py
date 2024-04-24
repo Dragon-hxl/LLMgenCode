@@ -3,6 +3,9 @@
 """
 import matplotlib.pyplot as plt
 import numpy as np
+# 支持中文
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 
 def draw_hist(data:list,image_path:str,normed=False) -> None:
     """
@@ -167,19 +170,20 @@ def draw_scatters(data,image_path):
     绘制散点图
     data是一个字典内容是{"percent:numbers"}
     """
-    plt.style.use("fivethirtyeight")
+    # plt.style.use("fivethirtyeight")
     xs = []
     ys = []
     for k,v in data.items():
         xs.append(k)
-        ys.append(v)
-    fig = plt.figure(figsize=(5,3),dpi=400)
-    plt.xlabel("numbers")
-    plt.ylabel("correct percent")
-    plt.yticks([0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0])
+        ys.append(v*100)
+    fig = plt.figure(figsize=(6,4),dpi=400)
+    plt.xlabel("通过测试用例的代码数量")
+    plt.ylabel("测试用例正确率:%")
+    plt.yticks([0.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0])
     # plt.xticks(range(0,300,50))
     title = image_path.split("/")[-1].split(".")[0]
-    plt.title(title)
+    # plt.title(title)
+    plt.grid(True,linestyle="--",alpha=0.5)
     plt.scatter(x=xs,y=ys,s=5,color="blue")
     # for xt,yt in zip(xs,ys):
     #     plt.text(xt,yt,yt,va="bottom",ha="center")
