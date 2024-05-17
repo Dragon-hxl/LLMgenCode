@@ -21,3 +21,5 @@ python3.9 main.py +model_path=/lustre/S/hexiaolong/codellama-34bpy +output=../re
 python3.9 main.py +model_path=/lustre/S/hexiaolong/codellama-7bpy +output=../res/fastdebug_test.jsonl +sample_num=10 +Strategy=debug +dataset=humaneval > ../log/fastdebug_test.out 2>&1
 
 python3.9 main.py +model_path=/lustre/S/hexiaolong/vicuna-7b-16k +output=../res/fastdebug_test_7b16k.jsonl +sample_num=10 +Strategy=debug +dataset=humaneval > ../log/fastdebug_test_7b16k.out 2>&1
+
+python3.9 main.py +model_path=/lustre/S/hexiaolong/codellama-7bpy +output=../res/mtpbTS_SBSP10_codellama7bpy_19.jsonl +sample_num=10 +Strategy=TS +dataset=mtpb > ../log/mtpbTS_SBSP10_codellama7bpy_19.out 2>&1

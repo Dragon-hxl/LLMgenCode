@@ -56,9 +56,6 @@ class Node:
 prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
 prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
-# test file
-data_root = "/home/S/hexiaolong/codex/self-debug/data/"
-ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
 
 def run_not_tree_search(
     dataset:list,
@@ -89,7 +86,7 @@ def run_not_tree_search(
         internal_tests = []
         if data.get('prompt_tests', []) == []:
             print_v("Use internal_tests.")
-            internal_tests = gen.gen_tests(model,data,num=10,verbose=False)
+            internal_tests = gen.gen_tests_sort_by_prob(model,data,num=10,verbose=False)
             internal_tests = internal_tests[:6]
             print_v('\n'.join(internal_tests))
             assertions = internal_tests
@@ -138,7 +135,7 @@ def run_not_tree_search(
             # 运行所有的solution得到通过的test数量和得分
             for i,node in enumerate(gened_nodes):
                 solution = node.solution
-                if i == 0:
+                if i == 0:  
                     print_v(f"check program : \n{start_code+solution}")
                 # 这里通过一次函数调用同时获得simple和UTfeedback，也就是会判断代码是否正确，同时对于出现AssertError的代码会得到其执行的第一个unit test的值。其他Error因为会返回具体的错误信息就不会得到执行的第一个unit test的值。
                 try:

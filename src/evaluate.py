@@ -1,5 +1,5 @@
 from dataset import read_problems
-from collections import defaultdict
+from collections import defaultdict,Counter
 from concurrent.futures import ThreadPoolExecutor
 import sys
 sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
@@ -23,8 +23,8 @@ def get_truePass(problem,solution):
         future = executor.submit(check_test_correctness, *args)
         result = future.result()
         passed = result["passed"]
-    print(f"result : {result['result']}")
-    return passed
+        error_message = result["result"]
+    return passed,error_message
 
 def tid_to_int(tid):
     return int(tid.split("/")[1])
@@ -37,6 +37,15 @@ def estimator(n: int, c: int, k: int) -> float:
             return 1.0
         return 1.0 - np.prod(1.0 - k / np.arange(n - c + 1, n + 1))
 
+def error_analysis(error_dict):
+    error_list = []
+    for cir,errors in error_dict.items():
+        print(f"In cir {cir} , errors counter is:")
+        print(Counter(errors))
+        error_list += errors
+    print("Total error messages Counter is : ")
+    print(Counter(error_list))
+    return
 
 def get_pass_k(results,data,k=10,n=10):
     passed_per_cir = defaultdict(set)# 每个cir通过的task
@@ -45,6 +54,8 @@ def get_pass_k(results,data,k=10,n=10):
     checked_task = set()
     pass_k_list = defaultdict(list)
     result_num = len(results)
+    error_dict = defaultdict(list)
+    cir_nums = []
     for result in results:
         task_id = tid_to_int(result["task_id"])
         if task_id in checked_task:
@@ -62,28 +73,31 @@ def get_pass_k(results,data,k=10,n=10):
             passed_num = 0
             for i,solution in enumerate(solutions):
                 solution = solution["solution"]
-                passed = get_truePass(problem,solution)
+                passed,error_message = get_truePass(problem,solution)
                 print(f"solution {i} passed {passed}")
                 if passed:
                     passed_num += 1
                     total_passed =True
                     for c in range(cir,11):
                         passed_per_cir[c].add(task_id)
+                    cir_nums.append(cir)
+                else:
+                    error_dict[cir].append(error_message)
             pass_k_list[cir].append(estimator(n,passed_num,k))
             task_cir_pass[task_id].append(total_passed)
         cirs = sorted(cirs)
         task_cir[task_id] = cirs
-    lack_task = []
     task_cir_pass = dict(sorted(task_cir_pass.items(),key=lambda x:x[0]))
     passed_per_cir = dict(sorted(passed_per_cir.items(),key=lambda x:x[0]))
     # find lack task
     task_has_solution = task_cir_pass.keys()
-    print(f"task_has_solution: {task_has_solution}")
+    # print(f"task_has_solution: {task_has_solution}")
     tid_list = data.keys()
     tid_list = [tid_to_int(tid) for tid in tid_list]
-    for tid in tid_list:
-        if tid not in task_has_solution:
-            lack_task.append(tid)
+    lack_task = [tid for tid in tid_list if tid not in task_has_solution]
+    # for tid in tid_list:
+    #     if tid not in task_has_solution:
+    #         lack_task.append(tid)
     
     pass_task_num = [0 for i in range(11)]
     for k,v in passed_per_cir.items():
@@ -102,10 +116,12 @@ def get_pass_k(results,data,k=10,n=10):
     pass_task_rate = [x/result_num for x in pass_task_num]
     print(f"pass task rate: {pass_task_rate}")
     
-    for cir,v in pass_k_list.items():
-        pass_at_k = sum(v)/len(v)
-        print(f"cir {cir}, pass at k {k} rate: {pass_at_k}")
-    
+    #计算无差的pass@k
+    # for cir,v in pass_k_list.items():
+    #     pass_at_k = sum(v)/len(v)
+    #     print(f"cir {cir}, pass at k {k} rate: {pass_at_k}")
+    #错误信息分析
+    # error_analysis(error_dict)
     return passed_per_cir,task_cir,lack_task,pass_k_list
 
 def evaluate_gened_testcase(results,data,verbose):
@@ -271,44 +287,29 @@ def load_results(res_file):
             results.append(result)
     return results
 
-
-
-
+def show_certian_task(results,tid):
+    print("Show debug progress of task {}".format(tid))
+    for result in results:
+        task_id = tid_to_int(result["task_id"])
+        if task_id != tid:
+            continue
+        completion = result["completion"]
+        problem = data[result["task_id"]]
+        print(f"Task NL: \n{problem['prompt']}")
+        for cir,solutions in completion.items():
+            cir = int(cir)
+            solution = solutions[0]
+            print("-----------------------------")
+            print(f"Cir {cir} :\n {solution['solution']}\npassT_rate = {solution['passT_rate']}")
+            print("-----------------------------")
+    return
 
 chosen_data_idx = [240, 93, 372, 296, 155, 102, 454, 370, 209, 387, 366, 388, 135, 272, 125, 325, 416, 376, 255, 181, 212, 269, 497, 315, 111, 158, 278, 360, 169, 265, 38, 374, 396, 443, 105, 352, 385, 477, 239, 363, 425, 446, 334, 75, 486, 108, 444, 210, 29, 394, 178, 321, 213, 238, 63, 371, 380, 71, 390, 167, 199, 471, 176, 406, 494, 166, 218, 479, 162, 290, 109, 208, 117, 104, 20, 383, 115, 441, 9, 132, 258, 163, 395, 291, 411, 361, 215, 314, 57, 438, 457, 310, 399, 118, 120, 237, 187, 69, 103, 188, 252, 304, 448, 72, 134, 198, 319, 172, 171, 362, 364, 458, 86, 350, 356, 67, 410, 465, 297, 351, 33, 50, 88, 2, 77, 224, 472, 405, 179, 427, 41, 100, 145, 122, 355, 236, 308, 417, 246, 268, 223, 339, 432, 435, 36, 154, 354, 142, 402, 289, 338, 128, 478, 51, 253, 475, 368, 450, 90, 263, 114, 418, 480, 23, 496, 473, 193, 324, 37, 60, 492, 28, 470, 64, 107, 412, 44, 419, 377, 462, 249, 298, 84, 82, 323, 326, 53, 398, 287, 309, 15, 312, 55, 286, 92, 409, 161, 0, 62, 143]
 base_pass_task_mbpp = [17, 23, 27, 35, 40, 41, 46, 51, 52, 58, 62, 66, 79, 82, 85, 88, 89, 93, 96, 99, 105, 112, 113, 127, 133, 144, 145, 161, 168, 171, 173, 174, 175, 176, 183, 195, 204, 210, 212, 214, 221, 222, 227, 230, 234, 249, 250, 255, 258, 261, 263, 269, 273, 281, 284, 293, 297, 309, 319, 322, 329, 332, 333, 341, 361, 373, 375, 394, 403, 404, 412, 422, 425, 443, 447, 457, 458, 459, 465, 474, 476, 478, 480, 487, 489, 495, 496, 498, 502, 504, 507, 509]
 different_task = ['MBPP/18', 'MBPP/30', 'MBPP/45', 'MBPP/56', 'MBPP/70', 'MBPP/148', 'MBPP/151', 'MBPP/152', 'MBPP/164', 'MBPP/181', 'MBPP/323', 'MBPP/338', 'MBPP/342', 'MBPP/348', 'MBPP/364', 'MBPP/367', 'MBPP/466', 'MBPP/485', 'MBPP/486', 'MBPP/501']
-if __name__ == "__main__":
-    # res_file = "/home/S/hexiaolong/codex/self-debug/res/mbpp_base_gened_testcase.jsonl"
-    # res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppTS_SBSP10_7b16k_16.jsonl"
-    # res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppNTS_SBSP10_7b16k.jsonl"
-    # res_root = "/home/S/hexiaolong/codex/self-debug/res/"
-    # files = [
-    #     "humanevalTS_SBSP1_7b16k.jsonl",
-    #     "humanevalNTS_SBSP10_7b16k.jsonl",
-    #     "humanevalTS_SBSP10_7b16k.jsonl",
-    #     "humanevalTFTS_SBSP10_7b16k.jsonl",  
-    #     "mbppTS_SBSP1_7b16k.jsonl",
-    #     "mbppNTS_SBSP10_7b16k.jsonl",
-    #     "mbppTS_SBSP10_7b16k.jsonl",
-    #     "mbppTFTS_SBSP10_7b16k.jsonl",  
-    #     "mtpbTS_SBSP1_7b16k.jsonl",
-    #     "mtpbNTS_SBSP10_7b16k.jsonl",
-    #     "mtpbTS_SBSP10_7b16k.jsonl",
-    #     "mtpbTFTS_SBSP10_7b16k.jsonl",
-    #     "bigbenchTS_SBSP1_7b16k.jsonl",
-    #     "bigbenchNTS_SBSP10_7b16k2.jsonl",
-    #     "bigbenchTS_SBSP10_7b16k2.jsonl",
-    #     "bigbenchTFTS_SBSP10_7b16k.jsonl",
-    # ]
-    # data_files = {
-    #     "humaneval":"/home/S/hexiaolong/codex/self-debug/data/humaneval.jsonl",
-    #     "mbpp":"/home/S/hexiaolong/codex/self-debug/MBPP/mbpp_humaneval_format_11_510.jsonl",
-    #     "mbpt":"/home/S/hexiaolong/codex/self-debug/benchmarks/mtpb_humaneval_format.jsonl",
-    #     "bigbench":"/home/S/hexiaolong/codex/self-debug/benchmarks/bigbench_humaneval_format.jsonl",
-    # }
+if __name__ == "__main__":    
+    res_file = res_root + res_cola7bpy[2] #res_cola7bpy[3]#res_7b16k[1]#res_cola34bpy[5]# res_cola7bpy[3]
     
-    res_file = res_root +  res_cola7bpy[9]#res_7b16k[1]#res_cola34bpy[5]# res_cola7bpy[3]
     if "mbpp" in res_file:
         data_file = data_files["mbpp"]
         data = read_problems(data_file)
@@ -329,20 +330,14 @@ if __name__ == "__main__":
     elif "bigbench" in res_file:
         data_file = data_files["bigbench"]
         data = read_problems(data_file)
+        
     results = load_results(res_file=res_file)
-    get_pass_k(results,data,1,10)
+    #get pass@k
+    # get_pass_k(results,data,1,10)
+    show_certian_task(results,40)
     # evaluate_gened_testcase(results=results,data=data,verbose=True)
     # print("------------------------no filter------------------------")
     # evaluate_testcase_nofilter(results=results,data=data,verbose=True)
     # print("-----------------------filter-------------------------")
     # evaluate_testcase_filter(results=results,data=data,verbose=True)
     # evaluate_internal_tests(results=results,data=data,verbose=True)
-    # num = 0
-    # for x in chosen_data_idx:
-    #     x = x+11
-    #     if x in base_pass_task_mbpp:
-    #         num += 1
-    # print(num)
-    # chosen_data_idx = [i+11 for i in chosen_data_idx]
-    # results_id = [int(r["task_id"].split("/")[1]) for r in results]
-    # print(set(chosen_data_idx) - set(results_id))

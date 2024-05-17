@@ -36,15 +36,22 @@ res_7b16k = [
     ]
 
 res_cola7bpy = [
-    "humanevalTS_SBSP1_codellama7bpy_pT.jsonl",
+    "humanevalTS_SBSP1_codellama7bpy.jsonl",
     "humanevalNTS_SBSP10_codellama7bpy_pT.jsonl",
     "humanevalTS_SBSP10_codellama7bpy_pT.jsonl",
     "humanevalTFTS_SBSP10_codellama7bpy_pT.jsonl",
     
+    "mbppTS_SBSP1_codellama7bpy.jsonl",
     "mbppNTS_SBSP10_codellama7bpy_pT.jsonl",
     "mbppTS_SBSP10_codellama7bpy_pT.jsonl",
     "mbppTFTS_SBSP10_codellama7bpy_pT.jsonl",
     
+    "mtpbTS_SBSP1_codellama7bpy.jsonl",
+    "mtpbNTS_SBSP10_codellama7bpy.jsonl",
+    "mtpbTS_SBSP10_codellama7bpy.jsonl",
+    "mtpbTFTS_SBSP10_codellama7bpy.jsonl",
+    
+    "bigbenchTS_SBSP1_codellama7bpy.jsonl",
     "bigbenchNTS_SBSP10_codellama7bpy.jsonl",
     "bigbenchTS_SBSP10_codellama7bpy.jsonl",
     "bigbenchTFTS_SBSP10_codellama7bpy.jsonl",

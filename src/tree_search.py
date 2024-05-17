@@ -1,4 +1,3 @@
-import torch
 import json
 import time
 import numpy as np
@@ -13,13 +12,12 @@ os.environ["TOKENIZERS_PARALLELISM"] = "true"
 import sys
 sys.path.append("/home/S/hexiaolong/codex/self-debug")
 sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
-from human_eval.data import read_problems
 from human_eval.execution import run_code_with_test_result,run_code_with_output2
-from myutils import setup_seed,make_printv,print_with_tag,code_clean2,get_unit_test,prompt_for_64,filter_fix_ans,get_CODET_point_v1,get_CODET_point_v3,get_pass_rate,get_UTfeedback_prompt_v1,get_UTfeedback_prompt,start_code_extract
+from myutils import setup_seed,make_printv,print_with_tag,code_clean2,get_unit_test,filter_fix_ans,get_CODET_point_v1,get_CODET_point_v3,get_pass_rate,get_UTfeedback_prompt_v1,get_UTfeedback_prompt,start_code_extract
 from model import Model
 from generator import PyGenerator
 
-
+#在树搜索中使用的node类
 class Node:
     def __init__(self,solution:str,parent=None,prompt:str="",passT_rate:float=-1.0,prob:float=-1.0,depth:int=0,feedbackprompt:str="") -> None:
         self.solution = solution
@@ -56,9 +54,6 @@ class Node:
 prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
 prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
-# test file
-data_root = "/home/S/hexiaolong/codex/self-debug/data/"
-ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
 
 def run_tree_search(
     dataset:list,
@@ -88,12 +83,12 @@ def run_tree_search(
     #获取solution
     for data in dataset:
         task_begin_time = time.time()
-        
+        # 获取或者生成可见测试用例
         tid = data["task_id"]
         internal_tests = []
         if data.get('prompt_tests', []) == []:
             print_v("Use internal_tests.")
-            internal_tests = gen.gen_tests(model,data,num=10,verbose=False)
+            internal_tests = gen.gen_tests_sort_by_prob(model,data,num=10,verbose=False)
             internal_tests = internal_tests[:6]
             print_v('\n'.join(internal_tests))
             assertions = internal_tests
@@ -106,11 +101,10 @@ def run_tree_search(
             assertion_string = "\n".join(assertions)
         
         print_v(f"get solution for task : {tid} with {len(assertions)} tests.")
-
+        #生成初始代码
         step_one_st = time.time()
         tprompt = data["prompt"]
-        if tid == "HumanEval/64":
-            tprompt = prompt_for_64
+        
         base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len = gen.generate_base_complication(model,tprompt,base_assertion_string,record_time=True,verbose=verbose)
         
         # 去除函数头和注释
@@ -197,7 +191,7 @@ def run_tree_search(
             k=1
             return_sequences = int(sample_num/k)
             total_output_length = 0
-            print_v(f"begin to generate solutions for cir {cir} with {return_sequences} sequences.")
+            # print_v(f"begin to generate solutions for cir {cir} with {return_sequences} sequences.")
             #feedback
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt

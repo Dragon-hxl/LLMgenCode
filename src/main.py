@@ -43,7 +43,7 @@ def main(cfg: DictConfig):
         lack_task = [129, 130, 131, 132, 133, 134, 135, 160, 161, 162, 163]
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
-            if num_id < 129 or num_id > 164:# or num_id==1 or num_id==3:#num_id not in lack_task :
+            if num_id < 95 or num_id > 128:# or num_id==1 or num_id==3:#num_id not in lack_task :
                 continue
             dataset.append(problem)
     elif dataset_type == "mbpp":
@@ -58,14 +58,14 @@ def main(cfg: DictConfig):
         print("mbpp chosen idx:",chosen_idx)
         with open("mbpp_chosen_idx.txt","w") as f:
             f.write(json.dumps(chosen_idx))
-        chosen_idx = chosen_idx[0:200]
+        chosen_idx = chosen_idx[115:200]
         dataset = [dataset[i] for i in chosen_idx]
     elif dataset_type == "mtpb":
         print("load dataset : mtpb")
         problems = read_problems("/home/S/hexiaolong/codex/self-debug/benchmarks/mtpb_humaneval_format.jsonl")
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
-            if num_id < 4 or num_id > 39 or num_id==20 or num_id==47:
+            if num_id < 40 or num_id > 79 or num_id==20 or num_id==47:
                 continue
             dataset.append(problem)
     elif dataset_type == "bigbench":

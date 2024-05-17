@@ -15,7 +15,7 @@ from show_debug_process import draw_plots_percent
 cir_record = {
     "humanevalNTS_SBSP10_7b16k_pT":[27, 35, 50, 56, 61, 64, 67, 68, 68, 68, 68],
     "humanevalTS_SBSP1_7b16k_pT": [27, 28, 31, 31, 32, 32, 32, 32, 33, 34, 35],
-    "humanevalTS_SBSP10_7b16k_pT":[27, 36, 51, 60, 63, 66, 69, 71, 71, 72, 73],
+    "humanevalTS_SBSP10_7b16k_pT":[27, 36, 51, 60, 63, 66, 69, 71, 71, 72, 73],#[27, 36, 50, 52, 56, 57, 58, 58, 58, 58, 58]
     "humanevalTFTS_SBSP10_7b16k_pT":[27, 40, 57, 63, 65, 69, 71, 72, 74, 75, 77],
 }
 

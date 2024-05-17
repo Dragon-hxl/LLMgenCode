@@ -1,4 +1,5 @@
 import json
+from resfiles_record import *
 
 def load_time_record(res_file):
     time_record = {}
@@ -43,7 +44,7 @@ def time_analysis(time_record):
     return choose_solution_time, model_inference_time, run_solutions_time
 
 if __name__ == "__main__":
-    res_file = "/home/S/hexiaolong/codex/self-debug/res/mbppTS_SBSP1_7b16k.jsonl"
+    res_file = res_root + res_cola7bpy[5]
     time_record = load_time_record(res_file)
     choose_solution_time, model_inference_time, run_solutions_time = time_analysis(time_record)
         

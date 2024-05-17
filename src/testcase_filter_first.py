@@ -64,10 +64,7 @@ class Node:
 prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
 prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
-# test file
-data_root = "/home/S/hexiaolong/codex/self-debug/data/"
-ut_file = data_root + "test_from_prompt.jsonl"# 从问题中提取的unit tests所在的文件
-true_tests_file = data_root + "test_from_check.jsonl"# 存放了最终用来check的unit_tests
+
 gened_testcases_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_rm_final5.jsonl"# 用来进行CODET的tests文件
 
 def run_testcase_filter(
@@ -122,8 +119,7 @@ def run_testcase_filter(
         # first generate the base solution
         step_one_st = time.time()
         tprompt = data["prompt"]
-        if tid == "HumanEval/64":
-            tprompt = prompt_for_64
+        
         if data.get('prompt_tests', []) == []:
             base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len = gen.generate_base_complication(model,tprompt,"",record_time=True,verbose=verbose)
             has_visibale_tests = False
@@ -157,7 +153,7 @@ def run_testcase_filter(
             # 在筛选的测试用例上执行代码
             print_v("chosen testcases are:")
             print_v("\n".join(chosen_testcase))
-            total_nodes = gened_nodes + left_nodes
+            total_nodes = gened_nodes#gened_nodes + left_nodes
             total_unique_nodes = total_unique_nodes = list(set(total_nodes))
             feedback_prompt = UTfeedback_promt + "\n".join(chosen_testcase) + "\n\n# Complete the Python funtion:\n" + tprompt+"\n### result ###\n```python\n" + start_code + "\n"
             fix_input = model.tokenizer(feedback_prompt, return_tensors='pt', return_token_type_ids=False)
@@ -194,7 +190,7 @@ def run_testcase_filter(
             
             #filter testcase
             filter_st = time.time()
-            sorted_group,chosen_testcase_id  = get_CODET_point_v3(total_nodes,task_gened_testcase,data,chosen_num=10,verbose=verbose) #这里是使用去重后的还是不去重的,sort_len=True
+            sorted_group,chosen_testcase_id  = get_CODET_point_v3(total_nodes,task_gened_testcase,data,chosen_num=10,count_solution_num=True,verbose=verbose,sort_len=True) #这里是使用去重后的还是不去重的,sort_len=True
             pass_testcase_list = [ list(x[1]) for x in sorted_group]
             if has_visibale_tests:
                 chosen_num = 10
@@ -211,7 +207,7 @@ def run_testcase_filter(
             #  对代码进行排序并选取排序靠前的代码
             chosen_nodes_num = 10
             choose_start = time.time()
-            total_nodes = gened_nodes + left_nodes
+            total_nodes = gened_nodes#gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
             if has_visibale_tests:
                 # get_pass_rate(data,total_nodes,data["prompt_tests"])

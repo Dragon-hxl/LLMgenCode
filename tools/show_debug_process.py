@@ -300,7 +300,7 @@ def draw_plots_percent(data,color,image_path,legends=[],title=""):
         labels.append(k)
         if changed_legends:
             if "TS_SBSP1_" in k:
-                legends.append("原始自反馈")
+                legends.append("传统自反馈")
             elif "NTS" in k:
                 legends.append("非树搜索自反馈")
             elif "TFTS" in k:
@@ -330,7 +330,7 @@ def draw_plots_percent(data,color,image_path,legends=[],title=""):
         for xz,yz in zip(x,y):
             plt.text(xz-0.2,yz+0.5,yz,fontsize=24,color=color[labels[i]])
         # plt.text(10+0.1,y[10],labels[i],fontsize="xx-large",color=color[labels[i]])
-    plt.legend(handles=plots,labels=legends,loc="best",fontsize=34,frameon=False)#填best自动找到最好的位置
+    plt.legend(handles=plots,labels=legends,loc="best",fontsize=32,frameon=False)#填best自动找到最好的位置
     plt.xticks(range(12),[str(i) for i in range(12)],fontsize=24)
     plt.yticks(fontsize=24)
     plt.grid(True,linestyle="--",alpha=0.5)
