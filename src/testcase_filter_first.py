@@ -64,6 +64,8 @@ class Node:
 prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
 prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
+simple_feedback_shot2 = prompt_root + "prompt_simfeedback_paper.txt"
+simple_feedback_shot1 = prompt_root + "prompt_simfeedback.txt"
 
 gened_testcases_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_rm_final5.jsonl"# 用来进行CODET的tests文件
 
@@ -72,8 +74,9 @@ def run_testcase_filter(
     model_path:str,
     output_file:str,
     sample_num:int=10,
+    filter_num:int=1,
     cir_times:int=10,
-    log_file:str = "",
+    feedback_type:str="UT",
     verbose:bool=False,
 ):
     
@@ -90,8 +93,15 @@ def run_testcase_filter(
     print_v("Run testcase filter self-debug.")
     
     #读取prompt
-    with open(UTfeedback_file,"r") as f:
-        UTfeedback_promt = f.read()
+    if feedback_type=="UT":
+        with open(UTfeedback_file,"r") as f:
+            prompt_shot = f.read()
+    elif feedback_type=="simple":
+        with open(simple_feedback_shot1,"r") as f:
+            prompt_shot = f.read()
+        
+        
+        
     #打开输出文件
     f = open(output_file,"w+",encoding="utf-8")
     full_output_file = output_file.replace(".jsonl","_full.jsonl")
@@ -153,9 +163,9 @@ def run_testcase_filter(
             # 在筛选的测试用例上执行代码
             print_v("chosen testcases are:")
             print_v("\n".join(chosen_testcase))
-            total_nodes = gened_nodes#gened_nodes + left_nodes
+            total_nodes = gened_nodes + left_nodes
             total_unique_nodes = total_unique_nodes = list(set(total_nodes))
-            feedback_prompt = UTfeedback_promt + "\n".join(chosen_testcase) + "\n\n# Complete the Python funtion:\n" + tprompt+"\n### result ###\n```python\n" + start_code + "\n"
+            feedback_prompt = prompt_shot + "\n".join(chosen_testcase) + "\n\n# Complete the Python funtion:\n" + tprompt+"\n### result ###\n```python\n" + start_code + "\n"
             fix_input = model.tokenizer(feedback_prompt, return_tensors='pt', return_token_type_ids=False)
             print_v(f"fix input length is {fix_input.input_ids.shape}")
             fix_input_len = fix_input.input_ids.shape[1]
@@ -166,7 +176,9 @@ def run_testcase_filter(
             for i,node in enumerate(total_nodes):
                 solution = start_code + node.solution
                 # 这里通过一次函数调用同时获得simple和UTfeedback，也就是会判断代码是否正确，同时对于出现AssertError的代码会得到其执行的第一个unit test的值。其他Error因为会返回具体的错误信息就不会得到执行的第一个unit test的值。
-                feedback,passn,pass_tests = exe.excute(solution=solution,tests=chosen_testcase,feedback_prompt=feedback_prompt,timeout=0.1)
+                feedback,passn,pass_tests = exe.excute(solution=solution,tests=chosen_testcase,feedback_prompt=feedback_prompt,timeout=0.1,feedback_type=feedback_type)
+                if cir==0 and i==0:
+                    print_v(f"{feedback_type} feedback:\n {feedback}")
                 node.feedbackprompt = feedback
                 node.passT_rate = passn
                 node.pass_ut_num = pass_tests
@@ -207,20 +219,22 @@ def run_testcase_filter(
             #  对代码进行排序并选取排序靠前的代码
             chosen_nodes_num = 10
             choose_start = time.time()
-            total_nodes = gened_nodes#gened_nodes + left_nodes
+            total_nodes = gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
             if has_visibale_tests:
                 # get_pass_rate(data,total_nodes,data["prompt_tests"])
-                sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.CODET_pass_rate,x.prob),reverse=True)
+                print("Sort nodes in has visibale test task.")
+                sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.CODET_pass_rate,x.prob),reverse=True)#,-len(x.solution)
             else:
                 sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
-            chosen_nodes = sorted_nodes[:chosen_nodes_num]
-            left_nodes = sorted_nodes[chosen_nodes_num:]
+            chosen_nodes = sorted_nodes[:filter_num]
+            left_nodes = sorted_nodes#[chosen_nodes_num:]
             choose_solution_time = (time.time()-choose_start)/60
             
             print_v(f"task:{tid}, cir:{cir}, gened {len(gened_nodes)} solutions, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}, chosen nodes:{len(chosen_nodes)}, left nodes:{len(left_nodes)}")
             print_v(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
             print_v(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")
+            print_v(f"chosen nodes's depth is {[n.depth for n in chosen_nodes]}")
             print_v(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\nprompt_pass_rate are {[n.CODET_pass_rate for n in chosen_nodes]}")
             
             output_short[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob} for n in chosen_nodes]
@@ -238,7 +252,7 @@ def run_testcase_filter(
             len_record = []
             gened_nodes = []
             k=1
-            return_sequences = int(sample_num/k)
+            return_sequences = sample_num
             total_output_length = 0
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt

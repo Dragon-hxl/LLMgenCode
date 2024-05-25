@@ -252,34 +252,65 @@ def get_UTfeedback_prompt(feedback_prompt, solution, code_res, run_test, test_re
             passn = (1.0*pass_tests)/total_tests
     return prompt,passn
 
-def get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions):
+prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
+
+def get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions, type="UT"):
+    print(f"Gen {type} feedback prompt!")
     total_tests = len(assertions)
     pass_tests = 0
     passn = 0.0
+    if type == "UT" or type=="expl":
     # print(f"run_test:{len(run_test)},pass_result:{len(pass_result)},test_result:{len(test_result)},assertions:{len(assertions)}")
-    if passed:
-        utFeedback = "\n```\nFeedback: With the above function,"
-        pass_result = final_res["pass_result"]
-        test_result = final_res["test_result"]
-        # print("test_result : ",test_result)
-        for i,p in enumerate(pass_result):
-            try:# 避免一些极端情况的出现
-                test_res = str(test_result[i])
-            except:
-                continue
-            if p:
-                utFeedback += f" {run_test[i]} == {test_result[i]} while the assertion is \"{assertions[i]}\".The code pass this aasertion."
-                pass_tests += 1
+        if passed:
+            utFeedback = "\n```\nFeedback: With the above function,"
+            pass_result = final_res["pass_result"]
+            test_result = final_res["test_result"]
+            # print("test_result : ",test_result)
+            for i,p in enumerate(pass_result):
+                try:# 避免一些极端情况的出现
+                    test_res = str(test_result[i])
+                except:
+                    continue
+                if p:
+                    utFeedback += f" {run_test[i]} == {test_result[i]} while the assertion is \"{assertions[i]}\".The code pass this aasertion."
+                    pass_tests += 1
+                else:
+                    utFeedback += f" {run_test[i]} == {test_result[i]} while the assertion is \"{assertions[i]}\".The code does not pass this aasertion." 
+            utFeedback += "\nSo the code is wrong. Please fix it.\n\n### fix result ###\n"
+            prompt = feedback_prompt +solution + utFeedback
+            if total_tests == 0:
+                passn = 0.0
             else:
-                utFeedback += f" {run_test[i]} == {test_result[i]} while the assertion is \"{assertions[i]}\".The code does not pass this aasertion." 
-        utFeedback += "\nSo the code is wrong. Please fix it.\n\n### fix result ###\n"
-        prompt = feedback_prompt +solution + utFeedback
-        if total_tests == 0:
-            passn = 0.0
+                passn = (1.0*pass_tests)/total_tests
         else:
-            passn = (1.0*pass_tests)/total_tests
-    else:
-        prompt =  feedback_prompt +solution + "\n```\nFeedback: With the above function, " + run_test[0] +" returns the following error:\n\"\"\"\n"+final_res+ "\n\"\"\"\nSo the code does not pass the assertion. Please fix it.\n\n### fix result ###\n"
+            prompt =  feedback_prompt +solution + "\n```\nFeedback: With the above function, " + run_test[0] +" returns the following error:\n\"\"\"\n"+final_res+ "\n\"\"\"\nSo the code does not pass the assertion. Please fix it.\n\n### fix result ###\n"
+    elif type=="simple":
+        if passed:
+            pass_result = final_res["pass_result"]
+            test_result = final_res["test_result"]
+            pass_flag = True
+            for i,p in enumerate(pass_result):
+                try:# 避免一些极端情况的出现
+                    test_res = str(test_result[i])
+                except:
+                    continue
+                if p:
+                    pass_tests += 1
+                else:
+                    pass_flag = False
+            if not pass_flag:
+                utFeedback = "\n```\nFeedback: The code above is wrong. Please fix it.\n### fix result ###\n"
+            else:
+                utFeedback = "\n```\nFeedback: The code above is correct.\n"
+            prompt = feedback_prompt +solution + utFeedback
+            if total_tests == 0:
+                passn = 0.0
+            else:
+                passn = (1.0*pass_tests)/total_tests
+        else:
+            utFeedback = "\n```\nFeedback: The code above is wrong. Please fix it.\n### fix result ###\n"
+            prompt =  feedback_prompt +solution + utFeedback
+        # print(f"simple feedback prompt:\n{prompt}")
     return prompt,passn,pass_tests
 
 def get_UTfeedback_prompt_v2(feedback_prompt, solution, passed, final_res, run_test, assertions):

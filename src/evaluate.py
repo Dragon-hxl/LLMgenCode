@@ -7,7 +7,7 @@ from executor_utils import check_correctness,check_test_correctness
 import json
 import numpy as np
 from myutils import make_printv,print_with_tag
-from resfiles_record import res_root,data_files,res_7b16k,res_cola7bpy,res_cola34bpy
+from resfiles_record import res_root,data_files,res_7b16k,res_cola7bpy,res_cola34bpy,res_llama7b,tmp
 
 def get_truePass(problem,solution):
     check_program = (
@@ -284,6 +284,7 @@ def load_results(res_file):
     with open(res_file,"r") as f:
         for line in f.readlines():
             result = json.loads(line)
+            print(result["task_id"])
             results.append(result)
     return results
 
@@ -308,7 +309,7 @@ chosen_data_idx = [240, 93, 372, 296, 155, 102, 454, 370, 209, 387, 366, 388, 13
 base_pass_task_mbpp = [17, 23, 27, 35, 40, 41, 46, 51, 52, 58, 62, 66, 79, 82, 85, 88, 89, 93, 96, 99, 105, 112, 113, 127, 133, 144, 145, 161, 168, 171, 173, 174, 175, 176, 183, 195, 204, 210, 212, 214, 221, 222, 227, 230, 234, 249, 250, 255, 258, 261, 263, 269, 273, 281, 284, 293, 297, 309, 319, 322, 329, 332, 333, 341, 361, 373, 375, 394, 403, 404, 412, 422, 425, 443, 447, 457, 458, 459, 465, 474, 476, 478, 480, 487, 489, 495, 496, 498, 502, 504, 507, 509]
 different_task = ['MBPP/18', 'MBPP/30', 'MBPP/45', 'MBPP/56', 'MBPP/70', 'MBPP/148', 'MBPP/151', 'MBPP/152', 'MBPP/164', 'MBPP/181', 'MBPP/323', 'MBPP/338', 'MBPP/342', 'MBPP/348', 'MBPP/364', 'MBPP/367', 'MBPP/466', 'MBPP/485', 'MBPP/486', 'MBPP/501']
 if __name__ == "__main__":    
-    res_file = res_root + res_cola7bpy[2] #res_cola7bpy[3]#res_7b16k[1]#res_cola34bpy[5]# res_cola7bpy[3]
+    res_file = res_root + tmp[-1] #res_cola7bpy[3]#res_7b16k[1]#res_cola34bpy[5]# res_cola7bpy[3]
     
     if "mbpp" in res_file:
         data_file = data_files["mbpp"]
@@ -333,8 +334,8 @@ if __name__ == "__main__":
         
     results = load_results(res_file=res_file)
     #get pass@k
-    # get_pass_k(results,data,1,10)
-    show_certian_task(results,40)
+    get_pass_k(results,data,1,10)
+    # show_certian_task(results,40)
     # evaluate_gened_testcase(results=results,data=data,verbose=True)
     # print("------------------------no filter------------------------")
     # evaluate_testcase_nofilter(results=results,data=data,verbose=True)

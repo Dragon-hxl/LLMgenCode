@@ -1,0 +1,94 @@
+# Write Python function to complete the task and pass the assertion tests.
+### Task Start ###
+# These are the assertions for your function:
+assert find_char_long('Please move back to stream') == ['Please', 'move', 'back', 'stream']
+
+# Complete the Python funtion:
+def find_char_long(text):
+    """ Write a function to find all words which are at least 4 characters long
+        in a string by using regex.
+    """
+
+### result ###
+```python
+def find_char_long(text):
+    return (re.findall(r"\b\w{4,}\b", text))
+```
+Here is a line-by-line explanation of the code:
+"def find_char_long(text):": This line defines a function named "find_char_long" that takes a single argument, "text". "text" represents thestring whose words are to be extracted.
+
+"return (re.findall(r"\b\w{4,}\b", text))": This line uses the "re.findall()" function to extract all words from the input string that are at least 4 characters long. The regular expression "r"\b\w{4,}\b"" matches all words that are at least 4 characters long. The "\b" matches the boundary between a word character and a non-word character. The "\w" matches any word character (a letter, digit, or underscore).The "{4,}" matches the preceding element at least 4 times. The "\b" matches the boundary between a word character and a non-word character.
+
+Feedback: With the above function, find_char_long('Please move back to stream') returns the following error:
+"""
+NameError: name 're' is not defined
+"""
+So the code does not pass the assertion. Please fix it.
+
+### fixed result ###
+```python
+import re
+def find_char_long(text):
+    return (re.findall(r"\b\w{4,}\b", text))
+```
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:
+assert count_ways(2) == 3
+
+# Complete the Python funtion:
+def count_ways(n):
+    """ Write a function to find the number of ways to fill it with 2 x 1
+        dominoes for the given 3 x n board.
+    """
+
+### result ###
+```python
+def count_ways(n):
+    if n == 0:
+        return 1
+    if n == 1:
+        return 1
+    if n == 2:
+        return 3
+    return count_ways(n-1) + count_ways(n-2)
+```
+Here is a line-by-line explanation of the code:
+"def count_ways(n):": This line defines a function named "count_ways" that takes a single argument, "n". "n" represents the width of the 3 x n board.
+
+"if n == 0:": This line checks if n is equal to 0. In other words, it checks if the width of the board is 0. If the width of the board is 0, there is only one way to fill it: by not placing any dominoes.
+
+"return 1": If the condition in line 2 is true (i.e., n is 0), the function returns 1, indicating that there is only one way to fill the 3 x 0 board.
+
+"if n == 1:": This line checks if n is equal to 1. In other words, it checks if the width of the board is 1. A 3 x 1 board cannot be filled with 2 x 1 dominoes, so there’s only one way to fill it: by not placing any dominoes.
+
+"return 1": If the condition in line 4 is true (i.e., n is 1), the function returns 1, indicating that there is only one way to fill the 3 x 1 board.
+
+"if n == 2:": This line checks if n is equal to 2. In other words, it checks if the width of the board is 2. A 3 x 2 board can be filled with 2 x 1 dominoes in three ways: (1) three horizontal dominoes, (2) one vertical domino and two horizontal dominoes, and (3) two vertical dominoes and one horizontal domino.
+
+"return 3": If the condition in line 6 is true (i.e., n is 2), the function returns 3, indicating that there are three ways to fill the 3 x 2 board.
+
+"return count_ways(n-1) + count_ways(n-2)": If none of the conditions in lines 2, 4, and 6 are true, this line is executed. It uses a recursive approach to calculate the number of ways to fill the 3 x n board. The function calls itself twice: once with the argument n-1 and once with the argument n-2. The results of these two function calls are added together and returned as the final result.
+
+Feedback: With the above function, count_ways(2) == 3. The assertion is "assert count_ways(2) == 3". 
+So the code passes the assertion. The code above is wrong. Please fix it.
+
+### fixed result ###
+```python
+def count_ways(n):
+    A = [0] * (n + 1)
+    B = [0] * (n + 1)
+    A[0] = 1
+    A[1] = 0
+    B[0] = 0
+    B[1] = 1
+    for i in range(2, n+1):
+        A[i] = A[i - 2] + 2 * B[i - 1]
+        B[i] = A[i - 1] + B[i - 2]
+    return A[n]
+```
+### Task End ###
+
+### Task Start ###
+# These are the assertions for your function:

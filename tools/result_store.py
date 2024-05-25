@@ -21,7 +21,7 @@ humaneval_7b16k_pack = {
 
 humaneval_cola7bpy_pack = {
     "pass@1":{
-        "humanevalTS_SBSP1_codellama7bpy_pT.jsonl":[],
+        "humanevalTS_SBSP1_codellama7bpy_pT.jsonl":[63, 67, 67, 67, 67, 67, 67, 67, 67, 67, 67],
         "humanevalNTS_SBSP10_codellama7bpy_pT.jsonl":[63, 80, 104, 110, 111, 112, 112, 112, 112, 112, 113],#[83, 88, 93, 93, 93, 94, 94, 94, 94, 94, 94]
         "humanevalTS_SBSP10_codellama7bpy_pT.jsonl":[63, 80, 104, 110, 111, 112, 112, 112, 112, 112, 113],
         "humanevalTFTS_SBSP10_codellama7bpy_pT.jsonl":[63, 81, 98, 101, 104, 106, 106, 107, 107, 108, 108],

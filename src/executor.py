@@ -18,7 +18,7 @@ class py_executor:
     def __init__(self):
         pass
     
-    def excute(self,solution: str, tests: List[str], feedback_prompt,timeout: float=0.1):
+    def excute(self,solution: str, tests: List[str], feedback_prompt,timeout: float=0.1,feedback_type="UT"):
         run_test = [t.replace("assert ","").split("==")[0].strip() for t in tests]
         try:
             with ThreadPoolExecutor(max_workers=1) as executor:
@@ -27,7 +27,7 @@ class py_executor:
                 result = future.result()
                 passed = result["passed"]
                 final_res = result["result"]
-            feedback,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, tests)
+            feedback,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, tests,feedback_type)
         except BaseException as e:
             print(f"run solution failed with {e}")
             

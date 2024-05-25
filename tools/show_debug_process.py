@@ -400,15 +400,21 @@ if __name__=="__main__":
     }
     mtpb_7b16k_pack = {
         "labels":["1_mtpbTFTS_SBSP10_7b16k_pass@1","2_mtpbTS_SBSP10_7b16k_pass@1","3_mtpbNTS_SBSP10_7b16k_pass@1","4_mtpbTS_SBSP1_7b16k",],
-        "image_path":"../image/mtpb_7b16k_pass@1.png",
+        "image_path":"../image/mtpb_7b16k_pass@1.svg",
         "num_task":115,
-        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","原始自反馈"],
+        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","传统自反馈"],
     }
     bigbench_7b16k_pack = {
         "labels":["bigbenchTFTS_SBSP10_7b16k_pass@1","bigbenchTS_SBSP10_7b16k_pass@1","bigbenchNTS_SBSP10_7b16k_pass@1","bigbenchTS_SBSP1_7b16k",],
-        "image_path":"../image/bigbench_7b16k_pass@1.png",
+        "image_path":"../image/bigbench_7b16k_pass@1.svg",
         "num_task":32,
-        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","原始自反馈"],
+        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","传统自反馈"],
+    }
+    mbpp_7b16k_pack = {
+        "labels":["mbppTFTS_SBSP10_7b16k_pass@1","mbppTS_SBSP10_7b16k_pass@1","mbppNTS_SBSP10_7b16k_pass@1","mbppTS_SBSP1_7b16k",],
+        "image_path":"../image/mbpp_7b16k_pass@1.svg",
+        "num_task":200,
+        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","传统自反馈"],
     }
     show_label = [
         # "UT_SBSP10_7b16k_tT",
@@ -474,7 +480,7 @@ if __name__=="__main__":
         # "UTfeedback_SBSP_7b16k_halftT5_s10",
         # "UTfeedback_SBSP_7b16k_halftT6s256",
     ]
-    pack = true_testcase_pack
+    pack = mbpp_7b16k_pack
     show_label = pack["labels"]
     num_task = pack["num_task"]
     image_path = pack["image_path"]
@@ -497,7 +503,7 @@ if __name__=="__main__":
     print(f"mean_ys:{mean_ys}, std_ys:{std_ys}")
     data2 = {"x":range(11),"mean":mean_ys,"std":std_ys,"label":"halftT"}
     # draw_plots_mean_std(data, data2,color_map, "../image/CODETv3.jpg")
-    draw_plots_percent(data,color_map,image_path=image_path,legends=[],title="Vicuna-7b-16k在MBPP上的pass@1正确率")
+    draw_plots_percent(data,color_map,image_path=image_path,legends=[],title="Vicuna-7b-16k在BIG-bench上的pass@1正确率")
     # fix_lengths = {9: 2740, 10: 930, 8: 897, 11: 457, 12: 176, 13: 86}
     # fix_percent = {6: 2094, 5: 1650, 7: 1169, 4: 225, 8: 141, 3: 7}
     

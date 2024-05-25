@@ -30,7 +30,7 @@ color_map = {
 if __name__=="__main__":
     data = {}
     show_label = [
-        # "humanevalTFTS_SBSP10_7b16k_pT",
+        "humanevalTFTS_SBSP10_7b16k_pT",
         "humanevalTS_SBSP10_7b16k_pT",
         "humanevalNTS_SBSP10_7b16k_pT",
         "humanevalTS_SBSP1_7b16k_pT",
@@ -44,4 +44,4 @@ if __name__=="__main__":
             value = cir_record[label]
             data[label] = [round((1.0*x)/num_task*100,1) for x in value]
     # draw_plots_mean_std(data, data2,color_map, "../image/CODETv3.jpg")
-    draw_plots_percent(data,color_map,"../image/humaneval_TS_7b16k.jpg")
+    draw_plots_percent(data,color_map,"../image/humaneval_TFTS_7b16k.svg")

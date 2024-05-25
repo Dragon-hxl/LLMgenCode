@@ -54,13 +54,17 @@ class Node:
 prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
 prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
-
+simple_feedback_shot2 = prompt_root + "prompt_simfeedback_paper.txt"
+simple_feedback_shot1 = prompt_root + "prompt_simfeedback.txt"
+expl_feedback_shot1 = prompt_root + "prompt_explfeedback_shot.txt"
 def run_tree_search(
     dataset:list,
     model_path:str,
     output_file:str,
     sample_num:int=10,
+    filter_num:int=1,
     cir_times:int=10,
+    feedback_type:str="UT",
     verbose:bool=False,
 ):
     
@@ -71,8 +75,15 @@ def run_tree_search(
     print_v("Run tree search.")
     
     #读取prompt
-    with open(UTfeedback_file,"r") as f:
-        UTfeedback_promt = f.read()
+    if feedback_type=="UT":
+        with open(UTfeedback_file,"r") as f:
+            prompt_shot = f.read()
+    elif feedback_type=="simple":
+        with open(simple_feedback_shot1,"r") as f:
+            prompt_shot = f.read()
+    elif feedback_type=="expl":
+        with open(expl_feedback_shot1,"r") as f:
+            prompt_shot = f.read()
     
     #打开输出文件
     f = open(output_file,"w+",encoding="utf-8")
@@ -111,18 +122,17 @@ def run_tree_search(
         entry_point = "def " + data["entry_point"]
         solution = code_clean2(code=solution,entry_point=entry_point)
         # 打印生成的初始代码
-        print_with_tag(content=solution,tag="solution",verbose=verbose)
+        print_with_tag(content=solution,tag="origin solution",verbose=verbose)
         # 去掉data["prompt"]中的注释和空行
         start_code = start_code_extract(tprompt,entry_point)
         
         # debug 准备
         run_test = [t.split("==")[0].replace("assert","").strip() for t in assertions]
-        feedback_prompt = UTfeedback_promt + assertion_string + "\n\n# Complete the Python funtion:\n" + tprompt+"\n### result ###\n```python\n" + start_code + "\n"
+        feedback_prompt = prompt_shot + assertion_string + "\n\n# Complete the Python funtion:\n" + tprompt+"\n### result ###\n```python\n" + start_code + "\n"
         fix_input = model.tokenizer(feedback_prompt, return_tensors='pt', return_token_type_ids=False)
         print_v(f"fix input length is {fix_input.input_ids.shape}")
         fix_input_len = fix_input.input_ids.shape[1]
         step_one_total_time = (time.time() - step_one_st)/60
-        
         # 开始生成feedback和新代码的循环
         cir = 0
         output_short = {}
@@ -137,8 +147,8 @@ def run_tree_search(
             # 运行所有的solution得到通过的test数量和得分
             for i,node in enumerate(gened_nodes):
                 solution = node.solution
-                if i == 0:
-                    print_v(f"check program : \n{start_code+solution}")
+                # if i == 0:
+                #     print_v(f"check program : \n{start_code+solution}")
                 # 这里通过一次函数调用同时获得simple和UTfeedback，也就是会判断代码是否正确，同时对于出现AssertError的代码会得到其执行的第一个unit test的值。其他Error因为会返回具体的错误信息就不会得到执行的第一个unit test的值。
                 try:
                     with ThreadPoolExecutor(max_workers=1) as executor:
@@ -147,7 +157,7 @@ def run_tree_search(
                         result = future.result()
                         passed = result["passed"]
                         final_res = result["result"]
-                    prompt,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions)
+                    prompt,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions, feedback_type)
                     node.feedbackprompt = prompt
                     node.passT_rate = passn
                     node.pass_ut_num = pass_tests
@@ -168,19 +178,25 @@ def run_tree_search(
             choose_start = time.time()
             total_nodes = gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
-            sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
-            chosen_nodes = sorted_nodes[:sample_num]
-            left_nodes = sorted_nodes[sample_num:]
+            sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)#,-len(x.solution)
+            chosen_nodes = sorted_nodes[:filter_num]
+            left_nodes =  sorted_nodes#sorted_nodes# sorted_nodes[sample_num:]
             choose_solution_time = (time.time()-choose_start)/60
-            
+            ### 打印需要的信息
             print_v(f"task:{tid}, cir:{cir}, gened {len(gened_nodes)} solutions, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}, chosen nodes:{len(chosen_nodes)}, left nodes:{len(left_nodes)}")
             print_v(f"chosen nodes idx is {[n.idx for n in chosen_nodes]}")
             print_v(f"chosen nodes's parent's idx is {[n.parent.idx for n in chosen_nodes if n.parent]}")
+            chosen_node_depth = [n.depth for n in chosen_nodes]
+            chosen_former = [d for d in chosen_node_depth if d!=cir]
+            print_v(f"chosen nodes's depth is {chosen_node_depth}")
+            if chosen_former!=[]:
+                print("Find valuable task!")
             print_v(f"chosen nodes passT_rates {[n.passT_rate for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\n")#CODET point are {[n.CODET_point for n in chosen_nodes]}\nprobs are {[n.prob for n in chosen_nodes]}\n
-                
+            ### 保存结果
             output_short[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate,"prob":n.prob} for n in chosen_nodes]
             output_full[cir] = [{"solution":n.solution,"passT_rate":n.passT_rate} for n in gened_nodes]
             time_record.append({"cir":cir,"model_inference_time":model_inference_time,"run_solutions_time":run_solutions_time,"choose_solution_time":choose_solution_time})
+            ### 判断是否结束自反馈
             if stop or cir>=cir_times:
                 break
             cir += 1
@@ -189,13 +205,18 @@ def run_tree_search(
             st = time.time()
             len_record = []
             k=1
-            return_sequences = int(sample_num/k)
+            return_sequences = sample_num
             total_output_length = 0
             # print_v(f"begin to generate solutions for cir {cir} with {return_sequences} sequences.")
-            #feedback
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt
-                
+                code = start_code + node.solution
+                if feedback_type=="expl":
+                    code_expl = gen.gen_code_explanation(model,code,verbose)
+                    idx = feedback.index("Feedback:")
+                    feedback = feedback[:idx] + f"Here is a line-by-line explanation of the code:\n{code_expl}\n\n" + feedback[idx:]
+                    if cir==0 and i==0:
+                        print_with_tag(content=feedback,tag="feedback",verbose=verbose)
                 # print_with_tag(content=feedback,tag="feedback",verbose=verbose)
                 
                 inputs = model.tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)
@@ -210,6 +231,7 @@ def run_tree_search(
                         len_record.append((input_length,fix_input_len,fix_percent,output_length,i))
                         #创建node
                         solution = filter_fix_ans(ans, entry_point, start_code)
+                        # print_with_tag(content=solution,tag="fix solution",verbose=verbose)
                         tmp_node = Node(solution=solution,parent=node,prompt=feedback,prob=true_sc,depth=cir)
                         tmp_node.idx = len(nodes)
                         node.children.append(tmp_node.idx)

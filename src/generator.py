@@ -9,7 +9,7 @@ prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
 prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback.txt"
 mbpp_base_prompt = prompt_root + "prompt_base_mbpp.txt"
-
+gen_code_expl_prompt = prompt_root + "prompt_code_expl3.txt"
 
 #读取prompt
 with open(prompt_file,"r") as f:
@@ -305,7 +305,37 @@ class PyGenerator():
             return prompt,solution, model_inference_time, input_tokens_len, output_tokens_len
         else:
             return prompt,solution
-                
+           
+           
+    def gen_code_explanation(self,model,code,verbose):
+        setup_seed(2024)
+        print_v = make_printv(verbose=verbose)
+        with open(gen_code_expl_prompt,"r")as f:
+            prompt = f.read()
+        
+        prompt += f"```python\n{code}\n```\n# Line-by-line explanation of the code:\n"
+        input_len = len(prompt)
+        inputs = model.tokenizer(prompt, return_tensors='pt', return_token_type_ids=False)
+        input_tokens_len = inputs.input_ids.shape[1]
+        print_v(f"Gen code expl prompt token len : {input_tokens_len}")
+        inputs = inputs.to('cuda')
+        
+        st = time.time()
+        max_len = 2048
+        pred = model.model.generate(**inputs, max_new_tokens=max_len, temperature=0,pad_token_id=model.tokenizer.eos_token_id)#,do_sample=True,num_return_sequences=1
+        output_tokens_len = pred.shape[1]
+        print_v(f"Output token len : {output_tokens_len}")
+        ans = model.tokenizer.decode(pred.cpu()[0], skip_special_tokens=True)[input_len:]
+        end_of_expl = ans.find("### Task End ###")
+        while end_of_expl==-1 and max_len<8192:
+            print_v("Too long code expl.")
+            max_len = max_len*2
+            pred = model.model.generate(**inputs, max_new_tokens=max_len, temperature=0,pad_token_id=model.tokenizer.eos_token_id)
+        ans = ans[:end_of_expl].strip("\n")#.replace("### Task End ###","").strip("\n")
+        print_v(f"Gen code expl with len {len(ans)}:\n {ans}")
+        print_v(f"Gen code expl use time : {time.time()-st} s.")
+        return ans           
+     
 def py_is_syntax_valid(code: str) -> bool:
     try:
         ast.parse(code)

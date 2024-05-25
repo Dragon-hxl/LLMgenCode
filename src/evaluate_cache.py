@@ -114,6 +114,19 @@ if __name__=="__main__":
     # fix_percent_analysis(len_record)
     # computation_analysis(len_record)
     #speed up percent analysis
-    res_file = "/home/S/hexiaolong/codex/self-debug/res/"+"fastdebug_mtpb_codellama7bpy.jsonl"#"humanevalTS_SBSP10_7b16k.jsonl"
+    log_files = [
+        "fastdebug_7b16k_prefill.jsonl",
+        "fastdebug_7b16k_mbpp_prefill.jsonl",
+        "fastdebug_7b16k_mtpb_prefill.jsonl",
+        "fastdebug_7b16k_bigbench_prefill.jsonl",
+        
+        
+        "fastdebug_mtpb_codellama7bpy.jsonl",
+        "fastdebug_bigbench_codellama7bpy.jsonl",
+        "fastdebug_cola7bpy_bigbench_prefill.jsonl",
+        "fastdebug_cola7bpy_humaneval_prefill.jsonl",
+        "fastdebug_cola7bpy_mbpp_prefill.jsonl",
+    ]
+    res_file = "/home/S/hexiaolong/codex/self-debug/res/"+log_files[1]#"humanevalTS_SBSP10_7b16k.jsonl"
     speedup_percent = load_speedup_percent(res_file=res_file)
             

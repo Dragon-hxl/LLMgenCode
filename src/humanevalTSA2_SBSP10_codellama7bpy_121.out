@@ -1,0 +1,2988 @@
+multi:
+  sample_num: 10
+  debug:
+    max_new_tokens: 512
+    temperature: 1.0
+    top_k: 50
+    top_p: 0.95
+    do_sample: true
+    num_return_sequences: 10
+codeT:
+  base:
+    temperature: 0.0
+    top_p: 1.0
+  debug:
+    max_gen: 512
+    temperature: 1.0
+    top_p: 0.95
+model_path: /lustre/S/hexiaolong/codellama-7bpy
+output: ../res/humanevalTSA2_SBSP10_codellama7bpy_121.jsonl
+sample_num: 10
+Strategy: TS
+dataset: humaneval
+
+load dataset:humaneval
+load dataset : humaneval
+load 32 problems
+{0: '33GiB', 1: '33GiB', 2: '33GiB', 3: '33GiB', 4: '33GiB', 5: '33GiB', 6: '33GiB', 7: '33GiB'}
+load model from  /lustre/S/hexiaolong/codellama-7bpy
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/S/hexiaolong/anaconda3/envs/new_codex/lib/python3.9/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:  50%|█████     | 1/2 [00:09<00:09,  9.56s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.40s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:13<00:00,  6.88s/it]
+Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /lustre/S/hexiaolong/codellama-7bpy and are newly initialized: ['model.layers.0.mlp.cache_fix', 'model.layers.0.self_attn.k_cache', 'model.layers.0.self_attn.q_cache', 'model.layers.0.self_attn.v_cache', 'model.layers.1.mlp.cache_fix', 'model.layers.1.self_attn.k_cache', 'model.layers.1.self_attn.q_cache', 'model.layers.1.self_attn.v_cache', 'model.layers.10.mlp.cache_fix', 'model.layers.10.self_attn.k_cache', 'model.layers.10.self_attn.q_cache', 'model.layers.10.self_attn.v_cache', 'model.layers.11.mlp.cache_fix', 'model.layers.11.self_attn.k_cache', 'model.layers.11.self_attn.q_cache', 'model.layers.11.self_attn.v_cache', 'model.layers.12.mlp.cache_fix', 'model.layers.12.self_attn.k_cache', 'model.layers.12.self_attn.q_cache', 'model.layers.12.self_attn.v_cache', 'model.layers.13.mlp.cache_fix', 'model.layers.13.self_attn.k_cache', 'model.layers.13.self_attn.q_cache', 'model.layers.13.self_attn.v_cache', 'model.layers.14.mlp.cache_fix', 'model.layers.14.self_attn.k_cache', 'model.layers.14.self_attn.q_cache', 'model.layers.14.self_attn.v_cache', 'model.layers.15.mlp.cache_fix', 'model.layers.15.self_attn.k_cache', 'model.layers.15.self_attn.q_cache', 'model.layers.15.self_attn.v_cache', 'model.layers.16.mlp.cache_fix', 'model.layers.16.self_attn.k_cache', 'model.layers.16.self_attn.q_cache', 'model.layers.16.self_attn.v_cache', 'model.layers.17.mlp.cache_fix', 'model.layers.17.self_attn.k_cache', 'model.layers.17.self_attn.q_cache', 'model.layers.17.self_attn.v_cache', 'model.layers.18.mlp.cache_fix', 'model.layers.18.self_attn.k_cache', 'model.layers.18.self_attn.q_cache', 'model.layers.18.self_attn.v_cache', 'model.layers.19.mlp.cache_fix', 'model.layers.19.self_attn.k_cache', 'model.layers.19.self_attn.q_cache', 'model.layers.19.self_attn.v_cache', 'model.layers.2.mlp.cache_fix', 'model.layers.2.self_attn.k_cache', 'model.layers.2.self_attn.q_cache', 'model.layers.2.self_attn.v_cache', 'model.layers.20.mlp.cache_fix', 'model.layers.20.self_attn.k_cache', 'model.layers.20.self_attn.q_cache', 'model.layers.20.self_attn.v_cache', 'model.layers.21.mlp.cache_fix', 'model.layers.21.self_attn.k_cache', 'model.layers.21.self_attn.q_cache', 'model.layers.21.self_attn.v_cache', 'model.layers.22.mlp.cache_fix', 'model.layers.22.self_attn.k_cache', 'model.layers.22.self_attn.q_cache', 'model.layers.22.self_attn.v_cache', 'model.layers.23.mlp.cache_fix', 'model.layers.23.self_attn.k_cache', 'model.layers.23.self_attn.q_cache', 'model.layers.23.self_attn.v_cache', 'model.layers.24.mlp.cache_fix', 'model.layers.24.self_attn.k_cache', 'model.layers.24.self_attn.q_cache', 'model.layers.24.self_attn.v_cache', 'model.layers.25.mlp.cache_fix', 'model.layers.25.self_attn.k_cache', 'model.layers.25.self_attn.q_cache', 'model.layers.25.self_attn.v_cache', 'model.layers.26.mlp.cache_fix', 'model.layers.26.self_attn.k_cache', 'model.layers.26.self_attn.q_cache', 'model.layers.26.self_attn.v_cache', 'model.layers.27.mlp.cache_fix', 'model.layers.27.self_attn.k_cache', 'model.layers.27.self_attn.q_cache', 'model.layers.27.self_attn.v_cache', 'model.layers.28.mlp.cache_fix', 'model.layers.28.self_attn.k_cache', 'model.layers.28.self_attn.q_cache', 'model.layers.28.self_attn.v_cache', 'model.layers.29.mlp.cache_fix', 'model.layers.29.self_attn.k_cache', 'model.layers.29.self_attn.q_cache', 'model.layers.29.self_attn.v_cache', 'model.layers.3.mlp.cache_fix', 'model.layers.3.self_attn.k_cache', 'model.layers.3.self_attn.q_cache', 'model.layers.3.self_attn.v_cache', 'model.layers.30.mlp.cache_fix', 'model.layers.30.self_attn.k_cache', 'model.layers.30.self_attn.q_cache', 'model.layers.30.self_attn.v_cache', 'model.layers.31.mlp.cache_fix', 'model.layers.31.self_attn.k_cache', 'model.layers.31.self_attn.q_cache', 'model.layers.31.self_attn.v_cache', 'model.layers.4.mlp.cache_fix', 'model.layers.4.self_attn.k_cache', 'model.layers.4.self_attn.q_cache', 'model.layers.4.self_attn.v_cache', 'model.layers.5.mlp.cache_fix', 'model.layers.5.self_attn.k_cache', 'model.layers.5.self_attn.q_cache', 'model.layers.5.self_attn.v_cache', 'model.layers.6.mlp.cache_fix', 'model.layers.6.self_attn.k_cache', 'model.layers.6.self_attn.q_cache', 'model.layers.6.self_attn.v_cache', 'model.layers.7.mlp.cache_fix', 'model.layers.7.self_attn.k_cache', 'model.layers.7.self_attn.q_cache', 'model.layers.7.self_attn.v_cache', 'model.layers.8.mlp.cache_fix', 'model.layers.8.self_attn.k_cache', 'model.layers.8.self_attn.q_cache', 'model.layers.8.self_attn.v_cache', 'model.layers.9.mlp.cache_fix', 'model.layers.9.self_attn.k_cache', 'model.layers.9.self_attn.q_cache', 'model.layers.9.self_attn.v_cache']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Run tree search.
+open ../res/humanevalTSA2_SBSP10_codellama7bpy_121.jsonl and ../res/humanevalTSA2_SBSP10_codellama7bpy_121_full.jsonl success.
+Use prompt_tests.
+get solution for task : HumanEval/123 with 1 tests.
+/home/S/hexiaolong/anaconda3/envs/new_codex/lib/python3.9/site-packages/transformers/generation/configuration_utils.py:392: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+Model inference time is 0.359228785832723 minutes
+In generate step, the input tokens shape is 816, the output tokens shape is 1328
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if n == 1:
+        return [1]
+    elif n % 2 == 0:
+        return [n] + get_odd_collatz(n // 2)
+    else:
+        return [n] + get_odd_collatz(3 * n + 1)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def get_odd_collatz(n):
+
+fix input length is torch.Size([1, 860])
+task:HumanEval/123, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.0]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1022])
+run solution time is 0.0032877365748087565 mins, choose solution time is 3.5762786865234375e-07 mins, model inference time is 0.48602890173594154 mins.
+average output length is 1520.9, every token time is 0.019173999769822935 s.
+task:HumanEval/123, cir:1, gened 10 solutions, total nodes:11, total unique nodes:8, chosen nodes:8, left nodes:8
+chosen nodes idx is [6, 7, 4, 1, 8, 5, 2, 3]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8970727582826565, 0.955821171477462, 0.8921544091479464, 0.9148740110066096, 0.9159071419353868, 0.9217880230177491, 0.9170227557077171, 0.9207836594099832]
+
+total input length is torch.Size([1, 960])
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 1022])
+total input length is torch.Size([1, 1017])
+total input length is torch.Size([1, 1015])
+total input length is torch.Size([1, 1019])
+total input length is torch.Size([1, 1017])
+total input length is torch.Size([1, 1054])
+run solution time is 0.030137395858764647 mins, choose solution time is 1.6729036966959635e-06 mins, model inference time is 3.870136332511902 mins.
+average output length is 1473.7875, every token time is 0.15755879482958018 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    result = []
+    while n > 1:
+        if n % 2 != 0:
+            result.append(n)
+        n = n // 2 if n % 2 == 0 else 3 * n + 1
+    result.append(n)
+    return result[::-1]
+
+passT_rate:1.0
+prob:0.8916343751094611
+
+************************
+++++++show parents of the node++++++
+solution:
+    return ([n] + get_odd_collatz(n // 2 if n % 2 == 0 else 3 * n + 1)) if n > 1 else [n]
+
+passT_rate:0.0
+prob:0.955821171477462
+
+************************
+++++++show parents of the node++++++
+solution:
+    if n == 1:
+        return [1]
+    elif n % 2 == 0:
+        return [n] + get_odd_collatz(n // 2)
+    else:
+        return [n] + get_odd_collatz(3 * n + 1)
+
+passT_rate:0.0
+prob:-1.0
+
+************************
+task:HumanEval/123, cir:2, gened 80 solutions, total nodes:88, total unique nodes:62, chosen nodes:10, left nodes:62
+chosen nodes idx is [22, 15, 18, 19, 14, 11, 13, 12, 21, 17]
+chosen nodes's parent's idx is [7, 6, 6, 6, 6, 6, 6, 6, 7, 6]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8916343751094611, 0.8939860129595066, 0.8972802690725692, 0.818870158558388, 0.857225677087511, 0.9254404343564051, 0.9787517403525701, 0.876509712983253, 0.8613530199327589, 0.8904756024203949]
+
+Use prompt_tests.
+get solution for task : HumanEval/125 with 3 tests.
+Model inference time is 0.2995221734046936 minutes
+In generate step, the input tokens shape is 761, the output tokens shape is 1273
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if ' ' in txt:
+        return txt.split(' ')
+    elif ',' in txt:
+        return txt.split(',')
+    else:
+        return len([i for i in txt if ord(i)%2==1])
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def split_words(txt):
+
+fix input length is torch.Size([1, 802])
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    if ' ' in txt:
+        return txt.split(' ')
+    elif ',' in txt:
+        return txt.split(',')
+    else:
+        return len([i for i in txt if ord(i)%2==1])
+
+passT_rate:1.0
+prob:-1.0
+
+************************
+task:HumanEval/125, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [1.0]
+probs are [-1.0]
+
+Use prompt_tests.
+get solution for task : HumanEval/126 with 8 tests.
+Model inference time is 0.30058513085047406 minutes
+In generate step, the input tokens shape is 1015, the output tokens shape is 1527
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    for i in range(len(lst)-1):
+        if lst[i] > lst[i+1]:
+            return False
+    return True
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def is_sorted(lst):
+
+fix input length is torch.Size([1, 1056])
+task:HumanEval/126, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.875]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1589])
+run solution time is 0.003086841106414795 mins, choose solution time is 6.834665934244792e-07 mins, model inference time is 0.621876347064972 mins.
+average output length is 2017.0, every token time is 0.0184990496817472 s.
+task:HumanEval/126, cir:1, gened 10 solutions, total nodes:11, total unique nodes:7, chosen nodes:7, left nodes:7
+chosen nodes idx is [4, 2, 8, 3, 1, 7, 5]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9496682056172892, 0.9458297353051554, 0.9363193480536071, 0.9308302927381532, 0.9531306999485489, 0.9545307771404383, 0.9444487275390615]
+
+total input length is torch.Size([1, 1589])
+total input length is torch.Size([1, 1589])
+total input length is torch.Size([1, 1604])
+total input length is torch.Size([1, 1607])
+total input length is torch.Size([1, 1607])
+total input length is torch.Size([1, 1620])
+total input length is torch.Size([1, 1622])
+run solution time is 0.029674267768859862 mins, choose solution time is 8.861223856608073e-07 mins, model inference time is 4.369821524620056 mins.
+average output length is 2047.1714285714286, every token time is 0.12807393176855342 s.
+task:HumanEval/126, cir:2, gened 70 solutions, total nodes:77, total unique nodes:37, chosen nodes:10, left nodes:37
+chosen nodes idx is [64, 40, 14, 12, 27, 18, 31, 25, 41, 13]
+chosen nodes's parent's idx is [7, 8, 4, 4, 2, 4, 8, 2, 3, 4]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9460586724826114, 0.8954051612019136, 0.9496682056172892, 0.9458297353051554, 0.9315911279735933, 0.9363193480536071, 0.9703618847066453, 0.9386436216239136, 0.9320640131838978, 0.9308302927381532]
+
+total input length is torch.Size([1, 1571])
+total input length is torch.Size([1, 1584])
+total input length is torch.Size([1, 1589])
+total input length is torch.Size([1, 1589])
+total input length is torch.Size([1, 1590])
+total input length is torch.Size([1, 1604])
+total input length is torch.Size([1, 1604])
+total input length is torch.Size([1, 1604])
+total input length is torch.Size([1, 1607])
+total input length is torch.Size([1, 1607])
+run solution time is 0.2085068384806315 mins, choose solution time is 3.818670908610026e-06 mins, model inference time is 6.214693534374237 mins.
+average output length is 2031.81, every token time is 0.1835218914210588 s.
+task:HumanEval/126, cir:3, gened 100 solutions, total nodes:137, total unique nodes:68, chosen nodes:10, left nodes:68
+chosen nodes idx is [93, 87, 90, 86, 96, 104, 102, 124, 117, 91]
+chosen nodes's parent's idx is [40, 64, 64, 64, 40, 14, 14, 27, 12, 40]
+chosen nodes's depth is [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9060184627406653, 0.9219419950522456, 0.8748983292201922, 0.9373694263600566, 0.9340713691069007, 0.9496682056172892, 0.9458297353051554, 0.9484956688990407, 0.9315911279735933, 0.929965280785114]
+
+total input length is torch.Size([1, 1563])
+total input length is torch.Size([1, 1571])
+total input length is torch.Size([1, 1584])
+total input length is torch.Size([1, 1576])
+total input length is torch.Size([1, 1597])
+total input length is torch.Size([1, 1589])
+total input length is torch.Size([1, 1589])
+total input length is torch.Size([1, 1590])
+total input length is torch.Size([1, 1590])
+total input length is torch.Size([1, 1592])
+run solution time is 0.2981319467226664 mins, choose solution time is 4.374980926513672e-06 mins, model inference time is 6.186827663580576 mins.
+average output length is 2016.14, every token time is 0.18411899143467877 s.
+task:HumanEval/126, cir:4, gened 100 solutions, total nodes:168, total unique nodes:94, chosen nodes:10, left nodes:94
+chosen nodes idx is [189, 227, 184, 190, 196, 212, 206, 219, 218, 183]
+chosen nodes's parent's idx is [93, 96, 93, 93, 87, 86, 90, 86, 86, 93]
+chosen nodes's depth is [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9047248952477751, 0.9670837290880622, 0.9509933098628673, 0.9189859373812279, 0.9373694263600566, 0.9054726827587827, 0.9340713691069007, 0.9402638744906572, 0.9699157672795181, 0.9630370184680149]
+
+total input length is torch.Size([1, 1563])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1571])
+total input length is torch.Size([1, 1584])
+total input length is torch.Size([1, 1576])
+total input length is torch.Size([1, 1575])
+total input length is torch.Size([1, 1597])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1589])
+run solution time is 0.29817381302515666 mins, choose solution time is 6.337960561116536e-06 mins, model inference time is 6.176610120137533 mins.
+average output length is 2040.86, every token time is 0.18158845469339083 s.
+task:HumanEval/126, cir:5, gened 100 solutions, total nodes:194, total unique nodes:104, chosen nodes:10, left nodes:104
+chosen nodes idx is [289, 291, 284, 290, 306, 322, 295, 316, 329, 328]
+chosen nodes's parent's idx is [189, 227, 189, 189, 184, 196, 227, 190, 196, 196]
+chosen nodes's depth is [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9047248952477751, 0.9558188204627371, 0.9509933098628673, 0.9189859373812279, 0.9373694263600566, 0.9054726827587827, 0.9034423668904387, 0.9340713691069007, 0.9402638744906572, 0.9699157672795181]
+
+total input length is torch.Size([1, 1563])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1571])
+total input length is torch.Size([1, 1584])
+total input length is torch.Size([1, 1576])
+total input length is torch.Size([1, 1575])
+total input length is torch.Size([1, 1592])
+total input length is torch.Size([1, 1597])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1580])
+run solution time is 0.2978362957636515 mins, choose solution time is 6.4849853515625e-06 mins, model inference time is 6.174127205212911 mins.
+average output length is 2041.71, every token time is 0.1814398888246696 s.
+task:HumanEval/126, cir:6, gened 100 solutions, total nodes:204, total unique nodes:109, chosen nodes:10, left nodes:109
+chosen nodes idx is [389, 391, 384, 390, 406, 422, 395, 441, 416, 429]
+chosen nodes's parent's idx is [289, 291, 289, 289, 284, 306, 291, 295, 290, 306]
+chosen nodes's depth is [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9047248952477751, 0.9558188204627371, 0.9509933098628673, 0.9189859373812279, 0.9373694263600566, 0.9054726827587827, 0.9034423668904387, 0.9313504502458765, 0.9340713691069007, 0.9402638744906572]
+
+total input length is torch.Size([1, 1563])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1571])
+total input length is torch.Size([1, 1584])
+total input length is torch.Size([1, 1576])
+total input length is torch.Size([1, 1575])
+total input length is torch.Size([1, 1592])
+total input length is torch.Size([1, 1593])
+total input length is torch.Size([1, 1597])
+total input length is torch.Size([1, 1580])
+run solution time is 0.2978167692820231 mins, choose solution time is 7.236003875732422e-06 mins, model inference time is 6.1793747822443645 mins.
+average output length is 2031.7, every token time is 0.18248879874897336 s.
+task:HumanEval/126, cir:7, gened 100 solutions, total nodes:209, total unique nodes:114, chosen nodes:10, left nodes:114
+chosen nodes idx is [489, 491, 484, 490, 506, 522, 495, 541, 516, 529]
+chosen nodes's parent's idx is [389, 391, 389, 389, 384, 406, 391, 395, 390, 406]
+chosen nodes's depth is [7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9047248952477751, 0.9558188204627371, 0.9509933098628673, 0.9189859373812279, 0.9373694263600566, 0.9054726827587827, 0.9034423668904387, 0.9313504502458765, 0.9340713691069007, 0.9402638744906572]
+
+total input length is torch.Size([1, 1563])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1571])
+total input length is torch.Size([1, 1584])
+total input length is torch.Size([1, 1576])
+total input length is torch.Size([1, 1575])
+total input length is torch.Size([1, 1592])
+total input length is torch.Size([1, 1593])
+total input length is torch.Size([1, 1597])
+total input length is torch.Size([1, 1580])
+run solution time is 0.2986617684364319 mins, choose solution time is 7.251898447672526e-06 mins, model inference time is 6.182646898428599 mins.
+average output length is 2031.7, every token time is 0.18258543026730695 s.
+task:HumanEval/126, cir:8, gened 100 solutions, total nodes:214, total unique nodes:114, chosen nodes:10, left nodes:114
+chosen nodes idx is [589, 591, 584, 590, 606, 622, 595, 641, 616, 629]
+chosen nodes's parent's idx is [489, 491, 489, 489, 484, 506, 491, 495, 490, 506]
+chosen nodes's depth is [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9047248952477751, 0.9558188204627371, 0.9509933098628673, 0.9189859373812279, 0.9373694263600566, 0.9054726827587827, 0.9034423668904387, 0.9313504502458765, 0.9340713691069007, 0.9402638744906572]
+
+total input length is torch.Size([1, 1563])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1571])
+total input length is torch.Size([1, 1584])
+total input length is torch.Size([1, 1576])
+total input length is torch.Size([1, 1575])
+total input length is torch.Size([1, 1592])
+total input length is torch.Size([1, 1593])
+total input length is torch.Size([1, 1597])
+total input length is torch.Size([1, 1580])
+run solution time is 0.2985372424125671 mins, choose solution time is 7.724761962890625e-06 mins, model inference time is 6.179475537935892 mins.
+average output length is 2031.7, every token time is 0.18249177355380686 s.
+task:HumanEval/126, cir:9, gened 100 solutions, total nodes:214, total unique nodes:114, chosen nodes:10, left nodes:114
+chosen nodes idx is [689, 691, 684, 690, 706, 722, 695, 741, 716, 729]
+chosen nodes's parent's idx is [589, 591, 589, 589, 584, 606, 591, 595, 590, 606]
+chosen nodes's depth is [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9047248952477751, 0.9558188204627371, 0.9509933098628673, 0.9189859373812279, 0.9373694263600566, 0.9054726827587827, 0.9034423668904387, 0.9313504502458765, 0.9340713691069007, 0.9402638744906572]
+
+total input length is torch.Size([1, 1563])
+total input length is torch.Size([1, 1580])
+total input length is torch.Size([1, 1571])
+total input length is torch.Size([1, 1584])
+total input length is torch.Size([1, 1576])
+total input length is torch.Size([1, 1575])
+total input length is torch.Size([1, 1592])
+total input length is torch.Size([1, 1593])
+total input length is torch.Size([1, 1597])
+total input length is torch.Size([1, 1580])
+run solution time is 0.2989377419153849 mins, choose solution time is 7.271766662597656e-06 mins, model inference time is 6.178534209728241 mins.
+average output length is 2031.7, every token time is 0.18246397385595117 s.
+task:HumanEval/126, cir:10, gened 100 solutions, total nodes:214, total unique nodes:114, chosen nodes:10, left nodes:114
+chosen nodes idx is [789, 791, 784, 790, 806, 822, 795, 841, 816, 829]
+chosen nodes's parent's idx is [689, 691, 689, 689, 684, 706, 691, 695, 690, 706]
+chosen nodes's depth is [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+chosen nodes passT_rates [0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875, 0.875]
+probs are [0.9047248952477751, 0.9558188204627371, 0.9509933098628673, 0.9189859373812279, 0.9373694263600566, 0.9054726827587827, 0.9034423668904387, 0.9313504502458765, 0.9340713691069007, 0.9402638744906572]
+
+Use prompt_tests.
+get solution for task : HumanEval/127 with 3 tests.
+Model inference time is 0.3016795794169108 minutes
+In generate step, the input tokens shape is 885, the output tokens shape is 1397
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if interval1[0] <= interval2[0] <= interval1[1]:
+        return "YES"
+    elif interval1[0] <= interval2[1] <= interval1[1]:
+        return "YES"
+    elif interval2[0] <= interval1[0] <= interval2[1]:
+        return "YES"
+    elif interval2[0] <= interval1[1] <= interval2[1]:
+        return "YES"
+    else:
+        return "NO"
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def intersection(interval1, interval2):
+
+fix input length is torch.Size([1, 928])
+task:HumanEval/127, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.3333333333333333]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1224])
+run solution time is 0.00307006041208903 mins, choose solution time is 1.2973944346110025e-05 mins, model inference time is 0.5323648730913798 mins.
+average output length is 1701.9, every token time is 0.01876837330703919 s.
+task:HumanEval/127, cir:1, gened 10 solutions, total nodes:11, total unique nodes:8, chosen nodes:8, left nodes:8
+chosen nodes idx is [3, 6, 7, 4, 1, 5, 10, 2]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.6666666666666666, 0.3333333333333333, 0.3333333333333333, 0.3333333333333333, 0.3333333333333333, 0.3333333333333333, 0.0, 0.0]
+probs are [0.9413800006943035, 0.9530765256875385, 0.9062203040233717, 0.9257303922522219, 0.8964510551987701, 0.9625825676976261, 0.925550276788359, 0.9026825411906814]
+
+total input length is torch.Size([1, 1287])
+total input length is torch.Size([1, 1224])
+total input length is torch.Size([1, 1260])
+total input length is torch.Size([1, 1256])
+total input length is torch.Size([1, 1256])
+total input length is torch.Size([1, 1392])
+total input length is torch.Size([1, 1198])
+total input length is torch.Size([1, 1356])
+run solution time is 0.02998537222544352 mins, choose solution time is 9.218851725260417e-07 mins, model inference time is 4.362699536482493 mins.
+average output length is 1723.925, every token time is 0.15184069979136716 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    if interval1[0] > interval2[1] or interval2[0] > interval1[1]:
+        return "NO"
+    elif interval1[0] <= interval2[0]:
+        if interval1[1] >= interval2[1]:
+            return "YES"
+        else:
+            return "NO"
+    else:
+        return "YES"
+
+passT_rate:1.0
+prob:0.9438534911498814
+
+************************
+++++++show parents of the node++++++
+solution:
+    if interval1[0] <= interval2[0] <= interval1[1]:
+        start = interval2[0]
+    elif interval1[0] <= interval2[1] <= interval1[1]:
+        start = interval2[0]
+    elif interval2[0] <= interval1[0] <= interval2[1]:
+        start = interval1[0]
+    elif interval2[0] <= interval1[1] <= interval2[1]:
+        start = interval1[0]
+    else:
+        return "NO"
+    if interval1[0] <= interval2[0] <= interval1[1]:
+        end = interval1[1]
+    elif interval1[0] <= interval2[1] <= interval1[1]:
+        end = interval2[1]
+    elif interval2[0] <= interval1[0] <= interval2[1]:
+        end = interval1[1]
+    elif interval2[0] <= interval1[1] <= interval2[1]:
+        end = interval2[1]
+    else:
+        return "NO"
+    if ((end - start) + 1) != (end - start):
+        return "YES"
+    return "NO"
+
+passT_rate:0.3333333333333333
+prob:0.9625825676976261
+
+************************
+++++++show parents of the node++++++
+solution:
+    if interval1[0] <= interval2[0] <= interval1[1]:
+        return "YES"
+    elif interval1[0] <= interval2[1] <= interval1[1]:
+        return "YES"
+    elif interval2[0] <= interval1[0] <= interval2[1]:
+        return "YES"
+    elif interval2[0] <= interval1[1] <= interval2[1]:
+        return "YES"
+    else:
+        return "NO"
+
+passT_rate:0.3333333333333333
+prob:-1.0
+
+************************
+task:HumanEval/127, cir:2, gened 80 solutions, total nodes:88, total unique nodes:47, chosen nodes:10, left nodes:47
+chosen nodes idx is [70, 50, 18, 12, 13, 19, 11, 17, 16, 39]
+chosen nodes's parent's idx is [5, 4, 3, 3, 3, 3, 3, 3, 3, 7]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [1.0, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9438534911498814, 0.897947039032679, 0.9258646241031074, 0.9156891346348853, 0.9548793112433328, 0.932249941577141, 0.923975597019851, 0.9514417915292537, 0.8993045564755013, 0.9565087536395739]
+
+Use prompt_tests.
+get solution for task : HumanEval/128 with 3 tests.
+Model inference time is 0.30080118974049885 minutes
+In generate step, the input tokens shape is 729, the output tokens shape is 1241
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if len(arr) == 0:
+        return None
+    elif len(arr) == 1:
+        return arr[0]
+    else:
+        return sum([abs(i) for i in arr]) * (-1)**(len(arr)-1)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def prod_signs(arr):
+
+fix input length is torch.Size([1, 771])
+task:HumanEval/128, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.6666666666666666]
+probs are [-1.0]
+
+total input length is torch.Size([1, 994])
+run solution time is 0.0031755844751993815 mins, choose solution time is 5.30083974202474e-06 mins, model inference time is 0.47880757649739586 mins.
+average output length is 1429.0, every token time is 0.020103889048892022 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    product = 1
+    if not arr:
+        return None
+    for i in arr:
+        if i == 0:
+            product = 0
+            break
+        else:
+            product = product * (-1)**(int(i > 0))
+    return sum([abs(i) for i in arr]) * product
+
+passT_rate:1.0
+prob:0.9010012221595021
+
+************************
+++++++show parents of the node++++++
+solution:
+    if len(arr) == 0:
+        return None
+    elif len(arr) == 1:
+        return arr[0]
+    else:
+        return sum([abs(i) for i in arr]) * (-1)**(len(arr)-1)
+
+passT_rate:0.6666666666666666
+prob:-1.0
+
+************************
+task:HumanEval/128, cir:1, gened 10 solutions, total nodes:11, total unique nodes:9, chosen nodes:9, left nodes:9
+chosen nodes idx is [7, 4, 2, 3, 5, 1, 6, 9, 8]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [1.0, 0.6666666666666666, 0.6666666666666666, 0.3333333333333333, 0.3333333333333333, 0.3333333333333333, 0.3333333333333333, -1.0, -1.0]
+probs are [0.9010012221595021, 0.8970411516948068, 0.9262464574350242, 0.8943553897568111, 0.8981561150906049, 0.9280328762075726, 0.8839385868033036, 0.9181345084425155, 0.8835596611568254]
+
+Use prompt_tests.
+get solution for task : HumanEval/129 with 2 tests.
+Model inference time is 0.3007946968078613 minutes
+In generate step, the input tokens shape is 1054, the output tokens shape is 1566
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    n = len(grid)
+    m = len(grid[0])
+    dp = [[0 for i in range(m)] for j in range(n)]
+    for i in range(n):
+        for j in range(m):
+            if i == 0 and j == 0:
+                dp[i][j] = grid[i][j]
+            elif i == 0:
+                dp[i][j] = dp[i][j-1] + grid[i][j]
+            elif j == 0:
+                dp[i][j] = dp[i-1][j] + grid[i][j]
+            else:
+                dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+    return dp[n-1][m-1]
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def minPath(grid, k):
+
+fix input length is torch.Size([1, 1096])
+task:HumanEval/129, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.0]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1496])
+run solution time is 0.0031823039054870604 mins, choose solution time is 1.521905263264974e-06 mins, model inference time is 0.5957607547442119 mins.
+average output length is 1987.4, every token time is 0.01798613637436848 s.
+task:HumanEval/129, cir:1, gened 10 solutions, total nodes:11, total unique nodes:11, chosen nodes:10, left nodes:11
+chosen nodes idx is [0, 1, 7, 10, 4, 2, 9, 8, 6, 3]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [-1.0, 0.956337490046602, 0.9135036764952359, 0.9621629714074659, 0.9009555101389369, 0.9449822002511075, 0.9475680870551939, 0.925844413088124, 0.9209220938513322, 0.9597179528586811]
+
+total input length is torch.Size([1, 1496])
+total input length is torch.Size([1, 1548])
+total input length is torch.Size([1, 1558])
+total input length is torch.Size([1, 1609])
+total input length is torch.Size([1, 1544])
+total input length is torch.Size([1, 1665])
+total input length is torch.Size([1, 1664])
+total input length is torch.Size([1, 1702])
+total input length is torch.Size([1, 1663])
+total input length is torch.Size([1, 1744])
+run solution time is 0.03018771012624105 mins, choose solution time is 1.1205673217773438e-06 mins, model inference time is 6.31261659860611 mins.
+average output length is 2099.65, every token time is 0.1803905406983971 s.
+task:HumanEval/129, cir:2, gened 100 solutions, total nodes:111, total unique nodes:71, chosen nodes:10, left nodes:71
+chosen nodes idx is [70, 24, 94, 0, 34, 93, 37, 35, 44, 53]
+chosen nodes's parent's idx is [2, 1, 6, 7, 6, 7, 7, 10, 4]
+chosen nodes's depth is [2, 2, 2, 0, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9610948249366302, 0.8745534207877943, 0.9335953560756458, -1.0, 0.9364407267052739, 0.9519301541730196, 0.9329450896864052, 0.9403581790591581, 0.9082161143023881, 0.9296309213677542]
+
+total input length is torch.Size([1, 1475])
+total input length is torch.Size([1, 1472])
+total input length is torch.Size([1, 1483])
+total input length is torch.Size([1, 1496])
+total input length is torch.Size([1, 1499])
+total input length is torch.Size([1, 1508])
+total input length is torch.Size([1, 1529])
+total input length is torch.Size([1, 1532])
+total input length is torch.Size([1, 1527])
+total input length is torch.Size([1, 1501])
+run solution time is 0.3006927212079366 mins, choose solution time is 6.0478846232096355e-06 mins, model inference time is 5.999166933695475 mins.
+average output length is 1973.34, every token time is 0.18240649106673687 s.
+task:HumanEval/129, cir:3, gened 100 solutions, total nodes:171, total unique nodes:139, chosen nodes:10, left nodes:139
+chosen nodes idx is [187, 111, 117, 113, 129, 169, 168, 135, 24, 131]
+chosen nodes's parent's idx is [35, 70, 70, 70, 24, 93, 93, 94, 1, 94]
+chosen nodes's depth is [3, 3, 3, 3, 3, 3, 3, 3, 2, 3]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9156598307566507, 0.8827012246911481, 0.9039596558554082, 0.9587687912294668, 0.8893597566724084, 0.9200788593117591, 0.934891980519163, 0.9274017441361622, 0.8745534207877943, 0.9170408947154387]
+
+total input length is torch.Size([1, 1401])
+total input length is torch.Size([1, 1475])
+total input length is torch.Size([1, 1478])
+total input length is torch.Size([1, 1478])
+total input length is torch.Size([1, 1445])
+total input length is torch.Size([1, 1472])
+total input length is torch.Size([1, 1452])
+total input length is torch.Size([1, 1479])
+total input length is torch.Size([1, 1472])
+total input length is torch.Size([1, 1483])
+run solution time is 0.30033690929412843 mins, choose solution time is 8.686383565266926e-06 mins, model inference time is 5.903750185171763 mins.
+average output length is 1928.13, every token time is 0.18371427962395104 s.
+task:HumanEval/129, cir:4, gened 100 solutions, total nodes:239, total unique nodes:190, chosen nodes:10, left nodes:190
+chosen nodes idx is [213, 211, 219, 220, 212, 187, 215, 218, 275, 265]
+chosen nodes's parent's idx is [187, 187, 187, 187, 187, 35, 187, 187, 168, 169]
+chosen nodes's depth is [4, 4, 4, 4, 4, 3, 4, 4, 4, 4]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8720903388979846, 0.9219427605342254, 0.9517424102739117, 0.9325308557350794, 0.9231367530416186, 0.9156598307566507, 0.9503017608265751, 0.9344780315422705, 0.9029808826535252, 0.9341432655268862]
+
+total input length is torch.Size([1, 1360])
+total input length is torch.Size([1, 1384])
+total input length is torch.Size([1, 1399])
+total input length is torch.Size([1, 1398])
+total input length is torch.Size([1, 1403])
+total input length is torch.Size([1, 1401])
+total input length is torch.Size([1, 1427])
+total input length is torch.Size([1, 1432])
+total input length is torch.Size([1, 1431])
+total input length is torch.Size([1, 1441])
+run solution time is 0.30767240524291994 mins, choose solution time is 1.529852549235026e-05 mins, model inference time is 5.7736262559890745 mins.
+average output length is 1875.25, every token time is 0.18473141213414385 s.
+task:HumanEval/129, cir:5, gened 100 solutions, total nodes:290, total unique nodes:264, chosen nodes:10, left nodes:264
+chosen nodes idx is [350, 353, 328, 363, 314, 329, 392, 330, 376, 322]
+chosen nodes's parent's idx is [220, 212, 211, 187, 213, 211, 275, 211, 215, 211]
+chosen nodes's depth is [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9143460107538908, 0.8807781932811162, 0.8882308301695637, 0.8720903388979846, 0.9432196401529034, 0.9166667019204169, 0.9968985175201553, 0.8430302407274124, 0.9441521183900261, 0.9739807837165924]
+
+total input length is torch.Size([1, 1320])
+total input length is torch.Size([1, 1343])
+total input length is torch.Size([1, 1359])
+total input length is torch.Size([1, 1360])
+total input length is torch.Size([1, 1360])
+total input length is torch.Size([1, 1393])
+total input length is torch.Size([1, 1260])
+total input length is torch.Size([1, 1399])
+total input length is torch.Size([1, 1368])
+total input length is torch.Size([1, 1388])
+run solution time is 0.30082151492436726 mins, choose solution time is 1.41143798828125e-05 mins, model inference time is 5.642670667171478 mins.
+average output length is 1806.58, every token time is 0.18740395785188363 s.
+task:HumanEval/129, cir:6, gened 100 solutions, total nodes:364, total unique nodes:346, chosen nodes:10, left nodes:346
+chosen nodes idx is [469, 503, 417, 500, 440, 437, 508, 461, 430, 426]
+chosen nodes's parent's idx is [329, 322, 350, 376, 328, 328, 322, 329, 353, 353]
+chosen nodes's depth is [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+chosen nodes passT_rates [0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9221290493375199, 0.8893796980775779, 0.9157480153038732, 0.8679143532720794, 0.8391851148703664, 0.9368998597299528, 0.9250132826726932, 0.8718868994105043, 0.8630010022537208, 0.9156311904388105]
+
+total input length is torch.Size([1, 1401])
+total input length is torch.Size([1, 1479])
+total input length is torch.Size([1, 1320])
+total input length is torch.Size([1, 1318])
+total input length is torch.Size([1, 1325])
+total input length is torch.Size([1, 1333])
+total input length is torch.Size([1, 1343])
+total input length is torch.Size([1, 1361])
+total input length is torch.Size([1, 1340])
+total input length is torch.Size([1, 1343])
+run solution time is 0.3009291807810465 mins, choose solution time is 1.615285873413086e-05 mins, model inference time is 5.653690981864929 mins.
+average output length is 1806.38, every token time is 0.1877907554735771 s.
+task:HumanEval/129, cir:7, gened 100 solutions, total nodes:446, total unique nodes:421, chosen nodes:10, left nodes:421
+chosen nodes idx is [554, 512, 519, 522, 529, 528, 537, 500, 440, 592]
+chosen nodes's parent's idx is [440, 469, 469, 503, 503, 503, 417, 376, 328, 430]
+chosen nodes's depth is [7, 7, 7, 7, 7, 7, 7, 6, 6, 7]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8815072170130617, 0.875479204535922, 0.9226695094079882, 0.951982308055889, 0.9056456183955481, 0.9156846930629641, 0.9157480153038732, 0.8679143532720794, 0.8391851148703664, 0.9501212672079288]
+
+total input length is torch.Size([1, 1377])
+total input length is torch.Size([1, 1399])
+total input length is torch.Size([1, 1401])
+total input length is torch.Size([1, 1479])
+total input length is torch.Size([1, 1483])
+total input length is torch.Size([1, 1497])
+total input length is torch.Size([1, 1320])
+total input length is torch.Size([1, 1318])
+total input length is torch.Size([1, 1325])
+total input length is torch.Size([1, 1320])
+run solution time is 0.30188974539438884 mins, choose solution time is 1.8616517384847004e-05 mins, model inference time is 5.740216247240702 mins.
+average output length is 1848.85, every token time is 0.18628499240773627 s.
+task:HumanEval/129, cir:8, gened 100 solutions, total nodes:521, total unique nodes:460, chosen nodes:10, left nodes:460
+chosen nodes idx is [612, 614, 632, 639, 617, 642, 663, 649, 664, 670]
+chosen nodes's parent's idx is [554, 554, 519, 519, 554, 522, 528, 522, 528, 528]
+chosen nodes's depth is [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.9264327821570867, 0.9107338287215793, 0.875479204535922, 0.9226695094079882, 0.863283218085203, 0.951982308055889, 0.9337048873847361, 0.9056456183955481, 0.9894212173274168, 0.9011871694921378]
+
+total input length is torch.Size([1, 1356])
+total input length is torch.Size([1, 1377])
+total input length is torch.Size([1, 1399])
+total input length is torch.Size([1, 1401])
+total input length is torch.Size([1, 1413])
+total input length is torch.Size([1, 1479])
+total input length is torch.Size([1, 1481])
+total input length is torch.Size([1, 1483])
+total input length is torch.Size([1, 1491])
+total input length is torch.Size([1, 1493])
+run solution time is 0.3083930293718974 mins, choose solution time is 2.0221869150797525e-05 mins, model inference time is 5.852704997857412 mins.
+average output length is 1894.01, every token time is 0.18540678387783996 s.
+task:HumanEval/129, cir:9, gened 100 solutions, total nodes:560, total unique nodes:495, chosen nodes:10, left nodes:495
+chosen nodes idx is [712, 717, 724, 742, 749, 751, 756, 727, 760, 758]
+chosen nodes's parent's idx is [612, 612, 614, 639, 639, 617, 617, 614, 617, 617]
+chosen nodes's depth is [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.9196468658407596, 0.9162944586871055, 0.9107338287215793, 0.875479204535922, 0.9226695094079882, 0.9616003383392017, 0.9347719549064534, 0.863283218085203, 0.8903671701749429, 0.9194492265053802]
+
+total input length is torch.Size([1, 1356])
+total input length is torch.Size([1, 1375])
+total input length is torch.Size([1, 1377])
+total input length is torch.Size([1, 1399])
+total input length is torch.Size([1, 1401])
+total input length is torch.Size([1, 1407])
+total input length is torch.Size([1, 1408])
+total input length is torch.Size([1, 1413])
+total input length is torch.Size([1, 1441])
+total input length is torch.Size([1, 1449])
+run solution time is 0.31600313186645507 mins, choose solution time is 2.1636486053466797e-05 mins, model inference time is 5.767968086401622 mins.
+average output length is 1853.39, every token time is 0.1867270737106393 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    lis = []
+    if k == 1:
+        return [1]
+    lis = [min(grid[0][0],grid[0][1]), min(grid[0][1],grid[1][0]), min(grid[0][0], grid[0][1])]
+    return lis
+
+passT_rate:1.0
+prob:0.9218837905863204
+
+************************
+++++++show parents of the node++++++
+solution:
+    lis = []
+    if k == 1:
+        return [1]
+    if grid[0][1] < grid[1][0]:
+        lis = [1, grid[0][1], 1]
+    if grid[0][1] > grid[1][0]:
+        lis = [1, 1, grid[0][1]]
+    if k > 2:
+        return lis + minPathHelper(grid,k-2,lis,0)
+    print(lis)
+    if lis != None:
+        return lis
+    lis = minPathHelper(grid,k-1,lis,0)
+    return lis
+
+passT_rate:0.5
+prob:0.8903671701749429
+
+************************
+++++++show parents of the node++++++
+solution:
+    lis = []
+    if k > 2:
+        return [1] + minPathHelper(grid,k-1,[1,1,1,1],0)
+    if k < 2:
+        return [1]
+    lis = minPathHelper(grid,k,[1,1,grid[0][1]],0)
+    print(lis)
+    if lis != None:
+        return lis
+    lis = minPathHelper(grid,k,[1,grid[0][1],1],1)
+    return lis
+
+passT_rate:0.5
+prob:0.863283218085203
+
+************************
+++++++show parents of the node++++++
+solution:
+    if k > 2:
+        return [1] + minPathHelper(grid,k-1,[1,1,1,1],0)
+    if k < 2:
+        return [1]
+    return [minPathHelper(grid,2,[1,1,grid[0][1]],0), minPathHelper(grid,2,[1,grid[0][1],1],1)]
+
+passT_rate:0.5
+prob:0.8815072170130617
+
+************************
+++++++show parents of the node++++++
+solution:
+    l = [0] * k
+    for i in range(k):
+        l[i] = minPathHelper(grid,k,l,i)
+    return l
+
+passT_rate:0.0
+prob:0.8391851148703664
+
+************************
+++++++show parents of the node++++++
+solution:
+    l = [0] * k
+    for i in range(k):
+        l[i] = minPathHelper(grid, k, l, i)
+    return l
+    return (l[i-1] + grid[i][0])
+    return (l[i-1] + grid[0][i])
+
+passT_rate:0.0
+prob:0.8882308301695637
+
+************************
+++++++show parents of the node++++++
+solution:
+    l = [0] * k
+    for i in range(k):
+        l[i] = minPathHelper(grid, k, l, i)
+    return l
+    x = minPathHelper(grid, k, l, i-1) + grid[i][0]
+    y = minPathHelper(grid, k, l, i-1) + grid[0][i]
+    return min(x,y)
+
+passT_rate:0.0
+prob:0.9219427605342254
+
+************************
+++++++show parents of the node++++++
+solution:
+    l = [0] * k
+    for i in range(k):
+        l[i] = minPathHelper(grid, k, l, i)
+    return l
+    if i == 0:
+        return grid[0][0]
+    x = minPathHelper(grid, k, l, i-1) + grid[i][0]
+    y = minPathHelper(grid, k, l, i-1) + grid[0][i]
+    return min(x,y)
+
+passT_rate:0.0
+prob:0.9156598307566507
+
+************************
+++++++show parents of the node++++++
+solution:
+    n = len(grid)
+    m = len(grid[0])
+    dp = [[0 for i in range(m)] for j in range(n)]
+    for i in range(n):
+        for j in range(m):
+            if i == 0 and j == 0:
+                dp[i][j] = grid[i][j]
+            elif i == 0:
+                dp[i][j] = dp[i][j-1] + grid[i][j]
+            elif j == 0:
+                dp[i][j] = dp[i-1][j] + grid[i][j]
+            else:
+                dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+    l = [0] * k
+    for i in range(k):
+        l[i] = dp[n-1][m-1]
+    return l
+
+passT_rate:0.0
+prob:0.9403581790591581
+
+************************
+++++++show parents of the node++++++
+solution:
+    n = len(grid)
+    m = len(grid[0])
+    dp = [[0 for i in range(m)] for j in range(n)]
+    for i in range(n):
+        for j in range(m):
+            if i == 0 and j == 0:
+                dp[i][j] = grid[i][j]
+            elif i == 0:
+                dp[i][j] = dp[i][j-1] + grid[i][j]
+            elif j == 0:
+                dp[i][j] = dp[i-1][j] + grid[i][j]
+            else:
+                dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+    l = [0] * k
+    for i in range(k):
+        for j in range(n):
+            for m in range(n):
+                if dp[j][m] < l[i]:
+                    l[i] = dp[j][m]
+    return l
+
+passT_rate:0.0
+prob:0.9135036764952359
+
+************************
+++++++show parents of the node++++++
+solution:
+    n = len(grid)
+    m = len(grid[0])
+    dp = [[0 for i in range(m)] for j in range(n)]
+    for i in range(n):
+        for j in range(m):
+            if i == 0 and j == 0:
+                dp[i][j] = grid[i][j]
+            elif i == 0:
+                dp[i][j] = dp[i][j-1] + grid[i][j]
+            elif j == 0:
+                dp[i][j] = dp[i-1][j] + grid[i][j]
+            else:
+                dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+    return dp[n-1][m-1]
+
+passT_rate:0.0
+prob:-1.0
+
+************************
+task:HumanEval/129, cir:10, gened 100 solutions, total nodes:595, total unique nodes:527, chosen nodes:10, left nodes:527
+chosen nodes idx is [899, 880, 812, 829, 822, 817, 834, 821, 852, 859]
+chosen nodes's parent's idx is [760, 756, 712, 717, 717, 712, 724, 717, 749, 749]
+chosen nodes's depth is [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+chosen nodes passT_rates [1.0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.9218837905863204, 0.9145730950670937, 0.9196468658407596, 0.9262645356399197, 0.930844255427654, 0.9162944586871055, 0.9107338287215793, 0.914010630002325, 0.875479204535922, 0.9226695094079882]
+
+Use prompt_tests.
+get solution for task : HumanEval/130 with 1 tests.
+Model inference time is 0.30116023222605387 minutes
+In generate step, the input tokens shape is 833, the output tokens shape is 1345
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if n == 0:
+        return [0]
+    elif n == 1:
+        return [0, 1]
+    elif n == 2:
+        return [0, 1, 1]
+    else:
+        l = [0, 1, 1]
+        for i in range(3, n + 1):
+            l.append(l[i - 1] + l[i - 2] + l[i - 3])
+        return l
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def tri(n):
+
+fix input length is torch.Size([1, 872])
+task:HumanEval/130, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.0]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1069])
+run solution time is 0.0032762765884399416 mins, choose solution time is 2.7481714884440104e-05 mins, model inference time is 0.49875133832295737 mins.
+average output length is 1542.2, every token time is 0.019404151501196117 s.
+task:HumanEval/130, cir:1, gened 10 solutions, total nodes:11, total unique nodes:6, chosen nodes:6, left nodes:6
+chosen nodes idx is [10, 1, 4, 2, 3, 6]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9231633422948007, 0.8851447869247937, 0.8898708095984565, 0.9359638816709385, 0.9297801810785995, 0.908074050123748]
+
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1018])
+total input length is torch.Size([1, 1030])
+total input length is torch.Size([1, 1069])
+total input length is torch.Size([1, 1075])
+total input length is torch.Size([1, 1095])
+run solution time is 0.030412141482035318 mins, choose solution time is 1.3033548990885417e-06 mins, model inference time is 2.959556293487549 mins.
+average output length is 1508.2333333333333, every token time is 0.11773601343300466 s.
+task:HumanEval/130, cir:2, gened 60 solutions, total nodes:66, total unique nodes:30, chosen nodes:10, left nodes:30
+chosen nodes idx is [11, 30, 15, 14, 54, 64, 60, 12, 22, 24]
+chosen nodes's parent's idx is [10, 1, 10, 10, 3, 6, 3, 10, 1, 1]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.7971711694121791, 0.927239818168365, 0.88940459007048, 0.9009433578740045, 0.8745127776832705, 0.8718479478567837, 0.8969596428815407, 0.8741373649609342, 0.8937084498125113, 0.8364439146512213]
+
+total input length is torch.Size([1, 986])
+total input length is torch.Size([1, 1006])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1020])
+total input length is torch.Size([1, 1017])
+total input length is torch.Size([1, 1019])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1018])
+total input length is torch.Size([1, 1018])
+run solution time is 0.1817362387975057 mins, choose solution time is 3.2107035319010417e-06 mins, model inference time is 4.831679177284241 mins.
+average output length is 1479.91, every token time is 0.19589082136492555 s.
+task:HumanEval/130, cir:3, gened 100 solutions, total nodes:130, total unique nodes:76, chosen nodes:10, left nodes:76
+chosen nodes idx is [91, 144, 82, 84, 95, 94, 147, 120, 130, 132]
+chosen nodes's parent's idx is [15, 12, 30, 30, 15, 15, 12, 54, 64, 60]
+chosen nodes's depth is [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.7971711694121791, 0.8994665105388964, 0.8573222028323318, 0.9007783396795392, 0.88940459007048, 0.9009433578740045, 0.8686433942231964, 0.9532478107056949, 0.9531974247570072, 0.899205584344364]
+
+total input length is torch.Size([1, 986])
+total input length is torch.Size([1, 1004])
+total input length is torch.Size([1, 1005])
+total input length is torch.Size([1, 1006])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1015])
+total input length is torch.Size([1, 1020])
+total input length is torch.Size([1, 1017])
+total input length is torch.Size([1, 1019])
+run solution time is 0.3025841434796651 mins, choose solution time is 4.935264587402344e-06 mins, model inference time is 4.830322504043579 mins.
+average output length is 1466.09, every token time is 0.1976818331928351 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    tb = [0,1,1]
+    if n == 0:
+        return [1]
+    if n == 1:
+        return [1,1]
+    if n == 2:
+        return [1, 1, 2]
+    if n == 3:
+        return [1, 3, 2, 8]
+    elif n > 3:
+        while len(tb) <= n+1:
+            tb.append(tb[-1]+tb[-2]+tb[-3])
+        return tb[1:]
+
+passT_rate:1.0
+prob:0.8829771607706358
+
+************************
+++++++show parents of the node++++++
+solution:
+    tb = [0,1,1]
+    while len(tb) <= n+1:
+        tb.append(tb[-1]+tb[-2]+tb[-3])
+    return tb[1:]
+
+passT_rate:0.0
+prob:0.8573222028323318
+
+************************
+++++++show parents of the node++++++
+solution:
+    tb = [0,1,1]
+    while len(tb) <= n+1:
+        tb.append(tb[-1]+tb[-2]+tb[-3])
+    return tb[:-1]
+
+passT_rate:0.0
+prob:0.927239818168365
+
+************************
+++++++show parents of the node++++++
+solution:
+    if n <= 1:
+        return [0, 1]
+    l = [0, 1, 1]
+    while len(l) <= n:
+        l.append(l[-1] + l[-2] + l[-3])
+    return l
+
+passT_rate:0.0
+prob:0.8851447869247937
+
+************************
+++++++show parents of the node++++++
+solution:
+    if n == 0:
+        return [0]
+    elif n == 1:
+        return [0, 1]
+    elif n == 2:
+        return [0, 1, 1]
+    else:
+        l = [0, 1, 1]
+        for i in range(3, n + 1):
+            l.append(l[i - 1] + l[i - 2] + l[i - 3])
+        return l
+
+passT_rate:0.0
+prob:-1.0
+
+************************
+task:HumanEval/130, cir:4, gened 100 solutions, total nodes:176, total unique nodes:86, chosen nodes:10, left nodes:86
+chosen nodes idx is [195, 181, 191, 194, 182, 192, 188, 171, 176, 152]
+chosen nodes's parent's idx is [82, 144, 82, 82, 144, 82, 144, 91, 91, 22]
+chosen nodes's depth is [4, 4, 4, 4, 4, 4, 4, 4, 4, 3]
+chosen nodes passT_rates [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8829771607706358, 0.8895388529022201, 0.821113429183268, 0.9153604228251384, 0.8506447139014703, 0.8578774945976979, 0.8866895210196382, 0.8572796260795474, 0.8979274126518171, 0.8937084498125113]
+
+Use prompt_tests.
+get solution for task : HumanEval/131 with 3 tests.
+Model inference time is 0.30056897004445393 minutes
+In generate step, the input tokens shape is 659, the output tokens shape is 1171
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    product = 1
+    while n > 0:
+        if n % 2 == 1:
+            product *= n % 10
+        n = n // 10
+    return product
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def digits(n):
+
+fix input length is torch.Size([1, 698])
+task:HumanEval/131, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.6666666666666666]
+probs are [-1.0]
+
+total input length is torch.Size([1, 874])
+run solution time is 0.003198051452636719 mins, choose solution time is 7.736682891845704e-06 mins, model inference time is 0.45276018381118777 mins.
+average output length is 1348.4, every token time is 0.020146553115369444 s.
+task:HumanEval/131, cir:1, gened 10 solutions, total nodes:11, total unique nodes:8, chosen nodes:8, left nodes:8
+chosen nodes idx is [6, 4, 8, 1, 2, 9, 7, 3]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.3333333333333333, 0.3333333333333333]
+probs are [0.9138164253762624, 0.8935049039629245, 0.9183975106241761, 0.8378507767388657, 0.8963682525729383, 0.8931555986833484, 0.8999193080194275, 0.9255269655931222]
+
+total input length is torch.Size([1, 874])
+total input length is torch.Size([1, 874])
+total input length is torch.Size([1, 880])
+total input length is torch.Size([1, 884])
+total input length is torch.Size([1, 885])
+total input length is torch.Size([1, 887])
+total input length is torch.Size([1, 875])
+total input length is torch.Size([1, 887])
+run solution time is 0.03057125409444173 mins, choose solution time is 1.0967254638671874e-06 mins, model inference time is 3.631489912668864 mins.
+average output length is 1347.2125, every token time is 0.16173350281969656 s.
+task:HumanEval/131, cir:2, gened 80 solutions, total nodes:88, total unique nodes:54, chosen nodes:10, left nodes:54
+chosen nodes idx is [54, 15, 24, 57, 49, 16, 14, 37, 18, 11]
+chosen nodes's parent's idx is [2, 6, 4, 2, 1, 6, 6, 8, 6, 6]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9153184528487877, 0.9186241732246645, 0.8935049039629245, 0.9116894776966931, 0.9037230595821922, 0.893135697008176, 0.8900255052341877, 0.9287746720593899, 0.9066951173781896, 0.8366290313633069]
+
+total input length is torch.Size([1, 873])
+total input length is torch.Size([1, 874])
+total input length is torch.Size([1, 874])
+total input length is torch.Size([1, 878])
+total input length is torch.Size([1, 876])
+total input length is torch.Size([1, 877])
+total input length is torch.Size([1, 877])
+total input length is torch.Size([1, 879])
+total input length is torch.Size([1, 880])
+total input length is torch.Size([1, 884])
+run solution time is 0.25074927806854247 mins, choose solution time is 3.953774770100911e-06 mins, model inference time is 4.530078653494517 mins.
+average output length is 1350.63, every token time is 0.2012429179783601 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    if n % 2 == 0:
+        return 0
+    product = 1
+    while n > 0:
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            product *= n % 10
+            n = n // 10
+    return product
+
+passT_rate:1.0
+prob:0.8703434316590212
+
+************************
+++++++show parents of the node++++++
+solution:
+    if n % 2 == 0:
+        return 0
+    product = 1
+    while n > 0:
+        product *= n % 10
+        n //= 10
+    return product
+
+passT_rate:0.6666666666666666
+prob:0.9116894776966931
+
+************************
+++++++show parents of the node++++++
+solution:
+    if n == 1:
+        return n
+    result = 1
+    while n > 0:
+        if n % 2 == 1:
+            result *= n % 10
+        n //= 10
+    return result
+
+passT_rate:0.6666666666666666
+prob:0.8963682525729383
+
+************************
+++++++show parents of the node++++++
+solution:
+    product = 1
+    while n > 0:
+        if n % 2 == 1:
+            product *= n % 10
+        n = n // 10
+    return product
+
+passT_rate:0.6666666666666666
+prob:-1.0
+
+************************
+task:HumanEval/131, cir:3, gened 100 solutions, total nodes:154, total unique nodes:95, chosen nodes:10, left nodes:95
+chosen nodes idx is [121, 98, 93, 91, 100, 94, 105, 106, 104, 95]
+chosen nodes's parent's idx is [57, 54, 54, 54, 54, 54, 15, 15, 15, 54]
+chosen nodes's depth is [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+chosen nodes passT_rates [1.0, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.8703434316590212, 0.9517186349450291, 0.9064264852488028, 0.868942840799741, 0.9290675431823545, 0.9329080947042959, 0.9186241732246645, 0.893135697008176, 0.8900255052341877, 0.8822834001492511]
+
+Use prompt_tests.
+get solution for task : HumanEval/132 with 6 tests.
+Model inference time is 0.3007397492726644 minutes
+In generate step, the input tokens shape is 791, the output tokens shape is 1303
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    stack = []
+    for i in string:
+        if i == '[':
+            stack.append(i)
+        elif i == ']':
+            if len(stack) == 0:
+                return False
+            else:
+                stack.pop()
+    return True if len(stack) == 0 else False
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def is_nested(string):
+
+fix input length is torch.Size([1, 832])
+task:HumanEval/132, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.5]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1167])
+run solution time is 0.0031930009524027505 mins, choose solution time is 6.218751271565755e-06 mins, model inference time is 0.5217049360275269 mins.
+average output length is 1520.7, every token time is 0.020584139338202547 s.
+task:HumanEval/132, cir:1, gened 10 solutions, total nodes:11, total unique nodes:8, chosen nodes:8, left nodes:8
+chosen nodes idx is [9, 6, 1, 8, 2, 3, 5, 10]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.3333333333333333, 0.3333333333333333, 0.16666666666666666, 0.0]
+probs are [0.9003094121257321, 0.9199294366078963, 0.9291765106833231, 0.850111996440867, 0.8725679554999387, 0.9045577612235782, 0.9188462329340219, 0.9092072621994856]
+
+total input length is torch.Size([1, 1144])
+total input length is torch.Size([1, 1157])
+total input length is torch.Size([1, 1167])
+total input length is torch.Size([1, 1184])
+total input length is torch.Size([1, 1146])
+total input length is torch.Size([1, 1150])
+total input length is torch.Size([1, 1160])
+total input length is torch.Size([1, 1119])
+run solution time is 0.030542405446370442 mins, choose solution time is 1.1086463928222657e-06 mins, model inference time is 4.135822498798371 mins.
+average output length is 1587.25, every token time is 0.15633917252911153 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    import re
+    return bool(re.findall(r"\[\[.*?\]\]", string))
+
+passT_rate:1.0
+prob:0.9306959074448091
+
+************************
+++++++show parents of the node++++++
+solution:
+    return bool(re.findall(r"\[\[.*\]\]", string))
+
+passT_rate:0.0
+prob:0.9092072621994856
+
+************************
+++++++show parents of the node++++++
+solution:
+    stack = []
+    for i in string:
+        if i == '[':
+            stack.append(i)
+        elif i == ']':
+            if len(stack) == 0:
+                return False
+            else:
+                stack.pop()
+    return True if len(stack) == 0 else False
+
+passT_rate:0.5
+prob:-1.0
+
+************************
+task:HumanEval/132, cir:2, gened 80 solutions, total nodes:88, total unique nodes:52, chosen nodes:10, left nodes:52
+chosen nodes idx is [82, 16, 13, 14, 50, 17, 19, 15, 63, 56]
+chosen nodes's parent's idx is [10, 9, 9, 9, 8, 9, 9, 9, 3, 2]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [1.0, 0.8333333333333334, 0.6666666666666666, 0.6666666666666666, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.9306959074448091, 0.9103127222684992, 0.8588989783367049, 0.9137558682908792, 0.9431849422306247, 0.8933108131475822, 0.8983734184029897, 0.8825928112059732, 0.8880911321502784, 0.8784811957065845]
+
+Use prompt_tests.
+get solution for task : HumanEval/133 with 5 tests.
+Model inference time is 0.3010820150375366 minutes
+In generate step, the input tokens shape is 817, the output tokens shape is 1329
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    for i in range(len(lst)):
+        lst[i] = int(lst[i] + 0.5)
+    return sum([i**2 for i in lst])
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def sum_squares(lst):
+
+fix input length is torch.Size([1, 859])
+task:HumanEval/133, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.6]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1182])
+run solution time is 0.0031925042470296225 mins, choose solution time is 7.379055023193359e-06 mins, model inference time is 0.5236130396525065 mins.
+average output length is 1608.6, every token time is 0.01953051381631083 s.
+task:HumanEval/133, cir:1, gened 10 solutions, total nodes:11, total unique nodes:9, chosen nodes:9, left nodes:9
+chosen nodes idx is [5, 2, 10, 9, 1, 7, 3, 8, 4]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.8, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.0, 0.0]
+probs are [0.8954376848959996, 0.9369179229751731, 0.8720227558655508, 0.9150665323841717, 0.8724780125122044, 0.9149055300460571, 0.8875232828485885, 0.9281995756409731, 0.9213266691019111]
+
+total input length is torch.Size([1, 1164])
+total input length is torch.Size([1, 1161])
+total input length is torch.Size([1, 1160])
+total input length is torch.Size([1, 1180])
+total input length is torch.Size([1, 1182])
+total input length is torch.Size([1, 1189])
+total input length is torch.Size([1, 1193])
+total input length is torch.Size([1, 1156])
+total input length is torch.Size([1, 1175])
+run solution time is 0.030594182014465333 mins, choose solution time is 9.457270304361979e-07 mins, model inference time is 4.698274568716685 mins.
+average output length is 1629.8555555555556, every token time is 0.1729579499193257 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    import math
+    return sum([int(math.ceil(i))**2 for i in lst])
+
+passT_rate:1.0
+prob:0.9016791074190934
+
+************************
+++++++show parents of the node++++++
+solution:
+    return sum([int(math.ceil(i))**2 for i in lst])
+
+passT_rate:0.0
+prob:0.9281995756409731
+
+************************
+++++++show parents of the node++++++
+solution:
+    for i in range(len(lst)):
+        lst[i] = int(lst[i] + 0.5)
+    return sum([i**2 for i in lst])
+
+passT_rate:0.6
+prob:-1.0
+
+************************
+task:HumanEval/133, cir:2, gened 90 solutions, total nodes:99, total unique nodes:49, chosen nodes:10, left nodes:49
+chosen nodes idx is [81, 68, 18, 11, 20, 33, 14, 79, 47, 24]
+chosen nodes's parent's idx is [8, 7, 5, 5, 5, 10, 5, 3, 9, 2]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [1.0, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.6]
+probs are [0.9016791074190934, 0.8927560459137227, 0.8832681074493424, 0.924817432068481, 0.882665948735989, 0.9098492412385282, 0.9563241354759072, 0.931537423885354, 0.9011660573165501, 0.9118141760711982]
+
+Use prompt_tests.
+get solution for task : HumanEval/134 with 4 tests.
+Model inference time is 0.3006445527076721 minutes
+In generate step, the input tokens shape is 819, the output tokens shape is 1331
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if txt == "":
+        return False
+    else:
+        if txt[-1].isalpha():
+            return True
+        else:
+            return False
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def check_if_last_char_is_a_letter(txt):
+
+fix input length is torch.Size([1, 870])
+task:HumanEval/134, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.75]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1155])
+run solution time is 0.003204949696858724 mins, choose solution time is 5.507469177246094e-06 mins, model inference time is 0.5187367558479309 mins.
+average output length is 1508.7, every token time is 0.020629818715876626 s.
+task:HumanEval/134, cir:1, gened 10 solutions, total nodes:11, total unique nodes:10, chosen nodes:10, left nodes:10
+chosen nodes idx is [8, 7, 2, 10, 9, 5, 6, 3, 1, 4]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.75, 0.75, 0.75, 0.75, 0.75, 0.5, 0.5, 0.5, 0.5, 0.25]
+probs are [0.9075809586999309, 0.9534987361334343, 0.9277223447695132, 0.9096553549181992, 0.8991788844653716, 0.9100721820252246, 0.8706287917838966, 0.9087104362722072, 0.8826493754506484, 0.9359660643278984]
+
+total input length is torch.Size([1, 1151])
+total input length is torch.Size([1, 1155])
+total input length is torch.Size([1, 1155])
+total input length is torch.Size([1, 1163])
+total input length is torch.Size([1, 1173])
+total input length is torch.Size([1, 1142])
+total input length is torch.Size([1, 1143])
+total input length is torch.Size([1, 1156])
+total input length is torch.Size([1, 1160])
+total input length is torch.Size([1, 1173])
+run solution time is 0.030650047461191814 mins, choose solution time is 1.0808308919270833e-06 mins, model inference time is 5.1870750188827515 mins.
+average output length is 1580.08, every token time is 0.1969675605287794 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    if txt == "":
+        return False
+    else:
+        if txt[-1].isspace() and txt[-2].isalpha():
+            return False
+        elif (txt[-1].isalpha() and not(txt[-2].isalpha())):
+            return True
+        else:
+            return False
+
+passT_rate:1.0
+prob:0.9155742021891632
+
+************************
+++++++show parents of the node++++++
+solution:
+    if txt == "":
+        return False
+    else:
+        if txt[-1].isspace() and txt[-2].isalpha():
+            return False
+        else:
+            return True
+
+passT_rate:0.75
+prob:0.9096553549181992
+
+************************
+++++++show parents of the node++++++
+solution:
+    if txt == "":
+        return False
+    else:
+        if txt[-1].isalpha():
+            return True
+        else:
+            return False
+
+passT_rate:0.75
+prob:-1.0
+
+************************
+task:HumanEval/134, cir:2, gened 100 solutions, total nodes:110, total unique nodes:78, chosen nodes:10, left nodes:78
+chosen nodes idx is [49, 28, 17, 37, 32, 19, 40, 22, 39, 12]
+chosen nodes's parent's idx is [10, 7, 8, 2, 2, 8, 2, 7, 2, 8]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [1.0, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75]
+probs are [0.9155742021891632, 0.9085267272357581, 0.9379416444344982, 0.9534987361334343, 0.9277223447695132, 0.9015286633660474, 0.9096553549181992, 0.9433644878906424, 0.8991788844653716, 0.9073167767820476]
+
+Use prompt_tests.
+get solution for task : HumanEval/135 with 2 tests.
+Model inference time is 0.3011050740877787 minutes
+In generate step, the input tokens shape is 697, the output tokens shape is 1209
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    for i in range(len(arr)):
+        if arr[i] > arr[i-1]:
+            return i
+    return -1
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def can_arrange(arr):
+
+fix input length is torch.Size([1, 739])
+task:HumanEval/135, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.0]
+probs are [-1.0]
+
+total input length is torch.Size([1, 903])
+run solution time is 0.0032406051953633628 mins, choose solution time is 5.40018081665039e-06 mins, model inference time is 0.4595057765642802 mins.
+average output length is 1340.7, every token time is 0.020564144833327816 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    for i in range(len(arr)):
+        if arr[i] > arr[i-1]:
+            break
+    else:
+        return -1
+    for i in range(len(arr)-1, i, -1):
+        if arr[i] < arr[i-1]:
+            return i
+    return -1
+
+passT_rate:1.0
+prob:0.8648351721201709
+
+************************
+++++++show parents of the node++++++
+solution:
+    for i in range(len(arr)):
+        if arr[i] > arr[i-1]:
+            return i
+    return -1
+
+passT_rate:0.0
+prob:-1.0
+
+************************
+task:HumanEval/135, cir:1, gened 10 solutions, total nodes:11, total unique nodes:11, chosen nodes:10, left nodes:11
+chosen nodes idx is [3, 1, 2, 0, 8, 7, 9, 6, 4, 5]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 0, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [1.0, 0.5, 0.5, 0.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]
+probs are [0.8648351721201709, 0.8269011680493834, 0.8882154910927934, -1.0, 0.8994906683213917, 0.9654228041547497, 0.8758824265289212, 0.8432181202508133, 0.8817640090667913, 0.8800486926091748]
+
+Use prompt_tests.
+get solution for task : HumanEval/137 with 4 tests.
+Model inference time is 0.30104566415150963 minutes
+In generate step, the input tokens shape is 780, the output tokens shape is 1292
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if isinstance(a, int) and isinstance(b, int):
+        return max(a, b)
+    elif isinstance(a, float) and isinstance(b, float):
+        return max(a, b)
+    elif isinstance(a, str) and isinstance(b, str):
+        return max(a, b)
+    elif isinstance(a, int) and isinstance(b, float):
+        return max(a, b)
+    elif isinstance(a, float) and isinstance(b, int):
+        return max(a, b)
+    elif isinstance(a, int) and isinstance(b, str):
+        return max(a, b)
+    elif isinstance(a, str) and isinstance(b, int):
+        return max(a, b)
+    elif isinstance(a, float) and isinstance(b, str):
+        return max(a, b)
+    elif isinstance(a, str) and isinstance(b, float):
+        return max(a, b)
+    else:
+        return None
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def compare_one(a, b):
+
+fix input length is torch.Size([1, 823])
+task:HumanEval/137, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.5]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1285])
+run solution time is 0.0032079259554545084 mins, choose solution time is 1.434485117594401e-06 mins, model inference time is 0.5493627071380616 mins.
+average output length is 1797.0, every token time is 0.018342662003548463 s.
+task:HumanEval/137, cir:1, gened 10 solutions, total nodes:11, total unique nodes:10, chosen nodes:10, left nodes:10
+chosen nodes idx is [5, 4, 1, 3, 2, 6, 7, 10, 8, 9]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.75, 0.5, 0.5, 0.5, 0.5, 0.25, 0.25, 0.25, 0.25, 0.25]
+probs are [0.9405729665637342, 0.9215798023157203, 0.8619072636635151, 0.934665289835947, 0.9437150144973783, 0.9085178570134016, 0.9521582884968017, 0.9378764262338062, 0.942924106205329, 0.9585634909726751]
+
+total input length is torch.Size([1, 1338])
+total input length is torch.Size([1, 1105])
+total input length is torch.Size([1, 1278])
+total input length is torch.Size([1, 1285])
+total input length is torch.Size([1, 1339])
+total input length is torch.Size([1, 1081])
+total input length is torch.Size([1, 1162])
+total input length is torch.Size([1, 1325])
+total input length is torch.Size([1, 1410])
+total input length is torch.Size([1, 1405])
+run solution time is 0.030859323342641194 mins, choose solution time is 1.5616416931152343e-06 mins, model inference time is 5.456571793556213 mins.
+average output length is 1741.37, every token time is 0.18800961886190679 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    if isinstance(a, int) and isinstance(b, int):
+        return a if a>b else b
+    elif isinstance(a, float) and isinstance(b, float):
+        return a if a>b else b
+    elif isinstance(a, str) and isinstance(b, str):
+        for i,j in zip(a, b):
+            if int(i) > int(j):
+                return a
+            elif int(j) > int(i):
+                return b
+        return None
+    elif isinstance(a, int) and isinstance(b, float):
+        return a if a > b else b
+    elif isinstance(a, float) and isinstance(b, int):
+        return a if a > b else b
+    elif isinstance(a, int) and isinstance(b, str):
+        for i,j in zip(str(a), b):
+            if int(i) > int(j):
+                return a
+            elif int(j) > int(i):
+                return b
+        return None
+    elif isinstance(a, str) and isinstance(b, int):
+        for i,j in zip(a, str(b)):
+            if int(i) > int(j):
+                return a
+            elif int(j) > int(i):
+                return b
+        return None
+    elif isinstance(a, float) and isinstance(b, str):
+        for i,j in zip(str(a), b):
+            if int(i) > int(j):
+                return a
+            elif int(j) > int(i):
+                return b
+        return None
+    elif isinstance(a, str) and isinstance(b, float):
+        for i,j in zip(a, str(b)):
+            if int(i) > int(j):
+                return a
+            elif int(j) > int(i):
+                return b
+        return None
+
+passT_rate:1.0
+prob:0.9793850466669846
+
+************************
+++++++show parents of the node++++++
+solution:
+    str_a = ""
+    str_b = ""
+    if isinstance(a, int) and isinstance(b, int):
+        return max(a, b)
+    elif isinstance(a, float) and isinstance(b, float):
+        return max(a, b)
+    elif isinstance(a, str) and isinstance(b, str):
+        return max(a, b)
+    elif isinstance(a, int) and isinstance(b, float):
+        return max(a, b)
+    elif isinstance(a, float) and isinstance(b, int):
+        return max(a, b)
+    elif isinstance(a, int) and isinstance(b, str):
+        str_a = str(a)
+        str_b = b
+    elif isinstance(a, str) and isinstance(b, int):
+        str_a = a
+        str_b = str(b)
+    elif isinstance(a, float) and isinstance(b, str):
+        str_a = str(a)
+        str_b = b
+    elif isinstance(a, str) and isinstance(b, float):
+        str_a = a
+        str_b = str(b)
+    return max(str_a, str_b)
+
+passT_rate:0.75
+prob:0.9405729665637342
+
+************************
+++++++show parents of the node++++++
+solution:
+    if isinstance(a, int) and isinstance(b, int):
+        return max(a, b)
+    elif isinstance(a, float) and isinstance(b, float):
+        return max(a, b)
+    elif isinstance(a, str) and isinstance(b, str):
+        return max(a, b)
+    elif isinstance(a, int) and isinstance(b, float):
+        return max(a, b)
+    elif isinstance(a, float) and isinstance(b, int):
+        return max(a, b)
+    elif isinstance(a, int) and isinstance(b, str):
+        return max(a, b)
+    elif isinstance(a, str) and isinstance(b, int):
+        return max(a, b)
+    elif isinstance(a, float) and isinstance(b, str):
+        return max(a, b)
+    elif isinstance(a, str) and isinstance(b, float):
+        return max(a, b)
+    else:
+        return None
+
+passT_rate:0.5
+prob:-1.0
+
+************************
+task:HumanEval/137, cir:2, gened 100 solutions, total nodes:110, total unique nodes:84, chosen nodes:10, left nodes:84
+chosen nodes idx is [20, 12, 15, 16, 13, 11, 17, 14, 18, 19]
+chosen nodes's parent's idx is [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [1.0, 0.75, 0.75, 0.5, 0.5, 0.5, 0.25, 0.25, 0.25, 0.0]
+probs are [0.9793850466669846, 0.939632879924482, 0.963329820046707, 0.9106663550336456, 0.9001052743427834, 0.9299168226873735, 0.9133208860319413, 0.9194390290409511, 0.9470980827703994, 0.9890377684993932]
+
+Use prompt_tests.
+get solution for task : HumanEval/138 with 3 tests.
+Model inference time is 0.30036905606587727 minutes
+In generate step, the input tokens shape is 694, the output tokens shape is 1206
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if n % 2 == 0:
+        if n == 2:
+            return True
+        elif n == 4:
+            return True
+        elif n == 6:
+            return True
+        elif n == 8:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def is_equal_to_sum_even(n):
+
+fix input length is torch.Size([1, 741])
+task:HumanEval/138, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.3333333333333333]
+probs are [-1.0]
+
+total input length is torch.Size([1, 982])
+run solution time is 0.003235046068827311 mins, choose solution time is 4.827976226806641e-06 mins, model inference time is 0.4762529810269674 mins.
+average output length is 1337.9, every token time is 0.021358233626554056 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    counter = 0
+    while n > 0:
+        counter = counter + n % 2 + n // 2
+        n = n // 2
+    return counter == 8
+
+passT_rate:1.0
+prob:0.8810125422776763
+
+************************
+++++++show parents of the node++++++
+solution:
+    if n % 2 == 0:
+        if n == 2:
+            return True
+        elif n == 4:
+            return True
+        elif n == 6:
+            return True
+        elif n == 8:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+passT_rate:0.3333333333333333
+prob:-1.0
+
+************************
+task:HumanEval/138, cir:1, gened 10 solutions, total nodes:11, total unique nodes:10, chosen nodes:10, left nodes:10
+chosen nodes idx is [5, 1, 4, 3, 2, 8, 10, 6, 7, 9]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [1.0, 0.6666666666666666, 0.6666666666666666, 0.3333333333333333, 0.0, -1.0, -1.0, -1.0, -1.0, -1.0]
+probs are [0.8810125422776763, 0.9491035111718739, 0.9399411982224103, 0.9292464086616594, 0.8960029036340885, 0.9270873795272419, 0.8764869615979548, 0.8719615912184179, 0.8949201395910633, 0.890184090581494]
+
+Use prompt_tests.
+get solution for task : HumanEval/139 with 1 tests.
+Model inference time is 0.30040804942448934 minutes
+In generate step, the input tokens shape is 676, the output tokens shape is 1188
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if n == 0:
+        return 1
+    else:
+        return n * special_factorial(n-1)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def special_factorial(n):
+
+fix input length is torch.Size([1, 718])
+task:HumanEval/139, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.0]
+probs are [-1.0]
+
+total input length is torch.Size([1, 820])
+run solution time is 0.0032399733861287433 mins, choose solution time is 1.152356465657552e-06 mins, model inference time is 0.4405946135520935 mins.
+average output length is 1292.8, every token time is 0.0204483895461158 s.
+task:HumanEval/139, cir:1, gened 10 solutions, total nodes:11, total unique nodes:8, chosen nodes:8, left nodes:8
+chosen nodes idx is [9, 3, 4, 2, 1, 10, 6, 7]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9109094009571117, 0.8898975760342861, 0.8361361321795187, 0.8121531482810529, 0.8916805832045713, 0.8918228238800054, 0.8769928231146119, 0.8422700226835167]
+
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 819])
+total input length is torch.Size([1, 820])
+total input length is torch.Size([1, 820])
+total input length is torch.Size([1, 819])
+total input length is torch.Size([1, 819])
+total input length is torch.Size([1, 832])
+total input length is torch.Size([1, 850])
+run solution time is 0.0307475209236145 mins, choose solution time is 9.735425313313801e-07 mins, model inference time is 3.5278500358263654 mins.
+average output length is 1297.0, every token time is 0.16320046555012488 s.
+task:HumanEval/139, cir:2, gened 80 solutions, total nodes:88, total unique nodes:48, chosen nodes:10, left nodes:48
+chosen nodes idx is [15, 12, 53, 18, 78, 11, 59, 27, 20, 24]
+chosen nodes's parent's idx is [9, 9, 1, 9, 6, 9, 1, 3, 9, 3]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8609247457174161, 0.8536641102596079, 0.9812613456763173, 0.836803138211686, 0.8430286831762345, 0.8951144050485061, 0.8364980250206698, 0.881805913606557, 0.9245338902658927, 0.8976219873621633]
+
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 818])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 818])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 814])
+run solution time is 0.24610907634099324 mins, choose solution time is 3.711382548014323e-06 mins, model inference time is 4.390400989850362 mins.
+average output length is 1288.36, every token time is 0.20446463822097113 s.
+task:HumanEval/139, cir:3, gened 100 solutions, total nodes:148, total unique nodes:94, chosen nodes:10, left nodes:94
+chosen nodes idx is [95, 92, 154, 155, 117, 113, 108, 98, 120, 135]
+chosen nodes's parent's idx is [15, 15, 59, 59, 53, 53, 12, 15, 53, 78]
+chosen nodes's depth is [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8609247457174161, 0.8536641102596079, 0.8482965287892518, 0.8023562537085775, 0.8819601081576488, 0.9159548521734537, 0.8369546829388117, 0.836803138211686, 0.9020242561535816, 0.9306056330485719]
+
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 818])
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 823])
+total input length is torch.Size([1, 818])
+run solution time is 0.3069957454999288 mins, choose solution time is 6.04391098022461e-06 mins, model inference time is 4.3948937853177386 mins.
+average output length is 1295.13, every token time is 0.20360398586899064 s.
+task:HumanEval/139, cir:4, gened 100 solutions, total nodes:194, total unique nodes:114, chosen nodes:10, left nodes:114
+chosen nodes idx is [276, 212, 195, 192, 229, 225, 237, 232, 243, 208]
+chosen nodes's parent's idx is [120, 154, 95, 95, 155, 155, 117, 117, 113, 92]
+chosen nodes's depth is [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9122385966519821, 0.8860844746903963, 0.8609247457174161, 0.8536641102596079, 0.8840508279958895, 0.8400567972265148, 0.9129214582174824, 0.8476739799457085, 0.9159548521734537, 0.8369546829388117]
+
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 818])
+total input length is torch.Size([1, 818])
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 817])
+run solution time is 0.30722861289978026 mins, choose solution time is 6.846586863199869e-06 mins, model inference time is 4.389471844832102 mins.
+average output length is 1306.28, every token time is 0.2016170448238743 s.
+task:HumanEval/139, cir:5, gened 100 solutions, total nodes:214, total unique nodes:127, chosen nodes:10, left nodes:127
+chosen nodes idx is [300, 296, 297, 298, 302, 315, 312, 299, 345, 335]
+chosen nodes's parent's idx is [276, 276, 276, 276, 212, 195, 195, 276, 225, 229]
+chosen nodes's depth is [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9079297799265256, 0.8584682360920752, 0.9113323939131317, 0.8901265665671255, 0.8860844746903963, 0.8609247457174161, 0.8536641102596079, 0.8911642840261388, 0.8400567972265148, 0.8038399938076941]
+
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 819])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 819])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 815])
+run solution time is 0.30665924151738483 mins, choose solution time is 7.62939453125e-06 mins, model inference time is 4.391681627432505 mins.
+average output length is 1318.95, every token time is 0.19978081539666986 s.
+task:HumanEval/139, cir:6, gened 100 solutions, total nodes:227, total unique nodes:146, chosen nodes:10, left nodes:146
+chosen nodes idx is [415, 400, 395, 398, 413, 420, 407, 427, 399, 408]
+chosen nodes's parent's idx is [297, 300, 300, 300, 297, 297, 296, 298, 300, 296]
+chosen nodes's depth is [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.878959911495281, 0.9053386971627959, 0.813758417626546, 0.921864178880241, 0.9115765447245887, 0.7979593635821457, 0.9113323939131317, 0.8375993856116053, 0.9424812906877261, 0.8901265665671255]
+
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 818])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 818])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 819])
+run solution time is 0.30666759808858235 mins, choose solution time is 8.575121561686198e-06 mins, model inference time is 4.392675197124481 mins.
+average output length is 1317.6, every token time is 0.2000307483099849 s.
+task:HumanEval/139, cir:7, gened 100 solutions, total nodes:246, total unique nodes:166, chosen nodes:10, left nodes:166
+chosen nodes idx is [526, 495, 528, 493, 496, 510, 505, 531, 508, 525]
+chosen nodes's parent's idx is [398, 415, 398, 415, 415, 400, 400, 413, 400, 398]
+chosen nodes's depth is [7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8395612528444537, 0.89589736730251, 0.8921132448025244, 0.8797660714840702, 0.8488987582681542, 0.9053386971627959, 0.813758417626546, 0.8544924829562647, 0.921864178880241, 0.9021428144721367]
+
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 818])
+total input length is torch.Size([1, 818])
+run solution time is 0.30608218113581337 mins, choose solution time is 8.94467035929362e-06 mins, model inference time is 4.391852064927419 mins.
+average output length is 1314.18, every token time is 0.200513724178889 s.
+task:HumanEval/139, cir:8, gened 100 solutions, total nodes:266, total unique nodes:190, chosen nodes:10, left nodes:190
+chosen nodes idx is [600, 596, 605, 678, 603, 606, 637, 650, 645, 619]
+chosen nodes's parent's idx is [526, 526, 495, 508, 495, 495, 496, 510, 510, 528]
+chosen nodes's depth is [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9080328705545313, 0.8587589253309496, 0.89589736730251, 0.8921132448025244, 0.8797660714840702, 0.8488987582681542, 0.9132493698140555, 0.9053386971627959, 0.813758417626546, 0.9909234283010878]
+
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 818])
+run solution time is 0.3072154005368551 mins, choose solution time is 9.72747802734375e-06 mins, model inference time is 4.394614887237549 mins.
+average output length is 1309.27, every token time is 0.20139230178366482 s.
+task:HumanEval/139, cir:9, gened 100 solutions, total nodes:290, total unique nodes:201, chosen nodes:10, left nodes:201
+chosen nodes idx is [700, 695, 715, 678, 713, 716, 747, 770, 753, 765]
+chosen nodes's parent's idx is [600, 600, 605, 508, 605, 605, 606, 650, 637, 650]
+chosen nodes's depth is [9, 9, 9, 8, 9, 9, 9, 9, 9, 9]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.905366097124107, 0.8145607842589819, 0.89589736730251, 0.8921132448025244, 0.8797660714840702, 0.8488987582681542, 0.9132493698140555, 0.9053386971627959, 0.8823287426004625, 0.813758417626546]
+
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 815])
+total input length is torch.Size([1, 816])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 814])
+total input length is torch.Size([1, 817])
+total input length is torch.Size([1, 815])
+run solution time is 0.3065794308980306 mins, choose solution time is 1.0152657826741537e-05 mins, model inference time is 4.391386485099792 mins.
+average output length is 1310.82, every token time is 0.20100638790796752 s.
+task:HumanEval/139, cir:10, gened 100 solutions, total nodes:301, total unique nodes:203, chosen nodes:10, left nodes:203
+chosen nodes idx is [800, 795, 815, 678, 813, 816, 847, 870, 853, 871]
+chosen nodes's parent's idx is [700, 700, 715, 508, 715, 715, 716, 770, 747, 753]
+chosen nodes's depth is [10, 10, 10, 8, 10, 10, 10, 10, 10, 10]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.905366097124107, 0.8145607842589819, 0.89589736730251, 0.8921132448025244, 0.8797660714840702, 0.8488987582681542, 0.9132493698140555, 0.9053386971627959, 0.8823287426004625, 0.8694429038214123]
+
+Use prompt_tests.
+get solution for task : HumanEval/140 with 4 tests.
+Model inference time is 0.3007219433784485 minutes
+In generate step, the input tokens shape is 733, the output tokens shape is 1245
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    text = text.replace(" ","_")
+    text = text.replace("  ","-")
+    return text
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def fix_spaces(text):
+
+fix input length is torch.Size([1, 774])
+task:HumanEval/140, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.75]
+probs are [-1.0]
+
+total input length is torch.Size([1, 995])
+run solution time is 0.0032745003700256348 mins, choose solution time is 1.44044558207194e-05 mins, model inference time is 0.48052918116251625 mins.
+average output length is 1507.0, every token time is 0.019131886856241107 s.
+task:HumanEval/140, cir:1, gened 10 solutions, total nodes:11, total unique nodes:9, chosen nodes:9, left nodes:9
+chosen nodes idx is [10, 8, 2, 5, 1, 3, 6, 4, 7]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.0, 0.0]
+probs are [0.8686292484931601, 0.9212394662523539, 0.8929394401951447, 0.9128780218620836, 0.8879688810106002, 0.8988043866355379, 0.8872588367098937, 0.84662708772899, 0.9251422166873225]
+
+total input length is torch.Size([1, 984])
+total input length is torch.Size([1, 995])
+total input length is torch.Size([1, 996])
+total input length is torch.Size([1, 1006])
+total input length is torch.Size([1, 1004])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1031])
+total input length is torch.Size([1, 995])
+total input length is torch.Size([1, 1004])
+run solution time is 0.03080803950627645 mins, choose solution time is 1.3470649719238282e-06 mins, model inference time is 4.332803340752919 mins.
+average output length is 1474.1555555555556, every token time is 0.17635059090370253 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    import re
+    return re.sub(r"_{2,}","-",text.replace(" ","_"))
+
+passT_rate:1.0
+prob:0.88489789780608
+
+************************
+++++++show parents of the node++++++
+solution:
+    text = re.sub(r"\s{2,}","-",text.replace(" ","_"))
+    return text
+
+passT_rate:0.0
+prob:0.84662708772899
+
+************************
+++++++show parents of the node++++++
+solution:
+    text = text.replace(" ","_")
+    text = text.replace("  ","-")
+    return text
+
+passT_rate:0.75
+prob:-1.0
+
+************************
+task:HumanEval/140, cir:2, gened 90 solutions, total nodes:99, total unique nodes:40, chosen nodes:10, left nodes:40
+chosen nodes idx is [86, 18, 20, 16, 85, 11, 19, 83, 28, 22]
+chosen nodes's parent's idx is [4, 10, 10, 10, 4, 10, 10, 4, 8, 8]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [1.0, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75]
+probs are [0.88489789780608, 0.9260514648412895, 0.8857712983775126, 0.9240581395157637, 0.8448635555558062, 0.9192118936926432, 0.8906961877066794, 0.8785813384244169, 0.9212394662523539, 0.8929394401951447]
+
+Use prompt_tests.
+get solution for task : HumanEval/141 with 2 tests.
+Model inference time is 0.3005459427833557 minutes
+In generate step, the input tokens shape is 826, the output tokens shape is 1338
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if file_name.count(".") > 1:
+        return "No"
+    elif file_name.count(".") == 1:
+        if file_name.count("0") > 3 or file_name.count("1") > 3 or file_name.count("2") > 3 or file_name.count("3") > 3 or file_name.count("4") > 3 or file_name.count("5") > 3 or file_name.count("6") > 3 or file_name.count("7") > 3 or file_name.count("8") > 3 or file_name.count("9") > 3:
+            return "No"
+        elif file_name.count(".") == 1:
+            if file_name.split(".")[0].isalpha() == False:
+                return "No"
+            elif file_name.split(".")[1] != "txt" and file_name.split(".")[1] != "exe" and file_name.split(".")[1] != "dll":
+                return "No"
+            else:
+                return "Yes"
+    else:
+        return "No"
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def file_name_check(file_name):
+
+fix input length is torch.Size([1, 871])
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    if file_name.count(".") > 1:
+        return "No"
+    elif file_name.count(".") == 1:
+        if file_name.count("0") > 3 or file_name.count("1") > 3 or file_name.count("2") > 3 or file_name.count("3") > 3 or file_name.count("4") > 3 or file_name.count("5") > 3 or file_name.count("6") > 3 or file_name.count("7") > 3 or file_name.count("8") > 3 or file_name.count("9") > 3:
+            return "No"
+        elif file_name.count(".") == 1:
+            if file_name.split(".")[0].isalpha() == False:
+                return "No"
+            elif file_name.split(".")[1] != "txt" and file_name.split(".")[1] != "exe" and file_name.split(".")[1] != "dll":
+                return "No"
+            else:
+                return "Yes"
+    else:
+        return "No"
+
+passT_rate:1.0
+prob:-1.0
+
+************************
+task:HumanEval/141, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [1.0]
+probs are [-1.0]
+
+Use prompt_tests.
+get solution for task : HumanEval/143 with 2 tests.
+Model inference time is 0.2999949097633362 minutes
+In generate step, the input tokens shape is 763, the output tokens shape is 1275
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    words = sentence.split()
+    result = []
+    for word in words:
+        if is_prime(len(word)):
+            result.append(word)
+    return " ".join(result)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def words_in_sentence(sentence):
+
+fix input length is torch.Size([1, 808])
+task:HumanEval/143, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.0]
+probs are [-1.0]
+
+total input length is torch.Size([1, 985])
+run solution time is 0.003180058797200521 mins, choose solution time is 6.119410196940105e-07 mins, model inference time is 0.4784023523330688 mins.
+average output length is 1459.7, every token time is 0.0196644127462844 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    words = sentence.split()
+    result = []
+    for word in words:
+        if is_prime(len(word)):
+            result.append(word)
+    return " ".join(result)
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, num):
+        if (num % i) == 0:
+            return False
+    return True
+
+passT_rate:1.0
+prob:0.9658047068172586
+
+************************
+++++++show parents of the node++++++
+solution:
+    words = sentence.split()
+    result = []
+    for word in words:
+        if is_prime(len(word)):
+            result.append(word)
+    return " ".join(result)
+
+passT_rate:0.0
+prob:-1.0
+
+************************
+task:HumanEval/143, cir:1, gened 10 solutions, total nodes:11, total unique nodes:8, chosen nodes:8, left nodes:8
+chosen nodes idx is [4, 1, 3, 2, 5, 7, 10, 6]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [1.0, 0.0, 0.0, 0.0, -1.0, -1.0, -1.0, -1.0]
+probs are [0.9658047068172586, 0.8849213243196725, 0.9146644721422225, 0.9053393324361557, 0.8998609149078212, 0.9102708752367086, 0.9498739839351205, 0.8857149914481316]
+
+Use prompt_tests.
+get solution for task : HumanEval/144 with 3 tests.
+Model inference time is 0.3004157463709513 minutes
+In generate step, the input tokens shape is 767, the output tokens shape is 1279
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    x_num, x_den = x.split("/")
+    n_num, n_den = n.split("/")
+    x_num = int(x_num)
+    x_den = int(x_den)
+    n_num = int(n_num)
+    n_den = int(n_den)
+    if (x_num * n_den) % n_num == 0:
+        return True
+    else:
+        return False
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def simplify(x, n):
+
+fix input length is torch.Size([1, 808])
+task:HumanEval/144, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.6666666666666666]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1080])
+run solution time is 0.0031915783882141115 mins, choose solution time is 1.136461893717448e-06 mins, model inference time is 0.49923253854115807 mins.
+average output length is 1480.3, every token time is 0.02023505607279766 s.
+task:HumanEval/144, cir:1, gened 10 solutions, total nodes:11, total unique nodes:3, chosen nodes:3, left nodes:3
+chosen nodes idx is [5, 1, 9]
+chosen nodes's parent's idx is [0, 0, 0]
+chosen nodes's depth is [1, 1, 1]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9031821213271709, 0.9045267091117669, 0.8979007264243521]
+
+total input length is torch.Size([1, 1022])
+total input length is torch.Size([1, 1080])
+total input length is torch.Size([1, 1081])
+run solution time is 0.03086475928624471 mins, choose solution time is 7.987022399902344e-07 mins, model inference time is 1.485921573638916 mins.
+average output length is 1487.6333333333334, every token time is 0.05993097051605824 s.
+task:HumanEval/144, cir:2, gened 30 solutions, total nodes:33, total unique nodes:11, chosen nodes:10, left nodes:11
+chosen nodes idx is [16, 15, 11, 37, 21, 29, 17, 32, 31, 33]
+chosen nodes's parent's idx is [5, 5, 5, 9, 1, 1, 5, 9, 9, 9]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.888152974461333, 0.9289733034106897, 0.9117405028555302, 0.9518269333508428, 0.9045267091117669, 0.8979007264243521, 0.9096234799833801, 0.9232304784076222, 0.8871485851893373, 0.9057532812234493]
+
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1017])
+total input length is torch.Size([1, 1022])
+total input length is torch.Size([1, 1080])
+total input length is torch.Size([1, 1080])
+total input length is torch.Size([1, 1081])
+total input length is torch.Size([1, 1089])
+total input length is torch.Size([1, 1091])
+total input length is torch.Size([1, 1090])
+total input length is torch.Size([1, 1101])
+run solution time is 0.09250199794769287 mins, choose solution time is 1.5815099080403647e-06 mins, model inference time is 4.96964248418808 mins.
+average output length is 1509.94, every token time is 0.1974770855012757 s.
+task:HumanEval/144, cir:3, gened 100 solutions, total nodes:111, total unique nodes:38, chosen nodes:10, left nodes:38
+chosen nodes idx is [56, 41, 52, 42, 59, 61, 105, 74, 125, 102]
+chosen nodes's parent's idx is [15, 16, 15, 16, 15, 11, 17, 37, 31, 17]
+chosen nodes's depth is [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.8801550403194778, 0.850201535937171, 0.8847420749168293, 0.9254137933697232, 0.8951554654135268, 0.9117405028555302, 0.9170009150291636, 0.9482311182015556, 0.8519986576269718, 0.8531568111462347]
+
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1017])
+total input length is torch.Size([1, 1018])
+total input length is torch.Size([1, 1015])
+total input length is torch.Size([1, 1022])
+total input length is torch.Size([1, 1045])
+total input length is torch.Size([1, 1067])
+total input length is torch.Size([1, 1053])
+total input length is torch.Size([1, 1066])
+run solution time is 0.3076453010241191 mins, choose solution time is 5.412101745605469e-06 mins, model inference time is 4.8885427713394165 mins.
+average output length is 1482.82, every token time is 0.19780726498465814 s.
+task:HumanEval/144, cir:4, gened 100 solutions, total nodes:138, total unique nodes:67, chosen nodes:10, left nodes:67
+chosen nodes idx is [148, 150, 190, 143, 141, 149, 210, 142, 152, 214]
+chosen nodes's parent's idx is [56, 56, 59, 56, 56, 56, 105, 56, 41, 74]
+chosen nodes's depth is [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9349328423719167, 0.914006386123729, 0.90976520363799, 0.8754869033562657, 0.8929587122792013, 0.8835691296782001, 0.942013466227821, 0.8730343957501386, 0.9254137933697232, 0.9034403086521655]
+
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1006])
+total input length is torch.Size([1, 1010])
+total input length is torch.Size([1, 1017])
+total input length is torch.Size([1, 1018])
+total input length is torch.Size([1, 1028])
+run solution time is 0.3091277758280436 mins, choose solution time is 5.058447519938151e-06 mins, model inference time is 4.834114027023316 mins.
+average output length is 1452.85, every token time is 0.19963991068864873 s.
+task:HumanEval/144, cir:5, gened 100 solutions, total nodes:167, total unique nodes:89, chosen nodes:10, left nodes:89
+chosen nodes idx is [241, 243, 253, 251, 259, 261, 273, 340, 271, 279]
+chosen nodes's parent's idx is [148, 148, 150, 150, 150, 190, 143, 214, 143, 143]
+chosen nodes's depth is [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.908927903571323, 0.8693116220717146, 0.9009316378978794, 0.8900221131950955, 0.8795145616679031, 0.8906009626537046, 0.8754869033562657, 0.9095002397164834, 0.8929587122792013, 0.8835691296782001]
+
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1005])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1010])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1006])
+run solution time is 0.3084922154744466 mins, choose solution time is 6.6121419270833336e-06 mins, model inference time is 4.821948023637136 mins.
+average output length is 1445.46, every token time is 0.2001555800617715 s.
+task:HumanEval/144, cir:6, gened 100 solutions, total nodes:189, total unique nodes:104, chosen nodes:10, left nodes:104
+chosen nodes idx is [341, 353, 363, 361, 369, 375, 391, 403, 401, 411]
+chosen nodes's parent's idx is [241, 243, 253, 253, 253, 251, 261, 273, 273, 340]
+chosen nodes's depth is [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9163248341289904, 0.8693116220717146, 0.9009316378978794, 0.8900221131950955, 0.8795145616679031, 0.8565768008758032, 0.8906009626537046, 0.8754869033562657, 0.8929587122792013, 0.8927838834834781]
+
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1005])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1010])
+run solution time is 0.30842302640279134 mins, choose solution time is 9.377797444661459e-06 mins, model inference time is 4.823916280269623 mins.
+average output length is 1453.4, every token time is 0.19914338492586012 s.
+task:HumanEval/144, cir:7, gened 100 solutions, total nodes:204, total unique nodes:107, chosen nodes:10, left nodes:107
+chosen nodes idx is [441, 453, 463, 461, 469, 475, 501, 513, 511, 531]
+chosen nodes's parent's idx is [341, 353, 363, 363, 363, 361, 391, 403, 403, 411]
+chosen nodes's depth is [7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9163248341289904, 0.8693116220717146, 0.9009316378978794, 0.8900221131950955, 0.8795145616679031, 0.8565768008758032, 0.8906009626537046, 0.8754869033562657, 0.8929587122792013, 0.8927838834834781]
+
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1005])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1010])
+run solution time is 0.30866065820058186 mins, choose solution time is 7.343292236328125e-06 mins, model inference time is 4.824933425585429 mins.
+average output length is 1453.4, every token time is 0.19918536555903213 s.
+task:HumanEval/144, cir:8, gened 100 solutions, total nodes:207, total unique nodes:107, chosen nodes:10, left nodes:107
+chosen nodes idx is [541, 553, 563, 561, 569, 575, 601, 613, 611, 631]
+chosen nodes's parent's idx is [441, 453, 463, 463, 463, 461, 501, 513, 513, 531]
+chosen nodes's depth is [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9163248341289904, 0.8693116220717146, 0.9009316378978794, 0.8900221131950955, 0.8795145616679031, 0.8565768008758032, 0.8906009626537046, 0.8754869033562657, 0.8929587122792013, 0.8927838834834781]
+
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1005])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1010])
+run solution time is 0.3089033246040344 mins, choose solution time is 7.180372873942057e-06 mins, model inference time is 4.823758351802826 mins.
+average output length is 1453.4, every token time is 0.19913685457962685 s.
+task:HumanEval/144, cir:9, gened 100 solutions, total nodes:207, total unique nodes:107, chosen nodes:10, left nodes:107
+chosen nodes idx is [641, 653, 663, 661, 669, 675, 701, 713, 711, 731]
+chosen nodes's parent's idx is [541, 553, 563, 563, 563, 561, 601, 613, 613, 631]
+chosen nodes's depth is [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9163248341289904, 0.8693116220717146, 0.9009316378978794, 0.8900221131950955, 0.8795145616679031, 0.8565768008758032, 0.8906009626537046, 0.8754869033562657, 0.8929587122792013, 0.8927838834834781]
+
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 997])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1005])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1007])
+total input length is torch.Size([1, 1008])
+total input length is torch.Size([1, 1009])
+total input length is torch.Size([1, 1010])
+run solution time is 0.3088107705116272 mins, choose solution time is 7.212162017822266e-06 mins, model inference time is 4.823600590229034 mins.
+average output length is 1453.4, every token time is 0.1991303480194772 s.
+task:HumanEval/144, cir:10, gened 100 solutions, total nodes:207, total unique nodes:107, chosen nodes:10, left nodes:107
+chosen nodes idx is [741, 753, 763, 761, 769, 775, 801, 813, 811, 831]
+chosen nodes's parent's idx is [641, 653, 663, 663, 663, 661, 701, 713, 713, 731]
+chosen nodes's depth is [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9163248341289904, 0.8693116220717146, 0.9009316378978794, 0.8900221131950955, 0.8795145616679031, 0.8565768008758032, 0.8906009626537046, 0.8754869033562657, 0.8929587122792013, 0.8927838834834781]
+
+Use prompt_tests.
+get solution for task : HumanEval/145 with 2 tests.
+Model inference time is 0.3009159445762634 minutes
+In generate step, the input tokens shape is 743, the output tokens shape is 1255
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if len(nums) == 0:
+        return []
+    else:
+        nums_sum = []
+        for i in range(len(nums)):
+            nums_sum.append(sum(int(i) for i in str(nums[i])))
+        nums_sum_index = list(zip(nums_sum, nums))
+        nums_sum_index.sort()
+        return [i[1] for i in nums_sum_index]
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def order_by_points(nums):
+
+fix input length is torch.Size([1, 787])
+task:HumanEval/145, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.5]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1052])
+run solution time is 0.0032511115074157714 mins, choose solution time is 1.1750062306722005e-05 mins, model inference time is 0.49385345379511514 mins.
+average output length is 1486.8, every token time is 0.019929519352619128 s.
+task:HumanEval/145, cir:1, gened 10 solutions, total nodes:11, total unique nodes:9, chosen nodes:9, left nodes:9
+chosen nodes idx is [6, 10, 7, 1, 9, 4, 3, 2, 5]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8936388000815492, 0.9399466218420643, 0.8989952735901837, 0.9339647575399468, 0.9235366229035876, 0.8823262628837973, 0.9295427983186616, 0.9183356559160553, 0.9460936935839154]
+
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 1049])
+total input length is torch.Size([1, 1052])
+total input length is torch.Size([1, 1052])
+total input length is torch.Size([1, 1066])
+total input length is torch.Size([1, 1070])
+total input length is torch.Size([1, 1067])
+total input length is torch.Size([1, 1077])
+total input length is torch.Size([1, 1081])
+run solution time is 0.03098444143931071 mins, choose solution time is 1.2914339701334636e-06 mins, model inference time is 4.448881125450134 mins.
+average output length is 1467.4777777777779, every token time is 0.18189908767255045 s.
+task:HumanEval/145, cir:2, gened 90 solutions, total nodes:99, total unique nodes:62, chosen nodes:10, left nodes:62
+chosen nodes idx is [26, 66, 16, 36, 17, 19, 13, 20, 18, 81]
+chosen nodes's parent's idx is [10, 4, 6, 7, 6, 6, 6, 6, 6, 2]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8799481742962036, 0.8906993647284784, 0.8898338728088281, 0.8918692183542356, 0.9138769353566808, 0.9158415603877923, 0.8931189362838565, 0.887909560843241, 0.8925201416047425, 0.9072916849828888]
+
+total input length is torch.Size([1, 969])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 966])
+total input length is torch.Size([1, 965])
+total input length is torch.Size([1, 966])
+total input length is torch.Size([1, 1000])
+total input length is torch.Size([1, 982])
+run solution time is 0.2784470876057943 mins, choose solution time is 4.164377848307291e-06 mins, model inference time is 4.737615478038788 mins.
+average output length is 1343.01, every token time is 0.21165662413249647 s.
+task:HumanEval/145, cir:3, gened 100 solutions, total nodes:162, total unique nodes:111, chosen nodes:10, left nodes:111
+chosen nodes idx is [101, 105, 113, 126, 136, 127, 139, 129, 123, 157]
+chosen nodes's parent's idx is [26, 26, 66, 16, 36, 16, 36, 16, 16, 19]
+chosen nodes's depth is [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8388362625806117, 0.8634538801319813, 0.8982930859821625, 0.8898338728088281, 0.8855079081405045, 0.9138769353566808, 0.8441132732540837, 0.9158415603877923, 0.8931189362838565, 0.8869330815907629]
+
+total input length is torch.Size([1, 969])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 966])
+total input length is torch.Size([1, 965])
+total input length is torch.Size([1, 965])
+run solution time is 0.31533222198486327 mins, choose solution time is 7.140636444091797e-06 mins, model inference time is 4.728707957267761 mins.
+average output length is 1335.98, every token time is 0.2123703042747614 s.
+task:HumanEval/145, cir:4, gened 100 solutions, total nodes:211, total unique nodes:130, chosen nodes:10, left nodes:130
+chosen nodes idx is [201, 205, 223, 265, 236, 246, 237, 216, 220, 249]
+chosen nodes's parent's idx is [101, 101, 113, 139, 126, 136, 126, 105, 105, 136]
+chosen nodes's depth is [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8388362625806117, 0.8634538801319813, 0.8982930859821625, 0.9249550619738682, 0.8898338728088281, 0.8855079081405045, 0.9138769353566808, 0.8887705885090998, 0.8782044342681372, 0.8441132732540837]
+
+total input length is torch.Size([1, 969])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 979])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 978])
+total input length is torch.Size([1, 962])
+run solution time is 0.3155590097109477 mins, choose solution time is 8.559226989746093e-06 mins, model inference time is 4.732730424404144 mins.
+average output length is 1373.69, every token time is 0.20671609106361602 s.
+task:HumanEval/145, cir:5, gened 100 solutions, total nodes:230, total unique nodes:147, chosen nodes:10, left nodes:147
+chosen nodes idx is [301, 387, 305, 323, 333, 346, 334, 356, 347, 316]
+chosen nodes's parent's idx is [201, 220, 201, 223, 265, 236, 265, 246, 236, 205]
+chosen nodes's depth is [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8388362625806117, 0.9107427259215682, 0.8634538801319813, 0.8982930859821625, 0.9008845195491494, 0.8898338728088281, 0.9076097293990922, 0.8855079081405045, 0.9138769353566808, 0.8887705885090998]
+
+total input length is torch.Size([1, 969])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 979])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 962])
+run solution time is 0.3195515076319377 mins, choose solution time is 9.139378865559896e-06 mins, model inference time is 4.732492164770762 mins.
+average output length is 1372.42, every token time is 0.20689696485685874 s.
+task:HumanEval/145, cir:6, gened 100 solutions, total nodes:247, total unique nodes:156, chosen nodes:10, left nodes:156
+chosen nodes idx is [401, 417, 405, 433, 443, 456, 444, 476, 469, 457]
+chosen nodes's parent's idx is [301, 387, 301, 323, 333, 346, 333, 356, 334, 346]
+chosen nodes's depth is [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8388362625806117, 0.9134105518452296, 0.8634538801319813, 0.8982930859821625, 0.9008845195491494, 0.8898338728088281, 0.9076097293990922, 0.8855079081405045, 0.8773799699857489, 0.9138769353566808]
+
+total input length is torch.Size([1, 969])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 979])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 963])
+run solution time is 0.3155778090159098 mins, choose solution time is 8.6824099222819e-06 mins, model inference time is 4.734227887789408 mins.
+average output length is 1379.69, every token time is 0.20588224921534684 s.
+task:HumanEval/145, cir:7, gened 100 solutions, total nodes:256, total unique nodes:163, chosen nodes:10, left nodes:163
+chosen nodes idx is [501, 517, 505, 533, 543, 556, 544, 576, 569, 557]
+chosen nodes's parent's idx is [401, 417, 401, 433, 443, 456, 443, 476, 444, 456]
+chosen nodes's depth is [7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8388362625806117, 0.9134105518452296, 0.8634538801319813, 0.8982930859821625, 0.9008845195491494, 0.8898338728088281, 0.9076097293990922, 0.8855079081405045, 0.8773799699857489, 0.9138769353566808]
+
+total input length is torch.Size([1, 969])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 979])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 963])
+run solution time is 0.3156966725985209 mins, choose solution time is 1.0037422180175782e-05 mins, model inference time is 4.734852504730225 mins.
+average output length is 1379.69, every token time is 0.20590940894663343 s.
+task:HumanEval/145, cir:8, gened 100 solutions, total nodes:263, total unique nodes:163, chosen nodes:10, left nodes:163
+chosen nodes idx is [601, 617, 605, 633, 643, 656, 644, 676, 669, 657]
+chosen nodes's parent's idx is [501, 517, 501, 533, 543, 556, 543, 576, 544, 556]
+chosen nodes's depth is [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8388362625806117, 0.9134105518452296, 0.8634538801319813, 0.8982930859821625, 0.9008845195491494, 0.8898338728088281, 0.9076097293990922, 0.8855079081405045, 0.8773799699857489, 0.9138769353566808]
+
+total input length is torch.Size([1, 969])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 979])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 963])
+run solution time is 0.3159492413202922 mins, choose solution time is 9.564558664957682e-06 mins, model inference time is 4.734813185532888 mins.
+average output length is 1379.69, every token time is 0.20590770646285714 s.
+task:HumanEval/145, cir:9, gened 100 solutions, total nodes:263, total unique nodes:163, chosen nodes:10, left nodes:163
+chosen nodes idx is [701, 717, 705, 733, 743, 756, 744, 776, 769, 757]
+chosen nodes's parent's idx is [601, 617, 601, 633, 643, 656, 643, 676, 644, 656]
+chosen nodes's depth is [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8388362625806117, 0.9134105518452296, 0.8634538801319813, 0.8982930859821625, 0.9008845195491494, 0.8898338728088281, 0.9076097293990922, 0.8855079081405045, 0.8773799699857489, 0.9138769353566808]
+
+total input length is torch.Size([1, 969])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 974])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 979])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 962])
+total input length is torch.Size([1, 963])
+total input length is torch.Size([1, 963])
+run solution time is 0.3156073252360026 mins, choose solution time is 1.0804335276285808e-05 mins, model inference time is 4.735136091709137 mins.
+average output length is 1379.69, every token time is 0.2059217649144544 s.
+task:HumanEval/145, cir:10, gened 100 solutions, total nodes:263, total unique nodes:163, chosen nodes:10, left nodes:163
+chosen nodes idx is [801, 817, 805, 833, 843, 856, 844, 876, 869, 857]
+chosen nodes's parent's idx is [701, 717, 701, 733, 743, 756, 743, 776, 744, 756]
+chosen nodes's depth is [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+chosen nodes passT_rates [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.8388362625806117, 0.9134105518452296, 0.8634538801319813, 0.8982930859821625, 0.9008845195491494, 0.8898338728088281, 0.9076097293990922, 0.8855079081405045, 0.8773799699857489, 0.9138769353566808]
+
+Use prompt_tests.
+get solution for task : HumanEval/146 with 2 tests.
+Model inference time is 0.2999107241630554 minutes
+In generate step, the input tokens shape is 740, the output tokens shape is 1252
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    count = 0
+    for i in nums:
+        if i > 10:
+            if i % 10 in [1, 3, 5, 7, 9]:
+                if i // 10 in [1, 3, 5, 7, 9]:
+                    count += 1
+    return count
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def specialFilter(nums):
+
+fix input length is torch.Size([1, 781])
+task:HumanEval/146, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.5]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1025])
+run solution time is 0.003290875752766927 mins, choose solution time is 1.3093153635660807e-05 mins, model inference time is 0.48820159435272215 mins.
+average output length is 1421.6, every token time is 0.020605020464036866 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    count = 0
+    for i in nums:
+        if i > 10:
+            if i % 10 in [1, 3, 5, 7, 9]:
+                if int(str(i)[0]) in [1, 3, 5, 7, 9]:
+                    count += 1
+    return count
+
+passT_rate:1.0
+prob:0.887388880935319
+
+************************
+++++++show parents of the node++++++
+solution:
+    count = 0
+    for i in nums:
+        if i > 10:
+            if i % 10 in [1, 3, 5, 7, 9]:
+                if i // 10 in [1, 3, 5, 7, 9]:
+                    count += 1
+    return count
+
+passT_rate:0.5
+prob:-1.0
+
+************************
+task:HumanEval/146, cir:1, gened 10 solutions, total nodes:11, total unique nodes:6, chosen nodes:6, left nodes:6
+chosen nodes idx is [8, 3, 7, 4, 1, 5]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [1.0, 0.5, 0.5, 0.5, 0.5, 0.5]
+probs are [0.887388880935319, 0.8883569399250756, 0.8817123782380119, 0.8987960199410335, 0.8726346834104051, 0.922252807546737]
+
+Use prompt_tests.
+get solution for task : HumanEval/148 with 3 tests.
+Model inference time is 0.300460680325826 minutes
+In generate step, the input tokens shape is 883, the output tokens shape is 1395
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    planets = ("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+    if planet1 in planets and planet2 in planets:
+        return tuple(planets[planets.index(planet1):planets.index(planet2)])
+    else:
+        return ()
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def bf(planet1, planet2):
+
+fix input length is torch.Size([1, 928])
+task:HumanEval/148, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.0]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1263])
+run solution time is 0.0032377243041992188 mins, choose solution time is 1.136461893717448e-06 mins, model inference time is 0.5442059278488159 mins.
+average output length is 1701.4, every token time is 0.019191464708542813 s.
+task:HumanEval/148, cir:1, gened 10 solutions, total nodes:11, total unique nodes:5, chosen nodes:5, left nodes:5
+chosen nodes idx is [6, 1, 8, 3, 7]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9412170429602514, 0.9470321615359085, 0.9372604930666125, 0.9257380207687655, 0.9261085547425064]
+
+total input length is torch.Size([1, 1179])
+total input length is torch.Size([1, 1263])
+total input length is torch.Size([1, 1274])
+total input length is torch.Size([1, 1276])
+total input length is torch.Size([1, 1264])
+run solution time is 0.03099612792332967 mins, choose solution time is 8.781750996907552e-07 mins, model inference time is 2.699327762921651 mins.
+average output length is 1696.58, every token time is 0.09546244072348355 s.
+task:HumanEval/148, cir:2, gened 50 solutions, total nodes:55, total unique nodes:20, chosen nodes:10, left nodes:20
+chosen nodes idx is [16, 11, 36, 46, 56, 19, 38, 21, 28, 23]
+chosen nodes's parent's idx is [6, 6, 8, 3, 7, 6, 8, 1, 1, 1]
+chosen nodes's depth is [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9054986991303231, 0.9101131050299363, 0.9212649793420628, 0.9263856978185961, 0.9416497098495382, 0.8976436552418037, 0.9247484380505239, 0.9470321615359085, 0.9372604930666125, 0.9257380207687655]
+
+total input length is torch.Size([1, 1155])
+total input length is torch.Size([1, 1179])
+total input length is torch.Size([1, 1180])
+total input length is torch.Size([1, 1182])
+total input length is torch.Size([1, 1180])
+total input length is torch.Size([1, 1181])
+total input length is torch.Size([1, 1270])
+total input length is torch.Size([1, 1263])
+total input length is torch.Size([1, 1274])
+total input length is torch.Size([1, 1276])
+run solution time is 0.15443600018819173 mins, choose solution time is 3.2703081766764323e-06 mins, model inference time is 5.315203988552094 mins.
+average output length is 1652.78, every token time is 0.19295504920634593 s.
+task:HumanEval/148, cir:3, gened 100 solutions, total nodes:120, total unique nodes:45, chosen nodes:10, left nodes:45
+chosen nodes idx is [76, 81, 91, 105, 71, 87, 93, 101, 90, 79]
+chosen nodes's parent's idx is [11, 36, 46, 56, 11, 36, 46, 56, 36, 11]
+chosen nodes's depth is [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.9054986991303231, 0.9297997504791773, 0.9305134521681705, 0.8885583561673744, 0.9101131050299363, 0.9162596851556333, 0.925376075206573, 0.9121860316904247, 0.9274461851201027, 0.8976436552418037]
+
+total input length is torch.Size([1, 1155])
+total input length is torch.Size([1, 1176])
+total input length is torch.Size([1, 1178])
+total input length is torch.Size([1, 1178])
+total input length is torch.Size([1, 1179])
+total input length is torch.Size([1, 1180])
+total input length is torch.Size([1, 1182])
+total input length is torch.Size([1, 1180])
+total input length is torch.Size([1, 1181])
+total input length is torch.Size([1, 1181])
+run solution time is 0.30964526335398357 mins, choose solution time is 3.933906555175781e-06 mins, model inference time is 5.229537026087443 mins.
+average output length is 1613.12, every token time is 0.1945126363503226 s.
+task:HumanEval/148, cir:4, gened 100 solutions, total nodes:145, total unique nodes:63, chosen nodes:10, left nodes:63
+chosen nodes idx is [176, 175, 173, 171, 181, 178, 189, 195, 194, 201]
+chosen nodes's parent's idx is [81, 81, 81, 81, 91, 81, 91, 105, 105, 71]
+chosen nodes's depth is [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+chosen nodes passT_rates [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8989831700651236, 0.9164665534950589, 0.9173874857652438, 0.9431174220758854, 0.9354011231177697, 0.9080751296853856, 0.8883473077656243, 0.9570943795171876, 0.9402056090718426, 0.9101131050299363]
+
+total input length is torch.Size([1, 1155])
+total input length is torch.Size([1, 1172])
+total input length is torch.Size([1, 1172])
+total input length is torch.Size([1, 1176])
+total input length is torch.Size([1, 1178])
+total input length is torch.Size([1, 1178])
+total input length is torch.Size([1, 1178])
+total input length is torch.Size([1, 1178])
+total input length is torch.Size([1, 1179])
+total input length is torch.Size([1, 1179])
+run solution time is 0.3100619832674662 mins, choose solution time is 5.424022674560547e-06 mins, model inference time is 5.22293217976888 mins.
+average output length is 1615.05, every token time is 0.1940348180749203 s.
+task:HumanEval/148, cir:5, gened 100 solutions, total nodes:163, total unique nodes:85, chosen nodes:10, left nodes:85
+chosen nodes idx is [271, 280, 278, 286, 295, 283, 281, 301, 298, 309]
+chosen nodes's parent's idx is [175, 175, 175, 173, 171, 173, 173, 181, 171, 181]
+chosen nodes's depth is [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+probs are [0.8971843634951229, 0.9238726626622623, 0.936210242507595, 0.9206599362208361, 0.9164665534950589, 0.9174194606643207, 0.8834737317722566, 0.9354011231177697, 0.9080751296853856, 0.8883473077656243]
+
+total input length is torch.Size([1, 1295])
+total input length is torch.Size([1, 1331])
+total input length is torch.Size([1, 1335])
+total input length is torch.Size([1, 1155])
+total input length is torch.Size([1, 1172])
+total input length is torch.Size([1, 1172])
+total input length is torch.Size([1, 1176])
+total input length is torch.Size([1, 1178])
+total input length is torch.Size([1, 1178])
+total input length is torch.Size([1, 1178])
+run solution time is 0.3108018636703491 mins, choose solution time is 5.948543548583984e-06 mins, model inference time is 5.3242043097813925 mins.
+average output length is 1644.29, every token time is 0.1942797567396797 s.
+task:HumanEval/148, cir:6, gened 100 solutions, total nodes:185, total unique nodes:104, chosen nodes:10, left nodes:104
+chosen nodes idx is [361, 363, 370, 365, 362, 369, 364, 371, 378, 379]
+chosen nodes's parent's idx is [271, 271, 271, 271, 271, 271, 271, 280, 280, 280]
+chosen nodes's depth is [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9660319277252032, 0.9254607020603459, 0.9074791625283734, 0.6784854119758398, 0.9191123528318056, 0.9116882901205625, 0.9174208444989056, 0.9374084407826108, 0.9580873361196008, 0.944654468491307]
+
+total input length is torch.Size([1, 1295])
+total input length is torch.Size([1, 1301])
+total input length is torch.Size([1, 1303])
+total input length is torch.Size([1, 1301])
+total input length is torch.Size([1, 1314])
+total input length is torch.Size([1, 1316])
+total input length is torch.Size([1, 1315])
+total input length is torch.Size([1, 1324])
+total input length is torch.Size([1, 1329])
+total input length is torch.Size([1, 1331])
+run solution time is 0.3110297838846842 mins, choose solution time is 7.895628611246745e-06 mins, model inference time is 5.552112809816996 mins.
+average output length is 1734.31, every token time is 0.1920802935082128 s.
+task:HumanEval/148, cir:7, gened 100 solutions, total nodes:204, total unique nodes:161, chosen nodes:10, left nodes:161
+chosen nodes idx is [543, 461, 463, 482, 470, 490, 465, 498, 494, 491]
+chosen nodes's parent's idx is [378, 361, 361, 370, 361, 370, 361, 365, 365, 365]
+chosen nodes's depth is [7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9246057778533511, 0.9660319277252032, 0.9254607020603459, 0.9324655802775476, 0.9074791625283734, 0.9250779272611763, 0.6784854119758398, 0.9498057727479389, 0.9281406969558654, 0.9500276085519057]
+
+total input length is torch.Size([1, 1253])
+total input length is torch.Size([1, 1295])
+total input length is torch.Size([1, 1301])
+total input length is torch.Size([1, 1295])
+total input length is torch.Size([1, 1303])
+total input length is torch.Size([1, 1309])
+total input length is torch.Size([1, 1301])
+total input length is torch.Size([1, 1306])
+total input length is torch.Size([1, 1302])
+total input length is torch.Size([1, 1307])
+run solution time is 0.31133601268132527 mins, choose solution time is 9.198983510335287e-06 mins, model inference time is 5.51828408241272 mins.
+average output length is 1685.28, every token time is 0.19646411897630692 s.
+task:HumanEval/148, cir:8, gened 100 solutions, total nodes:261, total unique nodes:206, chosen nodes:10, left nodes:206
+chosen nodes idx is [563, 571, 573, 591, 580, 610, 575, 628, 624, 621]
+chosen nodes's parent's idx is [543, 461, 461, 482, 461, 470, 461, 465, 465, 465]
+chosen nodes's depth is [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9257709674094597, 0.9660319277252032, 0.9254607020603459, 0.9652952236536165, 0.9074791625283734, 0.9250779272611763, 0.6784854119758398, 0.9498057727479389, 0.9281406969558654, 0.9500276085519057]
+
+total input length is torch.Size([1, 1253])
+total input length is torch.Size([1, 1295])
+total input length is torch.Size([1, 1301])
+total input length is torch.Size([1, 1295])
+total input length is torch.Size([1, 1303])
+total input length is torch.Size([1, 1309])
+total input length is torch.Size([1, 1301])
+total input length is torch.Size([1, 1306])
+total input length is torch.Size([1, 1302])
+total input length is torch.Size([1, 1307])
+run solution time is 0.3111454963684082 mins, choose solution time is 1.2580553690592448e-05 mins, model inference time is 5.516990582148234 mins.
+average output length is 1685.28, every token time is 0.19641806515014876 s.
+task:HumanEval/148, cir:9, gened 100 solutions, total nodes:306, total unique nodes:206, chosen nodes:10, left nodes:206
+chosen nodes idx is [663, 671, 673, 691, 680, 710, 675, 728, 724, 721]
+chosen nodes's parent's idx is [563, 571, 571, 591, 571, 580, 571, 575, 575, 575]
+chosen nodes's depth is [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9257709674094597, 0.9660319277252032, 0.9254607020603459, 0.9652952236536165, 0.9074791625283734, 0.9250779272611763, 0.6784854119758398, 0.9498057727479389, 0.9281406969558654, 0.9500276085519057]
+
+total input length is torch.Size([1, 1253])
+total input length is torch.Size([1, 1295])
+total input length is torch.Size([1, 1301])
+total input length is torch.Size([1, 1295])
+total input length is torch.Size([1, 1303])
+total input length is torch.Size([1, 1309])
+total input length is torch.Size([1, 1301])
+total input length is torch.Size([1, 1306])
+total input length is torch.Size([1, 1302])
+total input length is torch.Size([1, 1307])
+run solution time is 0.31088192462921144 mins, choose solution time is 1.1750062306722005e-05 mins, model inference time is 5.518042278289795 mins.
+average output length is 1685.28, every token time is 0.19645551017101906 s.
+task:HumanEval/148, cir:10, gened 100 solutions, total nodes:306, total unique nodes:206, chosen nodes:10, left nodes:206
+chosen nodes idx is [763, 771, 773, 791, 780, 810, 775, 828, 824, 821]
+chosen nodes's parent's idx is [663, 671, 671, 691, 671, 680, 671, 675, 675, 675]
+chosen nodes's depth is [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+chosen nodes passT_rates [0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666, 0.6666666666666666]
+probs are [0.9257709674094597, 0.9660319277252032, 0.9254607020603459, 0.9652952236536165, 0.9074791625283734, 0.9250779272611763, 0.6784854119758398, 0.9498057727479389, 0.9281406969558654, 0.9500276085519057]
+
+Use prompt_tests.
+get solution for task : HumanEval/149 with 2 tests.
+Model inference time is 0.30091363191604614 minutes
+In generate step, the input tokens shape is 810, the output tokens shape is 1322
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    lst = sorted(lst, key=len)
+    return lst
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def sorted_list_sum(lst):
+
+fix input length is torch.Size([1, 853])
+task:HumanEval/149, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.0]
+probs are [-1.0]
+
+total input length is torch.Size([1, 1041])
+run solution time is 0.0032912333806355792 mins, choose solution time is 1.7575422922770183e-05 mins, model inference time is 0.4921120087305705 mins.
+average output length is 1509.1, every token time is 0.019565782382058368 s.
+passn: 1.0
+One node passed! Show it and it's parents.
+++++++show parents of the node++++++
+solution:
+    nlst = []
+    for i in lst:
+        if len(i) % 2 == 0:
+            nlst.append(i)
+    return (sorted(nlst))
+
+passT_rate:1.0
+prob:0.9040384017569348
+
+************************
+++++++show parents of the node++++++
+solution:
+    lst = sorted(lst, key=len)
+    return lst
+
+passT_rate:0.0
+prob:-1.0
+
+************************
+task:HumanEval/149, cir:1, gened 10 solutions, total nodes:11, total unique nodes:9, chosen nodes:9, left nodes:9
+chosen nodes idx is [2, 1, 5, 8, 7, 6, 3, 4, 9]
+chosen nodes's parent's idx is [0, 0, 0, 0, 0, 0, 0, 0, 0]
+chosen nodes's depth is [1, 1, 1, 1, 1, 1, 1, 1, 1]
+chosen nodes passT_rates [1.0, 0.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0]
+probs are [0.9040384017569348, 0.9028533823623921, 0.8854904770599676, 0.9082941451049777, 0.8805419902560235, 0.928444381023663, 0.938957655211259, 0.9109569794282417, 0.834400997696776]
+
+Use prompt_tests.
+get solution for task : HumanEval/150 with 2 tests.
+Model inference time is 0.30090150038401287 minutes
+In generate step, the input tokens shape is 696, the output tokens shape is 1208
+++++++++++++++++++++++++++solution++++++++++++++++++++++++++
+    if n % 2 == 0:
+        return y
+    else:
+        return x
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=====start code===========
+def x_or_y(n, x, y):
+
+fix input length is torch.Size([1, 743])
+task:HumanEval/150, cir:0, gened 1 solutions, total nodes:1, total unique nodes:1, chosen nodes:1, left nodes:1
+chosen nodes idx is [0]
+chosen nodes's parent's idx is []
+chosen nodes's depth is [0]
+chosen nodes passT_rates [0.5]
+probs are [-1.0]
+
+total input length is torch.Size([1, 906])

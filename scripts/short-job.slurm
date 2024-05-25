@@ -36,7 +36,7 @@
 ### You can specify the characteristics of the compute nodes, and even the names of the compute nodes
 ###
 ### #SBATCH --nodelist=r8a100-c03          # Request a specific list of hosts 
-#SBATCH --constraint="A100|A30" # Request GPU Type: Volta(V100 or V100S) or RTX8000
+#SBATCH --constraint="A100_80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
 ###
 
 #- Log information
