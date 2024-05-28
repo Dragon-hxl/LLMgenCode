@@ -48,8 +48,10 @@ def main(cfg: DictConfig):
         stask = [32,33,36,38,39,40,41,64,73,75,76,89,93,102,108,126]
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
-            if num_id < 146 or num_id > 164 or num_id in humaneval_7bpy_base:# or num_id==1 or num_id==3:#num_id not in lack_task :
+            #important
+            if num_id < 0 or num_id > 164 or num_id in humaneval_7bpy_base:# or num_id==1 or num_id==3:#num_id not in lack_task :
                 continue
+            #important
             dataset.append(problem)
     elif dataset_type == "mbpp":
         print("load dataset : mbpp")
@@ -63,7 +65,9 @@ def main(cfg: DictConfig):
         print("mbpp chosen idx:",chosen_idx)
         with open("mbpp_chosen_idx.txt","w") as f:
             f.write(json.dumps(chosen_idx))
+        #important
         chosen_idx = chosen_idx[0:200]
+        #important
         dataset = [dataset[i] for i in chosen_idx]
         
     elif dataset_type == "mtpb":
@@ -71,30 +75,38 @@ def main(cfg: DictConfig):
         problems = read_problems("/home/S/hexiaolong/codex/self-debug/benchmarks/mtpb_humaneval_format.jsonl")
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
+            #important
             if num_id < 4 or num_id > 115 or num_id==20 or num_id==47:
                 continue
+            #important
             dataset.append(problem)
     elif dataset_type == "bigbench":
         print("load dataset : bigbench")
         problems = read_problems("/home/S/hexiaolong/codex/self-debug/benchmarks/bigbench_humaneval_format.jsonl")
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
+            #important
             if num_id < 3 or num_id > 32:  
                 continue
-            # if num_id!=15 and  num_id!=31:
-            #     continue
+            #important
             dataset.append(problem)
     print(f"load {len(dataset)} problems")
     
     time_start = time.time()
     if Strategy == "TS":
-        run_tree_search(dataset,model_path, output_file, sample_num=sample_num, filter_num=filter_num,feedback_type=feedback_type,cir_times=10 ,verbose=True)
+        run_tree_search(dataset,model_path, output_file,
+                        sample_num=sample_num, filter_num=filter_num,feedback_type=feedback_type,
+                        cir_times=10 ,verbose=True)
+    elif Strategy == "NTS":
+        run_not_tree_search(dataset,model_path, output_file, 
+                            sample_num=sample_num, filter_num=filter_num,feedback_type=feedback_type,
+                            cir_times=10 ,verbose=True)
     elif Strategy == "TFTS":
-        run_testcase_filter(dataset,model_path, output_file, sample_num=sample_num, filter_num=filter_num,feedback_type=feedback_type,cir_times=10 ,verbose=True)
+        run_testcase_filter(dataset,model_path, output_file,
+                            sample_num=sample_num, filter_num=filter_num,feedback_type=feedback_type,
+                            cir_times=10 ,verbose=True)
     elif Strategy == "BASE":
         run_base_generate(dataset,model_path, output_file ,verbose=True)
-    elif Strategy == "NTS":
-        run_not_tree_search(dataset,model_path, output_file, sample_num=sample_num, filter_num=filter_num,feedback_type=feedback_type,cir_times=10 ,verbose=True)
     elif Strategy == "debug":
         run_fastdebug_test(dataset,model_path, output_file, sample_num=sample_num,cir_times=10 ,verbose=True)
     elif Strategy == "TSC":

@@ -74,16 +74,20 @@ def run_tree_search(
     gen = PyGenerator()
     print_v("Run tree search.")
     
-    #读取prompt
+    #important 读取prompt
     if feedback_type=="UT":
+        print_v("Use UT feedback.")
         with open(UTfeedback_file,"r") as f:
             prompt_shot = f.read()
     elif feedback_type=="simple":
+        print_v("Use simple feedback.")
         with open(simple_feedback_shot1,"r") as f:
             prompt_shot = f.read()
     elif feedback_type=="expl":
+        print_v("Use expl feedback.")
         with open(expl_feedback_shot1,"r") as f:
             prompt_shot = f.read()
+    #important
     
     #打开输出文件
     f = open(output_file,"w+",encoding="utf-8")
@@ -99,8 +103,10 @@ def run_tree_search(
         internal_tests = []
         if data.get('prompt_tests', []) == []:
             print_v("Use internal_tests.")
+            #important
             internal_tests = gen.gen_tests_sort_by_prob(model,data,num=10,verbose=False)
             internal_tests = internal_tests[:6]
+            #important
             print_v('\n'.join(internal_tests))
             assertions = internal_tests
             base_assertion_string = "\n".join(assertions)
@@ -157,7 +163,15 @@ def run_tree_search(
                         result = future.result()
                         passed = result["passed"]
                         final_res = result["result"]
-                    prompt,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions, feedback_type)
+                    #important
+                    prompt,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt,
+                                                                       solution, 
+                                                                       passed, 
+                                                                       final_res, 
+                                                                       run_test, 
+                                                                       assertions, 
+                                                                       feedback_type)#important
+                    #important
                     node.feedbackprompt = prompt
                     node.passT_rate = passn
                     node.pass_ut_num = pass_tests
@@ -176,11 +190,16 @@ def run_tree_search(
             
             # 对生成的代码进行排序并选取排序靠前的代码
             choose_start = time.time()
+            #important
             total_nodes = gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
-            sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)#,-len(x.solution)
+            sorted_nodes = sorted(total_unique_nodes,
+                                  key=lambda x: (x.passT_rate,x.prob),
+                                  reverse=True)#,-len(x.solution)
             chosen_nodes = sorted_nodes[:filter_num]
-            left_nodes =  sorted_nodes#sorted_nodes# sorted_nodes[sample_num:]
+            #important
+            left_nodes =  sorted_nodes[filter_num:]#sorted_nodes# sorted_nodes[sample_num:]
+            #important
             choose_solution_time = (time.time()-choose_start)/60
             ### 打印需要的信息
             print_v(f"task:{tid}, cir:{cir}, gened {len(gened_nodes)} solutions, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}, chosen nodes:{len(chosen_nodes)}, left nodes:{len(left_nodes)}")
@@ -205,25 +224,32 @@ def run_tree_search(
             st = time.time()
             len_record = []
             k=1
-            return_sequences = sample_num
+            #important
+            return_sequences = int(sample_num/k)
+            if cir==1 and filter_num==5 and sample_num==2:
+                return_sequences = 10
             total_output_length = 0
             # print_v(f"begin to generate solutions for cir {cir} with {return_sequences} sequences.")
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt
                 code = start_code + node.solution
+                #important
                 if feedback_type=="expl":
                     code_expl = gen.gen_code_explanation(model,code,verbose)
                     idx = feedback.index("Feedback:")
                     feedback = feedback[:idx] + f"Here is a line-by-line explanation of the code:\n{code_expl}\n\n" + feedback[idx:]
-                    if cir==0 and i==0:
-                        print_with_tag(content=feedback,tag="feedback",verbose=verbose)
+                if cir==1 and i<2:
+                    print_with_tag(content=feedback,tag="feedback",verbose=verbose)
                 # print_with_tag(content=feedback,tag="feedback",verbose=verbose)
                 
                 inputs = model.tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)
                 input_length = inputs.input_ids.shape[1]
                 fix_percent = (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
                 for _ in range(k):
-                    solutions,inference_time= gen.generate_with_feedback(model,feedback,return_sequences=return_sequences,verbose=True)
+                    solutions,inference_time= gen.generate_with_feedback(model,
+                                                                         feedback,
+                                                                         return_sequences=return_sequences,
+                                                                         verbose=True)
                     for s in solutions:
                         ans,true_sc,output_length = s[0],s[1],s[2]
                         # 记录每条solution的长度

@@ -1,9 +1,7 @@
 import torch
 import json
 import time
-import numpy as np
 import random
-from concurrent.futures import ThreadPoolExecutor
 
 import faulthandler
 faulthandler.enable(all_threads=True)
@@ -14,8 +12,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "true"
 import sys
 sys.path.append("/home/S/hexiaolong/codex/self-debug")
 sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
-from human_eval.execution import run_code_with_test_result,run_code_with_output2
-from myutils import setup_seed,make_printv,print_with_tag,code_clean2,get_unit_test,prompt_for_64,filter_fix_ans,get_CODET_point_v1,get_CODET_point_v3,get_pass_rate,get_UTfeedback_prompt_v1,start_code_extract
+from myutils import setup_seed,make_printv,print_with_tag,code_clean2,filter_fix_ans,get_CODET_point_v3,get_pass_rate,get_UTfeedback_prompt_v1,start_code_extract
 from myutils import load_testcase
 from model import Model
 from generator import PyGenerator
@@ -66,8 +63,8 @@ prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
 simple_feedback_shot2 = prompt_root + "prompt_simfeedback_paper.txt"
 simple_feedback_shot1 = prompt_root + "prompt_simfeedback.txt"
-
-gened_testcases_file = "/home/S/hexiaolong/codex/self-debug/try/gen_test_t0.8_topp0.95_sample100_max300_rm_final5.jsonl"# 用来进行CODET的tests文件
+expl_feedback_shot1 = prompt_root + "prompt_explfeedback_shot.txt"
+gened_testcases_file = "/home/S/hexiaolong/codex/self-debug/src/gened_testcase_codellama7bpy_humaneval.jsonl"# 用来进行CODET的tests文件
 
 def run_testcase_filter(
     dataset:dict,
@@ -92,14 +89,19 @@ def run_testcase_filter(
     print_v(f"cir_times : {cir_times}")
     print_v("Run testcase filter self-debug.")
     
-    #读取prompt
+    #important读取prompt
     if feedback_type=="UT":
+        print_v("Use UT feedback.")
         with open(UTfeedback_file,"r") as f:
             prompt_shot = f.read()
     elif feedback_type=="simple":
+        print_v("Use simple feedback.")
         with open(simple_feedback_shot1,"r") as f:
             prompt_shot = f.read()
-        
+    elif feedback_type=="expl":
+        print_v("Use expl feedback.")
+        with open(expl_feedback_shot1,"r") as f:
+            prompt_shot = f.read()
         
         
     #打开输出文件
@@ -114,11 +116,16 @@ def run_testcase_filter(
         has_visibale_tests = False
         
         task_begin_time = time.time()
-        # if no offline testcase offered, gen testcases
+        #important if no offline testcase offered, gen testcases
+        if "HumanEval" in tid and "codellama-7bpy" in model_path:
+            offline = True
         if offline:
+            print_v(f"Use off line testcases in path {gened_testcases_file}")
             gened_testcase = load_testcase(gened_testcases_file,type=0)
             task_gened_testcase = gened_testcase[tid]
+            chosen_testcase = task_gened_testcase[:10]
         else:
+            print_v("Gen testcase by model.")
             gen_tests_st = time.time()
             task_gened_testcase = gen.gen_tests_sort_by_prob(model,data,num=110,verbose=verbose)[:110]
             gen_tests_time = (time.time() - gen_tests_st)/60
@@ -129,13 +136,15 @@ def run_testcase_filter(
         # first generate the base solution
         step_one_st = time.time()
         tprompt = data["prompt"]
-        
+        #important
         if data.get('prompt_tests', []) == []:
-            base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len = gen.generate_base_complication(model,tprompt,"",record_time=True,verbose=verbose)
+            base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len\
+                = gen.generate_base_complication(model,tprompt,"",record_time=True,verbose=verbose)
             has_visibale_tests = False
         else :
             base_assertion_string = "\n".join(data["prompt_tests"])
-            base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len = gen.generate_base_complication(model,tprompt,base_assertion_string,record_time=True,verbose=verbose)
+            base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len\
+                = gen.generate_base_complication(model,tprompt,base_assertion_string,record_time=True,verbose=verbose)
             has_visibale_tests = True
             chosen_testcase = data["prompt_tests"]
         # 去除函数头和注释
@@ -163,27 +172,35 @@ def run_testcase_filter(
             # 在筛选的测试用例上执行代码
             print_v("chosen testcases are:")
             print_v("\n".join(chosen_testcase))
+            #important
             total_nodes = gened_nodes + left_nodes
             total_unique_nodes = total_unique_nodes = list(set(total_nodes))
             feedback_prompt = prompt_shot + "\n".join(chosen_testcase) + "\n\n# Complete the Python funtion:\n" + tprompt+"\n### result ###\n```python\n" + start_code + "\n"
+            #important
             fix_input = model.tokenizer(feedback_prompt, return_tensors='pt', return_token_type_ids=False)
             print_v(f"fix input length is {fix_input.input_ids.shape}")
             fix_input_len = fix_input.input_ids.shape[1]
             
+            #important
             if has_visibale_tests:
                     get_pass_rate(data,gened_nodes,data["prompt_tests"])
             
             for i,node in enumerate(total_nodes):
                 solution = start_code + node.solution
                 # 这里通过一次函数调用同时获得simple和UTfeedback，也就是会判断代码是否正确，同时对于出现AssertError的代码会得到其执行的第一个unit test的值。其他Error因为会返回具体的错误信息就不会得到执行的第一个unit test的值。
-                feedback,passn,pass_tests = exe.excute(solution=solution,tests=chosen_testcase,feedback_prompt=feedback_prompt,timeout=0.1,feedback_type=feedback_type)
-                if cir==0 and i==0:
+                #important
+                feedback,passn,pass_tests = exe.excute(solution=solution,
+                                                       tests=chosen_testcase,
+                                                       feedback_prompt=feedback_prompt,
+                                                       timeout=0.1,
+                                                       feedback_type=feedback_type)
+                if cir==1 and i==0:
                     print_v(f"{feedback_type} feedback:\n {feedback}")
                 node.feedbackprompt = feedback
                 node.passT_rate = passn
                 node.pass_ut_num = pass_tests
                 node.total_ut_num = len(chosen_testcase)
-                
+                #important
                 if has_visibale_tests:
                     if node.CODET_pass_rate >=1.0:
                         print("passn:",node.CODET_pass_rate)
@@ -200,35 +217,46 @@ def run_testcase_filter(
                         break
             run_solutions_time = (time.time() - st)/60
             
-            #filter testcase
+            # filter testcase
             filter_st = time.time()
-            sorted_group,chosen_testcase_id  = get_CODET_point_v3(total_nodes,task_gened_testcase,data,chosen_num=10,count_solution_num=True,verbose=verbose,sort_len=True) #这里是使用去重后的还是不去重的,sort_len=True
+            #important
+            sorted_group,chosen_testcase_id  = get_CODET_point_v3(total_nodes,
+                                                                  task_gened_testcase,
+                                                                  data,
+                                                                  chosen_num=10,
+                                                                  count_solution_num=True,
+                                                                  verbose=verbose,
+                                                                  sort_len=True) #这里是使用去重后的还是不去重的,sort_len=True
             pass_testcase_list = [ list(x[1]) for x in sorted_group]
             if has_visibale_tests:
                 chosen_num = 10
-                if len(total_unique_nodes) > 20:
+                if len(total_unique_nodes) > 10 or cir > 2:
                     chosen_testcase = data["prompt_tests"] + [task_gened_testcase[x] for x in chosen_testcase_id]
                     chosen_testcase = chosen_testcase[:chosen_num]
             else:
                 chosen_num = 10
-                if len(total_unique_nodes) > 20:
+                if len(total_unique_nodes) > 10 or cir > 2:
                     chosen_testcase = [task_gened_testcase[x] for x in chosen_testcase_id][:chosen_num]
+            #important
             filter_time = (time.time()-filter_st)/60
             print_v(f"filter testcase time is {filter_time} mins.")
             
             #  对代码进行排序并选取排序靠前的代码
-            chosen_nodes_num = 10
             choose_start = time.time()
+            #important
             total_nodes = gened_nodes + left_nodes
             total_unique_nodes = list(set(total_nodes))
             if has_visibale_tests:
                 # get_pass_rate(data,total_nodes,data["prompt_tests"])
                 print("Sort nodes in has visibale test task.")
+                #important
                 sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.CODET_pass_rate,x.prob),reverse=True)#,-len(x.solution)
             else:
                 sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,x.prob),reverse=True)
+            #important
             chosen_nodes = sorted_nodes[:filter_num]
-            left_nodes = sorted_nodes#[chosen_nodes_num:]
+            left_nodes = sorted_nodes[filter_num:]
+            #important
             choose_solution_time = (time.time()-choose_start)/60
             
             print_v(f"task:{tid}, cir:{cir}, gened {len(gened_nodes)} solutions, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}, chosen nodes:{len(chosen_nodes)}, left nodes:{len(left_nodes)}")
@@ -252,15 +280,30 @@ def run_testcase_filter(
             len_record = []
             gened_nodes = []
             k=1
-            return_sequences = sample_num
+            return_sequences = int(sample_num/k)
+            if cir==1 and filter_num==5 and sample_num==2:
+                return_sequences = 10
             total_output_length = 0
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt
+                
+                code = start_code + node.solution
+                #important
+                if feedback_type=="expl":
+                    code_expl = gen.gen_code_explanation(model,code,verbose)
+                    idx = feedback.index("Feedback:")
+                    feedback = feedback[:idx] + f"Here is a line-by-line explanation of the code:\n{code_expl}\n\n" + feedback[idx:]
+                if cir==1 and i<2:
+                    print_with_tag(content=feedback,tag="feedback",verbose=verbose)
+                
                 inputs = model.tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)
                 input_length = inputs.input_ids.shape[1]
                 fix_percent = (fix_input_len*(fix_input_len - 1.0))/(input_length*(input_length - 1.0))
                 for _ in range(k):
-                    solutions,inference_time= gen.generate_with_feedback(model,feedback,return_sequences=return_sequences,verbose=True)
+                    solutions,inference_time= gen.generate_with_feedback(model,
+                                                                         feedback,
+                                                                         return_sequences=return_sequences,
+                                                                         verbose=True)
                     for s in solutions:
                         ans,true_sc,output_length = s[0],s[1],s[2]
                         # 记录每条solution的长度

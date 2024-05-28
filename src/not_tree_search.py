@@ -15,7 +15,7 @@ sys.path.append("/home/S/hexiaolong/codex/self-debug")
 sys.path.append("/home/S/hexiaolong/codex/self-debug/humaneval")
 from human_eval.data import read_problems
 from human_eval.execution import run_code_with_test_result,run_code_with_output2
-from myutils import setup_seed,make_printv,print_with_tag,code_clean2,get_unit_test,prompt_for_64,filter_fix_ans,get_CODET_point_v1,get_CODET_point_v3,get_pass_rate,get_UTfeedback_prompt_v1,get_UTfeedback_prompt,start_code_extract
+from myutils import setup_seed,make_printv,print_with_tag,code_clean2,prompt_for_64,filter_fix_ans,get_CODET_point_v1,get_CODET_point_v3,get_pass_rate,get_UTfeedback_prompt_v1,get_UTfeedback_prompt,start_code_extract
 from model import Model
 from generator import PyGenerator
 
@@ -75,9 +75,9 @@ def run_not_tree_search(
     print_v = make_printv(verbose)
     model = Model(model_path)
     gen = PyGenerator()
-    print_v("run not tree search.")
+    print_v("Run not tree search.")
     
-    #读取prompt
+    #important读取prompt
     if feedback_type=="UT":
         print_v("Use UT feedback.")
         with open(UTfeedback_file,"r") as f:
@@ -90,7 +90,7 @@ def run_not_tree_search(
         print_v("Use expl feedback.")
         with open(expl_feedback_shot1,"r") as f:
             prompt_shot = f.read()
-        
+    #important#important
     
     #获取solution
     f = open(output_file,"w+",encoding="utf-8")
@@ -102,8 +102,10 @@ def run_not_tree_search(
         internal_tests = []
         if data.get('prompt_tests', []) == []:
             print_v("Use internal_tests.")
+            #important
             internal_tests = gen.gen_tests_sort_by_prob(model,data,num=10,verbose=False)
             internal_tests = internal_tests[:6]
+            #important
             print_v('\n'.join(internal_tests))
             assertions = internal_tests
             base_assertion_string = "\n".join(assertions)
@@ -118,8 +120,6 @@ def run_not_tree_search(
 
         step_one_st = time.time()
         tprompt = data["prompt"]
-        if tid == "HumanEval/64":
-            tprompt = prompt_for_64
         base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len = gen.generate_base_complication(model,tprompt,base_assertion_string,record_time=True,verbose=verbose)
         
         # 去除函数头和注释
@@ -161,7 +161,15 @@ def run_not_tree_search(
                         result = future.result()
                         passed = result["passed"]
                         final_res = result["result"]
-                    prompt,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_test, assertions, feedback_type)
+                    #important
+                    prompt,passn,pass_tests = get_UTfeedback_prompt_v1(feedback_prompt, 
+                                                                       solution, 
+                                                                       passed, 
+                                                                       final_res, 
+                                                                       run_test, 
+                                                                       assertions, 
+                                                                       feedback_type)
+                    #important
                     node.feedbackprompt = prompt
                     node.passT_rate = passn
                     node.pass_ut_num = pass_tests
@@ -180,11 +188,15 @@ def run_not_tree_search(
             
             # 对生成的代码进行排序并选取排序靠前的代码
             choose_start = time.time()
+            #important
             total_nodes = gened_nodes #+ left_nodes
             total_unique_nodes = list(set(total_nodes))
-            sorted_nodes = sorted(total_unique_nodes,key=lambda x: (x.passT_rate,-len(x.solution),x.prob),reverse=True)
+            sorted_nodes = sorted(total_unique_nodes,
+                                  key=lambda x: (x.passT_rate,x.prob),#,-len(x.solution)
+                                  reverse=True)
             chosen_nodes = sorted_nodes[:filter_num]
             left_nodes = sorted_nodes[filter_num:]
+            #important
             choose_solution_time = (time.time()-choose_start)/60
             
             print_v(f"task:{tid}, cir:{cir}, gened {len(gened_nodes)} solutions, total nodes:{len(total_nodes)}, total unique nodes:{len(total_unique_nodes)}, chosen nodes:{len(chosen_nodes)}, left nodes:{len(left_nodes)}")
@@ -202,20 +214,25 @@ def run_not_tree_search(
             st = time.time()
             len_record = []
             k=1
-            return_sequences = sample_num
+            #important
+            return_sequences = int(sample_num/k)
+            if cir==1 and filter_num==5 and sample_num==2:
+                return_sequences = 10
             total_output_length = 0
             print_v(f"begin to generate solutions for cir {cir} with {return_sequences} sequences.")
             #feedback
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt
                 code = start_code + node.solution
+                #important
                 if feedback_type=="expl":
                     code_expl = gen.gen_code_explanation(model,code,verbose)
                     idx1 = feedback.find(start_code)
                     idx = feedback.index("Feedback:",idx1)
                     feedback = feedback[:idx] + f"Here is a line-by-line explanation of the code:\n{code_expl}\n\n" + feedback[idx:]
-                    if cir==1 and i==0:
-                        print_with_tag(content=feedback,tag="expl feedback",verbose=verbose)
+                if cir==1 and i<2:
+                    print_with_tag(content=feedback,tag="feedback",verbose=verbose)
+                #important
                 # print_with_tag(content=feedback,tag="feedback",verbose=verbose)
                 
                 inputs = model.tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)

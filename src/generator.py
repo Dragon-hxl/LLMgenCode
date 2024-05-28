@@ -69,6 +69,37 @@ class PyGenerator():
         else:
             return prompt,solution
         
+    def generate_base_complication_multi(self, model, prompt, unit_tests, record_time = False, verbose = False):
+        setup_seed(2024)
+        #prepare the prompt
+        prompt = self.get_one_complication(prompt,unit_tests)
+        # print_with_tag("base complication prompt",prompt,verbose=verbose)
+        
+        input_len = len(prompt)
+        inputs = model.tokenizer(prompt, return_tensors='pt', return_token_type_ids=False)
+        input_tokens_len = inputs.input_ids.shape[1]
+        inputs = inputs.to('cuda')
+        
+        #generate the solution
+        st = time.time()
+        pred = model.model.generate(**inputs, max_new_tokens=512, temperature=0,pad_token_id=model.tokenizer.eos_token_id)#,temperature=0.4,repetition_penalty=1.1
+        model_inference_time = (time.time()-st)/60
+        output_tokens_len = pred.shape[1]
+        ans = model.tokenizer.decode(pred.cpu()[0], skip_special_tokens=True)[input_len:].strip("\n")
+        # print_with_tag("base complication origin output",ans,verbose=verbose)
+        solution = self.code_extract(ans)
+        
+        #log the time and length
+        if verbose:
+            print(f"Model inference time is {model_inference_time} minutes")
+            print(f"In generate step, the input tokens shape is {input_tokens_len}, the output tokens shape is {output_tokens_len}")
+        
+        #return the solution
+        if record_time:
+            return prompt,solution, model_inference_time, input_tokens_len, output_tokens_len
+        else:
+            return prompt,solution
+        
     def generate_with_feedback(self, model, feedabck_prompt, return_sequences:int=10 ,record_length = False, record_time = False, verbose = False):
         setup_seed(2024)
         printv = make_printv(verbose)

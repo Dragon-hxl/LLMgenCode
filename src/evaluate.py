@@ -15,7 +15,7 @@ def get_truePass(problem,solution):
                 problem["test"] + "\n" +
                 f"check({problem['entry_point']})"
             )
-    print(f"check_program: \n{check_program}")
+    # print(f"check_program: \n{check_program}")
     with ThreadPoolExecutor(max_workers=1) as executor:
         # args = (problem, solution, 1.0)
         # future = executor.submit(check_correctness, *args)
@@ -47,7 +47,8 @@ def error_analysis(error_dict):
     print(Counter(error_list))
     return
 
-def get_pass_k(results,data,k=10,n=10):
+def get_pass_k(results,data,k=10,n=10,ignore_task=[],verbose=False):
+    print_v = make_printv(verbose=verbose)
     passed_per_cir = defaultdict(set)# 每个cir通过的task
     task_cir = defaultdict(list)
     task_cir_pass = defaultdict(list)
@@ -74,7 +75,7 @@ def get_pass_k(results,data,k=10,n=10):
             for i,solution in enumerate(solutions):
                 solution = solution["solution"]
                 passed,error_message = get_truePass(problem,solution)
-                print(f"solution {i} passed {passed}")
+                print_v(f"solution {i} passed {passed}")
                 if passed:
                     passed_num += 1
                     total_passed =True
@@ -94,6 +95,7 @@ def get_pass_k(results,data,k=10,n=10):
     # print(f"task_has_solution: {task_has_solution}")
     tid_list = data.keys()
     tid_list = [tid_to_int(tid) for tid in tid_list]
+    tid_list = [x for x in tid_list if x not in ignore_task]
     lack_task = [tid for tid in tid_list if tid not in task_has_solution]
     # for tid in tid_list:
     #     if tid not in task_has_solution:
@@ -106,15 +108,15 @@ def get_pass_k(results,data,k=10,n=10):
         pass_task_num[k] = len(v)
     
     for k,v in task_cir_pass.items():
-        print(f"task {k} pass or not for each cir: {v}")
+        print_v(f"task {k} pass or not for each cir: {v}")
     print("--------------------------------------------")
     
     print(f"lack task : {lack_task}")
     
     
     print(f"pass task num: {pass_task_num}")
-    pass_task_rate = [x/result_num for x in pass_task_num]
-    print(f"pass task rate: {pass_task_rate}")
+    # pass_task_rate = [x/result_num for x in pass_task_num]
+    # print(f"pass task rate: {pass_task_rate}")
     
     #计算无差的pass@k
     # for cir,v in pass_k_list.items():
@@ -284,7 +286,7 @@ def load_results(res_file):
     with open(res_file,"r") as f:
         for line in f.readlines():
             result = json.loads(line)
-            print(result["task_id"])
+            # print(result["task_id"])
             results.append(result)
     return results
 
@@ -308,6 +310,9 @@ def show_certian_task(results,tid):
 chosen_data_idx = [240, 93, 372, 296, 155, 102, 454, 370, 209, 387, 366, 388, 135, 272, 125, 325, 416, 376, 255, 181, 212, 269, 497, 315, 111, 158, 278, 360, 169, 265, 38, 374, 396, 443, 105, 352, 385, 477, 239, 363, 425, 446, 334, 75, 486, 108, 444, 210, 29, 394, 178, 321, 213, 238, 63, 371, 380, 71, 390, 167, 199, 471, 176, 406, 494, 166, 218, 479, 162, 290, 109, 208, 117, 104, 20, 383, 115, 441, 9, 132, 258, 163, 395, 291, 411, 361, 215, 314, 57, 438, 457, 310, 399, 118, 120, 237, 187, 69, 103, 188, 252, 304, 448, 72, 134, 198, 319, 172, 171, 362, 364, 458, 86, 350, 356, 67, 410, 465, 297, 351, 33, 50, 88, 2, 77, 224, 472, 405, 179, 427, 41, 100, 145, 122, 355, 236, 308, 417, 246, 268, 223, 339, 432, 435, 36, 154, 354, 142, 402, 289, 338, 128, 478, 51, 253, 475, 368, 450, 90, 263, 114, 418, 480, 23, 496, 473, 193, 324, 37, 60, 492, 28, 470, 64, 107, 412, 44, 419, 377, 462, 249, 298, 84, 82, 323, 326, 53, 398, 287, 309, 15, 312, 55, 286, 92, 409, 161, 0, 62, 143]
 base_pass_task_mbpp = [17, 23, 27, 35, 40, 41, 46, 51, 52, 58, 62, 66, 79, 82, 85, 88, 89, 93, 96, 99, 105, 112, 113, 127, 133, 144, 145, 161, 168, 171, 173, 174, 175, 176, 183, 195, 204, 210, 212, 214, 221, 222, 227, 230, 234, 249, 250, 255, 258, 261, 263, 269, 273, 281, 284, 293, 297, 309, 319, 322, 329, 332, 333, 341, 361, 373, 375, 394, 403, 404, 412, 422, 425, 443, 447, 457, 458, 459, 465, 474, 476, 478, 480, 487, 489, 495, 496, 498, 502, 504, 507, 509]
 different_task = ['MBPP/18', 'MBPP/30', 'MBPP/45', 'MBPP/56', 'MBPP/70', 'MBPP/148', 'MBPP/151', 'MBPP/152', 'MBPP/164', 'MBPP/181', 'MBPP/323', 'MBPP/338', 'MBPP/342', 'MBPP/348', 'MBPP/364', 'MBPP/367', 'MBPP/466', 'MBPP/485', 'MBPP/486', 'MBPP/501']
+humaneval_cola7bpy_base = [0, 2, 3, 4, 5, 7, 9, 12, 13, 15, 16, 17, 21, 22, 23, 24, 27, 28, 29, 30, 31, 34, 35, 42, 43, 44, 45, 46, 47, 48, 49, 53, 55, 56, 58, 60, 61, 63, 66, 71, 72, 74, 77, 79, 80, 86, 87, 104, 107, 112, 113, 116, 121, 122, 124, 136, 142, 147, 152, 153, 156, 159, 162]
+
+
 if __name__ == "__main__":    
     res_file = res_root + tmp[-1] #res_cola7bpy[3]#res_7b16k[1]#res_cola34bpy[5]# res_cola7bpy[3]
     
@@ -334,11 +339,12 @@ if __name__ == "__main__":
         
     results = load_results(res_file=res_file)
     #get pass@k
-    get_pass_k(results,data,1,10)
+    get_pass_k(results,data,1,10,ignore_task=humaneval_cola7bpy_base)
     # show_certian_task(results,40)
     # evaluate_gened_testcase(results=results,data=data,verbose=True)
-    # print("------------------------no filter------------------------")
-    # evaluate_testcase_nofilter(results=results,data=data,verbose=True)
-    # print("-----------------------filter-------------------------")
-    # evaluate_testcase_filter(results=results,data=data,verbose=True)
-    # evaluate_internal_tests(results=results,data=data,verbose=True)
+    if "TFTS" in res_file:
+        # print("------------------------no filter------------------------")
+        # evaluate_testcase_nofilter(results=results,data=data,verbose=True)
+        print("-----------------------filter-------------------------")
+        evaluate_testcase_filter(results=results,data=data,verbose=True)
+        # evaluate_internal_tests(results=results,data=data,verbose=True)
