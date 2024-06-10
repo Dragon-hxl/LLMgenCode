@@ -300,11 +300,11 @@ def draw_plots_percent(data,color,image_path,legends=[],title=""):
         labels.append(k)
         if changed_legends:
             if "TS_SBSP1_" in k:
-                legends.append("传统自反馈")
+                legends.append("自反馈")
             elif "NTS" in k:
                 legends.append("非树搜索自反馈")
             elif "TFTS" in k:
-                legends.append("使用测试用例筛选的树搜索自反馈")
+                legends.append("基于树搜索和测试用例筛选的自反馈")
             elif "TS_SBSP10" in k:
                 legends.append("树搜索自反馈")
             elif "pT" in k:
@@ -402,19 +402,19 @@ if __name__=="__main__":
         "labels":["1_mtpbTFTS_SBSP10_7b16k_pass@1","2_mtpbTS_SBSP10_7b16k_pass@1","3_mtpbNTS_SBSP10_7b16k_pass@1","4_mtpbTS_SBSP1_7b16k",],
         "image_path":"../image/mtpb_7b16k_pass@1.svg",
         "num_task":115,
-        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","传统自反馈"],
+        "legends":["基于树搜索和测试用例筛选的自反馈","树搜索自反馈","非树搜索自反馈","自反馈"],
     }
     bigbench_7b16k_pack = {
         "labels":["bigbenchTFTS_SBSP10_7b16k_pass@1","bigbenchTS_SBSP10_7b16k_pass@1","bigbenchNTS_SBSP10_7b16k_pass@1","bigbenchTS_SBSP1_7b16k",],
         "image_path":"../image/bigbench_7b16k_pass@1.svg",
         "num_task":32,
-        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","传统自反馈"],
+        "legends":["基于树搜索和测试用例筛选的自反馈","树搜索自反馈","非树搜索自反馈","自反馈"],
     }
     mbpp_7b16k_pack = {
         "labels":["mbppTFTS_SBSP10_7b16k_pass@1","mbppTS_SBSP10_7b16k_pass@1","mbppNTS_SBSP10_7b16k_pass@1","mbppTS_SBSP1_7b16k",],
         "image_path":"../image/mbpp_7b16k_pass@1.svg",
         "num_task":200,
-        "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","传统自反馈"],
+        "legends":["基于树搜索和测试用例筛选的自反馈","树搜索自反馈","非树搜索自反馈","自反馈"],
     }
     show_label = [
         # "UT_SBSP10_7b16k_tT",

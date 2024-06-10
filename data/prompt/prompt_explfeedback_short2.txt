@@ -16,7 +16,6 @@ def find_char_long(text):
 ```
 Here is a line-by-line explanation of the code:
 "def find_char_long(text):": This line defines a function named "find_char_long" that takes a single argument, "text". "text" represents thestring whose words are to be extracted.
-
 "return (re.findall(r"\b\w{4,}\b", text))": This line uses the "re.findall()" function to extract all words from the input string that are at least 4 characters long. The regular expression "r"\b\w{4,}\b"" matches all words that are at least 4 characters long. The "\b" matches the boundary between a word character and a non-word character. The "\w" matches any word character (a letter, digit, or underscore).The "{4,}" matches the preceding element at least 4 times. The "\b" matches the boundary between a word character and a non-word character.
 
 Feedback: With the above function, find_char_long('Please move back to stream') returns the following error:
@@ -31,7 +30,12 @@ import re
 def find_char_long(text):
     return (re.findall(r"\b\w{4,}\b", text))
 ```
+Here is a line-by-line explanation of the code:
+'import re': This line imports the 're' module.
+'def find_char_long(text):': This line defines a function named 'find_char_long' that takes a single argument, 'text'. 'text' represents the string whose words are to be extracted.
+'return (re.findall(r"\b\w{4,}\b", text))': This line uses the 're.findall()' function to extract all words from the input string that are at least 4 characters long. The regular expression 'r"\b\w{4,}\b"' matches all words that are at least 4 characters long. The '\b' matches the boundary between a word character and a non-word character. The '\w' matches any word character (a letter, digit, or underscore). The '{4,}' matches the preceding element at least 4 times. The '\b' matches the boundary between a word character and a non-word character.
 
+Feedback: With the above function, find_char_long('Please move back to stream') == ['Please', 'move', 'back', 'stream']. The assertion is "assert find_char_long('Please move back to stream') == ['Please', 'move', 'back', 'stream']". So the code passes the assertion. The code above is correct.
 ### Task End ###
 
 ### Task Start ###

@@ -63,8 +63,11 @@ prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
 simple_feedback_shot2 = prompt_root + "prompt_simfeedback_paper.txt"
 simple_feedback_shot1 = prompt_root + "prompt_simfeedback.txt"
-expl_feedback_shot1 = prompt_root + "prompt_explfeedback_shot.txt"
+expl_feedback_shot1 = prompt_root + "prompt_explfeedback_short.txt"
+
 gened_testcases_file = "/home/S/hexiaolong/codex/self-debug/src/gened_testcase_codellama7bpy_humaneval.jsonl"# 用来进行CODET的tests文件
+mbpp_gened_testcase = "/home/S/hexiaolong/codex/self-debug/res/gened_tesatcase_mbpp_codellama7bpy.jsonl"
+
 
 def run_testcase_filter(
     dataset:dict,
@@ -72,6 +75,7 @@ def run_testcase_filter(
     output_file:str,
     sample_num:int=10,
     filter_num:int=1,
+    first_num:int=1,
     cir_times:int=10,
     feedback_type:str="UT",
     verbose:bool=False,
@@ -86,8 +90,7 @@ def run_testcase_filter(
     
     print_v(f"model_path : {model_path}")
     print_v(f"sample_num : {sample_num}")
-    print_v(f"cir_times : {cir_times}")
-    print_v("Run testcase filter self-debug.")
+    print_v(f"Run testcase filter self-debug with max cir : {cir_times}.")
     
     #important读取prompt
     if feedback_type=="UT":
@@ -117,8 +120,13 @@ def run_testcase_filter(
         
         task_begin_time = time.time()
         #important if no offline testcase offered, gen testcases
+        
         if "HumanEval" in tid and "codellama-7bpy" in model_path:
             offline = True
+            gened_testcases_file = "/home/S/hexiaolong/codex/self-debug/src/gened_testcase_codellama7bpy_humaneval.jsonl"
+        if "MBPP" in tid:
+            offline = True
+            gened_testcases_file = mbpp_gened_testcase
         if offline:
             print_v(f"Use off line testcases in path {gened_testcases_file}")
             gened_testcase = load_testcase(gened_testcases_file,type=0)
@@ -137,21 +145,31 @@ def run_testcase_filter(
         step_one_st = time.time()
         tprompt = data["prompt"]
         #important
-        if data.get('prompt_tests', []) == []:
-            base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len\
-                = gen.generate_base_complication(model,tprompt,"",record_time=True,verbose=verbose)
+        entry_point = "def " + data["entry_point"]
+        use_prompt_test = True
+        base_return_num = first_num
+        if data.get('prompt_tests', []) == [] or not use_prompt_test:
+            print("No visiable testcase.")
+            # base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len\
+            #     = gen.generate_base_complication(model,tprompt,"",record_time=True,verbose=verbose)
+            solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+            gen.generate_base_complication_multi(model,tprompt,"\n".join(chosen_testcase),
+                                                 entry_point=entry_point,return_nums=base_return_num,record_time=True,verbose=verbose)
+        
             has_visibale_tests = False
         else :
+            print("Use visiable testcase.")
             base_assertion_string = "\n".join(data["prompt_tests"])
-            base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len\
-                = gen.generate_base_complication(model,tprompt,base_assertion_string,record_time=True,verbose=verbose)
+            solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+            gen.generate_base_complication_multi(model,tprompt,base_assertion_string,
+                                                 entry_point=entry_point,return_nums=base_return_num,record_time=True,verbose=verbose)
+            
             has_visibale_tests = True
             chosen_testcase = data["prompt_tests"]
         # 去除函数头和注释
-        entry_point = "def " + data["entry_point"]
-        solution = code_clean2(code=solution,entry_point=entry_point)
-        node1 = Node(solution,prompt=base_prompt,depth=0)
-        print_with_tag(content=solution,tag="base solution",verbose=verbose)
+        # solution = code_clean2(code=solution,entry_point=entry_point)
+        # node1 = Node(solution,prompt="",depth=0)
+        # print_with_tag(content=solution,tag="base solution",verbose=verbose)
         # 去掉data["prompt"]中的注释和空行
         start_code = start_code_extract(tprompt,entry_point)
         step_one_total_time = (time.time() - step_one_st)/60
@@ -163,8 +181,15 @@ def run_testcase_filter(
         chosen_testcase_dict = {}
         chosen_testcase_id_dict = {}
         pass_testcase_list_dict = {}
-        nodes,gened_nodes,chosen_nodes = [node1],[node1],[node1]
+        nodes,gened_nodes,chosen_nodes = [],[],[]
+        for s in solutions:
+            node = Node(s,prompt="",depth=cir,feedbackprompt="")
+            node.idx = len(nodes)
+            print_v(f"node {node.idx} solution is:\n{s}")
+            nodes.append(node)
+            gened_nodes.append(node)
         left_nodes,time_record,fix_record = [],[],[]
+        print_v(f"Init node idx:{[n.idx for n in nodes]}")
         while True:
             st = time.time()
             stop = False
@@ -174,7 +199,7 @@ def run_testcase_filter(
             print_v("\n".join(chosen_testcase))
             #important
             total_nodes = gened_nodes + left_nodes
-            total_unique_nodes = total_unique_nodes = list(set(total_nodes))
+            total_unique_nodes = list(set(total_nodes))
             feedback_prompt = prompt_shot + "\n".join(chosen_testcase) + "\n\n# Complete the Python funtion:\n" + tprompt+"\n### result ###\n```python\n" + start_code + "\n"
             #important
             fix_input = model.tokenizer(feedback_prompt, return_tensors='pt', return_token_type_ids=False)
@@ -187,6 +212,8 @@ def run_testcase_filter(
             
             for i,node in enumerate(total_nodes):
                 solution = start_code + node.solution
+                if i == 0:  
+                    print_v(f"check program : \n{start_code+solution}")
                 # 这里通过一次函数调用同时获得simple和UTfeedback，也就是会判断代码是否正确，同时对于出现AssertError的代码会得到其执行的第一个unit test的值。其他Error因为会返回具体的错误信息就不会得到执行的第一个unit test的值。
                 #important
                 feedback,passn,pass_tests = exe.excute(solution=solution,
@@ -209,7 +236,7 @@ def run_testcase_filter(
                         node.show_parents()
                         break
                 else:
-                    if passn >= 1.0 and len(total_unique_nodes) > 50:
+                    if passn >= 1.0 and len(total_nodes) > 20:
                         print("passn:",passn)
                         stop=True
                         print("One node passed! Show it and it's parents.")
@@ -230,12 +257,13 @@ def run_testcase_filter(
             pass_testcase_list = [ list(x[1]) for x in sorted_group]
             if has_visibale_tests:
                 chosen_num = 10
-                if len(total_unique_nodes) > 10 or cir > 2:
+                if len(total_unique_nodes) > 10 or cir > 1:
                     chosen_testcase = data["prompt_tests"] + [task_gened_testcase[x] for x in chosen_testcase_id]
                     chosen_testcase = chosen_testcase[:chosen_num]
             else:
+                
                 chosen_num = 10
-                if len(total_unique_nodes) > 10 or cir > 2:
+                if len(total_unique_nodes) > 10 or cir > 1:
                     chosen_testcase = [task_gened_testcase[x] for x in chosen_testcase_id][:chosen_num]
             #important
             filter_time = (time.time()-filter_st)/60
@@ -282,7 +310,7 @@ def run_testcase_filter(
             k=1
             return_sequences = int(sample_num/k)
             if cir==1 and filter_num==5 and sample_num==2:
-                return_sequences = 10
+                return_sequences = int(10/len(chosen_nodes))
             total_output_length = 0
             for i,node in enumerate(chosen_nodes):
                 feedback = node.feedbackprompt
@@ -293,7 +321,7 @@ def run_testcase_filter(
                     code_expl = gen.gen_code_explanation(model,code,verbose)
                     idx = feedback.index("Feedback:")
                     feedback = feedback[:idx] + f"Here is a line-by-line explanation of the code:\n{code_expl}\n\n" + feedback[idx:]
-                if cir==1 and i<2:
+                if cir==1 and i==1:
                     print_with_tag(content=feedback,tag="feedback",verbose=verbose)
                 
                 inputs = model.tokenizer(feedback, return_tensors='pt', return_token_type_ids=False)

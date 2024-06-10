@@ -18,7 +18,7 @@
 #SBATCH -p r8nv-gpu-hw                    # Submit to 'nv-gpu' Partitiion
 #SBATCH -t 0-12:00:00                # Run for a maximum time of 0 days, 12 hours, 00 mins, 00 secs
 #SBATCH --nodes=1                    # Request N nodes
-#SBATCH --gres=gpu:4                 # Request M GPU per node
+#SBATCH --gres=gpu:8                 # Request M GPU per node
 #SBATCH --gres-flags=enforce-binding # CPU-GPU Affinity
 #SBATCH --qos=gpu-short             # Request QOS Type
 
@@ -27,7 +27,7 @@
 ###
 ### The system will alloc 8 or 16 cores per gpu by default.
 ### If you need more or less, use following:
-#SBATCH --cpus-per-task=32            # Request K cores
+#SBATCH --cpus-per-task=64            # Request K cores
 ####SBATCH -n 50
 ####SBATCH --mem-per-cpu=100000
 ###
@@ -36,7 +36,7 @@
 ### You can specify the characteristics of the compute nodes, and even the names of the compute nodes
 ###
 ### #SBATCH --nodelist=r8a100-b01          # Request a specific list of hosts 
-#SBATCH --constraint="A100_80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
+#SBATCH --constraint="A30|A100|A100_80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
 ###
 
 #- Log information

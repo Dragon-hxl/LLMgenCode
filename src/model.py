@@ -17,7 +17,8 @@ class Model():
         #加载模型
         print("load model from ",model_path)
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True,legacy=False)#, max_memory=max_memory_mapping
-        self.model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto", trust_remote_code=True, torch_dtype=torch.float16, low_cpu_mem_usage=True)#, use_safetensors=True
+        self.model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto", max_memory=max_memory_mapping, trust_remote_code=True, torch_dtype=torch.float16, low_cpu_mem_usage=True)#, use_safetensors=True
         self.model.eval()
+        self.tokenizer.pad_token = self.tokenizer.eos_token
         
     

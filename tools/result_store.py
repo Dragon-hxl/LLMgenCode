@@ -24,12 +24,12 @@ humaneval_cola7bpy_pack = {
         "humanevalTS_SBSP1_codellama7bpy_pT.jsonl":[63, 67, 67, 67, 67, 67, 67, 67, 67, 67, 67],
         "humanevalNTS_SBSP10_codellama7bpy_pT.jsonl":[63, 80, 104, 110, 111, 112, 112, 112, 112, 112, 113],#[83, 88, 93, 93, 93, 94, 94, 94, 94, 94, 94]
         "humanevalTS_SBSP10_codellama7bpy_pT.jsonl":[63, 80, 104, 110, 111, 112, 112, 112, 112, 112, 113],
-        "humanevalTFTS_SBSP10_codellama7bpy_pT.jsonl":[63, 81, 98, 101, 104, 106, 106, 107, 107, 108, 108],
+        "humanevalTFTS_SBSP10_codellama7bpy_pT.jsonl":[63, 81, 105, 111, 111, 113, 115, 115, 115, 115, 115],#[63, 81, 98, 101, 104, 106, 106, 107, 107, 108, 108],
     },
     
     "image_path":"../image/humaneval_cola7bpy_pass@1.png",
     "num_task":164,
-    "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","原始自反馈"],
+    "legends":["基于树搜索和测试用例筛选的自反馈","树搜索自反馈","非树搜索自反馈","自反馈"],
 }
 
 mbpp_cola7bpy_pack  = {
@@ -48,19 +48,19 @@ mbpp_cola7bpy_pack  = {
     
     "image_path":"../image/mbpp_cola7bpy_pass@1.png",
     "num_task":200,
-    "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","原始自反馈"],
+    "legends":["基于树搜索和测试用例筛选的自反馈","树搜索自反馈","非树搜索自反馈","自反馈"],
 }
 
 mtpb_cola7bpy_pack  = {
     "pass@1":{
         "mtpbTS_SBSP1_codellama7bpy_pT.jsonl":[27, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28],
         "mtpbNTS_SBSP10_codellama7bpy_pT.jsonl":[27, 32, 33, 34, 34, 34, 34, 34, 34, 34, 34],#[83, 88, 93, 93, 93, 94, 94, 94, 94, 94, 94]
-        "mtpbTS_SBSP10_codellama7bpy_pT.jsonl":[83, 88, 93, 93, 93, 94, 94, 94, 94, 94, 94],
+        "mtpbTS_SBSP10_codellama7bpy_pT.jsonl":[27, 32, 33, 34, 34, 34, 34, 34, 34, 34, 34],
         "mtpbTFTS_SBSP10_codellama7bpy_pT.jsonl":[83, 92, 95, 95, 96, 96, 97, 97, 97, 97, 97],
     },
     "image_path":"../image/mtpb_cola7bpy_pass@1.png",
     "num_task":115,
-    "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","原始自反馈"],
+    "legends":["基于树搜索和测试用例筛选的自反馈","树搜索自反馈","非树搜索自反馈","自反馈"],
 }
 
 bigbench_cola7bpy_pack  = {
@@ -85,5 +85,6 @@ bigbench_cola7bpy_pack  = {
     
     "image_path":"../image/bigbench_cola7bpy_pass@1.png",
     "num_task":32,
-    "legends":["使用测试用例筛选的树搜索自反馈","树搜索自反馈","非树搜索自反馈","原始自反馈"],
+    "legends":["基于树搜索和测试用例筛选的自反馈","树搜索自反馈","非树搜索自反馈","自反馈"],
 }
+

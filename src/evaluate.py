@@ -69,13 +69,18 @@ def get_pass_k(results,data,k=10,n=10,ignore_task=[],verbose=False):
             cir = int(cir)
             cirs.append(cir)
             print(f"Task {task_id} gens {len(solutions)} solutions in cir {cir}")
+            if cir==5 and task_id==100:
+                for i,solution in enumerate(solutions):
+                    print(f"In cir 5 ,solution {i} is :\n{solution}")
             total_passed = False
             solutions = solutions[:k]
             passed_num = 0
+            
             for i,solution in enumerate(solutions):
                 solution = solution["solution"]
                 passed,error_message = get_truePass(problem,solution)
                 print_v(f"solution {i} passed {passed}")
+                
                 if passed:
                     passed_num += 1
                     total_passed =True
@@ -108,7 +113,7 @@ def get_pass_k(results,data,k=10,n=10,ignore_task=[],verbose=False):
         pass_task_num[k] = len(v)
     
     for k,v in task_cir_pass.items():
-        print_v(f"task {k} pass or not for each cir: {v}")
+        print(f"task {k} pass or not for each cir: {v}")
     print("--------------------------------------------")
     
     print(f"lack task : {lack_task}")
@@ -339,7 +344,7 @@ if __name__ == "__main__":
         
     results = load_results(res_file=res_file)
     #get pass@k
-    get_pass_k(results,data,1,10,ignore_task=humaneval_cola7bpy_base)
+    get_pass_k(results,data,1,10,ignore_task=[])#humaneval_cola7bpy_base
     # show_certian_task(results,40)
     # evaluate_gened_testcase(results=results,data=data,verbose=True)
     if "TFTS" in res_file:

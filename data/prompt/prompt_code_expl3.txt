@@ -6,7 +6,6 @@ def find_char_long(text):
 ```
 # Line-by-line explanation of the code:
 "def find_char_long(text):": This line defines a function named "find_char_long" that takes a single argument, "text". "text" represents thestring whose words are to be extracted.
-
 "return (re.findall(r"\b\w{4,}\b", text))": This line uses the "re.findall()" function to extract all words from the input string that are at least 4 characters long. The regular expression "r"\b\w{4,}\b"" matches all words that are at least 4 characters long. The "\b" matches the boundary between a word character and a non-word character. The "\w" matches any word character (a letter, digit, or underscore).The "{4,}" matches the preceding element at least 4 times. The "\b" matches the boundary between a word character and a non-word character.
 ### Task End ###
 
@@ -23,19 +22,12 @@ def count_ways(n):
 ```
 # Line-by-line explanation of the code:
 "def count_ways(n):": This line defines a function named "count_ways" that takes a single argument, "n". "n" represents the width of the 3 x n board.
-
 "if n == 0:": This line checks if n is equal to 0. In other words, it checks if the width of the board is 0. If the width of the board is 0, there is only one way to fill it: by not placing any dominoes.
-
 "return 1": If the condition in line 2 is true (i.e., n is 0), the function returns 1, indicating that there is only one way to fill the 3 x 0 board.
-
 "if n == 1:": This line checks if n is equal to 1. In other words, it checks if the width of the board is 1. A 3 x 1 board cannot be filled with 2 x 1 dominoes, so there’s only one way to fill it: by not placing any dominoes.
-
 "return 1": If the condition in line 4 is true (i.e., n is 1), the function returns 1, indicating that there is only one way to fill the 3 x 1 board.
-
 "if n == 2:": This line checks if n is equal to 2. In other words, it checks if the width of the board is 2. A 3 x 2 board can be filled with 2 x 1 dominoes in three ways: (1) three horizontal dominoes, (2) one vertical domino and two horizontal dominoes, and (3) two vertical dominoes and one horizontal domino.
-
 "return 3": If the condition in line 6 is true (i.e., n is 2), the function returns 3, indicating that there are three ways to fill the 3 x 2 board.
-
 "return count_ways(n-1) + count_ways(n-2)": If none of the conditions in lines 2, 4, and 6 are true, this line is executed. It uses a recursive approach to calculate the number of ways to fill the 3 x n board. The function calls itself twice: once with the argument n-1 and once with the argument n-2. The results of these two function calls are added together and returned as the final result.
 ### Task End ###
 
@@ -58,31 +50,18 @@ def find_Rotations(s):
 ```
 # Line-by-line explanation of the code:
 "def find_Rotations(s):": This line defines a function named "find_Rotations" that takes a single argument, "s". "s" represents the string whose minimumnumber of rotations is to be calculated.
-
 "if len(s) == 1:": This line checks if the length of the input string is 1.the minimum number of rotations required to get the same string is 1.
-
 "return 1": If the condition in line 2 is true (i.e., length of the input string is 1), the function returns 1.
-
 "elif len(s) == 0:": This line checks if the length of the input string is 0. If the length of the input string is 0, the minimum number of rotations required to get the same string is 0.
-
 "return 0": If the condition in line 4 is true (i.e., length of the input string is 0), the function returns 0.
-
 "else:": If the conditions in lines 2 and 4 are not met (i.e., length of the input string is neither 0 nor 1), this line is executed.
-
 "l = len(s)": This line stores the length of the input string in the variable "l".
-
 "min = len(s)": This line stores the length of the input string in the variable "min".
-
 "for i, c in enumerate(s):": This line starts a for loop that iterates over the input string.
-
 "if c == s[0]:": This line checks if the current character is equal to the first character of the input string.
-
 "temp = i": This line stores the index of the current character in the variable "temp".
-
 "if temp < min:": This line checks if the index of the current character is less than the value stored in the variable "min".
-
 "min = temp": If the condition in line 13 is true (i.e., index of the current character is less than the value stored in the variable "min"), this line is executed. It stores the index of the current character in the variable "min".
-
 "return min": This line returns the minimum number of rotations required to get the same string.
 ### Task End ###
 

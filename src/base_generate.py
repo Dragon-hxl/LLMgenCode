@@ -51,7 +51,39 @@ class Node:
             self.parent.show_parents()
         return None
 
-
+def generate_base_complication_batch(self, model, prompt, unit_tests, entry_point, record_time = False, verbose = False):
+        setup_seed(2024)
+        #prepare the prompt
+        prompt = self.get_one_complication(prompt,unit_tests)
+        # print_with_tag("base complication prompt",prompt,verbose=verbose)
+        prompts = [prompt,prompt,prompt,prompt,prompt]
+        input_len = len(prompt)
+        inputs = model.tokenizer(prompts, return_tensors='pt', return_token_type_ids=False)
+        input_tokens_len = inputs.input_ids.shape[1]
+        print(inputs.input_ids.shape)
+        inputs = inputs.to('cuda')
+        
+        #generate the solution
+        st = time.time()
+        pred = model.model.generate(**inputs, max_new_tokens=512, temperature=0,pad_token_id=model.tokenizer.eos_token_id)#,temperature=0.4,repetition_penalty=1.1
+        model_inference_time = (time.time()-st)/60
+        print(pred.shape)
+        output_tokens_len = pred.shape[1]
+        ans = model.tokenizer.decode(pred.cpu()[0], skip_special_tokens=True)[input_len:].strip("\n")
+        # print_with_tag("base complication origin output",ans,verbose=verbose)
+        solution = self.code_extract(ans)
+        solution = code_clean2(code=solution,entry_point=entry_point)
+        solutions = [solution]
+        #log the time and length
+        if verbose:
+            print(f"Model inference time is {model_inference_time} minutes")
+            print(f"In generate step, the input tokens shape is {input_tokens_len}, the output tokens shape is {output_tokens_len}")
+        
+        #return the solution
+        if record_time:
+            return prompt,solutions, model_inference_time, input_tokens_len, output_tokens_len
+        else:
+            return prompt,solutions
 
 
 def run_base_generate(
@@ -70,9 +102,7 @@ def run_base_generate(
     
     
     #获取solution
-    f = open(output_file,"w+",encoding="utf-8")
-    if f:
-        print_v(f"open file {output_file} success!")
+    
     print_v(f"start to generate solutions for {len(dataset)} tasks.")
     for data in dataset:
         
@@ -94,26 +124,10 @@ def run_base_generate(
         print_v(f"get solution for task : {tid} with {len(assertions)} tests.")
         step_one_st = time.time()
         tprompt = data["prompt"]
-        if tid == "HumanEval/64":
-            tprompt = prompt_for_64
-        base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len = gen.generate_base_complication(model,tprompt,base_assertion_string,record_time=True,verbose=verbose)
-        
-        # 去除函数头和注释
         entry_point = "def " + data["entry_point"]
-        solution = code_clean2(code=solution,entry_point=entry_point)
-        # 打印生成的初始代码
-        print_with_tag(content=solution,tag="solution",verbose=verbose)
-        # 去掉data["prompt"]中的注释和空行
-        start_code = start_code_extract(tprompt,entry_point)
+        base_prompt,solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+            gen.generate_base_complication_batch(model,tprompt,base_assertion_string,
+                                             entry_point,
+                                             record_time=True,verbose=verbose)
         
-        step_one_total_time = (time.time() - step_one_st)/60
-        
-        
-        output_short = {}
-        node1 = Node(solution,prompt=base_prompt,depth=0)
-        
-        output_short[0] = [{"solution":n.solution,"assertions":assertions} for n in [node1]]
-
-        f.write(json.dumps({"task_id": tid,"completion":output_short})+"\n")
-        f.flush()
-    f.close()
+    

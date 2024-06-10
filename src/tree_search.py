@@ -16,6 +16,8 @@ from human_eval.execution import run_code_with_test_result,run_code_with_output2
 from myutils import setup_seed,make_printv,print_with_tag,code_clean2,get_unit_test,filter_fix_ans,get_CODET_point_v1,get_CODET_point_v3,get_pass_rate,get_UTfeedback_prompt_v1,get_UTfeedback_prompt,start_code_extract
 from model import Model
 from generator import PyGenerator
+from myutils import load_testcase
+import random
 
 #在树搜索中使用的node类
 class Node:
@@ -56,13 +58,17 @@ prompt_file = prompt_root + "prompt_base2.txt"
 UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
 simple_feedback_shot2 = prompt_root + "prompt_simfeedback_paper.txt"
 simple_feedback_shot1 = prompt_root + "prompt_simfeedback.txt"
-expl_feedback_shot1 = prompt_root + "prompt_explfeedback_shot.txt"
+expl_feedback_shot1 = prompt_root + "prompt_explfeedback_short.txt"
+
+gened_testcases_file = "/home/S/hexiaolong/codex/self-debug/src/gened_testcase_codellama7bpy_humaneval.jsonl"# 用来进行CODET的tests文件
+
 def run_tree_search(
     dataset:list,
     model_path:str,
     output_file:str,
     sample_num:int=10,
     filter_num:int=1,
+    first_num:int=1,
     cir_times:int=10,
     feedback_type:str="UT",
     verbose:bool=False,
@@ -72,7 +78,7 @@ def run_tree_search(
     print_v = make_printv(verbose)
     model = Model(model_path)
     gen = PyGenerator()
-    print_v("Run tree search.")
+    print_v(f"Run tree search with max cir : {cir_times}.")
     
     #important 读取prompt
     if feedback_type=="UT":
@@ -101,17 +107,30 @@ def run_tree_search(
         # 获取或者生成可见测试用例
         tid = data["task_id"]
         internal_tests = []
-        if data.get('prompt_tests', []) == []:
-            print_v("Use internal_tests.")
+        use_prompt_test = True
+        if data.get('prompt_tests', []) == [] or not use_prompt_test:
             #important
-            internal_tests = gen.gen_tests_sort_by_prob(model,data,num=10,verbose=False)
-            internal_tests = internal_tests[:6]
+            if "HumanEval" in tid and "codellama-7bpy" in model_path:
+                offline = True
+            if offline:
+                print_v(f"Use off line testcases in path {gened_testcases_file}")
+                gened_testcase = load_testcase(gened_testcases_file,type=0)
+                task_gened_testcase = gened_testcase[tid]
+                internal_tests = task_gened_testcase[:10]
+            else:
+                print_v("Gen testcase by model.")
+                internal_tests = gen.gen_tests_sort_by_prob(model,data,num=15,verbose=verbose)[:10]
+            #important
+            print_v("Use internal_tests:")
+            #important
+            # internal_tests = gen.gen_tests_sort_by_prob(model,data,num=10,verbose=False)
+            # internal_tests = internal_tests[:10]
             #important
             print_v('\n'.join(internal_tests))
             assertions = internal_tests
             base_assertion_string = "\n".join(assertions)
             assertion_string = "\n".join(assertions)
-        else :
+        else:
             print_v("Use prompt_tests.")
             assertions = data["prompt_tests"]
             base_assertion_string = "\n".join(assertions)
@@ -121,14 +140,19 @@ def run_tree_search(
         #生成初始代码
         step_one_st = time.time()
         tprompt = data["prompt"]
-        
-        base_prompt,solution,model_inference_time,input_tokens_len, output_tokens_len = gen.generate_base_complication(model,tprompt,base_assertion_string,record_time=True,verbose=verbose)
-        
-        # 去除函数头和注释
         entry_point = "def " + data["entry_point"]
-        solution = code_clean2(code=solution,entry_point=entry_point)
-        # 打印生成的初始代码
-        print_with_tag(content=solution,tag="origin solution",verbose=verbose)
+        # base_prompt,solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+        #     gen.generate_base_complication(model,tprompt,base_assertion_string,
+        #                                    entry_point=entry_point,
+        #                                    record_time=True,verbose=verbose)
+        
+        #important gen 10 base solutions
+        base_return_num = first_num
+        solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+            gen.generate_base_complication_multi(model,tprompt,base_assertion_string,
+                                                 entry_point=entry_point,return_nums=base_return_num,record_time=True,verbose=verbose)
+        
+        
         # 去掉data["prompt"]中的注释和空行
         start_code = start_code_extract(tprompt,entry_point)
         
@@ -143,8 +167,12 @@ def run_tree_search(
         cir = 0
         output_short = {}
         output_full = {} # 存放所有生成的solution
-        node1 = Node(solution,prompt=base_prompt,depth=cir,feedbackprompt=feedback_prompt)
-        nodes,gened_nodes,chosen_nodes = [node1],[node1],[node1]
+        nodes,gened_nodes,chosen_nodes = [],[],[]
+        for s in solutions:
+            node = Node(s,prompt="",depth=cir,feedbackprompt="")
+            node.idx = len(nodes)
+            nodes.append(node)
+            gened_nodes.append(node)
         left_nodes,time_record,fix_record = [],[],[]
         
         while True:
@@ -227,7 +255,7 @@ def run_tree_search(
             #important
             return_sequences = int(sample_num/k)
             if cir==1 and filter_num==5 and sample_num==2:
-                return_sequences = 10
+                return_sequences = int(10/len(chosen_nodes))
             total_output_length = 0
             # print_v(f"begin to generate solutions for cir {cir} with {return_sequences} sequences.")
             for i,node in enumerate(chosen_nodes):
@@ -238,7 +266,7 @@ def run_tree_search(
                     code_expl = gen.gen_code_explanation(model,code,verbose)
                     idx = feedback.index("Feedback:")
                     feedback = feedback[:idx] + f"Here is a line-by-line explanation of the code:\n{code_expl}\n\n" + feedback[idx:]
-                if cir==1 and i<2:
+                if cir==1 and i==1:
                     print_with_tag(content=feedback,tag="feedback",verbose=verbose)
                 # print_with_tag(content=feedback,tag="feedback",verbose=verbose)
                 
