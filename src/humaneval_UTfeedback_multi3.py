@@ -59,7 +59,7 @@ def main(cfg: DictConfig):
 
     with open(UTfeedback_file,"r") as af:
         UTfeedback_promt = af.read()
-    #读取unit tests，保存在unit_tests，用来判断程序对错。one_test里保存了每个task的第一个unit test，这个test会用在prompt里。
+    #读取unit tests，保存在unit_tests，用来判断程序对错。
     base_unit_tests,base_assertions,base_assertion_string = get_unit_test(ut_file)
     unit_tests,assertions,assertion_string = get_unit_test(ut_file)#true_tests_file,chosen_num=10
     

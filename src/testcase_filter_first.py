@@ -160,9 +160,13 @@ def run_testcase_filter(
         else :
             print("Use visiable testcase.")
             base_assertion_string = "\n".join(data["prompt_tests"])
-            solutions,model_inference_time,input_tokens_len, output_tokens_len = \
-            gen.generate_base_complication_multi(model,tprompt,base_assertion_string,
-                                                 entry_point=entry_point,return_nums=base_return_num,record_time=True,verbose=verbose)
+            base_prompt,solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+            gen.generate_base_complication(model,tprompt,base_assertion_string,
+                                           entry_point=entry_point,
+                                           record_time=True,verbose=verbose)
+            # solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+            # gen.generate_base_complication_multi(model,tprompt,base_assertion_string,
+                                                #  entry_point=entry_point,return_nums=base_return_num,record_time=True,verbose=verbose)
             
             has_visibale_tests = True
             chosen_testcase = data["prompt_tests"]

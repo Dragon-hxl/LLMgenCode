@@ -193,8 +193,20 @@ tmp = [
     "humanevalTS_SBSP10_codellama34bpy_pT.jsonl",#[85, 106, 113, 115, 115, 116, 116, 116, 116, 116, 116]
     "humanevalNTS_SBSP10_codellama34bpy_pT.jsonl",
     "humanevalTS_SBSP1_codellama34bpy.jsonl",
+    
+    "humanevalNTS_UT_I5_F1_S5_codellama7bpy.jsonl",#[26, 30, 34, 34, 34, 34, 34, 34, 34, 34, 34]
+    "humanevalTFTS_UT_I5_F1_S5_codellama7bpy.jsonl",#[25, 31, 31, 31, 31, 33, 34, 35, 35, 35, 35]
+    "humanevalTS_UT_I5_F1_S5_codellama7bpy.jsonl",#[26, 34, 35, 35, 35, 35, 35, 35, 35, 35, 35]
+    "humanevalTS_UT_I1_F10_S10_vicuna7b16k.jsonl",#[27, 36, 50, 52, 56, 57, 58, 58, 58, 58, 58]
+    "humanevalTFTS_UT_I1_F10_S10_vicuna7b16k.jsonl",
+    "humanevalTS_UT_I1_F10_S10_vicuna7b16k_seed1024.jsonl",
+    "humanevalTS_UT_I1_F10_S10_vicuna7b16k_noseed.jsonl",
+    "humanevalTS_UT_I1_F10_S10_vicuna7b16k_long.jsonl",
+    "UTfeedback_CODETv3_7b16k_pT.jsonl",
+    "UTfeedback_multiSBSP10_7b16k_pT.jsonl",
+    "UTfeedback_CODETv3_t8_7b16k_pT.jsonl",
+    "humanevalTS_UT_I1_F10_S10_vicuna7b16k_long1024.jsonl",
 ]
-
 sim_res = [
     "humanevalNTS_simple_F5_S2_codellama7bpy.jsonl",
 ]

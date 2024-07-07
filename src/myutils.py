@@ -271,6 +271,9 @@ def get_UTfeedback_prompt_v1(feedback_prompt, solution, passed, final_res, run_t
                     test_res = str(test_result[i])
                 except:
                     continue
+                if len(test_res) >1024:
+                    print("Too long feedback, maybe the result of code is too wired!")
+                    continue
                 if p:
                     utFeedback += f" {run_test[i]} == {test_result[i]} while the assertion is \"{assertions[i]}\".The code pass this aasertion."
                     pass_tests += 1

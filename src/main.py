@@ -50,10 +50,11 @@ def main(cfg: DictConfig):
         problems = read_problems("/home/S/hexiaolong/codex/self-debug/data/humaneval.jsonl")
         lack_task = [129, 130, 131, 132, 133, 134, 135, 160, 161, 162, 163]
         stask = [32,33,36,38,39,40,41,64,73,75,76,89,93,102,108,126]
+        # ignore_task = []
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
             #important
-            if num_id < 140 or num_id > 164 or num_id in humaneval_7bpy_base:# or num_id==1 or num_id==3:#num_id not in lack_task :
+            if num_id < 163 or num_id > 164:# or num_id==1 or num_id==3:#num_id not in lack_task :
                 continue
             #important
             dataset.append(problem)
@@ -90,7 +91,7 @@ def main(cfg: DictConfig):
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
             #important
-            if num_id < 3 or num_id > 32:  
+            if num_id < 23 or num_id > 32:  
                 continue
             #important
             dataset.append(problem)

@@ -341,6 +341,9 @@ if __name__ == "__main__":
     elif "bigbench" in res_file:
         data_file = data_files["bigbench"]
         data = read_problems(data_file)
+    else:
+        data_file = data_files["humaneval"]
+        data = read_problems(data_file)
         
     results = load_results(res_file=res_file)
     #get pass@k

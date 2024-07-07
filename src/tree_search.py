@@ -55,7 +55,7 @@ class Node:
 # prompt file 
 prompt_root = "/home/S/hexiaolong/codex/self-debug/data/prompt/"
 prompt_file = prompt_root + "prompt_base2.txt"
-UTfeedback_file = prompt_root + "prompt_UTfeedback_short.txt"
+UTfeedback_file = prompt_root + "prompt_UTfeedback.txt"
 simple_feedback_shot2 = prompt_root + "prompt_simfeedback_paper.txt"
 simple_feedback_shot1 = prompt_root + "prompt_simfeedback.txt"
 expl_feedback_shot1 = prompt_root + "prompt_explfeedback_short.txt"
@@ -74,7 +74,7 @@ def run_tree_search(
     verbose:bool=False,
 ):
     
-    setup_seed(2024)
+    setup_seed(1024)
     print_v = make_printv(verbose)
     model = Model(model_path)
     gen = PyGenerator()
@@ -112,6 +112,8 @@ def run_tree_search(
             #important
             if "HumanEval" in tid and "codellama-7bpy" in model_path:
                 offline = True
+            else:
+                offline = False
             if offline:
                 print_v(f"Use off line testcases in path {gened_testcases_file}")
                 gened_testcase = load_testcase(gened_testcases_file,type=0)
@@ -141,16 +143,16 @@ def run_tree_search(
         step_one_st = time.time()
         tprompt = data["prompt"]
         entry_point = "def " + data["entry_point"]
-        # base_prompt,solutions,model_inference_time,input_tokens_len, output_tokens_len = \
-        #     gen.generate_base_complication(model,tprompt,base_assertion_string,
-        #                                    entry_point=entry_point,
-        #                                    record_time=True,verbose=verbose)
+        base_prompt,solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+            gen.generate_base_complication(model,tprompt,base_assertion_string,
+                                           entry_point=entry_point,
+                                           record_time=True,verbose=verbose)
         
         #important gen 10 base solutions
-        base_return_num = first_num
-        solutions,model_inference_time,input_tokens_len, output_tokens_len = \
-            gen.generate_base_complication_multi(model,tprompt,base_assertion_string,
-                                                 entry_point=entry_point,return_nums=base_return_num,record_time=True,verbose=verbose)
+        # base_return_num = first_num
+        # solutions,model_inference_time,input_tokens_len, output_tokens_len = \
+        #     gen.generate_base_complication_multi(model,tprompt,base_assertion_string,
+                                                #  entry_point=entry_point,return_nums=base_return_num,record_time=True,verbose=verbose)
         
         
         # 去掉data["prompt"]中的注释和空行

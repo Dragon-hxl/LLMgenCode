@@ -40,7 +40,7 @@ class PyGenerator():
         return res
     
     def generate_base_complication(self, model, prompt, unit_tests, entry_point, record_time = False, verbose = False):
-        setup_seed(2024)
+        # setup_seed(2024)
         #prepare the prompt
         prompt = self.get_one_complication(prompt,unit_tests)
         # print_with_tag("base complication prompt",prompt,verbose=verbose)
