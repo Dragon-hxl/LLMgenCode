@@ -48,13 +48,10 @@ def main(cfg: DictConfig):
     if dataset_type == "humaneval":
         print("load dataset : humaneval")
         problems = read_problems("/home/S/hexiaolong/codex/self-debug/data/humaneval.jsonl")
-        lack_task = [129, 130, 131, 132, 133, 134, 135, 160, 161, 162, 163]
-        stask = [32,33,36,38,39,40,41,64,73,75,76,89,93,102,108,126]
-        # ignore_task = []
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
             #important
-            if num_id < 163 or num_id > 164:# or num_id==1 or num_id==3:#num_id not in lack_task :
+            if num_id < 139 or num_id > 164:
                 continue
             #important
             dataset.append(problem)
@@ -71,7 +68,7 @@ def main(cfg: DictConfig):
         with open("mbpp_chosen_idx.txt","w") as f:
             f.write(json.dumps(chosen_idx))
         #important
-        chosen_idx = chosen_idx[177:199]
+        chosen_idx = chosen_idx[0:199]
         #important
         dataset = [dataset[i] for i in chosen_idx]
         
@@ -81,7 +78,7 @@ def main(cfg: DictConfig):
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
             #important
-            if num_id < 4 or num_id > 115 or num_id==20 or num_id==47:
+            if num_id < 58 or num_id > 116 or num_id==20 or num_id==47:
                 continue
             #important
             dataset.append(problem)
@@ -91,7 +88,7 @@ def main(cfg: DictConfig):
         for tid,problem in problems.items():
             num_id = int(tid.split("/")[1])
             #important
-            if num_id < 23 or num_id > 32:  
+            if num_id < 0 or num_id > 32:  
                 continue
             #important
             dataset.append(problem)

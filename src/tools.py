@@ -7,7 +7,7 @@ from executor_utils import check_correctness,check_test_correctness
 import json
 import numpy as np
 from myutils import *
-from resfiles_record import res_root,data_files,res_7b16k,res_cola7bpy,res_cola34bpy,res_llama7b,tmp
+from src.resfiles_record3 import res_root,data_files,res_7b16k,res_cola7bpy,res_cola34bpy,res_llama7b,tmp
 from evaluate import *
 def load_gened_testcase(results):
     tescase_gened = {}
@@ -22,7 +22,7 @@ def load_gened_testcase(results):
         tescase_gened[tid] = gened_testcase
     print(f"testcase num : mean {sum(testcase_num)/len(testcase_num)}, min {min(testcase_num)}, max {max(testcase_num)}")
     return tescase_gened
-
+#比较生成的测试用例是否一样
 def gened_testcase_compare(testcase1,testcase2):
     k1,k2 = testcase1.keys(),testcase2.keys()
     print(f"length t1:{len(k1)},t2:{len(t2)}")

@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from pylab import mpl
 from draw_tools import draw_plots_mean_std
 import numpy as np
-from show_debug_process import draw_plots_percent
+from tools.show_debug_process4 import draw_plots_percent
 
 
 cir_record = {

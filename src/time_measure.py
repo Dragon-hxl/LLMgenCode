@@ -1,5 +1,5 @@
 import json
-from resfiles_record import *
+from src.resfiles_record3 import *
 
 def load_time_record(res_file):
     time_record = {}

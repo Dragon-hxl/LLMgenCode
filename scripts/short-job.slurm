@@ -35,7 +35,7 @@
 ### Without specifying the constraint, any available nodes that meet the requirement will be allocated
 ### You can specify the characteristics of the compute nodes, and even the names of the compute nodes
 ###
-#SBATCH --nodelist=r8a100-c02         # Request a specific list of hosts 
+#SBATCH --nodelist=r8a100-c06         # Request a specific list of hosts 
 #SBATCH --constraint="A100_80G" # Request GPU Type: Volta(V100 or V100S) or RTX8000
 ###
 

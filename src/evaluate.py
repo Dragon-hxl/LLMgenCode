@@ -7,7 +7,7 @@ from executor_utils import check_correctness,check_test_correctness
 import json
 import numpy as np
 from myutils import make_printv,print_with_tag
-from resfiles_record import res_root,data_files,res_7b16k,res_cola7bpy,res_cola34bpy,res_llama7b,tmp
+from resfiles_record import res_root,data_files,res_7b16k,res_cola7bpy,res_cola34bpy,tmp
 
 def get_truePass(problem,solution):
     check_program = (
@@ -69,9 +69,6 @@ def get_pass_k(results,data,k=10,n=10,ignore_task=[],verbose=False):
             cir = int(cir)
             cirs.append(cir)
             print(f"Task {task_id} gens {len(solutions)} solutions in cir {cir}")
-            if cir==5 and task_id==100:
-                for i,solution in enumerate(solutions):
-                    print(f"In cir 5 ,solution {i} is :\n{solution}")
             total_passed = False
             solutions = solutions[:k]
             passed_num = 0
@@ -131,6 +128,10 @@ def get_pass_k(results,data,k=10,n=10,ignore_task=[],verbose=False):
     # error_analysis(error_dict)
     return passed_per_cir,task_cir,lack_task,pass_k_list
 
+
+
+
+#计算生成的测试用例正确率
 def evaluate_gened_testcase(results,data,verbose):
     printv = make_printv(verbose)
     pass_rate_list = []
@@ -167,6 +168,8 @@ def evaluate_gened_testcase(results,data,verbose):
     all_true_num = sum([1 for x in pass_rate_list if x == 1.0])
     printv(f"mean pass rate is {mean_pass_rate}, max pass rate is {max_pass_rate}, min pass rate is {min_pass_rate}, all true is {all_true_num}")
     return pass_rate_list
+
+#计算随机选取的测试用例正确率
 def evaluate_testcase_nofilter(results,data,verbose):
     printv = make_printv(verbose)
     pass_rate_list = []
@@ -207,7 +210,7 @@ def evaluate_testcase_nofilter(results,data,verbose):
     all_true_num = sum([1 for x in pass_rate_list if x == 1.0])
     printv(f"mean pass rate is {mean_pass_rate}, max pass rate is {max_pass_rate}, min pass rate is {min_pass_rate}, all true is {all_true_num}")
     return pass_rate_list
-
+#计算筛选的测试用例正确率
 def evaluate_testcase_filter(results,data,verbose):
     printv = make_printv(verbose)
     pass_rate_dict = defaultdict(list)
@@ -313,13 +316,13 @@ def show_certian_task(results,tid):
     return
 
 chosen_data_idx = [240, 93, 372, 296, 155, 102, 454, 370, 209, 387, 366, 388, 135, 272, 125, 325, 416, 376, 255, 181, 212, 269, 497, 315, 111, 158, 278, 360, 169, 265, 38, 374, 396, 443, 105, 352, 385, 477, 239, 363, 425, 446, 334, 75, 486, 108, 444, 210, 29, 394, 178, 321, 213, 238, 63, 371, 380, 71, 390, 167, 199, 471, 176, 406, 494, 166, 218, 479, 162, 290, 109, 208, 117, 104, 20, 383, 115, 441, 9, 132, 258, 163, 395, 291, 411, 361, 215, 314, 57, 438, 457, 310, 399, 118, 120, 237, 187, 69, 103, 188, 252, 304, 448, 72, 134, 198, 319, 172, 171, 362, 364, 458, 86, 350, 356, 67, 410, 465, 297, 351, 33, 50, 88, 2, 77, 224, 472, 405, 179, 427, 41, 100, 145, 122, 355, 236, 308, 417, 246, 268, 223, 339, 432, 435, 36, 154, 354, 142, 402, 289, 338, 128, 478, 51, 253, 475, 368, 450, 90, 263, 114, 418, 480, 23, 496, 473, 193, 324, 37, 60, 492, 28, 470, 64, 107, 412, 44, 419, 377, 462, 249, 298, 84, 82, 323, 326, 53, 398, 287, 309, 15, 312, 55, 286, 92, 409, 161, 0, 62, 143]
-base_pass_task_mbpp = [17, 23, 27, 35, 40, 41, 46, 51, 52, 58, 62, 66, 79, 82, 85, 88, 89, 93, 96, 99, 105, 112, 113, 127, 133, 144, 145, 161, 168, 171, 173, 174, 175, 176, 183, 195, 204, 210, 212, 214, 221, 222, 227, 230, 234, 249, 250, 255, 258, 261, 263, 269, 273, 281, 284, 293, 297, 309, 319, 322, 329, 332, 333, 341, 361, 373, 375, 394, 403, 404, 412, 422, 425, 443, 447, 457, 458, 459, 465, 474, 476, 478, 480, 487, 489, 495, 496, 498, 502, 504, 507, 509]
-different_task = ['MBPP/18', 'MBPP/30', 'MBPP/45', 'MBPP/56', 'MBPP/70', 'MBPP/148', 'MBPP/151', 'MBPP/152', 'MBPP/164', 'MBPP/181', 'MBPP/323', 'MBPP/338', 'MBPP/342', 'MBPP/348', 'MBPP/364', 'MBPP/367', 'MBPP/466', 'MBPP/485', 'MBPP/486', 'MBPP/501']
 humaneval_cola7bpy_base = [0, 2, 3, 4, 5, 7, 9, 12, 13, 15, 16, 17, 21, 22, 23, 24, 27, 28, 29, 30, 31, 34, 35, 42, 43, 44, 45, 46, 47, 48, 49, 53, 55, 56, 58, 60, 61, 63, 66, 71, 72, 74, 77, 79, 80, 86, 87, 104, 107, 112, 113, 116, 121, 122, 124, 136, 142, 147, 152, 153, 156, 159, 162]
 
 
 if __name__ == "__main__":    
-    res_file = res_root + tmp[-1] #res_cola7bpy[3]#res_7b16k[1]#res_cola34bpy[5]# res_cola7bpy[3]
+    res_file = res_root + res_7b16k[4]#res_7b16k[0]
+    
+    print(f"Evaluate file : {res_file}")
     
     if "mbpp" in res_file:
         data_file = data_files["mbpp"]
@@ -349,10 +352,10 @@ if __name__ == "__main__":
     #get pass@k
     get_pass_k(results,data,1,10,ignore_task=[])#humaneval_cola7bpy_base
     # show_certian_task(results,40)
-    # evaluate_gened_testcase(results=results,data=data,verbose=True)
-    if "TFTS" in res_file:
-        # print("------------------------no filter------------------------")
-        # evaluate_testcase_nofilter(results=results,data=data,verbose=True)
-        print("-----------------------filter-------------------------")
-        evaluate_testcase_filter(results=results,data=data,verbose=True)
-        # evaluate_internal_tests(results=results,data=data,verbose=True)
+    # evaluate_gened_testcase(results=results,data=data,verbose=True) #计算生成的测试用例正确率
+    # if "TFTS" in res_file and ("humaneval" in res_file or "mbpp" in res_file):
+    #     print("------------------------no filter------------------------")
+    #     evaluate_testcase_nofilter(results=results,data=data,verbose=True) #计算随机选取的测试用例正确率
+    #     print("-----------------------filter-------------------------")
+    #     evaluate_testcase_filter(results=results,data=data,verbose=True) #计算筛选的测试用例正确率
+    #     # evaluate_internal_tests(results=results,data=data,verbose=True)

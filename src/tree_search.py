@@ -74,7 +74,7 @@ def run_tree_search(
     verbose:bool=False,
 ):
     
-    setup_seed(1024)
+    setup_seed(2024)
     print_v = make_printv(verbose)
     model = Model(model_path)
     gen = PyGenerator()
